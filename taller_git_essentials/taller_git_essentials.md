@@ -12,7 +12,7 @@
   * Comandos principales: `git help -a` 
 * Flujo de guardado de cambios en el repositorio
   * [Guardando cambios](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio)
-  * [Estados básicos](https://git-scm.com/book/en/v2/images/lifecycle.png){:height="50%" width="50%"}
+  * [Estados básicos](https://git-scm.com/book/en/v2/images/lifecycle.png)
   * `git status`
   * `git add <file>` ó `git add .`
   * `git commit -m "mensaje"`
