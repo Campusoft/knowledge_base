@@ -9,5 +9,7 @@ https://github.com/kamranahmedse/developer-roadmap
 
 
 ## Taller Git Essentials
-[Agenda del Taller](taller_git_essentials/taller_git_essentials.md)
+[Agenda del Taller Git Essentials](taller_git_essentials/taller_git_essentials.md)
 
+## Taller de Woocommerce
+[Agenda del Taller de Woocommerce](taller_woocommerce/taller_woocommerce.md)
