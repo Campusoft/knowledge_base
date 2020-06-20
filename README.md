@@ -14,6 +14,10 @@ https://github.com/kamranahmedse/developer-roadmap
 ## Taller de Woocommerce
 [Agenda del Taller de Woocommerce](taller_woocommerce/taller_woocommerce.md)
 
+## Taller de Banner
+[Banner](banner.md)
+
+
 
 ## Herramientas
 [Herramientas en linea](tool/tool_live.md)
