@@ -5,12 +5,17 @@ Banner ERP Academico.
 
 ## Conceptos
 
-- Catálogo de Cursos
- Materias
- Cursos 
+### Catálogo de Cursos
+
+Esto involucra la compilación de datos como título de curso, departamento horas crédito, correquisitos o prerrequisitos, información sobre cuotas, y restricciones para un curso. Elementos (Materias, Cursos)
  
+
+### Oferta Academica / Horarios
+
 - Paralelos ofertados
-- Inscripciones / Registro
+
+### Inscripciones / Registro
+
 - Personas
 - Estudiantes
 - Facultad
@@ -34,7 +39,7 @@ Las 4 ultimas letras son nombre del objeto.
 Ejemplo:
 
 SPAIDEN.
-S: Sistema Student
-P: Modulo Persona
-A: Aplicacion (Forma)
-IDEN: identificacion de persona
+* S: Sistema Student
+* P: Modulo Persona
+* A: Aplicacion (Forma)
+* IDEN: identificacion de persona
