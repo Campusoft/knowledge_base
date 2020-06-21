@@ -43,3 +43,9 @@ SPAIDEN.
 * P: Modulo Persona
 * A: Aplicacion (Forma)
 * IDEN: identificacion de persona
+
+##API
+
+### Autentificacion
+### GUID
+### Versiones
