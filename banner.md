@@ -44,7 +44,7 @@ SPAIDEN.
 * A: Aplicacion (Forma)
 * IDEN: identificacion de persona
 
-##API
+## API
 
 ### Autentificacion
 ### GUID
