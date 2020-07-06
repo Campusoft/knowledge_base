@@ -17,6 +17,8 @@ https://github.com/kamranahmedse/developer-roadmap
 ## Taller de Banner
 [Banner](banner.md)
 
+## Taller Power BI
+[Recursos Taller Power BI](taller_powerbi/taller_powerbi.md)
 
 
 ## Herramientas
