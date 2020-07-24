@@ -1,4 +1,7 @@
 
+Generales
+---------------
+
 
 Informacion General
 
@@ -10,4 +13,17 @@ https://developer.microsoft.com/en-us/microsoft-365/dev-program
 
 
 
-ok
+Microsoft Graph
+------------------
+
+
+Explorer
+https://developer.microsoft.com/es-es/graph/graph-explorer
+
+
+Odata, es un rest con otros complementos. (Igual estandar)
+https://www.odata.org/
+
+
+Protocolo OAuth 2.0 / OpenID Connect 
+
