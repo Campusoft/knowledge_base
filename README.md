@@ -3,6 +3,11 @@ Bienvenidos a la base de conocimento de Campusoft Cía. Ltda.
 Este repositorio tiene contenidos e información sobre diferentes, temas, cursos, talleres internos/externos o recursos de libre acceso para estudio e investigación del equipo.
 
 
+## Plataforma
+[Plataforma](platform_campusoft/index.md)
+
+
+
 ## Guia para desarrollo Front-End
 
 https://github.com/kamranahmedse/developer-roadmap
