@@ -7,7 +7,6 @@ Este repositorio tiene contenidos e información sobre diferentes, temas, cursos
 [Plataforma](platform_campusoft/index.md)
 
 
-
 ## Guia para desarrollo Front-End
 
 https://github.com/kamranahmedse/developer-roadmap
@@ -20,7 +19,7 @@ https://github.com/kamranahmedse/developer-roadmap
 [Agenda del Taller de Woocommerce](taller_woocommerce/taller_woocommerce.md)
 
 ## Taller de Banner
-[Banner](banner.md)
+[Banner](banner/banner.md)
 
 ## Taller Power BI
 [Recursos Taller Power BI](taller_powerbi/taller_powerbi.md)

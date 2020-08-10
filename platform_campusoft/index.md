@@ -4,8 +4,7 @@ La plataforma para sistemas, que se utiliza para construir sistemas, en proyecto
 
  
 - .Net Core
-- ORM.
-- Full ORM, Entity Framework. / ORM ligero, Drapper.
+- ORM. ORM, Entity Framework. / ORM ligero, Drapper. 
 -  ASP.NET Boilerplate (ABP) 
 -- .Net 4.x and .net core [https://aspnetboilerplate.com/](https://aspnetboilerplate.com/)
 -- Nueva Version (.net core): [https://abp.io/](https://abp.io/)
