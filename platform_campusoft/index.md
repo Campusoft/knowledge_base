@@ -94,10 +94,15 @@ Existe dos interfaces base.
 
 **Capa Servicios distribuidos**
 
+Son servicios que son llamados remotamente a su aplicacion. 
+
+Se utilizan los siguientes protocolos servicios:
+
+- [Soap](soap.md)
 - [Rest](rest.md)
 - [Odata](odata.md)
-- [GraphQL](graphql.md)
 - [gRPC](grpc.md)
+- [GraphQL](graphql.md)
 
 **Capa Acceso datos (ORM)**
 
