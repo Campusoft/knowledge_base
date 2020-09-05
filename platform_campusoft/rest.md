@@ -13,6 +13,9 @@
 
 Agregar swagger/openApi a los proyectos.
 
+Una principales razones, para generar metadatos/documentacion con swagger/openAPI, es la habilidad para que otros herramientas automaticamente consuman e integren las APIs.
+
+
 Ref.
 
 [ASP.NET Core web API help pages with Swagger / OpenAPI](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-3.1)
