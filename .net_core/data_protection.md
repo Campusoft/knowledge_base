@@ -1,13 +1,21 @@
-## Versions
+# Host ASP.NET Core in a web farm
 
-### .net Core 3.0
 
-After .NET Core 3.0 we will not port any more features from .NET Framework. If you are a Web Forms developer and want to build a new application on .NET Core, we would recommend Blazor which provides the closest programming model. If you are a remoting or WCF Server developer and want to build a new application on .NET Core, we would recommend either ASP.NET Core Web APIs or gRPC, which provides cross platform and cross programming language contract based RPCs). If you are a Windows Workflow developer there is an open source port of Workflow to .NET Core.  
+Si requiere que la aplicacion se encuentre en varios servidores/host, y esta aplicacion tiene autentificacion con cookies, se requiere compartir entre los servidores/host como se encripta las cookies. Para esto se utiliza "Data Protection"
+
+Para compartir la key, para data protection existe varios formas. 
+- Carpetas compartidas. "PersistKeysToFileSystem"
+- Redis "Persisting keys with Redis"
+- Otros
+
+Configuracion estandar en Campusoft, para configurar "PersistKeysToFileSystem". Se lo realiza a traves de la clave "Security:DataProtection"
+
 
 Reference:
 
-https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/
+https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/web-farm?view=aspnetcore-3.1
  
  
+
 
 
