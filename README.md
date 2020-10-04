@@ -27,3 +27,6 @@ https://github.com/kamranahmedse/developer-roadmap
 
 ## Herramientas
 [Herramientas en linea](tool/tool_live.md)
+
+## Xamarin Forms
+taller_git_essentials/taller_git_essentials.md
