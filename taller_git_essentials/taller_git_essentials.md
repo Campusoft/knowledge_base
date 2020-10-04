@@ -1,15 +1,19 @@
 # Taller Git Essentials
+
 * ¿Qué es un sistema de Control de Versiones?
   * [Wikipedia - Definición de software de Control de versiones](https://en.wikipedia.org/wiki/Version_control)
   * [Wikipedia - Listado de software de Control de versiones](https://en.wikipedia.org/wiki/List_of_version-control_software)
+
 * ¿Qué es Git?
   * [Wikipedia - Git](https://es.wikipedia.org/wiki/Git)
   * [Descargar Git](https://git-scm.com/)
   * [Instrucciones de instalación](https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git)
+
 * Conociendo la Ayuda de Git
   * [Ayuda en línea ](https://git-scm.com/docs) ó `git help`
   * Guías: `git help -g` 
   * Comandos principales: `git help -a` 
+
 * Flujo de guardado de cambios en el repositorio
   * [Guardando cambios](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Guardando-cambios-en-el-Repositorio)
   * [Estados básicos](https://git-scm.com/book/en/v2/images/lifecycle.png)
@@ -19,6 +23,7 @@
   * `git log --all --graph --decorate --oneline` para revisar el historial
   * `git reset --soft HEAD~1` para deshacer el commit "infierno"
   * `git restore --staged <file|files> para deshacer del "limbo"
+
 * Entendiendo el Modelo de Objetos de Git
   * commit -> puntero a un tree
   * tree   -> un directorio
