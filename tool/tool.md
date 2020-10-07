@@ -2,9 +2,14 @@
 
 Las herramientas generales que se utilizan:
 
-## IDE Generales
+## Plataforma .Net
 
 - Visual Studio community 2017,2019. (Desarrollo en plataforma .net)
+- Herramienta para realizar LINQ  https://www.linqpad.net/
+
+
+## Varios
+
 - Visual Studio Code. (Desarrollo en varios lenguajes)
 - Oracle SQL Developer. (Desarrollo en Oracle DB)
 
