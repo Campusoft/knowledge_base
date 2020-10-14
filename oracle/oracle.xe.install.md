@@ -32,6 +32,25 @@ This file is located in:
     Windows: %ORACLE_HOME%\network\admin\listener.ora.
     Linux: $ORACLE_HOME/network/admin/listener.ora
 
-Replace localhost with 0.0.0.0 
+Replace localhost with 0.0.0.0 or COMPUTER_NAME
 
 https://stackoverflow.com/questions/13358656/oracle-client-ora-12541-tnsno-listener 
+
+
+LISTENER =
+  (DESCRIPTION_LIST =
+    (DESCRIPTION =
+      (ADDRESS = (PROTOCOL = IPC)(KEY = EXTPROC1521))
+      (ADDRESS = (PROTOCOL = TCP)(HOST = 0.0.0.0)(PORT = 1521))
+    )
+  )
+
+Step 2. Restart oracle services
+
+- OracleServiceXE
+- OracleOraDB18Home1TNSListener	
+
+Step 3. Execute lsnrctl status to check the status of listener
+
+Step 4. Test Connection on SqlDeveloper
+
