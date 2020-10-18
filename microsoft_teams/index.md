@@ -27,3 +27,10 @@ https://www.odata.org/
 
 Protocolo OAuth 2.0 / OpenID Connect 
 
+
+Implementation
+-----------------
+
+
+
+[Utilizando PowerShell](power_shell_teams.md)
