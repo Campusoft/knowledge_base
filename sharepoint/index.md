@@ -10,21 +10,19 @@ Posteriormente Microsoft lanzó SharePoint Server, una propuesta muy parecida a 
 Hoy en día conocemos cómo SharePoint Online, la cara visible de Microsoft 365 y el cerebro dónde se almacena toda la documentación de una empresa.
 
 
+## Componentes del sitio SharePoint
 
-Componentes del sitio SharePoint 
+**Web Parts**.  Una parte web es un bloque de creación básico para la mayoría de las páginas en su sitio SharePoint. Si tiene permiso para editar páginas en su sitio, puede usar Partes web para personalizar su sitio y mostrar fotos y gráficas, porciones de otras páginas web, listas de documentos, vistas personalizadas de datos de negocios y más.
 
-Web Parts.  Una parte web es un bloque de creación básico para la mayoría de las páginas en su sitio SharePoint. Si tiene permiso para editar páginas en su sitio, puede usar Partes web para personalizar su sitio y mostrar fotos y gráficas, porciones de otras páginas web, listas de documentos, vistas personalizadas de datos de negocios y más.
-
-Lists.  Permite a sus usuarios almacenar, compartir y administrar información en SharePoint. Puede usar listas para llevar un control de sus proyectos de trabajo o eventos deportivos en un calendario. Las listas también le permiten realizar encuestas u ofrecer debates en un panel de discusión.
-
-
-Libraries.  Una biblioteca es un tipo específico de lista dónde puede almacenar archivos. En una biblioteca, usted puede controlar cómo se ven los documentos, cómo se lleva un control de ellos, cómo se administran y crean.
+**Lists**.  Permite a sus usuarios almacenar, compartir y administrar información en SharePoint. Puede usar listas para llevar un control de sus proyectos de trabajo o eventos deportivos en un calendario. Las listas también le permiten realizar encuestas u ofrecer debates en un panel de discusión.
 
 
-Views.  Al crear y administrar las vistas, usted puede asegurar que los miembros de diversos equipos vean en una lista o biblioteca los elementos que les son más importantes. Usando las vistas, usted puede crear una lista de elementos que son importantes para cierto departamento, o destacar determinados documentos en una biblioteca.
+**Libraries**.  Una biblioteca es un tipo específico de lista dónde puede almacenar archivos. En una biblioteca, usted puede controlar cómo se ven los documentos, cómo se lleva un control de ellos, cómo se administran y crean.
 
 
+**Views**.  Al crear y administrar las vistas, usted puede asegurar que los miembros de diversos equipos vean en una lista o biblioteca los elementos que les son más importantes. Usando las vistas, usted puede crear una lista de elementos que son importantes para cierto departamento, o destacar determinados documentos en una biblioteca.
 
+## Sitios, Collecciones Sitios
 
 Cada sitio de SharePoint Server pertenece a una única colección de sitios, mientras que una colección de sitios está formada por un sitio de primer nivel y todos los sitios por debajo de este.
 
@@ -36,19 +34,17 @@ Cada sitio de SharePoint Server pertenece a una única colección de sitios, mie
 
 ## Versiones
 
-SharePoint Server 2013
-SharePoint Server 2016
-SharePoint Server 2019
+ - SharePoint Server 2013 
+ - SharePoint Server 2016 
+ - SharePoint Server 2019
+
+## SharePoint Framework
+
+TODO
 
 
 
-# SharePoint Framework
-
-
-
-
-
-# API
+## API
 
 Always use Microsoft Graph APIs when possible, but if you need to use capabilities which are not yet exposed within the Microsoft Graph, you might need to fall back on the SharePoint Online CSOM APIs. Today we are thrilled to announce availability of a new version of the SharePoint Online CSOM NuGet package, which also includes .NET Standard versions of the CSOM APIs.
 
@@ -58,20 +54,20 @@ Always use Microsoft Graph APIs when possible, but if you need to use capabiliti
 
 
 
-## REST API in SharePoint
+### REST API in SharePoint
 
 
 Using REST API remotely we can interact with SharePoint 2013/2016/2019/Online sites and can perform create, read, update and delete(CRUD) operation.
 
-The REST client access API was first introduced in SharePoint 2010, but was greatly expanded in SharePoint 2013. The REST API in SharePoint 2010 is accessed through the ListData web service at the /_vti_bin/ListData.svc url. SharePoint 2013 introduced the /_api/lists/ and /_api/web endpoint URLs, which behave slightly differently.
+The REST client access API was first introduced in SharePoint 2010, but was greatly expanded in SharePoint 2013.
 
-
+The REST API in SharePoint 2010 is accessed through the ListData web service at the /_vti_bin/ListData.svc url. SharePoint 2013 introduced the /_api/lists/ and /_api/web endpoint URLs, which behave slightly differently.
 
 El método recomendado para obtener los tokens de acceso para SharePoint Online es configurar una aplicación de Azure AD.
 
 
 
-## .NET Standard
+### .NET Standard
 
 Using CSOM for .NET Standard instead of CSOM for .NET Framework
 
@@ -82,7 +78,7 @@ On-Premises SharePoint support.  No. (Revisar)
 https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/using-csom-for-dotnet-standard
 
 
-## Reference
+# Reference
 
 
 Understanding the REST API of SharePoint 2013

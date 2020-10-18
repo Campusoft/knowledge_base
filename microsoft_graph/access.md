@@ -1,5 +1,6 @@
 
 
+
 ## Types of permissions
 
 
@@ -16,9 +17,9 @@ https://docs.microsoft.com/en-us/graph/sdks/choose-authentication-providers?tabs
 
 ## Labs:
 
-----------------
 
-Consumir graph con Postman.
+
+###  Consumir graph con Postman.
 
 
 Use Postman with the Microsoft Graph API (Tiene collections / environment) de Postman
@@ -48,8 +49,8 @@ https://developer.microsoft.com/en-us/graph/blogs/30daysmsgraph-day-9-azure-ad-a
 
 https://developer.microsoft.com/en-us/graph/blogs/30daysmsgraph-day-13-postman-to-make-microsoft-graph-calls/
 
-----------------
 
+**Errores**
 
 ----------------
 
