@@ -1,6 +1,7 @@
 ﻿using Microsoft.SharePoint.Client;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace TestFactoryMethod
             string usernameOnpremises = "pasarela@utpl.edu.ec";
             string passwordOnpremises = "ppd&1234";
             string directoryOnpremises = "Dev_SolicitudesERP";
+            string fileUploadOnpremises = "c:\\temp\\6833.jpg";
 
             string siteOnlineURL = "https://utpl.sharepoint.com/sites/dev_CarpetaEstudiante/";
             string usernameOnline = "jcsaavedra1@utpl.edu.ec";
@@ -75,6 +77,8 @@ namespace TestFactoryMethod
                     Context.ExecuteQuery();
                     Console.WriteLine($"Title: {myWeb.Title}");
                     Console.WriteLine($"Description: {myWeb.Description}");
+
+                    SPUploaderWithMetadata(Context, fileUploadOnpremises, directoryOnpremises);
 
                     Console.WriteLine($"----------------------------KEYS-----------------------------");
                     Microsoft.SharePoint.Client.ListItem listMetadata = GetMetadata(Context, directoryOnpremises);
@@ -160,6 +164,37 @@ namespace TestFactoryMethod
                 return null;
             }
         }
+
+        private static void SPUploaderWithMetadata(ClientContext Context, string fn, string directory)
+        {
+            var lib = Context.Web.Lists.GetByTitle(directory);
+            Context.Load(lib);
+            Context.Load(lib.RootFolder);
+            Context.ExecuteQuery();
+
+            string url = lib.RootFolder.ServerRelativeUrl;
+            string fileName = Path.GetFileName(fn);
+
+            string fnUrl = url + "/" + fileName;
+
+            FileStream fs = new FileStream(fn, FileMode.Open, FileAccess.Read);
+
+            Microsoft.SharePoint.Client.File.SaveBinaryDirect(Context, fnUrl, fs, true);
+
+            string uniqueRefNo = Guid.NewGuid().ToString("N");
+
+            Microsoft.SharePoint.Client.Web web = Context.Web;
+
+            Microsoft.SharePoint.Client.File newFile = web.GetFileByServerRelativeUrl(fnUrl);
+            Context.Load(newFile);
+
+            //Establecer propiedades
+            newFile.ListItemAllFields["Pidm"] = 123456;
+            newFile.ListItemAllFields.Update();
+            Context.ExecuteQuery();
+
+        }
+
 
     }
 }
