@@ -109,6 +109,10 @@ https://olafd.wordpress.com/2017/05/09/create-fields-from-xml-for-sharepoint-onl
 ### Autenticación a través de PnP (OfficeDevPnP)
 https://www.c-sharpcorner.com/article/authenticate-sharepoint-using-pnp-authentication-manager
 
+### Límites en archivos
+100 GB. The maximum size for files attached to list items is 250 MB.
+En caso de de utilizar FileCreationInformation() el límite son 2mb. 
+
 ### Agregar metadatos durante la carga
 
 ```https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview
