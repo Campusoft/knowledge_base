@@ -22,6 +22,8 @@ https://docs.microsoft.com/en-us/power-bi/guidance/whitepapers
 
 
 
+Blog comunitario de la suite de analítica de Microsoft de la mano de Power Platform y Azure Data Platform.  (Tiene algunos articulos interesantes)
+https://blog.ladataweb.com.ar/
 
 ### Community Tools
 

@@ -81,5 +81,9 @@ https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/using-csom-for-dotnet
 # Reference
 
 
+SharePoint / Office 365 Developer Patterns and Practices
+https://github.com/pnp/PnP 
+ 
+
 Understanding the REST API of SharePoint 2013
 https://www.slideshare.net/SPSSTHLM/understanding-the-rest-api-of-sharepoint-2013?from_action=save

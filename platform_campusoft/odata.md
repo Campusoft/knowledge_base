@@ -21,7 +21,26 @@ La potencia de **OData** nos da la posibilidad, entre otras, de:
 OData ayuda a concentrarse en la lógica de su negocio mientras crea API RESTful sin tener que preocuparse por los diversos enfoques para definir encabezados de solicitud y respuesta, códigos de estado, métodos HTTP, convenciones de URL, tipos de medios, formatos de carga útil, opciones de consulta, etc.
 
 
+## Client
+
+
+Simple.OData.Client is a multiplatform OData client library supporting .NET 4.x, .NET Standard, .NET Core, iOS and Android. The adapter provides a great alternative to WCF Data Services client. It does not require generation of context or entity classes and fits RESTful nature of OData services.
+
+https://www.nuget.org/packages/Simple.OData.Client/
+
+
 ## Laboratorio
+
+### Consumir OData. (OData Client)
+
+
+Referencias:
+Basic CRUD operations
+https://docs.microsoft.com/es-es/odata/client/getting-started
+
+
+
+
 
 ### Utilizar odata con Abp
 
