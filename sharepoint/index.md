@@ -40,7 +40,7 @@ Cada sitio de SharePoint Server pertenece a una única colección de sitios, mie
 
 ## SharePoint Framework
 
-TODO
+https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview
 
 
 
@@ -77,6 +77,97 @@ On-Premises SharePoint support.  No. (Revisar)
 
 https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/using-csom-for-dotnet-standard
 
+### Conexión a través de credenciales office 365 o de red
+
+Se utiliza la librería Microsoft.SharePointOnline.CSOM (16.1.20616.12000)
+
+##### SharePointAuthentication.SharePointOnline:
+ - credentials = new SharePointOnlineCredentials(Username, SecurePassword);
+
+##### SharePointAuthentication.SharePointActiveDirectory:
+ - credentials = new NetworkCredential(Username, Password);
+
+### Definición de campos (columnas) con XML
+```
+<Field
+    Type="Text"
+    DisplayName="Document Title English"
+    Description="Document Title in English"
+    Required="TRUE"
+    EnforceUniqueValues="FALSE"
+    Indexed="FALSE"
+    MaxLength="255"
+    Group="Demo"
+    ID="{161ef8f6-e73c-4c56-8a5f-c6a8900f2fc8}"
+    StaticName="TitleEN"
+    Name="TitleEN">
+</Field>
+```
+
+https://olafd.wordpress.com/2017/05/09/create-fields-from-xml-for-sharepoint-online
+
+### Autenticación a través de PnP (OfficeDevPnP)
+https://www.c-sharpcorner.com/article/authenticate-sharepoint-using-pnp-authentication-manager
+
+### Límites en archivos
+100 GB. The maximum size for files attached to list items is 250 MB.
+En caso de de utilizar FileCreationInformation() el límite son 2mb. 
+
+### Agregar metadatos durante la carga
+
+```https://docs.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview
+//Cargar archivos a través de Stream
+private static void UploadLargeFile(ClientContext Context, string FilePath, string Library, string FileName)
+{
+	string relativeFolder = String.Empty;
+	string relativePath = String.Empty;
+	FilePath = Path.Combine(Environment.CurrentDirectory, @"Extra\", FilePath);
+	if (FileName.Equals(String.Empty))
+	{
+		if (System.IO.File.Exists(FilePath))
+		{
+			FileName = Path.GetFileName(FilePath);
+		}
+		else
+		{
+			Console.WriteLine($"No se encontro el archivo: {FilePath}");
+			return;
+		}
+	}
+
+	var myLibrary = Context.Web.Lists.GetByTitle(Library);
+	Folder folder = myLibrary.RootFolder;
+	Context.Load(folder, f => f.ServerRelativeUrl);
+	Context.Load(myLibrary.ContentTypes);
+	Context.ExecuteQuery();
+	relativeFolder = myLibrary.RootFolder.ServerRelativeUrl;
+	relativePath = relativeFolder + "/" + FileName;
+
+	FileStream fs = new FileStream(FilePath, FileMode.Open, FileAccess.Read);
+	Microsoft.SharePoint.Client.File.SaveBinaryDirect(Context, relativePath, fs, true);
+
+	File uploadedFile = folder.Files.GetByUrl(relativePath);
+	Context.Load(uploadedFile);
+	Context.ExecuteQuery();
+
+	ContentType myContentType = myLibrary.ContentTypes.Where(ct => ct.Name == "Documento Beca").First();
+	uploadedFile.ListItemAllFields["ContentTypeId"] = myContentType.Id;
+	uploadedFile.ListItemAllFields["Created"] = DateTime.Today.AddDays(-1);
+	uploadedFile.ListItemAllFields["Identificacion"] = FileName;
+	uploadedFile.ListItemAllFields["StudentName"] = $"Juan Pablo Correa Herrera - {FileName}";
+	uploadedFile.ListItemAllFields["Pidm"] = $"123456 - {FileName}";
+	uploadedFile.ListItemAllFields.Update();
+	Context.ExecuteQuery();
+}
+```
+
+https://stackoverflow.com/questions/12474940/adding-metadata-while-uploading-documents-to-sharepoint
+
+### Tutorial básico de sharepoint client
+https://www.youtube.com/playlist?list=PLaIJswamN5lSSYPatSGSG5IC_gZXpBNdv
+
+### LABS
+https://github.com/Campusoft/LABS/tree/main/sharepoint/SharepointLabs
 
 # Reference
 
@@ -87,3 +178,5 @@ https://github.com/pnp/PnP
 
 Understanding the REST API of SharePoint 2013
 https://www.slideshare.net/SPSSTHLM/understanding-the-rest-api-of-sharepoint-2013?from_action=save
+
+
