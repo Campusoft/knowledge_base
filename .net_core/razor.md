@@ -2,6 +2,8 @@
 
 # Razor 
 
+
+
 ## Reusable UI using the Razor class library 
 
 El proyecto que tiene los objetos UI que seran compartidos, la estructura del proyecto  debe ser similar a:
@@ -21,3 +23,12 @@ El proyecto que tiene los objetos UI que seran compartidos, la estructura del pr
 Referencias
 Create reusable UI using the Razor class library project in ASP.NET Core
 https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-2.2&tabs=visual-studio
+
+
+#Referencias
+
+
+Including Static Resources In Razor Class Libraries In ASP.NET Core
+(Manual complete)
+https://www.mikesdotnetting.com/article/330/including-static-resources-in-razor-class-libraries-in-asp-net-core
+

@@ -55,6 +55,12 @@ https://docs.microsoft.com/en-us/aspnet/core/blazor/call-web-api?view=aspnetcore
 ##App configuration
 
 
+# Framework
+
+A Modular Application Framework for Blazor
+Modern, Flexible, and Open Source!
+https://www.oqtane.org/
+
 # Referencias
 
 ## Libros
