@@ -12,6 +12,12 @@ Blazor is a client-side web UI framework similar in nature to JavaScript front-e
 - Client-side in the browser on WebAssembly.
 - Server-side in an ASP.NET Core app.
 
+With the Blazor Server hosting model, the app is executed on the server from within an ASP.NET Core app. UI updates, event handling, and JavaScript calls are handled over a SignalR connection.
+
+
+One way to understand Blazor Server apps is to understand how it differs from traditional models for rendering UI in ASP.NET Core apps using Razor views or Razor Pages. Both models use the Razor language to describe HTML content, but they significantly differ in how markup is rendered.
+
+
 
 ##Bootstrap Blazor
 

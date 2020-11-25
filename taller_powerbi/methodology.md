@@ -1,0 +1,2 @@
+# Generar indicadores. 
+
