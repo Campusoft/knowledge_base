@@ -10,6 +10,10 @@ Tip:  La instalcion oracle XE, ejecutarla sin la VPN Activa del Cliente.
 https://www.oracle.com/technetwork/es/articles/apex/instalar-bd-oraclexe18c-5487194-esa.html
 
 
+## Tips Instalacion
+
+- Tener desactivada VPNs (Clientes, u otras). (Al tener estas activas la instalacion puede causar configuraciones erroneas en los Listener Oracle)
+
 
 ## Errores
 

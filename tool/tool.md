@@ -26,8 +26,17 @@ Las herramientas generales que se utilizan:
 - Tener por lo menos dos brower. (Verificaciones implementaciones web)
 
 
-
  
+## Complementos (Opcionales)
+
+Herramienta segun el tipo proyecto
+
+- SoapUI. (Test Soap)
+- Talend ESB (https://www.talend.com/)
+- Instalar DB OracleXE
+- Instalar DB Postgress
+- Instalar ActiveMQ
+
  
 
  
