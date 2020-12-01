@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.net_core",
+    "\\oracle",
+    "\\platform_campusoft"
   ],
+  "SelectedNode": "\\platform_campusoft\\ef.oracle.net_core.md",
   "PreviewInSolutionExplorer": false
 }

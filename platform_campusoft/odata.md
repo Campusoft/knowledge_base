@@ -20,6 +20,12 @@ La potencia de **OData** nos da la posibilidad, entre otras, de:
 
 OData ayuda a concentrarse en la lógica de su negocio mientras crea API RESTful sin tener que preocuparse por los diversos enfoques para definir encabezados de solicitud y respuesta, códigos de estado, métodos HTTP, convenciones de URL, tipos de medios, formatos de carga útil, opciones de consulta, etc.
 
+## Query
+
+
+
+https://docs.microsoft.com/es-es/odata/client/query-options
+
 
 ## Client
 
@@ -39,6 +45,36 @@ Basic CRUD operations
 https://docs.microsoft.com/es-es/odata/client/getting-started
 
 
+
+OData Connected Service Extension
+
+
+
+### Cliente Simple.OData.Client
+
+Permite consumir odata, y retornar una lista directory (key,value) all propiedades de los objetos.
+
+Getting started with Simple.OData.Client
+https://github.com/simple-odata-client/Simple.OData.Client/wiki/Getting-started-with-Simple.OData.Client
+
+
+------------------------------
+
+Siempre se baja los metadata
+
+
+Secuencia Simple.OData.Client
+1. Obtener $metadata
+
+GET request: <Path-Root>/$metadata
+
+2. Ejecutar consulta
+
+GET request: <Path-Root>/contacts?$top=10&$select=firstname,middlename,lastname
+
+
+Referencias
+https://github.com/simple-odata-client/Simple.OData.Client/issues/636
 
 
 

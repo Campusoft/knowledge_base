@@ -13,7 +13,7 @@ Authenticate users with WS-Federation in ASP.NET Core.
 **Soluciones:**
 
 
-Si una aplicacion tiene un proxy delante, y la direccio publica sea diferente a la interna (publica https, interna http) el direccionamiento que se realice desde la aplicacion, causara que las cookies no se establezcan correctamente. 
+Si una aplicacion tiene un proxy delante, y la direccion publica sea diferente a la interna (publica https, interna http) el direccionamiento que se realice desde la aplicacion, causara que las cookies no se establezcan correctamente. 
 
 Para solucionar establecer ProtocolMessage.Wreply
 ![imagen](https://user-images.githubusercontent.com/222181/92297689-9ad9dc80-ef07-11ea-86c9-617db88bbe43.png)
