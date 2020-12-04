@@ -11,6 +11,7 @@ Este repo contiene información útil del taller de power bi realizado el 04/12/
 https://www.limesurvey.org/en/blog/20-blog/107-how-and-when-to-use-7-of-the-most-popular-chart-types
 https://www.dummies.com/software/microsoft-office/excel/10-excel-chart-types-and-when-to-use-them/
 https://www.skillsyouneed.com/num/graphs-charts.html
+
 https://blog.hubspot.com/marketing/types-of-graphs-for-data-visualization
 https://towardsdatascience.com/data-visualization-101-how-to-choose-a-chart-type-9b8830e558d6
 
