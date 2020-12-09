@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\.net_core",
-    "\\.net_framework"
+    "\\message_broker",
+    "\\taller_powerbi"
   ],
+  "SelectedNode": "\\taller_powerbi\\connect_data.md",
   "PreviewInSolutionExplorer": false
 }

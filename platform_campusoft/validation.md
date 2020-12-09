@@ -17,7 +17,7 @@ Estas validaciones, se utilizan dataAnnotations
 
 Estas validaciones son aquellas, que pueden cambiar en tiempo. Estas validaciones deben realizarse en clases exclusivas que encapsulen la logica de la validacion.
 
-Se debe utilizar libreria "FluentValidations"; o si el proyecto-requerimiento posee mecanismo parametrizacion se utilizarian este. 
+Es recomendable utilizar libreria "FluentValidations"; o si el proyecto-requerimiento posee mecanismo parametrizacion se utilizarian este. 
 
 Ejemplo de estas validaciones.
 - Codigo Unico (Consistencia datos)

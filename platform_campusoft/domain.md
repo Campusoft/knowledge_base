@@ -5,10 +5,10 @@
 
 Permite extender las clases separadas, segun las necesidades Negocio. Ejemplo si se requiere agregar una propiedad, algun comportamiento.
  
-- Identificador
--- Uso codigos
--- Uso int
--- Uso Guid
+-	Identificador
+	- Uso codigos	
+	- Uso int
+	- Uso Guid
  
 - *TODO*
 

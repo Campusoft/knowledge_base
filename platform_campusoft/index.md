@@ -11,6 +11,7 @@ La plataforma que se utiliza para construir sistemas, con tecnologia .net, en pr
 - Platform Campusoft
 
 **Conceptos:**
+- DDD
 - ORM. ORM, Entity Framework. / ORM ligero, Drapper. 
 - Servicios. (REST)
 
@@ -39,7 +40,7 @@ Para sus entendimiento, inicial con los manuales:
 - Entidades dominio. [enlace](https://aspnetboilerplate.com/Pages/Documents/Entities)
 - Servicios Aplicacion.   [enlace](https://aspnetboilerplate.com/Pages/Documents/Application-Services)
    
- ## Plataforma Campusoft.
+## Plataforma Campusoft.
 
 La plataforma Campusoft, esta implementa sobre .net, y abp. Posee un sinumero elementos comunes que se utilizan en cualquier sistema que se implemente, tambien elementos particulares para ciertos tipos sistemas.
 
@@ -59,6 +60,7 @@ Los servicios de aplicación, son los que exponen características de un sistema
 consumidas por diferentes clientes “Frontend”.  Ejemplo Web utilizando MVC, o SPA utilizando servicios REST, o una interfaz de línea de comandos “CLI”
 
 ![](https://lh6.googleusercontent.com/5E1sJE3mnPo6Tn34fj09B80ih35HnZYWA5q3kNqxzA04_S9hAyTfVt_n2ROcANRHv043ItE7-pSsW4oK2buptC8mYXYCKq0hqF0_Bp7LFYZTZttZShqNb4JNhoUlt9AVhy_O3G7Y)
+
 **Especificaciones:**
 
 Los servicios aplicacion siempre debe tener una interfaz.
@@ -78,6 +80,7 @@ Los métodos públicos de un servicio de aplicación, siempre deben recibir sól
 La plataforma Campusoft, tiene clases base que extendiende las características ofrecidas por ABP, las cuales pueden ser debe utilizadas en conjunto con controladores base en un modelo MVC, para generar formularios básicos dinámicos.
 
 TODO
+
 - Autorizacion
 - Validaciones
 - Mapeo
@@ -110,6 +113,7 @@ Se utilizan los siguientes protocolos servicios:
 **Capa Infraestructura**
    
 **Capa de Presentación.**
+
 Existe las siguientes clases base
 -   BaseReadOnlySearchDtoController, se utiliza para crear funcionalidades de visualizacion de informacion.
     
@@ -147,31 +151,29 @@ La plataforma genera automáticamente, la vista tipo “Form”, de todas las pr
    
 -   En el constructor del controlador, se debe establecer la propiedad a true, para indicarle al framework que se utiliza un view personalizado.
     
--   ViewFormTyped = true;
+    -   ViewFormTyped = true;
 
--   Establecer el view para la acción de crear “GetViewFormCreateTyped(string name)”, si no se especifica esta vista, se utilizara la vista generica.
+    -   Establecer el view para la acción de crear “GetViewFormCreateTyped(string name)”, si no se especifica esta vista, se utilizara la vista generica.
 
 -   En el constructor del controlador, se debe establecer la propiedad a true, para indicarle al framework que se utiliza un view personalizado.
  
--   ViewFormCreateTyped = true;
+    -   ViewFormCreateTyped = true;
+
+    -   Establecer el view para la acción de editar “GetViewFormEditTyped(string name)”, si no se especifica esta vista, se utilizara la vista genérica
     
 
--   Establecer el view para la acción de editar “GetViewFormEditTyped(string name)”, si no se especifica esta vista, se utilizara la vista genérica
+-   En el constructor del controlador, se debe establecer la propiedad a true, para indicarle al framework que se utiliza un view personalizado.
+    
+    -   ViewFormEditTyped = true;
+    
+
+    -   Establecer el view para la acción de detalles “GetViewFormDetailTyped(string name)”, si no se especifica esta vista, se utilizara la vista genérica.
     
 
 -   En el constructor del controlador, se debe establecer la propiedad a true, para indicarle al framework que se utiliza un view personalizado.
     
 
--   ViewFormEditTyped = true;
-    
-
--   Establecer el view para la acción de detalles “GetViewFormDetailTyped(string name)”, si no se especifica esta vista, se utilizara la vista genérica.
-    
-
--   En el constructor del controlador, se debe establecer la propiedad a true, para indicarle al framework que se utiliza un view personalizado.
-    
-
--   ViewFormDetailTyped = true;
+    -   ViewFormDetailTyped = true;
     
 
 -   Para la acción de delete, se utiliza el view establecido en “GetViewFormDetailTyped(string name)”, o la vista genérica.
