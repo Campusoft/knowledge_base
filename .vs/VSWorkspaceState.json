@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\message_broker",
+    "\\oracle",
     "\\taller_powerbi"
   ],
-  "SelectedNode": "\\taller_powerbi\\connect_data.md",
+  "SelectedNode": "\\oracle\\merge.md",
   "PreviewInSolutionExplorer": false
 }

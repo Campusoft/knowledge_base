@@ -81,4 +81,8 @@ Blazor for ASP.NET Web Forms Developers
 https://docs.microsoft.com/en-us/dotnet/architecture/blazor-for-web-forms-developers/
  
 
+## Referencias Codigo, Aplicaciones con codigo
+
+Sample ASP.NET Core 5.0 reference application, powered by Microsoft, demonstrating a layered application architecture with monolithic deployment model
+https://github.com/dotnet-architecture/eShopOnWeb
 
