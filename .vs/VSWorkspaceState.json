@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\message_broker",
-    "\\oracle",
+    "\\sharepoint",
     "\\taller_powerbi"
   ],
-  "SelectedNode": "\\oracle\\merge.md",
+  "SelectedNode": "\\sharepoint\\Programming.md",
   "PreviewInSolutionExplorer": false
 }
