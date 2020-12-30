@@ -1,9 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\sharepoint",
-    "\\taller_powerbi"
+    "\\.net_core",
+    "\\.net_framework",
+    "\\angular",
+    "\\architecture",
+    "\\ui",
+    "\\ui\\syncfusion"
   ],
-  "SelectedNode": "\\sharepoint\\Programming.md",
   "PreviewInSolutionExplorer": false
 }
