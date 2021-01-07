@@ -1,13 +1,17 @@
+# Power Automate
 
+Power Automate, its included in any Office 365 commercial or Education licenses (E1, E3, E5, A1, A3, A5, Business Essentials, Business Premium).
 
-
+Power Automate lets you automate personal or business process flows with hundreds of included connectors in its standard version, there’s also premium connectors that will allow you to interact with external services and other 3rd parties.
+ 
 Connectors documentation
+
 A connector is a proxy or a wrapper around an API that allows the underlying service to talk to Microsoft Power Automate, Microsoft Power Apps, and Azure Logic Apps. It provides a way for users to connect their accounts and leverage a set of pre-built actions and triggers to build their apps and workflows.
 
 
 Use data operations with Power Automate
-
 https://docs.microsoft.com/en-us/power-automate/data-operations
+
 
 ## Laboratorios
 

@@ -8,7 +8,7 @@ To receive authorization, the client sends the userid and password, separated by
 
 Because Basic authentication involves the cleartext transmission of passwords, it should be used over TLS or SSL protocols (HTTPS) in order to protect sensitive or valuable information.
 
-# Jwt Auth
+## Jwt Auth
 
 JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
 
@@ -25,10 +25,19 @@ Código 	Nombre 	Descripción
 
 https://es.wikipedia.org/wiki/JSON_Web_Token
 
-# OAuth 2
+## OAuth 2
 
 
-# OpenID Connect, OAuth 2.0 and SAML 2.0
+Los flujos de OAuth también denominados grant types hacen referencia al modo en que una aplicación obtiene un access token que le permite acceder a los datos expuestos a través de una API.
+
+
+Revision:
+
+¿Cómo securizar tus APIs con OAuth?
+https://www.paradigmadigital.com/dev/oauth-2-0-equilibrio-y-usabilidad-en-la-securizacion-de-apis/
+
+
+## OpenID Connect, OAuth 2.0 and SAML 2.0
 
 
 Build a web application using OpenID Connect with AD FS 2016

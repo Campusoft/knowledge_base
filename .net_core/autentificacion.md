@@ -1,7 +1,7 @@
 
 # Authentication and authorization for SPAs
 
-
+Authentication and authorization for SPAs
 https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-api-authorization?view=aspnetcore-5.0
 
 

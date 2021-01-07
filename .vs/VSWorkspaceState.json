@@ -1,12 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\.net_core",
-    "\\.net_framework",
-    "\\angular",
-    "\\architecture",
-    "\\ui",
-    "\\ui\\syncfusion"
+    ""
   ],
   "PreviewInSolutionExplorer": false
 }
