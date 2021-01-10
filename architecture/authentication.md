@@ -12,23 +12,66 @@ Because Basic authentication involves the cleartext transmission of passwords, i
 
 JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
 
+JSON Web Token (JWT) is an open standard of transmitting information securely between two parties. As the tokens are digitally signed, the information is secured. The authentication and authorization process uses JWT access tokens. It is ideal to use JWT access tokens as API credentials because JWT access tokens can carry claims (data) that are used in order to authenticate and authorize requests.
+
+Mandatory attributes of a JWT access token
+
+Header
+
+- alg 	The algorithm used to sign the token (e.g., RS256).
+
+
+Payload
+
 Campos estandares
 
 Código 	Nombre 	Descripción
--	iss 	Issuer 	Identifica el proveedor de identidad que emitió el JWT
--	sub 	Subject 	Identifica el objeto o usuario en nombre del cual fue emitido el JWT
+-	iss 	Issuer 	Identifica el proveedor de identidad que emitió el JWT. (The claim identifies the principal that issued the JWT.) (Mandatory)
+-	sub 	Subject 	Identifica el objeto o usuario en nombre del cual fue emitido el JWT (Mandatory)
 -	aud 	Audience 	Identifica la audiencia o receptores para lo que el JWT fue emitido. Cada servicio que recibe un JWT para su validación tiene que controlar la audiencia a la que el JWT está destinado. Si el proveedor del servicio no se encuentra presente en el campo aud, entonces el JWT tiene que ser rechazado
--	exp 	Expiration time 	Identifica la marca temporal luego de la cual el JWT no tiene que ser aceptado. 
+-	exp 	Expiration time 	Identifica la marca temporal luego de la cual el JWT no tiene que ser aceptado.  (Mandatory)
 -	nbf 	Not before 	Identifica la marca temporal en que el JWT comienza a ser válido. EL JWT no tiene que ser aceptado si el token es utilizando antes de este tiempo. 
 -	iat 	Issued at 	Identifica la marca temporal en qué el JWT fue emitido.
 -	jti 	JWT ID 	Identificador único del token incluso entre diferente proveedores de servicio.
 
 https://es.wikipedia.org/wiki/JSON_Web_Token
 
+
+JWT
+The ID token consists of three main parts:
+
+-    header. Metadata about the token and its cryptographic algorithm
+-    payload. Claims about the issuer, the user and user authorization
+-    signature. For verification of the integrity of the token
+	
+You can use the header and signature to verify the authenticity of the token, while the payload contains the information about the user requested by your client. 
+ 
+Signature
+The last part of the ID Token is the signature, which you use to to verify that the token was issued by the trusted issuer and not tampered with in route.
+
+The header of the JWT contains information about the key and encryption method used to sign the token:
+
+```
+{
+  "typ": "JWT",
+  "alg": "RS256",
+  "x5t": "iBjL1Rcqzhiy4fpxIxdZqohM2Yk",
+  "kid": "iBjL1Rcqzhiy4fpxIxdZqohM2Yk"
+}
+```
+
+The alg claim indicates the algorithm that was used to sign the token, while the kid claim indicates the particular public key that was used to validate the token.
+
+## SAML 
+
 ## OAuth 2
 
 
+In OAuth2, the term Grant Type refers to the way for a client application to acquire an access token depending on the type of the resource owner, type of the application and the trust relationship between the authorization server and the resource owner. 
+
+
 Los flujos de OAuth también denominados grant types hacen referencia al modo en que una aplicación obtiene un access token que le permite acceder a los datos expuestos a través de una API.
+
 
 
 Revision:
@@ -37,9 +80,86 @@ Revision:
 https://www.paradigmadigital.com/dev/oauth-2-0-equilibrio-y-usabilidad-en-la-securizacion-de-apis/
 
 
-## OpenID Connect, OAuth 2.0 and SAML 2.0
+OAuth 2.0 Authorization Code with PKCE Flow 
+These security issues led to a reassessment of the value of the Implicit flow, and in November of 2018, new guidance was released that effectively deprecated this flow. 
+
+
+
+## OpenID Connect
 
 
 Build a web application using OpenID Connect with AD FS 2016
 https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/development/enabling-openid-connect-with-ad-fs
+
+
+OpenID Connect describes a metadata document (RFC) that contains most of the information required for an app to do sign in. This includes information such as the URLs to use and the location of the service's public signing keys. You can find this document by appending the discovery document path to the authority URL:
+
+Discovery document path: /.well-known/openid-configuration
+
+The contents are fully described in the OpenID Connect specification.
+
+https://openid.net/specs/openid-connect-discovery-1_0.html#rfc.section.4.2
+
+
+OpenID Connect has defined flows to issue ID tokens by extending the specification of the response_type request parameter.
+
+the value of response_type is either code or token. OpenID Connect has added a new value, id_token, and allowed any combination of code, token and id_token. A special value, none, has been added, too. 
+
+response_type parameter:
+
+- code
+- token
+- id_token
+- id_token token
+- code id_token
+- code token
+- code id_token token
+- none
+
+response_type			Flow
+code			  		Authorization Code Flow
+id_token  				Implicit Flow
+id_token token  		Implicit Flow
+code id_token  			Hybrid Flow
+code token  			Hybrid Flow
+code id_token token  	Hybrid Flow
+
+
+
+**Implicit Flow**
+
+The Implicit flow is intended for applications where the confidentiality of the client secret can't be guaranteed. In this flow, the client doesn't make a request to the /token endpoint, but instead receives the access token directly from the /authorize endpoint. The client must be capable of interacting with the resource owner's user agent and also capable of receiving incoming requests (through redirection) from the authorization server.
+
+En response_type, utilizar algun flow "Implicit Flow", ejemplo "id_token%20token"
+
+https://{openID_server}/authorize?response_type=id_token%20token&client_id={cliente_id}&redirect_uri={redirect_uri}&scope=openid%20profile
+
+
+OpenID specifications 
+https://openid.net/developers/specs/
+
+### Librerias
+
+-------------------
+
+oidc-client
+
+https://github.com/IdentityModel/oidc-client-js/wiki
+
+ A simple demonstration of using IdentityModel/oidc-client with angular 2 
+https://github.com/jmurphzyo/Angular2OidcClient/tree/ng4
+
+-------------------
+
+MSAL.js
+
+### Referencias
+
+The OIDC playground is for developers to test and work with OpenID Connect calls step-by-step, giving them more insight into how OpenID Connect works.
+https://openidconnect.net/
+
+
+Diagrams of All The OpenID Connect Flows
+https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
+
 
