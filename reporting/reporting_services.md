@@ -5,8 +5,10 @@
 
 - SQL Server Data Tools (SSDT) for Visual Studio
   - with Extensions: Analysis Services,Integration Services, Reporting Services
-	
 
+## Reporting Services 2019
+### Oracle Connection
+- Oracle ODAC 12.2c Release 1 required for data source creations (http://download.oracle.com/otn/other/ole-oo4o/ODAC122011_x64.zip)
 
 Labs
 
