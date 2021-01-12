@@ -159,6 +159,10 @@ The OIDC playground is for developers to test and work with OpenID Connect calls
 https://openidconnect.net/
 
 
+Demo que posee algunos tipos grant type
+https://demo.identityserver.io/
+
+
 Diagrams of All The OpenID Connect Flows
 https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
 
