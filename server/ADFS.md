@@ -7,6 +7,15 @@ For ADFS 4.0, on Windows Server 2016 and up, use OpenID
 For ADFS 2.0 and 3.0, on Windows Server 2012 R2 and below, use SAML
 
 
+# OpenID Connect / OAuth
+
+
+If you use WS-Fed or SAML, the client is a relying party (RP).
+
+If you use OpenID Connect / OAuth, the client is inside an application group. But functionally, it's the same as a RP.
+
+
+
 # Referencias
 
 Active Directory Federation Services
@@ -26,6 +35,14 @@ Check if the endpoints are enabled
 AD FS provides various endpoints for different functionalities and scenarios. Not all endpoints are enabled by default. 
 https://support.microsoft.com/en-us/topic/check-if-the-endpoints-are-enabled-401d8d08-3808-56d7-bf88-3248f5960ade
 
+------------------
+Algunas enlaces con pantllas para configuraciones OpenId en ADFS
+
+Windows 2016 - ADFS 4.0
+https://django-auth-adfs.readthedocs.io/en/latest/adfs_4.0_config_guide.html
+
+OAuth/OpenID Single Sign On (SSO) into Bamboo using ADFS
+https://plugins.miniorange.com/oauth-openid-single-sign-on-sso-bamboo-using-adfs#step_1
 
 --------------------------------
 
