@@ -7,8 +7,18 @@
   - with Extensions: Analysis Services,Integration Services, Reporting Services
 
 ## Reporting Services 2019
-### Oracle Connection
-- Oracle ODAC 12.2c Release 1 required for data source creations (http://download.oracle.com/otn/other/ole-oo4o/ODAC122011_x64.zip)
+### Migración 2009 a 2019
+#### Requisitos
+1. Instalación SQL Server Reporting Service 2019
+2. Instalación de Oracle ODAC 12.2c Release 1 (http://download.oracle.com/otn/other/ole-oo4o/ODAC122011_x64.zip) que es requerido para crear orígenes de datos de Oracle Database (equivalente a oracle en 2009).
+3. Permisos de salida hacia servidores de base de datos.
+4. Esquemas de conexión del ambiente respectivo.
+
+#### Proceso
+1. Creación de orígenes de datos a partir de esquemas de conexión necesarios y de acuerdo al ambiente a utilizar.
+2. Descarga de reportes (.rdl) y datasets (.rds) de servidor 2009
+3. Importación de reportes (.rdl) y datasets (.rds) en servidor 2019
+4. Cambio de origen de datos en los reportes para que apunten a los orígenes de datos creados en el nuevo servidor.
 
 Labs
 
