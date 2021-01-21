@@ -62,6 +62,9 @@ The header of the JWT contains information about the key and encryption method u
 
 The alg claim indicates the algorithm that was used to sign the token, while the kid claim indicates the particular public key that was used to validate the token.
 
+
+
+
 ## SAML 
 
 ## OAuth 2
@@ -135,6 +138,34 @@ En response_type, utilizar algun flow "Implicit Flow", ejemplo "id_token%20token
 https://{openID_server}/authorize?response_type=id_token%20token&client_id={cliente_id}&redirect_uri={redirect_uri}&scope=openid%20profile
 
 
+En .well-known/openid-configuration, existe la propiedad "jwks_uri", el cual permite
+recuperar las claves para firmar los token.
+
+The JSON Web Key Set (JWKS) is a set of keys containing the public keys used to verify any JSON Web Token (JWT) issued by the authorization server and signed using the RS256 signing algorithm. 
+
+
+The JWKS above contains a single key. Each property in the key is defined by the JWK specification RFC 7517 Section 4. We will use these properties to determine which key was used to sign the JWT. Here is a quick breakdown of what each property represents:
+
+-    alg: is the algorithm for the key
+-    kty: is the key type
+-    use: is how the key was meant to be used. For the example above, sig represents signature verification.
+-    x5c: is the x509 certificate chain
+-    e: is the exponent for a standard pem
+-    n: is the moduluos for a standard pem
+-    kid: is the unique identifier for the key
+-    x5t: is the thumbprint of the x.509 cert (SHA-1 thumbprint)
+
+Here are the steps for validating the JWT:
+
+-    Retrieve the JWKS and filter for potential signature verification keys.
+-    Extract the JWT from the request's authorization header.
+-    Decode the JWT and grab the kid property from the header.
+-    Find the signature verification key in the filtered JWKS with a matching kid property.
+-    Using the x5c property build a certificate which will be used to verify the JWT signature.
+-    Ensure the JWT contains the expected audience, issuer, expiration, etc.
+
+
+
 OpenID specifications 
 https://openid.net/developers/specs/
 
@@ -166,4 +197,5 @@ https://demo.identityserver.io/
 Diagrams of All The OpenID Connect Flows
 https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
 
-
+Certificate Decoder
+https://www.sslshopper.com/certificate-decoder.html

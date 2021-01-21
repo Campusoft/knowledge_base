@@ -33,6 +33,15 @@ strictDiscoveryDocumentValidation: false
 https://manfredsteyer.github.io/angular-oauth2-oidc/docs/additional-documentation/using-an-id-provider-that-fails-discovery-document-validation.html
 
 
+------------------------
+Error:
+Parameter jwks expected!
+
+
+
+
+------------------
+
 
 ## Varios
 

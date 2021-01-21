@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\mysql",
+    "\\oracle"
   ],
+  "SelectedNode": "\\oracle\\oracle_sql_developer.md",
   "PreviewInSolutionExplorer": false
 }
