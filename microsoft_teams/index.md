@@ -12,6 +12,11 @@ Suscribirse programa desarrollo
 https://developer.microsoft.com/en-us/microsoft-365/dev-program
 
 
+Webhooks
+------------------
+
+Communicate with external apps: Incoming webhooks are a simple way to automatically send notifications from another app to a Teams channel. With outgoing webhooks, message your web service with an @mention.
+
 
 Microsoft Graph
 ------------------
@@ -31,6 +36,6 @@ Protocolo OAuth 2.0 / OpenID Connect
 Implementation
 -----------------
 
-
+[Errores comunes desarrollo teams](error.dev.md)
 
 [Utilizando PowerShell](power_shell_teams.md)

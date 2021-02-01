@@ -50,3 +50,8 @@ https://developer.microsoft.com/en-us/graph/blogs/announcing-30-days-of-microsof
 
 Build ASP.NET Core MVC apps with Microsoft Graph
 https://docs.microsoft.com/en-us/graph/tutorials/aspnet-core
+
+
+Quickstart: Acquire a token and call Microsoft Graph API using console app's identity.
+demonstrates how a .NET Core console application can get an access token to call the Microsoft Graph API and display a list of users in the directory.
+https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-netcore-daemon

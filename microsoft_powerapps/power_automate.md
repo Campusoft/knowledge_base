@@ -53,6 +53,10 @@ https://www.youtube.com/c/JonLevesqueTech/videos
 Ninja List: The great migration of SharePoint Workflow to Power Automate
 http://johnliu.net/blog/ninja-list-the-great-migration-of-sharepoint-workflow-to-power-automate
 
+Microsoft Flow y Azure Logic Apps: Casos de uso 
+https://www.ferranchopo.com/2019/06/10/microsoft-flow-y-azure-logic-apps-casos-de-uso/
+
+
 ### Make HTTP request from Flow in Power Automate
 
 Realizar llamada API REST

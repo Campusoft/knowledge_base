@@ -1,6 +1,3 @@
-
-
-
 ## Types of permissions
 
 
@@ -15,7 +12,24 @@ https://docs.microsoft.com/en-us/graph/sdks/choose-authentication-providers?tabs
 
 
 
+Choose a Microsoft Graph authentication provider based on scenario. Work Microsoft Graph SDKs
+https://docs.microsoft.com/en-us/graph/sdks/choose-authentication-providers?tabs=CS
+
+
 ## Labs:
+
+
+### Consumir graph con .net Core
+
+
+In this quickstart, you download and run a code sample that demonstrates how a .NET Core console application can get an access token to call the Microsoft Graph API and display a list of users in the directory. The code sample also demonstrates how a job or a windows service can run with an application identity, instead of a user's identity.
+https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-netcore-daemon
+
+
+**errores**
+
+
+If you try to run the application at this point, you'll receive HTTP 403 - Forbidden error: Insufficient privileges to complete the operation. This happens because any app-only permission requires Admin consent, which means that a global administrator of your directory must give consent to your application. Select one of the options below depending on your role:
 
 
 
@@ -55,10 +69,7 @@ https://developer.microsoft.com/en-us/graph/blogs/30daysmsgraph-day-13-postman-t
 ----------------
 
 
-Consumir Graph con .net core
 
-
-Errores:
 
 Original exception: AADSTS7000218: The request body must contain the following parameter: 'client_assertion' or 'client_secret'.
 

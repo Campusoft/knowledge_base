@@ -21,9 +21,21 @@ https://xunit.net/docs/getting-started/netfx/visual-studio
 Shared Context between Tests
 https://xunit.net/docs/shared-context
 
+Getting Started with xUnit.net
+Using .NET Core with Visual Studio
+https://xunit.net/docs/getting-started/netcore/visual-studio
+
+
 Capturing Output
 https://xunit.net/docs/capturing-output
 
+
+Errores Comunes
+
+Si no se ejecutan los test, en visual studio asegurarse que "Microsoft.NET.Test.Sdk" este en las dependencias del proyecto
+
+The packages xunit.runner.visualstudio and Microsoft.NET.Test.Sdk are required for being able to run your test project inside Visual Studio as well as with dotnet test. 
+https://xunit.net/docs/getting-started/netcore/visual-studio
 
 
 #### Mock 
