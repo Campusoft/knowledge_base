@@ -1,5 +1,13 @@
 # Estandares, Buenas Practicas, Listas Checkeo
 
+
+## Patrones
+
+
+GOF Design Patterns in C# with working examples inspired by food
+https://github.com/wesdoyle/design-patterns-explained-with-food
+
+
 ## Web
 
 The Front-End Checklist is an exhaustive list of all elements you need to have / to test before launching your website / HTML page to production.

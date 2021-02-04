@@ -19,6 +19,9 @@ El proyecto que tiene los objetos UI que seran compartidos, la estructura del pr
   </Project>
 ```
 
+Tiene que tener Sdk="Microsoft.NET.Sdk.Razor" en elemento Project
+
+
 
 Referencias
 Create reusable UI using the Razor class library project in ASP.NET Core
