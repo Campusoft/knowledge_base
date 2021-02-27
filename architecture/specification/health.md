@@ -1,0 +1,1 @@
+A  Health  Check  for  readiness  allows  third  party  services  to  know  if  the  application  is  ready  toprocess requests or not.

@@ -8,6 +8,10 @@ Las herramientas generales que se utilizan:
 - Herramienta para realizar LINQ  https://www.linqpad.net/
 
 
+The .NET Portability Analyzer helps you determine how flexible your application is across .NET platforms.
+https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
+
+
 ## Varios
 
 - Visual Studio Code. (Desarrollo en varios lenguajes)

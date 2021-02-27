@@ -14,6 +14,12 @@ JSON Web Tokens are an open, industry standard RFC 7519 method for representing 
 
 JSON Web Token (JWT) is an open standard of transmitting information securely between two parties. As the tokens are digitally signed, the information is secured. The authentication and authorization process uses JWT access tokens. It is ideal to use JWT access tokens as API credentials because JWT access tokens can carry claims (data) that are used in order to authenticate and authorize requests.
 
+
+- Token validation doesn’t require an additional trip and can be validated locally by each service
+- Given  its  JSON  nature,  it  is  solely  based  on  claims  or  attributes  to  carry  authentication  andauthorization information about a subject.
+- Given  its  JSON  nature,  processing  JWT  tokens  becomes  trivial  and  lightweight.
+
+
 Mandatory attributes of a JWT access token
 
 Header
