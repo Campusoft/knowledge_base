@@ -13,6 +13,10 @@ Use data operations with Power Automate
 https://docs.microsoft.com/en-us/power-automate/data-operations
 
 
+Choosing between Power Automate and Logic App
+![imagen](https://user-images.githubusercontent.com/222181/109407273-7d814a80-794d-11eb-9060-1b35f6ee5e49.png)
+
+
 ## Laboratorios
 
 ### HelloSign
