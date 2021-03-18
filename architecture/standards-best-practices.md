@@ -33,6 +33,24 @@ https://github.com/labs42io/clean-code-typescript
 https://plan.io/blog/technical-documentation/
 
 
+## Database
+
+- Learn as much as you can about problem domain. You can't create good data model without knowing what you're designing for
+- Use singular for table names (i.e. use StudentCourse instead of StudentCourses). Table represents a collection of entities, there is no need for plural names.
+- Each table must has primary key.
+- Natural key vs artificial key (e.g. surrogate key/GUID): First prefer to use the natural key since it's more  meaningful and to avoid duplications (reuse existing column). But there are cases when you need an artificial key: when the natural key is not unique (e.g. names) or if you need to change the value.
+- Use separate tables for domain objects rather than cramming them into a single table. This allows proper column types, constraints and relationships. An “Allowed Values” table is just muck and has no place in a data model.
+- Consider whether to use Unicode data type  (e.g. NCHAR,NVARCHAR,NTEXT) if you need to support internationalization, but Unicode will take twice as much space. (*****)
+- Provide documentation, describe all tables & relationships, DDL. The application programmers should be able to find documentations about any triggers, constraints & store procedures in your database.
+
+Database Guidelines (RDBMS/SQL) 
+http://soa-java.blogspot.com/2013/01/database-guidelines-rdbmssql.html
+ 
+Tips for Better Database Design
+https://vertabelo.com/blog/9-tips-for-better-database-design/
+
+
+
 ## Varios
 
 ### DMN - Decision Model and Notation
