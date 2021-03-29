@@ -42,6 +42,8 @@ https://plan.io/blog/technical-documentation/
 - Use separate tables for domain objects rather than cramming them into a single table. This allows proper column types, constraints and relationships. An “Allowed Values” table is just muck and has no place in a data model.
 - Consider whether to use Unicode data type  (e.g. NCHAR,NVARCHAR,NTEXT) if you need to support internationalization, but Unicode will take twice as much space. (*****)
 - Provide documentation, describe all tables & relationships, DDL. The application programmers should be able to find documentations about any triggers, constraints & store procedures in your database.
+- Use application name/domain/department/datasource as prefix (e.g. Billing_tablename), use prefix "General" if the object is non application specific.
+
 
 Database Guidelines (RDBMS/SQL) 
 http://soa-java.blogspot.com/2013/01/database-guidelines-rdbmssql.html

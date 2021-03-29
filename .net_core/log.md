@@ -5,6 +5,18 @@ https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetco
 Logs, xunit
 https://stackoverflow.com/questions/46169169/net-core-2-0-configurelogging-xunit-test
 
+# Tips
+
+// Don't:
+Log.Information("The time is " + DateTime.Now);
+
+Instead, always use template properties to include variables in messages:
+
+
+// Do:
+Log.Information("The time is {Now}", DateTime.Now);
+
+
 # Proveedores
 
 
