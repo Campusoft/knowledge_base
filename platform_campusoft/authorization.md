@@ -5,11 +5,12 @@
 
 La plataforma Campusoft, se basa en aspnetboilerplate. 
 
-1. Revisar el funcionamiento Permisos como se trabajan en aspnetboilerplate
+**1. Revisar el funcionamiento Permisos como se trabajan en aspnetboilerplate**
+
 
 https://aspnetboilerplate.com/Pages/Documents/Authorization
 
-2. Especificaciones
+**2. Especificaciones**
 
 - Los permisos se tiene que establecer a nivel Servicio Aplicacion
 
@@ -17,22 +18,24 @@ https://aspnetboilerplate.com/Pages/Documents/Authorization
 
 - Los nombres permisos tiene que formarse por las siguientes convenciones
 
-<Nombre-Sistema>.<Nombre-Funcionalidad>.<Nombre-Accion-Requiere-Autorizacion>
+[Nombre-Sistema].[Nombre-Funcionalidad].[Nombre-Accion-Requiere-Autorizacion]
 
 Si se trata de un CRUD para la funcionalidad Usuarios del Sistema Facturacion, los nombres serian
 
+```
 Billing.User.Create
 Billing.User.Update
 Billing.User.Delete
 Billing.User.Get
+```
 
-- Los nombres permisos, centralizarlos en una clase "PermissionNames", con constantes
+- Los nombres de los permisos, centralizarlos en una clase "PermissionNames", con constantes
 
 El nombre constantes, estara formado:
 
-.<Nombre-Funcionalidad>_<Nombre-Accion-Requiere-Autorizacion>
+[Nombre-Funcionalidad]_[Nombre-Accion-Requiere-Autorizacion]
 
-Ejemplo: Permisos para la funcionalidad Escala de calificaciones, del Sistema Gradebook:
+Ejemplo: Nombres de permisos para la funcionalidad Escala de calificaciones, del Sistema Gradebook:
 
 ```
 public const string GradeScale_Create = "Gradebook.GradeScale.Create";
@@ -41,7 +44,7 @@ public const string GradeScale_Delete = "Gradebook.GradeScale.Delete";
 public const string GradeScale_Get = "Gradebook.GradeScale_Get";		
 ```
 
-3. Configurar los permisos en clases Base
+**3. Configurar los permisos en clases Base**
 
 3.1 Servicios Aplicacion Base CRUD. #IAsyncBaseCrudAppService
 
@@ -100,17 +103,19 @@ GetPermissionName = "Nombre Permiso";
 
 Un servicio aplicacion (CRUD), si esta relacionado a un controller base (CRUD), se tiene que utilizar los mismos  permisos, en ambos elementos.
 
-Si el servicio aplicacion, es consumido por otro servicio Aplicacion o otro elemento no relacionado, se 
-puede dejar sin establecer el permiso GetAllPermissionName, GetPermissionName en el servicio; unicamente 
-que requiere autentificacion. Esto para disminuir las dependencias que se tiene que hacer al momento de dar los permisos: Ejemplo Si un servicio aplicacion B, dependende servicio aplicacion A, y el metodo servicio B "Process", utiliza el metodo GetAll del Servicio A, entonces el usuario debe tener permisos para la accion
+Si el servicio aplicacion, es consumido por otro servicio Aplicacion o otro elemento no relacionado, se puede dejar sin establecer el permiso GetAllPermissionName, GetPermissionName en el servicio; unicamente que requiere autentificacion. 
 
-- Ejecutar accion.  Process. Servicio B). 
-- Obtener los registros. GetAll. Servicio A).
+Esto para disminuir las dependencias que se tiene que hacer al momento de dar los permisos: Ejemplo Si un servicio aplicacion B, depende del servicio aplicacion A;  al utiliar un metodo del servicio B "Ex: Process", el cual utiliza el metodo "GetAll" del Servicio A, entonces el usuario debe tener varios permisos, de cada metodo que se utilice.
 
+-  Metodo "Process".  Servicio B) que tiene el permiso "FuncionalidadB.Process"
+-  Metodo obtener los registros GetAll del Servicio A) que tiene el permiso "FuncionalidadA.Get"
+-  Por lo tanto para que un usuario utilice metodo "Process" del servicio B, tiene que tener los permisos
+    -  "FuncionalidadB.Process"
+    -  "FuncionalidadA.Get"
 
-Si unicamente se requiere tener un permiso para cualquier accion CRUD, se puede establecer el mismo permiso universal, en las 5 propiedades para establecer los permisos en las clases Base. 
+Si unicamente se requiere tener un permiso para cualquier accion CRUD en clases Base, se puede establecer el mismo permiso, en las 5 propiedades para establecer los permisos en las clases Base. 
 
-4. Configurar elementos Adicionales
+**4. Configurar elementos Adicionales**
 
 4.1 Menus
 
