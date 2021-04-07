@@ -30,6 +30,15 @@ To make using Dapr more natural for different languages, it also includes langua
 
 https://dapr.io/
 
+# Service Discovery
+
+Today, most companies in the software industry are moving towards cloud platforms such as AWS, google cloud, and Azure. When your services are running in the cloud, you can scale up or down at any moment by utilizing vertical or horizontal scaling processes. You are only charged for the usage of the purchased resources. So, it is important to purchase and utilize in a cost-effective manner. This means you are dealing with a highly dynamic environment, where services can have different server addresses from time to time. 
+
+"the server endpoints are subject to frequent change": Cloud, Microservices, traffic increases
+
+
+important aspect of microservices: discovery
+
 
 # Referencias
 

@@ -10,4 +10,12 @@ https://wso2.com/api-management/
 
 WSO2 API Manager is an open source enterprise-class solution that supports API publishing, lifecycle management, application development, access control, rate limiting and analytics in one cleanly integrated system.
 
+## Service Discovery
 
+ the API Microgateway is integrated with etcd for the purpose of discovering the target endpoints in order to route API traffic. 
+
+## Referencias
+
+Service Discovery with WSO2 API Microgateway
+https://wso2.com/blogs/thesource/2019/08/service-discovery-with-wso2-api-microgateway/
+ 

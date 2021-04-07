@@ -27,6 +27,21 @@ Referencias
 Create reusable UI using the Razor class library project in ASP.NET Core
 https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-2.2&tabs=visual-studio
 
+RCL 
+.NET Core 3.0, RCL can include static assets without much effort
+
+https://docs.microsoft.com/en-us/aspnet/core/razor-pages/ui-class?view=aspnetcore-3.0&tabs=visual-studio#create-an-rcl-with-static-assets
+
+Example:
+Project: Campusoft.Core.Application
+
+File folder wwwroot:  view-resources/Views/Setting/_EditSetting.js
+
+Use file other project:
+
+
+<script src="~/_content/Campusoft.Core.Application/view-resources/Views/Setting/_EditSetting.js"></script>
+    <script>
 
 #Referencias
 

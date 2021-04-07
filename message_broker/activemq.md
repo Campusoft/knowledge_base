@@ -47,6 +47,12 @@ https://activemq.apache.org/rest
 v3.1 support allowing for connections in an IoT environment.
 
 
+# Securidad
+
+Ejemplo configuracion con Simple Authentication Plugin
+
+https://github.com/apache/activemq/blob/master/assembly/src/release/examples/conf/activemq-security.xml
+
 # Librerias
 
 Apache.NMS.AMQP
