@@ -11,6 +11,28 @@ Activemq, utiliza topic “advisory” para guardar información, listado de con
 https://activemq.apache.org/advisory-message.html
 
 
+$activemq_home\bin\activemq start # Windows
+$activemq_home/bin/activemq console #macOS/Linux
+
+
+The Broker XBean URI allows you to run a configured broker by referencing an Xml Configuration on the classpath. 
+https://activemq.apache.org/broker-xbean-uri
+
+ActiveMQ supports advisory messages which allows you to watch the system using regular JMS messages
+https://activemq.apache.org/advisory-message
+
+
+# Conceptos
+
+## prefetch
+
+Informacion: Si se tiene varios clientes, consumiendo una cola X, se puede utiliar el prefetch para limitar cuantos mensajes se reserva para cada cliente.  
+
+https://activemq.apache.org/what-is-the-prefetch-limit-for
+
+## Wildcards
+
+
 
 # Protocolos
 
@@ -36,10 +58,37 @@ Se permite consumir mensajes con REST
 Mapping of REST to JMS
 To publish a message use a HTTP POST. To consume a message use HTTP DELETE or GET.
 
+
+ActiveMQ has a Servlet that takes care of the integration between HTTP and the ActiveMQ dispatcher.
+
+
+Consumir Mensajes
+
+Confguraciones Relacionadas
+- prefetch 
+  - persistent queues (default value: 1000)
+  - Configurar: destinationOptions. Option Name: consumer.prefetchSize  (Info: https://activemq.apache.org/destination-options)
+  
+  
+  
+Configuraciones  Servlet
+- activemq\webapps\api\WEB-INF
+
+
+Consuming without sessions
+
+Since 5.2.0 you can use clientId parameter to avoid storing actual JMS consumer in the request session. When using this approach, you don’t need to keep sessions alive between requests, you just need to use the same clientId every time.
+
+
+Parametros:
+- For reading messages you can specify a readTimeout parameter to determine how long the servlet should block for.
+  - Example:  api/message/FOO?type=queue&readTimeout=2000
+  - Si no se establece, se considera el valor  maximumReadTimeout = 20000 (Milesegundos)
+  - El valor maximumReadTimeout, tambien se puede establecer  
+
 http://activemq.apache.org/rest.html
 
 
-https://activemq.apache.org/rest
 
 
 ## MQTT 
@@ -49,9 +98,64 @@ v3.1 support allowing for connections in an IoT environment.
 
 # Securidad
 
+ActiveMQ 4.x and greater provides pluggable security through various different providers.
+
+The most common providers are
+
+- Simple authentication plug-in— Handles credentials directly in the XML configuration file or in a properties file
+- JAAS authentication plug-in— Implements the JAAS API and provides a more powerful and customizable authentication solution
+
+
+http://activemq.apache.org/security
+
+Indicaciones como realizar encriptacion password
+
+Linux:
+
+```
+$ export ACTIVEMQ_ENCRYPTION_PASSWORD=activemq
+```
+
+Windows:
+```
+$ setx ACTIVEMQ_ENCRYPTION_PASSWORD activemq
+```
+
+http://activemq.apache.org/encrypted-passwords.html
+
+
+
+The advisory topics are part of ActiveMQ, and all users need access to them.
+
+```
+  <authorizationEntries>
+    ...  
+	<authorizationEntry topic="ActiveMQ.Advisory.>" read="everyone" write="everyone" admin="everyone"/>
+  </authorizationEntries>
+				
+```
+
+
+## Simple Authentication Plugin
+
+With this plugin you can define users and groups directly in the broker’s XML configuration.
+
+From version 5.4.0 onwards, you can configure simple authentication plugin to allow anonymous access to the broker.
+
+Now, when the client connects without username and password provided, a default username (anonymous) and group (anonymous) will be assigned to its security context. 
+
 Ejemplo configuracion con Simple Authentication Plugin
 
 https://github.com/apache/activemq/blob/master/assembly/src/release/examples/conf/activemq-security.xml
+
+
+## Referencias
+
+to use the same JAAS Authentication Plugin for the web console, you can
+execute the following additional steps: 
+http://activemq.2283324.n4.nabble.com/jaasAuthenticationPlugin-td4757466.html#a4757490
+
+
 
 # Librerias
 
@@ -65,6 +169,11 @@ https://activemq.apache.org/components/nms/providers/amqp/
 # Laboratorios
 
 
+## Workers / Process
+
+Si se tiene varios clientes, consumiendo una cola X, se puede utiliar el prefetch para limitar cuantos mensajes se reserva para cada cliente (workers), con esto se establece la carga trabajo para cada cliente.
+ 
+
 ## Configuracion del Almacen de Mensajes
 
 En la carpeta de instalacion existe algunos ejemplos.
@@ -72,7 +181,10 @@ examples\conf\activemq-demo.xml
 
 Contiene algunas ejemplos para mysql, Derby,  postgres y Oracle
 
+## Seguridad
 
+En la carpeta de instalacion existe algunos ejemplos.
+\examples\conf\activemq-security.xml
 
 
 
