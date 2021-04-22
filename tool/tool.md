@@ -36,7 +36,7 @@ Tool check code:
  
 - https://www.sonarlint.org/visualstudio/ 
 
- 
+
  
 ## Complementos (Opcionales)
 
