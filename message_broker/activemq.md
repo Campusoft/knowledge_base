@@ -32,7 +32,33 @@ https://activemq.apache.org/what-is-the-prefetch-limit-for
 
 ## Wildcards
 
+Wildcards and destination hierarchies are useful for adding flexibility to your
+applications, allowing for a message consumer to subscribe to more than one destination at a time.
 
+But wildcards only work for consumers. If you publish a message to a topic named
+rugby.>, the message will only be sent to the topic named rugby.>, and not all topics
+that start with the name “rugby.” There is a way for a message producer to send a message to multiple destinations: by using composite destinations
+
+
+## Composite Destinations
+
+Composite Destinations
+
+We do this using a simple separator of “,” allowing a number of destinations to be specified when creating a destintation, or registering destinations in JNDI. e.g. the destination
+
+```
+FOO.A,FOO.B,FOO.C
+```
+
+Mix:
+
+```
+FOO.A,topic://NOTIFY.FOO.A
+```
+
+Composite destinations can also be configured on the broker side, such that messages sent to a single destination by the client will be transparently copied to multiple physical destinations.
+
+https://activemq.apache.org/composite-destinations
 
 # Protocolos
 
@@ -85,10 +111,14 @@ Parametros:
   - Example:  api/message/FOO?type=queue&readTimeout=2000
   - Si no se establece, se considera el valor  maximumReadTimeout = 20000 (Milesegundos)
   - El valor maximumReadTimeout, tambien se puede establecer  
+- JMSDeliveryMode with value persistent, para mensajes persistentes, con otro valor mensajes no persistentes.
 
 http://activemq.apache.org/rest.html
 
 
+Codigo
+
+org/apache/activemq/web/MessageServlet.java 
 
 
 ## MQTT 

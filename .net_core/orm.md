@@ -16,6 +16,15 @@ https://riptutorial.com/dapper/topic/10/parameter-syntax-reference
 Manuales
 https://riptutorial.com/dapper
 
+### Transactions
+
+Dapper - Transaction
+Una referencia como generar transacciones con dos formas diferentes:
+- Connecton.BeginTransaction
+- TransactionScope
+https://dapper-tutorial.net/transaction
+
+
 ## Referencias
 
 [Oracle - Dapper]

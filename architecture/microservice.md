@@ -13,6 +13,10 @@ James Lewis and Martin Fowler provided a reasonable common set of characteristic
 - Evolutionary design
 
 
+# Database per Microservice
+
+Here I am using the term database to show a logical separation of data, i.e., the Microservices can share the same physical database, but they should use separate Schema/collection/table
+
 # Platform
 
 ## Dapr
@@ -51,3 +55,7 @@ In Orchestration, a central service defines and controls the flow of communicati
 In Choreography, each service registers for and emits events as they need. There’s usually a central event broker to pass messages around, but it does not define or direct the flow of communication. This allows services that are truly independent at the expense of less traceable and manageable flow and policies. 
 
 https://cloud.google.com/blog/topics/developers-practitioners/better-service-orchestration-workflows
+
+Microservice Architecture and its 10 Most Important Design Patterns
+Microservice Architecture, Database per Microservice, Event Sourcing, CQRS, Saga, BFF, API Gateway, Strangler, Circuit Breaker, Externalize Configuration, Consumer-Driven Contract Testing
+https://towardsdatascience.com/microservice-architecture-and-its-10-most-important-design-patterns-824952d7fa41

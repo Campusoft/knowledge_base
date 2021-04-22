@@ -29,7 +29,14 @@ https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnal
 - Docker
 - Tener por lo menos dos brower. (Verificaciones implementaciones web)
 
+## Code Quality and Code Security
+ 
 
+Tool check code:
+ 
+- https://www.sonarlint.org/visualstudio/ 
+
+ 
  
 ## Complementos (Opcionales)
 
