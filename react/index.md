@@ -63,45 +63,6 @@ https://hackernoon.com/10-react-mini-patterns-c1da92f068c5
 
 
 
-# Componentes UI
-
-## Primereact
-
-Build Better Apps with React
-
-The ultimate collection of design-agnostic, flexible and accessible React UI Components.
-https://www.primefaces.org/primereact/
-
-
-## Syncfusion React
-
-The Complete React UI Components Library
-The Syncfusion React UI components library is the only suite that you will ever need to build an application since it contains over 65 high-performance, lightweight, modular, and responsive UI components in a single package. 
-
-https://www.syncfusion.com/react-ui-components
-
-## Material UI
-
-React components for faster and easier web development. Build your own design system, or start with Material Design.
-https://material-ui.com/
-
-
-https://ant.design/docs/react/introduce
-
-
-## Semantic UI React
-
-https://react.semantic-ui.com/
-
-## Reactstrap
-
-Easy to use React Bootstrap 4 components
-
-## Ant Design
-
-An enterprise-class UI design language and React implementation
-https://github.com/ant-design/ant-design
-
 
 # Codigo Referencias
 
