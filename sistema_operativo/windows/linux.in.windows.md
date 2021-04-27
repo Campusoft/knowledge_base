@@ -1,4 +1,7 @@
-Windows Subsystem for Linux Installation
+# Windows Subsystem for Linux Installation - WSL
+
+
+The Windows Subsystem for Linux lets developers run a GNU/Linux environment -- including most command-line tools, utilities, and applications -- directly on Windows, unmodified, without the overhead of a traditional virtual machine or dual-boot setup.
 
 
 Windows 10 Will Finally Offer Easy Access to Linux Files

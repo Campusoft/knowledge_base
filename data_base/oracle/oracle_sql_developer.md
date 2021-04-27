@@ -1,5 +1,13 @@
 # Oracle Sql Developer
  
+
+## Connections
+
+### Postgres
+
+No se permite establecer el nombre de la base de datos, realizar un export conexion, cambiar el archivo, luego 
+hacer un import estableciendo la db en URL "customUrl"
+https://www.enterprisedb.com/postgres-tutorials/how-connect-postgresql-using-sql-developer-visual-studio-and-dbeaver 
  
 ## Reference
 

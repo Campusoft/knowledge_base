@@ -3,6 +3,40 @@
 
 JSONPath es una forma estandarizada para consultar elementos de un objeto JSON. JSONPath utiliza expresiones de ruta para desplazarse por elementos, elementos anidados y matrices en un documento JSON.
 
+## Notation
+
+JsonPath uses special notation to represent nodes and their connections to adjacent nodes in a JsonPath path. There are two styles of notation, namely dot and bracket.
+
+Both of the following paths refer to the same node from the above JSON document, which is the third element within the location field of creator node, that is a child of the jsonpath object belonging to tool under the root node.
+
+With dot notation:
+
+```
+$.tool.jsonpath.creator.location[2]
+```
+
+With bracket notation:
+
+```
+$['tool']['jsonpath']['creator']['location'][2]
+```
+
+The dollar sign ($) represents root member object.
+
+## filtros
+
+Filters are logical expressions used to filter arrays. An example of a JSONPath expression with a filter is
+
+```
+$.store.book[?(@.price < 10)]
+```
+
+where @ represents the current array item or object being processed. Filters can also use $ to refer to the properties outside of the current object:
+
+```
+$.store.book[?(@.price < $.expensive)]
+```
+
 ## Tips
 
 
@@ -41,7 +75,7 @@ $[*]['@odata.id'] => obtener todos los elementos array
 
 ## Herramientas
 
-Presenta un arbol JSON, y permite seleccionar un nodo especifico, y generarel JsonPath correspondiente
+Presenta un arbol JSON, y permite seleccionar un nodo especifico, y generar el JsonPath correspondiente
 https://jsonpathfinder.com/
 
 
@@ -54,3 +88,8 @@ https://www.jsonquerytool.com
 
 JSONPath Online Evaluator
 https://jsonpath.com/
+
+## Referencias
+
+JSONPath Syntax. (Tiene explicacion a detalle filtros)
+https://support.smartbear.com/alertsite/docs/monitors/api/endpoint/jsonpath.html

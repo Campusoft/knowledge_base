@@ -11,6 +11,18 @@ Redis, que significa Remote Dictionary Server (servidor de diccionarios remoto),
 Redis utiliza una arquitectura con servidor principal y réplica y admite la replicación asíncrona en la que los datos se replican en numerosos servidores de réplicas. De este modo, se logra un mejor nivel de rendimiento de lectura (ya que las solicitudes se pueden repartir entre varios servidores) y menores tiempos de recuperación cuando el servidor principal sufre un corte. Por una cuestión de persistencia, Redis admite copias de seguridad puntuales (copia el conjunto de datos Redis en el disco).
 
 
+# pipelining 
+
+
+
+# Client
+
+
+## .NET
+
+
+https://github.com/StackExchange/StackExchange.Redis/
+
 
 # referencias
 

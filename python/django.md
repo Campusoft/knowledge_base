@@ -23,8 +23,16 @@ $ python -m django <command> [options]
 Introduction to django with Creating a Simple helloworld App 
 https://shantoroy.com/python/introduction-to-django/
 
+
 ## Deploy
 
+
+Cómo instalar y configurar Django en una cuenta de hosting compartido de Linux
+https://www.faqhosting.com.ar/como-instalar-y-configurar-django-en-una-cuenta-de-hosting-compartido-de-linux/
+
+
+Serving Static Files in Python With Django, AWS S3 and WhiteNoise
+https://stackabuse.com/serving-static-files-in-python-with-django-aws-s3-and-whitenoise/
 
 -------------------------
 
