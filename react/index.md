@@ -102,3 +102,14 @@ Easy to use React Bootstrap 4 components
 An enterprise-class UI design language and React implementation
 https://github.com/ant-design/ant-design
 
+
+# Codigo Referencias
+
+
+starter-kit
+
+Cross-platform web development with Visual Studio Code, C#, F#, JavaScript, ASP.NET Core, EF Core, React (ReactJS), Redux, Babel. Single-page application boilerplate.
+https://github.com/kriasoft/aspnet-starter-kit
+
+
+

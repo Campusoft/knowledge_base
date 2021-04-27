@@ -21,3 +21,37 @@ https://marmelab.com/react-admin/DataProviders.html
 Gatsby data layer, which is a powerful feature of Gatsby that lets you easily build sites from Markdown, WordPress, headless CMSs, and other data sources of all flavors.
 
 Gatsby is a React-based open-source framework for creating websites and apps. It's great whether you're building a portfolio site or blog, or a high-traffic e-commerce store or company homepage.
+
+# Form Helper
+
+## Formik
+
+Formik is a popular form building solution because it provides you a reusable form component where you can simply use its API for handling the three most annoying part in form building:
+
+ -   Getting values in and out of form state
+ -   Validation and error messages
+ -   Handling form submission
+	
+https://formik.org/
+## React Hook Form
+
+Performant, flexible and extensible forms with easy-to-use validation.
+https://react-hook-form.com/
+
+## Redux Form
+
+The best way to manage your form state in Redux.
+https://redux-form.com/
+
+##  formsy-react
+
+A form input builder and validator for React.
+
+https://github.com/formsy/formsy-react/
+
+https://github.com/christianalfoni/formsy-react
+
+# Validations
+
+Yup is a JavaScript schema builder for value parsing and validation. Define a schema, transform a value to match, validate the shape of an existing value, or both. Yup schema are extremely expressive and allow modeling complex, interdependent validations, or value transformations.
+https://github.com/jquense/yup
