@@ -9,6 +9,9 @@ https://reactjs.org/docs/thinking-in-react.html
 
 # Conceptos
 
+- Cual es diferencia React y Angular ?
+-- Bind. (Es una sola Via).
+
 # JSX
 
 
