@@ -1,6 +1,6 @@
 # docker
 
-## Windows
+# Windows
 
 Docker Toolbox has been deprecated and is no longer in active development. Please use Docker Desktop instead. See Docker Desktop for Mac and Docker Desktop for Windows.
 https://docs.docker.com/docker-for-windows/docker-toolbox/
@@ -12,12 +12,12 @@ https://docs.docker.com/docker-for-windows/install/
 Docker Desktop for Windows =>  Windows 10 Home 64-bit with WSL 2.
 
 
-## Repositorios Imagenes Docker
+# Repositorios Imagenes Docker
 
 Various versions of ActiveMQ neatly packet into Docker images 
 https://hub.docker.com/r/rmohr/activemq
 
-## Commandos
+# Commandos
 
 $ docker run [options] IMAGE [command] [args]
 -i, --interactive This runs the container in interactive mode (keeps the stdin fileopen).
@@ -33,7 +33,7 @@ Ejemplo
 9000 Puerto Contenedor, al 9000 puerto host, igual para 12201. Imagen:   graylog2/allinone
 docker run -t -p 9000:9000 -p 12201:12201 graylog2/allinone
 
-### Ejemplos:
+## Ejemplos:
 
 ---------------
 Mysql

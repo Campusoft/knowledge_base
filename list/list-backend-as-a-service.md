@@ -38,6 +38,26 @@ API server module for Node/Express
 https://parseplatform.org/
 
 
+## Appwrite
+
+Secure Open-Source Backend Server for Web, Mobile & Flutter Developers
+Appwrite is a self-hosted solution that provides developers with a set of easy-to-use and integrate REST APIs to manage their core backend needs.
+
+https://appwrite.io/
+
+Features
+- Database
+- Storage
+- Users
+- GEO & Localization
+- Functions
+- Security
+
+Tecnologia
+- php
+- mysql
+
+
 ## Supabase
 
 Supabase is a combination of open source tools. We’re building the features of Firebase using enterprise-grade, open source products. If the tools and communities exist, with an MIT, Apache 2, or equivalent open license, we will use and support that tool. If the tool doesn't exist, we build and open source it ourselves. Supabase is not a 1-to-1 mapping of Firebase. Our aim is to give developers a Firebase-like developer experience using open source tools.
