@@ -1,5 +1,12 @@
 # Varios
 
+# Linq
+
+**MoreLINQ**
+
+LINQ to Objects is missing a few desirable features. This project enhances LINQ to Objects with extra methods, in a manner which keeps to the spirit of LINQ.
+
+https://github.com/morelinq/MoreLINQ
 
 # Emails
 
