@@ -25,3 +25,15 @@ ASP.NET Boilerplate - Web Application Framework
 # Serverless 
 How to choose a cloud serverless platform
 https://www.infoworld.com/article/3605129/how-to-choose-a-cloud-serverless-platform.html?utm_source=twitter&utm_medium=social&utm_campaign=organic&utm_content=content
+
+
+# Change Data Capture
+
+data sync problem
+ 
+have microservices using different kinds of databases based on the capabilities of each database
+
+Change data capture (CDC) means identifying and tracking what has changed in a database so that you can take action, like updating your data warehouse or generating other outputs. The idea is to replicate a dataset using incremental updates so that you don’t have to copy your entire database every time a table gets updated.
+
+
+

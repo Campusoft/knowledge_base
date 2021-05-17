@@ -1,5 +1,27 @@
 # Varios
 
+# CancellationToken 
+
+
+# Generic Host
+
+Host definition
+
+A host is an object that encapsulates an app's resources, such as:
+
+-    Dependency injection (DI)
+-    Logging
+-    Configuration
+-    IHostedService implementations
+
+
+Hosted services are long running asynchronous services.
+https://wildermuth.com/2020/08/02/NET-Core-Console-Apps---A-Better-Way
+
+Building a Console App with .NET Generic Host
+https://dfederm.com/building-a-console-app-with-.net-generic-host/
+
+
 # Linq
 
 **MoreLINQ**
@@ -32,6 +54,12 @@ https://github.com/HangfireIO/Cronos
 
 Schedule Cron Jobs using HostedService in ASP.NET Core
 https://github.com/dotnet-labs/ServiceWorkerCronJob
+
+
+# Storage / Cloud
+
+Download Files from Azure with .NET Core Web API and Blazor WebAssembly
+https://code-maze.com/download-files-from-azure-with-net-core-web-api-and-blazor-webassembly/#download-web-api
 
 
 # Codigo Referencias

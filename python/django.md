@@ -2,6 +2,14 @@
 
 Django es un framework web de alto nivel que permite el desarrollo rápido de sitios web seguros y mantenibles
 
+Iniciar una app
+
+The development server¶
+Let’s verify your Django project works. 
+
+```
+$ python manage.py runserver
+```
 
 Projects vs. apps
 

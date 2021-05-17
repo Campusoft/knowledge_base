@@ -1,5 +1,6 @@
 # Oracle Advanced Queuing 
  
+Advanced Queuing provides database-integrated message queuing functionality. Advanced Queue messages can be stored persistently, propagated between queues on different machines and databases, and transmitted using Oracle Net Services, HTTP(S), and SMTP. Since Oracle Advanced Queuing is implemented in database tables, all the benefits of high availability, scalability, and reliability are applicable to queue data. This technology is presented by DBMS_AQ and DBMS_AQADM packages. DBMS_AQ manages queue messages, allowing enqueuing and dequeuing. DBMS_AQADM controls a queue lifecycle and its properties.  
 
 Interfaces to AQ include PL/SQL, JMS 1.1, JDBC, ODP.NET and OCI. Oracle WebLogic Server applications interoperate with AQ through the JMS API.
 
@@ -9,7 +10,7 @@ Queues and Queue Tables
 Messages enqueued in a queue are stored in a queue table. A queue table must be created before creating a queue based on it. Use the DBMS_AQADM PL/SQL package or Oracle Developer Tools for Visual Studio to create and administer queue tables and queues. 
 
 
-Queue Models
+Queue Models There are two models of AQ functionality: Point-to-Point Model and Publish-Subscribe Model. 
 
 AQ supports two queue models, namely point-to-point and publish/subscribe queues. A point-to-point or single-consumer queue is aimed at a specific target.
 
@@ -31,6 +32,85 @@ RoutingAQ can intelligently route messages to the right subscribers in a multi-c
 ![imagen](https://user-images.githubusercontent.com/222181/116788816-6526cc80-aa71-11eb-90cb-48732294b299.png)
 
 
+In Oracle Streams, logical change records (LCRs) are message payloads that contain information about changes to a database. These changes can include changes to the data, which are data manipulation language (DML) changes, and changes to database objects, which are data definition language (DDL) changes.
+
+When you use Oracle Streams, the capture process captures changes in the form of LCRs and enqueues them into a queue. These LCRs can be propagated from a queue in one database to a queue in another database. Finally, the apply process can apply LCRs at a destination database. You also have the option of creating, enqueuing, and dequeuing LCRs manually
+
+# Information Queue
+
+
+state
+
+-  DBMS_AQ.READY: The message is ready to be processed.
+
+-  DBMS_AQ.WAITING: The message delay has not yet been reached.
+
+-  DBMS_AQ.PROCESSED: The message has been processed and is retained.
+
+-  DBMSAQ.EXPIRED: The message has been moved to the exception queue.
+
+MESSAGE_PROPERTIES_T Type
+https://docs.oracle.com/database/121/ARPLS/t_aq.htm#i997396
+
+# JMS
+
+
+SYS.AQ$_JMS_TEXT_MESSAGE Type
+This type is the ADT used to store a TextMessage in an Oracle Database Advanced Queuing queue.
+Payload Methods
+
+set_text (payload IN VARCHAR2)
+
+    Sets the payload, a VARCHAR2 value, to an internal representation.
+set_text (payload IN CLOB)
+
+    Sets the payload, a CLOB value, to an internal representation.
+get_text (payload OUT VARCHAR2)
+
+    Puts the internal representation of the payload into a VARCHAR2 variable payload.
+get_text (payload OUT CLOB)
+
+    Puts the internal representation of the payload into a CLOB variable payload.
+
+https://docs.oracle.com/database/121/ARPLS/t_jms.htm#ARPLS71811
+
+
+
+#  exception queue
+
+
+# Dequeuing an Array of Messages
+
+Oracle 10g enables us to enqueue and dequeue in bulk.
+
+
+# Programmatic Interfaces for Accessing Oracle Database Advanced Queuing
+
+Using PL/SQL to Access Oracle Database Advanced Queuing
+
+The PL/SQL packages DBMS_AQADM and DBMS_AQ support access to Oracle Database Advanced Queuing administrative and operational functions using the native Oracle Database Advanced Queuing interface. 
+
+
+Oracle Java Message Service (Oracle JMS) 
+aqapi.jar
+Oracle's implementation of JMS specification in compliance with JMS 1.1  
+https://mvnrepository.com/artifact/com.oracle.database.messaging/aqapi
+
+
+Registering for Notification
+
+This procedure registers an e-mail address, user-defined PL/SQL procedure, or HTTP URL for message notification. 
+
+DBMS_AQ.REGISTER
+
+https://docs.oracle.com/en/database/oracle/oracle-database/19/adque/aq-operations-using-pl-sql.html#GUID-DBBE096A-EEA0-4E1E-AC3F-6E1B492D1FB5
+
+# Notification
+
+Oracle will notify an agent to execute a registered PL/SQL "callback" procedure (alternatively, the agent can notify an email address or http:// address rather than execute a callback procedure).
+
+
+
 
 # .NET
 
@@ -49,3 +129,25 @@ https://github.com/oracle/node-oracledb
 
 Node-oracledb APIs for AQ were introduced in node-oracledb 4.0. With earlier versions, use AQ’s PL/SQL interface.
 https://oracle.github.io/node-oracledb/doc/api.html#aq
+
+
+# Referencias
+
+
+Se puede utilizar The DBMS_AQ package in Oracle XE. Si se puede utilizar. Se debe dar permisos permisos de ejecucion al PK DBMS_AQ al usuario que se desee trabajar.
+
+
+API DBMS_AQ Documentacion
+https://docs.oracle.com/database/121/ARPLS/d_aq.htm#ARPLS096
+
+
+introduction to advanced queuing
+http://www.oracle-developer.net/display.php?id=411
+
+array-based advanced queuing in 10g
+http://www.oracle-developer.net/display.php?id=319
+
+Configuring JMS nodes to communicate with Oracle AQ
+https://www.ibm.com/docs/en/integration-bus/10.0?topic=jms-configuring-nodes-communicate-oracle-aq
+
+
