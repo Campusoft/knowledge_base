@@ -20,8 +20,15 @@ https://marmelab.com/react-admin/DataProviders.html
 
 # UI
 
+Implementa Material-UI en sus componenetes
 
 ## Filtering The List
+
+Las listas pueden llevar las siguientes propiedades
+
+title => sobre escribe el titulo en la barra de navegacion. Puede ser string o elementp JSX
+
+bulkActionButtons => permite personalizar la seleccion de uno o varios elementos y realizar alguna operacion 
 
 https://marmelab.com/react-admin/List.html#filters-filter-inputs
 
