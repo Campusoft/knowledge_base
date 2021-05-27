@@ -1,6 +1,8 @@
 # Listado Backend as a Service (BaaS)
 
 BaaS started to gain momentum as well. BaaS systems are those that provide infrastructure software services, and these include storage as a service, database as a service, messaging, and notifications as a service. With serverless architecture, applications usually use a combination of BaaS services, which are often provided by the vendor cloud echo system such as Google's Firebase and Amazon DynamoDB. Other third-party BaaS services may include authentication services (like Auth0, AWS Cognito, and Azure Active Directory). 
+
+
  
 ## Appwrite
 
@@ -16,7 +18,30 @@ Client
 - Web (Maintained by the Appwrite Team)
 - Flutter (Maintained by the Appwrite Team)
 
+
+Secure Open-Source Backend Server for Web, Mobile & Flutter Developers
+Appwrite is a self-hosted solution that provides developers with a set of easy-to-use and integrate REST APIs to manage their core backend needs.
+
 https://appwrite.io/
+
+Features
+- Database
+- Storage
+- Users
+- GEO & Localization
+- Functions
+- Security
+
+Tecnologia
+- php
+- mysql
+
+https://appwrite.io/
+
+
+User Interface
+
+Appwrite uses an internal micro-framework called Litespeed.js to build simple UI components in vanilla JS and less for compiling CSS code. To apply any of your changes to the UI, use the gulp build or gulp less commands, and restart the Appwrite main container to load the new static files to memory using docker-compose restart appwrite.
 
 ## Parse 
 
@@ -37,25 +62,7 @@ API server module for Node/Express
 
 https://parseplatform.org/
 
-
-## Appwrite
-
-Secure Open-Source Backend Server for Web, Mobile & Flutter Developers
-Appwrite is a self-hosted solution that provides developers with a set of easy-to-use and integrate REST APIs to manage their core backend needs.
-
-https://appwrite.io/
-
-Features
-- Database
-- Storage
-- Users
-- GEO & Localization
-- Functions
-- Security
-
-Tecnologia
-- php
-- mysql
+ 
 
 
 ## Supabase
@@ -73,6 +80,9 @@ AWS Amplify makes it easy to create, configure, and implement scalable mobile ap
 
 Azure Mobile Apps is a technology that allows you to connect your mobile app to resources that are important in cloud connected mobile applications such as table data, authentication, and push notifications.
 
+## Google Firebase 
+
+
 
 ## Apache Usergrid
  
@@ -82,3 +92,9 @@ Apache Usergrid is an open-source Backend-as-a-Service) composed of an integrate
 Features: Sign-up users, reset password, store data in JSON format, file storage, multiple SDKs, java-based.
 
 https://usergrid.apache.org/
+
+## Varios 
+
+Se puede considerar un headless CMS, como backend as a service basico; ya que proporciona un elemento APIs Ejemplo:
+- Directus
+- Strapi

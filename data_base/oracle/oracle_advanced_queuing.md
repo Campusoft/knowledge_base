@@ -52,6 +52,35 @@ state
 MESSAGE_PROPERTIES_T Type
 https://docs.oracle.com/database/121/ARPLS/t_aq.htm#i997396
 
+
+# dequeue  operation
+
+DBMS_AQ.DEQUEUE 
+
+Este proceso permite extraer un registro de la cola, se pasa varios parametros
+
+- Parameters
+  - queue_name
+  - dequeue_options DEQUEUE_OPTIONS_T Type.
+  - message_properties OUT. MESSAGE_PROPERTIES_T Type.
+  - payload OUT. (La variable para recibir el valor registro que se encuentra en la cola). The payload must be specified according to the specification in the associated queue table.
+  - msgid. OUT. 
+
+El tipo DEQUEUE_OPTIONS_T Type,  permite configurar el proceso dequeue.
+- La opcion visibility, permite establecer la transaccion para leer el extraer el registro de la cola 
+  - ON_COMMIT. The dequeue will be part of the current transaction. This setting is the default. Es decir si no se realiza un commit el mensaje continura en la queue y se registrara un intento (Columna RETRY_COUNT, de la tabla de la cola). ; incluso llamando a DBMS_AQ.DEQUEUE  
+
+
+
+# Dequeuing an Array of Messages
+
+Oracle 10g enables us to enqueue and dequeue in bulk.
+
+- DBMS_AQ.ENQUEUE_ARRAY
+- DBMS_AQ.DEQUEUE_ARRAY
+
+
+
 # JMS
 
 
@@ -76,12 +105,8 @@ https://docs.oracle.com/database/121/ARPLS/t_jms.htm#ARPLS71811
 
 
 
-#  exception queue
+# Exception queue
 
-
-# Dequeuing an Array of Messages
-
-Oracle 10g enables us to enqueue and dequeue in bulk.
 
 
 # Programmatic Interfaces for Accessing Oracle Database Advanced Queuing
@@ -109,8 +134,9 @@ https://docs.oracle.com/en/database/oracle/oracle-database/19/adque/aq-operation
 
 Oracle will notify an agent to execute a registered PL/SQL "callback" procedure (alternatively, the agent can notify an email address or http:// address rather than execute a callback procedure).
 
+# Security 
 
-
+To enqueue or dequeue, users need EXECUTE rights on DBMS_AQ and either ENQUEUE or DEQUEUE privileges on target queues
 
 # .NET
 
@@ -140,6 +166,9 @@ Se puede utilizar The DBMS_AQ package in Oracle XE. Si se puede utilizar. Se deb
 API DBMS_AQ Documentacion
 https://docs.oracle.com/database/121/ARPLS/d_aq.htm#ARPLS096
 
+API DBMS_AQ.ENQUEUE Procedure Documentacion
+https://docs.oracle.com/database/121/ARPLS/d_aq.htm#ARPLS097
+
 
 introduction to advanced queuing
 http://www.oracle-developer.net/display.php?id=411
@@ -151,3 +180,13 @@ Configuring JMS nodes to communicate with Oracle AQ
 https://www.ibm.com/docs/en/integration-bus/10.0?topic=jms-configuring-nodes-communicate-oracle-aq
 
 
+# Errores
+
+
+  Message=ORA-01031: insufficient privileges
+ORA-06512: at "SYS.DBMS_AQ", line 750
+ORA-06512: at "BANINST1.PKG_UTPL_BEP", line 58
+ORA-06512: at line 1
+  Source=Oracle Data Provider for .NET, Managed Driver
+  
+  

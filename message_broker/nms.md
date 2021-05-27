@@ -9,8 +9,10 @@ NMS API currently supports all of the features of JMS in a simple pure C# API an
 ## Librerias
 
 Apache.NMS
+Apache NMS (.Net Standard Messaging Library): An abstract interface to Message Oriented Middleware (MOM) providers
 https://www.nuget.org/packages/Apache.NMS/
 
 Apache.NMS.ActiveMQ
+Apache NMS (.Net Standard Messaging Library): Openwire implementation of Apache NMS API
 https://www.nuget.org/packages/Apache.NMS.ActiveMQ/
 

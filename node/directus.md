@@ -9,16 +9,45 @@ Node or PHP
 
 # Features 
 
+- Authentication
+- Querying
+- Custom Logic
+- Rate Limiting
+- Caching
+
+
 Any SQL Database
 
 Database abstraction is now handled by Knex, and we’ve expanded our official support to include: MySQL, PostgreSQL, SQLite, Microsoft SQL Server, Oracle DB, and variants such as MariaDB, AWS RedShift, AWS Aurora, and more.
 
-REST API
-GraphQL API
-Event Hooks
-Webhooks
-Custom API Filters
+- REST API
+- GraphQL API
+- Event Hooks
+- Webhooks
+- Custom API Filters
  
 ## Database
  
 Current database support includes: PostgreSQL, MySQL, SQLite, MS-SQL Server, OracleDB, MariaDB, and varients such as AWS Aurora/Redshift or Google Cloud Platform SQL. 
+
+
+## API
+
+
+<url-base>/items/<collection-name>
+
+
+## Custom API Endpoints
+
+Custom API Endpoints register new API routes which can be used to infinitely extend the core functionality of the platform.
+
+https://docs.directus.io/guides/api-endpoints/
+
+
+# Laboratorios
+
+Iniciar
+
+```
+npx directus start
+``

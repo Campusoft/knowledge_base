@@ -12,6 +12,14 @@ Acceder IServiceProvider instance, desde HttpContext
 var foo = HttpContext.RequestServices.GetService<IFoo>();
 ```
 
+
+
+## Autofac
+
+Autofac is an addictive Inversion of Control container for .NET Core, ASP.NET Core, .NET 4.5.1+, Universal Windows apps, and more. 
+
+ 
+
 ## Referencias
 
 Informacion inyeccion dependencias, para diferentes componentes en asp.net core

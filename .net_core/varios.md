@@ -3,6 +3,7 @@
 # CancellationToken 
 
 
+
 # Generic Host
 
 Host definition
@@ -21,6 +22,10 @@ https://wildermuth.com/2020/08/02/NET-Core-Console-Apps---A-Better-Way
 Building a Console App with .NET Generic Host
 https://dfederm.com/building-a-console-app-with-.net-generic-host/
 
+IHostApplicationLifetime
+
+Inject the IHostApplicationLifetime (formerly IApplicationLifetime) service into any class to handle post-startup and graceful shutdown tasks. Three properties on the interface are cancellation tokens used to register app start and app stop event handler methods. The interface also includes a StopApplication method.
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-5.0#ihostapplicationlifetime
 
 # Linq
 

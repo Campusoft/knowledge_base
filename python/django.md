@@ -24,6 +24,12 @@ $ python -m django <command> [options]
 
 ```
 
+# Django admin
+
+
+If you want a form for the Author model that includes only the name and title fields, you would specify fields or exclude like this:
+
+
 # Labs
 
 ## Simple
