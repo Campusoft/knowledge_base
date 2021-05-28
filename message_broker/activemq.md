@@ -57,7 +57,6 @@ FOO.A,topic://NOTIFY.FOO.A
 ```
 
 Composite destinations can also be configured on the broker side, such that messages sent to a single destination by the client will be transparently copied to multiple physical destinations.
-
 https://activemq.apache.org/composite-destinations
 
 # Protocolos

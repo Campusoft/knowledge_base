@@ -14,5 +14,8 @@ https://www.nuget.org/packages/Apache.NMS/
 
 Apache.NMS.ActiveMQ
 Apache NMS (.Net Standard Messaging Library): Openwire implementation of Apache NMS API
+
+The ActiveMQ NMS client is a .NET client that communicates with the ActiveMQ broker using its native Openwire protocol. This client supports advanced features such as Failover, Discovery, SSL, and Message Compression
+
 https://www.nuget.org/packages/Apache.NMS.ActiveMQ/
 

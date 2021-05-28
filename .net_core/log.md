@@ -31,6 +31,30 @@ https://github.com/nlog/NLog/wiki/File-target#size-based-file-archival
 COnfiguracion de Nlog en console. 
 https://github.com/NLog/NLog.Extensions.Logging/wiki/Getting-started-with-.NET-Core-2---Console-application
 
+## Serilog 
+
+Serilog provides sinks for writing log events to storage in various formats.
+
+
+
+To use the file sink with Microsoft.Extensions.Configuration, for example with ASP.NET Core or .NET Core, use the Serilog.Settings.Configuration package.
+
+A Serilog configuration provider that reads from Microsoft.Extensions.Configuration
+Serilog.Settings.Configuration
+
+System.ArgumentException: Buffered writes are not available when file sharing is enabled. (Parameter 'buffered')
+
+
+https://github.com/serilog/serilog-settings-configuration
+
+
+Algunos ejemplos configuraciones appsettings.json
+https://stackoverflow.com/questions/54715142/serilog-not-writing-to-file-net-core-2-2
+
+### Revisiones
+
+ A Serilog event sink that writes to Microsoft Teams 
+ 
 
 # Trace
 
