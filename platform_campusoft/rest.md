@@ -33,7 +33,9 @@ Para tener un mejor control de que servicios aplicacion se exponen como REST, ex
 FooAppService : IFooAppService, IGenerateDynamicApi
 ```
 
-Con esta interfas, se puede configurar que se genere todos los servicios aplicacion de un modulo "FooApplicationModule", que tengan esta interfas "IGenerateDynamicApi" 
+Con esta interfas, se puede configurar que se genere todos los servicios aplicacion de un modulo "FooApplicationModule", que tengan esta interfas "IGenerateDynamicApi".
+
+
 
 ```
  //Api Dynamic
@@ -43,6 +45,16 @@ Configuration.Modules.AbpAspNetCore()
 		 moduleName: "app"
 	)
 	.Where(type => typeof(IGenerateDynamicApi).IsAssignableFrom(type));
+
+```
+
+Nota. Si un servicio es expuesto como REST, "", deberia tener autentificacion el servicio aplicacion; salvo el caso explicitamente que sea un servicio que no requiera autentificacion/seguridad
+
+ 
+
+```
+[AbpAuthorize]
+FooAppService : IFooAppService, IGenerateDynamicApi
 
 ```
 
