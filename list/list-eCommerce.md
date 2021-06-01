@@ -13,3 +13,8 @@ A community curated list of commerce products, services, podcasts, books, and mo
 
 https://headlesscommerce.org/
  
+# vendure
+
+A modern, headless GraphQL-based e-commerce framework built with TypeScript & Nodejs
+ 
+https://www.vendure.io/ 

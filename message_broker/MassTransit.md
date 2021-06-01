@@ -20,6 +20,11 @@ https://masstransit-project.com/usage/producers.html
 ## Consumer
 
 
+
+Creating a new consumer instance for each message is highly suggested. However, it is possible to configure an existing consumer instance to which every received message will be delivered (if the message type is consumed by the consumer).
+https://masstransit-project.com/usage/consumers.html#instance
+
+
 ## Sagas
 
 In MassTransit, a saga is a stateful consumer that allows multiple messages to be correlated to a single consumer instance. 
