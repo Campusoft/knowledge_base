@@ -48,7 +48,7 @@ Configuration.Modules.AbpAspNetCore()
 
 ```
 
-Nota. Si un servicio es expuesto como REST, "", deberia tener autentificacion el servicio aplicacion; salvo el caso explicitamente que sea un servicio que no requiera autentificacion/seguridad
+Nota. Si un servicio de aplicacion es expuesto como REST "IGenerateDynamicApi", deberia tener autentificacion; salvo el caso explicitamente que sea un servicio que no requiera autentificacion/seguridad
 
  
 
