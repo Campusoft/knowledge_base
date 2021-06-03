@@ -65,6 +65,15 @@ https://hackernoon.com/10-react-mini-patterns-c1da92f068c5
 
 
 
+# Varios
+
+
+Establecer el contenido html  de un div:
+
+dangerouslySetInnerHTML is React’s replacement for using innerHTML in the browser DOM. 
+https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml
+
+
 
 
 # Codigo Referencias

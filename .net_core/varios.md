@@ -68,6 +68,15 @@ The easiest way to send email from .NET and .NET Core. Use Razor for email templ
 https://github.com/lukencode/FluentEmail
 
 
+# Thread
+
+Semaphore and SemaphoreSlim
+
+Async Waiting inside C# Locks
+https://blog.cdemi.io/async-waiting-inside-c-sharp-locks/
+
+
+
 # Schedule 
 
 
