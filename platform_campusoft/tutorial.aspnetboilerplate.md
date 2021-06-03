@@ -1,5 +1,5 @@
 
-# Tutorial Plantaforma Campusoft. 
+# Tutorial Aspnetboilerplate. 
 
 
 Conocimiento Aspnetboilerplate
@@ -17,9 +17,4 @@ Conocimiento Aspnetboilerplate
    - [ASP.NET Boilerplate Application Architecture Model]  https://aspnetboilerplate.com/Pages/Documents/NLayer-Architecture#asp-net-boilerplate-application-architecture-model
    
    - [ASP.NET Boilerplate provides the infrastructure to build modules and compose them to create an application] https://aspnetboilerplate.com/Pages/Documents/Module-System
- 
-Plataform Campusoft
 
-- TODO
-
- 

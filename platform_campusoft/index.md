@@ -1,5 +1,6 @@
 
 # Plataforma .Net
+
 La plataforma que se utiliza para construir sistemas, con tecnologia .net, en proyectos de Campusoft se basa en las siguientes elementos:
 
 **Framework:**
@@ -26,7 +27,7 @@ La plataforma que se utiliza para construir sistemas, con tecnologia .net, en pr
 - MassTransit. Para la gestion mensajes, en broker message.
 
 
-## Plataforma Abp.
+## Plataforma Abp / Aspnetboilerplate
 
 Esta plataforma facilita la creacion inicial de proyectos, posee un sinumero elementos base para construir software seguiendo buenas practicas.
 
@@ -40,6 +41,10 @@ Para sus entendimiento, inicial con los manuales:
 - Entidades dominio. [enlace](https://aspnetboilerplate.com/Pages/Documents/Entities)
 - Servicios Aplicacion.   [enlace](https://aspnetboilerplate.com/Pages/Documents/Application-Services)
    
+Seguir el tutorial
+
+- [Tutorial Aspnetboilerplate] tutorial.aspnetboilerplate.md    
+   
 ## Plataforma Campusoft.
 
 La plataforma Campusoft, esta implementa sobre .net, y abp. Posee un sinumero elementos comunes que se utilizan en cualquier sistema que se implemente, tambien elementos particulares para ciertos tipos sistemas.
@@ -48,7 +53,7 @@ Para su entendimiento  se estructura segun las capas:
 
 **Capa dominio**
 
-[Informacion Capa dominio](domain.md)
+[Informacion Capa dominio](layer.domain.md)
 
 **Capa Servicios de Aplicación.**
 
@@ -79,3 +84,6 @@ TODO
 
 [Informacion Capa de Servicios Aplicacion](layer.presentation.md)
 
+**Tutoriales**
+
+- [Tutorial Inicial Plataform Campusoft] tutorial.platafom.campusoft.md   
