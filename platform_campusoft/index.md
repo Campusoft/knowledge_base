@@ -62,15 +62,7 @@ Para su entendimiento  se estructura segun las capas:
 
 **Capa Servicios distribuidos**
 
-Son servicios que son llamados remotamente a su aplicacion. 
-
-Se utilizan los siguientes protocolos servicios:
-
-- [Soap](soap.md)
-- [Rest](rest.md)
-- [Odata](odata.md)
-- [gRPC](grpc.md)
-- [GraphQL](graphql.md)
+[Informacion Capa de Servicios Aplicacion](layer.distributed.md)
 
 **Capa Acceso datos (ORM)**
 
@@ -86,4 +78,4 @@ TODO
 
 **Tutoriales**
 
-- [Tutorial Inicial Plataform Campusoft] tutorial.platafom.campusoft.md   
+- [Tutorial Inicial Plataform Campusoft](tutorial.platafom.campusoft.md)
