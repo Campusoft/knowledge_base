@@ -1,4 +1,4 @@
-# Secuelize
+# Sequelize
 
 Sequelize es un ORM para Node.js que facilita el desarrollo de aplicaciones cuando se utiliza base de datos relacionales. 
 
