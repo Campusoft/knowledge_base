@@ -31,7 +31,17 @@ Not all entities support change notifications in Microsoft Graph
 
 
 
+## SDK - Client
+
+
+Create a Microsoft Graph client
+https://docs.microsoft.com/en-us/graph/sdks/create-client?view=graph-rest-1.0&tabs=CS
+
+
 ## Manuales
+
+Build .NET Core apps with Microsoft Graph
+https://docs.microsoft.com/en-us/graph/tutorials/dotnet-core?view=graph-rest-1.0
 
 
 [Informacion para consumir API. (Autentificacion, etc)](access.md)
