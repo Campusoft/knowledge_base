@@ -1,5 +1,0 @@
-Nodemailer es módulo que permite realizar el envío de emails automático desde un servidor Node.js.
-
-Permite utilizar varios servicios como: Gmail, Sendgrid, Mandril, Zoho y otros.
-
-[https://nodemailer.com/about/](https://nodemailer.com/about/)
