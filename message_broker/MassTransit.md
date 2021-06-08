@@ -36,6 +36,21 @@ MassTransit persists a saga's state using a saga repository, and automatically c
 
 MassTransit supports several dependency injection containers.
 
+##  Transports
+
+**Amazon SQS**
+
+MassTransit combines Amazon SQS (Simple Queue Service) with SNS (Simple Notification Service) to provide both send and publish support.
+
+
+https://masstransit-project.com/usage/transports/amazonsqs.html
+
+
+Errores:
+
+User: <user> is not authorized to perform: SNS:CreateTopic on resource: <name-resource>
+
+Agregar los permisos sqs, al usuario iam
 
 
 ## Laboratorios
