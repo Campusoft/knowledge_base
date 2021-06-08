@@ -14,3 +14,48 @@ An event driven architecture can use a pub/sub model or an event stream model.
 -    Event streaming: Events are written to a log. Events are strictly ordered (within a partition) and durable. Clients don't subscribe to the stream, instead a client can read from any part of the stream. The client is responsible for advancing its position in the stream. That means a client can join at any time, and can replay events.
 
 
+An event-driven API must offer two capabilities to its consumers.
+
+- A mechanism to allow consumers to subscribe to events of their interest.
+- Deliver events to subscribed consumers in an asynchronous manner.
+	
+# Technology 
+	
+- Webhooks
+- WebSockets
+- Server-Sent Events (SSE)
+
+## Webhooks
+
+A Webhook is a publicly accessible HTTP POST endpoint managed by an event consumer. An event producer, such as an API server, can send event notifications to a webhook when something interesting happens.
+
+Consumers can subscribe to your API by registering a Webhook URL as the callback.
+
+Moreover, Webhooks can’t be used to push event notifications to end-user consumers such as mobile and Single Page Applications (SPA) as they can not in possession of an HTTP endpoint.
+
+Despite the above drawbacks, Webhooks can still be ideal for implementing a server-to-server event notification mechanism.
+
+# Documenting 
+
+A good API definition is complemented by comprehensive documentation and a set of language-specific code generators. REST APIs are meeting that need with the OpenAPI specification. Fortunately, for event-driven APIs, we have the AsyncAPI specification.
+
+The AsyncAPI specification is a machine-readable document that documents and describes your event-driven APIs. It is not only just a specification but a rich ecosystem full of code generators, validators, and test generators.
+
+AsyncAPI is designed along with the same elements of OpenAPI and shares many common constructs to simplify the adoption, but it also comes with additional features to accommodate eventing. It supports a wide variety of messaging protocols and transports (such as AMQP, MQTT, WebSockets, Kafka, JMS, STOMP, HTTP, etc.) and event schema formats. Therefore, the API definition will contain the event payload definition, channel name, application/transport headers, protocols, and other eventing semantics to connect, publish, and subscribe to the API.
+
+# Frameworks 
+
+Dapr is a portable, event-driven runtime that makes it easy for any developer to build resilient, stateless, and stateful applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks
+
+# Revision (TODO)
+
+Well, that is the basis of “Event-enabled” APIs. They are often called “asynchronous,” “push,” or “streaming
+
+
+# Referencias
+
+Event-driven APIs — Understanding the Principles
+https://medium.com/event-driven-utopia/event-driven-apis-understanding-the-principles-c3208308d4b2
+
+	
+	

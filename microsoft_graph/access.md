@@ -3,6 +3,11 @@
 
 Accessing Microsoft Graph endpoints requires that the application and / or user making the request has the appropriate permissions assigned.  These permissions can be one of two types: delegated permissions or application permissions.
 
+- Delegated permissions, sometimes called “on behalf of” permissions, require a user context to also be supplied when making the request.  In effect an application is making Microsoft Graph requests on behalf of the user.  As such, the required permissions will be a combination of 1) what the user has permissions to do and 2) what the application has permissions to do.
+
+- Application permissions, sometimes called app-only or “without a user”, run without a user context.  Common examples of this would be a background service or a daemon application.  Only the permissions granted to the application will be evaluated when Microsoft Graph request is made.
+
+
 https://developer.microsoft.com/en-us/graph/blogs/30daysmsgraph-day-11-azure-ad-application-permissions/
 
 
