@@ -47,6 +47,10 @@ Configuring AWS Credentials
 You must manage your AWS credentials securely and avoid practices that can unintentionally expose your credentials to the public. In this topic, we describe how you configure your application's AWS credentials so that they remain secure
 https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/net-dg-config-creds.html
 
+Enviar mensajes por lotes:  https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/SendMessageBatch.html
+
+Eliminar mensajes por lotes: https://docs.aws.amazon.com/sdkfornet/v3/apidocs/items/SQS/MSQSDeleteMessageBatchDeleteMessageBatchRequest.html
+
 
 ----------------
 Errores:
