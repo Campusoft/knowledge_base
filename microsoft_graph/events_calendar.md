@@ -4,9 +4,9 @@ Esta aplicación permite listar, crear, actualizar y eliminar eventos mediante l
 
 Para realizar esta aplicación se ha seguido un tutorial que se lo puede encontrar en el siguiente enlace: https://docs.microsoft.com/en-us/graph/tutorials/aspnet-core
 
-El código de la aplicación se encuentra en el siguiente repositorio: https://github.com/frnoviyo/GraphTutorial
+En el siguiente repositorio se puede encontrar un laboratorio: https://github.com/Campusoft/LABS/tree/main/graph/TutorialGraph
 
-# Enlaces con información para crear, listar, actualizar y eliminar eventos:
+# Enlaces con información para crear, listar, actualizar y eliminar eventos: https://github.com/Campusoft/LABS/tree/main/graph/TutorialGraph
 
   Listar eventos: https://docs.microsoft.com/en-us/graph/api/user-list-events?view=graph-rest-1.0&tabs=http
   
