@@ -10,17 +10,28 @@ Al menos una entrega: los mensajes se entregan al menos una vez, aunque en ocasi
 
 Orden para optimizar el esfuerzo: en ocasiones, los mensajes se entregan en un orden distinto al que se enviaron.
 
-
 - Colas FIFO
 
 Procesamiento único: los mensajes se envían una vez y permanecen disponibles hasta que el cliente los procesa y elimina. Los duplicados no se introducen en la cola.
 Entrega primero en entrar, primero en salir: se conserva estrictamente el orden en que se envían y reciben los mensajes.
 
-
-
-
 Caracteristicas:
 https://aws.amazon.com/es/sqs/features/
+
+# Funcioanmiento de Amazon SQS
+
+Cuando un consumidor recibe y procesa un mensaje de una cola, el mensaje permanece en la cola. Amazon SQS no elimina automáticamente el mensaje. Dado que Amazon SQS es un sistema distribuido, 
+no garantiza que el consumidor reciba realmente el mensaje (por ejemplo, debido a un problema de conectividad o a un problema en la aplicación del consumidor). Por tanto, el consumidor debe eliminar el mensaje de la cola después de recibirlo y procesarlo. 
+
+- Arquitectura de Amazon SQS: https://docs.aws.amazon.com/es_es/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-basic-architecture.html
+
+- Amazon SQS utiliza las colas estandar como tipo predeterminado: https://docs.aws.amazon.com/es_es/AWSSimpleQueueService/latest/SQSDeveloperGuide/standard-queues.html
+
+- Identificadores de mensajes: https://docs.aws.amazon.com/es_es/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-queue-message-identifiers.html
+
+Cada vez que se recibe un mensaje, este permanece en la cola. Para evitar que otros consumidores procesen el mensaje de nuevo, Amazon SQS establece untiempo de espera de visibilidad, 
+un periodo de tiempo durante el cual Amazon SQS impide que otros consumidores reciban y procesen el mensaje. El tiempo de espera de visibilidad predeterminado de un mensaje es de 30 segundos.
+https://docs.aws.amazon.com/es_es/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html
 
 # .net core 
 
@@ -43,9 +54,10 @@ Errores:
 Amazon.Runtime.AmazonClientException : No RegionEndpoint or ServiceURL configured
 
 Solucion:
-Establecer explicitamente la Region
+Establecer explicitamente las credenciales y la Region
 ```
- var sqsClient = new AmazonSQSClient(RegionEndpoint.USEast2);
+ var awsCredentials = new BasicAWSCredentials(accessKey, secretKey);
+ var sqsClient = new AmazonSQSClient(awsCredentials, RegionEndpoint.USEast2);
 ```
 
 https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/net-dg-region-selection.html
