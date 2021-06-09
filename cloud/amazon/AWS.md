@@ -18,3 +18,11 @@ Get your access key ID and secret access key
 
 Amazon Simple Notification Service (Amazon SNS) es un servicio de mensajería completamente administrado para la comunicación aplicación a aplicación (A2A) y aplicación a persona (A2P). 
 
+
+
+Amazon SQS (from AWS) - The Ultimate Guide.
+(Tiene buena informacion)
+https://www.serverless.com/amazon-sqs
+
+Basic Amazon SQS architecture
+https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-basic-architecture.html
