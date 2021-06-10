@@ -23,3 +23,11 @@ The Oracle Cloud Infrastructure Events service implements CloudEvents
 OpenFaaS
 
 CloudEvent events are one of the many available triggers for OpenFaaS functions
+
+## ISO20022
+
+El estándar permite el intercambio electrónico y la automatización de datos entre las organizaciones del sector financiero mediante un lenguaje común, con la finalidad de agilizar la comunicación, reducir riesgos y evitar pérdidas significativas. Este estándar cubre la información financiera transferida entre instituciones, como son transacciones de pago, información de negociación, liquidación de valores u otro tipo de datos financieros.
+
+https://www.iso20022.org/
+
+Documentación ISO20022 en la ruta architecture/specification/ISO20022

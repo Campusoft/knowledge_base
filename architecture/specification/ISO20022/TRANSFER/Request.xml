@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nodo raíz del requermiento -->
+<Env:RequestPayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:pain.001.001.08">
+	<!-- Cabecera del requierimiento -->
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--To: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+				<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+				<Ah:CtryOfRes>EC</Ah:CtryOfRes>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>893274987</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>pain.001.001.08</Ah:MsgDefIdr>
+		<!--Business Service: Especifica el servicio acordado entre Origen y Destino -->
+		<Ah:BizSvc>TRANSFER</Ah:BizSvc>
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDTHH:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:24Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORMAL, LOW-->
+		<Ah:Prty>NORMAL</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Inicialización de la transaferencia de un cliente -->
+		<Doc:CstmrCdtTrfInitn>
+			<!-- Cabecera del crupo -->
+			<Doc:GrpHdr>
+				<!-- MessageIdentification: ID del mensaje desde la entidad bancaria, se debe garantizar que este mensaje es unico por un periodo de tiempo acordado para una misma entidad ya que es la referencia entre los dos puntos, CHAR(35)-->
+				<Doc:MsgId>9823749823</Doc:MsgId>
+				<!-- CreationDateTime: Fecha y hora de generación del mensaje -->
+				<Doc:CreDtTm>1900-01-01T01:01:01-05:00</Doc:CreDtTm>
+				<!--NumberOfTransactions: Número de transacciones contenidas en el mensaje-->
+				<Doc:NbOfTxs>1</Doc:NbOfTxs>
+				<!--**OPCIONAL ControlSum: Suma de todos los montos de transacciones contenidas en el mensaje-->
+				<Doc:CtrlSum>1</Doc:CtrlSum>
+				<!--InitiatingParty: Datos que identifican la parte que inicia el pago-->
+				<Doc:InitgPty>
+					<!--**OPCIONAL Name: Nombre de la entidad de Origen CHAR(140)-->
+					<Doc:Nm>CACPECO</Doc:Nm>
+					<!--Identification: Identificación de la entidad de Origen-->
+					<Doc:Id>
+						<!--Organisation Identification: Id de Organización de Origen-->
+						<Doc:OrgId>
+							<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+							<Doc:AnyBIC>CDCBTQ99123</Doc:AnyBIC>
+						</Doc:OrgId>
+					</Doc:Id>
+					<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+					<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+				</Doc:InitgPty>
+			</Doc:GrpHdr>
+			<!--PaymentInformation: Información del Pago ([1..*] Se puede repetir N veces, pero en este caso solo se utilizará un elemento)-->
+			<Doc:PmtInf>
+				<!--PaymentInformationIdentification: Identificación unica del pago colocado la parte que envía la transacción CHAR(35)-->
+				<Doc:PmtInfId>9238749827</Doc:PmtInfId>
+				<!--PaymentMethod: Especifica el método de pago utilizado, valores posibles:
+				  -CHK: Cheque
+				  -TRF: Credit Transfer Transfer of an amount of money in the books of the account servicer.
+				  -TRA: Transfer Advice Transfer of an amount of money in the books of the account servicer. An advice should be sent back to the account owner.-->
+				<Doc:PmtMtd>CHK</Doc:PmtMtd>
+				<!--**OPCIONAL BatchBooking: 
+				    -true: Identifica que es una entrada sola entrada con la suma de todos los montos de las trasacciones batch
+					-false: Identifica que es una sola entrada para cada una de las trasacciones en el mensaje batch -->
+				<Doc:BtchBookg>true</Doc:BtchBookg>
+				<!--**OPCIONAL NumberOfTransactions: Número de transacciones contenidas en el mensaje-->
+				<Doc:NbOfTxs>1</Doc:NbOfTxs>
+				<!--**OPCIONAL ControlSum: Suma de todos los montos de transacciones contenidas en el mensaje-->
+				<Doc:CtrlSum>1</Doc:CtrlSum>
+				<!--**OPCIONAL PaymentTypeInformation: Identifica el tipo de transacción-->
+				<Doc:PmtTpInf>
+					<!--**OPCIONAL InstructionPriority: Prioridad de la transacción, valores posibles:
+					-HIGH: Priority level is high.
+					-NORM: Priority level is normal.-->
+					<Doc:InstrPrty>HIGH</Doc:InstrPrty>
+					<!--**OPCIONAL CategoryPurpose: Especifica el proposito de alto nivel, basado en categorias-->
+					<Doc:CtgyPurp>
+						<!-- Code: Proposito de categoria
+							BONU	BonusPayment	Transaction is the payment of a bonus.
+							CASH	CashManagementTransfer	Transaction is a general cash management instruction.
+							CBLK	Card Bulk Clearing	 A Service that is settling money for a bulk of card transactions, while referring to a specific transaction file or other information like terminal ID, card acceptor ID or other transaction details.
+							CCRD	Credit Card Payment	Transaction is related to a payment of credit card.
+							CORT	TradeSettlementPayment	Transaction is related to settlement of a trade, eg a foreign exchange deal or a securities transaction.
+							DCRD	Debit Card Payment	Transaction is related to a payment of debit card.
+							DIVI	Dividend	Transaction is the payment of dividends.
+							DVPM	DeliverAgainstPayment	Code used to pre-advise the account servicer of a forthcoming deliver against payment instruction.
+							EPAY	Epayment	Transaction is related to ePayment.
+							FCOL	Fee Collection	A Service that is settling card transaction related fees between two parties.
+							GOVT	GovernmentPayment	Transaction is a payment to or from a government department.
+							HEDG	Hedging	Transaction is related to the payment of a hedging operation.
+							ICCP	Irrevocable Credit Card Payment	Transaction is reimbursement of credit card payment.
+							IDCP	Irrevocable Debit Card Payment	Transaction is reimbursement of debit card payment.
+							INTC	IntraCompanyPayment	Transaction is an intra-company payment, ie, a payment between two companies belonging to the same group.
+							INTE	Interest	Transaction is the payment of interest.
+							LOAN	Loan	Transaction is related to the transfer of a loan to a borrower.
+							MP2B	Commercial	Mobile P2B Payment
+							MP2P	Consumer	Mobile P2P Payment
+							OTHR	OtherPayment	Other payment purpose.
+							PENS	PensionPayment	Transaction is the payment of pension.
+							RVPM	ReceiveAgainstPayment	Code used to pre-advise the account servicer of a forthcoming receive against payment instruction.
+							SALA	SalaryPayment	Transaction is the payment of salaries.
+							SECU	Securities	Transaction is the payment of securities.
+							SSBE	SocialSecurityBenefit	Transaction is a social security benefit, ie payment made by a government to support individuals.
+							SUPP	SupplierPayment	Transaction is related to a payment to a supplier.
+							TAXS	TaxPayment	Transaction is the payment of taxes.
+							TRAD	Trade	Transaction is related to the payment of a trade finance transaction.
+							TREA	TreasuryPayment	Transaction is related to treasury operations.  E.g. financial contract settlement.
+							VATX	ValueAddedTaxPayment	Transaction is the payment of value added tax.
+							WHLD	WithHolding	Transaction is the payment of withholding tax.-->
+						<Doc:Cd>OTHR</Doc:Cd>
+					</Doc:CtgyPurp>
+				</Doc:PmtTpInf>
+				<!--RequestedExecutionDate: Fecha en la cual la parte inicial requiere que la compensación procese el pago-->
+				<Doc:ReqdExctnDt>
+					<!--Date: Fecha en formato ISO (YYYY-MM-DD)-->
+					<Doc:Dt>2018-10-11</Doc:Dt>
+				</Doc:ReqdExctnDt>
+				<!-- Debtor: Información de quien se le realizara el débito -->
+				<Doc:Dbtr>
+					<!-- Identificador del dueño -->
+					<Doc:Id>
+						<!-- Datos de dueño -->
+						<Doc:PrvtId>
+							<!-- Otro tipo de identificación -->
+							<Doc:Othr>
+								<!-- Cadena de identidad -->
+								<Doc:Id>1712345678</Doc:Id>
+							</Doc:Othr>
+							<!-- Esquema de la identificación -->
+							<Doc:SchmeNm>
+								<!--  Esquema propietario, puede tener los siguientes valores:
+								- CEDULA
+								- PASAPORTE
+								- RUC
+								- CARNE_REFUGIADO
+								-->
+								<Doc:Prtry>CEDULA</Doc:Prtry>
+							</Doc:SchmeNm>
+						</Doc:PrvtId>
+					</Doc:Id>
+					<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+					<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+				</Doc:Dbtr>
+				<!--DebtorAccount: Identificación de la cuenta para el Débito-->
+				<Doc:DbtrAcct>
+					<!-- Identificador de cuenta -->
+					<Doc:Id>
+						<!-- Otra identificación -->
+						<Doc:Othr>
+							<!-- Identificación, CHAR(34)-->
+							<Doc:Id>654231354</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+					<!-- OPCIONAL, tipo de cuenta -->
+					<Doc:Tp>
+						<!-- Código de tipo de cuenta 
+							CACC	Current	Account used to post debits and credits when no specific account has been nominated.
+							CASH	CashPayment	Account used for the payment of cash.
+							CHAR	Charges	"Account used for charges if different from the account forpayment."
+							CISH	CashIncome	Account used for payment of income if different from the current cash account
+							COMM	Commission	"Account used for commission if different from the account for payment."
+							CPAC	ClearingParticipantSettlementAccount	Account used to post settlement debit and credit entries on behalf of a designated Clearing Participant.
+							LLSV	LimitedLiquiditySavingsAccount	Account used for savings with special interest and withdrawal terms.  
+							LOAN	Loan	Account used for loans.
+							MGLD	Marginal Lending	Account used for a marginal lending facility.
+							MOMA	Money Market	"Account used for money markets if different from the cash account."
+							NREX	NonResidentExternal	Account used for non-resident external.
+							ODFT	Overdraft	Account is used for overdrafts.
+							ONDP	OverNightDeposit	Account used for overnight deposits.
+							OTHR	OtherAccount	Account not otherwise specified. 
+							SACC	Settlement	Account used to post debit and credit entries, as a result of transactions cleared and settled through a specific clearing and settlement system.
+							SLRY	Salary	Accounts used for salary payments.
+							SVGS	Savings	Account used for savings.
+							TAXE	Tax	"Account used for taxes if different from the account for payment."
+							TRAN	TransactingAccount	A transacting account is the most basic type of bank account that you can get. The main difference between transaction and cheque accounts is that you usually do not get a cheque book with your transacting account and neither are you offered an overdraft facility.
+							TRAS	Cash Trading	"Account used for trading if different from the current cash account."-->
+						<Doc:Cd>SVGS</Doc:Cd>
+					</Doc:Tp>
+					<!-- Moneda -->
+					<Doc:Ccy>USD</Doc:Ccy>
+				</Doc:DbtrAcct>
+				<!--DebtorAgent: Información de la institución financiera de la cuenta de debito-->
+				<Doc:DbtrAgt>
+					<!--FinancialInstitutionIdentification: Identificación de Institución de debito-->
+					<Doc:FinInstnId>
+						<!--**OPCIONAL Other: Información adicional de la organización, se puede repetir N veces-->
+						<Doc:Othr>
+							<!--Id: Identificación asignada por una institución (1-35)-->
+							<Doc:Id>CACPECO</Doc:Id>
+						</Doc:Othr>
+					</Doc:FinInstnId>
+				</Doc:DbtrAgt>
+				<Doc:CdtTrfTxInf>
+					<Doc:PmtId>
+						<!--EndToEndIdentification: Identificación unica de la transacción (0, 35)-->
+						<Doc:EndToEndId>6542335</Doc:EndToEndId>
+					</Doc:PmtId>
+					<!--**OPCIONAL PaymentTypeInformation: Identifica el tipo de transacción-->
+					<Doc:PmtTpInf>
+						<!--**OPCIONAL InstructionPriority: Priodad de la transacción, valores posibles:
+							-HIGH: Priority level is high. 
+							-NORM: Priority level is normal.-->
+						<Doc:InstrPrty>HIGH</Doc:InstrPrty>
+						<!--**OPCIONAL CategoryPurpose: Especifica el proposito de alto nivel, basado en categorias, aqui se puede colocar el código de proposito del BCE -->
+						<Doc:CtgyPurp>
+							<!-- Codigo propietario de proposito de la transferencia-->
+							<Doc:Prtry>XXXXX</Doc:Prtry>
+						</Doc:CtgyPurp>
+					</Doc:PmtTpInf>
+					<!-- Monto de la transacción -->
+					<Doc:Amt>
+						<!-- Monto de la transacción, number(10,2) -->
+						<Doc:InstdAmt Ccy="USD">100.00</Doc:InstdAmt>
+					</Doc:Amt>
+					<!-- OPCIONAL, Tasa de cambio enb caso de que sea moneda diferente -->
+					<Doc:XchgRateInf>
+						<!-- Moneda que tenga mayor valor -->
+						<Doc:UnitCcy>USD</Doc:UnitCcy>
+						<!-- Tasa de cambio, es decir, cuanto vale una unidad de la moneda en traducido en la otra moneda -->
+						<Doc:XchgRate>1</Doc:XchgRate>
+						<!--RateType: Tipo de tasa de cambio, valores posibles:
+							-SPOT: Spot
+							-SALE: Sale
+							-AGRD: Agreed-->
+						<Doc:RateTp>SPOT</Doc:RateTp>
+					</Doc:XchgRateInf>
+					<!--**OPCIONAL CreditorAgent: Información de Agente que va a realizar la acreditación, debe existir en caso de que sea un agente externo a la cooperativa -->
+					<Doc:CdtrAgt>
+						<!--FinancialInstitutionIdentification: Identificación de Institución-->
+						<Doc:FinInstnId>
+							<!-- Otra identificación -->
+							<Doc:Othr>
+								<!--Código de entidad bancaria o agente receptor del crédito configurada por la cooperativa CHAR (35), puede ser por ejemplo:
+									- CACPECO
+									- EPMAPAL (empresa de aguar potable)
+									- ELEPCOSA (empresa eléctrica)
+									- SRI
+									- MUNLAT (municipio de latacunga)
+									- COOPUNION (cooperativa unión)
+									- COOP1 (cooperativa uno) -->
+								<Doc:Id>CACPECO</Doc:Id>
+								<!-- Esquema del identificador -->
+								<Doc:SchmeNm>
+									<!-- Identificador propietario CHAR (35), puede tener los siguientes valores:
+									- SPI (transferencias SPI)
+									- ONLINE (transferenbcias en línea)
+									- INTERNAL (transferencias entre clientes de cooperativa)
+									- OWNED (trasferencia entre cuentas del mismo cliente)-->
+									<Doc:Prtry>OWNED</Doc:Prtry>
+								</Doc:SchmeNm>
+							</Doc:Othr>
+						</Doc:FinInstnId>
+					</Doc:CdtrAgt>
+					<!--Creditor: Información de la persona o entidad a la que se le acreditará -->
+					<Doc:Cdtr>
+						<!--**OPCIONAL Name: Nombre de la entidad CHAR(140)-->
+						<Doc:Nm>Juan Palan</Doc:Nm>
+						<!-- Identificacción de a quien se la va a acreditar -->
+						<Doc:Id>
+							<!-- Como es una transferencia de persona natural, se utulizará una idetificación privada como indetificador principal -->
+							<Doc:PrvtId>
+								<!-- Otra idetificación -->
+								<Doc:Othr>
+									<!-- Idetificador que se utiliza para idetificar a la persona -->
+									<Doc:Id>172425363</Doc:Id>
+									<Doc:SchmeNm>
+										<!--  Esquema propietario, puede tener los siguientes valores:
+										- CEDULA
+										- PASAPORTE
+										- RUC
+										- CARNE_REFUGIADO
+										-->
+										<Doc:Prtry>CEDULA</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+							</Doc:PrvtId>
+						</Doc:Id>
+						<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+						<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+						<!-- Informacíón de contacto -->
+						<Doc:CtctDtls>
+							<!-- Numero de teléfono movil-->
+							<Doc:MobNb>+593-912345678</Doc:MobNb>
+							<!-- Correo electrónico -->
+							<Doc:EmailAdr>juanpalan@ejemplo.com</Doc:EmailAdr>
+						</Doc:CtctDtls>
+					</Doc:Cdtr>
+					<!-- Información de cuenta del que va a recibir el crédito -->
+					<Doc:CdtrAcct>
+						<!-- Identificadort de la cuenta donde se realizará la acreditación -->
+						<Doc:Id>
+							<!-- Otro tipo de identificación -->
+							<Doc:Othr>
+								<!-- Identificación o número de cuenta-->
+								<Doc:Id>53638731</Doc:Id>
+							</Doc:Othr>
+						</Doc:Id>
+						<!-- Tipo de cuenta -->
+						<Doc:Tp>
+							<!-- Códigos de tipo de cuenta:
+							CACC	Current (Cuenta Corriente SPI = 01)
+							CASH	CashPayment (Cuenta especial SPI = 05)
+							LOAN	Loan (Tarjeta de Crédito SPI = 04)
+							SACC	Settlement (Cuenta contable SPI = 03)
+							SVGS	Savings (Ahorros SPI = 02) -->
+							<Doc:Cd>CACC</Doc:Cd>
+						</Doc:Tp>
+						<!-- Moneda de la cuenta -->
+						<Doc:Ccy>USD</Doc:Ccy>
+					</Doc:CdtrAcct>
+					<!--OPCIONAL, proposito -->
+					<Doc:Purp>
+						<!-- Proposito comentado por el cliente que va a realizar la transferencia, CHAR(35)-->
+						<Doc:Prtry>Pago de préstamo</Doc:Prtry>
+					</Doc:Purp>
+					<!-- OPCIONAL, Datos suplementarios-->
+					<Doc:SplmtryData>
+						<!-- Se puede colocar una cadena de datos suplementarios, como por ejemplo algo que ayude, como identificación del dispositivo desde que envió la solicitud -->
+						<Doc:PlcAndNm>JHGJSG747H</Doc:PlcAndNm>
+						<Doc:Envlp>
+							<Doc:any_element>anyType</Doc:any_element>
+						</Doc:Envlp>
+					</Doc:SplmtryData>
+				</Doc:CdtTrfTxInf>
+			</Doc:PmtInf>
+		</Doc:CstmrCdtTrfInitn>
+	</Doc:Document>
+</Env:RequestPayload>

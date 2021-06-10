@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nodo raíz del requermiento -->
+<Env:RequestPayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:pain.007.001.08">
+	<!-- Cabecera del requierimiento -->
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--To: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+				<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+				<Ah:CtryOfRes>EC</Ah:CtryOfRes>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>893274987</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>camt.060.001.04</Ah:MsgDefIdr>
+		<!--Business Service: Especifica el servicio acordado entre Origen y Destino -->
+		<Ah:BizSvc>REVERSE_PAY_SERVICE</Ah:BizSvc>
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDTHH:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:24Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORMAL, LOW-->
+		<Ah:Prty>NORMAL</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Requermiento de reversa de transferencia -->
+		<Doc:CstmrPmtRvsl>
+			<!-- Group Header -->
+			<Doc:GrpHdr>
+				<!-- ID del mensaje, único -->
+				<Doc:MsgId>32749827</Doc:MsgId>
+				<!-- Fecha y hora de creación de mensaje -->
+				<Doc:CreDtTm>1900-01-01T01:01:01-05:00</Doc:CreDtTm>
+				<!-- Numero de transaccione que serán reversadas con este mensaje -->
+				<Doc:NbOfTxs>1</Doc:NbOfTxs>
+				<!-- OPCIONAL, Control de sumatoria de los valores de las transaccione que serán reversadas-->
+				<Doc:CtrlSum>100.00</Doc:CtrlSum>
+				<!-- OPCIONAL, indica si el reverso aplica a todo el grupo de transacciones o son individuales -->
+				<Doc:GrpRvsl>true</Doc:GrpRvsl>
+				<!-- OPCIONAL, Parte que inicializa el reverso -->
+				<Doc:InitgPty>
+					<!-- OPCIONAL, Nombre de la parte que inicializa el reverso -->
+					<Doc:Nm>CDC</Doc:Nm>
+					<!--OPCIONAL, identificación de la organización -->
+					<Doc:Id>
+						<!-- ID de la organización -->
+						<Doc:OrgId>
+							<!-- ID -->
+							<Doc:AnyBIC>CDCBTQ99123</Doc:AnyBIC>
+						</Doc:OrgId>
+					</Doc:Id>
+					<!-- OPCIONAL, País -->
+					<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+				</Doc:InitgPty>
+			</Doc:GrpHdr>
+			<!-- Información de group header del request original -->
+			<Doc:OrgnlGrpInf>
+				<!-- ID del request -->
+				<Doc:OrgnlMsgId>9823749823</Doc:OrgnlMsgId>
+				<!-- Nombre del mensaje original -->
+				<Doc:OrgnlMsgNmId>CstmrCdtTrfInitn</Doc:OrgnlMsgNmId>
+				<!-- Fecha y hora de creación original del mensaje de requermiento -->
+				<Doc:OrgnlCreDtTm>1900-01-01T01:01:01-05:00</Doc:OrgnlCreDtTm>
+			</Doc:OrgnlGrpInf>
+			<!-- Información del requerimiento de pago -->
+			<Doc:OrgnlPmtInfAndRvsl>
+				<!-- OPCIONAL, Identificador de la transacción de reversa, creado por el que genera la reversa -->
+				<Doc:RvslPmtInfId>98237948</Doc:RvslPmtInfId>
+				<!-- Id de la transacción a reversa, que fue enviado en el mensaje de requerimiento de transferencia-->
+				<Doc:OrgnlPmtInfId>9823748972</Doc:OrgnlPmtInfId>
+				<!-- OPCIONAl, Numero de transacciones que fueropn enviadas originalmente en el requermiento de transferencia -->
+				<Doc:OrgnlNbOfTxs>1</Doc:OrgnlNbOfTxs>
+				<!-- OPCIONAL, Sumatoria total de los montos que se enviaron el la transacción de tranferencia original -->
+				<Doc:OrgnlCtrlSum>1</Doc:OrgnlCtrlSum>
+				<!-- OPCIONAL, ofrece información de las razones de la reversa -->
+				<Doc:RvslRsnInf>
+					<!-- Originador de la reversa -->
+					<Doc:Orgtr>
+						<!-- OPCIONAL, Nombre del originador -->
+						<Doc:Nm>SWITCH</Doc:Nm>
+						<!-- OPCIONAL, Identificación del originador -->
+						<Doc:Id>
+							<!-- ID privado -->
+							<Doc:PrvtId>
+								<!--Otro ID privado -->
+								<Doc:Othr>
+									<!-- ID privado de Actor que ha producido el reverso, puede tener los siguientes valores:
+									SWITCH: Se ha producido por el SWITCH
+									API: API interno ha producido este reverso
+									WEB: La interfaz Web a enviado este reverso, de forma automática
+									MOBILE_APP: La aplicación móvil ha enviado este reverso de forma automática
+									USER: El usuario final envió este reverso (en caso de que exista esto)
+									-->
+									<Doc:Id>SWITCH</Doc:Id>
+								</Doc:Othr>
+							</Doc:PrvtId>
+						</Doc:Id>
+					</Doc:Orgtr>
+					<!-- OPCIONAL, Razón de la reversa -->
+					<Doc:Rsn>
+						<!-- Texto explicado la razón del -->
+						<Doc:Prtry>Se obtuvo un timeout</Doc:Prtry>
+					</Doc:Rsn>
+					<!-- OPCIONAL, información adicional, puede tener más de una instancia-->
+					<Doc:AddtlInf>Timeout</Doc:AddtlInf>
+				</Doc:RvslRsnInf>
+				<Doc:TxInf>
+					<!-- OPCIONAL, ID de la reversa -->
+					<Doc:RvslId>6347383</Doc:RvslId>
+					<!-- OPCIONAL, ID de transacción END to END-->
+					<Doc:OrgnlEndToEndId>6542335</Doc:OrgnlEndToEndId>
+					<!-- Monto original de la transacción-->
+					<Doc:OrgnlInstdAmt Ccy="USD">10.00</Doc:OrgnlInstdAmt>
+				</Doc:TxInf>
+			</Doc:OrgnlPmtInfAndRvsl>
+		</Doc:CstmrPmtRvsl>
+	</Doc:Document>
+</Env:RequestPayload>

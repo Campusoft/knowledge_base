@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:pain.002.001.09" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>6478562347</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>camt.052.001.07</Ah:MsgDefIdr>
+
+		<!-- Business Service: Especifica el servicio acordado entre Origen y Destino -->
+		<Ah:BizSvc>TRANSFER</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORM, LOW-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Resultado de la transferencia -->
+		<Doc:CstmrPmtStsRpt>
+			<!-- Cabecera de grupo -->
+			<Doc:GrpHdr>
+				<!-- MessageIdentification: ID del mensaje desde la entidad bancaria, se debe garantizar que este mensaje es unico por un periodo de tiempo acordado para una misma entidad ya que es la referencia entre los dos puntos, CHAR(35)-->
+				<Doc:MsgId>9823749823</Doc:MsgId>
+				<!-- CreationDateTime: Fecha y hora de generación del mensaje -->
+				<Doc:CreDtTm>1900-01-01T01:01:01-05:00</Doc:CreDtTm>
+				<!--InitiatingParty: Datos que identifican la parte que responde el pago -->
+				<Doc:InitgPty>
+					<!--**OPCIONAL Name: Nombre de la entidad de Origen del mensaje (1 a 140)-->
+					<Doc:Nm>CACPECO</Doc:Nm>
+					<!--Identification: Identificación de la entidad de Origen-->
+					<Doc:Id>
+						<!--Organisation Identification: Id de Organización de Origen-->
+						<Doc:OrgId>
+							<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+							<Doc:AnyBIC>CACPCO99001</Doc:AnyBIC>
+						</Doc:OrgId>
+					</Doc:Id>
+					<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+					<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+				</Doc:InitgPty>
+				<!-- Agente que acreditó el dinero al cliente -->
+				<Doc:CdtrAgt>
+					<!-- Identificación bancaria de la institución que realiza el crédito -->
+					<Doc:FinInstnId>
+						<!-- Otras indentificaciones -->
+						<Doc:Othr>
+							<!-- ID único de transacción generado por la institución para identificar el crédito a la cuenta de destino -->
+							<Doc:Id>982374892</Doc:Id>
+							<!-- Esquema donde el ID generado es válido, es decir, un código de institución financiera -->
+							<Doc:SchmeNm>
+								<!-- Código de institución financiera que realiza la acreditación a la cuenta -->
+								<Doc:Cd>CACPCO99001</Doc:Cd>
+							</Doc:SchmeNm>
+							<!-- Nombre de la institución que ha realizado la acreditación -->
+							<Doc:Issr>CACPECO</Doc:Issr>
+						</Doc:Othr>
+					</Doc:FinInstnId>
+				</Doc:CdtrAgt>
+			</Doc:GrpHdr>
+			<!-- Información del group header original y status de la transacción -->
+			<Doc:OrgnlGrpInfAndSts>
+				<!-- ID original del mensaje -->
+				<Doc:OrgnlMsgId>9823749823</Doc:OrgnlMsgId>
+				<!-- Nombre del mensaje original que se envió como requerimiento -->
+				<Doc:OrgnlMsgNmId>pain.001.001.08</Doc:OrgnlMsgNmId>
+				<!-- Fecha de creación del mensaje de requerimiento-->
+				<Doc:OrgnlCreDtTm>1900-01-01T01:01:01-05:00</Doc:OrgnlCreDtTm>
+				<!-- Número de transacciones que contenía el mensaje de requermiento -->
+				<Doc:OrgnlNbOfTxs>1</Doc:OrgnlNbOfTxs>
+				<!-- OPCIONAL, Sumatoria total de los montos enviados en el requerimiento -->
+				<Doc:OrgnlCtrlSum>100.00</Doc:OrgnlCtrlSum>
+				<!-- Estatus de las transacciones 
+				ACCP	OK
+				RJCT	Rejected
+				-->
+				<Doc:GrpSts>ACCP</Doc:GrpSts>
+				<!-- OPCIONAL, Provee el detalle de la razón del estatus obtenido -->
+				<Doc:StsRsnInf>
+					<!-- OPCIONAL, Parte que produjo es estatus -->
+					<Doc:Orgtr>
+						<!-- OPCIONAL, Nombre-->
+						<Doc:Nm>Banco X</Doc:Nm>
+						<!-- OPCIONAL, Identificador del originador -->
+						<Doc:Id>
+							<!-- OPCIONAL, Identificación privada del originador -->
+							<Doc:PrvtId>
+								<!-- Otras identificaciones -->
+								<Doc:Othr>
+									<!-- ID de la organización -->
+									<Doc:Id>BANK_X</Doc:Id>
+								</Doc:Othr>
+							</Doc:PrvtId>
+						</Doc:Id>
+						<!-- OPCIONAL, país de la organización -->
+						<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+					</Doc:Orgtr>
+					<!-- OPCIONAL, Razón del rechazo -->
+					<Doc:Rsn>
+						<!-- Razón propietaria -->
+						<Doc:Prtry>Describe razón de la respuesta </Doc:Prtry>
+					</Doc:Rsn>
+					<!-- OPCIONAL, Información adicional, puede tener muchas instancias -->
+					<Doc:AddtlInf>Información adicional</Doc:AddtlInf>
+				</Doc:StsRsnInf>
+				<!-- OPCIONAL, Numero de transacciones por estatus, puede tener muchas instancias -->
+				<Doc:NbOfTxsPerSts>
+					<!-- Numero de transacciones por estatus -->
+					<Doc:DtldNbOfTxs>1</Doc:DtldNbOfTxs>
+					<!-- Estatus de las transacciones -->
+					<Doc:DtldSts>ACCP</Doc:DtldSts>
+					<!-- Suma de los totatles de las trasacciones reportadas enel estatus-->
+					<Doc:DtldCtrlSum>1</Doc:DtldCtrlSum>
+				</Doc:NbOfTxsPerSts>
+			</Doc:OrgnlGrpInfAndSts>
+			<!-- Información del request de pago original y estatus -->
+			<Doc:OrgnlPmtInfAndSts>
+				<!-- ID único del pago como se envió en el requerimiento-->
+				<Doc:OrgnlPmtInfId>9823748972</Doc:OrgnlPmtInfId>
+				<!-- Nuemor de transacciones enviadas en el requerimiento -->
+				<Doc:OrgnlNbOfTxs>1</Doc:OrgnlNbOfTxs>
+				<!-- Totales de las transacciones enviadas enel requerimiento -->
+				<Doc:OrgnlCtrlSum>100.00</Doc:OrgnlCtrlSum>
+				<!-- OPCIONAL, Estatus de los pagos
+				ACCP	OK
+				RJCT	Rejected
+				-->
+				<Doc:PmtInfSts>ACCP</Doc:PmtInfSts>
+				<!-- Prevee información del por que del estatus obtenido-->
+				<Doc:StsRsnInf>
+					<!-- OPCIONAL, datos del que originó el estatus -->
+					<Doc:Orgtr>
+						<!-- OPCIONAL, Nombre del que originó el estatus-->
+						<Doc:Nm>CACPECO</Doc:Nm>
+						<!-- OPCIONAL, Identificador del que originó el estatus -->
+						<Doc:Id>
+							<!-- Identificador privada -->
+							<Doc:PrvtId>
+								<!-- Otras identificadores -->
+								<Doc:Othr>
+									<!-- ID interno del que originó el estatus -->
+									<Doc:Id>CACPECO</Doc:Id>
+								</Doc:Othr>
+							</Doc:PrvtId>
+						</Doc:Id>
+						<!-- OPCIONAL, País del originador -->
+						<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+					</Doc:Orgtr>
+					<!-- OPCIONAL, Razón del estatus -->
+					<Doc:Rsn>
+						<!-- Razón propietaria-->
+						<Doc:Prtry>Todo OK</Doc:Prtry>
+					</Doc:Rsn>
+					<!-- OPCIONAL, Infromación adicional -->
+					<Doc:AddtlInf>Todo correcto</Doc:AddtlInf>
+				</Doc:StsRsnInf>
+				<!-- OPCIONAL, Numero de tranascciones por estatus-->
+				<Doc:NbOfTxsPerSts>
+					<!-- Detalle de numero de transacciones por cada estatus-->
+					<Doc:DtldNbOfTxs>1</Doc:DtldNbOfTxs>
+					<!--Estatus de las transacciones
+					ACCP	OK
+					RJCT	Rejected
+					-->
+					<Doc:DtldSts>ACCP</Doc:DtldSts>
+					<!-- Suma de los montos de las transacciones representadas por el estatus -->
+					<Doc:DtldCtrlSum>100.00</Doc:DtldCtrlSum>
+				</Doc:NbOfTxsPerSts>
+				<!-- OPCIONAL, puede tener multiples instancias, Información de las transacciones y estatus obtenidos-->
+				<Doc:TxInfAndSts>
+					<!-- Identifcación única del reporte de estatus-->
+					<Doc:StsId>89723674236</Doc:StsId>
+					<!-- Estatus de la transacción -->
+					<Doc:TxSts>ACCP</Doc:TxSts>
+					<!-- OPCIONAL, puede tener multiples instancias, Razones del estatus-->
+					<Doc:StsRsnInf>
+						<!-- OPCIONAL Originador del estatus -->
+						<Doc:Orgtr>
+							<!-- OPCIONAL, Nombre del originador-->
+							<Doc:Nm>Nm7</Doc:Nm>
+							<!-- OPCIONAL, ID del originador -->
+							<Doc:Id>
+								<!-- ID privador del originador -->
+								<Doc:PrvtId>
+									<!-- Otros ID's-->
+									<Doc:Othr>
+										<!-- ID -->
+										<Doc:Id>87474</Doc:Id>
+									</Doc:Othr>
+								</Doc:PrvtId>
+							</Doc:Id>
+							<!-- OPCIONAL, País del originador -->
+							<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+						</Doc:Orgtr>
+						<!-- OPCIONAL, razón -->
+						<Doc:Rsn>
+							<Doc:Prtry>Todo OK</Doc:Prtry>
+						</Doc:Rsn>
+						<!-- OPCIONAL, Información adicional-->
+						<Doc:AddtlInf>Todo satisfactorio</Doc:AddtlInf>
+					</Doc:StsRsnInf>
+					<!-- OPCIONAL, puede tener múltiples instancias, Información de cargos en esta transacción -->
+					<Doc:ChrgsInf>
+						<!-- Monto del cargo -->
+						<Doc:Amt Ccy="USD">0.50</Doc:Amt>
+						<!-- Agente que realizó el recargo -->
+						<Doc:Agt>
+							<!-- Identificación de la institución financiera -->
+							<Doc:FinInstnId>
+								<!-- Nombre de la institución financiera-->
+								<Doc:Nm>Institución X</Doc:Nm>
+								<!-- OPCIONAL, id de la institución financiera-->
+								<Doc:Othr>
+									<!-- Identificador interno -->
+									<Doc:Id>7327834</Doc:Id>
+								</Doc:Othr>
+							</Doc:FinInstnId>
+						</Doc:Agt>
+					</Doc:ChrgsInf>
+					<!-- Fecha de aceptación YYYY-MM-ddTHH:mm:ssZ -->
+					<Doc:AccptncDtTm>1900-01-01T01:01:01-05:00</Doc:AccptncDtTm>
+					<!-- Referencia de la transacción colocada por la institución -->
+					<Doc:AcctSvcrRef>JHGJ213</Doc:AcctSvcrRef>
+				</Doc:TxInfAndSts>
+			</Doc:OrgnlPmtInfAndSts>
+		</Doc:CstmrPmtStsRpt>
+	</Doc:Document>
+</Env:ResponsePayload>

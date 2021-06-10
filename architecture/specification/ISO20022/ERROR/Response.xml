@@ -1,0 +1,78 @@
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:admi.002.001.01" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>6478562347</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>admi.002.001.01</Ah:MsgDefIdr>
+
+		<!-- Business Service: Especifica el servicio acordado entre Origen y Destino -->
+		<Ah:BizSvc>TRANSFER</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORM, LOW-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Mensaje de respuesta en caso de error del sistema -->
+		<Doc:admi.002.001.01>
+			<!-- Referencia al mensaje anteriormente recibido -->
+			<Doc:RltdRef>
+				<!-- ID de Referencia del mensaje -->
+				<Doc:Ref>Ref1</Doc:Ref>
+			</Doc:RltdRef>
+			<!-- Razón del rechazo -->
+			<Doc:Rsn>
+				<!-- Código de error de la razón por la cual falló la transacción -->
+				<Doc:RsnCd>23</Doc:RsnCd>
+				<!-- Texto que explica la razón del rechazo CHAR (35)-->
+				<Doc:RjctgPtyRsn>Error en la variable X</Doc:RjctgPtyRsn>
+				<!-- OPCIONAL Fecha y hora en la cual se realizó el rechazo-->
+				<Doc:RjctnDtTm>1900-01-01T01:01:01-05:00</Doc:RjctnDtTm>
+				<!-- OPCIONAL Lugar donde se produjo el potencial error CHAR(350) -->
+				<Doc:ErrLctn>Error en el elemento XYZ</Doc:ErrLctn>
+				<!-- OPCIONAL Detalle descriptivo de la razón del error CHAR(350) -->
+				<Doc:RsnDesc>La variable X debe estar entre los valores Y y Z</Doc:RsnDesc>
+				<!-- OPCIONAL Información adicional del erro, puede ser un STACK TRACE que permita encontrar el error de manera más sencilla, CHAR(2000) -->
+				<Doc:AddtlData>AddtlData1</Doc:AddtlData>
+			</Doc:Rsn>
+		</Doc:admi.002.001.01>
+	</Doc:Document>
+</Env:ResponsePayload>

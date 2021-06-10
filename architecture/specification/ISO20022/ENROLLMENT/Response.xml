@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:btq.002.002.01" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>6478562347</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>btq.002.002.01</Ah:MsgDefIdr>
+
+		<!-- Business Service: Especifica el servicio acordado entre Origen y Destino -->
+		<Ah:BizSvc>ENROLLMENT</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORM, LOW-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!--Respuesta por parte de la Institución Financiera para una solicitud de Enrolamiento-->
+		<Doc:AcctRpt>
+			<Doc:Refs>
+				<!--Siempre deberá ser OPEN-->
+				<Doc:ReqTp>OPEN</Doc:ReqTp>
+				<Doc:MsgId>
+					<!--ID del mensaje, de preferencia que sea único-->
+					<Doc:Id>23424234</Doc:Id>
+					<!--Fecha de creación del mensaje-->
+					<Doc:CreDtTm>2018-09-12T16:24:00</Doc:CreDtTm>
+				</Doc:MsgId>
+				<Doc:PrcId>
+					<!--ID que identifica a la transacción de enrolamiento, se mantiene el mismo que se envió en el request -->
+					<Doc:Id>123456</Doc:Id>
+					<!--Fecha de creación de la transacción de enrolamiento, se mantiene el mismo que se envió en el request -->
+					<Doc:CreDtTm>2018-09-12T16:24:00</Doc:CreDtTm>
+				</Doc:PrcId>
+				<!-- Estatus del enrolamiento, OK o ERR -->
+				<Doc:Sts>OK</Doc:Sts>
+				<!-- Estatus Origin, Origen del error, puede tener las siguientes opciones: SERV (servicio), BIZ (Negocio), DB (database)  -->
+				<Doc:StsOrg>BIZ</Doc:StsOrg>
+				<!-- Estatus Code: 0 = OK, Diferente de 0 es error -->
+				<Doc:StsCd>0</Doc:StsCd>
+				<!-- Descripción de Estatus -->
+				<Doc:StsDsc>Transacción satisfactoria</Doc:StsDsc>
+			</Doc:Refs>
+			<Doc:Rpt>
+				<!--Esta sección se usa para confirmar datos de la cuenta (OPCIONAL)-->
+				<Doc:Acct>
+					<Doc:Id>
+						<Doc:Othr>
+							<!--Número de cuenta-->
+							<Doc:Id>0002458744444</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+					<Doc:Tp>
+						<!--Tipo de cuenta según catálogo: SVGS (Ahorros), CACC (Corriente), LLSV (Polizas), LOAN (Créditos) -->
+						<Doc:Cd>SVGS</Doc:Cd>
+					</Doc:Tp>
+					<!--Código de moneda-->
+					<Doc:Ccy>USD</Doc:Ccy>
+				</Doc:Acct>
+			</Doc:Rpt>
+		</Doc:AcctRpt>
+	</Doc:Document>
+</Env:ResponsePayload>

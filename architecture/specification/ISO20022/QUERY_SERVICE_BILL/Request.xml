@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nodo raíz del requermiento -->
+<Env:RequestPayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:btq.001.001.01">
+	<!-- Cabecera del requierimiento -->
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--To: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+				<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+				<Ah:CtryOfRes>EC</Ah:CtryOfRes>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>893274987</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>btq.001.001.01</Ah:MsgDefIdr>
+		<!--Business Service: Especifica el servicio acordado entre Origen y Destino
+			QUERY_SERVICE_BILL: Consulta el valor a pagar para un servicio
+		-->
+		<Ah:BizSvc>QUERY_SERVICE_BILL</Ah:BizSvc>
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDTHH:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:24Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORMAL, LOW-->
+		<Ah:Prty>NORMAL</Ah:Prty>
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Requermiento de Reporte de Valor a pagar en el servicio -->
+		<Doc:BllRptgReq>
+			<!-- Group Header-->
+			<Doc:GrpHdr>
+				<!-- ID del mensaje mejor si es único para cada mensaje-->
+				<Doc:MsgId>876345834</Doc:MsgId>
+				<!-- Fecha y hora de generación del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				<!-- El que envía el mensaje -->
+				<Doc:MsgSndr>
+					<!-- Datos del Party (organización o persona) -->
+					<Doc:Pty>
+						<!-- Nombre del Party, en este caso sería de Canal digital de cooperativas -->
+						<Doc:Nm>CDC</Doc:Nm>
+						<!-- Identificación única y sin ambiguedades de quien envía el mensaje -->
+						<Doc:Id>
+							<!-- Identificación de la organización -->
+							<Doc:OrgId>
+								<!-- Código de la organización -->
+								<Doc:AnyBIC>CDCBTQ99123</Doc:AnyBIC>
+							</Doc:OrgId>
+						</Doc:Id>
+						<!-- Pais de residencia OPCIONAL -->
+						<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+					</Doc:Pty>
+				</Doc:MsgSndr>
+			</Doc:GrpHdr>
+			<!-- Requerimiento de reporte -->
+			<Doc:RptgReq>
+				<!-- OPCIONAL, Propietario de la cuenta -->
+				<Doc:BllOwnr>
+					<!-- Personal natural o juridica a la que pertenece la cuenta -->
+					<Doc:Pty>
+						<Doc:Id>
+							<!-- Datos de dueño -->
+							<Doc:PrvtId>
+								<!-- Otro idetificador -->
+								<Doc:Othr>
+									<!-- Identificador, la cédula o RUC normalmente, datos para emitir la factura en caso de que sea necesario -->
+									<Doc:Id>1712345678</Doc:Id>
+								</Doc:Othr>
+								<!-- Esquema de la identificación -->
+								<Doc:SchmeNm>
+									<!--  Esquema propietario, puede tener los siguientes valores:
+									- CEDULA
+									- PASAPORTE
+									- RUC
+									- CARNE_REFUGIADO
+									-->
+									<Doc:Prtry>CEDULA</Doc:Prtry>
+								</Doc:SchmeNm>
+							</Doc:PrvtId>
+						</Doc:Id>
+					</Doc:Pty>
+				</Doc:BllOwnr>
+				<!-- Datos del servicio a pagar -->
+				<Doc:Srvc>
+					<Doc:OrgId>
+						<!-- OPCIONAL, nombre de la empresa-->
+						<Doc:Nm>Agua Potable</Doc:Nm>
+						<!-- ID del servicio a pagar -->
+						<Doc:Id>
+							<!-- Datos de dueño -->
+							<Doc:PrvtId>
+								<!-- Otro identificador, van a existir 2 de estos elementos -->
+								<!-- Identificador de la empresa -->
+								<Doc:Othr>
+									<!-- Servicio a pagar, puede tener varios valores, dependiendo de la configuración -->
+									<Doc:Id>EPMAPAL</Doc:Id>
+									<!-- Esquema de ID -->
+									<Doc:SchmeNm>
+										<!-- Solo puede existir 2 esquemas: CODIGO_EMPRESA (código de la empresa a la cual se realizará el pago) e ID_CUENTA (ID de la cuenta a pagar dentro de la empresa) -->
+										<Prtry>CODIGO_EMPRESA</Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+								<!-- Identificador de la cuenta a pagar -->
+								<Doc:Othr>
+									<!-- ID del cuenta -->
+									<Doc:Id>892379842</Doc:Id>
+									<!-- Esquema de ID -->
+									<Doc:SchmeNm>
+										<!-- Solo puede existir 2 esquemas: CODIGO_EMPRESA (código de la empresa a la cual se realizará el pago) e ID_CUENTA (ID de la cuenta a pagar dentro de la empresa) -->
+										<Doc:Prtry>ID_CUENTA</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+							</Doc:PrvtId>
+						</Doc:Id>
+					</Doc:OrgId>
+				</Doc:Srvc>
+			</Doc:RptgReq>
+		</Doc:BllRptgReq>
+	</Doc:Document>	
+</Env:RequestPayload>

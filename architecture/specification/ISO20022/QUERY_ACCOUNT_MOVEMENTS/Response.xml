@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:camt.052.001.07">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>893274987</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>camt.052.001.07</Ah:MsgDefIdr>
+
+		<!-- Business Service: Especifica el servicio acordado entre Origen y Destino
+			QUERY_ACCOUNTS: Consulta de cuentas: Ahorros, Plazo fijo y corrientes; con su identificador, saldo disponible y saldo contable
+			QUERY_ACCOUNT_MOVEMENTS: Consulta de movimientos de cuentas: detalle si es crédito o débito, valor, texto descriptivo, estado (disponible, contabilizado, en proceso legal, etc.)
+			QUERY_MOVEMENTS_DETAILS: Detalles de movimiento: agencia, origen (cuenta y/o institución), destino (cuenta y/o institución), estado (dispobible)
+			QUERY_CREDITS: Consulta los créditos: valor, fecha inicio, fecha fin y tasa de interés
+			-->
+		<Ah:BizSvc>QUERY_ACCOUNT_MOVEMENTS</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Reporte desde el banco hacia el cliente acerca de cuenta -->
+		<Doc:BkToCstmrAcctRpt>
+			<!-- Group header -->
+			<Doc:GrpHdr>
+				<!-- ID del mensaje desde la entidad bancaria mejor si es único para cada mensaje-->
+				<Doc:MsgId>7648481</Doc:MsgId>
+				<!-- Fecha y hora de generación del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:25-06:00</Doc:CreDtTm>
+				<!-- OPCIONAL, datos del receptor de mensajes -->
+				<Doc:MsgRcpt>
+					<!-- OPCIONAL, Nombre del Party, en este caso sería de Canal digital de cooperativas -->
+					<Doc:Nm>CDC</Doc:Nm>
+					<!-- OPCIONAL Identificación de receptor del mensaje -->
+					<Doc:Id>
+						<!-- Identificación de la organización -->
+						<Doc:OrgId>
+							<!-- Código de la organización -->
+							<Doc:AnyBIC>CDCBTQ99123</Doc:AnyBIC>
+						</Doc:OrgId>
+					</Doc:Id>
+					<!-- Pais de residencia OPCIONAL -->
+					<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+				</Doc:MsgRcpt>
+				<!-- OPCIONAL, Paginación de mensaje -->
+				<Doc:MsgPgntn>
+					<!-- Numero de pagina -->
+					<Doc:PgNb>1</Doc:PgNb>
+					<!-- Es esta la última página -->
+					<Doc:LastPgInd>true</Doc:LastPgInd>
+				</Doc:MsgPgntn>
+				<!-- Datos de la Consulta original -->
+				<Doc:OrgnlBizQry>
+					<!-- Id del mensaje enviado originalmente -->
+					<Doc:MsgId>876345834</Doc:MsgId>
+					<!-- Nombre identificador del reporte pedido en el request -->
+					<Doc:MsgNmId>BankToCustomerAccountReport</Doc:MsgNmId>
+					<!-- Fecha en la que el requermiento fue realizado -->
+					<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				</Doc:OrgnlBizQry>
+			</Doc:GrpHdr>
+			<!-- Reporte pedido, pueden existir varios de este elemento -->
+			<Doc:Rpt>
+				<!-- Identificación del reporte de la cuenta, en caso de ser el mismo nuemro de mensaje se colocará ese, en caso de tener un ID diferente de alguna plataforma de reportes, se colocará ese otro ID -->
+				<Doc:Id>87236487</Doc:Id>
+				<!-- Paginación -->
+				<Doc:RptPgntn>
+					<!-- Numero de página -->
+					<Doc:PgNb>1</Doc:PgNb>
+					<!-- Indicador de última página -->
+					<Doc:LastPgInd>true</Doc:LastPgInd>
+				</Doc:RptPgntn>
+				<!-- Numero secuencial del reporte -->
+				<Doc:ElctrncSeqNb>1</Doc:ElctrncSeqNb>
+				<!-- OPCIONAL, secuenciales de los registros a reportar, se usa si en el requermiento se envió los secuenciales a consultar -->
+				<Doc:RptgSeq>
+					<!-- Desde y hasta que secuencial se reporta -->
+					<Doc:FrToSeq>
+						<!-- Desde que secuencial se reporta -->
+						<Doc:FrSeq>1</Doc:FrSeq>
+						<!-- Hasta que secuencial se reporta -->
+						<Doc:ToSeq>25</Doc:ToSeq>
+					</Doc:FrToSeq>
+				</Doc:RptgSeq>
+				<!-- OPCIONAL, Numero de secuencia legal -->
+				<Doc:LglSeqNb>1</Doc:LglSeqNb>
+				<!-- OPCIONAL, Fecha de cración del mensaje -->
+				<Doc:CreDtTm>2018-09-21T18:13:01-06:00</Doc:CreDtTm>
+				<!-- OPCIONAL, fechas entre las cuales se se presenta en el reporte -->
+				<Doc:FrToDt>
+					<!-- fecha y hora inicial-->
+					<Doc:FrDtTm>1900-01-01T01:01:01-06:00</Doc:FrDtTm>
+					<!-- Fecha y hora final-->
+					<Doc:ToDtTm>1900-01-01T01:01:01-06:00</Doc:ToDtTm>
+				</Doc:FrToDt>
+				<!-- OPCIONAL, Resumen de entradas reportadas-->
+				<Doc:TxsSummry>
+					<!-- OPCIONAL, Numero de entradas en el reporte-->
+					<Doc:TtlNtries>
+						<!-- OPCIONAL, Numero total de entradas -->
+						<Doc:NbOfNtries>1</Doc:NbOfNtries>
+						<!-- Opcional, suma de las cantidades de todas las entradas reportadas -->
+						<Doc:Sum>1637.89</Doc:Sum>
+					</Doc:TtlNtries>
+					<!-- Opcional, Total de entradas con creditos -->
+					<Doc:TtlCdtNtries>
+						<!-- Numero de entradas -->
+						<Doc:NbOfNtries>1</Doc:NbOfNtries>
+						<!-- Suma de los valores de esas entradas de credito-->
+						<Doc:Sum>100.00</Doc:Sum>
+					</Doc:TtlCdtNtries>
+					<!-- Opcional, Total de entradas con débitos -->
+					<Doc:TtlDbtNtries>
+						<!-- Numero de entradas con debitos reportadas -->
+						<Doc:NbOfNtries>2</Doc:NbOfNtries>
+						<!-- Suma de los débitos reportados -->
+						<Doc:Sum>100.00</Doc:Sum>
+					</Doc:TtlDbtNtries>
+				</Doc:TxsSummry>
+				<!-- Opcional, puede existir más de una instancia del elemento, Entradas de las cuentas-->
+				<Doc:Ntry>
+					<!-- Opcional, Referencia de la entrada -->
+					<Doc:NtryRef>8947593</Doc:NtryRef>
+					<!-- Monto de la entrada -->
+					<Doc:Amt Ccy="USD">100</Doc:Amt>
+					<!-- Indica si es una acreditación (CRDT) o un débito (DEBT), o BLOQUEO (BLCK)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Indica si es o no una reversa -->
+					<Doc:RvslInd>false</Doc:RvslInd>
+					<!-- Estatus de esta entrada en los libros contables de la institución -->
+					<Doc:Sts>
+						<!-- Código de estatus, puede tomar los siguientes valores:
+						BOOK	Booked 
+						FUTR	Future 
+						INFO	Information 
+						PDNG	Pending
+						AVBL	Available
+						-->
+						<Doc:Cd>BOOK</Doc:Cd>
+					</Doc:Sts>
+					<!--Opcional, Fecha en la que se ingresó en la contabilidad -->
+					<Doc:BookgDt>
+						<!-- Fecha -->
+						<Doc:Dt>2018-01-01</Doc:Dt>
+					</Doc:BookgDt>
+					<!-- Opcional, Fecha en la que el valor estuvo disponible en la cuenta -->
+					<Doc:ValDt>
+						<!-- Fecha -->
+						<Doc:Dt>2018-01-02</Doc:Dt>
+					</Doc:ValDt>
+					<!-- OPCIONAL, Detalle de los montos -->
+					<Doc:AmtDtls>
+					  <!-- Para el monto total disponible que se tenía en la cuenta luego de que la entrada afecte -->
+					  <Doc:PrtryAmt>
+						<!-- Tipo total, solo puede existir: TTLAVBL y TTLBKD  -->
+						<Doc:Tp>TTLAVBL</Doc:Tp>
+						<!-- Monto total que se obtuvo en la cuenta al aplicar el crédito o débito  -->
+						<Doc:Amt Ccy="USD">523.51</Doc:Amt>
+					  </Doc:PrtryAmt>
+					  <!-- Para el monto total contable que se tenía en la cuenta luego de que la entrada afecte -->
+					  <Doc:PrtryAmt>
+						<!-- Tipo total, solo puede existir: TTLAVBL y TTLBKD-->
+						<Doc:Tp>TTLBKD</Doc:Tp>
+						<!-- Monto total que se obtuvo en la cuenta al aplicar el crédito o débito  -->
+						<Doc:Amt Ccy="USD">100.00</Doc:Amt>
+					  </Doc:PrtryAmt>
+					</Doc:AmtDtls>
+					<!-- Descripción de la transacción dependiendo de Tipo de transacción -->
+					<Doc:AddtlNtryInf>Depósito en cheque</Doc:AddtlNtryInf>
+				</Doc:Ntry>
+				<Doc:Ntry>
+					<!-- Opcional, Referencia de la entrada -->
+					<Doc:NtryRef>8947594</Doc:NtryRef>
+					<!-- Monto de la entrada -->
+					<Doc:Amt Ccy="USD">100.1</Doc:Amt>
+					<!-- Indica si es una acreditación (CRDT) o un débito (DEBT), o BLOQUEO (BLCK)-->
+					<Doc:CdtDbtInd>DEBT</Doc:CdtDbtInd>
+					<!-- OPCIONAL, Indica si es o no una reversa -->
+					<Doc:RvslInd>false</Doc:RvslInd>
+					<!-- Estatus de esta entrada en los libros contables de la institución -->
+					<Doc:Sts>
+						<!-- Código de estatus, puede tomar los siguientes valores:
+						BOOK	Booked 
+						FUTR	Future 
+						INFO	Information 
+						PDNG	Pending
+						AVBL	Available
+						-->
+						<Doc:Cd>AVBL</Doc:Cd>
+					</Doc:Sts>
+					<!--Opcional, Fecha en la que se ingresó en la contabilidad -->
+					<Doc:BookgDt>
+						<!-- Fecha -->
+						<Doc:Dt>2018-01-01</Doc:Dt>
+					</Doc:BookgDt>
+					<!-- Opcional, Fecha en la que el valor estuvo disponible en la cuenta -->
+					<Doc:ValDt>
+						<!-- Fecha -->
+						<Doc:Dt>2018-01-01</Doc:Dt>
+					</Doc:ValDt>
+					<!-- OPCIONAL, Detalle de los montos -->
+					<Doc:AmtDtls>
+					  <!-- Para el monto total disponible que se tenía en la cuenta luego de que la entrada afecte -->
+					  <Doc:PrtryAmt>
+						<!-- Tipo total, solo puede existir: TTLAVBL y TTLBKD  -->
+						<Doc:Tp>TTLAVBL</Doc:Tp>
+						<!-- Monto total que se obtuvo en la cuenta al aplicar el crédito o débito  -->
+						<Doc:Amt Ccy="USD">523.51</Doc:Amt>
+					  </Doc:PrtryAmt>
+					  <!-- Para el monto total contable que se tenía en la cuenta luego de que la entrada afecte -->
+					  <Doc:PrtryAmt>
+						<!-- Tipo total, solo puede existir: TTLAVBL y TTLBKD-->
+						<Doc:Tp>TTLBKD</Doc:Tp>
+						<!-- Monto total que se obtuvo en la cuenta al aplicar el crédito o débito  -->
+						<Doc:Amt Ccy="USD">100.00</Doc:Amt>
+					  </Doc:PrtryAmt>
+					</Doc:AmtDtls>					
+					<!-- Descripción de la transacción dependiendo de Tipo de transacción -->
+					<Doc:AddtlNtryInf>Depósito en efectivo</Doc:AddtlNtryInf>
+				</Doc:Ntry>
+			</Doc:Rpt>
+		</Doc:BkToCstmrAcctRpt>
+	</Doc:Document>	
+</Env:ResponsePayload>

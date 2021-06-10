@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Nodo raíz del requermiento -->
+<Env:RequestPayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:btq.001.004.01">
+	<!-- Cabecera del requierimiento -->
+	<Ah:AppHdr>
+		<!--From: Datos del Origen -->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--To: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+				<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+				<Ah:CtryOfRes>EC</Ah:CtryOfRes>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>893274987</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>btq.001.004.01</Ah:MsgDefIdr>
+		<!--Business Service: Especifica el servicio acordado entre Origen y Destino
+		-->
+		<Ah:BizSvc>OTP_GENERATE</Ah:BizSvc>
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDTHH:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:24Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORMAL, LOW-->
+		<Ah:Prty>NORMAL</Ah:Prty>
+
+	</Ah:AppHdr>
+
+	<Doc:Document>
+		<!--Solicitud de generación envío OTP-->
+		<Doc:OtpGenReq>
+			<Doc:Ref>
+				<Doc:MsgId>
+					<!--ID del mensaje -->
+					<Doc:Id>12131313</Doc:Id>
+					<!--Fecha de creación del mensaje-->
+					<Doc:CreDtTm>2018-09-13T23:00:00</Doc:CreDtTm>
+				</Doc:MsgId>
+			</Doc:Ref>
+			<Doc:Inst>
+				<Doc:FinInstnId>
+					<Doc:Othr>
+						<!--Identificador de la institución financiera-->
+						<Doc:Id>13123123</Doc:Id>
+					</Doc:Othr>
+				</Doc:FinInstnId>
+			</Doc:Inst>
+			<Doc:Otp>
+				<!--Tipo de solicitiud (GEN->Generar OTP, SND->Enviar OTP, GAS -> Genera y envía)-->
+				<Doc:Tp>SND</Doc:Tp>
+				<!--OPCIONAL, Código OTP, obligatorio si Tp=SND, de otra manera no se deberá enviar -->
+				<Doc:Code>1234</Doc:Code>
+				<!-- Nombre de usuario que realiza esta petición, deberá ser repetible cuando se haga la validación -->
+				<Doc:Usr>usuario77</Doc:Usr>
+				<!-- Nombre de tipo de transacción que se está realizado con OTP, deberá ser repetible cuando se haga la validación -->
+				<Doc:TpTrx>ENROLAMIENTO</Doc:TpTrx>
+				<!-- Numero de segundos durante los cuales el OTP será válido -->
+				<Doc:TmVld>180</Doc:TmVld>
+				<!-- Tamaño del OTP ha generar, puede tener los valores enteros entre 4 y 8 -->
+				<Doc:OtpSz>4</Doc:OtpSz>
+				<!-- ID único de la transacción que se genera para la transacción, puede ser un ID de transacción, deberá ser repetible cuando se haga la validación -->
+				<Doc:IdTrx>982374982</Doc:IdTrx>
+				<!--Datos usados para generar el OTP, Se eberá tener una cadena única para cada generación, deberá ser repetible cuando se haga la validación, CHAR(40)-->
+				<Doc:Data>dato único para la transacción</Doc:Data>
+				<!--Medios de notificación del código OTP, debe existir al menos uno en caso que se vaya a enviar -->
+				<Doc:Notf>
+					<!--OPCIONAL: Número de celular al cual se enviará el código OTP, formato de 10 dígitos-->
+					<Doc:MobNb>0989876541</Doc:MobNb>
+					<!--OPCIONAL: Correo electrónico al cual se enviará el código OTP-->
+					<Doc:Mail>ppito@gmail.com</Doc:Mail>  
+				</Doc:Notf>
+			</Doc:Otp>
+		</Doc:OtpGenReq>
+	</Doc:Document>
+</Env:RequestPayload>
