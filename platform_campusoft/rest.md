@@ -47,6 +47,8 @@ Configuration.Modules.AbpAspNetCore()
 	.Where(type => typeof(IGenerateDynamicApi).IsAssignableFrom(type));
 
 ```
+Importante. Si existe más de un método con el mismo nombre, solo se considera la primera ocurrencia del método para generar los servicios REST.
+
 
 Nota. Si un servicio de aplicacion es expuesto como REST "IGenerateDynamicApi", deberia tener autentificacion; salvo el caso explicitamente que sea un servicio que no requiera autentificacion/seguridad
 
