@@ -137,6 +137,13 @@ The most common providers are
 
 http://activemq.apache.org/security
 
+
+Se permite establecer permisos a los diferentes canales (Colas, Tópicos). Los permisos son “read” para consumir mensajes del canal; “write” para enviar mensajes al canal; “admin” para tareas de administración
+
+
+La seguridad para canales es posible para los protocolos que soporta ActiveMQ. Si consume los canales con REST API, este canal no se permite realizar restricciones sobre un canal especifico; se tiene acceso a todos los canales. (Pendiente: Verificar opciones para hacer restricciones del canales por medio REST API)
+
+
 Indicaciones como realizar encriptacion password
 
 Linux:

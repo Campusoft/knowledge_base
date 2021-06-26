@@ -76,6 +76,12 @@ Async Waiting inside C# Locks
 https://blog.cdemi.io/async-waiting-inside-c-sharp-locks/
 
 
+# String Formats
+
+SmartFormat
+
+https://github.com/axuno/SmartFormat
+
 
 # Schedule 
 

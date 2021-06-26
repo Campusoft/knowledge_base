@@ -1,6 +1,9 @@
-
+# Analytic Views
 
 24.1 What Are Analytic Views?
+
+The Analytic Views feature is available with any Oracle Database 12.2 database installation, whether it be an Oracle Database Cloud Service, or an on-premise Oracle Database environment.
+
 
 Analytic views provide a fast and efficient way to create analytic queries of data stored in existing database tables and views.
 

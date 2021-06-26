@@ -1,5 +1,28 @@
 # EntityFramework
 
+
+
+## Conventions
+
+
+Entity Framework Core: Naming Convention
+https://www.meziantou.net/entity-framework-core-naming-convention.htm
+
+## Migration
+
+
+dotnet ef migrations add InitialCreate
+
+
+Migrations Overview
+https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli
+
+
+## Reference
+
+This site provides documentation and tutorials for people looking for help with using Entity Framework Core
+https://www.learnentityframeworkcore.com/
+
 # Dapper
 
 Dapper is a micro-ORM for .Net that extends your IDbConnection, simplifying query setup, execution, and result-reading.

@@ -47,9 +47,31 @@ AsyncAPI is designed along with the same elements of OpenAPI and shares many com
 
 Dapr is a portable, event-driven runtime that makes it easy for any developer to build resilient, stateless, and stateful applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks
 
+# Messaging patterns
+
+**Claim Check**
+
+
+Store the entire message payload into an external service, such as a database. Get the reference to the stored payload, and send just that reference to the message bus. The reference acts like a claim check used to retrieve a piece of luggage, hence the name of the pattern. Clients interested in processing that specific message can use the obtained reference to retrieve the payload, if needed.
+https://www.enterpriseintegrationpatterns.com/patterns/messaging/StoreInLibrary.html
+
+**Pipes and Filters**
+
+Decompose a task that performs complex processing into a series of separate elements that can be reused. This can improve performance, scalability, and reusability by allowing task elements that perform the processing to be deployed and scaled independently.
+
+
+
+**Guidance**
+ 
+Message design is not object-oriented design. Messages should contain state, not behavior. Behavior should be in a separate class or service.
+
+
+
 # Revision (TODO)
 
 Well, that is the basis of “Event-enabled” APIs. They are often called “asynchronous,” “push,” or “streaming
+
+
 
 
 # Referencias

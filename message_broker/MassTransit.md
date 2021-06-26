@@ -10,6 +10,26 @@ An open-source lightweight message bus framework for .NET. MassTransit is useful
 
 https://masstransit-project.com/
 
+## Messange
+
+There are two main message types, events and commands. 
+
+
+A command tells a service to do something. A command should never be published. Commands are sent (using Send) to an endpoint, as it is expected that a single service instance performs the command action. 
+
+An event signifies that something has happened
+
+MassTransit encapsulates every sent or published message in a message envelope
+
+**Identifiers**
+ 
+MassTransit uses and highly encourages the use of Guid identifiers. Distributed systems would crumble using monotonically incrementing identifiers (such as int or long) due to the bottleneck of locking and incrementing a shared counter. Historically, certain types (okay, we'll call them out - SQL DBAs) have argued against using Guid (or, their term, uniqueidentifier) as a key – a clustered primary key in particular.
+
+Guidance
+ 
+Message design is not object-oriented design. Messages should contain state, not behavior. Behavior should be in a separate class or service.
+
+
 ##  Producers
 
  If your message goes to a known receiver, just send it. You should publish your message when you have multiple receivers or the number of receivers is dynamically changing.

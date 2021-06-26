@@ -78,6 +78,9 @@ Blazor is a single-page app framework for building client-side web apps using .N
 https://github.com/dotnet-presentations/blazor-workshop
 
 
+Create A Blazor Server SPA With Dapper
+https://www.c-sharpcorner.com/article/create-a-blazor-server-spa-with-dapper/
+
 ## Libros
 
 Blazor for ASP.NET Web Forms Developers
@@ -88,4 +91,5 @@ https://docs.microsoft.com/en-us/dotnet/architecture/blazor-for-web-forms-develo
 
 Sample ASP.NET Core 5.0 reference application, powered by Microsoft, demonstrating a layered application architecture with monolithic deployment model
 https://github.com/dotnet-architecture/eShopOnWeb
+
 
