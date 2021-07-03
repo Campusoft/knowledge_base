@@ -48,6 +48,11 @@ You must manage your AWS credentials securely and avoid practices that can unint
 https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/net-dg-config-creds.html
 
 
+Enviar mensajes por lotes:  https://docs.aws.amazon.com/sdk-for-net/v3/developer-guide/SendMessageBatch.html
+
+Eliminar mensajes por lotes: https://docs.aws.amazon.com/sdkfornet/v3/apidocs/items/SQS/MSQSDeleteMessageBatchDeleteMessageBatchRequest.html
+
+
 ----------------
 Errores:
 

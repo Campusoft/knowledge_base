@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:btq.002.001.01">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>3545721</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>btq.002.001.01</Ah:MsgDefIdr>
+
+		<!--Business Service: Especifica el servicio acordado entre Origen y Destino
+			QUERY_SERVICE_BILL: Consulta el valor a pagar para un servicio
+		-->
+		<Ah:BizSvc>QUERY_SERVICE_BILL</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORM, LOW-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Reporte desde el banco hacia el cliente acerca de cuenta -->
+		<Doc:BllRpt>
+			<!-- Group header -->
+			<Doc:GrpHdr>
+				<!-- ID del mensaje desde la entidad bancaria mejor si es único para cada mensaje-->
+				<Doc:MsgId>3246547485</Doc:MsgId>
+				<!-- Fecha y hora de generación del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:25-06:00</Doc:CreDtTm>
+				<!-- OPCIONAL, datos del receptor de mensajes -->
+				<Doc:MsgRcpt>
+					<!-- OPCIONAL, Nombre del Party, en este caso sería de Canal digital de cooperativas -->
+					<Doc:Nm>CDC</Doc:Nm>
+					<!-- OPCIONAL Identificación de receptor del mensaje -->
+					<Doc:Id>
+						<!-- Identificación de la organización -->
+						<Doc:OrgId>
+							<!-- Código de la organización -->
+							<Doc:AnyBIC>CDCBTQ99123</Doc:AnyBIC>
+						</Doc:OrgId>
+					</Doc:Id>
+					<!-- Pais de residencia OPCIONAL -->
+					<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+				</Doc:MsgRcpt>
+				<!-- Datos de la Consulta original -->
+				<Doc:OrgnlBizQry>
+					<!-- Id del mensaje enviado originalmente -->
+					<Doc:MsgId>876345834</Doc:MsgId>
+					<!-- Nombre identificador del reporte pedido en el request -->
+					<Doc:MsgNmId>BllRptgReq</Doc:MsgNmId>
+					<!-- Fecha en la que el requermiento fue realizado -->
+					<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				</Doc:OrgnlBizQry>
+			</Doc:GrpHdr>
+			<!-- Reporte pedido, pueden existir varios de este elemento -->
+			<Doc:Rpt>
+				<!-- Identificación del reporte de la cuenta, en caso de ser el mismo nuemro de mensaje se colocará ese, en caso de tener un ID diferente de alguna plataforma de reportes, se colocará ese otro ID -->
+				<Doc:Id>3246547485</Doc:Id>
+				<!-- OPCIONAL, Fecha de cración del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				<!-- Información de cuenta -->
+				<Doc:Bll>
+					<!-- Identificación de la cuenta -->
+					<Doc:Id>
+						<Doc:Othr>
+							<!-- Id de la cuenta -->
+							<Doc:Id>892379842</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+					<!-- OPCIONAL, Fecha de emisión de factura, formato YYYY-MM-dd -->
+					<Doc:IssDt>2018-10-15</Doc:IssDt>
+					<!-- OPCIONAL, Fecha máxima de pago, formato YYYY-MM-dd -->
+					<Doc:DueDt>2018-10-22</Doc:DueDt>
+					<!-- OPCIONAL, Moneda de la cuenta -->
+					<Doc:Ccy>USD</Doc:Ccy>
+					<!-- OPCIONAL, Datos del propietario -->
+					<Doc:Debt>
+						<!-- OPCIONAL, Nombre de propietario-->
+						<Doc:Nm>Juan Cardenas</Doc:Nm>
+						<!-- OPCIONAL, Identificador del cliente -->
+						<Doc:Id>
+							<!-- OPCIONAL, Información privada-->
+							<Doc:PrvtId>
+								<!-- Otras identificaciones -->
+								<Doc:Othr>
+									<!-- Cédula del cliente -->
+									<Doc:Id>1712345678</Doc:Id>
+									<Doc:SchmeNm>
+										<!--  Esquema propietario, puede tener los siguientes valores:
+										- CEDULA
+										- PASAPORTE
+										- RUC
+										- CARNE_REFUGIADO
+										-->
+										<Doc:Prtry>CEDULA</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+							</Doc:PrvtId>
+						</Doc:Id>
+						<!-- Monto de la deuda, solo 2 decimales -->
+						<Doc:Amt>12.54</Doc:Amt>
+					</Doc:Debt>
+					<!-- Comisión total (sumarizado con todos los impuestos) que cobrará por el pago del servicio -->
+					<Doc:Fee>0.35</Doc:Fee>
+				</Doc:Bll>
+			</Doc:Rpt>
+		</Doc:BllRpt>
+	</Doc:Document>	
+</Env:ResponsePayload>

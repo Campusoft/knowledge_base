@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:camt.052.001.07">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>3545721</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>camt.052.001.07</Ah:MsgDefIdr>
+
+		<!-- Business Service: Especifica el servicio acordado entre Origen y Destino
+			QUERY_ACCOUNTS: Consulta de cuentas: Ahorros, Plazo fijo y corrientes; con su identificador, saldo disponible y saldo contable
+			QUERY_ACCOUNT_MOVEMENTS: Consulta de movimientos de cuentas: detalle si es crédito o débito, valor, texto descriptivo, estado (disponible, contabilizado, en proceso legal, etc.)
+			QUERY_MOVEMENTS_DETAILS: Detalles de movimiento: agencia, origen (cuenta y/o institución), destino (cuenta y/o institución), estado (dispobible)
+			QUERY_CREDITS: Consulta los créditos: valor, fecha inicio, fecha fin y tasa de interés
+			-->
+		<Ah:BizSvc>QUERY_POLICES</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORM, LOW-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Reporte desde el banco hacia el cliente acerca de cuenta -->
+		<Doc:BkToCstmrAcctRpt>
+			<!-- Group header -->
+			<Doc:GrpHdr>
+				<!-- ID del mensaje desde la entidad bancaria mejor si es único para cada mensaje-->
+				<Doc:MsgId>7648481</Doc:MsgId>
+				<!-- Fecha y hora de generación del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:25-06:00</Doc:CreDtTm>
+				<!-- OPCIONAL, datos del receptor de mensajes -->
+				<Doc:MsgRcpt>
+					<!-- OPCIONAL, Nombre del Party, en este caso sería de Canal digital de cooperativas -->
+					<Doc:Nm>CDC</Doc:Nm>
+					<!-- OPCIONAL Identificación de receptor del mensaje -->
+					<Doc:Id>
+						<!-- Identificación de la organización -->
+						<Doc:OrgId>
+							<!-- Código de la organización -->
+							<Doc:AnyBIC>CDCBTQ99123</Doc:AnyBIC>
+						</Doc:OrgId>
+					</Doc:Id>
+					<!-- Pais de residencia OPCIONAL -->
+					<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+				</Doc:MsgRcpt>
+				<!-- OPCIONAL, Paginación de mensaje -->
+				<Doc:MsgPgntn>
+					<!-- Numero de pagina -->
+					<Doc:PgNb>1</Doc:PgNb>
+					<!-- Es esta la última página -->
+					<Doc:LastPgInd>true</Doc:LastPgInd>
+				</Doc:MsgPgntn>
+				<!-- Datos de la Consulta original -->
+				<Doc:OrgnlBizQry>
+					<!-- Id del mensaje enviado originalmente -->
+					<Doc:MsgId>876345834</Doc:MsgId>
+					<!-- Nombre identificador del reporte pedido en el request -->
+					<Doc:MsgNmId>BankToCustomerAccountReport</Doc:MsgNmId>
+					<!-- Fecha en la que el requermiento fue realizado -->
+					<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				</Doc:OrgnlBizQry>
+			</Doc:GrpHdr>
+			<!-- Reporte pedido, pueden existir varios de este elemento -->
+			<Doc:Rpt>
+				<!-- Identificación del reporte de la cuenta, en caso de ser el mismo nuemro de mensaje se colocará ese, en caso de tener un ID diferente de alguna plataforma de reportes, se colocará ese otro ID -->
+				<Doc:Id>9837972</Doc:Id>
+				<!-- Paginación -->
+				<Doc:RptPgntn>
+					<!-- Numero de página -->
+					<Doc:PgNb>1</Doc:PgNb>
+					<!-- Indicador de última página -->
+					<Doc:LastPgInd>true</Doc:LastPgInd>
+				</Doc:RptPgntn>
+				<!-- Numero secuencial del reporte -->
+				<Doc:ElctrncSeqNb>1</Doc:ElctrncSeqNb>
+				<!-- OPCIONAL, Fecha de cración del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				<!-- Información de cuenta -->
+				<Doc:Acct>
+					<!-- Identificación de la cuenta -->
+					<Doc:Id>
+						<Doc:Othr>
+							<!-- Id de la cuenta -->
+							<Doc:Id>8974389349</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+					<!-- Tipo de cuenta -->
+					<Doc:Tp>
+						<!-- Códigos de tipo de cuenta:
+						CACC	Current (Cuenta Corriente)
+						LLSV	LimitedLiquiditySavingsAccount (Poliza)
+						LOAN	Loan (Crédito)
+						SVGS	Savings (Ahorros)-->
+						<Doc:Cd>LLSV</Doc:Cd>
+					</Doc:Tp>
+					<!-- OPCIONAL, Moneda de la cuenta -->
+					<Doc:Ccy>USD</Doc:Ccy>
+					<!-- OPCIONAL, Nombre de la cuenta asignado por la institución bancaria -->
+					<Doc:Nm>Poliza de inversión</Doc:Nm>
+					<!-- OPCIONAL, Datos del propietario -->
+					<Doc:Ownr>
+						<!-- OPCIONAL, Nombre de propietario-->
+						<Doc:Nm>Juan Cardenas</Doc:Nm>
+						<!-- OPCIONAL, Identificador del cliente -->
+						<Doc:Id>
+							<!-- OPCIONAL, Información privada-->
+							<Doc:PrvtId>
+								<!-- Otras identificaciones -->
+								<Doc:Othr>
+									<!-- Cédula del cliente -->
+									<Doc:Id>1712345678</Doc:Id>
+									<Doc:SchmeNm>
+										<Doc:Prtry>CEDULA</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+								<Doc:Othr>
+									<!-- Numero de socio -->
+									<Doc:Id>345</Doc:Id>
+									<Doc:SchmeNm>
+										<Doc:Prtry>SOCIO</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+							</Doc:PrvtId>
+							
+						</Doc:Id>
+						<!-- OPCIONAL, País de residencia -->
+						<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+						<!-- OPCIONAL, Detalle de contacto -->
+						<Doc:CtctDtls>
+							<!-- OPCIONAL, numero de telefono movil en formato de 10 dígitos, Ej: 0912345678 -->
+							<Doc:MobNb>0912345678</Doc:MobNb>
+							<!-- OPCIONAL, Correo Eletrónico-->
+							<Doc:EmailAdr>usuario@ejemplo.com</Doc:EmailAdr>
+						</Doc:CtctDtls>
+					</Doc:Ownr>
+					<!-- Fecha inicial (YYYY-MM-DD)-->
+					<Doc:InitDt>2018-01-01</Doc:InitDt>
+					<!-- Fecha final (YYYY-MM-DD)-->
+					<Doc:EndDt>2020-01-01</Doc:EndDt>
+					<!-- Proxima Fecha de cobro (YYYY-MM-DD)-->
+					<Doc:DueDt>2018-10-01</Doc:DueDt>
+					<!-- OPCIONAL, Frecuencia de pago, es decir cada cuanto se va a pagar por la poliza, se tienen los siguientes valores posibles:
+					- DAILY (diario)
+					- WEEKLY (semanal)
+					- BIWEEKLY (quincenal)
+					- MONTHLY (mensual)
+					- YEARLY (anual)
+					- FINAL (al final de la validez de la poliza)
+					- También puede tener valores numéricos, es decir, el numero de días de la frecuencia
+					-->
+					<Doc:PyFrq>MONTHLY</Doc:PyFrq>
+					<!-- Número de pagos cumplidos hasta el momento -->
+					<Doc:PydNmbr>2</Doc:PydNmbr>
+					<!-- Numero de pagos totales que se deberán realizar -->
+					<Doc:TtlPyNmbr>12</Doc:TtlPyNmbr>
+					<!-- OPCIONAL, Url de la tabla de pagos,
+					en caso de no tener esta opción en la plataforma de la cooperativa, no se envía este parámetro de respuesta y 
+					se deberá invocar la transacción QUERY_PAYMENT_TABLE para enviar la tabla de pagos -->
+					<Doc:UrlPyTbl>https://pagos.coopetariva.com/tabla.jsp?user=jhsgjdh12&amp;token=9837489hjy8787487</Doc:UrlPyTbl>
+				</Doc:Acct>
+				<!-- OPCIONAL, cuenta padre a la que está relacionada esta cuenta -->
+				<Doc:RltdAcct>
+					<!-- Id de cuenta padre -->
+					<Doc:Id>
+						<!-- Otro tipo de identificación-->
+						<Doc:Othr>
+							<!-- Identificación de cuenta padre -->
+							<Doc:Id>098340923</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+					<!-- Códigos de tipo de cuenta:
+					CACC	Current
+					LLSV	LimitedLiquiditySavingsAccount
+					LOAN	Loan
+					SVGS	Savings
+					-->
+					<Doc:Tp>
+						<Doc:Cd>SVGS</Doc:Cd>
+					</Doc:Tp>
+					<!-- OPCIONAL, Moneda de la cuenta -->
+					<Doc:Ccy>USD</Doc:Ccy>
+					<!-- OPCIONAL, Nombre de la cuenta -->
+					<Doc:Nm>Pagos 2018</Doc:Nm>
+				</Doc:RltdAcct>
+				<!-- Interés de la cuenta -->
+				<Doc:Intrst>
+					<!-- OPCIONAL, Tipo de interés -->
+					<Doc:Tp>
+						<!-- Código de tipo de interes: INDY (Dentro de horas laborables), OVRN (durante las horas no laborables) -->
+						<Doc:Cd>INDY</Doc:Cd>
+					</Doc:Tp>
+					<!-- OPCIONAL, se puede tener varios de estos elementos, Tasa de interés -->
+					<Doc:Rate>
+						<!-- Tipo de tasa de interés -->
+						<Doc:Tp>
+							<!-- Porcentaje de interes -->
+							<Doc:Pctg>6</Doc:Pctg>
+						</Doc:Tp>
+					</Doc:Rate>
+					<!-- OPCIONAL, Impuestos que pueden aplicar en el interes -->
+					<Doc:Tax>
+						<!-- OPCIONAL, Identificador del impuesto, Ejemplo IVA, ICE, etc. -->
+						<Doc:Id>IVA</Doc:Id>
+						<!-- OPCIONAL, Tasa usada para calcular el impuesto -->
+						<Doc:Rate>0.1</Doc:Rate>
+						<!-- OPCIONAL, Monto del impuesto-->
+						<Doc:Amt Ccy="USD">1.25</Doc:Amt>
+					</Doc:Tax>
+				</Doc:Intrst>
+				<!-- Saldo como una representación numerica del valor de la póliza -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							VALUE	Valor de la poliza
+							INTRST	Valor total por interéses que deberá retirar en la fecha de cobro siguiente; sin retenciones, impuestos o cualquier otro valor a descontar
+							EXCEED	Valor total que no ha sido cobrado, es decir, donde la fecha o fechas de pago ya se han cumplido y el cliente no ha realizado el retiro; sin retenciones, impuestos o cualquier otro valor a descontar
+							FINAL	Valor del interés total ganado al finalizar esta poliza (sumarizado), sin retenciones, impuestos o cualquier otro valor a descontar
+							-->
+							<Doc:Prtry>VALUE</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto del saldo -->
+					<Doc:Amt Ccy="USD">50000.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo, fecha en la que inició esta poliza -->
+					<Doc:Dt>
+						<Doc:DtTm>2018-06-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>
+				</Doc:Bal>
+				<!-- OPCIONAL, Saldo como una representación numerica de los pagos de intereses que generará esta póliza en el siguiente pago de intereses, si el pago es al final del periodo de la póliza, no existirá este valor -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							VALUE	Valor de la poliza
+							INTRST	Valor total por interéses que deberá retirar en la fecha de cobro siguiente; sin retenciones, impuestos o cualquier otro valor a descontar
+							EXCEED	Valor total que no ha sido cobrado, es decir, donde la fecha o fechas de pago ya se han cumplido y el cliente no ha realizado el retiro; sin retenciones, impuestos o cualquier otro valor a descontar
+							FINAL	Valor del interés total ganado al finalizar esta poliza (sumarizado), sin retenciones, impuestos o cualquier otro valor a descontar
+							-->
+							<Doc:Prtry>INTRST</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto del saldo -->
+					<Doc:Amt Ccy="USD">10.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo, fecha en la que se tendrá que pagar este valor al cliente -->
+					<Doc:Dt>
+						<Doc:DtTm>2018-12-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>
+				</Doc:Bal>
+				<!-- OPCIONAL, Saldo como una representación numerica de los pagos de intereses que genera esta póliza y que ya deberían haber sido cobrados, si el pago es al final del periodo de la póliza, no existirá este valor -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							VALUE	Valor de la poliza
+							INTRST	Valor total por interéses que deberá retirar en la fecha de cobro siguiente; sin retenciones, impuestos o cualquier otro valor a descontar
+							EXCEED	Valor total que no ha sido cobrado, es decir, donde la fecha o fechas de pago ya se han cumplido y el cliente no ha realizado el retiro; sin retenciones, impuestos o cualquier otro valor a descontar
+							FINAL	Valor del interés total ganado al finalizar esta poliza (sumarizado), sin retenciones, impuestos o cualquier otro valor a descontar
+							-->
+							<Doc:Prtry>EXCEED</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto del saldo -->
+					<Doc:Amt Ccy="USD">20.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo, fecha desde la cual se pudo cobrar este valor -->
+					<Doc:Dt>
+						<Doc:DtTm>2018-10-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>
+				</Doc:Bal>
+				<!-- Saldo como una representación numerica de la suma de todos los pagos de intereses que generará esta póliza -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							VALUE	Valor de la poliza
+							INTRST	Valor total por interéses que deberá retirar en la fecha de cobro siguiente; sin retenciones, impuestos o cualquier otro valor a descontar
+							EXCEED	Valor total que no ha sido cobrado, es decir, donde la fecha o fechas de pago ya se han cumplido y el cliente no ha realizado el retiro; sin retenciones, impuestos o cualquier otro valor a descontar
+							FINAL	Valor del interés total ganado al finalizar esta poliza (sumarizado), sin retenciones, impuestos o cualquier otro valor a descontar
+							-->
+							<Doc:Prtry>FINAL</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto del saldo -->
+					<Doc:Amt Ccy="USD">480.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo, fecha desde la cual se pudo cobrar este valor -->
+					<Doc:Dt>
+						<Doc:DtTm>2018-10-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>
+				</Doc:Bal>
+			</Doc:Rpt>
+			<!-- Reporte pedido, pueden existir varios de este elemento -->
+			<Doc:Rpt>
+				<!-- Identificación del reporte de la cuenta, en caso de ser el mismo nuemro de mensaje se colocará ese, en caso de tener un ID diferente de alguna plataforma de reportes, se colocará ese otro ID -->
+				<Doc:Id>65432154</Doc:Id>
+				<!-- Paginación -->
+				<Doc:RptPgntn>
+					<!-- Numero de página -->
+					<Doc:PgNb>1</Doc:PgNb>
+					<!-- Indicador de última página -->
+					<Doc:LastPgInd>true</Doc:LastPgInd>
+				</Doc:RptPgntn>
+				<!-- Numero secuencial del reporte -->
+				<Doc:ElctrncSeqNb>1</Doc:ElctrncSeqNb>
+				<!-- OPCIONAL, Fecha de cración del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				<!-- Información de cuenta -->
+				<Doc:Acct>
+					<!-- Identificación de la cuenta -->
+					<Doc:Id>
+						<Doc:Othr>
+							<!-- Id de la cuenta -->
+							<Doc:Id>8974389349</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+					<!-- Tipo de cuenta -->
+					<Doc:Tp>
+						<!-- Códigos de tipo de cuenta:
+						CACC	Current (Cuenta Corriente)
+						LLSV	LimitedLiquiditySavingsAccount (Poliza)
+						LOAN	Loan (Crédito)
+						SVGS	Savings (Ahorros)          -->
+						<Doc:Cd>LLSV</Doc:Cd>
+					</Doc:Tp>
+					<!-- OPCIONAL, Moneda de la cuenta -->
+					<Doc:Ccy>USD</Doc:Ccy>
+					<!-- Nombre de la cuenta asignado por la institución bancaria -->
+					<Doc:Nm>Poliza de inversión</Doc:Nm>
+					<!-- Datos del propietario -->
+					<Doc:Ownr>
+						<!-- Nombre de propietario-->
+						<Doc:Nm>Juan Cardenas</Doc:Nm>
+						<!-- Identificador del cliente -->
+						<Doc:Id>
+							<!-- Información privada-->
+							<Doc:PrvtId>
+								<!-- Otras identificaciones -->
+								<Doc:Othr>
+									<!-- Cédula del cliente -->
+									<Doc:Id>1712345678</Doc:Id>
+									<Doc:SchmeNm>
+										<!-- Esquema propietario, puede tener los siguientes valores:
+										- CEDULA
+										- PASAPORTE
+										- RUC
+										- CARNE_REFUGIADO
+										-->
+										<Doc:Prtry>CEDULA</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+								<Doc:Othr>
+									<!-- Numero de socio -->
+									<Doc:Id>345</Doc:Id>
+									<Doc:SchmeNm>
+										<Doc:Prtry>SOCIO</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+							</Doc:PrvtId>
+						</Doc:Id>
+						<!-- OPCIONAL, País de residencia -->
+						<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+						<!-- OPCIONAL, Detalle de contacto -->
+						<Doc:CtctDtls>
+							<!-- OPCIONAL, puede tener muchas instancias, numero de telefono movil en formato de 10 dígitos, Ej: 0912345678 -->
+							<Doc:MobNb>0912345678</Doc:MobNb>
+							<!-- OPCIONAL, puede tener muchas instancias, Correo Eletrónico-->
+							<Doc:EmailAdr>usuario@ejemplo.com</Doc:EmailAdr>
+						</Doc:CtctDtls>
+					</Doc:Ownr>
+					<!-- Fecha inicial (YYYY-MM-DD)-->
+					<Doc:InitDt>2018-01-01</Doc:InitDt>
+					<!-- Fecha final, es decir cuando vence la poliza (YYYY-MM-DD)-->
+					<Doc:EndDt>2020-01-01</Doc:EndDt>
+					<!-- Próxima Fecha de cobro (YYYY-MM-DD)-->
+					<Doc:DueDt>2018-11-01</Doc:DueDt>
+					<!-- OPCIONAL, Frecuencia de pago, es decir cada cuanto se va a pagar por la poliza, se tienen los siguientes valores posibles:
+					- DAILY (diario)
+					- WEEKLY (semanal)
+					- BIWEEKLY (quincenal)
+					- MONTHLY (mensual)
+					- YEARLY (anual)
+					- FINAL (al final de la validez de la poliza)
+					- También puede tener valores numéricos, es decir, el numero de días de la frecuencia-->
+					<Doc:PyFrq>FINAL</Doc:PyFrq>
+					<!-- Número de pagos cumplidos hasta el momento -->
+					<Doc:PydNmbr>0</Doc:PydNmbr>
+					<!-- Numero de pagos totales que se deberán realizar -->
+					<Doc:TtlPyNmbr>1</Doc:TtlPyNmbr>
+					<!-- OPCIONAL, Url de la tabla de pagos,
+					en caso de no tener esta opción en la plataforma de la cooperativa, no se envía este parámetro de respuesta y 
+					se deberá invocar la transacción QUERY_PAYMENT_TABLE para enviar la tabla de pagos -->
+					<Doc:UrlPyTbl>https://pagos.coopetariva.com/tabla.jsp?user=jhsgjdh12&amp;token=9837489hjy8787487</Doc:UrlPyTbl>
+				</Doc:Acct>
+				<!-- Interés de la cuenta -->
+				<Doc:Intrst>
+					<!-- OPCIONAL, Tipo de interés -->
+					<Doc:Tp>
+						<!-- Código de tipo de interes: INDY (Dentro de horas laborables), OVRN (durante las horas no laborables) -->
+						<Doc:Cd>INDY</Doc:Cd>
+					</Doc:Tp>
+					<!-- OPCIONAL, se puede tener varios de estos elementos, Tasa de interés -->
+					<Doc:Rate>
+						<!-- Tipo de tasa de interés -->
+						<Doc:Tp>
+							<!-- Porcentaje de interes -->
+							<Doc:Pctg>6</Doc:Pctg>
+						</Doc:Tp>
+					</Doc:Rate>
+					<!-- OPCIONAL, Impuestos que pueden aplicar en el interes -->
+					<Doc:Tax>
+						<!-- OPCIONAL, Identificador del impuesto, Ejemplo IVA, ICE, etc. -->
+						<Doc:Id>IVA</Doc:Id>
+						<!-- OPCIONAL, Tasa usada para calcular el impuesto -->
+						<Doc:Rate>0.11</Doc:Rate>
+						<!-- OPCIONAL, Monto del impuesto-->
+						<Doc:Amt Ccy="USD">1.80</Doc:Amt>
+					</Doc:Tax>
+				</Doc:Intrst>
+				<!-- Saldo como una representación numerica del valor de la póliza -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							VALUE	Valor de la poliza
+							INTRST	Valor total por interéses que deberá retirar en la fecha de cobro siguiente; sin retenciones, impuestos o cualquier otro valor a descontar
+							EXCEED	Valor total que no ha sido cobrado, es decir, donde la fecha o fechas de pago ya se han cumplido y el cliente no ha realizado el retiro; sin retenciones, impuestos o cualquier otro valor a descontar
+							FINAL	Valor del interés total ganado al finalizar esta poliza (sumarizado), sin retenciones, impuestos o cualquier otro valor a descontar
+							-->
+							<Doc:Prtry>VALUE</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto del saldo -->
+					<Doc:Amt Ccy="USD">50000.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo, fecha en la que inició esta poliza -->
+					<Doc:Dt>
+						<Doc:DtTm>2018-06-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>
+				</Doc:Bal>
+				<!-- Saldo como una representación numerica de la suma de todos los pagos de intereses que generará esta póliza -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							VALUE	Valor de la poliza
+							INTRST	Valor total por interéses que deberá retirar en la fecha de cobro siguiente; sin retenciones, impuestos o cualquier otro valor a descontar
+							EXCEED	Valor total que no ha sido cobrado, es decir, donde la fecha o fechas de pago ya se han cumplido y el cliente no ha realizado el retiro; sin retenciones, impuestos o cualquier otro valor a descontar
+							FINAL	Valor del interés total ganado al finalizar esta poliza (sumarizado), sin retenciones, impuestos o cualquier otro valor a descontar
+							-->
+							<Doc:Prtry>FINAL</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto del saldo -->
+					<Doc:Amt Ccy="USD">480.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo, fecha desde la cual se pudo cobrar este valor -->
+					<Doc:Dt>
+						<Doc:DtTm>2018-10-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>
+				</Doc:Bal>
+			</Doc:Rpt>
+		</Doc:BkToCstmrAcctRpt>
+	</Doc:Document>	
+</Env:ResponsePayload>

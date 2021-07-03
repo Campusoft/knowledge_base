@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:RequestPayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:camt.060.001.04">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>BAYTEQ</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+				<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+				<Ah:CtryOfRes>EC</Ah:CtryOfRes>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--To: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+				<!--**OPCIONAL Country Of Residence: Código de pais de residencia (ISO 3166, Alpha-2 code)-->
+				<Ah:CtryOfRes>EC</Ah:CtryOfRes>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>654321987</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>camt.060.001.04</Ah:MsgDefIdr>
+		<!--Business Service: Especifica el servicio acordado entre Origen y Destino
+			QUERY_ACCOUNTS: Consulta de cuentas: Ahorros, Plazo fijo y corrientes; con su identificador, saldo disponible y saldo contable
+			QUERY_ACCOUNT_MOVEMENTS: Consulta de movimientos de cuentas: detalle si es crédito o débito, valor, texto descriptivo, estado (disponible, contabilizado, en proceso legal, etc.)
+			QUERY_MOVEMENT_DETAILS: Detalles de movimiento: agencia, origen (cuenta y/o institución), destino (cuenta y/o institución), estado (dispobible)
+			QUERY_CREDITS: Consulta los créditos: valor, fecha inicio, fecha fin y tasa de interés
+		-->
+		<Ah:BizSvc>QUERY_MOVEMENT_DETAILS</Ah:BizSvc>
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDTHH:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:24Z</Ah:CreDt>
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORMAL, LOW-->
+		<Ah:Prty>NORMAL</Ah:Prty>
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Requerimiento de Reporte de Cuenta -->
+		<Doc:AcctRptgReq>
+			<!-- Group Header-->
+			<Doc:GrpHdr>
+				<!-- ID del mensaje mejor si es único para cada mensaje-->
+				<Doc:MsgId>876345834</Doc:MsgId>
+				<!-- Fecha y hora de generación del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				<!-- El que envía el mensaje -->
+				<Doc:MsgSndr>
+					<!-- Datos del Party (organización o persona) -->
+					<Doc:Pty>
+						<!-- Nombre del Party, en este caso sería de Canal digital de cooperativas -->
+						<Doc:Nm>CDC</Doc:Nm>
+						<!-- Identificación única y sin ambiguedades de quien envía el mensaje -->
+						<Doc:Id>
+							<!-- Identificación de la organización -->
+							<Doc:OrgId>
+								<!-- Código de la organización -->
+								<Doc:AnyBIC>CDCBTQ99123</Doc:AnyBIC>
+							</Doc:OrgId>
+						</Doc:Id>
+						<!-- Pais de residencia OPCIONAL -->
+						<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+					</Doc:Pty>
+				</Doc:MsgSndr>
+			</Doc:GrpHdr>
+			<!-- Requerimiento de reporte, Pueden existir varios elementos de este tipo -->
+			<Doc:RptgReq>
+				<!-- Nombre del mensaje de reporte requerido -->
+				<Doc:ReqdMsgNmId>BankToCustomerAccountReport</Doc:ReqdMsgNmId>
+				<!-- OPCIONAL, cuenta a la cual pertenece el reporte -->
+				<Doc:Acct>
+					<!-- Identificador de la cuenta -->
+					<Doc:Id>
+						<!-- Indica que es otro tipo de Identificación -->
+						<Doc:Othr>
+							<!-- Numero de Cuenta + : + Referencia de entrada -->
+							<Doc:Id>012345678:8947593</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+				</Doc:Acct>
+			</Doc:RptgReq>
+		</Doc:AcctRptgReq>
+	</Doc:Document>	
+</Env:RequestPayload>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:btq.002.003.01" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>6478562347</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>btq.002.003.01</Ah:MsgDefIdr>
+
+		<!-- Business Service: Especifica el servicio acordado entre Origen y Destino -->
+		<Ah:BizSvc>OTP_VALIDATE</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORM, LOW-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!--Solicitud de respuesta generación/envío OTP generado por la institución financiera-->
+		<Doc:OtpValRes>
+			<Doc:Ref>
+				<Doc:MsgId>
+					<!--ID del mensaje, único por día-->
+					<Doc:Id>12131313</Doc:Id>
+					<!--Fecha de creación del mensaje-->
+					<Doc:CreDtTm>2018-09-13T23:00:00</Doc:CreDtTm>
+				</Doc:MsgId>
+				<!--Estatus de la Transacción, puede ser OK, ERR-->
+				<Doc:Sts>OK</Doc:Sts>
+				<!-- Estatus Origin, Origen del error, puede tener las siguientes opciones: SERV (servicio), BIZ (Negocio), DB (database)  -->
+				<Doc:StsOrg>BIZ</Doc:StsOrg>
+				<!--Código de respuesta, 0 = OK, 1104 = Invalido, 2001 = Caducado, 2002 = Utilizado-->
+				<Doc:StsCd>0</Doc:StsCd>
+				<!-- Descripción del resultado -->
+				<Doc:StsDsc>Transacción OK</Doc:StsDsc>
+			</Doc:Ref>
+		</Doc:OtpValRes>
+	</Doc:Document>
+</Env:ResponsePayload>

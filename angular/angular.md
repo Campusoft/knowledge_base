@@ -62,3 +62,6 @@ https://github.com/gothinkster/realworld
 
 - Estructura 
  
+## Angular para web y moviles
+Apps That Work Natively on the Web and Mobile
+https://blog.angular.io/apps-that-work-natively-on-the-web-and-mobile-9b26852495e7

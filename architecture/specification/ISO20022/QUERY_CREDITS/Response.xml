@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:camt.052.001.07" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>6478562347</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>camt.052.001.07</Ah:MsgDefIdr>
+
+		<!-- Business Service: Especifica el servicio acordado entre Origen y Destino
+			QUERY_ACCOUNTS: Consulta de cuentas: Ahorros, Plazo fijo y corrientes; con su identificador, saldo disponible y saldo contable
+			QUERY_ACCOUNT_MOVEMENTS: Consulta de movimientos de cuentas: detalle si es crédito o débito, valor, texto descriptivo, estado (disponible, contabilizado, en proceso legal, etc.)
+			QUERY_MOVEMENTS_DETAILS: Detalles de movimiento: agencia, origen (cuenta y/o institución), destino (cuenta y/o institución), estado (dispobible)
+			QUERY_CREDITS: Consulta los créditos: valor, fecha inicio, fecha fin y tasa de interés
+			-->
+		<Ah:BizSvc>QUERY_CREDITS</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2018-07-26T14:49:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORM, LOW-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!-- Reporte desde el banco hacia el cliente acerca de cuenta -->
+		<Doc:BkToCstmrAcctRpt>
+			<!-- Group header -->
+			<Doc:GrpHdr>
+				<!-- ID del mensaje desde la entidad bancaria mejor si es único para cada mensaje-->
+				<Doc:MsgId>7648481</Doc:MsgId>
+				<!-- Fecha y hora de generación del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:25-06:00</Doc:CreDtTm>
+				<!-- OPCIONAL, datos del receptor de mensajes -->
+				<Doc:MsgRcpt>
+					<!-- OPCIONAL, Nombre del Party, en este caso sería de Canal digital de cooperativas -->
+					<Doc:Nm>CDC</Doc:Nm>
+					<!-- OPCIONAL Identificación de receptor del mensaje -->
+					<Doc:Id>
+						<!-- Identificación de la organización -->
+						<Doc:OrgId>
+							<!-- Código de la organización -->
+							<Doc:AnyBIC>CDCBTQ99123</Doc:AnyBIC>
+						</Doc:OrgId>
+					</Doc:Id>
+					<!-- Pais de residencia OPCIONAL -->
+					<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+				</Doc:MsgRcpt>
+				<!-- OPCIONAL, Paginación de mensaje -->
+				<Doc:MsgPgntn>
+					<!-- Numero de pagina -->
+					<Doc:PgNb>1</Doc:PgNb>
+					<!-- Es esta la última página -->
+					<Doc:LastPgInd>true</Doc:LastPgInd>
+				</Doc:MsgPgntn>
+				<!-- Datos de la Consulta original -->
+				<Doc:OrgnlBizQry>
+					<!-- Id del mensaje enviado originalmente -->
+					<Doc:MsgId>876345834</Doc:MsgId>
+					<!-- Nombre identificador del reporte pedido en el request -->
+					<Doc:MsgNmId>BankToCustomerAccountReport</Doc:MsgNmId>
+					<!-- Fecha en la que el requermiento fue realizado -->
+					<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				</Doc:OrgnlBizQry>
+			</Doc:GrpHdr>
+			<!-- Reporte pedido, pueden existir varios de este elemento -->
+			<Doc:Rpt>
+				<!-- Identificación del reporte de la cuenta, en caso de ser el mismo nuemro de mensaje se colocará ese, en caso de tener un ID diferente de alguna plataforma de reportes, se colocará ese otro ID -->
+				<Doc:Id>87678344</Doc:Id>
+				<!-- Paginación -->
+				<Doc:RptPgntn>
+					<!-- Numero de página -->
+					<Doc:PgNb>1</Doc:PgNb>
+					<!-- Indicador de última página -->
+					<Doc:LastPgInd>true</Doc:LastPgInd>
+				</Doc:RptPgntn>
+				<!-- Numero secuencial del reporte -->
+				<Doc:ElctrncSeqNb>1</Doc:ElctrncSeqNb>
+				<!-- OPCIONAL, Fecha de cración del mensaje -->
+				<Doc:CreDtTm>2018-07-26T14:49:24-06:00</Doc:CreDtTm>
+				<!-- OPCIONAL, URL donde se podrá bajar la Tabla de amortización del crédito, 
+				en caso de no tener esta opción en la plataforma de la cooperativa, no se envía este parámetro de respuesta y 
+				se deberá invocar la transacción QUERY_AMORTIZATION_TABLE para enviar la tabla de amortización -->
+				<Doc:UrlMrtgTbl>https://www.cacpeco.com/creditos/tabla?token=xxxxxxx</Doc:UrlMrtgTbl>
+				<!-- Información de cuenta (crédito) -->
+				<Doc:Acct>
+					<!-- Identificación de la cuenta (crédito) -->
+					<Doc:Id>
+						<Doc:Othr>
+							<!-- Id de la cuenta (crédito) -->
+							<Doc:Id>98237492</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+					<!-- Tipo de cuenta -->
+					<Doc:Tp>
+						<!-- Códigos de tipo de cuenta:
+							CACC	Current (Cuenta Corriente)
+							CASH	CashPayment
+							CHAR	Charges
+							CISH	CashIncome
+							COMM	Commission
+							CPAC	ClearingParticipantSettlementAccount
+							LLSV	LimitedLiquiditySavingsAccount
+							LOAN	Loan (Crédito)
+							MGLD	Marginal Lending
+							MOMA	Money Market
+							NREX	NonResidentExternal
+							ODFT	Overdraft
+							ONDP	OverNightDeposit
+							OTHR	OtherAccount
+							SACC	Settlement
+							SLRY	Salary 
+							SVGS	Savings (Ahorros)
+							TAXE	Tax
+							TRAN	TransactingAccount
+							TRAS	Cash Trading-->
+						<Doc:Cd>LOAN</Doc:Cd>
+					</Doc:Tp>
+					<!-- OPCIONAL, Moneda de la cuenta -->
+					<Doc:Ccy>USD</Doc:Ccy>
+					<!-- OPCIONAL, Nombre de la cuenta asignado por la institución bancaria -->
+					<Doc:Nm>Crédito Personal</Doc:Nm>
+					<!-- OPCIONAL, Fecha del proximo pago, YYYY-MM-DD -->
+					<Doc:DtNxtPy>2018-12-01</Doc:DtNxtPy>
+					<!-- Fecha del último pago, YYYY-MM-DD -->
+					<Doc:DtLstPy>2023-12-01</Doc:DtLstPy>
+					<!-- OPCIONAL, Datos del propietario -->
+					<Doc:Ownr>
+						<!-- OPCIONAL, Nombre de propietario-->
+						<Doc:Nm>Juan Cardenas</Doc:Nm>
+						<!-- OPCIONAL, Identificador del cliente -->
+						<Doc:Id>
+							<!-- OPCIONAL, Información privada-->
+							<Doc:PrvtId>
+								<!-- Otras identificaciones -->
+								<Doc:Othr>
+									<!-- Cédula del cliente -->
+									<Doc:Id>1712345678</Doc:Id>
+									<Doc:SchmeNm>
+										<!--  Esquema propietario, puede tener los siguientes valores:
+										- CEDULA
+										- PASAPORTE
+										- RUC
+										- CARNE_REFUGIADO
+										-->
+										<Doc:Prtry>CEDULA</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+								<Doc:Othr>
+									<!-- Numero de socio -->
+									<Doc:Id>345</Doc:Id>
+									<Doc:SchmeNm>
+										<Doc:Prtry>SOCIO</Doc:Prtry>
+									</Doc:SchmeNm>
+								</Doc:Othr>
+							</Doc:PrvtId>
+						</Doc:Id>
+						<!-- OPCIONAL, País de residencia -->
+						<Doc:CtryOfRes>EC</Doc:CtryOfRes>
+						<!-- OPCIONAL, Detalle de contacto -->
+						<Doc:CtctDtls>
+							<!-- OPCIONAL, numero de telefono movil en formato de 10 dígitos, Ej: 0912345678 -->
+							<Doc:MobNb>0912345678</Doc:MobNb>
+							<!-- OPCIONAL, Correo Eletrónico-->
+							<Doc:EmailAdr>usuario@ejemplo.com</Doc:EmailAdr>
+						</Doc:CtctDtls>
+					</Doc:Ownr>
+				</Doc:Acct>
+				<!-- OPCIONAL, cuenta padre a la que está relacionada esta cuenta -->
+				<Doc:RltdAcct>
+					<!-- Id de cuenta padre -->
+					<Doc:Id>
+						<!-- Otro tipo de identificación-->
+						<Doc:Othr>
+							<!-- Identificación de cuenta padre -->
+							<Doc:Id>098340923</Doc:Id>
+						</Doc:Othr>
+					</Doc:Id>
+					<!-- Códigos de tipo de cuenta:
+					CACC	Current
+					LLSV	LimitedLiquiditySavingsAccount
+					LOAN	Loan
+					SVGS	Savings
+					-->
+					<Doc:Tp>
+						<Doc:Cd>SVGS</Doc:Cd>
+					</Doc:Tp>
+					<!-- OPCIONAL, Moneda de la cuenta -->
+					<Doc:Ccy>USD</Doc:Ccy>
+					<!-- OPCIONAL, Nombre de la cuenta -->
+					<Doc:Nm>Pagos 2018</Doc:Nm>
+				</Doc:RltdAcct>
+				<!-- OPCIONAL, Pueden existir varios elementos de este tipo, interés de la cuenta -->
+				<Doc:Intrst>
+					<!-- OPCIONAL, Tipo de interés -->
+					<Doc:Tp>
+						<!-- Código de tipo de interes: INDY (Dentro de horas laborables), OVRN (durante las horas no laborables) -->
+						<Doc:Cd>INDY</Doc:Cd>
+					</Doc:Tp>
+					<!-- OPCIONAL, se puede tener varios de estos elementos, Tasa de interés -->
+					<Doc:Rate>
+						<!-- Tipo de tasa de interés -->
+						<Doc:Tp>
+							<!-- Porcentaje de interes -->
+							<Doc:Pctg>-10.0</Doc:Pctg>
+						</Doc:Tp>
+						<!-- OPCIONAL, Rango de valores donde el interes es aplicable en la cuenta -->
+						<Doc:VldtyRg>
+							<!-- Monto -->
+							<Doc:Amt>
+								<!-- OPCIONAL, Desde que monto -->
+								<Doc:FrToAmt>
+									<Doc:FrAmt>
+										<!-- Monto inicial -->
+										<Doc:BdryAmt>0</Doc:BdryAmt>
+										<!-- Indicador si el monto inicial en incluido-->
+										<Doc:Incl>true</Doc:Incl>
+									</Doc:FrAmt>
+									<Doc:ToAmt>
+										<!-- Monto final -->
+										<Doc:BdryAmt>1000</Doc:BdryAmt>
+										<!-- Indicador si el monto final en incluido-->
+										<Doc:Incl>true</Doc:Incl>
+									</Doc:ToAmt>
+								</Doc:FrToAmt>
+							</Doc:Amt>
+							<!-- OPCIONAL, Indica si el monto es acreditado o debitado, CRDT (acreditado), DEBT (debitado) -->
+							<Doc:CdtDbtInd>DEBT</Doc:CdtDbtInd>
+							<!-- Moneda-->
+							<Doc:Ccy>USD</Doc:Ccy>
+						</Doc:VldtyRg>
+					</Doc:Rate>
+					<Doc:Rate>
+						<!-- Tipo de tasa de interés -->
+						<Doc:Tp>
+							<!-- Porcentaje de interes -->
+							<Doc:Pctg>-11.0</Doc:Pctg>
+						</Doc:Tp>
+						<!-- OPCIONAL, Rango de valores donde el interes es aplicable en la cuenta -->
+						<Doc:VldtyRg>
+							<!-- Monto -->
+							<Doc:Amt>
+								<!-- OPCIONAL, Desde que monto -->
+								<Doc:FrToAmt>
+									<Doc:FrAmt>
+										<!-- Monto inicial -->
+										<Doc:BdryAmt>1000.01</Doc:BdryAmt>
+										<!-- Indicador si el monto inicial en incluido-->
+										<Doc:Incl>true</Doc:Incl>
+									</Doc:FrAmt>
+									<Doc:ToAmt>
+										<!-- Monto final -->
+										<Doc:BdryAmt>10000.00</Doc:BdryAmt>
+										<!-- Indicador si el monto final en incluido-->
+										<Doc:Incl>true</Doc:Incl>
+									</Doc:ToAmt>
+								</Doc:FrToAmt>
+							</Doc:Amt>
+							<!-- OPCIONAL, Indica si el monto es acreditado o debitado, CRDT (acreditado), DEBT (debitado) -->
+							<Doc:CdtDbtInd>DEBT</Doc:CdtDbtInd>
+							<!-- Moneda-->
+							<Doc:Ccy>USD</Doc:Ccy>
+						</Doc:VldtyRg>
+					</Doc:Rate>
+					<!-- OPCIONAL, Fecha y hora inicial y final en la cual se hizo el calculo del interes-->
+					<Doc:FrToDt>
+						<!-- Fecha y hora inicial -->
+						<Doc:FrDtTm>2018-01-01T01:01:01-05:00</Doc:FrDtTm>
+						<!-- Fecha y hora final -->
+						<Doc:ToDtTm>2019-01-01T01:01:01-05:00</Doc:ToDtTm>
+					</Doc:FrToDt>
+					<!-- OPCIONAL, Razón del interes -->
+					<Doc:Rsn>Interes del préstamo</Doc:Rsn>
+					<!-- OPCIONAL, Impuestos -->
+					<Doc:Tax>
+						<!-- OPCIONAL, Identificador del impuesto, Ejemplo IVA, ICE, etc. -->
+						<Doc:Id>IVA</Doc:Id>
+						<!-- OPCIONAL, Tasa usada para calcular el impuesto -->
+						<Doc:Rate>1</Doc:Rate>
+						<!-- OPCIONAL, Monto del impuesto-->
+						<Doc:Amt Ccy="USD">10</Doc:Amt>
+					</Doc:Tax>
+				</Doc:Intrst>
+				<!-- OPCIONAL, pueden existir varias instancias de este elemento, Saldo como una representación numerica de los incrementos y/o decrementos en el punto mas reciente del tiempo -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+								AMTC	Monto de crédito
+								AMTP	Monto pagado
+								INTR	Interés
+								NXTQ	Siguiente cuota
+								EXPQ	Cuota vencida (pueden haber varias de este tipo)
+								AMTO	Monto total-->
+							<Doc:Prtry>AMTC</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- OPCIONAL, con posibles multiples instancias del elemento, Detalles de linea de crédito -->
+					<Doc:CdtLine>
+						<!-- Indica si la línea de crédito es o no incluida en el saldo -->
+						<Doc:Incl>true</Doc:Incl>
+						<!-- Tipo de linea de crédito -->
+						<Doc:Tp>
+							<!-- Código de línea de crédito, los tipos que se tienen son:
+								MTI (MICRO TITULARIZADO)
+								MGM (MICRO GRUPAL MUJER)
+								COM (Comercial)
+								COH (CONSUMO HIPOTECARIO)
+								MIH (MICROCREDITO HIPOTECARIO)
+								EME (EMERGENTE CONSUMO)
+								BTB (BACK TO BACK MICROCREDITO)
+								CC  (CREDITO CREER PERIOCIDAD)
+								BTC (BACK TO BACK CONSUMO)
+								MIE	(MICROEMPRESA)
+								CFN (CFN MICRO FIRMAS)
+								CFC (CFN COMERCIAL)
+								CVI (CFN VIVIENDA)
+								VIV (VIVIENDA)
+								CFR (CONSUMO FIRMAS)
+								COP (CONSUMO PRENDARIO)
+								MIP (MICROCREDITO PRENDARIO)
+								MIF (MICROCREDITO FIRMAS)
+								CFH (CFN MICRO HIPOTECARIO)
+								CVM	(CFN VIVIENDA MICRO)
+								SCN (SOLUCION CONSUMO)
+								CVC	(CREDI VEHICULO CONSUMO)
+								SMR (SOLUCION MICROCREDITO)
+								CPC (CREDIAPOYO CONSUMO)
+								CAC (CREDIAPOYO MICROCREDITO)            -->
+							<Doc:Cd>MTI</Doc:Cd>
+							<!-- Nombre a presentar de tipo de crédito -->
+							<Doc:Nm>MICRO TITULARIZADO</Doc:Nm>
+						</Doc:Tp>
+						<!-- OPCIONAL, Monto del crédito -->
+						<Doc:Amt Ccy="USD">1000.00</Doc:Amt>
+						<!-- Fecha de la obtención del crédito -->
+						<Doc:Dt>
+							<Doc:Dt>2018-07-01</Doc:Dt>
+						</Doc:Dt>
+					</Doc:CdtLine>
+					<!-- Monto del saldo que aún se debe, Incluyendo Intereses, Seguros u otros cargos adicionales -->
+					<Doc:Amt Ccy="USD">900.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo -->
+					<Doc:Dt>
+						<!-- Fecha y hora en la cual fue su último cambio de este balance -->
+						<Doc:DtTm>2018-06-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>
+				</Doc:Bal>
+				<!-- Esto sería el monto pagado -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							AMTC	Monto de crédito
+							AMTP	Monto pagado
+							INTR	Interés
+							NXTQ	Siguiente cuota
+							EXPQ	Cuota vencida (pueden haber varias de este tipo)
+							AMTO	Monto total-->
+							<Doc:Prtry>AMTP</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto del saldo -->
+					<Doc:Amt Ccy="USD">10.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo -->
+					<Doc:Dt>
+						<!-- Fecha y hora en la cual fue su último cambio de este balance -->
+						<Doc:DtTm>2018-07-25T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>
+				</Doc:Bal>
+				<!-- Esto serían los intereses generados -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							AMTC	Monto de crédito
+							AMTP	Monto pagado
+							INTR	Interés
+							NXTQ	Siguiente cuota
+							EXPQ	Cuota vencida (pueden haber varias de este tipo)
+							AMTO	Monto total-->
+							<Doc:Prtry>INTR</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto del saldo -->
+					<Doc:Amt Ccy="USD">90.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo -->
+					<Doc:Dt>
+						<!-- Fecha y hora en la cual fue su último cambio de este balance -->
+						<Doc:DtTm>2018-06-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>				
+				</Doc:Bal>
+				<!-- Esto serían la siguiente cuota -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							AMTC	Monto de crédito
+							AMTP	Monto pagado
+							INTR	Interés
+							NXTQ	Siguiente cuota
+							EXPQ	Cuota vencida (pueden haber varias de este tipo)
+							AMTO	Monto total-->
+							<Doc:Prtry>NXTQ</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto de la cuota que será cancelada -->
+					<Doc:Amt Ccy="USD">10.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo -->
+					<Doc:Dt>
+						<!-- Fecha y hora en la cual se deberá realizar el pago -->
+						<Doc:DtTm>2018-06-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>				
+				</Doc:Bal>
+				<!-- Esto sería el monto total del credito incluidos Intereses, Seguros u otros cargos adicionales -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							AMTC	Monto de crédito
+							AMTP	Monto pagado
+							INTR	Interés
+							NXTQ	Siguiente cuota
+							EXPQ	Cuota vencida (pueden haber varias de este tipo)
+							AMTO	Monto total-->
+							<Doc:Prtry>AMTO</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto total del credito incluidos Intereses, Seguros u otros cargos adicionales  -->
+					<Doc:Amt Ccy="USD">1100.00</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo -->
+					<Doc:Dt>
+						<!-- Fecha y hora en la cual se deberá realizar el pago -->
+						<Doc:DtTm>2018-06-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>				
+				</Doc:Bal>
+				<!-- Esto serían la cuota vencida -->
+				<Doc:Bal>
+					<!-- Tipo de saldo -->
+					<Doc:Tp>
+						<Doc:CdOrPrtry>
+							<!-- Valores validos de Codigo de tipo de saldo
+							AMTC	Monto de crédito
+							AMTP	Monto pagado
+							INTR	Interés
+							NXTQ	Siguiente cuota
+							EXPQ	Cuota vencida (pueden haber varias de este tipo)
+							-->
+							<Doc:Prtry>EXPQ</Doc:Prtry>
+						</Doc:CdOrPrtry>
+					</Doc:Tp>
+					<!-- Monto de la cuota que deberá ser cancelada (incluido intereses y/o multas) -->
+					<Doc:Amt Ccy="USD">11.99</Doc:Amt>
+					<!-- Indica si este saldo es positivo (CRDT) o negativo (DEBT)-->
+					<Doc:CdtDbtInd>CRDT</Doc:CdtDbtInd>
+					<!-- Fecha del saldo -->
+					<Doc:Dt>
+						<!-- Fecha y hora en la cual se debió realizar el pago -->
+						<Doc:DtTm>2018-06-21T21:34:21-06:00</Doc:DtTm>
+					</Doc:Dt>				
+				</Doc:Bal>
+			</Doc:Rpt>
+		</Doc:BkToCstmrAcctRpt>
+	</Doc:Document>	
+</Env:ResponsePayload>

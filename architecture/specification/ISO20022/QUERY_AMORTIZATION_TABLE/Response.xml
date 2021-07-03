@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Env:ResponsePayload xmlns:Env="BayteqBusinessEnvelope" xmlns:Doc="urn:iso:std:iso:20022:tech:xsd:btq.002.005.01" xmlns:Ah="urn:iso:std:iso:20022:tech:xsd:head.001.001.01">
+	<Ah:AppHdr>
+		<!--From: Datos del Origen-->
+		<Ah:Fr>
+			<!--Organisation Identification: Identifica la entidad de Origen-->
+			<Ah:OrgId>
+				<!--**OPCIONAL Name: Nombre de la entidad de Origen (1 a 140)-->
+				<Ah:Nm>CACPECO</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Origen-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CACPCO01001</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:Fr>
+
+		<!--From: Datos del Destino-->
+		<Ah:To>
+			<!--Organisation Identification: Identifica al Destino-->
+			<Ah:OrgId>
+				<!--OPCIONAL Name: Nombre del destino (1 a 140)-->
+				<Ah:Nm>CDC</Ah:Nm>
+				<!--Identification: Identificación de la entidad de Destino-->
+				<Ah:Id>
+					<!--Organisation Identification: Id de Organización-->
+					<Ah:OrgId>
+						<!--Business Identifier Code (BIC): Código de la organización (Expresión "[A-Z]{6,6}[A-Z2-9][A-NP-Z0-9]([A-Z0-9]{3,3}){0,1}" )-->
+						<Ah:AnyBIC>CDCBTQ99123</Ah:AnyBIC>
+					</Ah:OrgId>
+				</Ah:Id>
+			</Ah:OrgId>
+		</Ah:To>
+
+		<!--Business Message Identifier: Indentificador del mensaje, proporcianada por quien envia (1-35)-->
+		<Ah:BizMsgIdr>6478562347</Ah:BizMsgIdr>
+
+		<!--Message Definition Identifier: Código identificador del mensaje. Ej: camt.001.001.03 (1-35)-->
+		<Ah:MsgDefIdr>btq.002.005.01</Ah:MsgDefIdr>
+
+		<!-- Business Service: Especifica el servicio acordado entre Origen y Destino -->
+		<Ah:BizSvc>QUERY_AMORTIZATION_TABLE</Ah:BizSvc>
+
+		<!--CreationDate: Fecha de creación del mensaje en formato Z (YYYY-MM-DDThh:mm:ssZ)-->
+		<Ah:CreDt>2019-01-10T10:35:25Z</Ah:CreDt>
+
+		<!--**OPCIONAL Priority: Prioridad del mensaje. Ej: HIGH, NORM, LOW-->
+		<Ah:Prty>LOW</Ah:Prty>
+
+	</Ah:AppHdr>
+	<Doc:Document>
+		<!--Solicitud de respuesta de tabla de amotización generado por la institución financiera-->
+		<Doc:AmrtTbl>
+			<!-- Referencia de la transacción y estatus de la misma -->
+			<Doc:Ref>
+				<Doc:MsgId>
+					<!--ID del mensaje, único por día-->
+					<Doc:Id>3215476</Doc:Id>
+					<!--Fecha de creación del mensaje-->
+					<Doc:CreDtTm>2019-01-10T10:35:25Z</Doc:CreDtTm>
+				</Doc:MsgId>
+				<!--Estatus de la Transacción, puede ser OK, ERR-->
+				<Doc:Sts>OK</Doc:Sts>
+				<!-- Estatus Origin, Origen del error, puede tener las siguientes opciones: SERV (servicio), BIZ (Negocio), DB (database)  -->
+				<Doc:StsOrg>BIZ</Doc:StsOrg>
+				<!--Código de respuesta, 0 = OK, cualquier cosa diferente de 0 es considerado un error -->
+				<Doc:StsCd>0</Doc:StsCd>
+				<!-- Descripción del resultado -->
+				<Doc:StsDsc>Consulta satisfactoria</Doc:StsDsc>
+			</Doc:Ref>
+			<!-- Tabla en formato HTML -->
+			<Doc:Tbl><![CDATA[<!DOCTYPE html>
+<html>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<img src="http://www.cacpeco.com/images/logo.png">
+<h2>Tabla de amortizaci&oacute;n</h2>
+
+<table>
+  <tr>
+    <th>Cuota</th>
+    <th>Fecha de Pago</th>
+    <th>Capital</th>
+    <th>Inter&eacute;s</th>
+    <th>Seguro de Desgravamen</th>
+    <th>Reserva Legal</th>
+    <th>Cuota Total</th>
+    <th>Saldo Reducido</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>14/12/2018</td>
+    <td>833.33</td>
+    <td>63.33</td>
+    <td>2.39</td>
+    <td>8.33</td>
+    <td>907.38</td>
+    <td>4166.67</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>13/01/2019</td>
+    <td>833.33</td>
+    <td>52.78</td>
+    <td>2.39</td>
+    <td>8.33</td>
+    <td>896.83</td>
+    <td>3333.34</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>12/02/2019</td>
+    <td>833.33</td>
+    <td>42.22</td>
+    <td>2.39</td>
+    <td>8.33</td>
+    <td>886.27</td>
+    <td>2500.01</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>14/03/2019</td>
+    <td>833.33</td>
+    <td>31.67</td>
+    <td>2.39</td>
+    <td>8.33</td>
+    <td>875.72</td>
+    <td>1666.68</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>13/04/2019</td>
+    <td>833.33</td>
+    <td>21.11</td>
+    <td>2.39</td>
+    <td>8.33</td>
+    <td>865.16</td>
+    <td>833.35</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>13/05/2019</td>
+    <td>833.33</td>
+    <td>10.56</td>
+    <td>2.39</td>
+    <td>8.35</td>
+    <td>854.65</td>
+    <td>0.00</td>
+  </tr>
+  <tr>
+    <th colspan="2">Total</th>
+    <th>5000</th>
+    <th>221.67</th>
+    <th>14.34</th>
+    <th>50</th>
+    <th colspan="2">5268.01</th>
+  </tr>
+</table>
+
+</body>
+</html>
+]]></Doc:Tbl>
+		</Doc:AmrtTbl>
+	</Doc:Document>
+</Env:ResponsePayload>
