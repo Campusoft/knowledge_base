@@ -7,3 +7,7 @@ Hace tiempo que advertimos en contra de los ESB centralizados y definimos que lo
  
 Ref: thoughtworks.com/radar. Radar-vol-23-es.pdf 
  
+
+# Service Orchestration
+
+Service Orchestration is the process of exposing multiple fine-grained services using a single coarse-grained service. The service client will only have access to a single coarse-grained service, which encapsulates the multiple fine-grained services that are invoked in the process flow. 

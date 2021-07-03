@@ -4,6 +4,17 @@
 To identify and select the optimal model(s), architects must understand advantages and disadvantages of each model 
 
 
+# Monolith
+
+Types of monoliths
+
+- modular monolith
+- monolith primarily as a unit of deployment.
+
+
+
+The problem with this is that people tend to be poor at defining module boundaries — more to the point, even if they are good at defining module boundaries, they are not good at having the discipline to maintain those boundaries. 
+
 Modular Monolith with DDD
 https://github.com/kgrzybek/modular-monolith-with-ddd
  

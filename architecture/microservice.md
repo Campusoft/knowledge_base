@@ -17,6 +17,13 @@ James Lewis and Martin Fowler provided a reasonable common set of characteristic
 
 Here I am using the term database to show a logical separation of data, i.e., the Microservices can share the same physical database, but they should use separate Schema/collection/table
 
+# Pattern
+
+
+API Gateway / Backends for Frontends
+https://microservices.io/patterns/apigateway.html
+
+
 # Platform
 
 ## Dapr
@@ -59,3 +66,6 @@ https://cloud.google.com/blog/topics/developers-practitioners/better-service-orc
 Microservice Architecture and its 10 Most Important Design Patterns
 Microservice Architecture, Database per Microservice, Event Sourcing, CQRS, Saga, BFF, API Gateway, Strangler, Circuit Breaker, Externalize Configuration, Consumer-Driven Contract Testing
 https://towardsdatascience.com/microservice-architecture-and-its-10-most-important-design-patterns-824952d7fa41
+
+ Microservice Architecture with Spring Boot, Spring Cloud and Docker 
+https://github.com/sqshq/piggymetrics
