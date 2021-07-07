@@ -119,6 +119,15 @@ A simple Pub/Sub Scenario with MassTransit 6.2 + RabbitMQ +.NET Core 3.1 + Elast
 https://medium.com/@alikzlda/a-simple-pub-sub-scenario-with-masstransit-6-2-rabbitmq-net-core-3-1-elasticsearch-mssql-5a65c993b2fd
 
 
+# Revision
+
+Correlation ID  
+
+# Errores Conocidos
+
+Temporary Queues with ActiveMQ do not get cleaned up correctly
+https://github.com/MassTransit/MassTransit/issues/1700
+
 # Referencias
 
 MassTransit with ASP.Net Core 2.1
