@@ -22,6 +22,11 @@ Ref.
 
 ## Versionamiento
 
+
+## Comprobacion estado (health checks)
+
+
+
 ## Proxy / OpenAPI
 
 

@@ -51,3 +51,10 @@ Status : Failure -Test failed: Access denied for user 'admin'@'172.17.0.1' (usin
 
 This repo contains Docker labs and tutorials authored both by Docker, and by members of the community. We welcome contributions and want to grow the repo.
 https://github.com/docker/labs
+
+# Varios
+
+Azure Container Registr y: recurso público para trabajar con imágenes de Docker y sus componentes en
+Azure. Esto proporciona un registro cercano a las implementaciones en Azure que le proporciona control sobre
+el acceso, lo que le permite usar los grupos y los permisos de Azure Active Directory
+

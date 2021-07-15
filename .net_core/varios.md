@@ -100,6 +100,14 @@ Schedule Cron Jobs using HostedService in ASP.NET Core
 https://github.com/dotnet-labs/ServiceWorkerCronJob
 
 
+
+# Migration
+
+Move your .NET Framework applications to .NET 5
+The .NET Upgrade Assistant is a .NET global tool that helps you incrementally upgrade your .NET Framework-based Windows applications.
+https://dotnet.microsoft.com/platform/upgrade-assistant
+
+
 # Storage / Cloud
 
 Download Files from Azure with .NET Core Web API and Blazor WebAssembly

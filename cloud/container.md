@@ -26,3 +26,6 @@ Open Service Mesh (OSM) is Microsoft’s implementation of the SMI in an actual 
 
 Service Mesh - Arquitectura de Microservicios 
 https://www.aplyca.com/es/blog/service-mesh 
+
+
+"A Service Mesh Is Not an ESB"

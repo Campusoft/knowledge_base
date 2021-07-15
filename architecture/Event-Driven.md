@@ -51,7 +51,6 @@ Dapr is a portable, event-driven runtime that makes it easy for any developer to
 
 **Claim Check**
 
-
 Store the entire message payload into an external service, such as a database. Get the reference to the stored payload, and send just that reference to the message bus. The reference acts like a claim check used to retrieve a piece of luggage, hence the name of the pattern. Clients interested in processing that specific message can use the obtained reference to retrieve the payload, if needed.
 https://www.enterpriseintegrationpatterns.com/patterns/messaging/StoreInLibrary.html
 
@@ -59,6 +58,8 @@ https://www.enterpriseintegrationpatterns.com/patterns/messaging/StoreInLibrary.
 
 Decompose a task that performs complex processing into a series of separate elements that can be reused. This can improve performance, scalability, and reusability by allowing task elements that perform the processing to be deployed and scaled independently.
 
+
+Una tubería (pipeline o cauce) consiste en una cadena de procesos conectados de forma tal que la salida de cada elemento de la cadena es la entrada del próximo. Permiten la comunicación y sincronización entre procesos. Es común el uso de búfer de datos entre elementos consecutivos. 
 
 
 **Guidance**

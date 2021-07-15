@@ -50,8 +50,12 @@ Change data capture (CDC) means identifying and tracking what has changed in a d
 # Referencias
 
 A proven approach to helping every development organization become an integration agile organization. The Reference Architecture for Agility is a technology neutral logical architecture based on a disaggregated cloud-based model. It can be applied in incremental stages to create an integration agile foundation for any digital enterprises - deployable in private, public or hybrid cloud environments.
+(Arquitecturas Referencias)
 https://github.com/wso2/reference-architecture
 
 
  Full Modular Monolith application with Domain-Driven Design approach. 
 https://github.com/kgrzybek/modular-monolith-with-ddd
+
+
+
