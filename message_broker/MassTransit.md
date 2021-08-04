@@ -45,6 +45,10 @@ https://masstransit-project.com/usage/consumers.html#instance
 
 ## Pipeline
 
+##  Middleware
+
+##  Observers
+
 
 ## Sagas
 

@@ -26,4 +26,14 @@ https://devblogs.microsoft.com/dotnet/net-core-is-the-future-of-net/
  
  
 
+# .NET Standard 
+
+
+.NET Standard exposes platform-specific APIs. Your code might compile without errors and appear to be portable to any platform even if it isn't portable. When it runs on a platform that doesn't have an implementation for a given API, you get run-time errors.
+
+We recommend you target .NET Standard in the following scenarios:
+
+- Use netstandard2.0 to share code between .NET Framework and all other implementations of .NET.
+- Use netstandard2.1 to share code between Mono, Xamarin, and .NET Core 3.x.
+
 

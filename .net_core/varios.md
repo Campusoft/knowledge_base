@@ -107,6 +107,14 @@ Move your .NET Framework applications to .NET 5
 The .NET Upgrade Assistant is a .NET global tool that helps you incrementally upgrade your .NET Framework-based Windows applications.
 https://dotnet.microsoft.com/platform/upgrade-assistant
 
+The .NET Portability Analyzer
+https://docs.microsoft.com/en-us/dotnet/standard/analyzers/portability-analyzer
+
+
+.NET Standard 2.0 was the last version to support .NET Framework.
+
+Porting existing ASP.NET apps to .NET Core
+https://aka.ms/aspnet-porting-ebook
 
 # Storage / Cloud
 

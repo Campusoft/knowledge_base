@@ -24,3 +24,12 @@ Companies typically want to move to .NET Core / .NET 5 so they can host applicat
 
 Modernización de aplicaciones .NET existentes con la nube de Azure y los contenedores de Windows
 https://docs.microsoft.com/es-es/dotnet/architecture/modernize-with-azure-containers/
+
+
+# Java
+
+
+
+Windup is an extensible and customizable rule-based tool that helps simplify migration of Java applications.
+
+https://github.com/windup/windup/wiki

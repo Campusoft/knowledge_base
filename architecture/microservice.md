@@ -25,6 +25,11 @@ James Lewis and Martin Fowler provided a reasonable common set of characteristic
 - Diseño evolutivo (Evolutionary Design)
 
 
+- They can be self-scaled individually.
+- They are developed with choreography in mind and not orchestration
+
+
+
 Retos de los microservicios
 
 Aunque traen muchas ventajas, los microservicios son un concepto relativamente nuevo y, por lo cual, presentan bastante retos:
@@ -46,17 +51,44 @@ Costo
 Microservices for the Enterprise: Designing, Developing, and Deploying 1st ed. Edition 
 
 
+- Loose coupling: which means microservices should be able to be modified without requiring changes in other microservices.
+- Problem locality: which means related problems should be grouped together (in other words, if a change requires an update in another part of the system, those parts should be close to each other).
 
 
 # Database per Microservice
 
 Here I am using the term database to show a logical separation of data, i.e., the Microservices can share the same physical database, but they should use separate Schema/collection/table
 
+## data separation
+
+- What happens when a service developed by a team requires a change of schema in a database shared by other services?
+
+
+Read Only Data Aggregation In a Microservices Environment: A Real Life Use Case
+- Have an incrementing version id of your entity to support stale data detection.
+https://www.wix.engineering/post/read-only-data-aggregation-in-a-microservices-environment-a-real-life-use-case
+
+- Event/subscription model
+
+A good set of events must be integrated into the generating microservice and lost events are a possibility
+
+
 # Pattern
 
 
 API Gateway / Backends for Frontends
 https://microservices.io/patterns/apigateway.html
+
+
+Microservice Architecture and Design Patterns for Microservices
+- Decomposition Patterns
+- Integration Patterns
+- Database Patterns
+- Observability Patterns
+- Cross-Cutting Concern Patterns
+https://medium.com/@madhukaudantha/microservice-architecture-and-design-patterns-for-microservices-e0e5013fd58a
+
+
 
 
 # Observabilidad 
@@ -79,6 +111,25 @@ Medición de DevOps: supervisión y observabilidad
 - La observabilidad es una herramienta o una solución técnica que permite a los equipos depurar de forma activa su sistema. La observabilidad se basa en la exploración de las propiedades y los patrones que no se definen con anticipación.
 
 https://cloud.google.com/architecture/devops/devops-measurement-monitoring-and-observability?hl=es-419
+
+# Authentication and Authorization
+
+Microservices Authentication and Authorization Solutions
+- 1. Distributed Session Management
+- 2. Client Token
+- 3. Single sign-on
+- 4. Client Token with API Gateway
+- 5. Third-party application access
+https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
+
+# Microservices Frameworks
+
+
+Top Microservices Frameworks
+- JAVA
+	- Spring Boot 
+
+https://dzone.com/articles/top-microservices-frameworks
 
 # Platform
 
@@ -114,6 +165,9 @@ Migrating Monoliths to Microservices with Decomposition and Incremental Changes
 https://www.infoq.com/articles/migrating-monoliths-to-microservices-with-decomposition/ 
 
 Refactoring a Monolith into Microservices
+- Strategy 1 – Stop Digging
+- Strategy 2 – Split Frontend and Backend
+- Strategy 3 – Extract Services
 https://www.nginx.com/blog/refactoring-a-monolith-into-microservices/ 
 
 
@@ -124,12 +178,19 @@ A good way to begin the migration to microservices is to implement significant n
 Extract services from the monolith
 
 While implementing new functionality as services is extremely useful, the only way of eliminating the monolith is to incrementally extract modules out of the monolith and convert them into services.
-
 https://microservices.io/refactoring/
 
 
 Application modernization patterns with Apache Kafka, Debezium, and Kubernetes 
+- Menciona porque es importante utilizar Sidecar pattern
 https://developers.redhat.com/articles/2021/06/14/application-modernization-patterns-apache-kafka-debezium-and-kubernetes#after_the_migration__modernization_challenges
+
+
+Step 3: Migrate the database
+- Having a separate database requires data synchronization. Once again, we can choose from a few common technology approaches.
+  - Triggers
+  - Queries. The changes are typically detected with implementation strategies such as timestamps, version numbers, or status column changes in the source database
+  - Log readers
 
 
 # Service Discovery
@@ -180,3 +241,23 @@ When it comes to MSA, the deployment of microservices plays a critical role and 
     Failure in one microservice must not affect any of the other services
 
 https://wso2.com/whitepapers/microservices-in-practice-key-architectural-concepts-of-an-msa/
+
+Microservice Principles: Smart Endpoints and Dumb Pipes
+Types of Microservice Communication
+- Request-Response
+- Observer
+https://medium.com/@nathankpeck/microservice-principles-smart-endpoints-and-dumb-pipes-5691d410700f
+
+
+The microservices architectures (or microservices) are increasingly closer to becoming a standard when developing applications and systems. Microservices allow complex applications to be broken down into small independent components, improving systems and facilitating maintenance and new integrations.
+https://www.chakray.com/ebooks/learn-implement-architecture-microservices/
+
+
+# Revisar
+
+"smart microservices, dumb pipes” mantra 
+ 
+Sidecar vs. Chassis for Microservices 
+https://dzone.com/articles/ms-chassis-pattern
+ 
+ 

@@ -31,8 +31,60 @@ https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/webview?ta
 
 - Binding
 
-- Splash screen
+- Open url external
+Open Xamarin Forms WebView links in external browser
+https://adenearnshaw.com/open-xamarin-forms-webview-links-in-external-browser/
+
+- Enlaces Telefonos. 
+DeepLinking (Enlace profundo)?
+
+
+
+**Splash screen -  Android**
 
 Xamarin.Forms splash screen
 https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/splashscreen
+
+Guidelines for Splash Screen (Dimensiones de las pantatllas para diferentes plataformas)
+- Guidelines for Configuring Splash Screen for Android Applications
+- Guidelines for Configuring Splash Screen for iOS Applications
+- Guidelines for Configuring Splash Screen for Windows Applications
+https://docs.kony.com/konylibrary/visualizer/app_design_dev/Content/Guidelines_for_Splash_Screen.htm
+
+
+
+
+# Behaviors 
+
+Behaviors for Xamarin.Forms 
+https://github.com/davidbritch/behaviors
+
+
+# Errores
+
+ERR_CLEARTEXT_NOT_PERMITTED
+http://xybernetics.com/techtalk/how-to-resolve-err_cleartext_not_permitted-error-in-xamarin/
+
+# Referencias
+
+
+
+## Herramientas
+
+AirDroid 
+
+Transfiere archivos a través de dispositivos, controla dispositivos Android en remoto, duplica la pantalla y gestiona los SMS y las notificaciones en el ordenador.   hace que el trabajo y la vida sean más eficientes. 
+
+
+## Aplicaciones / Codigo / Librerias
+
+
+Librerias de App/UI. Listado de aplicaciones realizadas en Xamarin. 
+https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
+
+## Varios
+
+How to Release Your Xamarin App for iOS and Android
+https://instabug.com/blog/how-to-release-xamarin-app-ios-and-android/
+
 
