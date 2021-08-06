@@ -282,16 +282,12 @@ var user = await graphClient.Users[member.Id]
 - El token dura 60 minutos
 - Las operaciones son realizadas a través de llamadas http al API.
 
-```
-{config.ApiUrl}v1.0/groups
-```
-
 #### ListGroups
 - Permite listar los grupos existentes
 **Response**
 - If successful, this method returns a 200 OK response code and collection of group objects in the response body. The response includes only the default properties of each group.
 ```
-GET {config.ApiUrl}v1.0/groups/
+GET https://graph.microsoft.com/v1.0/v1.0/groups/
 ```
 
 #### GetGroup
@@ -300,7 +296,7 @@ GET {config.ApiUrl}v1.0/groups/
 - If successful, this method returns a 200 OK response code and group object in the response body. It returns the default properties unless you use $select to specify specific properties.
 
 ```
-GET {config.ApiUrl}v1.0/groups/{group_id}
+GET https://graph.microsoft.com/v1.0/v1.0/groups/{group_id}
 ```
 
 #### CreateGroup
@@ -309,7 +305,7 @@ GET {config.ApiUrl}v1.0/groups/{group_id}
 - If successful, this method returns a 201 Created response code and a group object in the response body. The response includes only the default properties of the group.
 
 ```
-POST {config.ApiUrl}v1.0/groups
+POST https://graph.microsoft.com/v1.0/v1.0/groups
 
 {
   "displayName": "Grupo para crear",
@@ -329,7 +325,7 @@ POST {config.ApiUrl}v1.0/groups
 - If successful, this method returns a 204 No Content response code—except a 200 OK response code when updating the following properties: allowExternalSenders, autoSubscribeNewMembers, hideFromAddressLists, hideFromOutlookClients, isSubscribedByMail, unseenCount.
 
 ```
-PATCH {config.ApiUrl}v1.0/groups/{grupo_actualizar_id}
+PATCH https://graph.microsoft.com/v1.0/v1.0/groups/{grupo_actualizar_id}
 
 {
   "description": "Prueba 1 desde Postman actualizado",
@@ -349,7 +345,7 @@ PATCH {config.ApiUrl}v1.0/groups/{grupo_actualizar_id}
 - If successful, this method returns a 200 OK response code and collection of user objects in the response body. If a large user collection is returned, you can use paging in your app.
 
 ```
-GET {config.ApiUrl}v1.0/users
+GET https://graph.microsoft.com/v1.0/v1.0/users
 ```
 
 #### CreateUser
@@ -358,7 +354,7 @@ GET {config.ApiUrl}v1.0/users
 - If successful, this method returns 201 Created response code and user object in the response body.
 
 ```
-POST {config.ApiUrl}v1.0/users
+POST https://graph.microsoft.com/v1.0/v1.0/users
 
 {
 	"accountEnabled": true,
@@ -380,7 +376,7 @@ POST {config.ApiUrl}v1.0/users
 
 
 ```
-PATCH {config.ApiUrl}v1.0/users/{user_id}
+PATCH https://graph.microsoft.com/v1.0/v1.0/users/{user_id}
 
 {
     "userType": "Member",
@@ -408,7 +404,7 @@ Message:
 - If successful, this method returns a 204 No Content response code. It does not return anything in the response body. This method returns a 400 Bad Request response code when the object is already a member of the group. This method returns a 404 Not Found response code when the object being added doesn't exist.
 
 ```
-POST {config.ApiUrl}v1.0/groups/{grupo_id}/owners/$ref
+POST https://graph.microsoft.com/v1.0/v1.0/groups/{grupo_id}/owners/$ref
 
 {
 	"@odata.id": $"https://graph.microsoft.com/v1.0/users/{user_id}"
@@ -421,7 +417,7 @@ POST {config.ApiUrl}v1.0/groups/{grupo_id}/owners/$ref
 - If successful, this method returns a 204 No Content response code. It does not return anything in the response body. This method returns a 400 Bad Request response code when the object is already a member of the group. This method returns a 404 Not Found response code when the object being added doesn't exist.
 
 ```
-POST {config.ApiUrl}v1.0/groups/{grupo_id}/members/$ref
+POST https://graph.microsoft.com/v1.0/v1.0/groups/{grupo_id}/members/$ref
 
 {
 	"@odata.id": $"https://graph.microsoft.com/v1.0/directoryObjects/{user_id}"
@@ -434,7 +430,7 @@ POST {config.ApiUrl}v1.0/groups/{grupo_id}/members/$ref
 - If successful, this method returns a 201 Created response code and a group object in the response body. The response includes only the default properties of the group.
 
 ```
-POST {config.ApiUrl}v1.0/groups
+POST https://graph.microsoft.com/v1.0/v1.0/groups
 
 {
 	"displayName": "Grupo 2 desde REST con owner",
@@ -457,7 +453,7 @@ POST {config.ApiUrl}v1.0/groups
 - If successful, this method returns a 201 Created response code and a group object in the response body. The response includes only the default properties of the group.
 
 ```
-POST {config.ApiUrl}v1.0/groups
+POST https://graph.microsoft.com/v1.0/v1.0/groups
 
 {
 	"displayName": "Grupo 2 desde REST con owner",
