@@ -30,9 +30,9 @@ Microsoft 365 Groups is the foundational membership service that drives all team
     Roadmap (if you have Project for the web)
     Stream
 
-# Microsoft Graph 
-## GraphNetCore
-### GroupsSdkTest
+---
+
+# Gestión a través de SDK
 #### Generalidades
 - El token dura 60 minutos
 - For performance reasons, the create, get, and list operations return only a subset of more commonly used properties by default. These default properties are noted in the Properties section. To get any of the properties that are not returned by default, specify them in a $select OData query option.
@@ -271,4 +271,211 @@ var members = await graphClient.Groups[allCompanyGroup].Members
 var user = await graphClient.Users[member.Id]
 	.Request()
 	.GetAsync();	
+```
+
+---
+
+# Gestión a través de APIREST
+## GraphNetCore
+### GroupsWithHttpClientTest
+#### Generalidades
+- El token dura 60 minutos
+- Las operaciones son realizadas a través de llamadas http al API.
+
+```
+{config.ApiUrl}v1.0/groups
+```
+
+#### ListGroups
+- Permite listar los grupos existentes
+**Response**
+- If successful, this method returns a 200 OK response code and collection of group objects in the response body. The response includes only the default properties of each group.
+```
+GET {config.ApiUrl}v1.0/groups/
+```
+
+#### GetGroup
+- Permite obtener un grupo a partir de su id
+**Response**
+- If successful, this method returns a 200 OK response code and group object in the response body. It returns the default properties unless you use $select to specify specific properties.
+
+```
+GET {config.ApiUrl}v1.0/groups/{group_id}
+```
+
+#### CreateGroup
+- Permite crear un grupo
+**Response**
+- If successful, this method returns a 201 Created response code and a group object in the response body. The response includes only the default properties of the group.
+
+```
+POST {config.ApiUrl}v1.0/groups
+
+{
+  "displayName": "Grupo para crear",
+  "description": "Descripción de grupo para crear",
+  "groupTypes": [
+    "Unified"
+  ],
+  "mailEnabled": true,
+  "mailNickname": "grupocrear",
+  "securityEnabled": false
+}
+```
+
+#### UpdateGroup
+- Permite actualizar un grupo
+**Response**
+- If successful, this method returns a 204 No Content response code—except a 200 OK response code when updating the following properties: allowExternalSenders, autoSubscribeNewMembers, hideFromAddressLists, hideFromOutlookClients, isSubscribedByMail, unseenCount.
+
+```
+PATCH {config.ApiUrl}v1.0/groups/{grupo_actualizar_id}
+
+{
+  "description": "Prueba 1 desde Postman actualizado",
+  "displayName": "Descripción prueba 1 desde Postman actualizado",
+  "groupTypes": [
+    "Unified"
+  ],
+  "mailEnabled": true,
+  "mailNickname": "prueba1PostmanActualizado",
+  "securityEnabled": false
+}
+```
+
+#### ListUsers
+- Permite listar los usuarios
+**Response**
+- If successful, this method returns a 200 OK response code and collection of user objects in the response body. If a large user collection is returned, you can use paging in your app.
+
+```
+GET {config.ApiUrl}v1.0/users
+```
+
+#### CreateUser
+- Permite crear un nuevo usuario
+**Response**
+- If successful, this method returns 201 Created response code and user object in the response body.
+
+```
+POST {config.ApiUrl}v1.0/users
+
+{
+	"accountEnabled": true,
+	"displayName": "Usuario Prueba 1",
+	"mailNickname": "usuarioprueba1",
+	"userPrincipalName": "usuarioprueba1@jcprojectmicrosoft.onmicrosoft.com",
+	"passwordProfile": [
+		"forceChangePasswordNextSignIn", true,
+		"password", "passwordNewUser1"
+	]
+}
+
+```
+
+#### UpdateUser
+- Permite actualizar los datos de un usuario a partir de su id. No se puede cambiar la clave por restricciones de permisos. [Detalles](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/users-default-permissions#compare-member-and-guest-default-permissions)
+**Response**
+- If successful, this method returns a 204 No Content response code.
+
+
+```
+PATCH {config.ApiUrl}v1.0/users/{user_id}
+
+{
+    "userType": "Member",
+    "surname": "surname usuario",
+    "streetAddress": "dirección del usuario 1",
+    "state": "new york",
+    "postalCode": "123456",
+	"accountEnabled": true,
+	"displayName": "Usuario Prueba 1",
+	"mailNickname": "usuarioprueba1",
+	"userPrincipalName": "usuarioprueba1@jcprojectmicrosoft.onmicrosoft.com"
+}
+
+```
+**Error**
+```
+Message: 
+    System.Exception : Failed to call the web API: Forbidden. Content: {"error":{"code":"Authorization_RequestDenied","message":"Insufficient privileges to complete the operation.","innerError":{"date":"2021-08-05T23:31:52","request-id":"dedd179d-d940-4fc5-a03b-e7e4ab6ec938","client-request-id":"dedd179d-d940-4fc5-a03b-e7e4ab6ec938"}}}
+
+```
+
+#### AddOwnerToGroup
+- Permite agregar propietarios a un grupo a partir de un usuario
+**Response**
+- If successful, this method returns a 204 No Content response code. It does not return anything in the response body. This method returns a 400 Bad Request response code when the object is already a member of the group. This method returns a 404 Not Found response code when the object being added doesn't exist.
+
+```
+POST {config.ApiUrl}v1.0/groups/{grupo_id}/owners/$ref
+
+{
+	"@odata.id": $"https://graph.microsoft.com/v1.0/users/{user_id}"
+}
+```
+
+#### AddMembersToGroup
+- Permite agregar miembros a un grupo a partir de usuarios
+**Response**
+- If successful, this method returns a 204 No Content response code. It does not return anything in the response body. This method returns a 400 Bad Request response code when the object is already a member of the group. This method returns a 404 Not Found response code when the object being added doesn't exist.
+
+```
+POST {config.ApiUrl}v1.0/groups/{grupo_id}/members/$ref
+
+{
+	"@odata.id": $"https://graph.microsoft.com/v1.0/directoryObjects/{user_id}"
+}
+```
+
+#### CreateGroupWithOwner
+- Permite crear un grupo con propietarios
+**Response**
+- If successful, this method returns a 201 Created response code and a group object in the response body. The response includes only the default properties of the group.
+
+```
+POST {config.ApiUrl}v1.0/groups
+
+{
+	"displayName": "Grupo 2 desde REST con owner",
+	"description": "Descripción de grupo 2 desde REST con owner",
+	"mailEnabled": true,
+	"mailNickname": "grupo2restowner",
+	"securityEnabled": false,
+	"groupTypes": [
+		"Unified"
+	],
+	"owners@odata.bind": [
+		"https://graph.microsoft.com/v1.0/users/{user_id}"
+	]
+}
+```
+
+#### CreateGroupWithOwnerAndMembers
+- Permite crear un grupo con propietarios y miembros
+**Response**
+- If successful, this method returns a 201 Created response code and a group object in the response body. The response includes only the default properties of the group.
+
+```
+POST {config.ApiUrl}v1.0/groups
+
+{
+	"displayName": "Grupo 2 desde REST con owner",
+	"description": "Descripción de grupo 2 desde REST con owner",
+	"mailEnabled": true,
+	"mailNickname": "grupo2restowner",
+	"securityEnabled": false,
+	"groupTypes": [
+		"Unified"
+	],
+	"owners@odata.bind": [
+		"https://graph.microsoft.com/v1.0/users/{user_id}"
+	],
+	"members@odata.bind": [
+		"https://graph.microsoft.com/v1.0/users/{user_id_1}",
+		"https://graph.microsoft.com/v1.0/users/{user_id_2}",
+		"https://graph.microsoft.com/v1.0/users/{user_id_3}",
+		"https://graph.microsoft.com/v1.0/users/{user_id_4}"
+	]
+}
 ```
