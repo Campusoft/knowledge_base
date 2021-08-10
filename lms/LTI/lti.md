@@ -1,4 +1,5 @@
-# LTI
+# LTI - Learning Tools Interoperability
+
 
 
 
@@ -14,6 +15,10 @@ LTI Advantage is Based on LTI 1.3
 - Assignment and Grade Services seamlessly syncs grades, progress, and comments from multiple sources into an LMS platform’s gradebook, greatly reducing faculty effort and the chance of errors.
 	
 
+# Librerias
+
+LTI 1.1.1 library for .NET Applications.  
+https://github.com/LtiLibrary/LtiLibrary
 
 # Laboratorio
 
@@ -53,12 +58,16 @@ Para que el consumidor de  herramientas  (LMS  normalmente)  envíe al proveedor
 
 
 LTI 1.3 - Canvas
+How do I configure an LTI key for an account?
 
 https://community.canvaslms.com/docs/DOC-16729-how-do-i-configure-an-lti-key-for-an-account
 
 
 
 Crear el LTI - Canvas
+- Admin link
+- Settings link
+- Apps tab
 https://community.canvaslms.com/docs/DOC-16730-42141110273
 
  
@@ -95,4 +104,6 @@ Generar claves JWK
 https://mkjwk.org/
 
 
+.NET LTI Project - Part 1 - Connect to Canvas
+https://community.canvaslms.com/t5/Canvas-Developers-Group/NET-LTI-Project-Part-1-Connect-to-Canvas/ba-p/271647
 

@@ -1,7 +1,38 @@
-#Utilizar Oracle con framework abp y plataforma Campusoft
+# Install
+
+Instalar la plataforma Campusoft
+
+## Generales
+
+**Implementar IApplication**
+
+Crear una implementacion de IApplication
 
 
-##Instalar
+**Instalar Binder**
+
+Instalar "FilterEntityBinderProvider"  
+
+En .Net 3.x, codigo referencia:
+
+```
+services.AddControllersWithViews(
+                    options =>
+                    {
+                        options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+                        options.Filters.Add(new AbpAutoValidateAntiforgeryTokenAttribute());
+
+                        // add custom binder to beginning of collection
+                        options.ModelBinderProviders.Insert(0, new FilterEntityBinderProvider());
+                    }
+                )
+				
+```
+
+## Entity Framework. (.net Core)
+
+
+### Oracle
 
 1.Inslar Oracle.EntityFrameworkCore
 
@@ -27,7 +58,7 @@ Realizar las configuraciones en appsettings.json:
 
 4. Configuraciones Proyectos
 
-Modificar clase <Schema.Proyecto>DbContextConfigurer. En el proyecto "<SchemaProyecto>.EntityFrameworkCore"
+Modificar clase <Proyecto>DbContextConfigurer. En el proyecto "<Proyecto>.EntityFrameworkCore"
 
 Quitar SqlServer: 
 
@@ -59,9 +90,9 @@ modelBuilder.HasDefaultSchema(defaultSchema);
 
 Ajustes varias para Oracle. 
 
-o	El size de las propiedades, nombres de tablas, Oracle tiene restricción de 32.
-o	Todo el objeto base de datos a mayúsculas. (Tablas, propiedades)
-o	Aplicar políticas para convertir todos los nombres de tablas en mayúsculas. 
+-	El size de las propiedades, nombres de tablas, Oracle tiene restricción de 32.
+-	Todo el objeto base de datos a mayúsculas. (Tablas, propiedades)
+-	Aplicar políticas para convertir todos los nombres de tablas en mayúsculas. 
 
 Para estos ajustes varios utilizar el método, del proyecto “Campusoft.Core.EntityFrameworkCore” / OracleModelBuilderExtensions
 
@@ -82,5 +113,38 @@ Asilamiento de Transacciones
 ```
 Configuration.UnitOfWork.IsolationLevel = System.Transactions.IsolationLevel.ReadCommitted;
 ```
+Se debe configurar para evitar el error:
+
+```
+Message=IsolationLevel must be ReadCommitted or Serializable 
+Source=Oracle.ManagedDataAccess
+```
 
 5. Generar la migracion desde el proyecto   "<SchemaProyecto>.EntityFrameworkCore"
+
+## MVC
+
+
+Agregar dependencias en _ViewImports.cshtml
+
+```
+@using Campusoft.Core.Application
+@using Campusoft.Core
+```
+
+**Layout**
+
+En el layout se deben definir secciones que se utilizan en las vistas de formularios dinamicos.
+- page_toolbar
+- page_title
+- view_form
+
+```
+InvalidOperationException: The following sections have been defined but have not been rendered by the page at '/Views/Shared/_Layout.cshtml': 'page_title, page_toolbar'. To ignore an unrendered section call IgnoreSection("sectionName").
+```
+
+Crer un view para visualizar avisos acciones CRUD.
+
+/Views/Shared/_ShowAlert.cshtml
+
+
