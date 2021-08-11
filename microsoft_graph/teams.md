@@ -1,19 +1,18 @@
 # Microsoft Graph 
-## GraphNetCore
-### TeamsWithHttpClientTest
+## Teams con rest api
 - https://docs.microsoft.com/en-us/graph/api/resources/teams-api-overview?view=graph-rest-1.0
 #### Generalidades
 - El token dura 60 minutos
 - For performance reasons, the create, get, and list operations return only a subset of more commonly used properties by default. These default properties are noted in the Properties section. To get any of the properties that are not returned by default, specify them in a $select OData query option.
 
-#### ListTeamsWithBetaVersion
+#### Listar grupos de teams con version beta
 - Permite listar todos los grupos de teams usando la version beta del api puntualmente expresion lambda. No se recomienda.
 
 ```
 GET https://graph.microsoft.com/beta/{group_id}?$filter=resourceProvisioningOptions/Any(x:x eq 'Team')
 ```
 
-#### ListTeamsByProgramming
+#### Listar teams con programación
 - Permite listar todos los grupos de teams usando un filtrado por programacion de los grupos por resourceProvisioningOptions = Team
 
 ```
@@ -24,7 +23,7 @@ var groups = result["value"].ToList();
 var teams = groups.Where(x => x["resourceProvisioningOptions"].ToArray().Contains("Team")).ToList();
 ```
 
-#### CreateTeamMinimal
+#### Crear un team con parámetros mínimos
 - Crea un grupo con los parametros minimos.
 - No funciona con el ejemplo en la documentacion ya que exige incluir un propietarios.
 - Roles vacio es considerado un miembro normal.
@@ -64,7 +63,7 @@ POST https://graph.microsoft.com/v1.0/v1.0/teams
 }
 ```
 
-#### CreateTeamFromGroup
+#### Crear team a partir de un grupo
 - If the group was created less than 15 minutes ago, it's possible for the Create team call to fail with a 404 error code due to replication delays. The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
 - Los usuarios creados no tienen asignadas las licencias y no puede utilizar el teams.
 - In order to create a team, the group you're creating it from must have a least one owner.
@@ -118,7 +117,7 @@ The following are common reasons for this response:
 - createdDateTime is set in the future.
 - createdDateTime is correctly specified but the teamCreationMode instance attribute is missing or set to an invalid value.
 
-#### CreateTeamChannelsAppTabs
+#### Crear team con canales, tabs, apps y plantilla
 - Permite crear un grupo de team con canales, tabs, acceso a apps y plantilla.
 - https://docs.microsoft.com/en-us/graph/api/team-post?view=graph-rest-1.0&tabs=http
 
@@ -215,20 +214,20 @@ POST https://graph.microsoft.com/v1.0/teams
 }
 ```
 
-#### GetTeam
+#### Obtener un team
 - Permite obtener los detalles de un grupo de teams.
 ```
 GET https://graph.microsoft.com/v1.0/teams/{team_id}
 ```
 
-#### ListMembersOfTeam
+#### Listar miembros de un team
 - Permite listar los miembros de un grupo de teams
 
 ```
 GET https://graph.microsoft.com/v1.0/teams/{team_id}/members
 ```
 
-#### AddMemberOfTeam
+#### Agregar un miembro al team
 - Permite agregar usuarios a un grupo de teams. Esta operación aún no permite utilizar teams, es necesarios asignar licencias de uso.
 - Roles con un valor vacío significa que es un miembro normal.
 - Si se envía varias veces el mismo usuario actúa como si lo agregara pero no indica ni error ni que está repetido.
@@ -244,7 +243,7 @@ POST https://graph.microsoft.com/v1.0/v1.0/teams/{team_id}/members
 }
 ```
 
-#### AddMembersOfTeam
+#### Agregar miembros a un team
 - Permite agregar varios usuarios a un grupo de teams en una sola petición. Esta operación aún no permite utilizar teams, es necesarios asignar licencias de uso.
 - Roles con un valor vacío significa que es un miembro normal.
 - Si se envía varias veces el mismo usuario actúa como si lo agregara pero no indica ni error ni que está repetido.
@@ -261,7 +260,7 @@ PATCH https://graph.microsoft.com/v1.0/groups/{group-id}
 }
 ```
 
-#### ListSubscribedSkus
+#### Listar los sku suscritos
 - Permite listar las licencias existentes, SKU(Stock Keeping Unit), en el plan de servicio. Esto es necesario para obtener el skus id para asignarlo al usuario y que pueda utilizar las apps que requiera.
 - https://docs.microsoft.com/en-us/partner-center/develop/product-resources#sku
 - https://docs.microsoft.com/es-es/azure/container-registry/container-registry-skus#:~:text=Azure%20Container%20Registry%20est%C3%A1%20disponible,de%20Docker%20privado%20en%20Azure.
@@ -270,7 +269,7 @@ PATCH https://graph.microsoft.com/v1.0/groups/{group-id}
 GET https://graph.microsoft.com/v1.0/subscribedSkus
 ```
 
-#### AssignLicenceUser
+#### Asignar sku a miembro
 - Permite asignar licencias a usuarios para utilizar diversos servicios. En el portal de azure se realiza desde Inicio > Grupo Team > Usuario > Licencias +, en este caso es Microsoft 365 E5 Developer (without Windows and Audio Conferencing).
 - Es necesario enviar el parámetro usageLocation durante la creación o actualizarlo ya que es requerido para la asignación de las licencias.
 
@@ -286,10 +285,3 @@ POST https://graph.microsoft.com/v1.0/v1.0/users/{user_id}/assignLicense
   "removeLicenses": []
 }
 ```
-
-
-
----
-
-## Postman
-- Colección y environment con las mismas operaciones consumiendo el API.	
