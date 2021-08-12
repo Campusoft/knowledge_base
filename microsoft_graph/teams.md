@@ -26,6 +26,7 @@ var teams = groups.Where(x => x["resourceProvisioningOptions"].ToArray().Contain
 ### Crear un team con parámetros mínimos
 - Crea un grupo con los parametros minimos.
 - No funciona con el ejemplo en la documentacion ya que exige incluir un propietario.
+- La generación no es inmediata, puede demorar hasta 15 minutos. https://docs.microsoft.com/en-us/graph/api/team-post?view=graph-rest-1.0&tabs=http#example-4-create-a-team-from-group
 - Roles vacio es considerado un miembro normal.
 - https://docs.microsoft.com/en-us/graph/api/team-post?view=graph-rest-1.0&tabs=http
 - A pesar de ser un arreglo de miembros no se puede agregar mas de un miembro
