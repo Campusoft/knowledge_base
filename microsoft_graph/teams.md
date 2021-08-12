@@ -1,18 +1,18 @@
 # Microsoft Graph 
 ## Teams con rest api
 - https://docs.microsoft.com/en-us/graph/api/resources/teams-api-overview?view=graph-rest-1.0
-#### Generalidades
+### Generalidades
 - El token dura 60 minutos
 - For performance reasons, the create, get, and list operations return only a subset of more commonly used properties by default. These default properties are noted in the Properties section. To get any of the properties that are not returned by default, specify them in a $select OData query option.
 
-#### Listar grupos de teams con version beta
+### Listar grupos de teams con version beta
 - Permite listar todos los grupos de teams usando la version beta del api puntualmente expresion lambda. No se recomienda.
 
 ```
 GET https://graph.microsoft.com/beta/{group_id}?$filter=resourceProvisioningOptions/Any(x:x eq 'Team')
 ```
 
-#### Listar teams con programación
+### Listar teams con programación
 - Permite listar todos los grupos de teams usando un filtrado por programacion de los grupos por resourceProvisioningOptions = Team
 
 ```
@@ -23,21 +23,20 @@ var groups = result["value"].ToList();
 var teams = groups.Where(x => x["resourceProvisioningOptions"].ToArray().Contains("Team")).ToList();
 ```
 
-#### Crear un team con parámetros mínimos
+### Crear un team con parámetros mínimos
 - Crea un grupo con los parametros minimos.
-- No funciona con el ejemplo en la documentacion ya que exige incluir un propietarios.
+- No funciona con el ejemplo en la documentacion ya que exige incluir un propietario.
 - Roles vacio es considerado un miembro normal.
 - https://docs.microsoft.com/en-us/graph/api/team-post?view=graph-rest-1.0&tabs=http
-**Errores**
+- A pesar de ser un arreglo de miembros no se puede agregar mas de un miembro
+#### **Errores**
 ```
 POST https://graph.microsoft.com/v1.0/v1.0/teams
 
+Correcto
 {
 	"template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
 	"displayName": "Teams Group Minimal",
-	"description": "Grupo de teams con parametros minimos",
-  
-  
 	"members":[
 	  {
 		 "@odata.type":"#microsoft.graph.aadUserConversationMember",
@@ -49,7 +48,14 @@ POST https://graph.microsoft.com/v1.0/v1.0/teams
 	],  
 }
 
+Incorrecto
+{
+  "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
+  "displayName": "My Sample Team",
+  "description": "My Sample Team’s Description"
+}
 
+Error producido
 {
     "error": {
         "code": "BadRequest",
@@ -61,9 +67,48 @@ POST https://graph.microsoft.com/v1.0/v1.0/teams
         }
     }
 }
+
+
+Request con varios miembros
+{
+    "template@odata.bind": "https://graph.microsoft.com/v1.0/teamsTemplates('standard')",
+    "displayName": "Teams Group Minimal 1",
+    "members":[
+        {
+            "@odata.type":"#microsoft.graph.aadUserConversationMember",
+            "roles":["owner"],
+            "user@odata.bind":"https://graph.microsoft.com/v1.0/users('f614b729-9236-47fe-a15e-dc0189a6cfdd')"
+        },
+        {
+            "@odata.type":"#microsoft.graph.aadUserConversationMember",
+            "roles":[],
+            "user@odata.bind":"https://graph.microsoft.com/v1.0/users('3d31920a-5c30-4590-b8ca-2b768824d40d')"
+        },
+        {
+            "@odata.type":"#microsoft.graph.aadUserConversationMember",
+            "roles":["owner"],
+            "user@odata.bind":"https://graph.microsoft.com/v1.0/users('7b8dc73a-baa4-4cf1-9044-356e1dfecaf6')"
+        }        
+    ]
+}
+
+{
+    "error": {
+        "code": "BadRequest",
+        "message": "Adding more than one member is not supported.",
+        "innerError": {
+            "message": "Adding more than one member is not supported.",
+            "code": "InvalidRequest",
+            "innerError": {},
+            "date": "2021-08-12T22:37:34",
+            "request-id": "5f53dd24-6171-4ffd-ad87-db66f13a8aa2",
+            "client-request-id": "5f53dd24-6171-4ffd-ad87-db66f13a8aa2"
+        }
+    }
+}
 ```
 
-#### Crear team a partir de un grupo
+### Crear team a partir de un grupo
 - If the group was created less than 15 minutes ago, it's possible for the Create team call to fail with a 404 error code due to replication delays. The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
 - Los usuarios creados no tienen asignadas las licencias y no puede utilizar el teams.
 - In order to create a team, the group you're creating it from must have a least one owner.
@@ -71,7 +116,7 @@ POST https://graph.microsoft.com/v1.0/v1.0/teams
 - Cuando se asigna el propietario al grupo puede tardar unos minutos hasta que permita crear el team.
 - https://docs.microsoft.com/en-us/graph/api/team-post?view=graph-rest-1.0&tabs=http
 
-**Forma 1**
+#### **Forma 1**
 ```
 PUT https://graph.microsoft.com/v1.0/v1.0/groups/{group_id}/team
 
@@ -96,7 +141,7 @@ PUT https://graph.microsoft.com/v1.0/v1.0/groups/{group_id}/team
 }
 ```
 
-**Forma 2**
+#### **Forma 2**
 ```
 POST https://graph.microsoft.com/v1.0/teams
 
@@ -106,7 +151,7 @@ POST https://graph.microsoft.com/v1.0/teams
 }
 ```
 
-**Error response**
+#### **Error response**
 - If the request is unsuccessful, this method returns a 400 Bad Request response code.
 
 ```
@@ -117,7 +162,7 @@ The following are common reasons for this response:
 - createdDateTime is set in the future.
 - createdDateTime is correctly specified but the teamCreationMode instance attribute is missing or set to an invalid value.
 
-#### Crear team con canales, tabs, apps y plantilla
+### Crear team con canales, tabs, apps y plantilla
 - Permite crear un grupo de team con canales, tabs, acceso a apps y plantilla.
 - https://docs.microsoft.com/en-us/graph/api/team-post?view=graph-rest-1.0&tabs=http
 
@@ -214,20 +259,20 @@ POST https://graph.microsoft.com/v1.0/teams
 }
 ```
 
-#### Obtener un team
+### Obtener un team
 - Permite obtener los detalles de un grupo de teams.
 ```
 GET https://graph.microsoft.com/v1.0/teams/{team_id}
 ```
 
-#### Listar miembros de un team
+### Listar miembros de un team
 - Permite listar los miembros de un grupo de teams
 
 ```
 GET https://graph.microsoft.com/v1.0/teams/{team_id}/members
 ```
 
-#### Agregar un miembro al team
+### Agregar un miembro al team
 - Permite agregar usuarios a un grupo de teams. Esta operación aún no permite utilizar teams, es necesarios asignar licencias de uso.
 - Roles con un valor vacío significa que es un miembro normal.
 - Si se envía varias veces el mismo usuario actúa como si lo agregara pero no indica ni error ni que está repetido.
@@ -243,7 +288,7 @@ POST https://graph.microsoft.com/v1.0/v1.0/teams/{team_id}/members
 }
 ```
 
-#### Agregar miembros a un team
+### Agregar miembros a un team
 - Permite agregar varios usuarios a un grupo de teams en una sola petición. Esta operación aún no permite utilizar teams, es necesarios asignar licencias de uso.
 - Roles con un valor vacío significa que es un miembro normal.
 - Si se envía varias veces el mismo usuario actúa como si lo agregara pero no indica ni error ni que está repetido.
@@ -260,7 +305,7 @@ PATCH https://graph.microsoft.com/v1.0/groups/{group-id}
 }
 ```
 
-#### Listar los sku suscritos
+### Listar los sku suscritos
 - Permite listar las licencias existentes, SKU(Stock Keeping Unit), en el plan de servicio. Esto es necesario para obtener el skus id para asignarlo al usuario y que pueda utilizar las apps que requiera.
 - https://docs.microsoft.com/en-us/partner-center/develop/product-resources#sku
 - https://docs.microsoft.com/es-es/azure/container-registry/container-registry-skus#:~:text=Azure%20Container%20Registry%20est%C3%A1%20disponible,de%20Docker%20privado%20en%20Azure.
@@ -269,7 +314,7 @@ PATCH https://graph.microsoft.com/v1.0/groups/{group-id}
 GET https://graph.microsoft.com/v1.0/subscribedSkus
 ```
 
-#### Asignar sku a miembro
+### Asignar sku a miembro
 - Permite asignar licencias a usuarios para utilizar diversos servicios. En el portal de azure se realiza desde Inicio > Grupo Team > Usuario > Licencias +, en este caso es Microsoft 365 E5 Developer (without Windows and Audio Conferencing).
 - Es necesario enviar el parámetro usageLocation durante la creación o actualizarlo ya que es requerido para la asignación de las licencias.
 
