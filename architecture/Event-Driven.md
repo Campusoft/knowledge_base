@@ -35,6 +35,11 @@ Moreover, Webhooks can’t be used to push event notifications to end-user consu
 
 Despite the above drawbacks, Webhooks can still be ideal for implementing a server-to-server event notification mechanism.
 
+
+YouTube uses a protocol called PubSubHubbub for its notification mechanism. It's now become a web standard called WebSub since 2018, after the first working draft in 2016.
+
+IMPORTANT NOTE: The PubSubHubbub protocol has now been adopted by the W3C as a Candidate Recommendation. It's also been renamed WebSub for clarity and concision. Please consider upgrading all older PubSubHubbub implementations to WebSub.
+
 # Documenting 
 
 A good API definition is complemented by comprehensive documentation and a set of language-specific code generators. REST APIs are meeting that need with the OpenAPI specification. Fortunately, for event-driven APIs, we have the AsyncAPI specification.

@@ -1,8 +1,3 @@
-# change data capture (CDC)
-
-
-Change data capture (CDC) records insert, update, and delete activity that applies to a SQL Server table
-
 
 # Tools
 

@@ -38,6 +38,9 @@ The packages xunit.runner.visualstudio and Microsoft.NET.Test.Sdk are required f
 https://xunit.net/docs/getting-started/netcore/visual-studio
 
 
+Testing Exceptions with xUnit and Actions
+https://ardalis.com/testing-exceptions-with-xunit-and-actions/
+
 #### Mock 
 
 Bogus
