@@ -52,15 +52,15 @@
 	```
 	- List memberOf sirve para listar los grupos a los que pertenece un grupo.
 	```
-		GET https://graph.microsoft.com/v1.0/groups//groups/{id}/memberOf
+		GET https://graph.microsoft.com/v1.0/groups/groups/{id}/memberOf
 	```
 	- List transitive members sirve para listar los miembros de un grupo expandiendo los elementos de los grupos miembros.
 	```
-		GET https://graph.microsoft.com/v1.0/groups//groups/{id}/transitiveMembers
+		GET https://graph.microsoft.com/v1.0/groups/groups/{id}/transitiveMembers
 	```
 	- List transitive memberOf sirve para listar los grupos a los que pertenece un grupo en forma anidada.
 	```
-		GET https://graph.microsoft.com/v1.0/groups//groups/{id}/transitiveMemberOf
+		GET https://graph.microsoft.com/v1.0/groups/groups/{id}/transitiveMemberOf
 	```
 - Puede saber en la respuesta el tipo miembro ?? 
 	- Si, a través de @odata.type: #microsoft.graph.group | user
