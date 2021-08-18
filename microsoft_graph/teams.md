@@ -111,7 +111,8 @@ Request con varios miembros
 
 ### Crear team a partir de un grupo
 - If the group was created less than 15 minutes ago, it's possible for the Create team call to fail with a 404 error code due to replication delays. The recommended pattern is to retry the Create team call three times, with a 10 second delay between calls.
-- Los usuarios creados no tienen asignadas las licencias y no puede utilizar el teams.
+- Los usuarios creados no tienen asignadas las licencias y no puede utilizar el teams. [Fuente](https://answers.microsoft.com/en-us/msoffice/forum/all/i-am-getting-a-youre-missing-out-ask-your-admin-to/3a36ff27-6608-4272-92cb-feccc6c1ec0d)
+- [Agregar licencias a usuarios](https://docs.microsoft.com/en-us/graph/api/user-assignlicense?view=graph-rest-1.0&tabs=http)
 - In order to create a team, the group you're creating it from must have a least one owner.
 - The team that's created will always inherit from the group's display name, visibility, specialization, and members. Therefore, when making this call with the group@odata.bind property, the inclusion of team displayName, visibility, specialization, or members@odata.bind properties will return an error.
 - Cuando se asigna el propietario al grupo puede tardar unos minutos hasta que permita crear el team.
