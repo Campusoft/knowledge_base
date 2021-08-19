@@ -51,6 +51,7 @@ https://docs.microsoft.com/es-es/microsoft-365/admin/create-groups/compare-group
 #### Generalidades
 - El token dura 60 minutos
 - For performance reasons, the create, get, and list operations return only a subset of more commonly used properties by default. These default properties are noted in the Properties section. To get any of the properties that are not returned by default, specify them in a $select OData query option.
+- Es necesaria la cabecera: ConsistencyLevel=eventual y $count al usar los parámetros de consulta $search, $filter, $orderby u OData. Usa un índice que podría no estar actualizado con los cambios recientes realizados en el objeto.
 
 #### Obtener autorización a partir de clientId, tenant y clientSecret
 - Permite obtener un proveedor de servicios a partir de las credenciales del cliente
