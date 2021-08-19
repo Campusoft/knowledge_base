@@ -7,6 +7,11 @@ Suscribirse programa desarrollo
 https://developer.microsoft.com/en-us/microsoft-365/dev-program
 
 
+
+In Microsoft Graph, Microsoft Teams is represented by a group resource. Both Microsoft Teams and Microsoft 365 groups address the various needs of group collaboration. Almost all the group-based features apply to Microsoft Teams and Microsoft 365 groups, such as group calendar, files, notes, photo, plans, and so on. The main difference between a team and a Microsoft 365 group is the mode of communication between members. Team members communicate by persistent chat in the context of a specific team. Microsoft 365 group members communicate by group conversations, which are email conversations that occur in the context of a group in Outlook.
+
+
+
 # Revisar (Varios)
 
 

@@ -41,6 +41,10 @@ https://docs.microsoft.com/en-us/graph/sdks/create-client?view=graph-rest-1.0&ta
 ## Manuales
 
 Build .NET Core apps with Microsoft Graph
+
+- Register the app in the portal. https://aad.portal.azure.com/
+- Permisos
+
 https://docs.microsoft.com/en-us/graph/tutorials/dotnet-core?view=graph-rest-1.0
 
 

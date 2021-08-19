@@ -30,6 +30,21 @@ Microsoft 365 Groups is the foundational membership service that drives all team
     Roadmap (if you have Project for the web)
     Stream
 
+
+# Tipos Grupos
+
+
+En la sección Grupos del Centro de administración de Microsoft 365, puede crear y administrar estos tipos de grupos:
+
+- Los grupos de Microsoft 365 se usan para la colaboración entre usuarios, tanto dentro como fuera de la compañía. Incluyen servicios de colaboración como SharePoint y Planner.
+- Los grupos de distribución se usan para enviar notificaciones de correo electrónico a un grupo de personas.
+- Los grupos de seguridad se usan para conceder acceso a los recursos como SharePoint.
+- Los grupos de seguridad habilitados para correo se usan para conceder acceso a recursos como SharePoint y enviar notificaciones por correo electrónico a estos usuarios.
+- Los buzones compartidos se usan cuando varios usuarios necesitan tener acceso al mismo buzón, como la dirección de correo electrónico del soporte técnico e información de la empresa.
+
+https://docs.microsoft.com/es-es/microsoft-365/admin/create-groups/compare-groups?view=o365-worldwide
+
+
 ---
 
 # Gestión a través de SDK
