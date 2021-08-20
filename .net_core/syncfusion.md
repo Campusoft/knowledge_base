@@ -50,5 +50,6 @@ Al generar automáticamente los campos syncfusion descompone el objeto y genera 
 
 ## Fuentes	
 - [Ejemplos](https://ej2.syncfusion.com/aspnetcore/QueryBuilder/DefaultFunctionalities#/material)
+- [Proyecto Ejemplo Oficial](https://github.com/syncfusion/ej2-aspnetcore-samples)
 - [Documentación](https://ej2.syncfusion.com/aspnetcore/documentation/query-builder/getting-started/)
 - [DropDownList](https://ej2.syncfusion.com/javascript/documentation/drop-down-list/how-to/add-item/)
