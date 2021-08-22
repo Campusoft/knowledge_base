@@ -47,6 +47,14 @@ Al generar automáticamente los campos syncfusion descompone el objeto y genera 
 		public string Desc { get; set; }
 	}
 	```
+## Consideraciones
+- Exiten 3 tipos de reglas:
+	- Comparativa directa: A == B
+	- Comparativa por función: A is not null
+	- Comparativa por rango: A between X and Y
+- No se puede mapear directamente el json a objeto QueryBuilderRule
+- El operador between y notbetween no tienen equivalentes en c# por lo que se deben descomponer en 2 reglas
+- Los valores tipo date deben ser convertidos a DateTime. Llegan en formato MM/dd/yy después del año 2000 y MM/dd/yyyy antes del 2000
 
 ## Fuentes	
 - [Ejemplos](https://ej2.syncfusion.com/aspnetcore/QueryBuilder/DefaultFunctionalities#/material)
