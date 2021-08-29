@@ -10,7 +10,8 @@ Documentación oficial
 https://docs.moodle.org/311/en/Main_page
 
 Utilizar servicios web
-https://docs.moodle.org/311/en/Using_web_services
+- https://docs.moodle.org/311/en/Using_web_services
+- Se puede utilizar el usuario administrador que tiene permisos completos o crear uno para el servicio a utilizar
 1. Habilitar servicios web
 	Menú/Administración del sitio/Opciones avanzadas
 		Habilitar servicios web
