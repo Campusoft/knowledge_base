@@ -301,6 +301,59 @@ https://docs.moodle.org/311/en/Main_page
 			```
 		- Recibe: application/x-www-form-urlencoded, json o xml
 		- Devuelve: application/json o xml
+	- [RESTful mejorado](https://github.com/FMCorz/moodle-webservice_restful):
+		- Moodle 3.4
+		- PHP 7.0
+		Está en versión alpha por lo que no está listo para producción
+			```
+			GET /webservice/restful/index.php/courses/2 HTTP/1.1
+			Accept: */*
+			Authorization: Bearer 10787a782d5cea26d69e103729d594f7
+			Host: localhost
+
+
+			HTTP/1.1 200 OK
+			Connection: Keep-Alive
+			Content-Length: 4211
+			Content-Type: application/json
+			Date: Thu, 28 Sep 2017 11:47:55 GMT
+			Keep-Alive: timeout=5, max=100
+			Server: Apache/2.4.25 (Ubuntu)
+
+			{
+				"id": 2,
+				"fullname": "An Awesome Course",
+				"shortname": "AwesomeCourse",
+				...
+			}
+			
+			POST /webservice/restful/index.php/courses HTTP/1.1
+			Accept: application/json, */*
+			Accept-Encoding: gzip, deflate
+			Authorization: Bearer 10787a782d5cea26d69e103729d594f7
+			Content-Length: 89
+			Content-Type: application/json
+
+			{
+				"categoryid": "1",
+				"fullname": "Another Awesome Course",
+				"shortname": "AnotherAwesome"
+			}
+
+			HTTP/1.1 201 Created
+			Connection: Keep-Alive
+			Content-Length: 39
+			Content-Type: application/json
+			Date: Thu, 28 Sep 2017 11:54:17 GMT
+			Keep-Alive: timeout=5, max=100
+			Server: Apache/2.4.25 (Ubuntu)
+
+			{
+				"id": 12,
+				"shortname": "AnotherAwesome"
+			}
+	
+			```
 ## Crear información
 - Funciona igual que para obtener, método post y función. Dependiendo del protocolo es la implementación.
 	
