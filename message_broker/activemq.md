@@ -222,6 +222,31 @@ Contiene algunas ejemplos para mysql, Derby,  postgres y Oracle
 En la carpeta de instalacion existe algunos ejemplos.
 \examples\conf\activemq-security.xml
 
+# Configuration
+
+
+## Message Redelivery and DLQ Handling
+
+The default Dead Letter Queue in ActiveMQ is called ActiveMQ.DLQ; all un-deliverable messages will get sent to this queue and this can be difficult to manage. So, you can set an individualDeadLetterStrategy in the destination policy map of the activemq.xml configuration file, which allows you to specify a specific dead letter queue prefix for a given queue or topic. You can apply this strategy using wild card if you like so that all queues get their own dead-letter queue, as is shown in the example below.
+
+https://activemq.apache.org/message-redelivery-and-dlq-handling
+
+```
+<!-- Destination specific policies using destination names or wildcards -->
+<destinationPolicy>
+	<policyMap>
+		<policyEntries>
+			<policyEntry queue=">" producerFlowControl="true" memoryLimit="20mb">
+				<deadLetterStrategy>
+				  <individualDeadLetterStrategy queuePrefix="DLQ." useQueueForQueueMessages="true" />
+				</deadLetterStrategy>
+			</policyEntry>
+			<policyEntry topic=">" producerFlowControl="true" memoryLimit="20mb">
+			</policyEntry>
+		</policyEntries>
+	</policyMap>
+</destinationPolicy>
+```
 
 
 # Referencias
@@ -232,3 +257,8 @@ Artemis Differences From ActiveMQ 5
 - JMS 1.1 & 2.0 with full client implementation including JNDI
 http://activemq.apache.org/components/artemis/migration
 
+# REVISIONES
+
+JMSXDeliveryCount
+
+You can use the JMSXDeliveryCount message property to detect situations where a poison message is being continually received and rolled back. The JMSXDeliveryCount message property provides a count value for the number of times that a particular message is delivered. You can use this property in your application to identify poison messages by establishing a threshold value for the delivery count. When the threshold is reached, you can provide alternative handling for the message. For example, you can send the message to a special queue for failed messages, or you can discard the message.

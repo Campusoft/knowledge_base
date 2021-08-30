@@ -141,3 +141,10 @@ public static IDictionary<string, object> ObjectToDictionary(object value)
 ```
 
 https://github.com/dotnet/aspnetcore/blob/main/src/Shared/PropertyHelper/PropertyHelper.cs
+
+# Workflow
+## Workflow Core
+
+
+## Elsa Core
+Elsa Core is an open-source workflows library that can be used in any kind of .NET Core application. Using such a workflow library can be useful to implement business rules visually or programmatically.

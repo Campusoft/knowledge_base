@@ -1,5 +1,7 @@
 # Syncfusion 
----
+
+
+
 # QueryBuilder
 ## Tipo de presentación
 A través de la opción displayMode se puede presentar horizontal o verticalmente el formulario.

@@ -74,6 +74,23 @@ Una tubería (pipeline o cauce) consiste en una cadena de procesos conectados de
  
 Message design is not object-oriented design. Messages should contain state, not behavior. Behavior should be in a separate class or service.
 
+# pattern
+
+## outbox pattern
+
+Pattern: Transactional outbox
+https://microservices.io/patterns/data/transactional-outbox.html
+
+Reliable Microservices Data Exchange With the Outbox Pattern
+https://debezium.io/blog/2019/02/19/reliable-microservices-data-exchange-with-the-outbox-pattern/
+
+Outbox Architecture. (Debezium, Kafka)
+![imagen](https://miro.medium.com/max/875/0*s7cf-0rZHvP0amn4)
+
+## Saga
+
+Pattern: Saga
+https://microservices.io/patterns/data/saga.html
 
 
 # Revision (TODO)

@@ -33,3 +33,12 @@ Microsoft Cloud Adoption Framework for Azure
 The Cloud Adoption Framework is a collection of documentation, implementation guidance, best practices, and tools that are proven guidance from Microsoft designed to accelerate your cloud adoption journey.
 
 https://docs.microsoft.com/en-us/azure/cloud-adoption-framework/
+
+
+# Azure Kubernetes Service 
+
+
+
+Azure Kubernetes Service (AKS) is a free container service that simplifies the deployment, management, and operations of Kubernetes as a fully managed Kubernetes container orchestrator service.
+
+Paying for only the virtual machines, and associated storage and networking resources consumed makes AKS the most efficient and cost-effective container service on the market.

@@ -1,6 +1,4 @@
-
-
-### BDD (Behauvior Driven Development)
+# BDD (Behauvior Driven Development)
 
 - Dado: los pasos necesarios para poner al sistema en el estado que se desea probar
 - Cuando: La interacción del usuario que acciona la funcionalidad que deseamos testear.
@@ -10,9 +8,9 @@
 - Then: Especifica el resultado esperado en el test. Observamos los cambios en el sistema y vemos si son los deseados.
 
 
-### Herramientas
+# Herramientas
 
-#### Xunit
+## Xunit
 
 Getting Started with xUnit.net
 Using .NET Framework with Visual Studio
@@ -41,7 +39,7 @@ https://xunit.net/docs/getting-started/netcore/visual-studio
 Testing Exceptions with xUnit and Actions
 https://ardalis.com/testing-exceptions-with-xunit-and-actions/
 
-#### Mock 
+## Mock 
 
 Bogus
 
