@@ -366,6 +366,8 @@ RESPONSE
 	
 			```
 ## Paginación
+- https://moodle.bocetosoft.com/admin/webservice/documentation.php
+- https://docs.moodle.org/dev/Web_service_API_functions
 - Algunas funciones (endpoints) de consultas (get) soportan paginación. Ej. 
 	- core_course_get_courses, mod_forum_get_forums_by_courses, core_course_get_categories no soportan
 	- mod_forum_get_forum_discussions si soport.
