@@ -54,7 +54,7 @@ https://docs.moodle.org/311/en/Main_page
 	- Buscar y agregar de acuerdo a la necesidad (https://docs.moodle.org/dev/Web_service_API_functions)
 ### 6. Autorizar usuario para utilizar servicio creado
 - Site administration/Server/Web services/External services/Authorised users
-### 7. Crear rol y agregar capacidades de rest, restful, etc
+### 7. Crear rol y agregar capacidades de rest, SOAP, etc
 - Site administration/Users/Permissions/Define roles	
 ### 8. Crear token
 - Menú/Administración del sitio/Servidor/Servicios Web/Administrar fichas (tokens)
@@ -134,7 +134,17 @@ https://docs.moodle.org/311/en/Main_page
 - [MoodleWSTest](https://github.com/Campusoft/LABS/tree/main/LMS/moodle)
 - Operaciones básicas con protocolo REST y RESTful. Detalles en readme incluido en laboratorio.
 ## Connection
-- Token generado en moodle por cada usuario y obtenido a través de usuario, clave y servicio
+- Token generado en moodle por cada usuario y obtenido a través de usuario, clave y servicio (nombre del servicio que se desea consumir).
+```
+REQUEST
+[URL_DOODLE]/login/token.php?username={username}&password={password}&service={service}
+
+RESPONSE
+{
+    "token": "d49bda52a7ff829218ed9e1e645d499d",
+    "privatetoken": null
+}
+```
 ## Obtener informacion
 - Unicamente peticiones POST a través de varios protocolos: SOAP, REST, XMLRPC (por defecto pero se pueden agregar a través de plugins. Ej. RESTful)
 - Maneja concepto de funciones que serían los endpoints tradicionales y pueden invocarse de diversas formas dependiendo del protocolo. Cada función recibe sus propios parámetros en función del protocolo. 
@@ -293,6 +303,7 @@ https://docs.moodle.org/311/en/Main_page
 			```
 		- Recibe: application/x-www-form-urlencoded
 		- Devuelve: XML, JSON
+- **Plugins para agregar "Protocolos"**
 	- [RESTful](https://moodle.org/plugins/webservice_restful): 
 		- Versiones soportadas: 3.1, 3.2, 3.3, 3.4, 3.5
 		- El concepto de funciones se convierte en endpoints. La función se invoca desde la url. Ej. 
@@ -301,6 +312,105 @@ https://docs.moodle.org/311/en/Main_page
 			```
 		- Recibe: application/x-www-form-urlencoded, json o xml
 		- Devuelve: application/json o xml
+	- [RESTful mejorado](https://github.com/FMCorz/moodle-webservice_restful):
+		- Moodle 3.4
+		- PHP 7.0
+		Está en versión alpha por lo que no está listo para producción
+			```
+			GET /webservice/restful/index.php/courses/2 HTTP/1.1
+			Accept: */*
+			Authorization: Bearer 10787a782d5cea26d69e103729d594f7
+			Host: localhost
+
+
+			HTTP/1.1 200 OK
+			Connection: Keep-Alive
+			Content-Length: 4211
+			Content-Type: application/json
+			Date: Thu, 28 Sep 2017 11:47:55 GMT
+			Keep-Alive: timeout=5, max=100
+			Server: Apache/2.4.25 (Ubuntu)
+
+			{
+				"id": 2,
+				"fullname": "An Awesome Course",
+				"shortname": "AwesomeCourse",
+				...
+			}
+			
+			POST /webservice/restful/index.php/courses HTTP/1.1
+			Accept: application/json, */*
+			Accept-Encoding: gzip, deflate
+			Authorization: Bearer 10787a782d5cea26d69e103729d594f7
+			Content-Length: 89
+			Content-Type: application/json
+
+			{
+				"categoryid": "1",
+				"fullname": "Another Awesome Course",
+				"shortname": "AnotherAwesome"
+			}
+
+			HTTP/1.1 201 Created
+			Connection: Keep-Alive
+			Content-Length: 39
+			Content-Type: application/json
+			Date: Thu, 28 Sep 2017 11:54:17 GMT
+			Keep-Alive: timeout=5, max=100
+			Server: Apache/2.4.25 (Ubuntu)
+
+			{
+				"id": 12,
+				"shortname": "AnotherAwesome"
+			}
+	
+			```
+## Paginación
+- https://moodle.bocetosoft.com/admin/webservice/documentation.php
+- https://docs.moodle.org/dev/Web_service_API_functions
+- Algunas funciones (endpoints) de consultas (get) soportan paginación. Ej. 
+	- core_course_get_courses, mod_forum_get_forums_by_courses, core_course_get_categories no soportan
+	- mod_forum_get_forum_discussions si soport.
+- Algunas funciones (endpoints) de búsqueda (search) soportan paginación. Ej. 
+	- core_cohort_search_cohorts, core_course_search_courses, core_enrol_search_users soportan
+	- core_competency_search_competencies no soporta
+- No todas funciones tienen el mismo nombre de parámetros.
+	- Página: page, limitfrom; Número de registros: perpage, limitnum.
+- No todas las implementaciones tienen el mismo valor por defecto. 
+	- core_cohort_search_cohorts: limitnum (Default to "25")
+	- core_course_search_courses: perpage (Default to "0").
+```
+REQUEST
+wstoken: "10787a782d5cea26d69e103729d594f7",
+wsfunction: "core_course_search_courses",
+moodlewsrestformat: "json",
+criterianame: "search", //criteria name (search, modulelist (only admins), blocklist (only admins), tagid)
+criteriavalue: "a",
+page: 0, //Paginación desde la posición 0, primera página
+perpage: 10
+
+RESPONSE
+{
+    "total": 22,
+    "courses": [
+        {
+            "id": 1,
+            "fullname": "Lawrence Haag",
+            "displayname": "Lawrence Haag",
+			...        
+		},
+        {
+            "id": 2,
+            "fullname": "Lawrence Haag",
+            "displayname": "Lawrence Haag",
+			...        
+		},
+	...
+    ],
+    "warnings": []
+}
+```
+			
 ## Crear información
 - Funciona igual que para obtener, método post y función. Dependiendo del protocolo es la implementación.
 	
