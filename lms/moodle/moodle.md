@@ -1,8 +1,7 @@
 # Moodle
 - Moodle significa Entorno de Aprendizaje Dinámico Orientado a Objetos Modular (del inglés, Modular Object-Oriented Dynamic Learning Environment o MOODLE).
 - Open source: licencia en abierto bajo GNU Pública General y Creative Commons.
-- En Moodle, un "usuario" es un participante con un rol determinado. Cada espacio virtual se concibe como un contexto, ej. página de inicio, un curso, un foro, un chat, etc. En cada uno de esos contextos, cada usuario tiene atribuido un determinado rol. Por ejemplo, puede ser profesor en un curso, y estudiante en otro. En sucesivas versiones y mejoras, los permisos asociados a esos roles se han ido especializando, los roles y sus privilegios son plenamente configurables. Pueden crearse nuevos e incluso heredarse de los ya establecidos. En esencia, se trata de administradores, profesores y estudiantes.La gestión de cuentas de usuario permite ver la lista de participantes o inscritos, configurar acciones masivas con ellos (relativas a los mensajes, descargas, etc.) o añadir usuarios y predefinir campos para su perfil.
-- No existe el concepto Profesor (teacher) sino un rol en un contexto determinado. Ej. el mismo usuario puede ser estudiante en un curso y profesor en otro.
+- https://es.wikipedia.org/wiki/Moodle
 ## Requisitos
 Moodle es una aplicación web que se ejecuta sin modificaciones en UNIX, GNU/Linux, OpenSolaris, FreeBSD, Windows, Mac OS X, NetWare y otros sistemas que soportan PHP incluyendo la mayoría de proveedores de hosting Web. Además, para poder utilizar esta plataforma no hace falta saber programar. Además, todos los archivos están en continuas copias de seguridad y cifrados.
 
@@ -103,7 +102,7 @@ https://docs.moodle.org/311/en/Main_page
 ## [Seguridad](https://docs.moodle.org/dev/Security#Security_of_web_applications)
 	- Manual accounts (no desabilitable)
 	- No login (no desabilitable)
-	- Email-based self-registration (habilitada por defecto y utilizada en el laboratorio)
+	- Email-based self-registration (habilitada por defecto)
 	- CAS server (SSO) (desabilitada por defecto)
 	- External database (desabilitada por defecto)
 	- LDAP server (desabilitada por defecto)
@@ -123,16 +122,12 @@ https://docs.moodle.org/311/en/Main_page
 - [Esquema](https://www.examulator.com/er/)
 - [Wikipedia](https://es.wikipedia.org/wiki/Moodle#Est%C3%A1ndares_internacionales_de_Moodle)
 - Moodle se basa en cursos como unidad básica. El administrador debe crear el curso, configurarlo, enrolar al alumnado y generar las actividades.
-- No existe un concepto comparable a período académico, cada curso puede tener un tiempo determinado o sin un límite.
-- La organización está basada en jerarquía por categorías (similar a cuentas de canvas). Todo curso debe pertenecer a una sola categoría pero las categorías pueden pertenecer a otras categorías con lo que se arma el árbol de categorización de cursos. Ej. [Jerarquía UTPL](https://viewer.diagrams.net/?page-id=WeD-wPUkryz0lao89JwR&highlight=0000ff&edit=_blank&layers=1&nav=1&page-id=WeD-wPUkryz0lao89JwR#G1VLFsD0ZAK_7Gha2JWZ03ePwK9Osvn8fR) UTPL/MODALIDAD/NIVEL/AREA/DEPARTAMENTO/SECCIÓN/
+- La organización está basada en jerarquía por categorías. Todo curso debe pertenecer a una sola categoría pero las categorías pueden pertenecer a otras categorías con lo que se arma el árbol de categorización de cursos. Ej. UNIVERSIDAD/MODALIDAD/NIVEL/AREA/DEPARTAMENTO/SECCIÓN/Curso
 - Los cursos tienen asociados:
 	- Grades
 	- Enrolment
 	- Activities
 - El enrolamiento consiste en agregar usuarios (los usuarios no tiene rol por si mismos). Una vez agregados los usuarios se puede asignar a cada uno un rol (estudiante, profesor). Esta asignación es a nivel de contexto, es decir, los que son estudiantes o profesores solo lo serán en este curso en particular, estos mismos pueden tener diferente rol en otro cursos (profesores siendo estudiantes y viceversa).
-## Laboratorio de API
-- [MoodleWSTest](https://github.com/Campusoft/LABS/tree/main/LMS/moodle)
-- Operaciones básicas con protocolo REST y RESTful. Detalles en readme incluido en laboratorio.
 ## Connection
 - Token generado en moodle por cada usuario y obtenido a través de usuario, clave y servicio (nombre del servicio que se desea consumir).
 ```
@@ -157,143 +152,9 @@ RESPONSE
 		- verb: preferably one of get, create, delete, update or eventually other that well describes the action
 		- noun: moodle objects, usually plural such as user_preferences here, or e.g. posts, discussions, users, courses etc.
 				This naming convention has been in place since Moodle 2.2. See MDL-29106 for more details.
-	- La documentación de las funciones está divida en dos partes. 
+	- **Documentación**
 		- [Descripción de funciones](https://docs.moodle.org/dev/Web_service_API_functions#API_Roadmap): Lista y presenta información relevante de las funciones (Componente, Nombre, Versión de introducción, Descripción, Disponibilidad con AJAX, Login requerido, Servicios que la incluyen)
-		- [Documentación del API](http://localhost:8080/moodle/admin/webservice/documentation.php). Esta última viene incluida con la instalción de moodle y debe ser habilitada. Contiene requisitos para request y responses. Ej.
-		```
-		REQUEST
-			XML-RPC (PHP structure)
-			[courses] =>
-				Array 
-					(
-					[0] =>
-						Array 
-							(
-							[fullname] => string                
-							[shortname] => string                
-							[categoryid] => int                
-							[idnumber] => string                
-							[summary] => string                
-							[summaryformat] => int                
-							[format] => string                
-							[showgrades] => int                
-							[newsitems] => int                
-							[startdate] => int                
-							[enddate] => int                
-							[numsections] => int                
-							[maxbytes] => int                
-							[showreports] => int                
-							[visible] => int                
-							[hiddensections] => int                
-							[groupmode] => int                
-							[groupmodeforce] => int                
-							[defaultgroupingid] => int                
-							[enablecompletion] => int                
-							[completionnotify] => int                
-							[lang] => string                
-							[forcetheme] => string                
-							[courseformatoptions] =>
-								Array 
-									(
-									[0] =>
-										Array 
-											(
-											[name] => string                                
-											[value] => string                                
-											)
-									)                
-							[customfields] =>
-								Array 
-									(
-									[0] =>
-										Array 
-											(
-											[shortname] => string                                
-											[value] => string                                
-											)
-									)                
-							)
-					)		
-					
-					
-			REST (POST parameters)
-			courses[0][fullname]= string
-			courses[0][shortname]= string
-			courses[0][categoryid]= int
-			courses[0][idnumber]= string
-			courses[0][summary]= string
-			courses[0][summaryformat]= int
-			courses[0][format]= string
-			courses[0][showgrades]= int
-			courses[0][newsitems]= int
-			courses[0][startdate]= int
-			courses[0][enddate]= int
-			courses[0][numsections]= int
-			courses[0][maxbytes]= int
-			courses[0][showreports]= int
-			courses[0][visible]= int
-			courses[0][hiddensections]= int
-			courses[0][groupmode]= int
-			courses[0][groupmodeforce]= int
-			courses[0][defaultgroupingid]= int
-			courses[0][enablecompletion]= int
-			courses[0][completionnotify]= int
-			courses[0][lang]= string
-			courses[0][forcetheme]= string
-			courses[0][courseformatoptions][0][name]= string
-			courses[0][courseformatoptions][0][value]= string
-			courses[0][customfields][0][shortname]= string
-			courses[0][customfields][0][value]= string	
-
-			RESTful (POST parameters)
-			{
-				"courses": [
-					{
-						"fullname": string,
-						"categoryid": int,
-						"shortname": string,
-						"summary": string
-					}
-				]
-			}
-
-		RESPONSE
-			XML-RPC (PHP structure)
-				Array 
-					(
-					[0] =>
-						Array 
-							(
-							[id] => int                
-							[shortname] => string                
-							)
-					)
-					
-			REST
-			<?xml version="1.0" encoding="UTF-8" ?>
-			<RESPONSE>
-				<MULTIPLE>
-					<SINGLE>
-						<KEY name="id">
-							<VALUE>int</VALUE>
-						</KEY>
-						<KEY name="shortname">
-							<VALUE>string</VALUE>
-						</KEY>
-					</SINGLE>
-				</MULTIPLE>
-			</RESPONSE>		
-			
-			RESTful (POST parameters)
-			[
-				{
-					"id": int,
-					"shortname": string
-				}
-			]			
-		
-
-		```
+		- Documentación para desarrolladores: Viene incluida con la instalación de moodle (Web Services/API Documentacion) y debe ser habilitada (Administration/Server/Web services/Manage protocols). Contiene requisitos para request y responses.
 - **Protocolos**
 - Cada protocolo puede habilitarse individualmente para hacer peticiones en diferentes formatos:
 	- REST: 
@@ -304,69 +165,9 @@ RESPONSE
 		- Recibe: application/x-www-form-urlencoded
 		- Devuelve: XML, JSON
 - **Plugins para agregar "Protocolos"**
-	- [RESTful](https://moodle.org/plugins/webservice_restful): 
-		- Versiones soportadas: 3.1, 3.2, 3.3, 3.4, 3.5
-		- El concepto de funciones se convierte en endpoints. La función se invoca desde la url. Ej. 
-			```
-			{URL_MOODLE}/webservice/restful/server.php/core_course_create_courses
-			```
-		- Recibe: application/x-www-form-urlencoded, json o xml
-		- Devuelve: application/json o xml
-	- [RESTful mejorado](https://github.com/FMCorz/moodle-webservice_restful):
-		- Moodle 3.4
-		- PHP 7.0
-		Está en versión alpha por lo que no está listo para producción
-			```
-			GET /webservice/restful/index.php/courses/2 HTTP/1.1
-			Accept: */*
-			Authorization: Bearer 10787a782d5cea26d69e103729d594f7
-			Host: localhost
-
-
-			HTTP/1.1 200 OK
-			Connection: Keep-Alive
-			Content-Length: 4211
-			Content-Type: application/json
-			Date: Thu, 28 Sep 2017 11:47:55 GMT
-			Keep-Alive: timeout=5, max=100
-			Server: Apache/2.4.25 (Ubuntu)
-
-			{
-				"id": 2,
-				"fullname": "An Awesome Course",
-				"shortname": "AwesomeCourse",
-				...
-			}
-			
-			POST /webservice/restful/index.php/courses HTTP/1.1
-			Accept: application/json, */*
-			Accept-Encoding: gzip, deflate
-			Authorization: Bearer 10787a782d5cea26d69e103729d594f7
-			Content-Length: 89
-			Content-Type: application/json
-
-			{
-				"categoryid": "1",
-				"fullname": "Another Awesome Course",
-				"shortname": "AnotherAwesome"
-			}
-
-			HTTP/1.1 201 Created
-			Connection: Keep-Alive
-			Content-Length: 39
-			Content-Type: application/json
-			Date: Thu, 28 Sep 2017 11:54:17 GMT
-			Keep-Alive: timeout=5, max=100
-			Server: Apache/2.4.25 (Ubuntu)
-
-			{
-				"id": 12,
-				"shortname": "AnotherAwesome"
-			}
-	
-			```
+- Existen plugins para agregar protocolos por parte de terceros. Ej. [RESTful](https://moodle.org/plugins/webservice_restful)
 ## Paginación
-- https://moodle.bocetosoft.com/admin/webservice/documentation.php
+- https://github.com/moodle/moodle
 - https://docs.moodle.org/dev/Web_service_API_functions
 - Algunas funciones (endpoints) de consultas (get) soportan paginación. Ej. 
 	- core_course_get_courses, mod_forum_get_forums_by_courses, core_course_get_categories no soportan
@@ -379,6 +180,7 @@ RESPONSE
 - No todas las implementaciones tienen el mismo valor por defecto. 
 	- core_cohort_search_cohorts: limitnum (Default to "25")
 	- core_course_search_courses: perpage (Default to "0").
+- Ejemplo de request y response de paginación de cursos
 ```
 REQUEST
 wstoken: "10787a782d5cea26d69e103729d594f7",
@@ -410,7 +212,25 @@ RESPONSE
     "warnings": []
 }
 ```
-			
 ## Crear información
-- Funciona igual que para obtener, método post y función. Dependiendo del protocolo es la implementación.
+- Funciona igual que para obtener, método post, función y parámetros de acuerdo a la documentación para desarrolladores. Dependiendo del protocolo es la implementación.
+- Ejemplo de creación de cursos
+```
+REQUEST
+wstoken: "10787a782d5cea26d69e103729d594f7",
+wsfunction: "core_course_search_courses",
+moodlewsrestformat: "json",
+courses[0][fullname]: "Nombre del curso"
+courses[0][categoryid]: 1
+courses[0][shortname]: "nombre_corto", //debe ser única
+courses[0][summary]: "Descripción"
+
+RESPONSE
+[
+    {
+        "id": 60,
+        "shortname": "nombre_corto"
+    }
+]
+```
 	
