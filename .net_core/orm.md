@@ -21,9 +21,14 @@ https://imar.spaanjaars.com/588/prefixing-id-columns-with-the-table-name-in-enti
 
 ## Migration
 
+.NET Core CLI
+- dotnet ef migrations add InitialCreate
 
-dotnet ef migrations add InitialCreate
+Visual Studio
+- Add-Migration InitialCreate
 
+Visual Studio (Actualizar base de datos)
+- Update-Database
 
 Migrations Overview
 https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli

@@ -25,6 +25,16 @@ https://github.com/manfredsteyer/angular-oauth2-oidc
 
 
 Varios artículos para aprender angular 8 
+
+-    What's New Angular 8
+-    Angular 8: How to start (Day 1)
+-    Angular 8: Components (Day 2)
+-    Angular 8: Data Binding (Day 3)
+-    Angular 8: Directives (Day 4)
+-    Angular 8: Pipes (Day 5)
+-    Angular 8: View Encapsulation (Day 6)
+
+
 https://www.c-sharpcorner.com/article/learn-angular-8-step-by-step-in-10-days-angular-forms-day-7/
 
 
@@ -49,6 +59,11 @@ https://github.com/dotnet-architecture/eShopOnContainers
 
 
 Add an AngularJS admin GUI to any RESTful API http://ng-admin-book.marmelab.com/
+
+
+ Customizable admin dashboard template based on Angular 10+ 
+https://github.com/akveo/ngx-admin
+
 
 
 **Referencias de Arquitecturas**

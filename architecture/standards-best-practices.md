@@ -21,6 +21,15 @@ Refactoring.Guru te ayuda a descubrir todo lo que necesitas saber sobre la refac
 (Posee conceptos, ilustraciones)
 https://refactoring.guru/es
 
+
+### CQRS
+
+Revision
+CQRS and Event Sourcing in Event Driven Architecture of Ordering Microservices
+https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architecture-of-ordering-microservices-fb67dc44da7a
+
+
+
 # Resiliente
 
 Una app resiliente es una que continúa funcionando a pesar de tener fallas en los componentes del sistema. La resiliencia requiere planificación en todos los niveles de la arquitectura. Influye en el diseño de la infraestructura y la red, y en el diseño de la app y el almacenamiento de datos. La resiliencia también se extiende a las personas y la cultura.

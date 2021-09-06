@@ -20,7 +20,9 @@ A stack of ScriptObject that provides the actual variables/functions accessible 
 
 The ScriptObject is a special implementation of a Dictionary<string, object> that runtime properties and functions accessible to a template:
 
-
+1.4 Whitespace control
+(Controlar los saltos lineas de las instrucciones )
+https://github.com/scriban/scriban/blob/master/doc/language.md#14-whitespace-control
 
 # RazorLight
 

@@ -59,6 +59,10 @@ LINQ to Objects is missing a few desirable features. This project enhances LINQ 
 
 https://github.com/morelinq/MoreLINQ
 
+
+https://www.tutorialsteacher.com/linq/linq-tutorials
+
+
 # Emails
 
 Envio correos
@@ -141,6 +145,16 @@ public static IDictionary<string, object> ObjectToDictionary(object value)
 ```
 
 https://github.com/dotnet/aspnetcore/blob/main/src/Shared/PropertyHelper/PropertyHelper.cs
+
+# Async
+
+Sync over async
+
+Understanding Async, Avoiding Deadlocks in C#
+https://medium.com/rubrikkgroup/understanding-async-avoiding-deadlocks-e41f8f2c6f5d
+
+Avoid GetAwaiter().GetResult() at all cost
+https://gsferreira.com/archive/2020/08/avoid-getawaiter-getresult-at-all-cost/
 
 # Workflow
 ## Workflow Core

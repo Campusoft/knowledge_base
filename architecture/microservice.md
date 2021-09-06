@@ -90,6 +90,24 @@ https://medium.com/@madhukaudantha/microservice-architecture-and-design-patterns
 
 
 
+## Resiliency / resiliente
+
+Una app resiliente es una que continúa funcionando a pesar de tener fallas en los componentes del sistema. La resiliencia requiere planificación en todos los niveles de la arquitectura. Influye en el diseño de la infraestructura y la red, y en el diseño de la app y el almacenamiento de datos. La resiliencia también se extiende a las personas y la cultura.
+
+## Event driven: 
+
+En este patrón un microservicio publica un evento y otro microservicio lo consumirá.
+
+## Aggregator o Proxy
+
+Un cliente web necesita información que esta en varios microservicios. En este caso se invoca a un microservicio que agrega las llamadas a otros microservicios para obtener la respuesta.
+
+## Asynchronous messaging
+
+
+## Patrón Saga
+
+El Patrón Saga es una secuencia de transacciones locales donde cada transacción actualiza información dentro de un servicio.
 
 # Observabilidad 
 
