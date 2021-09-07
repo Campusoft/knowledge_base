@@ -1,4 +1,8 @@
 
+# RxJS
+Clear examples, explanations, and resources for RxJS.
+https://www.learnrxjs.io/
+
 # Angular Package Format
 
 Creating libraries

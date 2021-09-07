@@ -7,8 +7,37 @@ Angular is an entire platform for building modern applications.
  
  
  Angular modules is a process or system to assemble multiple angular elements, like components, directives, pipes, service, etc. so that these Angular elements can be combined in such a way that all elements can be related with each other and ultimately create an application.
+
+# component
+
+Pass data to a child component
+The @Input() decorator indicates that the property value passes in from the component's parent
+
+- https://angular.io/start#pass-data-to-a-child-component
+
+Pass data to a parent component
+@Output(). Decorator that marks a class field as an output property and supplies configuration metadata
+
+- https://angular.io/start#pass-data-to-a-parent-component
  
-## Autentificacion
+ 
+# Dependency injection in Angular
+
+Injecting services
+
+Injecting services results in making them visible to a component.
+To inject a dependency in a component's constructor(), supply a constructor argument with the dependency type
+
+```
+constructor(fooService: FooService)
+```
+
+# Consumir REST
+
+ Communicating with backend services using HTTP
+https://angular.io/guide/http
+ 
+# Autentificacion
 
 
 
@@ -19,8 +48,18 @@ https://github.com/AzureAD/microsoft-authentication-library-for-js/releases/tag/
 Support for OAuth 2 and OpenId Connect (OIDC) in Angular.  
 https://github.com/manfredsteyer/angular-oauth2-oidc
 
+# Angular para web y moviles
+Apps That Work Natively on the Web and Mobile
+https://blog.angular.io/apps-that-work-natively-on-the-web-and-mobile-9b26852495e7
 
-## Referencias
+
+# Angular CLI
+
+
+- ng generate component <NOMBRE-COMPONENTE>
+- ng generate service <NOMBRE-SERVICIO>
+
+# Referencias
 
 
 
@@ -73,10 +112,7 @@ https://github.com/gothinkster/realworld
 
 
 
-## Varios
+# Varios
 
 - Estructura 
  
-## Angular para web y moviles
-Apps That Work Natively on the Web and Mobile
-https://blog.angular.io/apps-that-work-natively-on-the-web-and-mobile-9b26852495e7
