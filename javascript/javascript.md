@@ -64,4 +64,7 @@ Web components
 
 
 A 10 minute primer to JavaScript modules, module formats, module loaders and module bundlers
+- Immediately Invoked Function Expression (IIFE)
+- Revealing Module pattern
+- ES6 module format "We can already use the ES6 module format today, but we need a transpiler like Babel to transpile our code to an ES5 module format such as AMD or CommonJS before we can actually run our code in the browser."
 https://www.jvandemo.com/a-10-minute-primer-to-javascript-modules-module-formats-module-loaders-and-module-bundlers/

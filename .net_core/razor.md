@@ -4,6 +4,10 @@
 
 
 
+
+
+
+
 ## Reusable UI using the Razor class library 
 
 El proyecto que tiene los objetos UI que seran compartidos, la estructura del proyecto  debe ser similar a:
@@ -43,10 +47,20 @@ Use file other project:
 <script src="~/_content/Campusoft.Core.Application/view-resources/Views/Setting/_EditSetting.js"></script>
     <script>
 
-#Referencias
 
+
+
+**Referencias**
 
 Including Static Resources In Razor Class Libraries In ASP.NET Core
 (Manual complete)
 https://www.mikesdotnetting.com/article/330/including-static-resources-in-razor-class-libraries-in-asp-net-core
+
+
+## RazorPage
+
+Pages
+
+Manuales
+https://www.learnrazorpages.com/
 
