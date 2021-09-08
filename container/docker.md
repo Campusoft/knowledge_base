@@ -1,4 +1,4 @@
-# docker
+# Docker
 
 # Windows
 
@@ -58,3 +58,130 @@ Azure Container Registr y: recurso público para trabajar con imágenes de Docke
 Azure. Esto proporciona un registro cercano a las implementaciones en Azure que le proporciona control sobre
 el acceso, lo que le permite usar los grupos y los permisos de Azure Active Directory
 
+# Conceptos clave, comandos y acciones
+- os + software + app
+- **Documentación:** https://docs.docker.com/
+- **Descarga docker:** https://www.docker.com/get-started
+- **Repositorio de docker:** https://hub.docker.com/
+- **Tutorial:** https://www.youtube.com/watch?v=CV_Uf3Dq-EU
+- Los contenedores son descartables por lo que siempre que se inicien tendrán datos por defecto
+- Se pueden pasar varios parámetros a la vez. Ej. -d, -p, -dp
+## Descarga de contenedores
+- Cada contenedor puede tener dependencias de otros contenedores así que docker solo baja los que no se han descargado
+- Latest: docker pull [container]
+- Custom version: docker pull [container]:[tag]
+- Tag es la version específica a descargar
+## Ejecutar
+- El comando run incluye el comando pull, si no está descargado el contenedor run también lo descargará
+- Latest: docker run [container]
+- Custom version: docker run [container]:[tag]
+- Asignando un nombre al contenedor: docker run --name [nombre del contenedor] [container] 
+- Ejecutar en background (detach): docker run -d [container]
+- Es posible que el contenedor requiera variables de entorno para su ejecución.
+	- Ej. postgres requiere un password para configurarse y se debe enviar a través de la opción -e
+	- docker run -e POSTGRE_PASSWORD=[password] postgres
+- Por defecto la red del container no es compartida y recharazá las peticiones por lo que hay que especificar el puerto
+	- docker run -p 3000:3000 [name]
+## Detener
+- Uno: docker stop [id]
+- Varios: docker stop [id1] [id2] [id3]
+## Listar contenedores descargados
+- Todos: docker images
+- Primeros por fecha de creación: docker images | head
+- Filtrados por nombre: docker images | grep [nombre]
+## Listar contenedores corriendo
+- Todos: docker ps
+- Histórico: docker ps -a
+## Ejecutar un contenedor específico
+- Se ejecuta en background por lo que no mostrará una salida por consola
+- Obtener su id: docker ps -a
+- docker start [id]
+## Ver logs
+- docker logs [id]
+- docker logs [nombre del contenedor]
+	- Modo listener
+		- docker logs -f [id] 
+## Ejecutar un comando dentro de un contenedor
+- Interactivo Terminal: docker exec -it [id] [comando]
+	- Linux, ejecutar shell: docker exec -it [id] sh
+## Crear un contenedor
+- Ubicarse en el directorio del proyecto
+- Crear el archivo Dockerfile
+	- FROM [imagen base para la app]
+		- Utilizar la misma versión en que se trabajó el proyecto
+		- Ej. Node versión 12.22.1 con linux alpine: FROM node:12.22.1-alpine3.11
+	- WORKDIR /[directorio de trabajo]
+		- Ej. WORKDIR /app
+	- COPY . .
+		- Copiar los archivos del directorio actual en /app
+	- RUN yarn install --production
+	- CMD ó ENTRYPOINT
+		- CMD [[comando],[source]]
+			- Cuando queremos ejecutar directamente un comando al inicio. Este comando puede sustituirse por ENTRYPOINT
+			- Ej. CMD ["node", "/app/src/index.js"]
+		- ENTRYPOINT [[comando]]
+			- Cuando queremos especificar el comando pero pasar el parámetro al momento de ejecutar el contenedor. Este comando puede sustituirse por CMD
+				- Ej. ENTRYPOINT ["node"]
+- Crear contenedor
+	- Solo con id: docker build .
+	- Con tag: docker build -t [nombre del tag] .
+## Persistencia
+- Se consigue a través de un volumen
+- Es bidireccional local -] docker, docker -] local
+- Se pueden realizar cambios en el código del contenedor y se ven reflejados en tiempo real, sin necesidad de reiniciar el contenedor
+	- Ejemplo
+		- Modificar un archivo de la app
+		- Ejecutar el contenedor especificando que archivo se cambió
+			- Ej. contenedor con persistencia, utilizando un puerto y el archivo upd.php modificado localmente
+			- docker run -v [ruta local]:[ruta en el container] -p 3000:3000 -v [ruta del source del código modificado]:[ruta del source en el contenedor] [nombre del contenedor]
+		- Modificar el archivo upd.php
+		- Probar en reiniciar el contenedor
+- Asignar una ruta local: docker run -v [ruta local]:[ruta en el container] [nombre del contenedor]
+- En caso de tener un puerto expuesto se debe agregar
+	- docker run -v [ruta local]:[ruta en el container] -p 3000:3000 [nombre del contenedor]
+## Actualizar un contenedor
+- docker build -t [nombre del tag del contenedor a actualizar]:[version] .
+## Compartir imagen
+- Docker Hub
+	- Permite alojar imagenes con ciertas restricciones
+	- La versión gratis obliga que todos los repositorios sean públicos. https://www.docker.com/pricing
+	- Crear cuenta gratis
+	- Loguearse
+		- Docker desktop
+			- Menu contextual
+			- Log In
+		- CMD
+			- Login: docker login
+	- Asignarle un tag único basado en el usuario
+		- Al manejar un repositorio público se debe evitar repetir identificadores por lo que se basa en el usuario que es único
+		- docker tag [id] [user]/[nombre del contenedor]:[version]
+		- Al revisar las imagenes con docker images | head notaremos que el mismo [id] tiene dos nombres
+	- Subir la imagen al repositorio
+		- La identificación del contenedor la hacemos con la configuración del tag anterior
+		- docker push [user]/[nombre del contenedor]:[version]
+## Crear red docker
+- Permite comunicar varios contenedores entre si a través de la misma red
+- docker network create [nombre]
+## Docker compose
+- Permite agrupar configuraciones para reducir utilización de línea de comandos 
+- https://docs.docker.com/compose/
+- Comentarios con #
+- Crear el archivo docker-compose.yaml:
+	- Version de composer
+		- version: "3.7"
+	- Lista de servicios a ejecutar
+		- services:
+		- Nombre del servicio que será tambien el alias
+		- Dependiendo de la necesidad se usa ports o volumes
+		- app:
+			- image: jpchsubzero/app-test:v1
+			- ports:
+				- ```- 3000:3000```
+			- volumes:
+				- ```- ./todo-mysql-data:/var/lib/mysql```
+			- environment:
+				- [key]: [value]
+- Ejecutar el compose
+	- docker-compose up -d
+- Detener
+	- docker-compose down
