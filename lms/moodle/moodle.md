@@ -119,7 +119,6 @@ https://docs.moodle.org/311/en/Main_page
 	- Funciones: como parámetro o como endpoint
 	- Protocolos: SOAP, REST, XMLRPC, personalizados a través de plugins
 ## Informacion entidades
-- [Esquema](https://www.examulator.com/er/)
 - [Wikipedia](https://es.wikipedia.org/wiki/Moodle#Est%C3%A1ndares_internacionales_de_Moodle)
 - Moodle se basa en cursos como unidad básica. El administrador debe crear el curso, configurarlo, enrolar al alumnado y generar las actividades.
 - La organización está basada en jerarquía por categorías. Todo curso debe pertenecer a una sola categoría pero las categorías pueden pertenecer a otras categorías con lo que se arma el árbol de categorización de cursos. Ej. UNIVERSIDAD/MODALIDAD/NIVEL/AREA/DEPARTAMENTO/SECCIÓN/Curso
@@ -128,6 +127,8 @@ https://docs.moodle.org/311/en/Main_page
 	- Enrolment
 	- Activities
 - El enrolamiento consiste en agregar usuarios (los usuarios no tiene rol por si mismos). Una vez agregados los usuarios se puede asignar a cada uno un rol (estudiante, profesor). Esta asignación es a nivel de contexto, es decir, los que son estudiantes o profesores solo lo serán en este curso en particular, estos mismos pueden tener diferente rol en otro cursos (profesores siendo estudiantes y viceversa).
+## Informacion base de datos
+- [Esquema](https://www.examulator.com/er/)
 ## Connection
 - Token generado en moodle por cada usuario y obtenido a través de usuario, clave y servicio (nombre del servicio que se desea consumir).
 ```
