@@ -21,33 +21,16 @@ abp generate-proxy
 ```
 https://docs.abp.io/en/abp/latest/UI/Angular/Service-Proxies
 
+
+
 # UI
 
-MVC
-
-**Theme**
-Personalizar la plantilla
-https://docs.abp.io/en/abp/latest/UI/AspNetCore/Theming#implementing-a-theme
-
-Abp posee Layout Hook Points, para inyectar contenido en los diferentes puntos de los layout
-https://docs.abp.io/en/abp/latest/UI/AspNetCore/Layout-Hooks#layout-hook-points
+themes.md
 
 
-Angular
-
--    Ng Bootstrap will be used as the UI component library.
--    Ngx-Datatable will be used as the datatable library.
-
-
-**Theme**
-
-Implementing a Theme
-https://docs.abp.io/en/abp/latest/UI/Angular/Theming#implementing-a-theme
-
-
-
-Using Angular Material Components With the ABP Framework
-https://community.abp.io/articles/using-angular-material-components-with-the-abp-framework-af8ft6t9
+Authorization in Angular UI
+- OAuth is preconfigured in Angular application templates
+https://docs.abp.io/en/abp/latest/UI/Angular/Authorization
 
 
 # API Javascript

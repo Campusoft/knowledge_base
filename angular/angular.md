@@ -3,7 +3,7 @@
  
 Angular is an entire platform for building modern applications.
 
-** Modules **
+# Modules 
  
  
  Angular modules is a process or system to assemble multiple angular elements, like components, directives, pipes, service, etc. so that these Angular elements can be combined in such a way that all elements can be related with each other and ultimately create an application.
@@ -19,6 +19,21 @@ Pass data to a parent component
 @Output(). Decorator that marks a class field as an output property and supplies configuration metadata
 
 - https://angular.io/start#pass-data-to-a-parent-component
+ 
+
+Establecer class en el host element de un componente. Utilizar propiedad host del @Component
+```
+@Component({
+   selector: 'my-component',
+   template: 'app-element',
+   host: {'class': '<NOMBRE-CLASE-HOST-ELEMENTO-COMPONENTE'}
+})
+export class App implements OnInit {
+...
+} 
+```
+ 
+# routing
  
  
 # Dependency injection in Angular
@@ -52,6 +67,8 @@ https://github.com/manfredsteyer/angular-oauth2-oidc
 Apps That Work Natively on the Web and Mobile
 https://blog.angular.io/apps-that-work-natively-on-the-web-and-mobile-9b26852495e7
 
+
+Angular PWA
 
 # Angular CLI
 

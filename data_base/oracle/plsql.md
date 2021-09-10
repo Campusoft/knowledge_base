@@ -14,3 +14,7 @@ The DBMS_SQL package provides an interface for using dynamic SQL to execute data
 
 The DBMS_PIPE package lets two or more sessions in the same instance communicate. Oracle pipes are similar in concept to the pipes used in UNIX, but Oracle pipes are not implemented using the operating system pipe mechanisms.
 
+
+## Pagination
+
+Oracle implemented ANSI standards for data paging in 12c release.

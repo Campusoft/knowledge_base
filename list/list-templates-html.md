@@ -3,6 +3,13 @@
 ## CSS Frameworks
 
 - Bootstrap
+
+Bootstrap 5
+- offcanvas component
+- New accordion
+- Form: Simplified layout
+https://blog.getbootstrap.com/2021/05/05/bootstrap-5/
+
 - Materialize, Material UI, Material Design Lite
 - Bulma
 - Semantic UI
@@ -16,8 +23,6 @@ MJML is a markup language designed to reduce the pain of coding a responsive ema
 
 
 MJML es un framework para generar fácilmente correo electrónico responsive. MJML (siglas de MailJet Markup Language) es un lenguaje de etiquetas diseñado para solventar el problema de diseñar correos electrónicos adaptados a cualquier dispositivo
-
-
 https://mjml.io/
 
 ## Plantilas Administracion UI
