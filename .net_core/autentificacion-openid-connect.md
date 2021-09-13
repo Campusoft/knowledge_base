@@ -17,9 +17,16 @@ MSAL.js 1.0 with implicit flow
 https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-app-registration
 
 
-
 ## Okta
 
 ## IdentityServer
+
+## openiddict
+
+Alternativa a  IdentityServer
+
+OpenIddict aims at providing a versatile solution to implement an OpenID Connect server and token validation in any ASP.NET Core 2.1, 3.1 and 5.0 application, and starting in OpenIddict 3.0, any ASP.NET 4.x application using Microsoft.Owin too.
+
+https://github.com/openiddict/openiddict-core
 
 

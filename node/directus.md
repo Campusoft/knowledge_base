@@ -7,6 +7,10 @@ El visionamiento de directus, es permitir tener total control sobre la base de d
 Node or PHP
 - PHP-Laravel API for Directus 9. (Working..)
 
+UI
+- Vue
+
+
 # Features 
 
 - Authentication

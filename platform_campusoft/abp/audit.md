@@ -1,0 +1,32 @@
+# Abp - Audit
+
+
+ABP Framework provides an extensible audit logging system that automates the audit logging by convention and provides configuration points to control the level of the audit logs.
+https://docs.abp.io/en/abp/latest/Audit-Logging
+
+
+
+Tables
+-   AbpAuditLogs
+	- AbpAuditLogActions
+    - AbpEntityChanges
+    - AbpEntityPropertyChanges
+
+
+Entity History
+
+
+# Revisiones
+
+
+UseCorrelationId
+
+abp/samples/MicroserviceDemo/applications/AuthServer.Host/AuthServerHostModule.cs 
+
+Implementacion ICorrelationIdProvider
+abp/framework/src/Volo.Abp.AspNetCore/Volo/Abp/AspNetCore/Tracing/AspNetCoreCorrelationIdProvider.cs
+
+
+Claim
+- CurrentUser.FindClaim: Gets a claim with the given name. Returns null if not found.
+https://docs.abp.io/en/abp/latest/CurrentUser

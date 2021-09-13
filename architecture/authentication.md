@@ -73,6 +73,11 @@ The alg claim indicates the algorithm that was used to sign the token, while the
 
 ## SAML 
 
+
+Security Assertion Markup Language (SAML) is an XML-based method for exchanging user security information between an SAML identity provider and a SAML service provider.
+
+
+
 ## OAuth 2
 
 
@@ -80,8 +85,6 @@ In OAuth2, the term Grant Type refers to the way for a client application to acq
 
 
 Los flujos de OAuth también denominados grant types hacen referencia al modo en que una aplicación obtiene un access token que le permite acceder a los datos expuestos a través de una API.
-
-
 
 Revision:
 
@@ -96,9 +99,6 @@ These security issues led to a reassessment of the value of the Implicit flow, a
 
 ## OpenID Connect
 
-
-Build a web application using OpenID Connect with AD FS 2016
-https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/development/enabling-openid-connect-with-ad-fs
 
 
 OpenID Connect describes a metadata document (RFC) that contains most of the information required for an app to do sign in. This includes information such as the URLs to use and the location of the service's public signing keys. You can find this document by appending the discovery document path to the authority URL:
@@ -175,6 +175,17 @@ Here are the steps for validating the JWT:
 OpenID specifications 
 https://openid.net/developers/specs/
 
+
+### Library or Product
+
+In the identity space, we have a lot of different offerings. They range from libraries where you have to add and implement a lot of functionality by yourself to fully managed products where even the hosting is done for you.
+
+![imagen](https://user-images.githubusercontent.com/222181/132995450-e1cecef2-87f5-4eda-8a5c-7f584a00386a.png)
+
+While libraries usually give you the most flexibility, the cost of implementation is higher than with products or SaaS offerings. Besides the client integration, you also need to build the server and integrate it into your codebase. On the other hand, products and SaaS offerings are mostly ready to run, and you are able to integrate them very quickly, which gives you a short "time to first token". This can give you a boost in development since you don't need to spend a lot of time implementing your token server. But with products, and especially SaaS offerings, you have less flexibility, and you have to rely on extensions points given by the product.
+
+Ref: https://www.thinktecture.com/en/identity/three-alternatives-to-identityserver/
+
 ### Librerias
 
 -------------------
@@ -205,3 +216,16 @@ https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
 
 Certificate Decoder
 https://www.sslshopper.com/certificate-decoder.html
+
+
+Build a web application using OpenID Connect with AD FS 2016
+https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/development/enabling-openid-connect-with-ad-fs
+
+
+## Single sign-on (SSO)
+
+Single sign-on (SSO) is an authentication scheme that allows a user to log in with a single ID and password to any of several related, yet independent, software systems. 
+
+- OpenID Connect
+- SAML2
+- WS-Federation

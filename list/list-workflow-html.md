@@ -18,6 +18,11 @@ With a focus on creating, monitoring, and managing workflows, Apache’s free an
 Camunda is a free and open-source workflow management tool that allows businesses to achieve digital transformation through the power of automated tools and efficient workflows. Built on three fundamental principles of design, automation, and improvement, Camunda ensures the process of designing workflows becomes simpler and less taxing as it once may have been. 
 
 
+Camunda BPM Platform – What is it?
+
+Camunda BPM platform is a lightweight, open-source, platform for Business Process Management. It supports several standard notations for defining business processes, among which BPMN is the most popular
+
+
 https://camunda.com/
 
 
@@ -44,7 +49,7 @@ What is Argo Workflows?
 Argo Workflows is an open source container-native workflow engine for orchestrating parallel jobs on Kubernetes. Argo Workflows is implemented as a Kubernetes CRD.
 
 - Define workflows where each step in the workflow is a container.
-
+- Model multi-step workflows as a sequence of tasks or capture the dependencies between tasks using a graph (DAG).
 
 
 https://argoproj.github.io/
@@ -52,12 +57,6 @@ https://argoproj.github.io/
 
 
 ## Power Automate
-
-## Camunda
-
-Camunda BPM Platform – What is it?
-
-Camunda BPM platform is a lightweight, open-source, platform for Business Process Management. It supports several standard notations for defining business processes, among which BPMN is the most popular
 
 # Referencias
 https://www.goodfirms.co/blog/best-free-open-source-workflow-management-software

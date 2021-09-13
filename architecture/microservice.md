@@ -279,3 +279,7 @@ Sidecar vs. Chassis for Microservices
 https://dzone.com/articles/ms-chassis-pattern
  
  
+"Es buena idea implementar microservicios sin conocer el dominio?. Considerando que la separacion de un dominio en microservicios, su conocimiento es importante."
+
+"Incluso si conocer el dominio, existe elementos que siempre o se recomienda que sean microservicios temas autentificacion, autorizacion" 
+ 

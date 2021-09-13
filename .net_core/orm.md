@@ -18,6 +18,11 @@ Buscar el prefijo que se establece para una tabla, con el nombre clase de la ent
 Prefixing ID columns with the table name in Entity Framework
 https://imar.spaanjaars.com/588/prefixing-id-columns-with-the-table-name-in-entity-framework
 
+## Global Query Filters
+
+Global query filters are LINQ query predicates applied to Entity Types in the metadata model (usually in OnModelCreating). 
+https://docs.microsoft.com/en-us/ef/core/querying/filters
+
 
 ## Migration
 
