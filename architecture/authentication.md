@@ -77,6 +77,12 @@ The alg claim indicates the algorithm that was used to sign the token, while the
 Security Assertion Markup Language (SAML) is an XML-based method for exchanging user security information between an SAML identity provider and a SAML service provider.
 
 
+Versiones:
+
+- SAML V2.0 was approved as an OASIS Standard in March 2005. 
+- SAML V1.1 was approved as an OASIS Standard in August 2003. 
+https://wiki.oasis-open.org/security
+
 
 ## OAuth 2
 
@@ -226,6 +232,13 @@ https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/development/enabl
 
 Single sign-on (SSO) is an authentication scheme that allows a user to log in with a single ID and password to any of several related, yet independent, software systems. 
 
+Estandares:
+
 - OpenID Connect
 - SAML2
 - WS-Federation
+- Central Authentication Service (CAS)
+
+Propietarios
+- Facebook Connect Single Sign On Authentication 
+
