@@ -73,6 +73,28 @@ imports: [
 
 Posee plantillas para sql-server, postgres, mysql, oracle
 
+# Event-Bus
+
+ABP Framework provides two type of event buses;
+
+- Local Event Bus is suitable for in-process messaging.
+- Distributed Event Bus is suitable for inter-process messaging, like microservices publishing and subscribing to distributed events.
+
+
+
+https://docs.abp.io/en/abp/latest/Event-Bus
+
+# Logs
+
+Serilog
+
+
+Permitir cambiar los nombres que se utilizan AbpSerilogMiddleware.  
+- IOptions<AbpAspNetCoreSerilogOptions> options
+
+abp/framework/src/Volo.Abp.AspNetCore.Serilog/Volo/Abp/AspNetCore/Serilog/AbpSerilogMiddleware.cs
+
+
 # Versiones
 
 **4.4.x**

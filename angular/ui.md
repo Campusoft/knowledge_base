@@ -1,13 +1,13 @@
 # UI
 
-## NG Bootstrap 
+# NG Bootstrap 
 
 The angular way
 Angular widgets built from the ground up using only Bootstrap 4 CSS with APIs designed for the Angular ecosystem. 
 
 https://ng-bootstrap.github.io
 
-## primeng
+# primeng
 
 The Most Powerful Angular UI Component Library
 
@@ -46,6 +46,19 @@ https://material.angular.io/guide/theming#using-a-pre-built-theme
 - Agregar material (ng add @angular/material)
 
 
+## Referencias
+
+ CRUD operations for the Angular Material Table 
+https://github.com/marinantonio/angular-mat-table-crud
+
+Angular 11 CRUD Application Using Web API With Material Design
+Manual completo. (Paginacion, Busqueda, CRUD)
+Explain how to perform simple CRUD operations using Angular11 and Web API with examples as well as how to implement cascading dropdown, searching, sorting, and pagination using Angular 11. In this tutorial, we will use the SQL Server database. 
+https://www.c-sharpcorner.com/article/angular-11-curd-application-using-web-api-with-material-design/
+
+Angular 12 CRUD Example with Web API 
+In this article, we will learn angular 12 CRUD example with web API as well as way to implement cascading dropdown, searching, sorting, and pagination using angular 12. In this tutorial, we will use the SQL Server database and for the attractive and responsive user interface for our Web app, we will use the Angular Material theme. 
+https://www.codingvila.com/2021/05/angular-12-crud-example-with-web-api.html
 
 # Ant Design of Angular
 

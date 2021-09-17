@@ -15,6 +15,14 @@ Tables
 
 Entity History
 
+# Implementaciones
+
+
+AbpAuditingMiddleware
+abp/framework/src/Volo.Abp.AspNetCore/Volo/Abp/AspNetCore/Auditing/AbpAuditingMiddleware.cs 
+
+AuditingManager
+abp/framework/src/Volo.Abp.Auditing/Volo/Abp/Auditing/AuditingManager.cs 
 
 # Revisiones
 

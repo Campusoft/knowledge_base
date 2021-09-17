@@ -1,3 +1,4 @@
+# Security
 
 Autenticación de Factor Único - solo en una contraseña
 Autenticación Multifactor (MFA).
@@ -5,6 +6,7 @@ Autenticación de Doble Factor (2FA).
 
 
 La prueba de seguridad de aplicaciones dinámicas (DAST) es una metodología de prueba de seguridad de caja negra en la que una aplicación se prueba desde el exterior. Un evaluador que usa DAST examina una aplicación cuando se está ejecutando e intenta piratearla como lo haría un atacante. En el otro extremo del espectro está la prueba de seguridad de aplicaciones estáticas (SAST), que es una metodología de prueba de caja blanca. Un evaluador que usa SAST examina la aplicación desde adentro, buscando en su código fuente condiciones que indiquen que podría haber una vulnerabilidad de seguridad.
+
 # OWASP
 
 OWASP es un proyecto de código abierto dedicado a determinar y combatir las causas que hacen que el software sea inseguro
@@ -12,6 +14,9 @@ OWASP es un proyecto de código abierto dedicado a determinar y combatir las caus
 ## CSRF
 
 El ataque CSRF funciona porque el servidor receptor no comprueba de dónde procede la solicitud. Es decir, no queda claro si la solicitud HTTP ha sido creada por la propia página web o si su origen es externo. En este contexto, el atacante se aprovecha de una laguna de seguridad del navegador; transmite las solicitudes sin evaluar las consecuencias.
+
+# Audit Trail
+
 
 # Varios
 

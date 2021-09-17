@@ -28,3 +28,8 @@ https://www.serverless.com/amazon-sqs
 
 Basic Amazon SQS architecture
 https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-basic-architecture.html
+
+
+## Cloudtrail
+
+AWS CloudTrail es un servicio que le permite realizar auditorías de gobernanza, de conformidad, operativas y de riesgo en su cuenta de AWS.

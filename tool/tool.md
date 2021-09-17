@@ -39,11 +39,7 @@ Like a spell checker, SonarLint squiggles flaws so that they can be fixed before
  
 - https://www.sonarlint.org/visualstudio/ 
 
-
-
-
 - Sonargraph-Explorer 
-
 https://www.hello2morrow.com/products/sonargraph/explorer
  
 ## Complementos (Opcionales)

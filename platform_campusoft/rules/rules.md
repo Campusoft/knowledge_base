@@ -1,6 +1,10 @@
 # Rules
 
 
+# Referencias
+ A Json based Rules Engine with extensive Dynamic expression support 
+https://github.com/microsoft/RulesEngine
+
 # Revisar
 
 expression-trees

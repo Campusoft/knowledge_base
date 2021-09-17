@@ -90,7 +90,7 @@ https://medium.com/@madhukaudantha/microservice-architecture-and-design-patterns
 
 
 
-## Resiliency / resiliente
+## Resiliency / resiliente / Resistencia
 
 Una app resiliente es una que continúa funcionando a pesar de tener fallas en los componentes del sistema. La resiliencia requiere planificación en todos los niveles de la arquitectura. Influye en el diseño de la infraestructura y la red, y en el diseño de la app y el almacenamiento de datos. La resiliencia también se extiende a las personas y la cultura.
 
@@ -109,11 +109,17 @@ Un cliente web necesita información que esta en varios microservicios. En este c
 
 El Patrón Saga es una secuencia de transacciones locales donde cada transacción actualiza información dentro de un servicio.
 
+## Sidecar pattern  (Pronu: saidecar)
+
+
+
 # Observabilidad 
 
 - Logging
 - Trazabilidad en logs
 - Alertas
+
+To achieve observability, you need to instrument everything and view all your telemetry data in one place
 
 
 La Era de la Observabilidad
@@ -129,6 +135,41 @@ Medición de DevOps: supervisión y observabilidad
 - La observabilidad es una herramienta o una solución técnica que permite a los equipos depurar de forma activa su sistema. La observabilidad se basa en la exploración de las propiedades y los patrones que no se definen con anticipación.
 
 https://cloud.google.com/architecture/devops/devops-measurement-monitoring-and-observability?hl=es-419
+
+***Traces***
+
+Traces—or more precisely, “distributed traces”—are samples of causal chains of events (or transactions) between different components in a microservices ecosystem. And like events and logs, traces are discrete and irregular in occurrence.
+
+***Metrics***
+ 
+To put it simply, metrics are numeric measurements. Metrics can include:
+- A numeric status at a moment in time (like CPU % used)
+- Aggregated measurements (like a count of events over a one-minute time, or a rate of events-per-minute)
+	
+
+
+***OpenTelemetry***
+
+
+An observability framework for cloud-native software.
+
+OpenTelemetry is a collection of tools, APIs, and SDKs. You can use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior.
+
+
+
+***Zipkin***
+
+Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in service architectures. Features include both the collection and lookup of this data.
+
+Architecture Overview
+https://zipkin.io/pages/architecture.html
+
+
+# Audit Trail
+
+Microservices shall generate and pass through microservice  call chain  a correlation  ID which  uniquely  identify  every  call  chain  and  help  grouping log messages to investigate them.
+
+Logging  agent  shall  include  correlation  ID  in  every log message
 
 # Authentication and Authorization
 

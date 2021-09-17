@@ -77,6 +77,8 @@ The alg claim indicates the algorithm that was used to sign the token, while the
 Security Assertion Markup Language (SAML) is an XML-based method for exchanging user security information between an SAML identity provider and a SAML service provider.
 
 
+SAML 2.0 es un estándar que especifica cómo un Service Provider (SP) y un Identity Provider (IdP) intercambian información de identidad de usuario. Cuando configura su Firebox para el SSO de SAML, el Firebox funciona como el SP. El IdP es un servicio de terceros que usted especifica. 
+
 Versiones:
 
 - SAML V2.0 was approved as an OASIS Standard in March 2005. 
@@ -231,6 +233,11 @@ https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/development/enabl
 ## Single sign-on (SSO)
 
 Single sign-on (SSO) is an authentication scheme that allows a user to log in with a single ID and password to any of several related, yet independent, software systems. 
+
+Terminos:
+- Identity provider (IdP)
+- Service Provider (SP)
+
 
 Estandares:
 

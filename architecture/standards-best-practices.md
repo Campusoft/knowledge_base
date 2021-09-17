@@ -1,7 +1,7 @@
 # Estandares, Buenas Practicas, Listas Checkeo
 
 
-## Patrones
+# Patrones
 
 
 GOF Design Patterns in C# with working examples inspired by food
@@ -22,7 +22,7 @@ Refactoring.Guru te ayuda a descubrir todo lo que necesitas saber sobre la refac
 https://refactoring.guru/es
 
 
-### CQRS
+## CQRS
 
 Revision
 CQRS and Event Sourcing in Event Driven Architecture of Ordering Microservices
@@ -30,12 +30,18 @@ https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architectur
 
 
 
-# Resiliente
+## Resiliency / resiliente / Resistencia
 
 Una app resiliente es una que continúa funcionando a pesar de tener fallas en los componentes del sistema. La resiliencia requiere planificación en todos los niveles de la arquitectura. Influye en el diseño de la infraestructura y la red, y en el diseño de la app y el almacenamiento de datos. La resiliencia también se extiende a las personas y la cultura.
 
+## Retry pattern
 
-## Web
+Enable an application to handle transient failures when it tries to connect to a service or network resource, by transparently retrying a failed operation
+
+
+Before writing custom retry logic, consider using a general framework such as Polly for .NET or Resilience4j for Java.
+
+# Web
 
 The Front-End Checklist is an exhaustive list of all elements you need to have / to test before launching your website / HTML page to production.
 
@@ -45,13 +51,13 @@ https://github.com/thedaviddias/Front-End-Checklist
 https://github.com/labs42io/clean-code-typescript
 
 
-## Documentation
+# Documentation
 
 5 Steps to Create Technical Documentation That’s (Actually) Helpful
 https://plan.io/blog/technical-documentation/
 
 
-## Database
+# Database
 
 - Learn as much as you can about problem domain. You can't create good data model without knowing what you're designing for
 - Use singular for table names (i.e. use StudentCourse instead of StudentCourses). Table represents a collection of entities, there is no need for plural names.
@@ -71,9 +77,9 @@ https://vertabelo.com/blog/9-tips-for-better-database-design/
 
 
 
-## Varios
+# Varios
 
-### DMN - Decision Model and Notation
+## DMN - Decision Model and Notation
 
 The Decision Model and Notation (DMN™) is a Standard by OMG® providing a common and visual notation readily understandable by all users and personas. With DMN, business analysts can define the initial decision requirements and then formalize more detailed decision models; technical developers can automate the decisions in any process with a portable execution semantic, while business stakeholders can manage and monitor those decisions. 
 

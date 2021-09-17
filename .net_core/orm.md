@@ -23,6 +23,15 @@ https://imar.spaanjaars.com/588/prefixing-id-columns-with-the-table-name-in-enti
 Global query filters are LINQ query predicates applied to Entity Types in the metadata model (usually in OnModelCreating). 
 https://docs.microsoft.com/en-us/ef/core/querying/filters
 
+## Connection
+
+Connection Resiliency
+Connection resiliency automatically retries failed database commands. 
+https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
+
+
+For Azure SQL DB, Entity Framework (EF) Core already provides internal database connection resiliency
+and retry logic.
 
 ## Migration
 
@@ -44,11 +53,7 @@ https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotne
 This site provides documentation and tutorials for people looking for help with using Entity Framework Core
 https://www.learnentityframeworkcore.com/
 
-# Oracle
-
-
-Mappging GUID
-
+***Oracle Mappging GUID***
 using .HasConversion<string>(), para especificar que se gestione como un string el GUID.
 ```
 builder.Property(a => a.Id)
@@ -56,6 +61,9 @@ builder.Property(a => a.Id)
 ```
 https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=fluent-api
 
+## Revisiones
+
+- TODO: Interceptores EntityFramework ORM
 
 # Dapper
 

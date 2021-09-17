@@ -8,7 +8,7 @@ Angular is an entire platform for building modern applications.
  
  Angular modules is a process or system to assemble multiple angular elements, like components, directives, pipes, service, etc. so that these Angular elements can be combined in such a way that all elements can be related with each other and ultimately create an application.
 
-# component
+# Component
 
 Pass data to a child component
 The @Input() decorator indicates that the property value passes in from the component's parent
@@ -67,8 +67,13 @@ Angular PWA
 - ng generate component <NOMBRE-COMPONENTE>
 - ng generate service <NOMBRE-SERVICIO>
 
-# Referencias
+# Library
 
+In Angular, a project that provides functionality that can be included in other Angular applications. A library isn't a complete Angular application and can't run independently.
+
+https://angular.io/guide/libraries
+
+# Referencias
 
 
 Varios artículos para aprender angular 8 
@@ -119,6 +124,10 @@ https://github.com/akveo/ngx-admin
 https://github.com/gothinkster/realworld
 
 
+**Referencias de Libros**
+
+Angular 2+ Notes for Professionals - Compiled from StackOverflow documentation
+https://goalkicker.com/Angular2Book/
 
 # Varios
 

@@ -1,11 +1,11 @@
-# forms
+# Forms
 
 Angular provides two different approaches to handling user input through forms: reactive and template-driven. Both capture user input events from the view, validate the user input, create a form model and data model to update, and provide a way to track changes.
 
 
 https://angular.io/guide/forms-overview
 
-# template-driven
+# Template-driven
 
 Template-driven forms rely on directives in the template to create and manipulate the underlying object model. They are useful for adding a simple form to an app, such as an email list signup form. They're easy to add to an app, but they don't scale as well as reactive forms. If you have very basic form requirements and logic that can be managed solely in the template, template-driven forms could be a good fit.
 
@@ -14,7 +14,7 @@ Indirect access to forms model in a template-driven form.
 ![imagen](https://user-images.githubusercontent.com/222181/132102271-f996cef2-e434-4a9c-923a-ff2cf40b60e4.png)
 
 
-# reactive
+# Reactive
 
 Reactive forms provide direct, explicit access to the underlying forms object model. Compared to template-driven forms, they are more robust: they're more scalable, reusable, and testable. If forms are a key part of your application, or you're already using reactive patterns for building your application, use reactive forms.
 
