@@ -1,6 +1,6 @@
 # Authentication
 
-## BASIC AUTHENTICATION
+# BASIC AUTHENTICATION
 
 HTTP Basic authentication implementation is the simplest technique for enforcing access controls to web resources because
 it doesn’t require cookies, session identifiers, or login pages; rather, HTTP Basic authentication uses standard fields in the HTTP header, removing the need for handshakes.
@@ -8,7 +8,7 @@ To receive authorization, the client sends the userid and password, separated by
 
 Because Basic authentication involves the cleartext transmission of passwords, it should be used over TLS or SSL protocols (HTTPS) in order to protect sensitive or valuable information.
 
-## Jwt Auth
+# Jwt Auth
 
 JSON Web Tokens are an open, industry standard RFC 7519 method for representing claims securely between two parties.
 
@@ -71,7 +71,7 @@ The alg claim indicates the algorithm that was used to sign the token, while the
 
 
 
-## SAML 
+# SAML 
 
 
 Security Assertion Markup Language (SAML) is an XML-based method for exchanging user security information between an SAML identity provider and a SAML service provider.
@@ -86,7 +86,7 @@ Versiones:
 https://wiki.oasis-open.org/security
 
 
-## OAuth 2
+# OAuth 2
 
 
 In OAuth2, the term Grant Type refers to the way for a client application to acquire an access token depending on the type of the resource owner, type of the application and the trust relationship between the authorization server and the resource owner. 
@@ -105,7 +105,7 @@ These security issues led to a reassessment of the value of the Implicit flow, a
 
 
 
-## OpenID Connect
+# OpenID Connect
 
 
 
@@ -184,7 +184,7 @@ OpenID specifications
 https://openid.net/developers/specs/
 
 
-### Library or Product
+## Library or Product
 
 In the identity space, we have a lot of different offerings. They range from libraries where you have to add and implement a lot of functionality by yourself to fully managed products where even the hosting is done for you.
 
@@ -194,7 +194,7 @@ While libraries usually give you the most flexibility, the cost of implementatio
 
 Ref: https://www.thinktecture.com/en/identity/three-alternatives-to-identityserver/
 
-### Librerias
+## Librerias
 
 -------------------
 
@@ -209,7 +209,7 @@ https://github.com/jmurphzyo/Angular2OidcClient/tree/ng4
 
 MSAL.js
 
-### Referencias
+## Referencias
 
 The OIDC playground is for developers to test and work with OpenID Connect calls step-by-step, giving them more insight into how OpenID Connect works.
 https://openidconnect.net/
@@ -230,7 +230,11 @@ Build a web application using OpenID Connect with AD FS 2016
 https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/development/enabling-openid-connect-with-ad-fs
 
 
-## Single sign-on (SSO)
+Standard Claims
+This specification defines a set of standard Claims. 
+https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims
+
+# Single sign-on (SSO)
 
 Single sign-on (SSO) is an authentication scheme that allows a user to log in with a single ID and password to any of several related, yet independent, software systems. 
 
@@ -248,4 +252,15 @@ Estandares:
 
 Propietarios
 - Facebook Connect Single Sign On Authentication 
+
+# Multifactor authentication (MFA)
+
+
+# OTP - One-time password
+
+A one-time password (OTP) is an automatically generated sequence of numeric or alphanumeric characters that will authenticate a user for a single login or transaction. It is used in a multifactor authentication (MFA) process to secure access to data.
+
+
+
+# Referencias
 

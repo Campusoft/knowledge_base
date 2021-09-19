@@ -156,6 +156,11 @@ https://medium.com/rubrikkgroup/understanding-async-avoiding-deadlocks-e41f8f2c6
 Avoid GetAwaiter().GetResult() at all cost
 https://gsferreira.com/archive/2020/08/avoid-getawaiter-getresult-at-all-cost/
 
+# CommandLine
+
+ Command line parsing, invocation, and rendering of terminal output. 
+https://github.com/dotnet/command-line-api
+
 # Workflow
 ## Workflow Core
 

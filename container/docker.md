@@ -163,10 +163,16 @@ el acceso, lo que le permite usar los grupos y los permisos de Azure Active Dire
 - Permite comunicar varios contenedores entre si a través de la misma red
 - docker network create [nombre]
 ## Docker compose
+
+Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration
+
+
 - Permite agrupar configuraciones para reducir utilización de línea de comandos 
 - https://docs.docker.com/compose/
 - Comentarios con #
-- Crear el archivo docker-compose.yaml:
+
+
+Crear el archivo docker-compose.yaml:
 	- Version de composer
 		- version: "3.7"
 	- Lista de servicios a ejecutar

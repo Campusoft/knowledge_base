@@ -79,10 +79,12 @@ ABP Framework provides two type of event buses;
 
 - Local Event Bus is suitable for in-process messaging.
 - Distributed Event Bus is suitable for inter-process messaging, like microservices publishing and subscribing to distributed events.
-
-
-
 https://docs.abp.io/en/abp/latest/Event-Bus
+
+***Personalizar***
+
+IDistributedEventBus 
+
 
 # Logs
 
@@ -108,3 +110,19 @@ abp/framework/src/Volo.Abp.AspNetCore.Serilog/Volo/Abp/AspNetCore/Serilog/AbpSer
 https://abp.io
 
 
+**Generation Code**
+
+AbpHelper.GUI
+
+Es una GUI para usar AbpHelper.CLI.
+
+Providing code generation and more features to help you develop applications and modules with the ABP framework. 
+https://github.com/EasyAbp/AbpHelper.GUI
+
+Providing code generation and more features to help you develop applications and modules with the ABP framework. 
+Utiliza:
+- Scriban
+- Elsa (Workflow) 
+
+Aplica templates tanto al contenido, como para los nombres de los archivos. 
+https://github.com/EasyAbp/AbpHelper.CLI
