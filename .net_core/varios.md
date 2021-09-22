@@ -27,6 +27,14 @@ IHostApplicationLifetime
 Inject the IHostApplicationLifetime (formerly IApplicationLifetime) service into any class to handle post-startup and graceful shutdown tasks. Three properties on the interface are cancellation tokens used to register app start and app stop event handler methods. The interface also includes a StopApplication method.
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-5.0#ihostapplicationlifetime
 
+
+# Files
+
+
+IFileProvider
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers?view=aspnetcore-5.0#physical-file-provider
+
 # CloudEvents 
 
 Serializar un CloudEvents
@@ -161,9 +169,49 @@ https://gsferreira.com/archive/2020/08/avoid-getawaiter-getresult-at-all-cost/
  Command line parsing, invocation, and rendering of terminal output. 
 https://github.com/dotnet/command-line-api
 
+features 
+- Soporta Subcommands
+https://github.com/dotnet/command-line-api/blob/main/docs/Features-overview.md
+
 # Workflow
 ## Workflow Core
 
 
 ## Elsa Core
 Elsa Core is an open-source workflows library that can be used in any kind of .NET Core application. Using such a workflow library can be useful to implement business rules visually or programmatically.
+
+
+# FileProviders
+
+Microsoft.Extensions.FileProviders.Embedded
+
+Tiene problemas:
+
+Posee errores en archivos con doble extension.
+Nombre: Foo.ts.cs
+ManifestFile.ResourcePath: Campusoft.Generate.Cli.Templates.Foo.cs
+
+Correcto:
+Nombre: Foo.json.scriban
+ManifestFile.ResourcePath:Campusoft.Generate.Cli.Templates.Foo.json.scriban
+
+Upload files in ASP.NET Core
+ASP.NET Core supports uploading one or more files using buffered model binding for smaller files and unbuffered streaming for larger files.
+https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1
+
+
+# Application Referencias
+
+nopCommerce
+The most popular open-source eCommerce shopping cart solution based on ASP.NET Core 
+https://github.com/nopSolutions/nopCommerce
+
+# Building
+
+## MSBuild 
+ 
+Directory.Build.props and Directory.Build.targets
+
+You can add a new property to every project by defining it in a single file called Directory.Build.props in the root folder that contains your source. When MSBuild runs, Microsoft.Common.props searches your directory structure for the Directory.Build.props file (and Microsoft.Common.targets looks for Directory.Build.targets). If it finds one, it imports the file and reads the properties defined within it. Directory.Build.props is a user-defined file that provides customizations to projects under a directory. 
+https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019 
+

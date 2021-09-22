@@ -25,6 +25,10 @@ The main Odoo Apps include an Open Source CRM, Website Builder, eCommerce, Wareh
 
 https://github.com/odoo/odoo
 
+Odoo Data Model
+https://soft-builder.com/en/docs/Odoo/index.html
+
+
 ## Gestionix
 
 Sistema ERP y Software Contable para Pymes - Gestionix

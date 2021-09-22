@@ -74,6 +74,7 @@ https://ng.ant.design/docs/introduce/en
 
 ngx-datatable is an Angular component for presenting large and complex data. It has all the features you would expect from any other table but in a light package with no external dependencies. The table was designed to be extremely flexible and light; it doesn't make any assumptions about your data or how you: filter, sort or page it.
 
+https://github.com/swimlane/ngx-datatable
 
 ## ng-select
 

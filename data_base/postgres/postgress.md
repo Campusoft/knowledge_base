@@ -1,4 +1,23 @@
 
+# Install
+
+***Docker***
+
+
+https://hub.docker.com/_/postgres
+
+
+#  Schemas
+
+
+https://www.postgresql.org/docs/9.1/ddl-schemas.html
+
+# Commandos
+
+
+CREATE DATABASE databasename
+
+
 # Security
 
 Postgres Row Level Security

@@ -75,9 +75,23 @@ http://soa-java.blogspot.com/2013/01/database-guidelines-rdbmssql.html
 Tips for Better Database Design
 https://vertabelo.com/blog/9-tips-for-better-database-design/
 
+# Information Standard
+
+
+***Country***
+
+The International Standard for country codes and codes for their subdivisions
+
+The purpose of ISO 3166 is to define internationally recognized codes of letters and/or numbers that we can use when we refer to countries and their subdivisions. However, it does not define the names of countries – this information comes from United Nations sources (Terminology Bulletin Country Names and the Country and Region Codes for Statistical Use maintained by the United Nations Statistics Divisions).
 
 
 # Varios
+
+## Twelve-factor methodology
+
+In the modern era, software is commonly delivered as a service: called web apps, or software-as-a-service. The twelve-factor app is a methodology for building software-as-a-service apps that:
+https://12factor.net/
+
 
 ## DMN - Decision Model and Notation
 

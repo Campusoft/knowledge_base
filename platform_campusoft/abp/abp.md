@@ -97,6 +97,34 @@ Permitir cambiar los nombres que se utilizan AbpSerilogMiddleware.
 abp/framework/src/Volo.Abp.AspNetCore.Serilog/Volo/Abp/AspNetCore/Serilog/AbpSerilogMiddleware.cs
 
 
+# Virtual File System
+
+It's mainly used to embed (js, css, image..) files into assemblies and use them like physical files at runtime.
+ 
+https://docs.abp.io/en/abp/latest/Virtual-File-System
+
+Override Physical Files
+
+Para permitir sobrescribir los files embebidos, con los fisicos, se debe configurar con "AbpVirtualFileSystemOptions" en las configuracion del modulo "ConfigureServices"
+
+Codigo para agregar PhysicalFileProvider, en VirtualFileSystem
+
+```
+public override void ConfigureServices(ServiceConfigurationContext context)
+{
+	var hostEnvironment = context.Services.GetSingletonInstance<IHostEnvironment>();
+
+   
+	Configure<AbpVirtualFileSystemOptions>(options =>
+	{
+		options.FileSets.AddPhysical(hostEnvironment.ContentRootPath);
+	});
+	
+	...
+}
+			
+```
+
 # Versiones
 
 **4.4.x**
@@ -126,3 +154,36 @@ Utiliza:
 
 Aplica templates tanto al contenido, como para los nombres de los archivos. 
 https://github.com/EasyAbp/AbpHelper.CLI
+
+
+
+# Revisiones
+
+
+Personalizar los modulos existentes.
+Backend.
+- Module: Usuarios
+
+```
+abp get-source Volo.Users
+```
+
+get-source (CLI option)
+https://docs.abp.io/en/abp/latest/CLI#get-source
+
+(Como utilizar varias base de datos)
+Using Multiple Databases
+https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations#using-multiple-databases
+
+
+***Revision AbpHelper.CLI***
+
+Elementos considerar
+- Agregar DTO, Servicios Aplicacion, Crea un repositorio para la entidad, Crear permisos, Agrega clase en DbContexto.
+- Las entidades debe tener su propio archivo. 
+- Las plantillas actuales (Originales), generan subCarpetas para los archivos dentro de las carpetas. Si se requiere cambiar este comportamiento se necesita cambiar los archivos templates originales y quitar referencias a {EntityInfo.RelativeDirectory}
+- Las configuraciones que soportan los comandos. Se puede revisar codigo fuente el archivo de opciones del commando a ejecutarse. Ejemplo commando "Crud", el archivo opciones es CrudCommandOption.
+   -  Tambien con help. Ej. Commando generate crud "abphelper generate  crud --help"
+- No existe plantillas para la UI - Angular. (Ref: https://github.com/EasyAbp/AbpHelper.CLI/issues/13)
+
+Para sobrescribir los templates que existen en el proyecto se debe modificar la configuracion AbpVirtualFileSystemOptions para considerar AddPhysical

@@ -1,4 +1,9 @@
 
+# Recomendaciones
+
+- Se consistente. Si hace algo de cierta manera, haga todas las cosas similares de la misma manera
+- Comunicacion.
+
 # Varios
 
 To identify and select the optimal model(s), architects must understand advantages and disadvantages of each model 

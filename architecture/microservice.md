@@ -112,6 +112,12 @@ El Patrón Saga es una secuencia de transacciones locales donde cada transacción 
 ## Sidecar pattern  (Pronu: saidecar)
 
 
+## Backends for Frontends pattern
+
+Create separate backend services to be consumed by specific frontend applications or interfaces.
+https://docs.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends
+
+
 
 # Observabilidad 
 
@@ -311,6 +317,11 @@ https://medium.com/@nathankpeck/microservice-principles-smart-endpoints-and-dumb
 The microservices architectures (or microservices) are increasingly closer to becoming a standard when developing applications and systems. Microservices allow complex applications to be broken down into small independent components, improving systems and facilitating maintenance and new integrations.
 https://www.chakray.com/ebooks/learn-implement-architecture-microservices/
 
+
+
+Building Twelve Factor Apps with .Net Core
+the methodology is based on twelve tenants that provide a mixture of process guidelines and implementation detail. Although the methodology has been around for years, it’s only really been achievable in the Microsoft world since the advent of .Net Core.
+https://www.ben-morris.com/building-twelve-factor-apps-with-net-core/
 
 # Revisar
 

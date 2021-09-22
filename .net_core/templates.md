@@ -24,6 +24,18 @@ The ScriptObject is a special implementation of a Dictionary<string, object> tha
 (Controlar los saltos lineas de las instrucciones )
 https://github.com/scriban/scriban/blob/master/doc/language.md#14-whitespace-control
 
+
+Conservar los mismos nombres de los miembros del modelo que se utiliza en el templates.
+https://github.com/scriban/scriban/blob/master/doc/runtime.md#member-renamer
+
+Codigo (Conservar Nombres):
+```
+var scriptObject1 = new ScriptObject();
+// Here the renamer will just return a same member name as the original
+// hence importing .NET member name as-is
+scriptObject1.Import(new MyObject(), renamer: member => member.Name);
+```
+
 # RazorLight
 
 Use Razor to build templates from Files / EmbeddedResources / Strings / Database or your custom source outside of ASP.NET MVC. No redundant dependencies and workarounds in pair with excellent performance and .NET Standard 2.0 and .NET Core 3.0 support.

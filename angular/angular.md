@@ -33,7 +33,7 @@ export class App implements OnInit {
 } 
 ```
  
-# routing
+# Routing
  
  
 # Dependency injection in Angular
@@ -67,6 +67,20 @@ Angular PWA
 - ng generate component <NOMBRE-COMPONENTE>
 - ng generate service <NOMBRE-SERVICIO>
 
+
+Se puede personalizar una plantilla. 
+Create from a custom template
+https://docs.abp.io/en/abp/latest/CLI-New-Command-Samples#create-from-a-custom-template
+
+# schematics 
+
+ Creando nuestro primer Angular Schematics 
+https://dev.to/fullstapps/creando-nuestro-primer-angular-schematics-4b2o
+
+
+Generar codigo (CRUD). Con schematics
+https://github.com/manfredsteyer/angular-crud
+ 
 # Library
 
 In Angular, a project that provides functionality that can be included in other Angular applications. A library isn't a complete Angular application and can't run independently.
@@ -107,8 +121,6 @@ Un client web, con angular. (*)
 https://github.com/dotnet-architecture/eShopOnContainers
 
 **Referencias de aplicaciones**
-
-
 
 Add an AngularJS admin GUI to any RESTful API http://ng-admin-book.marmelab.com/
 
