@@ -17,7 +17,6 @@ Types of monoliths
 - monolith primarily as a unit of deployment.
 
 
-
 The problem with this is that people tend to be poor at defining module boundaries — more to the point, even if they are good at defining module boundaries, they are not good at having the discipline to maintain those boundaries. 
 
 Modular Monolith with DDD

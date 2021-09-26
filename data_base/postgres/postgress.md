@@ -9,13 +9,29 @@ https://hub.docker.com/_/postgres
 
 #  Schemas
 
-
 https://www.postgresql.org/docs/9.1/ddl-schemas.html
+
+# Elementos Generales
+
+
+# Drives
+
+
+***.Net***
+
+Npgsql - .NET Access to PostgreSQL
+https://www.npgsql.org/
+
+Naming Conventions for Entity Framework Core Tables and Columns.
+Entity Framework Core plugin to apply naming conventions to table and column names (e.g. snake_case) 
+https://github.com/efcore/EFCore.NamingConventions
 
 # Commandos
 
 
-CREATE DATABASE databasename
+CREATE DATABASE databasename;
+
+
 
 
 # Security

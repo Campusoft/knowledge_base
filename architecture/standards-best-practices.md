@@ -8,7 +8,7 @@ GOF Design Patterns in C# with working examples inspired by food
 https://github.com/wesdoyle/design-patterns-explained-with-food
 
 
-SOLID principles
+***SOLID principles***
 
 Single responsibility principle
 Open/closed principle
@@ -23,6 +23,8 @@ https://refactoring.guru/es
 
 
 ## CQRS
+
+
 
 Revision
 CQRS and Event Sourcing in Event Driven Architecture of Ordering Microservices

@@ -8,6 +8,14 @@
 Entity Framework Core: Naming Convention
 https://www.meziantou.net/entity-framework-core-naming-convention.htm
 
+***Revisiones***
+
+GetColumnName extension method is obsolete
+https://stackoverflow.com/questions/65837188/how-to-get-list-of-database-table-primary-key-columns-in-ef-core
+
+Informacion obsolete GetColumnName
+https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/breaking-changes#getcolumnname-obsolete
+
 ### Laboratorios
 
 Generar prefijos tablas a todas las columnas.

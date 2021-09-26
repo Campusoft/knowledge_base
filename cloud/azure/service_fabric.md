@@ -65,3 +65,10 @@ https://docs.microsoft.com/en-us/archive/blogs/azuredev/service-fabric-and-kuber
 We have open-sourced parts of Service Fabric (reliable services framework, reliable actors framework, ASP.NET Core integration libraries, Service Fabric Explorer, and Service Fabric CLI) on GitHub and accept community contributions to those projects.
 (Sfx is currently in the process of migrating from angularjs(Sfx v1) to angular 10(Sfx v2). The Sfx folder holds the previous version and SfxWeb is the new version. )
 https://github.com/microsoft/service-fabric-explorer
+
+
+Microservices reference architectures for Azure
+
+-    Microservices architecture on Azure Kubernetes Service (AKS). Ref: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices
+-    Microservices architecture on Azure Service Fabric. Ref: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/microservices/service-fabric
+

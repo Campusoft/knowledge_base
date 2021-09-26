@@ -8,7 +8,7 @@ Depended Packages
 -    angular-oauth2-oidc is used to support for OAuth 2 and OpenId Connect (OIDC).
 -    Chart.js is used to create widgets.
 -    ngx-validate is used for dynamic validation of reactive forms.
-
+-   ngx-datatable. https://github.com/swimlane/ngx-datatable
 
 
 

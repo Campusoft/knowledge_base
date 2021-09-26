@@ -117,7 +117,13 @@ El Patrón Saga es una secuencia de transacciones locales donde cada transacción 
 Create separate backend services to be consumed by specific frontend applications or interfaces.
 https://docs.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends
 
+## Mediator 
 
+Behavioral Pattern 
+
+- Less coupling: Since the classes don’t have dependencies on each other, they are less coupled.
+
+## CQRS 
 
 # Observabilidad 
 
@@ -334,4 +340,13 @@ https://dzone.com/articles/ms-chassis-pattern
 "Es buena idea implementar microservicios sin conocer el dominio?. Considerando que la separacion de un dominio en microservicios, su conocimiento es importante."
 
 "Incluso si conocer el dominio, existe elementos que siempre o se recomienda que sean microservicios temas autentificacion, autorizacion" 
- 
+
+
+***Process for building a microservices architecture***
+
+- Domain analysis. To avoid some common pitfalls when designing microservices, use domain analysis to define your microservice boundaries
+
+- Design the services. Microservices require a different approach to designing and building applications. 
+
+- Operate in production. Because microservices architectures are distributed, you must have robust operations for deployment and monitoring
+
