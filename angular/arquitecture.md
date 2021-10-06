@@ -2,6 +2,13 @@
 
 # Organizacion
 
+
+***Revision***
+
+Scalable Angular app architecture
+
+https://georgebyte.com/scalable-angular-app-architecture/
+
 # Documentacion 
 
 The missing documentation tool for your Angular application

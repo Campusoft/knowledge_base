@@ -1,5 +1,21 @@
 # Authentication
 
+- Role based access control. RBAC
+- Attribute-based access control (ABAC)
+
+
+
+**Authentication Types***
+
+In Stateful authentication, the server creates a session for the user after successfully authenticating. The session id is then stored as a cookie in the user's browser and the user session store in the cache or database. When the client tries to access the server with a given session id, the server attempts to load the user session context for the session store, checks if the session is valid, and decides if the client has to access the desired resource or rejects the request.
+
+Stateless authentication stores the user session on the client-side. A cryptographic algorithm signs the user session to ensure the session data’s integrity and authority.
+Each time the client requests a resource from the server, the server is responsible for verifying the token claims sent as a cookie.
+
+Since the user session is stored on the client-side, this approach frees the overhead to maintain the user session state, and scaling doesn’t require additional effort. 
+
+
+
 # BASIC AUTHENTICATION
 
 HTTP Basic authentication implementation is the simplest technique for enforcing access controls to web resources because
@@ -103,6 +119,11 @@ https://www.paradigmadigital.com/dev/oauth-2-0-equilibrio-y-usabilidad-en-la-sec
 OAuth 2.0 Authorization Code with PKCE Flow 
 These security issues led to a reassessment of the value of the Implicit flow, and in November of 2018, new guidance was released that effectively deprecated this flow. 
 
+
+TODO: Revision.
+On The Nature of OAuth2’s Scopes
+Stretching OAuth2 scopes beyond intended usage leads to trouble in complex architectures.
+https://auth0.com/blog/on-the-nature-of-oauth2-scopes/
 
 
 # OpenID Connect
@@ -234,6 +255,14 @@ Standard Claims
 This specification defines a set of standard Claims. 
 https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims
 
+
+# Claim
+
+A claim is a key-value pair that represents a subject, i.e., name, age, passportnumber, drivinglicense, passport, nationality, dateofbirth, etc. So, if dateofbirth is the claim name, the claim value would be the date of birth, i.e., 1st January 1970.
+
+
+
+
 # Single sign-on (SSO)
 
 Single sign-on (SSO) is an authentication scheme that allows a user to log in with a single ID and password to any of several related, yet independent, software systems. 
@@ -252,6 +281,8 @@ Estandares:
 
 Propietarios
 - Facebook Connect Single Sign On Authentication 
+
+
 
 # Multifactor authentication (MFA)
 

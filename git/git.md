@@ -42,3 +42,10 @@
   * Crear cuenta de github
   * Crear repositorio remoto y configurar accesos
   * Varios ejercicios en grupo
+  
+  
+# Refencias
+
+Monorepo vs Multi-Repo: Ventajas y Desventajas de las Estrategias de Repositorio de Código 
+https://kinsta.com/es/blog/monorepo-vs-multi-repo/
+  

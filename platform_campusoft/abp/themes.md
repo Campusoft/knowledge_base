@@ -23,8 +23,16 @@ https://docs.abp.io/en/abp/latest/UI/AspNetCore/Layout-Hooks#layout-hook-points
 
 **Theme**
 
-Implementing a Theme
+Implementing a Theme. (Personalizar la plantilla)
+
+The easiest way to create a new theme is to add Basic Theme Source Code to your project via ABP CLI command and customize it.
+You can run the following command in Angular project directory to copy the source code to your solution:
+
+```
+abp add-package @abp/ng.theme.basic --with-source-code
+```
 https://docs.abp.io/en/abp/latest/UI/Angular/Theming#implementing-a-theme
+
 
 
 

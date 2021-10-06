@@ -1,6 +1,8 @@
 # Gestion Dependencias
 
-### Publicar paquetes
+
+
+# Publicar paquetes
 
 Quickstart: Create and publish a NuGet package using Visual Studio (.NET Standard, Windows only)
 - Configure package properties

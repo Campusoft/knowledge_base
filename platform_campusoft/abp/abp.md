@@ -69,10 +69,6 @@ imports: [
    ]
 ```
 
-# Plantillas
-
-Posee plantillas para sql-server, postgres, mysql, oracle
-
 # Event-Bus
 
 ABP Framework provides two type of event buses;
@@ -125,6 +121,75 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 			
 ```
 
+# Modules
+
+## Account
+
+
+
+# Personalizacion
+
+Obtener el codigo fuente de los modulos. (Opcion 1)
+
+get-source (CLI option)
+https://docs.abp.io/en/abp/latest/CLI#get-source
+
+
+Customizing the Existing Modules
+https://docs.abp.io/en/abp/latest/Customizing-Application-Modules-Guide
+
+
+
+
+# Plantillas
+
+Posee plantillas para sql-server, postgres, mysql, oracle
+
+
+***Errores / Angular***
+
+```
+[2/4] Fetching packages...
+error @angular/animations@12.0.5: The engine "node" is incompatible with this module. Expected version "^12.14.1 || >=14.0.0". Got "12.14.0"
+error Found incompatible module.
+info Visit https://yarnpkg.com/en/docs/cli/install for documentation about this command.
+```
+
+***Plantillas personalizadas***
+
+Abp-Cli, permite trabajar con plantillas personalizadas. El proceso busca las siguientes palabras claves:
+
+
+- MyCompanyName. (Nombre inicial del namespace)
+- MyProjectName. (Nombre del proyecto)
+
+
+Las palabras claves que seran reemplazadas.
+MyCompanyName.MyProjectName
+
+
+public MyProjectNameClass {
+
+
+Permite generar proyecto desde plantillas personalizadas:
+
+Ejemplo: Generar proyecto de tipo consola, con la plantilla personalizada que se encuentra en la carpeta "C:\proyectos\abp-templates-custom". El Abp-Cli, buscara en la carpeta con el nombre <TIPO>-<VERSION>.zip. 
+
+Para el tipo consola, con la version 4.4.3, se buscara el archivo  "console-4.4.3.zip"
+
+El commando completo para el ejemplo sera:
+
+```
+abp new Acme.MyConsoleApp -t console --template-source C:\proyectos\abp-templates-custom 
+```
+
+Options Ab Cli:
+https://docs.abp.io/en/abp/latest/CLI#options
+
+
+El proyecto abp - cli, se encuentra en abp\framework\src\Volo.Abp.Cli
+
+
 # Versiones
 
 **4.4.x**
@@ -157,26 +222,6 @@ https://github.com/EasyAbp/AbpHelper.CLI
 
 
 
-# Revisiones
-
-
-Personalizar los modulos existentes.
-Backend.
-- Module: Usuarios
-
-```
-abp get-source Volo.Users
-```
-
-get-source (CLI option)
-https://docs.abp.io/en/abp/latest/CLI#get-source
-
-(Como utilizar varias base de datos)
-Using Multiple Databases
-https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations#using-multiple-databases
-
-
-***Revision AbpHelper.CLI***
 
 Elementos considerar
 - Agregar DTO, Servicios Aplicacion, Crea un repositorio para la entidad, Crear permisos, Agrega clase en DbContexto.
@@ -187,3 +232,16 @@ Elementos considerar
 - No existe plantillas para la UI - Angular. (Ref: https://github.com/EasyAbp/AbpHelper.CLI/issues/13)
 
 Para sobrescribir los templates que existen en el proyecto se debe modificar la configuracion AbpVirtualFileSystemOptions para considerar AddPhysical
+
+# Revisiones
+
+
+ 
+
+
+(Como utilizar varias base de datos)
+Using Multiple Databases
+https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations#using-multiple-databases
+
+
+

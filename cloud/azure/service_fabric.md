@@ -72,3 +72,23 @@ Microservices reference architectures for Azure
 -    Microservices architecture on Azure Kubernetes Service (AKS). Ref: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/containers/aks-microservices/aks-microservices
 -    Microservices architecture on Azure Service Fabric. Ref: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/microservices/service-fabric
 
+
+# Revisiones
+
+-------------
+
+Si se elimina Service Fabric, que generan errores en aplicaciones .net core
+
+```
+The local source 'C:\Program Files\Microsoft SDKs\Service Fabric\packages'
+```
+
+Solucion
+
+All you have to do is create an empty packages folder 
+```
+C:\Program Files\Microsoft SDKs\Service Fabric\packages
+```
+https://stackoverflow.com/questions/56245714/wont-add-dependencies-because-of-missing-service-fabric-packages
+
+-------------

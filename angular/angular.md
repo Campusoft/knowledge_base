@@ -72,7 +72,7 @@ Se puede personalizar una plantilla.
 Create from a custom template
 https://docs.abp.io/en/abp/latest/CLI-New-Command-Samples#create-from-a-custom-template
 
-# schematics 
+# Schematics 
 
  Creando nuestro primer Angular Schematics 
 https://dev.to/fullstapps/creando-nuestro-primer-angular-schematics-4b2o
@@ -86,6 +86,13 @@ https://github.com/manfredsteyer/angular-crud
 In Angular, a project that provides functionality that can be included in other Angular applications. A library isn't a complete Angular application and can't run independently.
 
 https://angular.io/guide/libraries
+
+
+# best practice standards
+
+Angular coding style guide
+https://angular.io/guide/styleguide
+
 
 # Referencias
 

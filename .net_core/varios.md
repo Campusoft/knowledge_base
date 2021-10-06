@@ -91,7 +91,7 @@ https://blog.cdemi.io/async-waiting-inside-c-sharp-locks/
 # String Formats
 
 SmartFormat
-
+SmartFormat is a string composition library written in C# which is basically compatible with string.Format. More than that SmartFormat can format data with named placeholders, lists, pluralization and other smart extensions.
 https://github.com/axuno/SmartFormat
 
 

@@ -1,8 +1,31 @@
+# Postgres
+
+
+Identifiers and Key Words
+Key words and unquoted identifiers are case insensitive
+
+equals table names:
+
+```
+UPDATE MY_TABLE SET A = 5;
+uPDaTE my_TabLE SeT a = 5;
+```
+
+
+
+There is a second kind of identifier: the delimited identifier or quoted identifier. It is formed by enclosing an arbitrary sequence of characters in double-quotes ("). Area case sensitive
+
+different table names:
+
+```
+UPDATE "MY_TABLE" SET A = 5;
+uPDaTE "my_TabLE" SeT a = 5;
+```
+
 
 # Install
 
 ***Docker***
-
 
 https://hub.docker.com/_/postgres
 
@@ -28,10 +51,7 @@ https://github.com/efcore/EFCore.NamingConventions
 
 # Commandos
 
-
 CREATE DATABASE databasename;
-
-
 
 
 # Security

@@ -3,17 +3,6 @@
 Clear examples, explanations, and resources for RxJS.
 https://www.learnrxjs.io/
 
-# Angular Package Format
-
-Creating libraries
-
-This page provides a conceptual overview of how you can create and publish new libraries to extend Angular functionality.
-
-https://angular.io/guide/creating-libraries
-
-
-ng-packagr
-https://github.com/ng-packagr/ng-packagr/blob/master/README.md
 
 # ngxs
 

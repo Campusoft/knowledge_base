@@ -13,7 +13,13 @@ Redis utiliza una arquitectura con servidor principal y réplica y admite la rep
 
 # pipelining 
 
+# Instalar
 
+***docker***
+
+redis:alpine
+
+This image is based on the popular Alpine Linux project, available in the alpine official image. Alpine Linux is much smaller than most distribution base images (~5MB), and thus leads to much slimmer images in general.
 
 # Client
 
