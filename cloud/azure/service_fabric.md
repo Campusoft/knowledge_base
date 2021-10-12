@@ -4,7 +4,6 @@ Azure Service Fabric is a distributed systems platform that makes it easy to pac
 
 Service Fabric – the distributed services platform that runs many Microsoft services such as Event Hubs, Event Grid, Azure SQL Database, Azure Cosmos DB, Cortana, and the core Azure resource providers (Compute, Networking, Storage).
 
-
 # Concepts
 
 A named application is a collection of named services that performs a certain function or functions. A service performs a complete and standalone function (it can start and run independently of other services) and is composed of code, configuration, and data. 
@@ -40,6 +39,8 @@ https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-se
 ASP.NET Core in Azure Service Fabric Reliable Services
 https://docs.microsoft.com/en-us/azure/service-fabric/service-fabric-reliable-services-communication-aspnetcore
 
+# Service Discovery
+
 # Revisiones
 
 
@@ -51,6 +52,26 @@ Stateless (Sin estado)
 Federation Subsystem.
 
 The Federation Subsystem is responsible for giving a consistent answer to the core question: is the specific node part of the system? In the centralized approach discussed earlier, this answer was given by the API Server based on the heartbeats received from all the nodes. In Service Fabric, the nodes are organized in a ring and heartbeats are only sent to a small subset of nodes called the neighborhood.
+
+
+
+-------------
+
+Si se elimina Service Fabric, que generan errores en aplicaciones .net core
+
+```
+The local source 'C:\Program Files\Microsoft SDKs\Service Fabric\packages'
+```
+
+Solucion
+
+All you have to do is create an empty packages folder 
+```
+C:\Program Files\Microsoft SDKs\Service Fabric\packages
+```
+https://stackoverflow.com/questions/56245714/wont-add-dependencies-because-of-missing-service-fabric-packages
+
+-------------
 
 
 # Referencias
@@ -73,22 +94,9 @@ Microservices reference architectures for Azure
 -    Microservices architecture on Azure Service Fabric. Ref: https://docs.microsoft.com/en-us/azure/architecture/reference-architectures/microservices/service-fabric
 
 
-# Revisiones
+Service Fabric part.3 — The introduction to the Service Fabric Model
+(Buen articulo)
+https://medium.com/a-layman/service-fabric-part-3-the-introduction-to-the-service-fabric-model-66ba6ddd3174
 
--------------
 
-Si se elimina Service Fabric, que generan errores en aplicaciones .net core
-
-```
-The local source 'C:\Program Files\Microsoft SDKs\Service Fabric\packages'
-```
-
-Solucion
-
-All you have to do is create an empty packages folder 
-```
-C:\Program Files\Microsoft SDKs\Service Fabric\packages
-```
-https://stackoverflow.com/questions/56245714/wont-add-dependencies-because-of-missing-service-fabric-packages
-
--------------
+ 

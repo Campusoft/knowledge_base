@@ -53,6 +53,65 @@ https://github.com/efcore/EFCore.NamingConventions
 
 CREATE DATABASE databasename;
 
+# Naming conventions
+
+
+Use schemas for major functional areas
+
+
+Date Fields
+
+- Include the timezone, specially if you are working on a global project.
+- As a good practice all  tables should have a createdAt and updatedAt column, it will be very useful for debugging. 
+- Field should finish with At
+  - createdAt
+  - updatedAt
+  - deletedAt
+  - lastUpdatedAt
+  
+Foreign Keys
+
+They should be a combination of the name of the foreign table and the + _id, examples:
+
+- user_id
+- post_id
+
+
+Status Fields
+
+use booleans for single status.
+- isActive
+- isPublished
+
+Use enums if you need few columns that can be true or false at the same time.
+- post.status (draft, inactive, published)
+- user.status (inactive, active, banned)
+- product.status (draft, in_review, approved, disapproved)
+	
+	
+	
+Database Naming Convention
+https://github.com/RootSoft/Database-Naming-Convention
+
+Database, Table and Column naming conventions
+https://xpromx.me/blog/database-table-and-column-naming-converntions
+
+
+How I Write SQL, Part 1: Naming Conventions
+Prefixes and Suffixes (are bad). (Interesante ...)
+https://launchbylunch.com/posts/2014/Feb/16/sql-naming-conventions/
+
+***Revisiones***
+
+- Stored procedures. 
+  - prefix p_<name>
+  - If the store procedure is using only one table, I’ll name it p_<table_name>_<action_name>
+  - If the procedure uses more than 1 table, I would use a descriptive name for the procedure. 
+
+- Functions
+  - prefix f_<name>
+ 
+
 
 # Security
 
@@ -64,3 +123,10 @@ Policies are easy to understand once you get the hang of them. You can just thin
 5.8. Row Security Policies
 When row security is enabled on a table (with ALTER TABLE ... ENABLE ROW LEVEL SECURITY), all normal access to the table for selecting rows or modifying rows must be allowed by a row security policy. (However, the table's owner is typically not subject to row security policies.) If no policy exists for the table, a default-deny policy is used, meaning that no rows are visible or can be modified. Operations that apply to the whole table, such as TRUNCATE and REFERENCES, are not subject to row security.
 https://www.postgresql.org/docs/current/ddl-rowsecurity.html
+
+
+# Referencias
+
+
+A curated list of awesome PostgreSQL software, libraries, tools and resources
+https://github.com/dhamaniasad/awesome-postgres

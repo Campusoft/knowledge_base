@@ -22,7 +22,13 @@ Refactoring.Guru te ayuda a descubrir todo lo que necesitas saber sobre la refac
 https://refactoring.guru/es
 
 
-## CQRS
+## CQRS - Command and Query Responsibility Segregation
+
+The Command and Query Responsibility Segregation (CQRS) pattern propose separating the write data model from the read data model. This separation of responsibilities would provide the flexibility to decide whether the read and write services should coexist in the same data store or be managed in completely different databases.
+
+In the CQRS context, commands are methods whose sole purpose is performing an action. Simply put, commands in our example would be responsible for creating, updating, and deleting tasks (write operations). In the CQRS architecture, commands cannot return data, since that functionality is unique to queries. In that regard, queries are methods that are only able to read and return data without modifying it.
+
+The CQRS pattern is a great expression of the single responsibility principle. It states that we should have separate models for Queries and Commands because in the real-world application the requirements for read operations are normally different than the write operations. If you are using separate models, then you can handle complex scenarios without worrying about disturbing the other operations. Without this separation, we can easily end up with domain models that are full of state, commands, and queries and harder to maintain over time.
 
 
 
@@ -30,6 +36,18 @@ Revision
 CQRS and Event Sourcing in Event Driven Architecture of Ordering Microservices
 https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architecture-of-ordering-microservices-fb67dc44da7a
 
+
+
+
+Command Query Responsibility Segregation (CQRS) pattern
+(Excelete articulo, contiene niveles aplicacion del CQRS). (Elementos adicionales change data capture (CDC))
+
+- Stage 0: Typical application data access
+- Stage 1: Separate read and write APIs
+- Stage 2: Separate read and write models
+- Stage 3: Separate read and write databases
+
+https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/
 
 
 ## Resiliency / resiliente / Resistencia

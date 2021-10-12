@@ -55,6 +55,23 @@ Microservices for the Enterprise: Designing, Developing, and Deploying 1st ed. E
 - Problem locality: which means related problems should be grouped together (in other words, if a change requires an update in another part of the system, those parts should be close to each other).
 
 
+# Design Principles 
+
+- High cohesion. Services should work together with minimum communication.
+- Low coupling. Services should have few, if any, interdependencies.
+- Single responsibility scope. A service should set boundaries to reflect a specific business requirement, and do only one thing.
+- Reliability. Design the services for maximum fault tolerance or resilience so a fault in one service does not disable the entire application.
+- Don't share data. Each service should have/access its own database or storage volume.
+- Use automation. Utilize automation tools to deploy and manage microservices components (often as part of a CI/CD pipeline).
+- Use APIs. APIs are the go-to method for interaction and communication between services.
+- Monitor. Use monitoring tools to oversee and report the performance or problems with services as well as manage traffic for best service performance.
+
+Follow these 10 fundamental microservices design principles
+https://searchapparchitecture.techtarget.com/tip/Follow-these-10-fundamental-microservices-design-principles
+
+
+
+
 # Database per Microservice
 
 Here I am using the term database to show a logical separation of data, i.e., the Microservices can share the same physical database, but they should use separate Schema/collection/table
@@ -125,6 +142,24 @@ Behavioral Pattern
 
 ## CQRS 
 
+
+The returned data (ViewModel) can be the result of joining data from multiple entities or tables in the database, or even across multiple aggregates defined in the domain model for the transactional area. In this case, because you are creating queries independent of the domain model, the aggregates boundaries and constraints are ignored and you’re free to query any table and column you might need. This approach provides great flexibility and productivity for the developers creating or updating the queries.
+
+
+Introduction to CQRS — In Microservices
+
+How is exactly the CQRS pattern related to microservices
+Without a doubt, microservices has changed the way applications are conceived. The monolithic model has transitioned to a decentralized architecture where each service can be scaled and optimized independently. CQRS adds another layer of scalability, performance, and flexibility to microservices by allowing granular read-write optimizations at the database level.
+
+https://danielckv.medium.com/introduction-to-cqrs-in-microservices-70e4759d9ecc
+
+
+
+Why we failed to implement CQRS in Microservice architecture.
+- Apply CQRS for All the services. This is one of the main mistake we did in implementing CQRS.  Greg Young said in one of his video (as I remember) that we have to find areas where we can get a benefit from using CQRS
+
+https://faun.pub/why-we-failed-implementing-cqrs-in-microservice-architecture-5c39a2d0b2dd
+
 # Observabilidad 
 
 - Logging
@@ -147,6 +182,11 @@ Medición de DevOps: supervisión y observabilidad
 - La observabilidad es una herramienta o una solución técnica que permite a los equipos depurar de forma activa su sistema. La observabilidad se basa en la exploración de las propiedades y los patrones que no se definen con anticipación.
 
 https://cloud.google.com/architecture/devops/devops-measurement-monitoring-and-observability?hl=es-419
+
+
+Distributed logging is one other challenging thing. In a monolithic application, request process inside a single application because of that all the logs are in a one log file. When it comes to the microservices, request can span multiple services. We must have a way to trace that request across multiple services. We usually use a correlation id for that.
+https://faun.pub/why-microservices-fail-eda3e25069a0
+
 
 ***Traces***
 
@@ -303,8 +343,22 @@ Today, most companies in the software industry are moving towards cloud platform
 
 "the server endpoints are subject to frequent change": Cloud, Microservices, traffic increases
 
-
 important aspect of microservices: discovery
+
+
+Service registry
+
+A service registry provides a database that applications can use to implement the Service Discovery pattern, one of the key tenets of a microservices-based architecture. Trying to hand-configure each client of a service or adopt some form of access convention can be difficult and prove to be brittle in production. Instead, applications can use a service registry to dynamically discover and call registered services.
+
+
+***Consul***
+
+***Eureka***
+
+***Zookeeper***
+
+***Etcd***
+
 
 #  Ejemplos 
 
@@ -361,6 +415,11 @@ https://www.chakray.com/ebooks/learn-implement-architecture-microservices/
 Building Twelve Factor Apps with .Net Core
 the methodology is based on twelve tenants that provide a mixture of process guidelines and implementation detail. Although the methodology has been around for years, it’s only really been achievable in the Microsoft world since the advent of .Net Core.
 https://www.ben-morris.com/building-twelve-factor-apps-with-net-core/
+
+An A-to-Z guide to a microservices architecture transition
+This comprehensive guide to microservices explains everything: comparisons to monolithic architectures, the role of APIs and containers, and design and deployment best practices.
+https://searchapparchitecture.techtarget.com/An-A-to-Z-guide-to-a-microservices-architecture-transition
+
 
 # Revisar
 

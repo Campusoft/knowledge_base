@@ -15,6 +15,10 @@ y las redes virtuales
 
 Azure Event Grid allows you to easily build applications with event-based architectures
 
+# Azure Event Hub
+
+Event Hubs es un servicio de ingesta de datos en tiempo real totalmente administrado que es sencillo, confiable y escalable. Haga streaming de millones de eventos por segundo desde cualquier origen para crear canalizaciones de datos dinámicos y responder a los desafíos empresariales de inmediato
+
 
 # Application Insights
 

@@ -23,8 +23,10 @@ An aggregate is retrieved and saved as a single unit, with all the sub-collectio
 
 A specification is a named, reusable, combinable and testable class to filter the Domain Objects based on the business rules.
 
+Specification is an interface that defines one method: IsSatisfiedBy which return boolean to assert that the specification is satisfied. So, every single business rule should be represented by a class that implements the ISpecification interface.
 
 
+Implement validations in the domain model layer Validations are usually implemented in domain entity constructors or in methods that can update the entity. There are multiple ways to implement validations, such as verifying data and raising exceptions. if the validation fails. There are also more advanced patterns such as using the Specification pattern for validations, and the Notification pattern to return a collection of errors instead of returning an exception for each validation as it occurs
 
  
 ## Referencias

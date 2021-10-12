@@ -1,11 +1,11 @@
 # scheduling 
 
-## calendly
+# calendly
  
  Calendly le ayuda a programar reuniones sin tener que enviar decenas de correos 
 
 
-## Calendso
+# Calendso
 
 OpenSource
 
@@ -18,3 +18,5 @@ Next.js
 Day.js
 Tailwind CSS
 Prisma
+
+

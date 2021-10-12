@@ -120,11 +120,26 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 }
 			
 ```
+# Fundamentals
+
+
+***Cache***
+
+Set the cache key prefix for the application.
+
+https://docs.abp.io/en/abp/latest/Caching#abpdistributedcacheoptions
 
 # Modules
 
 ## Account
 
+## Setting Management
+
+# Timing
+
+TimeZone Setting
+
+ABP Framework defines a setting, named Abp.Timing.Timezone, that can be used to set and get the time zone for a user, tenant or globally for the application. The default value is UTC
 
 
 # Personalizacion
