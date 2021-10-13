@@ -126,8 +126,15 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 ***Cache***
 
 Set the cache key prefix for the application.
-
 https://docs.abp.io/en/abp/latest/Caching#abpdistributedcacheoptions
+
+
+
+***Connection Strings***
+
+Using Multiple Databases
+https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations#using-multiple-databases
+
 
 # Modules
 

@@ -76,8 +76,10 @@ https://www.tutorialsteacher.com/linq/linq-tutorials
 Envio correos
 
 The easiest way to send email from .NET and .NET Core. Use Razor for email templates and send using SendGrid, MailGun, SMTP and more.
-
 https://github.com/lukencode/FluentEmail
+
+ A cross-platform .NET library for IMAP, POP3, and SMTP. 
+https://github.com/jstedfast/MailKit
 
 
 # Thread
