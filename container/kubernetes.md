@@ -1,9 +1,13 @@
 # kubernetes
--	Es un orquestador de contenedores.
+
+
+Es un orquestador de contenedores.
+
 -	Web: https://kubernetes.io/es/
 -	Documentación: https://kubernetes.io/es/docs/home/
 -	https://kubernetes.io/es/docs/concepts/overview/what-is-kubernetes/
--	Kubernetes tiene varias características. Puedes pensar en Kubernetes como:
+
+Kubernetes tiene varias características. Puedes pensar en Kubernetes como:
 	-	una plataforma de contenedores
 	-	una plataforma de microservicios
 	-	una plataforma portable de nube
@@ -13,8 +17,10 @@
 	-	Solicitar un disco virtual
 -	Cluster Networking
 	-	https://kubernetes.io/docs/concepts/cluster-administration/networking/
+
 ## Componentes
-- Control plane
+
+Control plane
 	- Scheduler
 	- Cloud controller manager
 		- Se conecta al api del cloud provider api
@@ -22,7 +28,7 @@
 	- Api
 	- Etcd
 		- Especie de base de datos key-value que guarda el estado del cluster
-- Node
+Node
 	- Kubelet
 		- Vigila los pods
 	- K-proxy
@@ -50,9 +56,7 @@
 ## Kustomization
 -	https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
 -	Permite con un cliente generar manifiestos
-## K3s
-- Lightweight Kubernetes
-- The certified Kubernetes distribution built for IoT & Edge computing
+
 ## Providers
 -	Aunque los archivos yaml son estándar, hay que revisar la documentación de cada proveedor por temas de nombres de objetos o clases. Ej. Digital Ocean storageClassName: do-block-storage , AKS storageClassName: default
 ### Digital Ocean
@@ -653,6 +657,27 @@
 - https://etcd.io/
 - Site Reliability Engineering: https://sre.google/sre-book/table-of-contents/
 	- La ingeniería de confiabilidad del sitio (SRE) es un enfoque de ingeniería de software para las operaciones de TI. Los equipos de SRE utilizan el software para gestionar los sistemas, resolver los problemas y automatizar las tareas operativas.
+	
+## Local kubernetes development
+
+Local kubernetes development
+https://kapernikov.com/local-kubernetes-development/
+
+
+***K3s***
+
+- Lightweight Kubernetes
+- The certified Kubernetes distribution built for IoT & Edge computing
+
+
+***Skaffold***
+
+Local Kubernetes Development. 
+
+Skaffold handles the workflow for building, pushing and deploying your application, allowing you to focus on what matters most: writing code. 
+
+https://skaffold.dev/
+ 
 	
 ## Glosario
 - https://kubernetes.io/docs/reference/glossary/?fundamental=true

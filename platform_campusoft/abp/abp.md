@@ -19,9 +19,66 @@ Posee su propio mecaniso, por algunas desventajas al utilizar NSWAG para generar
 ```
 abp generate-proxy
 ```
+
+
+Options:
+
+-m|--module <module-name>          (default: 'app') The name of the backend module you wish to generate proxies for.
+-a|--api-name <module-name>        (default: 'default') The name of the API endpoint defined in the /src/environments/environment.ts.
+-s|--source <source-name>          (default: 'defaultProject') Angular project name to resolve the root namespace & API definition URL from.
+-t|--target <target-name>          (default: 'defaultProject') Angular project name to place generated code in.
+-p|--prompt                        Asks the options from the command line prompt (for the missing options)
+
 https://docs.abp.io/en/abp/latest/UI/Angular/Service-Proxies
 
 
+***Laboratorio***
+
+Generar proxy para el modulo "AbpFeatureManagement", y el remoto servicio "featureManagement"
+
+abp generate-proxy   --api-name AbpFeatureManagement --module featureManagement
+
+El Api "/api/abp/api-definition", genera informacion de los diferentes modulos, y nombres remotos servicios
+
+```
+"modules": {
+	"featureManagement": {
+      "rootPath": "featureManagement",
+      "remoteServiceName": "AbpFeatureManagement",
+```
+
+Informacion:
+
+- El modulo, se genera a partir del area en el controller que esta marcado como remoto servicio.
+- El servicio remoto se forma por el name en el atributo remoteServiceName
+
+Ejemplo:
+
+El modulo sera "ModuleFoo".
+
+```
+    [RemoteService(Name = "Foo")]
+    [Area("ModuleFoo")]
+    [Route("api/foo/sample")]
+    public class SampleController : MyProjectNameController
+```
+
+- Si no se pone ell name en el atributo remoteservice, se utiliza el mismo nombre del modulo.
+
+Otro ejemplo.
+
+Generar proxy para un libreria que se encuentra en la carpeta "projects", en este caso la libreria se llama "@mre/administrative-unit"
+
+abp generate-proxy  --module ModuleSample --api-name sample --target @mre/administrative-unit
+
+Errores
+------------
+
+[Invalid Module] Backend module "app" does not exist in API definition.
+
+
+angular.json file not found. You must run this command in the angular folder.
+ 
 
 # UI
 
