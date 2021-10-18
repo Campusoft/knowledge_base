@@ -37,7 +37,34 @@ https://medium.com/@jhansireddy007/use-cases-of-kafka-bf7b6d3ce4e2
 
 When to use RabbitMQ over Kafka
 https://stackoverflow.com/questions/42151544/when-to-use-rabbitmq-over-kafka
- 
+
+# Command
+
+Apache Kafka Quickstart
+
+Create a topic to store your events:
+```
+$ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+```
+
+Show  details  of one topic: 
+```
+kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+```
+
+Read the events
+```
+kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+```
+
+https://kafka.apache.org/quickstart 
+
+
+Listar los topics:
+
+```
+$ kafka-topics.sh --list --bootstrap-server localhost:9092
+```
 
 # Client
 
@@ -45,11 +72,38 @@ https://stackoverflow.com/questions/42151544/when-to-use-rabbitmq-over-kafka
  Confluent's Apache Kafka .NET client 
  https://github.com/confluentinc/confluent-kafka-dotnet/
  
+ 
+# Install
+
+
+There are two options to install Apache Kafka using Confluent Platform :
+
+- Local: https://docs.confluent.io/platform/current/quickstart/ce-quickstart.html
+- Docker: https://docs.confluent.io/platform/current/quickstart/ce-docker-quickstart.html
+ 
+ 
+Docker (Proveedor Alternativo). bitnami
+- Posee zookeeper
+- kafka
+
+https://hub.docker.com/r/bitnami/kafka
+ 
+ 
 
 
 # Referencias
 
 The Cloud Vendors provide alternative solutions for Kafka’s storage layer. These solutions include Azure Event Hubs, and to some extent, AWS Kinesis Data Streams. There are also cloud-specific and open source alternatives to Kafka’s stream processing capabilities
+
+ 
+ 
+Top 5 Things Every Apache Kafka Developer Should Know 
+https://www.confluent.io/blog/5-things-every-kafka-developer-should-know/
+ 
+ 
+My Python/Java/Spring/Go/Whatever Client Won’t Connect to My Apache Kafka Cluster in Docker/AWS/My Brother’s Laptop. Please Help!
+https://www.confluent.io/blog/kafka-client-cannot-connect-to-broker-on-aws-on-docker-etc/
+
 
  
  

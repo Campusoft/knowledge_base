@@ -18,7 +18,7 @@ Kubernetes tiene varias características. Puedes pensar en Kubernetes como:
 -	Cluster Networking
 	-	https://kubernetes.io/docs/concepts/cluster-administration/networking/
 
-## Componentes
+# Componentes
 
 Control plane
 	- Scheduler
@@ -33,33 +33,40 @@ Node
 		- Vigila los pods
 	- K-proxy
 		- Maneja el tráfico
-## Servicios
+# Servicios
+
 -	Cluster IP
 	-	IP fija dentro del cluster. Load balancer entre los pods del servicio
 -	Node Port
 	-	Crea un puerto en cada nodo que recibe el tráfico y lo dirige al pod determinado a través de kube-proxy
 -	Load Balancer
 	-	Servicio del proveedor de cloud. Redirecciona el tráfico a los pods a través de un balanceador creado por kubernetes en el proveedor de cloud
-## Features
+
+# Features
 -	Ingress
 	-	Permite crear accesos a los servicios a través de un path
 	-	https://kubernetes.io/docs/concepts/services-networking/ingress/
 	-	Se requiere tener instalado un controlador en el proveedor. Ej. nginx. https://www.hostinger.mx/tutoriales/que-es-nginx
 	-	Al instalar nginx se crea un loadBalancer y clusterIP
-## ConfigMaps
+
+# ConfigMaps
 -	https://kubernetes.io/es/docs/concepts/configuration/configmap/	
 -	Un configmap es un objeto de la API utilizado para almacenar datos no confidenciales en el formato clave-valor. Los Pods pueden utilizar los ConfigMaps como variables de entorno, argumentos de la linea de comandos o como ficheros de configuración en un Volumen.
-## Secret
+
+# Secret
 -	https://kubernetes.io/es/docs/concepts/configuration/secret/
 -	Los objetos de tipo Secret en Kubernetes te permiten almacenar y administrar información confidencial, como contraseñas, tokens OAuth y llaves ssh. Poniendo esta información en un Secret es más seguro y más flexible que ponerlo en la definición de un Pod o en un container image.
 -	No están fuertemente cifrados solo codificados en base64.
-## Kustomization
+
+# Kustomization
 -	https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
 -	Permite con un cliente generar manifiestos
 
-## Providers
--	Aunque los archivos yaml son estándar, hay que revisar la documentación de cada proveedor por temas de nombres de objetos o clases. Ej. Digital Ocean storageClassName: do-block-storage , AKS storageClassName: default
-### Digital Ocean
+# Providers
+
+Aunque los archivos yaml son estándar, hay que revisar la documentación de cada proveedor por temas de nombres de objetos o clases. Ej. Digital Ocean storageClassName: do-block-storage , AKS storageClassName: default
+
+## Digital Ocean
 - 	https://www.digitalocean.com/
 -	Proveedor de cluster en la nube. Gratis $100 de prueba pero pide tarjeta de crédito.
 	-	Crear nuevo kubernates
@@ -75,7 +82,7 @@ Node
 			-	Llave tipo cadena con el nombre AutoRun y como valor la ruta completa al archivo .cmd
 		-	Volver a abrir la terminal
 		-	Utilizar directamente [alias] [comando]. Ej. kctl get nodes
-### AKS
+## AKS
 -	Gratis $200 de prueba pero pide tarjeta de crédito.
 -	https://azure.microsoft.com/es-mx/
 -	Crear cluster
@@ -89,8 +96,11 @@ Node
 	-	az account set --subscription [subscription id]
 -	Set credentials
 	-	az aks get-credentials --resource-group [resource group] --name [cluster name]		
-## Manifiestos
--	Archivos que permiten crear componentes a través de un archivo yaml
+
+# Manifiestos
+
+Archivos que permiten crear componentes a través de un archivo yaml
+
 -	Ejemplo, creación de un pod con las opciones mínimas (version del api, tipo, nombre y la definición de un contenedor)
 	```
 		apiVersion: v1
@@ -558,8 +568,10 @@ Node
 		- name: nginx
 		  newTag: latest	
 	```
-## Kubectl
--	Herramienta de línea de comandos para administar kubernates
+# Kubectl
+
+Herramienta de línea de comandos para administar kubernates
+
 - Descarga, instalación y configuración: https://kubernetes.io/es/docs/tasks/tools/install-kubectl/
 	- https://kubernetes.io/docs/tasks/tools/install-kubectl-windows/
 - Cliente para gestionar un cluster de kubernetes
@@ -649,12 +661,22 @@ Node
 	-	El archivo kustomize debe llamarse kustomization.yaml
 	-	kubectl kustomize [path archivo yaml]
 	-	Si se ejecuta el comando en el mismo directorio en que está el archivo kustomization.yaml
-## Kube context
+# Kube context
 
-## Referencias
-- etcd is the backend for service discovery and stores cluster state and configuration
+
+# Service Discovery
+
+In the Kubernetes environment, when you call one service from another, you don’t need to worry about the actual location of your service. Kubernetes by default uses DNS names to discover the pods. Therefore, if you want to call the bar service from the foo service, in the foo service’s code, you can just refer to http://bar:<port> as the service endpoint. Kubernetes will resolve and map the name to the actual endpoint. Kubernetes internally uses etcd as its distributed key-value store.
+
+
+
+# Referencias
+
+etcd is the backend for service discovery and stores cluster state and configuration
+
 - A distributed, reliable key-value store for the most critical data of a distributed system
 - https://etcd.io/
+
 - Site Reliability Engineering: https://sre.google/sre-book/table-of-contents/
 	- La ingeniería de confiabilidad del sitio (SRE) es un enfoque de ingeniería de software para las operaciones de TI. Los equipos de SRE utilizan el software para gestionar los sistemas, resolver los problemas y automatizar las tareas operativas.
 	

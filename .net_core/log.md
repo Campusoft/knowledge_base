@@ -50,14 +50,20 @@ System.ArgumentException: Buffered writes are not available when file sharing is
 ***configuration***
 
 A Serilog settings provider that reads from Microsoft.Extensions.Configuration sources, including .NET Core's appsettings.json file.
+- By default, configuration is read from the Serilog section.
+
+Agregar nuget:
+```
+Install-Package Serilog.Settings.Configuration -Version 3.3.0
+```
 https://github.com/serilog/serilog-settings-configuration
 
 
 Algunos ejemplos configuraciones appsettings.json
 https://stackoverflow.com/questions/54715142/serilog-not-writing-to-file-net-core-2-2
 
-***Serilog integration for ASP.NET Core***
 
+***Serilog integration for ASP.NET Core***
 https://github.com/serilog/serilog-aspnetcore
  
 ### Enrichers
@@ -72,7 +78,16 @@ Enriches Serilog events with information from the process environment.
 https://github.com/serilog/serilog-enrichers-environment
 https://github.com/serilog/serilog-enrichers-environment#included-enrichers
 
+
+### Output templates
+
+https://github.com/serilog/serilog/wiki/Configuration-Basics#output-templates
+
 ### Sinks
+
+***Serilog.Sinks.File***
+Write Serilog events to files in text and JSON formats, optionally rolling on time or size 
+https://github.com/serilog/serilog-sinks-file#rolling-policies
 
 
 ***Serilog.Formatting.Compact***
@@ -81,16 +96,37 @@ A simple, compact JSON-based event format for Serilog. CompactJsonFormatter sign
 
 https://github.com/serilog/serilog-formatting-compact
 
+
+
+
 ### Tools
 
 Roslyn-based analysis for code using the Serilog logging library. Checks for common mistakes and usage problems.
 https://marketplace.visualstudio.com/items?itemName=Suchiman.SerilogAnalyzer
 
+### Laboratorios
+
+
+Añadimos Serilog obteniendo la configuración desde Microsoft.Extensions.Configuration
+
+```
+.UseSerilog((HostBuilderContext context, LoggerConfiguration loggerConfiguration) =>
+{
+	loggerConfiguration.ReadFrom.Configuration(context.Configuration);
+})
+```
+
+### Referencias
+
+Serilog Best Practices
+https://benfoster.io/blog/serilog-best-practices/
 
 ### Revisiones
 
 - TODO: Colocar porque serilog es diferente a los tipicos liberias de logs.
 - TODO: A Serilog event sink that writes to Microsoft Teams 
+- TODO: Formatos: outputTemplate
+
 
 # Trace
 

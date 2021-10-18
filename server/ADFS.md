@@ -66,3 +66,7 @@ Ref Img:
 	
 https://kb.vmware.com/s/article/78029
 
+# Revisar
+
+ADFS. Identity Manager ??
+

@@ -78,7 +78,9 @@ Errores
 
 
 angular.json file not found. You must run this command in the angular folder.
- 
+
+
+# Dynamic C# API Clients 
 
 # UI
 
@@ -126,17 +128,7 @@ imports: [
    ]
 ```
 
-# Event-Bus
 
-ABP Framework provides two type of event buses;
-
-- Local Event Bus is suitable for in-process messaging.
-- Distributed Event Bus is suitable for inter-process messaging, like microservices publishing and subscribing to distributed events.
-https://docs.abp.io/en/abp/latest/Event-Bus
-
-***Personalizar***
-
-IDistributedEventBus 
 
 
 # Logs
@@ -147,6 +139,10 @@ Serilog
 Permitir cambiar los nombres que se utilizan AbpSerilogMiddleware.  
 - IOptions<AbpAspNetCoreSerilogOptions> options
 
+- _options.EnricherPropertyNames.TenantId
+- _options.EnricherPropertyNames.UserId
+- _options.EnricherPropertyNames.ClientId
+- _options.EnricherPropertyNames.CorrelationId
 abp/framework/src/Volo.Abp.AspNetCore.Serilog/Volo/Abp/AspNetCore/Serilog/AbpSerilogMiddleware.cs
 
 
@@ -182,8 +178,37 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 
 ***Cache***
 
+Permite establecer configuraciones:
+
+- Tener una configuracion global. AbpDistributedCacheOptions.DistributedCacheEntryOptions. Utiliza configuracion nativo .net DistributedCacheEntryOptions
+- Tener configuraciones por cada cache. AbpDistributedCacheOptions.CacheConfigurators. Utiliza configuracion nativo .net DistributedCacheEntryOptions 
+- Aplicar un prefijo a todos las claves de cache que se utilicen. AbpDistributedCacheOptions.KeyPrefix
+
+```
+Configure<AbpDistributedCacheOptions>(options =>
+{
+    options.KeyPrefix = ...
+});
+
+```
+
 Set the cache key prefix for the application.
 https://docs.abp.io/en/abp/latest/Caching#abpdistributedcacheoptions
+
+Laboratorio
+- Establecer una clave de cache, explicitamente, sin tener los prefijos y otros elementos que se agraban por cada componente que utiliza abp-cache.
+
+
+"c:TemplateCacheItem.Name.Explicito,k:MyProjectName:tp:STRING"
+"c:<Nombre-Cache-Item>,k:<Prefjijo-Configurado>:<Key>"
+
+```
+ var normalizedKey = $"c:{args.CacheName},k:{DistributedCacheOptions.KeyPrefix}{args.Key}";
+```
+
+
+
+El Nombre-Cache-Item, se puede establecer con el atributo "CacheName" en la clase del CacheItem, si no se establece se considera el namaspace.type de la clase
 
 
 
@@ -241,6 +266,8 @@ Abp-Cli, permite trabajar con plantillas personalizadas. El proceso busca las si
 
 - MyCompanyName. (Nombre inicial del namespace)
 - MyProjectName. (Nombre del proyecto)
+
+YourCompany.YourProduct.YourModule 
 
 
 Las palabras claves que seran reemplazadas.

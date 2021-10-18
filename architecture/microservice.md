@@ -76,7 +76,7 @@ https://searchapparchitecture.techtarget.com/tip/Follow-these-10-fundamental-mic
 
 Here I am using the term database to show a logical separation of data, i.e., the Microservices can share the same physical database, but they should use separate Schema/collection/table
 
-## data separation
+## Data separation
 
 - What happens when a service developed by a team requires a change of schema in a database shared by other services?
 
@@ -89,6 +89,15 @@ https://www.wix.engineering/post/read-only-data-aggregation-in-a-microservices-e
 
 A good set of events must be integrated into the generating microservice and lost events are a possibility
 
+## Shared Static Data
+
+For example, data such as U.S. states, list of countries, etc., is often used as the shared static data. 
+
+
+One would think that having another microservices with the static data would solve this problem, but it is overkill to have a service just to get some static information that does not change over time. Hence, sharing static data is often done with shared libraries. For example, if a given service wants to use the static metadata, it has to import the shared library into the service code
+
+
+Also, you can cache any service-level metadata (configurations or static data) during the service startup.
 
 # Pattern
 
@@ -358,6 +367,10 @@ A service registry provides a database that applications can use to implement th
 ***Zookeeper***
 
 ***Etcd***
+
+
+# Crosscutting Features
+
 
 
 #  Ejemplos 

@@ -67,6 +67,13 @@ Angular PWA
 - ng generate component <NOMBRE-COMPONENTE>
 - ng generate service <NOMBRE-SERVICIO>
 
+Para crear en una libreria:
+
+- Crear en la liberia "@mre/administrative-unit", el component unity-type, en la carpeta components
+
+ng generate component components/unity-type --project=@mre/administrative-unit
+
+
 
 Se puede personalizar una plantilla. 
 Create from a custom template

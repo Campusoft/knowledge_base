@@ -5,3 +5,4 @@ Qué es un diagrama entidad-relación
 - notación de Barker
 - notación de IDEF1X
 https://www.lucidchart.com/pages/es/que-es-un-diagrama-entidad-relacion
+
