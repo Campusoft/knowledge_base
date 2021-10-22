@@ -198,11 +198,9 @@ https://faun.pub/why-microservices-fail-eda3e25069a0
 
 
 ***Traces***
-
 Traces—or more precisely, “distributed traces”—are samples of causal chains of events (or transactions) between different components in a microservices ecosystem. And like events and logs, traces are discrete and irregular in occurrence.
 
 ***Metrics***
- 
 To put it simply, metrics are numeric measurements. Metrics can include:
 - A numeric status at a moment in time (like CPU % used)
 - Aggregated measurements (like a count of events over a one-minute time, or a rate of events-per-minute)
@@ -210,7 +208,6 @@ To put it simply, metrics are numeric measurements. Metrics can include:
 
 
 ***OpenTelemetry***
-
 
 An observability framework for cloud-native software.
 
@@ -290,11 +287,9 @@ https://dzone.com/articles/top-microservices-frameworks
 
 Dapr is a portable, event-driven runtime that makes it easy for enterprise developers to build resilient, stateless and stateful microservice applications that run on the cloud and edge and embraces the diversity of languages and developer frameworks.
 
-
 Dapr codifies the best practices for building microservice applications into open, independent, building blocks that enable you to build portable applications with the language and framework of your choice. Each building block is completely independent and you can use one, some, or all of them in your application.
 
 In addition Dapr is platform agnostic meaning you can run your applications locally, on any Kubernetes cluster, and other hosting environments that Dapr integrates with. This enables you to build microservice applications that can run on the cloud and edge.
-
 
 Developer language SDKs and frameworks
 To make using Dapr more natural for different languages, it also includes language specific SDKs for Go, Java, JavaScript, .NET and Python. These SDKs expose the functionality in the Dapr building blocks, such as saving state, publishing an event or creating an actor, through a typed, language API rather than calling the http/gRPC API. This enables you to write a combination of stateless and stateful functions and actors all in the language of their choice. And because these SDKs share the Dapr runtime, you get cross-language actor and functions support

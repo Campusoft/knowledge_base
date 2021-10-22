@@ -8,8 +8,50 @@ Depended Packages
 -    angular-oauth2-oidc is used to support for OAuth 2 and OpenId Connect (OIDC).
 -    Chart.js is used to create widgets.
 -    ngx-validate is used for dynamic validation of reactive forms.
--   ngx-datatable. https://github.com/swimlane/ngx-datatable
+-    ngx-datatable. https://github.com/swimlane/ngx-datatable
 
+
+# Utilizacion Proxy
+
+```
+abp generate-proxy
+```
+https://docs.abp.io/en/abp/latest/UI/Angular/Service-Proxies
+
+El archivo ./proxy/index.ts, enlaza todas las subcarpetas que se han creado, estas carpetas se crean segun el namespace del api en el backend. Se exponen con nombres "as Person"
+
+```
+import * as Address from './address';
+import * as Person from './person';
+export { Address, Person };
+```
+
+Para ser utilizados se hace referencia a "@proxy", el cual esta configurado "tsconfig.json"
+
+```
+"paths": {
+      "@proxy": ["src/app/proxy/index.ts"],
+      "@proxy/*": ["src/app/proxy/*"]
+    }
+```
+Para importar las clases generadas, por el proxy de la carpeta "/proxy/address", utilizar el objeto expuesto Address "export { Address, Person };"
+
+import { <Entity>Dto,<Service> } from "@proxy/Address";
+
+
+# Componentes UI
+
+***abp-modal***
+
+- Posee un comportamiento de dirty, sobre las modificaciones relacionadas en la forma, para solicitar confirmacion en salir sin guardar. 
+
+
+# Localization 
+
+The Localization key format consists of 2 sections which are Resource Name and Key. ResourceName::Key
+
+
+https://docs.abp.io/en/abp/latest/UI/Angular/Localization
 
 # Laboratorios
 

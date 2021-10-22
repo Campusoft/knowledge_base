@@ -16,6 +16,7 @@ Routing & Navigation
 https://angular.io/guide/router
 
 
+
 # Util
 
 Se puede activar tracing de route 
@@ -31,3 +32,11 @@ imports: [
     )
 ]
 ```
+
+
+# Revision
+
+- Rutas hijas
+- Rutas en modulos
+- Ruta hijas en modulos
+

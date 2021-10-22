@@ -36,6 +36,11 @@ var scriptObject1 = new ScriptObject();
 scriptObject1.Import(new MyObject(), renamer: member => member.Name);
 ```
 
+Escape caracteres
+
+https://github.com/scriban/scriban/blob/master/doc/language.md#13-escape-block
+
+
 # RazorLight
 
 Use Razor to build templates from Files / EmbeddedResources / Strings / Database or your custom source outside of ASP.NET MVC. No redundant dependencies and workarounds in pair with excellent performance and .NET Standard 2.0 and .NET Core 3.0 support.

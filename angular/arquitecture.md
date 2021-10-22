@@ -42,3 +42,10 @@ Angular Spotify
 Spotify client built with Angular 12, Nx Workspace, ngrx, TailwindCSS and ng-zorro 
 A simple Spotify client built with Angular 12, Nx workspace, ngrx, TailwindCSS and ng-zorro. 
 https://github.com/trungk18/angular-spotify
+
+
+
+
+
+"The mother of all demo apps" — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more medal_sports https://realworld.io/
+https://github.com/gothinkster/realworld

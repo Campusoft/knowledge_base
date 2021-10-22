@@ -1,6 +1,5 @@
 # ANGULAR
  
- 
 Angular is an entire platform for building modern applications.
 
 # Modules 
@@ -49,7 +48,7 @@ constructor(fooService: FooService)
 
 # Consumir REST
 
- Communicating with backend services using HTTP
+Communicating with backend services using HTTP
 https://angular.io/guide/http
  
 
@@ -67,17 +66,21 @@ Angular PWA
 - ng generate component <NOMBRE-COMPONENTE>
 - ng generate service <NOMBRE-SERVICIO>
 
-Para crear en una libreria:
+Ejemplos para crear componentes:
 
-- Crear en la liberia "@mre/administrative-unit", el component unity-type, en la carpeta components
+Crear un componente en una libreria "@mre/administrative-unit", en una subcarpeta "components", con el nombre "unity-type"
 
+```
 ng generate component components/unity-type --project=@mre/administrative-unit
+```
 
+Crear un componente "new-component" en el modulo "Person", en el proyecto principal
 
+```
+ng g component Person/new-component
+```
 
-Se puede personalizar una plantilla. 
-Create from a custom template
-https://docs.abp.io/en/abp/latest/CLI-New-Command-Samples#create-from-a-custom-template
+https://angular.io/cli
 
 # Schematics 
 
@@ -113,8 +116,6 @@ Varios artículos para aprender angular 8
 -    Angular 8: Directives (Day 4)
 -    Angular 8: Pipes (Day 5)
 -    Angular 8: View Encapsulation (Day 6)
-
-
 https://www.c-sharpcorner.com/article/learn-angular-8-step-by-step-in-10-days-angular-forms-day-7/
 
 
@@ -144,10 +145,6 @@ https://github.com/akveo/ngx-admin
 
 
 
-**Referencias de Arquitecturas**
-
-"The mother of all demo apps" — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more medal_sports https://realworld.io/
-https://github.com/gothinkster/realworld
 
 
 **Referencias de Libros**

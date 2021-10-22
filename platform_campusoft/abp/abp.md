@@ -171,8 +171,14 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 	
 	...
 }
-			
-```
+```			
+
+# Globalization and localization
+
+		
+
+		
+
 # Fundamentals
 
 
@@ -292,8 +298,12 @@ abp new Acme.MyConsoleApp -t console --template-source C:\proyectos\abp-template
 Options Ab Cli:
 https://docs.abp.io/en/abp/latest/CLI#options
 
-
 El proyecto abp - cli, se encuentra en abp\framework\src\Volo.Abp.Cli
+
+
+
+
+
 
 
 # Versiones
