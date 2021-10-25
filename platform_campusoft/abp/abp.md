@@ -237,18 +237,6 @@ TimeZone Setting
 ABP Framework defines a setting, named Abp.Timing.Timezone, that can be used to set and get the time zone for a user, tenant or globally for the application. The default value is UTC
 
 
-# Personalizacion
-
-Obtener el codigo fuente de los modulos. (Opcion 1)
-
-get-source (CLI option)
-https://docs.abp.io/en/abp/latest/CLI#get-source
-
-
-Customizing the Existing Modules
-https://docs.abp.io/en/abp/latest/Customizing-Application-Modules-Guide
-
-
 
 
 # Plantillas

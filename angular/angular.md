@@ -46,6 +46,16 @@ To inject a dependency in a component's constructor(), supply a constructor argu
 constructor(fooService: FooService)
 ```
 
+An object that implements one of the Provider interfaces. A provider object defines how to obtain an injectable dependency associated with a DI token. An injector uses the provider to create a new instance of a dependency for a class that requires it.
+
+
+APP_INITIALIZER
+
+The provided functions are injected at application startup and executed during app initialization. If any of these functions returns a Promise or an Observable, initialization does not complete until the Promise is resolved or the Observable is completed.
+
+You can, for example, create a factory function that loads language data or an external configuration, and provide that function to the APP_INITIALIZER token. The function is executed during the application bootstrap process, and the needed data is available on startup.
+
+
 # Consumir REST
 
 Communicating with backend services using HTTP

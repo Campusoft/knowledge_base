@@ -46,3 +46,6 @@ Angular Universal es la tecnología que te permite ejecutar tu aplicación Angul
 # Rendimiento
 
  Mejorar el rendimiento de *ngFor con trackBy 
+ 
+ 
+ 

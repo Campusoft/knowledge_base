@@ -23,6 +23,9 @@ An event-driven API must offer two capabilities to its consumers.
 	
 - Webhooks
 - WebSockets
+	
+  WSS Connection (Secure WebSocket Protocol)	
+
 - Server-Sent Events (SSE)
 
 ## Webhooks

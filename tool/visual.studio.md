@@ -19,5 +19,5 @@ El Snippet Designer es una extensión que mejora el IDE de Visual Studio para pe
 https://marketplace.visualstudio.com/items?itemName=vs-publisher-2795.SnippetDesigner
 
 
- A collection of snippets for C++, C#, HTML, VB, XAML and XML. 
+A collection of snippets for C++, C#, HTML, VB, XAML and XML. 
 https://github.com/JosefPihrt/Snippetica
