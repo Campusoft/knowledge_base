@@ -29,6 +29,11 @@ List all keys using the KEYS command:
 $ redis-cli KEYS '*'
 ```
 
+Delete all keys from all Redis databases:
+
+```
+$ redis-cli FLUSHALL
+```
 
 redis-cli, the Redis command line interface
 https://redis.io/topics/rediscli

@@ -13,10 +13,73 @@ Depended Packages
 
 # Utilizacion Proxy
 
+
 ```
 abp generate-proxy
 ```
+
+
+Options:
+
+-m|--module <module-name>          (default: 'app') The name of the backend module you wish to generate proxies for.
+-a|--api-name <module-name>        (default: 'default') The name of the API endpoint defined in the /src/environments/environment.ts.
+-s|--source <source-name>          (default: 'defaultProject') Angular project name to resolve the root namespace & API definition URL from.
+-t|--target <target-name>          (default: 'defaultProject') Angular project name to place generated code in.
+-p|--prompt                        Asks the options from the command line prompt (for the missing options)
+
 https://docs.abp.io/en/abp/latest/UI/Angular/Service-Proxies
+
+
+Ejemplo:
+
+Generar el proxy del modulo Person:
+
+abp generate-proxy  --module Person --api-name Person 
+
+--api-name. Se obtiene de /api/abp/api-definition, del valor remoteServiceName. Si el api-name posee otra direccion, esta va estar configurada /src/environments/environment.ts
+--module. Se obtiene de /api/abp/api-definition, 
+
+Datos en /src/environments/environment.ts.
+-- 
+
+```
+ apis: {
+    default: {
+      url: 'https://localhost:44323',
+      rootNamespace: 'MyCompanyName.MyProjectName',
+    },
+	Person: {
+      url: 'https://localhost:44362',
+      rootNamespace: 'Foo.Bar.Person',
+    },
+  },
+```
+
+Datos en /api/abp/api-definition:
+
+```
+"Person": {
+      "rootPath": "Foo.Bar.Person",
+      "remoteServiceName": "Person",
+	  
+```
+---------------------------------
+
+Generar el proxy de un modulo Abp. 
+
+abp generate-proxy  --module identity
+
+
+Datos en /api/abp/api-definition:
+
+```
+	"modules": {
+		"identity": {
+			"rootPath": "identity",
+			"remoteServiceName": "AbpIdentity",
+```			
+
+----------------------------------
 
 El archivo ./proxy/index.ts, enlaza todas las subcarpetas que se han creado, estas carpetas se crean segun el namespace del api en el backend. Se exponen con nombres "as Person"
 
@@ -41,9 +104,18 @@ import { <Entity>Dto,<Service> } from "@proxy/Address";
 
 # Componentes UI
 
+
+form-utils
+
 ***abp-modal***
 
 - Posee un comportamiento de dirty, sobre las modificaciones relacionadas en la forma, para solicitar confirmacion en salir sin guardar. 
+
+***abp-extensible-form***
+
+
+***mapEnumToOptions***
+
 
 
 # Localization 
@@ -53,39 +125,6 @@ The Localization key format consists of 2 sections which are Resource Name and K
 
 https://docs.abp.io/en/abp/latest/UI/Angular/Localization
 
-# Laboratorios
-
-
-***Personalizar administracion usuarios (Frontend)***
-
-Opcion 1:
-No funciona la opcion agregar package con codigo. (Presenta error que no existe modulo). 
-```
-abp add-package @abp/ng.identity --with-source-code
-```
-
-Opcion 2:
-
-Copiar el codigo del modulo, como una libreria, para utilizar en reemplazo a la dependencia del modulo configurado en package.json "dependencies"  
-
-- Bajar el codigo del package desde https://github.com/abpframework/abp/tree/dev/npm/ng-packs/packages
-- Package "@abp/ng.identity". Ruta: abp/npm/ng-packs/packages/identity/
-- Copiar el modulo en la carpeta "projects", para trabajarlo como una libreria
-- Ajustar angular.json y tsconfig.json
-- Angular.Json
-  - Agregar una nuevo proyecto "projects". Se puede copiar desde abp-github "abp/npm/ng-packs/angular.json", el bloque correspondiente al modulo que se esta copiando.
-  - En abp, la carpeta de las librerias es "packages", cambiar a "projects". Ex. "sourceRoot": "packages/identity/src" a "sourceRoot": "projects/identity/src"
-- tsconfig.json
-  - Agregar en "paths", el nombre del modulo para utilizar el codigo fuente que existe en la carpeta "projects". 
-```
-	"@abp/ng.identity": ["projects/abp-ng.identity/src/public-api.ts"],
-    "@abp/ng.identity/config": ["projects/abp-ng.identity/config/src/public-api.ts"],
-    "@abp/ng.identity/proxy": ["projects/abp-ng.identity/proxy/src/public-api.ts"],
-```
-
-
-TODO.
-- Generacion proxy, en una libreria. (Como volver a generar el proxy para una libreria con abp)
 
 
 # Referencias

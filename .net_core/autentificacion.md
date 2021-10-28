@@ -1,6 +1,18 @@
-
-
 ASP.NET Core supports both role-based and policy-based authorization
+
+
+
+# Identity on ASP.NET Core
+
+The primary package for Identity is Microsoft.AspNetCore.Identity. This package contains the core set of interfaces for ASP.NET Core Identity, and is included by Microsoft.AspNetCore.Identity.EntityFrameworkCore.
+
+
+Identity model customization in ASP.NET Core
+https://docs.microsoft.com/en-us/aspnet/core/security/authentication/customize-identity-model?view=aspnetcore-5.0
+
+
+Configure ASP.NET Core Identity
+https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-configuration?view=aspnetcore-5.0
 
 # Authentication and authorization for SPAs
 

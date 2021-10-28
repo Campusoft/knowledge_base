@@ -230,6 +230,30 @@ https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations#using-multipl
 
 ## Setting Management
 
+Setting Management UI. (Indica como construir UI en diferentes tecnologias)
+- MVC UI
+- Blazor UI
+- Angular UI
+https://docs.abp.io/en/abp/4.4/Modules/Setting-Management
+
+
+Referencias UI
+- Configuracion Email. (Abp-Code)
+https://github.com/abpframework/abp/tree/rel-4.4/npm/ng-packs/packages/setting-management/config/src/components/email-setting-group
+
+
+***Laboratorio***
+
+Agregar un tab
+
+```
+ng generate component config/foo-settings
+```
+
+## Volo.Abp.Ldap
+
+
+
 # Timing
 
 TimeZone Setting
@@ -287,10 +311,6 @@ Options Ab Cli:
 https://docs.abp.io/en/abp/latest/CLI#options
 
 El proyecto abp - cli, se encuentra en abp\framework\src\Volo.Abp.Cli
-
-
-
-
 
 
 

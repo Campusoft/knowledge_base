@@ -97,6 +97,12 @@ https://blog.angular-university.io/angular-custom-validators/
 Angular Reactive Forms Validation
 https://www.tektutorialshub.com/angular/angular-reactive-forms-validation/
 
+
+Angular Reactive Forms: trigger validation on submit
+In this article we will learn different approaches of validating all form fields when user clicks on submit button for Angular Reactive Forms. We will also learn how to disable the submit button if the form is invalid.
+https://loiane.com/2017/08/angular-reactive-forms-trigger-validation-on-submit/
+
+
 # Generator
 
 **Angular Form Generator**

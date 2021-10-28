@@ -19,8 +19,6 @@ Existe la implementaciones
 - PermissionsRequirement. (El requerimiento para las politicas de permisos). Posee una lista permisos a evaluar, y si se aplican todos los permisos o unicamente uno
 - PermissionsRequirementHandler. Procesar el requerimiento PermissionsRequirement. Segun el PermissionsRequirement, se verifica si se posee todos los permisos o unicamnete uno. Utiliza IPermissionChecker, para verificar si el usuario  posee la lista permisos
 
-
-
 PermissionManagement
 https://docs.abp.io/en/abp/latest/Modules/Permission-Management
 
@@ -57,69 +55,24 @@ Ejemplo
 
 
 ***Varios***
+
 AlwaysAllowAuthorizationService
 
 AlwaysAllowAuthorizationService is a class that is used to bypass the authorization service. It is generally used in integration tests where you may want to disable the authorization system.
 
+# Convensiones
 
 
+"Module"."Entity/Process"."Action"
 
-# Laboratorios
+Ejemplo: El modulo de administracion de personas. Permisos para crear direcciones
 
-
-***Personalizar campos en usuarios (Backend)***
-
-get-source (CLI option)
-https://docs.abp.io/en/abp/latest/CLI#get-source
-
-
-- Bajar codigo modulo Volo.Identity.  
-
-```
-abp get-source  Volo.Identity
-```
-
-Este commando bajo el codigo fuente del modulo, todos sus componentes "Blazor,MongoDB,AspNetCore,Web"
-
-- Se debe enlazar los proyectos existentes a los proyectos del modulo "Volo.Identity", quitando las referencias a nuget del modulo "Volo.Identity"
-
-- Agregar los campos que se requieren a la entidad IdentityUser "Volo.Abp.Identity.Domain"
-
-- Generar las migraciones con los cambios realizados en la entidad
+- "PersonManagement.PersonAddress.Create"
+- "PersonManagement.PersonAddress.Edit"
+- "PersonManagement.PersonAddress.Delete"
 
 
----------------------------
-
-Error:
-
-
-```
-System.IO.FileLoadException: Could not load file or assembly 'Volo.Abp.Identity.Application.Contracts, Version=4.4.3.0, Culture=neutral, PublicKeyToken=null'. The located assembly's manifest definition does not match the assembly reference. (0x80131040)
-File name: 'Volo.Abp.Identity.Application.Contracts, Version=4.4.3.0, Culture=neutral, PublicKeyToken=null'
-```
-
-Se debe agregar las propiedades de versionamiento a cada proyecto del modulo agregado. 
-- Utilizar un archivo centralizado. Ejemplo: "common.abp.props", y luego importarlo en cada proyecto 
-
-```
-  <Import Project="..\..\common.abp.props" />
-```
-
-El contenido del common.abp.props, copiar de codigo fuente del abp. "abp/common.props"
-
-
-
-----------------------------------
-
-
-***Personalizar Flujo auntentificacion(Backend)***
-
-- Bajar codigo modulo Volo.Account.  
-
-```
-abp get-source  Volo.Account
-```
-
+AbpIdentity.Roles.Create
 
 # Referencias
 
