@@ -54,7 +54,9 @@
      - Clonar un repositorio
 	   <pre><code> git clone path_repositorio </code></pre>
 	 - Obtener los ultimos cambios de un repositorio
-	   <code> git pull </code>
+	   ``` 
+	      git pull 
+	   ```
 	 - Ver todas las ramas de un repositorio
 	   <code> git branch -a </code>
 	 - Cambiar a una rama
