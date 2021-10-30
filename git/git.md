@@ -52,17 +52,17 @@
 
 ### Comandos básicos
      - Clonar un repositorio
-	   'git clone path_repositorio'
+	   '''git clone path_repositorio'''
 	 - Obtener los ultimos cambios de un repositorio
-	   'git pull'
+	   '''git pull'''
 	 - Ver todas las ramas de un repositorio
-	   'git branch -a'
+	   '''git branch -a'''
 	 - Cambiar a una rama
-	   'git checkout nombre_rama'
+	   '''git checkout nombre_rama'''
 	 - Realizar un commit
-	   'commit -m "Comentario" '
+	   '''commit -m "Comentario" '''
 	 - Enviar los cambios al repositorio remoto
-	   'git push origin nombre_rama_remota'
+	   '''git push origin nombre_rama_remota'''
 
 
 # Refencias
