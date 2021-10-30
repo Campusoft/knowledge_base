@@ -52,7 +52,7 @@
 
 ### Comandos básicos
      - Clonar un repositorio
-	   <code> git clone path_repositorio </code>
+	   <pre><code> git clone path_repositorio </code></pre>
 	 - Obtener los ultimos cambios de un repositorio
 	   <code> git pull </code>
 	 - Ver todas las ramas de un repositorio
