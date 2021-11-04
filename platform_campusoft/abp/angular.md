@@ -10,6 +10,8 @@ Depended Packages
 -    ngx-validate is used for dynamic validation of reactive forms.
 -    ngx-datatable. https://github.com/swimlane/ngx-datatable
 
+-    Existe dependencia a @abp/ng.components > ng-zorro-antd
+
 
 # Utilizacion Proxy
 
