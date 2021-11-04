@@ -46,14 +46,53 @@ and retry logic.
 .NET Core CLI
 - dotnet ef migrations add InitialCreate
 
+
+
 Visual Studio
 - Add-Migration InitialCreate
+
+.NET Core CLI
+- dotnet ef database update
+
+--startup-project
+
+```
+dotnet ef database update --startup-project ../../host/Mre.Sb.AdministrativeUnit.HttpApi.Host --context AdministrativeUnitDbContext
+```
 
 Visual Studio (Actualizar base de datos)
 - Update-Database
 
 Migrations Overview
 https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/?tabs=dotnet-core-cli
+
+
+
+The dotnet ef tool is no longer part of the .NET Core SDK
+
+install dotnet ef as a global tool typing the following command:
+```
+dotnet tool install --global dotnet-ef
+```
+
+
+
+Entity Framework Core tools reference - .NET Core CLI
+https://docs.microsoft.com/en-us/ef/core/cli/dotnet
+
+Errores .NET Core CLI
+----------------------
+
+```
+More than one DbContext was found. Specify which one to use. Use the '-Context'
+parameter for PowerShell commands and the '--context' parameter for dotnet comma
+nds.
+```
+
+```
+dotnet ef database update --context AdministrativeUnitDbContext
+```
+
 
 
 ## Reference

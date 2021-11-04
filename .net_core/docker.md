@@ -3,7 +3,6 @@
 
 
 
-
 The Microsoft Container Registry (MCR, mcr.microsoft.com) is a syndicate of Docker Hub - which hosts publicly accessible containers.
  
 

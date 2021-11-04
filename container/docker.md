@@ -47,6 +47,19 @@ Status : Failure -Test failed: Access denied for user 'admin'@'172.17.0.1' (usin
 
 ----------------------
 
+
+# Docker Toolbox
+
+Oracle VM VirtualBox
+
+Container is not available on localhost in Windows Docker Toolbox
+If you want to access the container through your Windows host, you also need to forward port 80 of your Docker machine to that host.
+
+I see you are using VirtualBox, which allows you to do that by adding an entry in Settings > Network > Advanced > Port Forwarding.
+
+https://stackoverflow.com/questions/50592890/container-is-not-available-on-localhost-in-windows-docker-toolbox
+
+
 # Swarm
 
 Docker swarm is a container orchestration tool, meaning that it allows the user to manage multiple containers deployed across multiple host machines. 
