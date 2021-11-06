@@ -368,4 +368,6 @@ Using Multiple Databases
 https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations#using-multiple-databases
 
 
-
+Las clases AuditedAggregateRoot. Posee
+- ConcurrencyStamp
+- ExtraProperties
