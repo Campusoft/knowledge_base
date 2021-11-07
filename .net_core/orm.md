@@ -16,7 +16,7 @@ https://stackoverflow.com/questions/65837188/how-to-get-list-of-database-table-p
 Informacion obsolete GetColumnName
 https://docs.microsoft.com/en-us/ef/core/what-is-new/ef-core-5.0/breaking-changes#getcolumnname-obsolete
 
-### Laboratorios
+## Laboratorios
 
 Generar prefijos tablas a todas las columnas.
 Buscar el prefijo que se establece para una tabla, con el nombre clase de la entidad: "entity.ClrType.Name".
@@ -93,9 +93,16 @@ nds.
 dotnet ef database update --context AdministrativeUnitDbContext
 ```
 
+# Best Practiq
 
 
-## Reference
+- Consider whether to use Unicode data type  (e.g. NCHAR,NVARCHAR,NTEXT) if you need to support internationalization, but Unicode will take twice as much space. (*****)
+
+```
+entity.Property(x => x.ColumnName).IsUnicode(false);  
+```
+
+# Reference
 
 This site provides documentation and tutorials for people looking for help with using Entity Framework Core
 https://www.learnentityframeworkcore.com/
@@ -108,7 +115,7 @@ builder.Property(a => a.Id)
 ```
 https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=fluent-api
 
-## Revisiones
+# Revisiones
 
 - TODO: Interceptores EntityFramework ORM
 
