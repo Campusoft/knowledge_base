@@ -1,15 +1,18 @@
 # Servicios REST
 
-## Estandares, Convenciones
+# Estandares, Convenciones
 
 
-## Seguridad
+[Microsoft REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md)
+
+
+# Seguridad
 
 - Token JWT
 - Tipos autentificacion HTTP. Basic Authentication, NTLM/Digest
 
 
-## Documentacion
+# Documentacion
 
 Agregar swagger/openApi a los proyectos.
 
@@ -20,14 +23,14 @@ Ref.
 
 [ASP.NET Core web API help pages with Swagger / OpenAPI](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-3.1)
 
-## Versionamiento
+# Versionamiento
 
 
-## Comprobacion estado (health checks)
+# Comprobacion estado (health checks)
 
 
 
-## Proxy / OpenAPI
+# Proxy / OpenAPI
 
 
 Generacion automatica de rest api desde servicios aplicacion, al utilizar ASP.NET Boilerplate, facilita exponer los servicios aplicacion como rest api. (Generacion dinamica)
@@ -70,7 +73,7 @@ ASP.NET Boilerplate provides the infrastructure to create application services. 
 
 https://aspnetboilerplate.com/Pages/Documents/AspNet-Core#application-services-as-controllers
 
-### Referencias
+# Referencias
 
 [Microsoft REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md)
 

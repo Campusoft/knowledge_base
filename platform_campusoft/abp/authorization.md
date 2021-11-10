@@ -74,6 +74,17 @@ Ejemplo: El modulo de administracion de personas. Permisos para crear direccione
 
 AbpIdentity.Roles.Create
 
+# Current User
+
+ICurrentUser
+ICurrentUser is the main service to get info about the current active user.
+
+ICurrentUser works independently of how the user is authenticated or authorized. It seamlessly works with any authentication system that works with the current principal 
+
+https://docs.abp.io/en/abp/4.4/CurrentUser
+
+
+
 # Referencias
 
 # Revisiones
