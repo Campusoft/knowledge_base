@@ -1,6 +1,16 @@
 # REST
 
 
+# IHttpClientFactory 
+
+An IHttpClientFactory can be registered and used to configure and create HttpClient instances in an app
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-5.0
+
+Typed clients
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-5.0#typed-clients-1
+
 # Client
 
 

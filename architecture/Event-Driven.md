@@ -52,7 +52,10 @@ The AsyncAPI specification is a machine-readable document that documents and des
 AsyncAPI is designed along with the same elements of OpenAPI and shares many common constructs to simplify the adoption, but it also comes with additional features to accommodate eventing. It supports a wide variety of messaging protocols and transports (such as AMQP, MQTT, WebSockets, Kafka, JMS, STOMP, HTTP, etc.) and event schema formats. Therefore, the API definition will contain the event payload definition, channel name, application/transport headers, protocols, and other eventing semantics to connect, publish, and subscribe to the API.
 
 
+# AsyncAPI 
 
+How To Plan and Execute an Event-Driven API Project Within Your Organization?
+https://medium.com/event-driven-utopia/how-to-plan-and-execute-an-event-driven-api-project-within-your-organization-d1a886db6251
 
 # Frameworks 
 

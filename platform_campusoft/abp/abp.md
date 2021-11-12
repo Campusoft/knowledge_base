@@ -91,8 +91,21 @@ Revision
 - RemoteServiceConfiguration
 - volo.abp.http.client
 
+La clase AbpHttpClientOptions, es una clase de configuracion para las url de los remoteservice
+
+
+***IdentityModel***
+
 Dll
 - Volo.Abp.Http.Client.IdentityModel
+
+Revisiones
+- Existe una clase IdentityModelAuthenticationService, Volo.Abp.IdentityModel que realiza el flujo obtener token si no existe, o esta caducado.
+
+La dll Volo.Abp.IdentityModel, 
+-  Posee la clase IdentityClientConfiguration, que es la que posee los campos para configurar para generacion de token para los proxys, para consumir un remoteServiceName
+- Posee CacheAbsoluteExpiration, Absolute expiration duration (as seconds) for the access token cache. Este tiempo es para el accessToken, y para obtener la informacion de configuracion OpenId Connect Discovery Document
+
 
 # Dynamic C# API Clients 
 
