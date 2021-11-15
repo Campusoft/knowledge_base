@@ -20,12 +20,29 @@ In fact, if your internal microservices are communicating by creating chains of 
 
 When constructing a cloud-native application, you'll want to be sensitive to how back-end services communicate with each other. Ideally, the less inter-service communication, the better. However, avoidance isn't always possible as back-end services often rely on one another to complete an operation.
 
+Point-to-point style — Invoking services directly
+
+Obviously this model works for relatively simple microservices based applications but as the number of services increases, this will become overwhelmingly complex.
+
+- The non-functional requirements such as end-user authentication, throttling, monitoring etc. has to be implemented at each and every microservice level.
+- As a result of duplicating common functionalities, each microservice implementation can become complex.
+- There is no control what so ever on the communication between the services and clients (even for monitoring, tracing or filtering)
+
+- Often the direct communication style is considered as an microservice anti-pattern for large scale microservice implementations.
+
+
 
 ***Service Aggregator Pattern***
 Another option for eliminating microservice-to-microservice coupling is an Aggregator microservice
 
-***service mesh***
+The pattern isolates an operation that makes calls to multiple back-end microservices, centralizing its logic into a specialized microservice.
 
+
+***Materialized View pattern***
+
+
+
+***service mesh***
 A service mesh is a software layer that handles service-to-service communication
 
 Right now, the main options for a service mesh in Kubernetes are linkerd and Istio.
