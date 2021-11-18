@@ -41,6 +41,35 @@ https://docs.microsoft.com/en-us/ef/core/miscellaneous/connection-resiliency
 For Azure SQL DB, Entity Framework (EF) Core already provides internal database connection resiliency
 and retry logic.
 
+# Mapeos
+
+Configurar el mapeo de una propiedad que permite asociar dos entidades, que no posee propiedad de navegacion.
+- Propiedad para asociar a otra entidad. ServiceId
+- Entidad "Domain.Service", que no posee una propiedad de navegacion en la entidad que se esta configurado.
+
+```
+ b.HasOne<Domain.Service>().WithMany().HasForeignKey(ur => ur.ServiceId)
+                    .IsRequired()
+                    .OnDelete(DeleteBehavior.Restrict);
+```
+
+Configurar el mapeo de una propiedad que permite asociar dos entidades, que  posee propiedad de navegacion.
+- Propiedad asociacion "PaymentTypeId"
+- Propiedad de navegacion a la otra entidad. "PaymentType"
+```
+ b.HasOne(u => u.PaymentType).WithMany().HasForeignKey(a => a.PaymentTypeId)
+                 .IsRequired()
+                 .OnDelete(DeleteBehavior.Restrict);
+```
+
+Establecer que una propiedad "String", que no requiere Unicode. 
+
+```
+entity.Property(x => x.ColumnName).IsUnicode(false);  
+```
+
+
+
 # Migration
 
 .NET Core CLI

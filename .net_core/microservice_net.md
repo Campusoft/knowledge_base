@@ -36,7 +36,7 @@ Obviously this model works for relatively simple microservices based application
 Another option for eliminating microservice-to-microservice coupling is an Aggregator microservice
 
 The pattern isolates an operation that makes calls to multiple back-end microservices, centralizing its logic into a specialized microservice.
-
+ 
 
 ***Materialized View pattern***
 
