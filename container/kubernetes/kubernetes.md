@@ -20,19 +20,42 @@ Kubernetes tiene varias características. Puedes pensar en Kubernetes como:
 
 # Componentes
 
-Control plane
-	- Scheduler
-	- Cloud controller manager
-		- Se conecta al api del cloud provider api
-	- Controller manager
-	- Api
-	- Etcd
-		- Especie de base de datos key-value que guarda el estado del cluster
-Node
-	- Kubelet
-		- Vigila los pods
-	- K-proxy
-		- Maneja el tráfico
+***Control plane***
+
+Los componentes que forman el plano de control toman decisiones globales sobre el clúster (por ejemplo, la planificación) y detectan y responden a eventos del clúster, como la creación de un nuevo pod cuando la propiedad replicas de un controlador de replicación no se cumple.
+
+- Api. "kube-apiserver" El servidor de la API es el componente del plano de control de Kubernetes que expone la API de Kubernetes. Se trata del frontend de Kubernetes, recibe las peticiones y actualiza acordemente el estado en etcd.
+
+- Etcd. Almacén de datos persistente, consistente y distribuido de clave-valor utilizado para almacenar toda a la información del clúster de Kubernetes.
+
+- Scheduler. Componente del plano de control que está pendiente de los Pods que no tienen ningún nodo asignado y seleciona uno donde ejecutarlo.
+
+- Controller manager. Componente del plano de control que ejecuta los controladores de Kubernetes. Lógicamente cada controlador es un proceso independiente, pero para reducir la complejidad, todos se compilan en un único binario y se ejecuta en un mismo proceso.
+
+
+- Cloud controller manager ejecuta controladores que interactúan con proveedores de la nube. El binario cloud-controller-manager es una característica alpha que se introdujo en la versión 1.6 de Kubernetes.
+
+
+***Node***
+
+Componentes de nodo
+
+Los componentes de nodo corren en cada nodo, manteniendo a los pods en funcionamiento y proporcionando el entorno de ejecución de Kubernetes.
+
+- Kubelet. 
+
+Agente que se ejecuta en cada nodo de un clúster. Se asegura de que los contenedores estén corriendo en un pod.
+
+- K-proxy permite abstraer un servicio en Kubernetes manteniendo las reglas de red en el anfitrión y haciendo reenvío de conexiones
+
+- Runtime de contenedores
+
+El runtime de los contenedores es el software responsable de ejecutar los contenedores. Kubernetes soporta varios de ellos: Docker, containerd, cri-o, rktlet y cualquier implementación de la interfaz de runtime de contenedores de Kubernetes, o Kubernetes CRI
+
+# Objetos de Kubernetes
+
+Cada objeto de Kubernetes incluye dos campos como objetos anidados que determinan la configuración del objeto: el campo de objeto spec y el campo de objeto status. El campo spec, que es obligatorio, describe el estado deseado del objeto -- las características que quieres que tenga el objeto. El campo status describe el estado actual del objeto, y se suministra y actualiza directamente por el sistema de Kubernetes. En cualquier momento, el Plano de Control de Kubernetes gestiona de forma activa el estado actual del objeto para que coincida con el estado deseado requerido.
+
 # Servicios
 
 -	Cluster IP
@@ -43,11 +66,14 @@ Node
 	-	Servicio del proveedor de cloud. Redirecciona el tráfico a los pods a través de un balanceador creado por kubernetes en el proveedor de cloud
 
 # Features
--	Ingress
-	-	Permite crear accesos a los servicios a través de un path
+
+Ingress
+Permite crear accesos a los servicios a través de un path
 	-	https://kubernetes.io/docs/concepts/services-networking/ingress/
-	-	Se requiere tener instalado un controlador en el proveedor. Ej. nginx. https://www.hostinger.mx/tutoriales/que-es-nginx
-	-	Al instalar nginx se crea un loadBalancer y clusterIP
+
+Se requiere tener instalado un controlador en el proveedor. Ej. nginx. https://www.hostinger.mx/tutoriales/que-es-nginx
+
+Al instalar nginx se crea un loadBalancer y clusterIP
 
 # ConfigMaps
 -	https://kubernetes.io/es/docs/concepts/configuration/configmap/	
@@ -99,20 +125,35 @@ Aunque los archivos yaml son estándar, hay que revisar la documentación de cad
 
 # Manifiestos
 
-Archivos que permiten crear componentes a través de un archivo yaml
+Archivos que permiten crear componentes a través de un archivo yaml. kubectl convierte esa información a JSON cuando realiza la llamada a la API.
 
--	Ejemplo, creación de un pod con las opciones mínimas (version del api, tipo, nombre y la definición de un contenedor)
-	```
-		apiVersion: v1
-		kind: Pod
-		metadata:
-		  name: nginx
-		spec:
-		  containers:
-		  - name: nginx
-			image: nginx:alpine
-	```
--	Ejemplo, creación de un pod enviando:
+Campos requeridos
+
+En el archivo .yaml del objeto de Kubernetes que quieras crear, obligatoriamente tendrás que indicar los valores de los siguientes campos (como mínimo):
+
+- apiVersion - Qué versión de la API de Kubernetes estás usando para crear este objeto
+- kind - Qué clase de objeto quieres crear
+- metadata - Datos que permiten identificar unívocamente al objeto, incluyendo una cadena de texto para el name, UID, y opcionalmente el namespace
+
+También deberás indicar el campo spec del objeto. El formato del campo spec es diferente según el tipo de objeto de Kubernetes, y contiene campos anidados específicos de cada objeto.
+
+
+
+Ejemplo, creación de un pod con las opciones mínimas (version del api, tipo, nombre y la definición de un contenedor)
+
+```
+	apiVersion: v1
+	kind: Pod
+	metadata:
+	  name: nginx
+	spec:
+	  containers:
+	  - name: nginx
+		image: nginx:alpine
+```
+
+Ejemplo, creación de un pod enviando:
+
 	-	Variables (env)
 		-	Explícitas (name, value) 
 		-	Con valores obtenidos desde el cluster (fieldPath: status.hostIP permite obtener el ip en el que está el contenedor)
@@ -666,7 +707,9 @@ Herramienta de línea de comandos para administar kubernates
 
 # Service Discovery
 
-In the Kubernetes environment, when you call one service from another, you don’t need to worry about the actual location of your service. Kubernetes by default uses DNS names to discover the pods. Therefore, if you want to call the bar service from the foo service, in the foo service’s code, you can just refer to http://bar:<port> as the service endpoint. Kubernetes will resolve and map the name to the actual endpoint. Kubernetes internally uses etcd as its distributed key-value store.
+In the Kubernetes environment, when you call one service from another, you don’t need to worry about the actual location of your service. Kubernetes by default uses DNS names to discover the pods. Therefore, if you want to call the bar service from the foo service, in the foo service’s code, you can just refer to http://bar:<port> as the service endpoint. Kubernetes will resolve and map the name to the actual endpoint. 
+
+Kubernetes internally uses etcd as its distributed key-value store.
 
 
 
@@ -686,10 +729,21 @@ Local kubernetes development
 https://kapernikov.com/local-kubernetes-development/
 
 
+***minikube***
+
+Errores con virtualbox
+
+Exiting due to RSRC_DOCKER_MEMORY: Docker Desktop tiene solo 985MiB disponible
+s, menos que los 1800MiB requeridos por Kubernetes
+
+
 ***K3s***
 
 - Lightweight Kubernetes
 - The certified Kubernetes distribution built for IoT & Edge computing
+
+https://k3d.io/
+
 
 
 ***Skaffold***
@@ -701,16 +755,24 @@ Skaffold handles the workflow for building, pushing and deploying your applicati
 https://skaffold.dev/
  
 	
-## Glosario
+# Glosario
+
 - https://kubernetes.io/docs/reference/glossary/?fundamental=true
-- **Pods:** Es un set de contenedores. Puede tener uno o más contenedores. https://kubernetes.io/es/docs/concepts/workloads/pods/pod/
-- **Namespaces:** División lógica del cluster. Permite separar la carga. https://kubernetes.io/es/docs/concepts/overview/working-with-objects/namespaces/
-- **Milicores:** In Kubernetes each CPU core is allocated in units of one "milicore" meaning one Virtual Core (on a virtual machine) can be divided into 1000 shares of 1 milicore. Allocating 1000 milicores will give a pod one full CPU. Giving more will require the code in the pod to able to utilize more than one core.
-- **Mebibyte (MiB)**: is a unit of measurement used in computer data storage. The prefix mebi comes from the binary system of data measurement that is based on powers of two. A mebibyte equals 220 or 1,048,576 bytes.
-- **Deployment:** Template para crear pods (.yaml). https://kubernetes.io/es/docs/concepts/workloads/controllers/deployment/
-- **DaemonSet:** Un DaemonSet garantiza que todos (o algunos) de los nodos ejecuten una copia de un Pod. Conforme se añade más nodos al clúster, nuevos Pods son añadidos a los mismos. Conforme se elimina nodos del clúster, dichos Pods se destruyen. Al eliminar un DaemonSet se limpian todos los Pods que han sido creados. https://kubernetes.io/es/docs/concepts/workloads/controllers/daemonset/
-- **PVC:** Persistence volume claim
-- **StatefulSets:** Un StatefulSet es el objeto de la API workload que se usa para gestionar aplicaciones con estado. https://kubernetes.io/es/docs/concepts/workloads/controllers/statefulset/
+**Pods:** Es un set de contenedores. Puede tener uno o más contenedores. https://kubernetes.io/es/docs/concepts/workloads/pods/pod/
+
+**Namespaces:** División lógica del cluster. Permite separar la carga. https://kubernetes.io/es/docs/concepts/overview/working-with-objects/namespaces/
+
+**Milicores:** In Kubernetes each CPU core is allocated in units of one "milicore" meaning one Virtual Core (on a virtual machine) can be divided into 1000 shares of 1 milicore. Allocating 1000 milicores will give a pod one full CPU. Giving more will require the code in the pod to able to utilize more than one core.
+
+**Mebibyte (MiB)**: is a unit of measurement used in computer data storage. The prefix mebi comes from the binary system of data measurement that is based on powers of two. A mebibyte equals 220 or 1,048,576 bytes.
+
+**Deployment:** Template para crear pods (.yaml). https://kubernetes.io/es/docs/concepts/workloads/controllers/deployment/
+
+**DaemonSet:** Un DaemonSet garantiza que todos (o algunos) de los nodos ejecuten una copia de un Pod. Conforme se añade más nodos al clúster, nuevos Pods son añadidos a los mismos. Conforme se elimina nodos del clúster, dichos Pods se destruyen. Al eliminar un DaemonSet se limpian todos los Pods que han sido creados. https://kubernetes.io/es/docs/concepts/workloads/controllers/daemonset/
+
+**PVC:** Persistence volume claim
+
+**StatefulSets:** Un StatefulSet es el objeto de la API workload que se usa para gestionar aplicaciones con estado. https://kubernetes.io/es/docs/concepts/workloads/controllers/statefulset/
 
 
 

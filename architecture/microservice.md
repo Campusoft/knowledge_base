@@ -377,7 +377,19 @@ With this approach, clients/API-GW sends the request to a component(such as a Lo
 
 # Crosscutting Features
 
+## Cache
 
+Where Is My Cache? Architectural Patterns for Caching Microservices. 
+(Relacionado con Hazelcast Platform, como referencia es interesante)
+- Pattern 1: Embedded Cache
+- Pattern 1*: Embedded Distributed Cache
+- Pattern 2: Client-Server Cache
+- Pattern 2*: Cloud Cache
+- Pattern 3: Sidecar Cache
+- Pattern 4: Reverse Proxy Cache
+- Pattern 4*: Reverse Proxy Sidecar Cache
+
+https://hazelcast.com/blog/architectural-patterns-for-caching-microservices/
 
 #  Ejemplos 
 
