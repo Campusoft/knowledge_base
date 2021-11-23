@@ -61,3 +61,4 @@ imports: [
 - Rutas en modulos
 - Ruta hijas en modulos
 
+- Lazy Loading

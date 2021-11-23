@@ -67,6 +67,11 @@ An enterprise-class Angular UI component library based on Ant Design, all compon
 https://ng.ant.design/docs/introduce/en
 
 
+You can also install ng-zorro-antd with npm or yarn
+
+```
+$ npm install ng-zorro-antd
+```
 
 # Liberias Complementarias
 

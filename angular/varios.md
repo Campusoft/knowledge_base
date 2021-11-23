@@ -14,6 +14,19 @@ https://www.learnrxjs.io/
 
 NGXS is a state management pattern + library for Angular. It acts as a single source of truth for your application's state, providing simple rules for predictable state mutations.
 
+# Nrwl
+
+Nrwl Extensions for Angular (Nx)
+
+Nx helps architect, test, and build at any scale:
+integrations with modern frameworks, distributed task execution, computation caching, smart rebuilds of affected projects, powerful code generators, editor support, GitHub apps, and more.
+
+# Change Detection
+
+How To Use Change Detection Strategy in Angular
+In this article, you were introduced to ChangeDetectionStrategy and ChangeDetectorRef. By default, Angular will perform change detection on all components. ChangeDetectionStrategy and ChangeDetectorRef can be applied to components to perform change detection on new references versus when data is mutated.
+https://www.digitalocean.com/community/tutorials/angular-change-detection-strategy
+
 
 # directiva 
 

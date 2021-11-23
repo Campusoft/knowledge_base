@@ -4,12 +4,12 @@
 El cloud computing y los microservicios se vuelven cada vez más populares, Y lo mismo sucede con la organización de aplicaciones en contenedores, ya sea con o sin estado. Los contenedores son unidades de código para una aplicación que se empaquetan junto con sus bibliotecas y dependencias. Esto les permite trasladarse con facilidad y funcionar en cualquier entorno, tanto en la infraestructura de TI tradicional de una computadora de escritorio como en la nube. 
 
 
-## Docker
+# Docker
 
-## Kubernetes 
+# Kubernetes 
 
 
-## Service Mesh
+# Service Mesh
 
 La malla de servicios (Service Mesh) es una práctica de arquitectura para administrar y visualizar conjuntos de múltiples microservicios basados en contenedores.
 
@@ -29,3 +29,12 @@ https://www.aplyca.com/es/blog/service-mesh
 
 
 "A Service Mesh Is Not an ESB"
+
+## Referencias
+
+Do I Need an API Gateway if I Use a Service Mesh?
+https://blog.christianposta.com/microservices/do-i-need-an-api-gateway-if-i-have-a-service-mesh/
+
+
+Service Mesh vs API Gateway
+https://medium.com/microservices-in-practice/service-mesh-vs-api-gateway-a6d814b9bf56

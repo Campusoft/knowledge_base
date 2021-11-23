@@ -49,7 +49,27 @@
 8. Entrar a github.com con las credenciales respectiva e ir a settings/SSH and GPG keys; New SSH key
 9. Copiar la key al portapapeles para cargarla a git con: clip < ~/.ssh/[nombre del archivo] o abrir el archivo .pub creado anteriormente
 10. Ingresar un nombre que represente esa key y pegar la key copiada anteriormente  
-  
+
+### Comandos básicos
+     - Clonar un repositorio
+	   git clone path_repositorio
+	   
+	 - Obtener los ultimos cambios de un repositorio
+	   git pull
+	   
+	 - Ver todas las ramas de un repositorio
+	   git branch -a
+	   
+	 - Cambiar a una rama
+	   git checkout nombre_rama
+	   
+	 - Realizar un commit
+	   git commit -m "Comentario"
+	   
+	 - Enviar los cambios al repositorio remoto
+	   git push origin nombre_rama_remota
+
+
 # Refencias
 
 Monorepo vs Multi-Repo: Ventajas y Desventajas de las Estrategias de Repositorio de Código 

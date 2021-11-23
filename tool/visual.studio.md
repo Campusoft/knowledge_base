@@ -24,3 +24,13 @@ https://marketplace.visualstudio.com/items?itemName=vs-publisher-2795.SnippetDes
 
 A collection of snippets for C++, C#, HTML, VB, XAML and XML. 
 https://github.com/JosefPihrt/Snippetica
+
+
+# Visual Code
+
+Snippets in Visual Studio Code
+
+https://code.visualstudio.com/docs/editor/userdefinedsnippets
+
+
+https://github.com/bartvanhoey/ABPx

@@ -115,6 +115,24 @@ No existe las clases c# generadas de los archivos proto. Verificar que los archi
 ![imagen](https://user-images.githubusercontent.com/222181/137601993-9da1005d-4e73-4ef9-9b58-5a46906699c6.png)
 
 
+Errores
+
+```
+System.Net.Http.HttpRequestException: The SSL connection could not be established, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+```
+
+------------
+
+Revision
+
+```
+HTTP/2 over TLS is not supported on Windows versions older than W
+indows 10 and Windows Server 2016 due to incompatible ciphers or missing ALPN su
+pport. Falling back to HTTP/1.1 instead.
+```
+
+
 # Referencias
 
 Getting Started with ASP.NET Core and gRPC

@@ -222,6 +222,11 @@ Northwind Traders is a sample application built using ASP.NET Core and Entity Fr
 - Angular 8
 https://github.com/jasontaylordev/NorthwindTraders
 
+# Mapping Objects
+
+
+Automapper
+
 
 # Building
 

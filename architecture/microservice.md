@@ -355,6 +355,17 @@ Service registry
 A service registry provides a database that applications can use to implement the Service Discovery pattern, one of the key tenets of a microservices-based architecture. Trying to hand-configure each client of a service or adopt some form of access convention can be difficult and prove to be brittle in production. Instead, applications can use a service registry to dynamically discover and call registered services.
 
 
+Client-side Discovery
+
+In this approach the client or the API-GW obtains the location of a service instance by querying a Service Registry.
+
+Server-side Discovery
+
+With this approach, clients/API-GW sends the request to a component(such as a Load balancer) that runs on a well-known location. That component calls the service registry and determine the absolute location of the microservice.
+
+
+
+
 ***Consul***
 
 ***Eureka***
@@ -366,7 +377,19 @@ A service registry provides a database that applications can use to implement th
 
 # Crosscutting Features
 
+## Cache
 
+Where Is My Cache? Architectural Patterns for Caching Microservices. 
+(Relacionado con Hazelcast Platform, como referencia es interesante)
+- Pattern 1: Embedded Cache
+- Pattern 1*: Embedded Distributed Cache
+- Pattern 2: Client-Server Cache
+- Pattern 2*: Cloud Cache
+- Pattern 3: Sidecar Cache
+- Pattern 4: Reverse Proxy Cache
+- Pattern 4*: Reverse Proxy Sidecar Cache
+
+https://hazelcast.com/blog/architectural-patterns-for-caching-microservices/
 
 #  Ejemplos 
 
@@ -454,6 +477,11 @@ https://www.infoq.com/presentations/panel-microservices-architecture/
 # Revisar
 
 "smart microservices, dumb pipes” mantra 
+
+In SOA implementations, the inter-service communication between services is facilitated with an Enterprise Service Bus(ESB) and most of the business logic resides in the intermediate layer (message routing, transformation and orchestration). However, Microservices architecture promotes to eliminate the central message bus/ESB and move the ‘smart-ness’ or business logic to the services and client(known as ‘Smart Endpoints’).
+
+Since microservices use standard protocols such as HTTP, JSON etc. the requirement of integrating with disparate protocol is minimal when it comes to the communication among microservices. Another alternative approach in Microservice communication is to use a lightweight message bus or gateway with minimal routing capabilities and just acting as a ‘dumb pipe’ with no business logic implemented on gateway. Based on these styles there are several communication patterns that has emerged in microservices architecture.
+
  
 Sidecar vs. Chassis for Microservices 
 https://dzone.com/articles/ms-chassis-pattern

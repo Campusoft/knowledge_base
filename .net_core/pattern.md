@@ -4,7 +4,6 @@
 
 
 Implement CQRS Pattern in ASP.NET Core 5
-
 https://www.ezzylearning.net/tutorial/implement-cqrs-pattern-in-asp-net-core-5
 
 CQRS & Mediator in .NET Core — “A piece of cake”

@@ -10,6 +10,8 @@ Depended Packages
 -    ngx-validate is used for dynamic validation of reactive forms.
 -    ngx-datatable. https://github.com/swimlane/ngx-datatable
 
+-    Existe dependencia a @abp/ng.components > ng-zorro-antd
+
 
 # Utilizacion Proxy
 
@@ -116,7 +118,16 @@ form-utils
 
 ***mapEnumToOptions***
 
+***ListService***
 
+ListService is a utility service to provide easy pagination, sorting, and search implementation.
+
+https://docs.abp.io/en/abp/latest/UI/Angular/List-Service
+
+
+Extending query with custom variables
+
+https://docs.abp.io/en/abp/latest/UI/Angular/List-Service#extending-query-with-custom-variables
 
 # Localization 
 
@@ -125,7 +136,65 @@ The Localization key format consists of 2 sections which are Resource Name and K
 
 https://docs.abp.io/en/abp/latest/UI/Angular/Localization
 
+# ngx-validate
 
+
+https://github.com/ng-turkey/ngx-validate
+
+
+blueprints
+https://github.com/ng-turkey/ngx-validate/blob/master/packages/core/src/lib/constants/blueprints.ts
+
+Objeto, para la validacion: 
+- validatePassword
+
+https://github.com/ng-turkey/ngx-validate/blob/master/packages/core/src/lib/validators/password-validators.ts
+
+```
+{
+  "key": "invalidPassword",
+  "params": {
+    "missing": [
+      "number",
+      "capital",
+      "special"
+    ],
+    "description": "a number, a capital, and a special character"
+  },
+  "message": "Password should include a number, a capital, and a special character."
+}
+```
+
+Objeto Error. Angular
+
+```
+{
+  "invalidPassword": {
+    "missing": [
+      "number",
+      "capital",
+      "special"
+    ],
+    "description": "a number, a capital, and a special character"
+  },
+  "minlength": {
+    "requiredLength": 6,
+    "actualLength": 1
+  }
+}
+```
+
+Revisiones:
+Abp-Bluepints
+https://github.com/abpframework/abp/blob/dev/npm/ng-packs/packages/theme-shared/src/lib/constants/validation.ts
+
+Porque sale. 1. La localizacion espanol se encuentra incorrecta. Utiliza 1, en ves 0. Ver la localizacion english.
+
+ThisFieldMustBeAStringOrArrayTypeWithAMinimumLengthOf{0}: "Este campo debe ser una cadena o lista con una longitud mínima de {1}."
+
+English:
+ThisFieldMustBeAStringOrArrayTypeWithAMaximumLengthOf{0}: "This field must be a string or array type with a maximum length of '{0}'."
+ThisFieldMustBeAStringOrArrayTypeWithAMinimumLengthOf{0}: "This field must be a string or array type with a minimum length of '{0}'."
 
 # Referencias
 
