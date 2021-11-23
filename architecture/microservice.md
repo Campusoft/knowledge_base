@@ -429,6 +429,28 @@ This comprehensive guide to microservices explains everything: comparisons to mo
 https://searchapparchitecture.techtarget.com/An-A-to-Z-guide-to-a-microservices-architecture-transition
 
 
+All You Need to Know About Microservices Database Management
+5 common data-related patterns and 1 anti-pattern
+
+- The Database-per-Service pattern
+- The Saga pattern 
+- The API Composition pattern
+- The CQRS pattern
+- The Event Sourcing pattern
+- The Shared Database anti-pattern
+https://relevant.software/blog/microservices-database-management/
+
+
+ A curated list of Microservice Architecture related principles and technologies. 
+https://github.com/mfornos/awesome-microservices
+
+
+
+Panel: What Have We Learned over the Last Decade of Microservices?
+
+"the essence of what a microservice architecture is about is not really technical or infrastructure related. It's all about correctly identifying service boundaries, service responsibilities, their APIs, their collaborations." 
+https://www.infoq.com/presentations/panel-microservices-architecture/
+
 # Revisar
 
 "smart microservices, dumb pipes” mantra 

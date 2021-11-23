@@ -5,6 +5,7 @@
 
 - Entities with Composite Keys
 - All these base classes also have ...WithUser pairs, like FullAuditedAggregateRootWithUser<TUser> and FullAuditedAggregateRootWithUser<TKey, TUser>. This makes possible to add a navigation property to your user entity
+
 https://docs.abp.io/en/abp/latest/Entities
 
 
@@ -176,8 +177,18 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 # Globalization and localization
 
 		
+TODO:
+- Como establecer los nombres en los campos, en validaciones dataannotation
 
+```
+Tu Solicitud no es valida.
+Los siguientes errores fueron detectados durante la validación. - El campo AddressTypeId es requerido.
+```
 		
+DataAnnotation
+- Utilizar atributo Display, para establecer la clave de localizacion
+  - Ej: [Display(Name = "NameFieldKeyLocalizacion")]
+  - Con el NameFieldKeyLocalizacion, se puede establecer sus valores  en los archivos de localizacion que existen.  		
 
 # Fundamentals
 

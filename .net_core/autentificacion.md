@@ -4,6 +4,12 @@ ASP.NET Core supports both role-based and policy-based authorization
 
 # Identity on ASP.NET Core
 
+ASP.NET Core Identity:
+
+-    Is an API that supports user interface (UI) login functionality.
+-    Manages users, passwords, profile data, roles, claims, tokens, email confirmation, and more.
+
+
 The primary package for Identity is Microsoft.AspNetCore.Identity. This package contains the core set of interfaces for ASP.NET Core Identity, and is included by Microsoft.AspNetCore.Identity.EntityFrameworkCore.
 
 
@@ -12,7 +18,29 @@ https://docs.microsoft.com/en-us/aspnet/core/security/authentication/customize-i
 
 
 Configure ASP.NET Core Identity
+ASP.NET Core Identity uses default values for settings such as password policy, lockout, and cookie configuration. These settings can be overridden in the Startup class.
+- Claims Identity
+  - RoleClaimType 	Gets or sets the claim type used for a role claim.	
+  - SecurityStampClaimType 	Gets or sets the claim type used for the security stamp claim.
+  - UserIdClaimType 	Gets or sets the claim type used for the user identifier claim.
+  - UserNameClaimType 	Gets or sets the claim type used for the user name claim
+- Lockout  
+- Password
+- Sign-in
+  - RequireConfirmedEmail 
+  - RequireConfirmedPhoneNumber  
 https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-configuration?view=aspnetcore-5.0
+
+
+***Claims***
+- Role 	
+  - A role that the user has 	
+  - http://schemas.microsoft.com/ws/2008/06/identity/claims/role
+- Name Identifier 	 
+  - The SAML name identifier of the user 	
+  - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier
+
+
 
 # Authentication and authorization for SPAs
 
@@ -29,6 +57,15 @@ https://fullstackmark.com/post/21/user-authentication-and-identity-with-angular-
 
 
 # External provider authentication 
+
+
+
+Ejemplos:
+
+Add sign-in with Microsoft to an ASP.NET Core web app
+https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-aspnet-core-webapp
+
+
  
 
 # Policy-based Authorization.

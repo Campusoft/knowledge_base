@@ -3,7 +3,7 @@
 
 Depended Packages
 
--    NG Bootstrap is used as UI component library.
+-    NG Bootstrap is used as UI component library. https://ng-bootstrap.github.io
 -    NGXS is used as state management library.
 -    angular-oauth2-oidc is used to support for OAuth 2 and OpenId Connect (OIDC).
 -    Chart.js is used to create widgets.

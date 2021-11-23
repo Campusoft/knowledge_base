@@ -1,7 +1,5 @@
 # OpenID Connect
-
-
-
+ 
 
 
 # Labatororios
@@ -16,6 +14,9 @@ MSAL.js 2.0 with auth code flow
 MSAL.js 1.0 with implicit flow
 https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-app-registration
 
+
+Quickstart: Register an application with the Microsoft identity platform
+https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
 ## Okta
 

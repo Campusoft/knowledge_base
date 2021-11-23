@@ -4,6 +4,12 @@ Clear examples, explanations, and resources for RxJS.
 https://www.learnrxjs.io/
 
 
+***operators***
+
+
+
+
+
 # ngxs
 
 NGXS is a state management pattern + library for Angular. It acts as a single source of truth for your application's state, providing simple rules for predictable state mutations.

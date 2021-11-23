@@ -74,6 +74,44 @@ Ejemplo: El modulo de administracion de personas. Permisos para crear direccione
 
 AbpIdentity.Roles.Create
 
+
+# IdentityServer
+
+Proyect => AbpAccountWebIdentityServerModule => AbpIdentityServerDomainModule.
+
+El modulo AbpIdentityServerDomainModule, realiza la configuracion  IdentityServer
+
+Si no existe la implementacion IClientStore, se utiliza configuracion memoria, y lo que se encuentre configurado en "IdentityServer:Clients"
+
+```
+if (!services.IsAdded<IClientStore>())
+{
+	identityServerBuilder.AddInMemoryClients(configuration.GetSection("IdentityServer:Clients"));
+}
+```
+
+# External provider authentication 
+
+
+Abp, posee una clase abstract, para implementar fuentes externas de autentificacion:
+
+- Volo.Abp.Identity.ExternalLoginProviderBase
+
+
+En codigo Abp, en test, existe una clase "FakeExternalLoginProvider", que implementa la class abstract ExternalLoginProviderBase
+
+- https://github.com/abpframework/abp/blob/dev/modules/identity/test/Volo.Abp.Identity.AspNetCore.Tests/Volo/Abp/Identity/AspNetCore/FakeExternalLoginProvider.cs
+
+La configuracion para agregar proveedor externo autentificacion.
+
+```
+Configure<AbpIdentityOptions>(options =>
+{
+	options.ExternalLoginProviders.Add<FakeExternalLoginProvider>(FakeExternalLoginProvider.Name);
+});
+```
+
+
 # Referencias
 
 # Revisiones

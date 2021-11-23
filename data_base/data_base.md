@@ -1,3 +1,18 @@
+
+***Why Naming Conventions Are Important***
+
+Names Are Contracts
+
+Database objects are referenced by their names, thus object names are part of the contract for an object. In a way you can consider your database table and column names to be the API to your data model.
+
+Once they are set, changing them may break dependent applications. This is all the more reason to name things properly before the first use.
+
+
+Developer Context Switching
+
+Having consistent naming conventions across your data model means that developers will need to spend less time looking up the names of tables, views, and columns. Writing and debugging 
+
+
 # Tools
 
 DBeaver

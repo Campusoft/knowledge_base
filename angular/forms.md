@@ -58,6 +58,16 @@ Form groups can accept both individual form control instances and other form gro
 
 **FormBuilder**
 
+
+## Angular Form Array
+
+
+
+
+How to implement complex forms in Angular using FormArray
+https://blog.sreyaj.dev/implement-complex-forms-in-angular-using-formarray
+
+
 ## Creating dynamic forms
 
 Creating dynamic forms
@@ -85,7 +95,9 @@ https://betterprogramming.pub/build-fast-json-powered-forms-on-angular-with-ngx-
 
 https://github.com/ngx-formly/ngx-formly
 
-#  Validating form input
+
+
+# Validating form input
 
 How to Validate Angular Reactive Forms
 https://www.freecodecamp.org/news/how-to-validate-angular-reactive-forms/
@@ -112,4 +124,6 @@ https://github.com/verizonconnect/ngx-form-generator
 
 Referencia codigo generado con jhipster para angular:
 https://github.com/jhipster/jhipster-sample-app
+
+# Referencias
 

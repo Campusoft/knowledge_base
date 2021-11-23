@@ -70,6 +70,9 @@ https://blog.angular.io/apps-that-work-natively-on-the-web-and-mobile-9b26852495
 
 Angular PWA
 
+
+
+
 # Angular CLI
 
 
@@ -105,14 +108,30 @@ https://github.com/manfredsteyer/angular-crud
 
 In Angular, a project that provides functionality that can be included in other Angular applications. A library isn't a complete Angular application and can't run independently.
 
+
 https://angular.io/guide/libraries
 
+Creating libraries
+ 
+```
+ng generate library my-lib
+```
+https://angular.io/guide/creating-libraries
 
 # best practice standards
 
 Angular coding style guide
 https://angular.io/guide/styleguide
 
+# Varios
+
+***Sharing data between child and parent directives and components***
+
+A common pattern in Angular is sharing data between a parent component and one or more child components. Implement this pattern with the @Input() and @Output() decorators.
+
+https://angular.io/guide/inputs-outputs
+
+ 
 
 # Referencias
 
@@ -161,6 +180,10 @@ https://github.com/akveo/ngx-admin
 
 Angular 2+ Notes for Professionals - Compiled from StackOverflow documentation
 https://goalkicker.com/Angular2Book/
+
+
+We developed this book to be used as course material for Rangle's Angular training, but many people have found it to be useful for learning Angular on their own. This book will cover the most important Angular topics, from getting started with the Angular toolchain to writing Angular applications in a scalable and maintainable manner. We hope you enjoy this book.
+https://angular-training-guide.rangle.io/
 
 # Varios
 

@@ -11,6 +11,9 @@ Folder snippet
 - %USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\Visual C#\My Code Snippets
 - %USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\Visual Basic\My Code Snippets
 - %USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\TypeScript\My Code Snippets 
+- %USERPROFILE%\Documents\Visual Studio 2019\Code Snippets\Visual Web Developer\My HTML Snippets
+
+
 
 https://docs.microsoft.com/en-us/visualstudio/ide/walkthrough-creating-a-code-snippet?view=vs-2019#import-a-code-snippet
 

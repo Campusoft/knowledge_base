@@ -16,6 +16,27 @@ Routing & Navigation
 https://angular.io/guide/router
 
 
+# ActivatedRoute
+
+There are two ways in which you can use the ActivatedRoute to get the parameter value from the ParamMap object.
+
+- Using Snapshot
+- Using observable
+
+
+***Referencias***
+
+Cómo usar los parámetros de consulta en Angular
+- Presentamos queryParams y queryParamsHandling con Router.navigate y RouterLink. También presentamos queryParams y queryParamMap con ActivatedRoute.
+https://www.digitalocean.com/community/tutorials/angular-query-parameters-es
+
+Angular Route Parameters: Passing Parameters to Route. 
+- Explica el uso de los metodos para obtener los parametros de una ruta
+https://www.tektutorialshub.com/angular/angular-passing-parameters-to-route/
+
+Routing en Angular: Guía completa: Parte 4
+-  query params
+https://www.acontracorrientech.com/routing-en-angular-guia-completa-parte-4/
 
 # Util
 

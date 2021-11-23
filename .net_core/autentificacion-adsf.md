@@ -49,9 +49,40 @@ TODO: En el caso que no se establece la marca "secure" al momento crear las cook
 ![imagen](https://user-images.githubusercontent.com/222181/92298819-556edc80-ef12-11ea-9a99-58c43109b358.png)
 
 
-----------
+--------------------------
+
+Si se  cofiguracion WS-Federation, luego que se ingresa correctamente el usuario, al momento de "ExternalLoginCallback", se recupera el usuario con  SignInManager.GetExternalLoginInfoAsync y retorna nulo.
+
+Posibles causas.
+- Falta el claims "nameidentifier". The SAML name identifier of the user. " http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier
+  - Informacion Claims : https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/technical-reference/the-role-of-claims
+  - Este claims, se utiliza para establecer el valor en providerKey, para establecer informacion autentificacion del proveedor, asociada al usuario.
+
+```
+var providerKey = auth.Principal.FindFirstValue(ClaimTypes.NameIdentifier);
+```  
+  
+- Verificar si la cookie con el valor de la constante "IdentityConstants.External", se establecio al retornar del proveedor autentificacion.
+
+GetExternalLoginInfoAsync is hardcoded to look for the IdentityConstants.External cookie, while your github is targetted at its own AddCookie() instance, so indeed there is no external identity in this case.
+https://github.com/aspnet/AspNetCore/blob/v2.2.8/src/Identity/Core/src/SignInManager.cs
 
 
+
+
+
+
+
+
+
+------------------------
+
+**Codigo**
+
+Codigo de SignInManager
+GetExternalLoginInfoAsync is hardcoded to look for the IdentityConstants.External cookie, while your github is targetted at its own AddCookie() instance, so indeed there is no external identity in this case.
+
+https://github.com/aspnet/AspNetCore/blob/v2.2.8/src/Identity/Core/src/SignInManager.cs
 
 
 **Referencia:**
