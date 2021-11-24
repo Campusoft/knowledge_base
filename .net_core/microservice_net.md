@@ -63,6 +63,33 @@ Ocelot is a lightweight API Gateway, recommended for simpler approaches. Ocelot 
 
 Tye is a developer tool that makes developing, testing, and deploying microservices and distributed applications easier. Project Tye includes a local orchestrator to make developing microservices easier and the ability to deploy microservices to Kubernetes with minimal configuration.
 
+https://github.com/dotnet/tye
+
+Commandos
+
+Ejecutar con debug
+
+```
+tye run -v Debug
+```
+
+tye build
+
+
+
+Errores
+----------
+
+
+Evaluated project metadata file could not be found for service
+
+Los servicios, verificar si estan compilando.
+
+Otras opciones:
+- https://github.com/dotnet/tye/issues/766
+
+--------------------
+
 
 # Referencias
 

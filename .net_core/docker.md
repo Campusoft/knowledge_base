@@ -34,6 +34,21 @@ COPY failed: stat nuget.config: no such file or directory
 ```
 
 
+
+---------------------------------
+
+docker .net core Could not execute because the application was not found or a compatible .NET SDK is not installed.
+
+Informacion posible solucion
+
+https://stackoverflow.com/questions/66988943/could-not-execute-because-the-application-was-not-found-or-a-compatible-net-sdk
+
+----------------------------
+
+.net restore Received an unexpected EOF or 0 bytes from the transport stream.
+
+--------------------
+
 # Referencias
 
 What is Docker, Why use it? | Docker and .NET Core 101 [1 of 3]
