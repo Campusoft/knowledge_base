@@ -28,6 +28,8 @@ $ docker run [options] IMAGE [command] [args]
 
 -p 8080:80 	Map TCP port 80 in the container to port 8080 on the Docker host
  
+-P 		Publish all exposed ports to random ports
+
 
 Ejemplo
 9000 Puerto Contenedor, al 9000 puerto host, igual para 12201. Imagen:   graylog2/allinone
@@ -158,8 +160,18 @@ el acceso, lo que le permite usar los grupos y los permisos de Azure Active Dire
 - Asignar una ruta local: docker run -v [ruta local]:[ruta en el container] [nombre del contenedor]
 - En caso de tener un puerto expuesto se debe agregar
 	- docker run -v [ruta local]:[ruta en el container] -p 3000:3000 [nombre del contenedor]
+
 ## Actualizar un contenedor
+
 - docker build -t [nombre del tag del contenedor a actualizar]:[version] .
+
+TODO: Revisar
+How to properly override the ENTRYPOINT using docker run
+- https://oprearocks.medium.com/how-to-properly-override-the-entrypoint-using-docker-run-2e081e5feb9d
+
+Opciones
+https://docs.docker.com/engine/reference/commandline/run/#options
+
 ## Compartir imagen
 - Docker Hub
 	- Permite alojar imagenes con ciertas restricciones
@@ -188,10 +200,13 @@ el acceso, lo que le permite usar los grupos y los permisos de Azure Active Dire
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration
 
 
-- Permite agrupar configuraciones para reducir utilización de línea de comandos 
+Permite agrupar configuraciones para reducir utilización de línea de comandos 
 - https://docs.docker.com/compose/
-- Comentarios con #
 
+Opciones del commando "Overview of docker-compose CLI"
+https://docs.docker.com/compose/reference/
+
+Comentarios con #
 
 Crear el archivo docker-compose.yaml:
 	- Version de composer
@@ -212,3 +227,28 @@ Crear el archivo docker-compose.yaml:
 	- docker-compose up -d
 - Detener
 	- docker-compose down
+	
+Ejemplos:
+
+Especificar el nombre del archivo *.yml, que no es por defecto "docker-compose.yml"
+
+```
+docker-compose -f docker-compose.with.sql-server.yml up
+```	
+
+Construir las imagenes de los docker, de los servicios que se encuentra configuradas
+```	
+docker-compose up --build
+```
+
+***Multiple Compose files***
+
+By default, Compose reads two files, a docker-compose.yml and an optional docker-compose.override.yml file. By convention, the docker-compose.yml contains your base configuration. The override file, as its name implies, can contain configuration overrides for existing services or entirely new services.
+
+https://docs.docker.com/compose/extends/#understanding-multiple-compose-files
+
+
+***Networking in Compose***
+- acceder servicio, que se encuentra en la misma red.
+- se utiliza los nombres de los servicios dentro de la red, para acceder a la IP
+https://docs.docker.com/compose/networking/
