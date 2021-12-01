@@ -57,9 +57,22 @@ Including Static Resources In Razor Class Libraries In ASP.NET Core
 https://www.mikesdotnetting.com/article/330/including-static-resources-in-razor-class-libraries-in-asp-net-core
 
 
-## RazorPage
+# RazorPage
 
 Pages
+
+The key difference between Razor Pages implementation of the MVC pattern and ASP.NET Core MVC is that Razor Pages uses the Page Controller pattern instead of the Front Controller pattern.
+
+Request Processing link
+
+Request processing in a PageModel is performed within handler methods which are analogous to Action methods on an ASP.NET MVC controller. By convention, handler method selection is based on matching the HTTP verb that was used for the request with the name of the handler method using the pattern On<verb> with Async appended optionally to denote that the method is intended to run asynchronously.
+https://www.learnrazorpages.com/razor-pages/pagemodel#request-processing
+
+## Named Handler Methods link
+
+
+# Referencias
+Razor Pages includes a feature called "named handler methods". This feature enables you to specify multiple methods that can be executed for a single verb
 
 Manuales
 https://www.learnrazorpages.com/

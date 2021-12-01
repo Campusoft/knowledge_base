@@ -132,9 +132,9 @@ https://docs.abp.io/en/abp/latest/UI/Angular/List-Service#extending-query-with-c
 # Localization 
 
 The Localization key format consists of 2 sections which are Resource Name and Key. ResourceName::Key
-
-
 https://docs.abp.io/en/abp/latest/UI/Angular/Localization
+
+
 
 # ngx-validate
 

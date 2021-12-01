@@ -241,6 +241,16 @@ Construir las imagenes de los docker, de los servicios que se encuentra configur
 docker-compose up --build
 ```
 
+***environment***
+
+Compose supports declaring default environment variables in an environment file named .env placed in the folder docker-compose command is executed from (current working directory).
+
+Compose expects each line in an env file to be in VAR=VAL format. Lines beginning with # (i.e. comments) are ignored, as are blank lines.
+
+Note: Values present in the environment at runtime will always override those defined inside the .env file. Similarly, values passed via command-line arguments take precedence as well.
+
+
+
 ***Multiple Compose files***
 
 By default, Compose reads two files, a docker-compose.yml and an optional docker-compose.override.yml file. By convention, the docker-compose.yml contains your base configuration. The override file, as its name implies, can contain configuration overrides for existing services or entirely new services.
@@ -249,6 +259,32 @@ https://docs.docker.com/compose/extends/#understanding-multiple-compose-files
 
 
 ***Networking in Compose***
+
+By default, Docker Compose creates a single network for each container defined in the compose file. All the containers defined in the compose file connect and communicate through the default network.
+
+
+Explicacion oficial de redes
 - acceder servicio, que se encuentra en la misma red.
 - se utiliza los nombres de los servicios dentro de la red, para acceder a la IP
 https://docs.docker.com/compose/networking/
+
+
+Understanding Docker Networking 
+- What Is a Docker Network?
+- What Are Docker Network Drivers?
+  - The Bridge Driver
+  - The Host Driver
+  - The None Driver
+  - The Overlay Driver
+- Basic Docker Networking Commands
+- Connecting a Container to a Network
+- Creating a Network
+https://earthly.dev/blog/docker-networking/
+
+How to link multiple docker-compose services via network
+- Ejemplo como crear dos archivos docker-compose.yml, y que sus servicios se comuniquen entre ellos.
+https://tjtelan.com/blog/how-to-link-multiple-docker-compose-via-network/
+
+Communication between multiple docker-compose projects
+ - Ejemplos comuicacion entre varios docker-compose.xml
+https://medium.com/@matayoshi.mariano/communication-between-multiple-docker-compose-projects-d79a68af3348

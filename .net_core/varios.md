@@ -109,6 +109,40 @@ https://github.com/lukencode/FluentEmail
 https://github.com/jstedfast/MailKit
 
 
+# LDAP
+
+Utiliza ldap4net
+
+https://github.com/flamencist/ldap4net
+
+Online LDAP Test Server.
+(Servidor LDAP para realizar pruebas de conexion)
+https://www.forumsys.com/tutorials/integration-how-to/ldap/online-ldap-test-server/
+
+Atributos
+- cn CN=Guy Thomas. En realidad, este atributo LDAP está conformado por givenName unido con SN. 
+- dc Se refiere al componente del dominio, ya sea un componente, una etiqueta o un nombre de dominio DNS. Ejemplo: DC=cp, DC=com
+- givenName Primer nombre.
+- SN SN = Thomas. Esto será referido como apellido. 
+- uid
+- mail
+ 
+***Filtros buscar usuarios***
+
+Utilizar  userPrincipalName
+(&(objectClass=user)(userPrincipalName=nombre-usuario))
+ 
+Utiizar sAMAccountName
+(&(objectClass=user)(sAMAccountName={nombre-usuario}))
+ 
+Uttilizar uid
+(&(uid=nombre-usuario))
+ 
+
+Autenticación de usuarios con registros LDAP en un bosque de Microsoft Active Directory
+- menciona que es mejor utilizar userPrincipalName, que el sAMAccountName
+https://www.ibm.com/docs/es/was/9.0.5?topic=umada-authenticating-users-ldap-registries-in-microsoft-active-directory-forest
+
 # Thread
 
 Semaphore and SemaphoreSlim

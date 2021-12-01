@@ -160,12 +160,18 @@ Introduction to CQRS — In Microservices
 How is exactly the CQRS pattern related to microservices
 Without a doubt, microservices has changed the way applications are conceived. The monolithic model has transitioned to a decentralized architecture where each service can be scaled and optimized independently. CQRS adds another layer of scalability, performance, and flexibility to microservices by allowing granular read-write optimizations at the database level.
 
+The Command and Query Responsibility Segregation (CQRS) pattern propose separating the write data model from the read data model. This separation of responsibilities would provide the flexibility to decide whether the read and write services should coexist in the same data store or be managed in completely different databases.
+
 https://danielckv.medium.com/introduction-to-cqrs-in-microservices-70e4759d9ecc
 
 
 
 Why we failed to implement CQRS in Microservice architecture.
 - Apply CQRS for All the services. This is one of the main mistake we did in implementing CQRS.  Greg Young said in one of his video (as I remember) that we have to find areas where we can get a benefit from using CQRS
+- Read service handles all the read requests. No business logic is applied here.
+- How we are going to update UI, We don’t know whether record is successfully saved or not
+- We can implement CQRS without using Asynchronous communication.
+- We can implement CQRS without using Asynchronous communication.
 
 https://faun.pub/why-we-failed-implementing-cqrs-in-microservice-architecture-5c39a2d0b2dd
 

@@ -301,7 +301,10 @@ ng generate component config/foo-settings
 
 ## Volo.Abp.Ldap
 
+Utiliza ldap4net
 
+https://github.com/flamencist/ldap4net
+ 
 
 # Timing
 

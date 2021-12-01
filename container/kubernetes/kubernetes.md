@@ -793,4 +793,19 @@ KEDA is a Kubernetes-based Event Driven Autoscaler. With KEDA, you can drive the
 
 KEDA is a single-purpose and lightweight component that can be added into any Kubernetes cluster. KEDA works alongside standard Kubernetes components like the Horizontal Pod Autoscaler and can extend functionality without overwriting or duplication. With KEDA you can explicitly map the apps you want to use event-driven scale, with other apps continuing to function. This makes KEDA a flexible and safe option to run alongside any number of any other Kubernetes applications or frameworks.
 
+# helm
+
+The package manager for Kubernetes
+Helm is the best way to find, share, and use software built for Kubernetes.
+
+If Kubernetes is the operating  system of the internet,  then Helm is a package manager for that OS.
+
+• Simple install and upgrade
+• Tracks versions and changes
+• Easy rollbacks
+• Distribute dependencies
+• Templating with dynamic  values
+
+
+https://helm.sh/
 

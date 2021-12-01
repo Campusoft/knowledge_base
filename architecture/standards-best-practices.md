@@ -32,22 +32,24 @@ The CQRS pattern is a great expression of the single responsibility principle. I
 
 
 
-Revision
-CQRS and Event Sourcing in Event Driven Architecture of Ordering Microservices
-https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architecture-of-ordering-microservices-fb67dc44da7a
-
-
 
 
 Command Query Responsibility Segregation (CQRS) pattern
-(Excelete articulo, contiene niveles aplicacion del CQRS). (Elementos adicionales change data capture (CDC))
+(Excelete articulo, contiene niveles aplicacion del CQRS). 
+(Elementos adicionales change data capture (CDC))
 
 - Stage 0: Typical application data access
 - Stage 1: Separate read and write APIs
 - Stage 2: Separate read and write models
 - Stage 3: Separate read and write databases
-
 https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/
+
+
+Revision
+CQRS and Event Sourcing in Event Driven Architecture of Ordering Microservices
+https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architecture-of-ordering-microservices-fb67dc44da7a
+
+
 
 
 ## Resiliency / resiliente / Resistencia

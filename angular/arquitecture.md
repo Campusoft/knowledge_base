@@ -17,6 +17,12 @@ https://compodoc.github.io/compodoc/
 # Referencias Arquitecturas
  
 .NET 5, ASP.NET Core 5, Entity Framework Core 5, C# 9, Angular 12, Clean Code, SOLID, DDD.  
+Layers
+- Web: Frontend and API.
+- Application: Flow control.
+- Domain: Business rules and domain logic.
+- Model: Data transfer objects.
+- Database: Data persistence.
 https://github.com/rafaelfgx/Architecture 
 
 

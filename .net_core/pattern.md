@@ -4,6 +4,8 @@
 
 
 Implement CQRS Pattern in ASP.NET Core 5
+- Implementa un servicio aplicacion CRUD, normalmente. 
+- Luego implementa el mismo servicio utilizando CQRS, servicios separados Crear, actualizar, borrar, y para diferentes consultas
 https://www.ezzylearning.net/tutorial/implement-cqrs-pattern-in-asp-net-core-5
 
 CQRS & Mediator in .NET Core — “A piece of cake”
@@ -11,10 +13,20 @@ CQRS & Mediator in .NET Core — “A piece of cake”
 https://letienthanh0212.medium.com/cqrs-and-mediator-in-net-core-project-c0b477eab6e9
 
 
+
+
+Simple CQRS implementation with raw SQL and DDD
+- Write Model should be implemented with DDD approach. The level of DDD implementation should depend on level of domain complexity.
+- reads utiliza directamente sql. (Sin intermediarios)
+https://www.kamilgrzybek.com/design/simple-cqrs-implementation-with-raw-sql-and-ddd/
+
+
 ***MediatR***
 Simple mediator implementation in .NET
 In-process messaging with no dependencies.
 Supports request/response, commands, queries, notifications and events, synchronous and async with intelligent dispatching via C# generic variance.
+
+
 
 
 

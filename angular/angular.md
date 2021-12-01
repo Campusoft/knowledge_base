@@ -71,7 +71,11 @@ https://blog.angular.io/apps-that-work-natively-on-the-web-and-mobile-9b26852495
 Angular PWA
 
 
+# Pipes
 
+Use pipes to transform strings, currency amounts, dates, and other data for display. Pipes are simple functions to use in template expressions to accept an input value and return a transformed value
+
+https://angular.io/guide/pipes
 
 # Angular CLI
 
