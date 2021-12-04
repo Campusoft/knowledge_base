@@ -20,6 +20,13 @@ Azure Backup: SQL Databases and How To Back Them Up
 https://cloud.netapp.com/blog/hosted-database-backup-azure
 
 
+Generar un respaldo de base de datos LocalDB 
+- Conectar Sql Server Management Studio a localDB.
+Connecting Localdb using Sql Server Management Studio
+https://dotnetthoughts.net/connecting-localdb-using-sqlserver-management-studio/
+
+- Utilizar Sql Server Management Studio, para generar los respaldos
+
 ## DACPAC
 
  DACPAC is an acronym of Data-Tier Application Package. It is a logical database entity defining all database objects such as tables, views, users and logins. It enables developers and database administrators to create a single package file consisting of database objects. We call this package a DACPAC package.

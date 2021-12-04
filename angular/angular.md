@@ -127,6 +127,15 @@ https://angular.io/guide/creating-libraries
 Angular coding style guide
 https://angular.io/guide/styleguide
 
+# Estilos
+
+Angular applications are styled with standard CSS. That means you can apply everything you know about CSS stylesheets, selectors, rules, and media queries directly to Angular applications.
+
+Additionally, Angular can bundle component styles with components, enabling a more modular design than regular stylesheets.
+
+assets
+
+
 # Varios
 
 ***Sharing data between child and parent directives and components***

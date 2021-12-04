@@ -6,7 +6,11 @@
 
 ***Claims Principal Factory***
 
+Agregar claims personalizados.
+
+
 ABP uses the IAbpClaimsPrincipalFactory service to create claims on authentication. 
+- If you need to add your custom claims to the authentication ticket, you can implement the IAbpClaimsPrincipalContributor in your application.
 https://docs.abp.io/en/abp/latest/Authorization#claims-principal-factory
 
 
