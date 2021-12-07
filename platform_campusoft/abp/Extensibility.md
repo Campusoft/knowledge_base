@@ -56,6 +56,20 @@ https://docs.abp.io/en/abp/latest/UI/Angular/Data-Table-Column-Extensions#how-to
 Entity action extension system allows you to add a new action to the action menu for an entity on the user interface
 https://docs.abp.io/en/abp/latest/UI/Angular/Entity-Action-Extensions
 
+
+## Reemplazar componentes 
+
+export const enum eThemeBasicComponents {
+  ApplicationLayout = 'Theme.ApplicationLayoutComponent',
+  AccountLayout = 'Theme.AccountLayoutComponent',
+  EmptyLayout = 'Theme.EmptyLayoutComponent',
+  Logo = 'Theme.LogoComponent',
+  Routes = 'Theme.RoutesComponent',
+  NavItems = 'Theme.NavItemsComponent',
+  CurrentUser = 'Theme.CurrentUserComponent',
+  Languages = 'Theme.LanguagesComponent',
+}
+
 How Replaceable Components Work with Extensions
 https://docs.abp.io/en/abp/latest/UI/Angular/How-Replaceable-Components-Work-with-Extensions
 

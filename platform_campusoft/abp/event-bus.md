@@ -7,6 +7,13 @@ ABP Framework provides two type of event buses;
 https://docs.abp.io/en/abp/latest/Event-Bus
 
 
+# Local Event
+
+Si existe dos handler, uno general "Change", y otro especifico "Creacion", unicamente se ejecuta el evento general. 
+
+ILocalEventHandler<EntityChangedEventData<Plantilla>>
+ILocalEventHandler<EntityCreatedEventData<Plantilla>>
+
 
 # Kafka 
 

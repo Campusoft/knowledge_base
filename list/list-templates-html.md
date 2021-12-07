@@ -56,6 +56,19 @@ List of features
 	
 https://akveo.github.io/ngx-admin/
 
+
+### Flat-UI
+Flat UI is a beautiful theme for Bootstrap. We have redesigned many of its components to look flat in every pixel.
+https://github.com/designmodo/Flat-UI
+
+### Componentes
+
+
+ A set of 170+ Bootstrap based design blocks ready to be used to create clean modern websites.
+www.froala.com/design-blocks 
+
+
+
 ### Metronic.
 
 

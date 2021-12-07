@@ -120,6 +120,36 @@ Para generar los proxy dinamicos, se utiliza el servicio "api-definition", del R
 <host:Port>/api/abp/api-definition
 ```
 
+Your interface should implement the IRemoteService interface to be automatically discovered. Since the IApplicationService inherits the IRemoteService interface, the IXService above satisfies this condition.
+
+
+La configuracion de la generacion clientes dinamicos "proxys" de los servicios aplicacion, que estan expuestos como servicios remotos
+
+
+Generar los proxy de los contratos "BookStoreApplicationContractsModule"
+
+```
+//Create dynamic client proxies
+        context.Services.AddHttpClientProxies(
+            typeof(BookStoreApplicationContractsModule).Assembly
+        );
+
+```
+
+***Laboratorio***
+
+Crear los contratos, en donde se consumen. Sin hacer referencial a la dll del servicio remoto que se va crear los proxys.
+
+Estos contratos deben tener los mismos namaspace, que las definidos en el servicio remoto. 
+
+
+Generar el proxy de un contrato directamente, sin dependencias a los contratos (dll) del servicio remoto. 
+```
+context.Services.AddHttpClientProxy(
+  typeof(IServiceTrakingAppService),
+  "ServiceTraking"
+);
+```
 
 # UI
 

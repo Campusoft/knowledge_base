@@ -109,6 +109,13 @@ https://github.com/lukencode/FluentEmail
 https://github.com/jstedfast/MailKit
 
 
+## MailKit
+
+ASP.NET Core 3.1 - Send Emails via SMTP with MailKit
+- gmail
+- office 365
+https://jasonwatmore.com/post/2020/07/15/aspnet-core-3-send-emails-via-smtp-with-mailkit
+
 # LDAP
 
 Utiliza ldap4net

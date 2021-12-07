@@ -134,7 +134,14 @@ https://docs.abp.io/en/abp/latest/UI/Angular/List-Service#extending-query-with-c
 The Localization key format consists of 2 sections which are Resource Name and Key. ResourceName::Key
 https://docs.abp.io/en/abp/latest/UI/Angular/Localization
 
+# Configuraciones  (Settings)
 
+ConfigStateService is a singleton service, i.e. provided in root level of your application, and keeps the application configuration response in the internal store.
+ - Este servicio, permite obtener el usuario autentificado 
+ ```
+ const currentUser = this.config.getOne("currentUser");
+ ```
+https://docs.abp.io/en/abp/latest/UI/Angular/Config-State-Service
 
 # ngx-validate
 
