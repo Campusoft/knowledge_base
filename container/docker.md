@@ -61,6 +61,16 @@ I see you are using VirtualBox, which allows you to do that by adding an entry i
 
 https://stackoverflow.com/questions/50592890/container-is-not-available-on-localhost-in-windows-docker-toolbox
 
+# Orchestrators 
+
+Kubernetes: is an open-source product originally designed by Google and now maintained by the Cloud Native Computing Foundation that provides functionality that ranges from cluster infrastructure and container scheduling to orchestrating capabilities. It lets you automate deployment, scaling, and operations of application containers across clusters of hosts. Kubernetes provides a container-centric infrastructure that groups application containers into logical units for easy management and discovery. Kubernetes is mature in Linux, less mature in Windows.
+
+Docker Swarm: Docker Swarm lets you cluster and schedule Docker containers. By using Swarm, you can turn a pool of Docker hosts into a single, virtual Docker host. Clients can make API requests to Swarm the same way they do to hosts, meaning that Swarm makes it easy for applications to scale to multiple hosts. Docker Swarm is a product from Docker, the company. Docker v1.12 or later can run native and built-in Swarm Mode.
+    
+Mesosphere DC/OS: Mesosphere Enterprise DC/OS (based on Apache Mesos) is a production-ready platform for running containers and distributed applications. DC/OS works by abstracting a collection of the resources available in the cluster and making those resources available to components built on top of it. Marathon is usually used as a scheduler integrated with DC/OS. DC/OS is mature in Linux, less mature in Windows.
+
+Azure Service Fabric: It is an orchestrator of services and creates clusters of machines. Service Fabric can deploy services as containers or as plain processes. It can even mix services in processes with services in containers within the same application and cluster. Service Fabric provides additional and optional prescriptive Service Fabric programming models like stateful services and Reliable Actors. Service Fabric is mature in Windows (years evolving in Windows), less mature in Linux. Both Linux and Windows containers are supported in Service Fabric since 2017.
+
 
 # Swarm
 

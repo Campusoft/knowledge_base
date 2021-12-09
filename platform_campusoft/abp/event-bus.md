@@ -14,6 +14,8 @@ Si existe dos handler, uno general "Change", y otro especifico "Creacion", unica
 ILocalEventHandler<EntityChangedEventData<Plantilla>>
 ILocalEventHandler<EntityCreatedEventData<Plantilla>>
 
+# Distributed Event Bus
+
 
 # Kafka 
 

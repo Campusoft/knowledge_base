@@ -45,6 +45,8 @@ Like the name indicates, the ng-template directive represents an Angular templat
 
 ng-container directive provides us with an element that we can attach a structural directive to a section of the page, without having to create an extra element just for that.
 
+Usos. Utilizar en conjunto con ngIf
+
 # Productive
 
 👨‍🔧️ The 7 Pro Tips To Get Productive With Angular CLI & Schematics 💪

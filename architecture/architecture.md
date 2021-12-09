@@ -63,3 +63,6 @@ https://github.com/kgrzybek/modular-monolith-with-ddd
 
 
 
+ A curated list of awesome articles, videos, and other resources to learn and practice about software architecture, patterns, and principles. 
+ https://github.com/mehdihadeli/awesome-software-architecture
+ 

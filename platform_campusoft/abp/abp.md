@@ -302,6 +302,9 @@ El Nombre-Cache-Item, se puede establecer con el atributo "CacheName" en la clas
 Using Multiple Databases
 https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations#using-multiple-databases
 
+# Exception-Handling
+
+
 
 # Modules
 
@@ -440,10 +443,6 @@ Elementos considerar
 Para sobrescribir los templates que existen en el proyecto se debe modificar la configuracion AbpVirtualFileSystemOptions para considerar AddPhysical
 
 # Revisiones
-
-
- 
-
 
 (Como utilizar varias base de datos)
 Using Multiple Databases
