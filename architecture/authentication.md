@@ -55,6 +55,7 @@ Código 	Nombre 	Descripción
 -	nbf 	Not before 	Identifica la marca temporal en que el JWT comienza a ser válido. EL JWT no tiene que ser aceptado si el token es utilizando antes de este tiempo. 
 -	iat 	Issued at 	Identifica la marca temporal en qué el JWT fue emitido.
 -	jti 	JWT ID 	Identificador único del token incluso entre diferente proveedores de servicio.
+-   SID		unique identifier of session of end user on a particular device/user agent, etc. 
 
 https://es.wikipedia.org/wiki/JSON_Web_Token
 

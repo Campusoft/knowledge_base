@@ -237,3 +237,7 @@ Cliente Sql-Server
 Referencias:
 Quickstart: Run SQL Server container images with Docker
 https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash
+
+
+Awesome Docker Compose samples. Posee varios ejemplos para archivos docker - compose 
+https://github.com/docker/awesome-compose

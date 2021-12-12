@@ -56,6 +56,14 @@ https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/service-to-ser
 Ocelot is a lightweight API Gateway, recommended for simpler approaches. Ocelot is an Open Source .NET Core-based API Gateway especially made for microservices architectures that need unified points of entry into their systems. It’s lightweight, fast, and scalable and provides routing and authentication among many other features
 
 
+
+# Saga
+
+
+
+(Codigo) It is a Saga pattern implementation reference through an orchestration approach in a serverless architecture on Azure. The solution leverages Azure Functions for the implementation of Saga participants, Azure Durable Functions for the implementation of the Saga orchestrator, Azure Event Hubs as the data streaming platform and Azure Cosmos DB as the database service.
+https://github.com/Azure-Samples/saga-orchestration-serverless
+
 # Tools
 
 

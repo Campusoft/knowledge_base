@@ -5,6 +5,7 @@
  
  The message queue in Kafka is persistent. The data sent is stored until a specified retention period has passed, either a period of time or a size limit. The message stays in the queue until the retention period/size limit is exceeded, meaning the message is not removed once it’s consumed. Instead, it can be replayed or consumed multiple times, which is a setting that can be adjusted. 
  
+ Apache Kafka uses Apache ZooKeeper to maintain and coordinate the Apache Kafka brokers.
  
 # Use Cases
 
@@ -45,6 +46,22 @@ https://stackoverflow.com/questions/42151544/when-to-use-rabbitmq-over-kafka
 Streams record history. Tables represent state.
 https://cdn.confluent.io/wp-content/uploads/streams-record-history.gif
 
+
+***Topics***
+
+Topics in Kafka are always multi-producer and multi-subscriber: a topic can have zero, one, or many producers that write events to it, as well as zero, one, or many consumers that subscribe to these events. Events in a topic can be read as often as needed—unlike traditional messaging systems, events are not deleted after consumption. Instead, you define how long Kafka should retain your events through a per-topic configuration setting, after which old events are discarded. Kafka’s performance is effectively constant with respect to data size, so storing data for a long time is perfectly fine.
+
+***Consumer Groups***
+
+Intro to Kafka - Consumer groups. (Posee ilustraciones para explicar concepto de grupos de consumidores)
+- Intro to Kafka - Topics and partitions
+- Intro to Kafka - Producers
+- Intro to Kafka - Consumers
+- Intro to Kafka - Consumer groups
+- Intro to Kafka - Ordering related records
+https://lankydan.dev/intro-to-kafka-consumer-groups
+
+
 # Command
 
 Apache Kafka Quickstart
@@ -63,6 +80,8 @@ Read the events
 ```
 kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
 ```
+
+Cluster name
 
 https://kafka.apache.org/quickstart 
 
@@ -98,7 +117,30 @@ https://hub.docker.com/r/bitnami/kafka
 # Kafka Streams
 
 
+# Tools
 
+
+Confluent REST APIs
+The Confluent REST Proxy provides a RESTful interface to a Apache Kafka® cluster, making it easy to produce and consume messages, view the state of the cluster, and perform administrative actions without using the native Kafka protocol or clients.
+https://docs.confluent.io/platform/current/kafka-rest/index.html
+
+
+This article provides an overview of such UI tools, including:
+- AKHQ
+- Kowl
+- Kafdrop
+- UI for Apache Kafka
+- Lenses
+- CMAK
+- Confluent CC
+- Conduktor
+https://towardsdatascience.com/overview-of-ui-tools-for-monitoring-and-management-of-apache-kafka-clusters-8c383f897e80
+
+Open-Source Web GUI for Apache Kafka Management 
+https://github.com/provectus/kafka-ui
+
+This repository is a collection of tools for working with Apache Kafka.
+https://github.com/linkedin/kafka-tools
 
 # Referencias
 

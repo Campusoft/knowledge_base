@@ -99,6 +99,8 @@ Pattern: Saga
 https://microservices.io/patterns/data/saga.html
 
 
+
+
 # Revision (TODO)
 
 Well, that is the basis of “Event-enabled” APIs. They are often called “asynchronous,” “push,” or “streaming

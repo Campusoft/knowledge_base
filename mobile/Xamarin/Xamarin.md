@@ -82,6 +82,22 @@ Transfiere archivos a través de dispositivos, controla dispositivos Android en 
 Librerias de App/UI. Listado de aplicaciones realizadas en Xamarin. 
 https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
 
+# Publicar a Google Play
+
+Publish smaller apps with the Android App Bundle
+https://devblogs.microsoft.com/xamarin/android-app-bundle/
+
+
+Errores
+
+- No se firmó el Android App Bundle.
+
+
+You have to upload AAB (Android app bundle).
+
+Starting in August 2021, developers wanting to publish new Android apps on the Google Play Store will have to change how those apps are packaged together: Rather than the traditional APK (Android application package) format that has been in place for years, software makers are going to be required to use the AAB (Android app bundle) framework instead.
+
+
 ## Varios
 
 How to Release Your Xamarin App for iOS and Android

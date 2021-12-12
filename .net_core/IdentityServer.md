@@ -36,10 +36,43 @@ your applications only need to know about the one token service (the gateway) an
 http://docs.identityserver.io/en/latest/topics/federation_gateway.html
 
 
+# Endpoint 
+
+Con el endpoint de descubrimiento, se puede obtener todos los endpoint disponibles
+
+/.well-known/openid-configuration
+
+Los endpoint
+
+- authorization_endpoint	"https://localhost:44332/connect/authorize"
+- token_endpoint	"https://localhost:44332/connect/token"
+- userinfo_endpoint	"https://localhost:44332/connect/userinfo"
+- end_session_endpoint	"https://localhost:44332/connect/endsession"
+- check_session_iframe	"https://localhost:44332/connect/checksession"
+- revocation_endpoint	"https://localhost:44332/connect/revocation"
+- introspection_endpoint	"https://localhost:44332/connect/introspect"
+- device_authorization_endpoint	"https://localhost:44332/connect/deviceauthorization"
+
+
+## End Session Endpoint
+
+http://docs.identityserver.io/en/latest/endpoints/endsession.html
+
+
+# Events
+
+Events are structured data and include event IDs, success/failure information, categories and details. This makes it easy to query and analyze them and extract useful information that can be used for further processing.
+http://docs.identityserver.io/en/latest/topics/events.html
+
 # Referencias
 
 
 User Authentication and Identity with Angular, Asp.Net Core and IdentityServer
 https://fullstackmark.com/post/21/user-authentication-and-identity-with-angular-aspnet-core-and-identityserver
 
+
+# Revisiones
+
+Eventos
+IdentityServer4.Events
 

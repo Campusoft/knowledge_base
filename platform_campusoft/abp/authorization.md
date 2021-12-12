@@ -83,7 +83,18 @@ AbpIdentity.Roles.Create
 
 Proyect => AbpAccountWebIdentityServerModule => AbpIdentityServerDomainModule.
 
-El modulo AbpIdentityServerDomainModule, realiza la configuracion  IdentityServer
+El modulo AbpIdentityServerDomainModule, realiza la configuracion  IdentityServer.
+
+
+```
+var identityServerBuilder = services.AddIdentityServer(options =>
+        {
+            options.Events.RaiseErrorEvents = true;
+            options.Events.RaiseInformationEvents = true;
+            options.Events.RaiseFailureEvents = true;
+            options.Events.RaiseSuccessEvents = true;
+        });
+```		
 
 Si no existe la implementacion IClientStore, se utiliza configuracion memoria, y lo que se encuentre configurado en "IdentityServer:Clients"
 

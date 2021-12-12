@@ -17,6 +17,10 @@ TODO: Documentar lo que se realiza en el CLIENTE.
 - Azure.
 - Adfs.
 
+Configuracion. Clase AuthConfig
+
+https://github.com/manfredsteyer/angular-oauth2-oidc/blob/master/projects/lib/src/auth.config.ts
+
 
 ## Laboratorio
 

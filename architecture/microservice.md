@@ -135,6 +135,16 @@ Un cliente web necesita información que esta en varios microservicios. En este c
 
 El Patrón Saga es una secuencia de transacciones locales donde cada transacción actualiza información dentro de un servicio.
 
+***Choreography and Orchestration***
+
+Choreography
+
+Choreography is a way to coordinate sagas where participants exchange events without a centralized point of control. With choreography, each local transaction publishes domain events that trigger local transactions in other services
+
+Orchestration
+
+Orchestration is a way to coordinate sagas where a centralized controller tells the saga participants what local transactions to execute. The saga orchestrator handles all the transactions and tells the participants which operation to perform based on events. The orchestrator executes saga requests, stores and interprets the states of each task, and handles failure recovery with compensating transactions.
+
 ## Sidecar pattern  (Pronu: saidecar)
 
 

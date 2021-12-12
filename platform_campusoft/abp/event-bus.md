@@ -17,11 +17,15 @@ ILocalEventHandler<EntityCreatedEventData<Plantilla>>
 # Distributed Event Bus
 
 
+- Los objetos "Eto", deben tener el mismo namespace, para que los suscriptores recepten los eventos emitidos con este "Eto" 
+
+
 # Kafka 
 
 Distributed Event Bus Kafka Integration
 https://docs.abp.io/en/abp/latest/Distributed-Event-Bus-Kafka-Integration
 
+- En kafka, si existe 3 mensajes de diferentes ETO. Y unicamnete un ETO existe en manejador los otros 2 ETOS se ignoran y se consideran procesados. 
 
 TODO:
 - La integracion con kafka no lanza error, realiza reintento infinito.. 

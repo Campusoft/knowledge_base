@@ -10,7 +10,7 @@ An open-source lightweight message bus framework for .NET. MassTransit is useful
 
 https://masstransit-project.com/
 
-## Messange
+# Messange
 
 There are two main message types, events and commands. 
 
@@ -30,38 +30,44 @@ Guidance
 Message design is not object-oriented design. Messages should contain state, not behavior. Behavior should be in a separate class or service.
 
 
-##  Producers
+#  Producers
 
  If your message goes to a known receiver, just send it. You should publish your message when you have multiple receivers or the number of receivers is dynamically changing.
  
 
 https://masstransit-project.com/usage/producers.html
 
-## Consumer
+# Consumer
 
 
 Creating a new consumer instance for each message is highly suggested. However, it is possible to configure an existing consumer instance to which every received message will be delivered (if the message type is consumed by the consumer).
 https://masstransit-project.com/usage/consumers.html#instance
 
-## Pipeline
+# Pipeline
 
-##  Middleware
+#  Middleware
 
-##  Observers
+#  Observers
 
 
-## Sagas
+# Sagas
 
 In MassTransit, a saga is a stateful consumer that allows multiple messages to be correlated to a single consumer instance. 
 A saga, sometimes called a workflow, is typically used to orchestrate other consumers or services in a distributed system while maintaining state between messages.
 MassTransit persists a saga's state using a saga repository, and automatically creates a new or uses an existing state instance as messages are received.
 
 
-##  Containers
+
+
+#  Riders
+
+
+
+#  Containers
 
 MassTransit supports several dependency injection containers.
 
-##  Transports
+#  Transports
 
 **Amazon SQS**
 
@@ -78,9 +84,9 @@ User: <user> is not authorized to perform: SNS:CreateTopic on resource: <name-re
 Agregar los permisos sqs, al usuario iam
 
 
-## Laboratorios
+# Laboratorios
 
-### publisher/subscriber 
+## publisher/subscriber 
 
 Para configurar un subscriber, utilizar la siguiente configuracion. Con el metodo "ReceiveEndpoint", pasar como parametro el host que conecta al broker message, con esta configuracion se creara una suscripcion para mensajes de tipo "GradeBook.Core.Application.GradeImportNotificationDto" que esta configurado en "GradeImportNotificationConsumer"
 
