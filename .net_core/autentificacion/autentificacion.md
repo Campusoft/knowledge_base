@@ -73,18 +73,44 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-as
 The policy-based security model is centered on three main concepts. These include policies, requirements, and handlers
 
 
+## Policy
+
+A policy is composed of one or more requirements. 
+
 ## Requirements
 
 A requirement comprises a collection of data parameters. These data parameters are used by a policy to evaluate the user identity. To create a requirement, you need to create a class that implements the IAuthorizationRequirement interface
+
+
+The Authorization Requirement defines the collection of conditions that the policy must evaluate. For the Policy to be successful, it must satisfy all the requirements. It is similar to AND Condition. If one of the requirements fails. then the policy fails.
 
 
 ## Authorization Handlers
 
 A requirement can have one or more handlers. An authorization handler is used to evaluate the properties of a requirement. To create an authorization handler, you should create a class that extends AuthorizationHandler<T> and implements the HandleRequirementAsync() method
 
+## Process
+
+The three “main” services involved in the authorization process are:
+
+- AuthorizationMiddleware
+- PolicyEvaluator
+- DefaultAuthorizationService
+	
+
 
 ## Referencias
 
+Policy-based Authorization in ASP.NET Core
+- Simple Authorization Policies
+- Applying the Authorization Policy
+- Custom Policy using a Func
+- Custom Policy using requirement & Handlers
+- Example of Requirement & Requirement handler 
+https://www.tektutorialshub.com/asp-net-core/policy-based-authorization-in-asp-net-core/
+
+Permission-Based Authorization in ASP.NET Core – Complete User Management Guide in .NET 5
+https://codewithmukesh.com/blog/permission-based-authorization-in-aspnet-core/
 
 
 # Framework / Librerias
@@ -96,6 +122,15 @@ https://github.com/Xabaril/Balea
 
 https://www.youtube.com/watch?v=UnbJrC0WN1U
 
+# Referencias
+
+Basic Authentication with Middleware in ASP.NET Core 3 Web API
+- Middleware
+https://learningprogramming.net/net/asp-net-core-3-web-api/basic-authentication-with-middleware-in-asp-net-core-3-web-api/
+
+
+Build Secure ASP.NET Core API with JWT Authentication – Detailed Guide
+https://codewithmukesh.com/blog/aspnet-core-api-with-jwt-authentication/
 
 # Revisiones
 
@@ -108,4 +143,18 @@ User.SecurityStamp
 IUserSecurityStampStore<IdentityUser>
 IUserSecurityStampStore<TUser, string>
  
- 
+------------------------- 
+
+That is because the AuthorizeFilter added to the pipeline for every [Authorize] attribute requires users to be authenticated.
+
+If you look at the source code, you will see that even without calling any policy it is making sure the user is authenticated:
+
+```
+// Note: Default Anonymous User is new ClaimsPrincipal(new ClaimsIdentity())
+if (httpContext.User == null ||
+    !httpContext.User.Identities.Any(i => i.IsAuthenticated) ||
+    !await authService.AuthorizeAsync(httpContext.User, context, Policy))
+{
+    context.Result = new ChallengeResult(Policy.AuthenticationSchemes.ToArray());
+}
+```

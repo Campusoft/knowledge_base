@@ -114,6 +114,14 @@ Microservice Architecture and Design Patterns for Microservices
 - Cross-Cutting Concern Patterns
 https://medium.com/@madhukaudantha/microservice-architecture-and-design-patterns-for-microservices-e0e5013fd58a
 
+There are 6 Data Management patterns that can help you manage your data effectively.
+- Database Per Service:
+- Shared Database:
+- Saga Pattern:
+- API Composition:
+- CQRS:
+- Event Sourcing:
+https://dzone.com/articles/6-data-management-patterns-for-microservices-1
 
 
 ## Resiliency / resiliente / Resistencia
@@ -135,6 +143,8 @@ Un cliente web necesita información que esta en varios microservicios. En este c
 
 El Patrón Saga es una secuencia de transacciones locales donde cada transacción actualiza información dentro de un servicio.
 
+Saga is just another name for Process Manager, and so a saga is nothing but the implementation of a state machine whose transitions between states are determined by messages.
+
 ***Choreography and Orchestration***
 
 Choreography
@@ -144,6 +154,22 @@ Choreography is a way to coordinate sagas where participants exchange events wit
 Orchestration
 
 Orchestration is a way to coordinate sagas where a centralized controller tells the saga participants what local transactions to execute. The saga orchestrator handles all the transactions and tells the participants which operation to perform based on events. The orchestrator executes saga requests, stores and interprets the states of each task, and handles failure recovery with compensating transactions.
+
+
+Pattern: Saga
+- Example: Choreography-based saga
+- Example: Orchestration-based saga
+https://microservices.io/patterns/data/saga.html
+
+Microservices Architecture Pattern - SAGA
+
+-    What is SAGA Pattern?
+-    Real World use Case
+-    Types of SAGA pattern
+-    Choreography – Basic
+-    Orchestration - Basic
+https://www.c-sharpcorner.com/article/microservices-architecture-pattern-saga/
+
 
 ## Sidecar pattern  (Pronu: saidecar)
 

@@ -28,13 +28,35 @@ Supports request/response, commands, queries, notifications and events, synchron
 
 
 
-
-
 # Saga
 
 Implementation of saga pattern for .NET Core  
 https://github.com/snatch-dev/Chronicle 
 
+
+## OpenSleigh 
+
+OpenSleigh is a distributed Saga management library, written in C# with .NET Core. It is intended to be reliable, fast, easy to use, configurable and extensible.
+Persistence
+
+-    MongoDB
+-    MSSQL
+-    PostgreSQL
+-    CosmosDB with SQL API
+-    CosmosDB with MongoDB API
+
+Transport
+
+-    Azure Service Bus
+-    RabbitMQ
+-    Kafka
+
+https://github.com/mizrael/OpenSleigh
+
+
+## MassTransit 
+
+## NServiceBus
 
 # Referencias
 

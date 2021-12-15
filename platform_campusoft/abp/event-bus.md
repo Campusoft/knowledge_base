@@ -20,6 +20,13 @@ ILocalEventHandler<EntityCreatedEventData<Plantilla>>
 - Los objetos "Eto", deben tener el mismo namespace, para que los suscriptores recepten los eventos emitidos con este "Eto" 
 
 
+***Exception Handling***
+
+When an exception occurs, it will retry every three seconds up to the maximum number of retries(default is 3) and move to dead letter queue, you can change the number of retries, retry interval and dead letter queue name:
+
+https://docs.abp.io/en/abp/latest/Distributed-Event-Bus#exception-handling
+
+
 # Kafka 
 
 Distributed Event Bus Kafka Integration
@@ -35,6 +42,23 @@ TODO:
 - Como trabajar con  confirmation (ACK).  
 
 
+***Configuracion***
+
+You can use any of the ClientConfig properties as the connection properties.
+
+```
+{
+  "Kafka": {
+    "Connections": {
+      "Default": {
+        "BootstrapServers": "123.123.123.123:9092",
+        "SocketTimeoutMs": 60000
+      }
+    }
+  }
+}
+
+```
 
 Errores
 ------------------------

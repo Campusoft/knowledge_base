@@ -59,7 +59,7 @@ Ocelot is a lightweight API Gateway, recommended for simpler approaches. Ocelot 
 
 # Saga
 
-
+ 
 
 (Codigo) It is a Saga pattern implementation reference through an orchestration approach in a serverless architecture on Azure. The solution leverages Azure Functions for the implementation of Saga participants, Azure Durable Functions for the implementation of the Saga orchestrator, Azure Event Hubs as the data streaming platform and Azure Cosmos DB as the database service.
 https://github.com/Azure-Samples/saga-orchestration-serverless

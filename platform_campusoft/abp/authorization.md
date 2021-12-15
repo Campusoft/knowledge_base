@@ -20,8 +20,9 @@ https://docs.abp.io/en/abp/latest/Authorization#claims-principal-factory
 Abp. Aplica permisos con politicas autorizacion de .net core.
 
 Existe la implementaciones
-- PermissionsRequirement. (El requerimiento para las politicas de permisos). Posee una lista permisos a evaluar, y si se aplican todos los permisos o unicamente uno
-- PermissionsRequirementHandler. Procesar el requerimiento PermissionsRequirement. Segun el PermissionsRequirement, se verifica si se posee todos los permisos o unicamnete uno. Utiliza IPermissionChecker, para verificar si el usuario  posee la lista permisos
+- PermissionsRequirement. "IAuthorizationRequirement" (El requerimiento para las politicas de permisos). Posee una lista permisos a evaluar, y si se aplican todos los permisos o unicamente uno
+- PermissionsRequirementHandler. "AuthorizationHandler" Procesar el requerimiento PermissionsRequirement. Segun el PermissionsRequirement, se verifica si se posee todos los permisos o unicamnete uno. Utiliza IPermissionChecker, para verificar si el usuario  posee la lista permisos
+- AbpAuthorizationPolicyProvider.  "DefaultAuthorizationPolicyProvider". 
 
 PermissionManagement
 https://docs.abp.io/en/abp/latest/Modules/Permission-Management
@@ -129,14 +130,51 @@ Configure<AbpIdentityOptions>(options =>
 
 # Current User
 
+
 ICurrentUser
 ICurrentUser is the main service to get info about the current active user.
 
-ICurrentUser works independently of how the user is authenticated or authorized. It seamlessly works with any authentication system that works with the current principal 
+ICurrentUser works independently of how the user is authenticated or authorized. It seamlessly works with any authentication system that works with the current principal.
 
+Para obtener el Id del usuario actual con ICurrentUser
+
+```
+Guid? userId = CurrentUser.Id;
+```
+
+Para obtener el userName del usuario actual  ICurrentUser
+```
+string userName = CurrentUser.UserName;
+```
+
+Verificar si el usuario se encuentra autentificado. 
+
+```
+CurrentUser.IsAuthenticated 
+```
+
+Si el usuario no se encuentra autentificado los valores seran nulos. 
+
+Para ver todas las Propiedades del ICurrentUser
+https://docs.abp.io/en/abp/4.4/CurrentUser#properties
+
+Informacion adicional:
 https://docs.abp.io/en/abp/4.4/CurrentUser
 
+## Obtener usuario Angular
 
+Se utiliza el servicio "ConfigStateService", para obtener informacion del usuario
+
+Con este servicio, con una constante especifica "currentUser", se obtiene informacion usuario
+
+```
+const currentUser = this.configStateService.getOne("currentUser");
+```
+
+El objeto que se retorna es tipo "CurrentUserDto". Ver las propiedades "https://github.com/abpframework/abp/blob/dev/framework/src/Volo.Abp.AspNetCore.Mvc.Contracts/Volo/Abp/AspNetCore/Mvc/ApplicationConfigurations/CurrentUserDto.cs"
+
+Mas detalles sobre ConfigStateService
+https://docs.abp.io/en/abp/latest/UI/Angular/Config-State-Service
 
 # Referencias
 
