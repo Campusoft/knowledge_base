@@ -1,6 +1,10 @@
 # OpenID Connect
  
+***Revision***
 
+You use AddJwtBearer to secure an API, meaning that the client of the API sends JWT-tokens to access the API and there is otherwise no human interaction.
+
+AddOpenIdConnect you use to secure a web-application, where you have human interaction (login/logout...), because you typically redirect your user to your identity provider.
 
 # Labatororios
 

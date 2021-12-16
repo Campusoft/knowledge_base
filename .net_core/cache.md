@@ -1,0 +1,16 @@
+# Cache .Net Core
+
+# Cache in-memory in ASP.NET Core
+
+
+# Distributed caching in ASP.NET Core
+
+A distributed cache is a cache shared by multiple app servers, typically maintained as an external service to the app servers that access it. A distributed cache can improve the performance and scalability of an ASP.NET Core app, especially when the app is hosted by a cloud service or a server farm.
+
+
+-   Distributed Memory Cache
+-   Distributed SQL Server cache
+-   Distributed Redis cache
+-   Distributed NCache cache
+
+

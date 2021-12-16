@@ -64,8 +64,78 @@ http://docs.identityserver.io/en/latest/endpoints/endsession.html
 Events are structured data and include event IDs, success/failure information, categories and details. This makes it easy to query and analyze them and extract useful information that can be used for further processing.
 http://docs.identityserver.io/en/latest/topics/events.html
 
-# Referencias
+# Firma y Validacion Token
 
+
+Create Certificates for IdentityServer4 signing using .NET Core
+https://damienbod.com/2020/02/10/create-certificates-for-identityserver4-signing-using-net-core/
+
+***Laboratorio***
+
+
+-----------------------
+Crear un certificado con dotnet dev-certs. 
+
+-p Password
+-ep nombre del archivo del certificado
+
+```
+dotnet dev-certs https -ep identityserver.pfx -p Test@2021
+```
+
+Agregar configuracion
+
+```
+var builder = services.AddIdentityServer( ...
+. 
+.
+.
+var password = "Test@2021";
+var certFile = Path.Combine(System.AppContext.BaseDirectory, "certificate", "identityserver.pfx");
+var certificate = new X509Certificate2(certFile,password );
+
+builder.AddSigningCredential(certificate);			
+```
+Ver archivo descubrimiento
+
+"Host-IdentityServer"/.well-known/openid-configuration
+
+En el archivo  de descubrimiento, se encuentra el enlace de las claves:
+ 
+"Host-IdentityServer"/.well-known/openid-configuration/jwks
+
+
+Nota.
+Tambien se puede utilizar el sitio para generar certificados:
+- CSR Options. (Self-Sign)
+- En Download. (PKCS#12 Certificate and key)
+https://certificatetools.com/
+
+# Errores
+
+Si el token posee una audicencias. En este caso "Base Public PersonRegistration", pero el cliente que valida el cliente valida otra audiencia que no se encuentra en las existentes en el token.
+```
+www-authenticate: Bearer error="invalid_token"error_description="The audience 'BasePublicPersonRegistration' is invalid" 
+```
+
+Se puede desactivar la validacion de la audicencia. En la configuracion de validacion del token "ValidateAudience = false"
+
+```
+ services
+		.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+		.AddJwtBearer(options =>
+		{
+			options.Authority = Configuration["AuthServer:Authority"];
+			options.Audience = Configuration["AuthServer:Audience"]; 
+			options.TokenValidationParameters = new TokenValidationParameters
+			{ 
+				ValidateAudience = false //No realizar validacion de la audiencia
+			};
+		});
+				
+```
+
+# Referencias
 
 User Authentication and Identity with Angular, Asp.Net Core and IdentityServer
 https://fullstackmark.com/post/21/user-authentication-and-identity-with-angular-aspnet-core-and-identityserver
@@ -76,3 +146,9 @@ https://fullstackmark.com/post/21/user-authentication-and-identity-with-angular-
 Eventos
 IdentityServer4.Events
 
+
+El ejemplo IdentityServer4, posee la configuracion:
+ValidateAudience = false
+https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html
+
+.AddDeveloperSigningCredential()        //This is for dev only scenarios when you don’t have a certificate to use.

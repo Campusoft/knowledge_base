@@ -5,6 +5,9 @@
 # Certificados SSL
 
 
+
+Use dotnet dev-certs to create self-signed certificates for development and testing.
+
 Generar certificados. Primero limpiar, luego generar
 ```
 dotnet dev-certs https --clean

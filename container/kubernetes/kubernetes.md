@@ -809,3 +809,7 @@ If Kubernetes is the operating  system of the internet,  then Helm is a package 
 
 https://helm.sh/
 
+# Revisiones
+
+Manage TLS Certificates in a Cluster
+https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/

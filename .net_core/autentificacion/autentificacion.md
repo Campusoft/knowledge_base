@@ -158,3 +158,14 @@ if (httpContext.User == null ||
     context.Result = new ChallengeResult(Policy.AuthenticationSchemes.ToArray());
 }
 ```
+
+-----------------------
+
+Swagger 
+Authentication And Authorization In .NET Core Web API Using JWT Token And Swagger UI
+- Configurar swagger UI, para ingresar un token para autentificar.
+https://www.c-sharpcorner.com/article/authentication-authorization-using-net-core-web-api-using-jwt-token-and/
+
+
+ASP.NET Core Swagger UI Authorization using IdentityServer4
+https://www.scottbrady91.com/identity-server/aspnet-core-swagger-ui-authorization-using-identityserver4

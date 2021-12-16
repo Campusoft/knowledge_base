@@ -85,7 +85,11 @@ The header of the JWT contains information about the key and encryption method u
 
 The alg claim indicates the algorithm that was used to sign the token, while the kid claim indicates the particular public key that was used to validate the token.
 
+***Validar con jwt.io, la firma del Token.***
 
+Using jwt.io to verify the signature of a JWT token
+- Requiere  x5c
+https://blogs.aaddevsup.xyz/2019/03/using-jwt-io-to-verify-the-signature-of-a-jwt-token/
 
 
 # SAML 
@@ -183,13 +187,13 @@ The JSON Web Key Set (JWKS) is a set of keys containing the public keys used to 
 The JWKS above contains a single key. Each property in the key is defined by the JWK specification RFC 7517 Section 4. We will use these properties to determine which key was used to sign the JWT. Here is a quick breakdown of what each property represents:
 
 -    alg: is the algorithm for the key
--    kty: is the key type
--    use: is how the key was meant to be used. For the example above, sig represents signature verification.
--    x5c: is the x509 certificate chain
+-    kty: is the key type. Key type . Family of algorithm used(RSA , HSA).
+-    use: is how the key was meant to be used. For the example above, sig represents signature verification. Usage. ‘sig’ for signing keys, ‘enc’ for encryption keys.
+-    x5c: is the x509 certificate chain. Chain of certificates used for verification. Usually x5c[0] is use for token verification.
 -    e: is the exponent for a standard pem
 -    n: is the moduluos for a standard pem
 -    kid: is the unique identifier for the key
--    x5t: is the thumbprint of the x.509 cert (SHA-1 thumbprint)
+-    x5t: is the thumbprint of the x.509 cert (SHA-1 thumbprint). Used to identify specific certificates. Is commonly used when the certificate is pre-distributed to the clients, and kid when JWKS is used.
 
 Here are the steps for validating the JWT:
 
@@ -296,5 +300,14 @@ A one-time password (OTP) is an automatically generated sequence of numeric or a
 
 # Referencias
 
+
+
+# REVISIONES
+
+Refresh tokens can be revoked by the server due to a change in credentials, or due to use or admin action.
+https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens#revocation
+
+
+Generar certificados x509, para pruebas
 
 
