@@ -122,6 +122,12 @@ nds.
 dotnet ef database update --context AdministrativeUnitDbContext
 ```
 
+# Interceptors
+Entity Framework Core (EF Core) interceptors enable interception, modification, and/or suppression of EF Core operations. This includes low-level database operations such as executing a command, as well as higher-level operations, such as calls to SaveChanges.
+
+Interceptors are different from logging and diagnostics in that they allow modification or suppression of the operation being intercepted.  
+https://docs.microsoft.com/en-us/ef/core/logging-events-diagnostics/interceptors
+
 # Best Practiq
 
 
@@ -130,6 +136,14 @@ dotnet ef database update --context AdministrativeUnitDbContext
 ```
 entity.Property(x => x.ColumnName).IsUnicode(false);  
 ```
+
+
+# Versiones
+
+
+
+Save Changes Interceptors were introduced in EF Core 5.0.
+
 
 # Reference
 

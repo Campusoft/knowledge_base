@@ -1,10 +1,19 @@
 # OpenID Connect
  
-***Revision***
+## Secure an API
 
 You use AddJwtBearer to secure an API, meaning that the client of the API sends JWT-tokens to access the API and there is otherwise no human interaction.
 
+## OpenID Connect authentication to the MVC application
+
 AddOpenIdConnect you use to secure a web-application, where you have human interaction (login/logout...), because you typically redirect your user to your identity provider.
+
+To add support for OpenID Connect authentication to the MVC application, you first need to add the nuget package containing the OpenID Connect handler to your project, e.g.:
+
+```
+dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
+```
+
 
 # Labatororios
 

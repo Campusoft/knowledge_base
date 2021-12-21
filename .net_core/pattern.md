@@ -22,9 +22,15 @@ https://www.kamilgrzybek.com/design/simple-cqrs-implementation-with-raw-sql-and-
 
 
 ***MediatR***
+
 Simple mediator implementation in .NET
+
 In-process messaging with no dependencies.
 Supports request/response, commands, queries, notifications and events, synchronous and async with intelligent dispatching via C# generic variance.
+
+***Revision***
+
+Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR
 
 
 

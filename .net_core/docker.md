@@ -241,3 +241,9 @@ https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?vie
 
 Awesome Docker Compose samples. Posee varios ejemplos para archivos docker - compose 
 https://github.com/docker/awesome-compose
+
+
+# Revisiones
+
+Configuracion Docker, para .net core, compose, certificados.
+https://github.com/jasontaylordev/CleanArchitecture#docker-configuration

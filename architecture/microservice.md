@@ -265,7 +265,7 @@ Architecture Overview
 https://zipkin.io/pages/architecture.html
 
 
-# Identity and permissions
+# Identity and permissions. (Authentication and Authorization)
 
 ***Revisiones***
 
@@ -297,15 +297,6 @@ Authentication Strategy in a Microservice Architecture
 -  Global Authentication (API Gateway) and authorization per service  
 https://dev.to/behalf/authentication-authorization-in-microservices-architecture-part-i-2cn0
  
-
-# Audit Trail
-
-Microservices shall generate and pass through microservice  call chain  a correlation  ID which  uniquely  identify  every  call  chain  and  help  grouping log messages to investigate them.
-
-Logging  agent  shall  include  correlation  ID  in  every log message
-
-# Authentication and Authorization
-
 Microservices Authentication and Authorization Solutions
 - 1. Distributed Session Management
 - 2. Client Token
@@ -313,6 +304,15 @@ Microservices Authentication and Authorization Solutions
 - 4. Client Token with API Gateway
 - 5. Third-party application access
 https://medium.com/tech-tajawal/microservice-authentication-and-authorization-solutions-e0e5e74b248a
+
+
+# Audit Trail
+
+Microservices shall generate and pass through microservice  call chain  a correlation  ID which  uniquely  identify  every  call  chain  and  help  grouping log messages to investigate them.
+
+Logging  agent  shall  include  correlation  ID  in  every log message
+
+ 
 
 # Microservices Frameworks
 
@@ -418,6 +418,11 @@ With this approach, clients/API-GW sends the request to a component(such as a Lo
 
 
 # Crosscutting Features
+
+# deployed
+
+Having one repository per microservice helps  release it independently from other microservices
+
 
 ## Cache
 

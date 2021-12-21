@@ -35,6 +35,11 @@ your applications only need to know about the one token service (the gateway) an
 
 http://docs.identityserver.io/en/latest/topics/federation_gateway.html
 
+# Flujos
+
+## Interactive Applications with ASP.NET Core
+
+add support for interactive user authentication via the OpenID Connect protocol
 
 # Endpoint 
 

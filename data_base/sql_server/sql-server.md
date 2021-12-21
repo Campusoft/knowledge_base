@@ -3,6 +3,8 @@
 Explicaciones de Auditorias. 
 https://docs.microsoft.com/es-es/sql/relational-databases/tables/temporal-table-usage-scenarios?view=sql-server-2017
 
+Creación de una tabla temporal con control de versiones del sistema
+https://docs.microsoft.com/es-es/sql/relational-databases/tables/creating-a-system-versioned-temporal-table?view=sql-server-2017
 
 
 # Backup

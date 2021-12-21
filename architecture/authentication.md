@@ -132,12 +132,14 @@ https://auth0.com/blog/on-the-nature-of-oauth2-scopes/
 
 
 # OpenID Connect
-
-
-
+ 
 OpenID Connect describes a metadata document (RFC) that contains most of the information required for an app to do sign in. This includes information such as the URLs to use and the location of the service's public signing keys. You can find this document by appending the discovery document path to the authority URL:
 
 Discovery document path: /.well-known/openid-configuration
+
+Similar to OAuth 2.0, OpenID Connect also uses the scopes concept. Again, scopes represent something you want to protect and that clients want to access. In contrast to OAuth, scopes in OIDC don’t represent APIs, but identity data like user id, name or email address.
+
+openid,
 
 The contents are fully described in the OpenID Connect specification.
 
@@ -209,6 +211,17 @@ Here are the steps for validating the JWT:
 OpenID specifications 
 https://openid.net/developers/specs/
 
+## OpenID Connect (OIDC) authentication protocol
+OpenID Connect (OIDC) scopes are used by an application during authentication to authorize access to a user's details, like name and picture. Each scope returns a set of user attributes, which are called claims. The scopes an application should request depend on which user attributes the application needs.
+
+The basic (and required) scope for OIDC is openid, which indicates that an application intends to use the OIDC protocol to verify a user's identity.
+
+- openid 	(required) Returns the sub claim, which uniquely identifies the user. In an ID Token, iss, aud, exp, iat, and at_hash claims will also be present. To learn more about the ID Token claims, read ID Token Structure.
+
+- profile 	Returns claims that represent basic profile information, including name, family_name, given_name, middle_name, nickname, picture, and updated_at.
+
+- email 	Returns the email claim, which contains the user's email address, and email_verified, which is a boolean indicating whether the email address was verified by the user.
+	
 
 ## Library or Product
 
