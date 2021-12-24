@@ -128,6 +128,9 @@ Entity Framework Core (EF Core) interceptors enable interception, modification, 
 Interceptors are different from logging and diagnostics in that they allow modification or suppression of the operation being intercepted.  
 https://docs.microsoft.com/en-us/ef/core/logging-events-diagnostics/interceptors
 
+The auditing sample contains a simple console application that makes changes to the blogging database and then shows the auditing that was created.
+https://github.com/dotnet/EntityFramework.Docs/tree/main/samples/core/Miscellaneous/SaveChangesInterception
+
 # Best Practiq
 
 
@@ -139,7 +142,6 @@ entity.Property(x => x.ColumnName).IsUnicode(false);
 
 
 # Versiones
-
 
 
 Save Changes Interceptors were introduced in EF Core 5.0.

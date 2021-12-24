@@ -4,10 +4,21 @@
 Clean Architecture Solution Template: A starting point for Clean Architecture with ASP.NET Core 
 - Now available as a project template within Visual Studio.
 - The goal of this repository is to provide a basic solution structure that can be used to build Domain-Driven Design (DDD)-based or simply well-factored, SOLID applications using .NET Core
+- Posee linea commandos. (Cli)
+- Utiliza Autofac
 https://github.com/ardalis/CleanArchitecture
  
  
 This is a solution template for creating a Single Page App (SPA) with Angular and ASP.NET Core following the principles of Clean Architecture. Create a new project based on this template by clicking the above Use this template button or by installing and running the associated NuGet package (see Getting Started for full details).
+- Posee linea commandos. (Cli)
+- ASP.NET Core 6
+- Entity Framework Core 6
+- Angular 12
+- MediatR
+- AutoMapper
+- FluentValidation
+- NUnit, FluentAssertions, Moq & Respawn
+- Docker 
 https://github.com/jasontaylordev/CleanArchitecture 
 
 

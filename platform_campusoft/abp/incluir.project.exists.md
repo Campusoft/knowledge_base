@@ -1,5 +1,15 @@
 # Incluir Abp, en soluciones existentes
 
+Localizaciones.
+
+Utilizar  app.UseAbpRequestLocalization();, para establecer el lenguaje.
+
+Error
+AbpException: Undefined setting: Abp.Localization.DefaultLanguage
+
+
+
+
 Librerias
 - Volo.Abp.Core
 - Volo.Abp.Ddd.Domain

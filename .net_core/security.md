@@ -16,8 +16,7 @@ https://www.codeproject.com/Articles/5259677/Creating-Simple-Audit-Trail-With-En
 
 ## Entity Framework Core Plus Audit
 
-
-
+ 
 Z.EntityFramework.Plus.EFCore. EF+ Audit easily tracks changes, exclude/include entity or property and auto save audit entries in the database.
 
 https://entityframework-plus.net/ef-core-audit
@@ -45,6 +44,17 @@ Interaction extensions to audit different systems are provided, such as Entity F
 
 https://github.com/thepirat000/Audit.NET
 
+***Data providers***
+
+A data provider (or storage sink) contains the logic to handle the audit event output, where you define what to do with the audit logs.
+
+***SqlDataProvider***
+- Se guarda en una unica tabla.
+- Se puede configurar las columnas especificas para guardar alguna informacion existente en el audit log.
+- El audit log, se guarda en JSON en una columna que se configure.
+https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.SqlServer#auditnetsqlserver
+
+Extensions
 
 ***Audit.WebApi***
 
@@ -61,6 +71,15 @@ Mode: To indicate the audit operation mode
 - Opt-Out: All the entities are tracked by default, except those explicitly ignored. (Default)
 - Opt-In: No entity is tracked by default, except those explicitly included.
 https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#settings
+
+
+***Laboratorio***
+
+Utiliza Clean.Architecture.Solution.Template
+dotnet new ca-sln
+
+
+dotnet new clean-arch -o AuditNet.Lab
 
 # Revisiones / TEMP. (Proyecto BIT)
 

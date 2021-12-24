@@ -244,6 +244,8 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 
 # Globalization and localization
 
+
+No es necesario. El proyecto, que posee los archivos de localizaciones, debe tener una referencia a "Microsoft.Extensions.FileProviders.Embedded", para que funcione ?
 		
 TODO:
 - Como establecer los nombres en los campos, en validaciones dataannotation

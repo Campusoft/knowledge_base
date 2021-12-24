@@ -1,6 +1,11 @@
 
 # Bransh / Tags
 
+Ramas, basadas en GitFlow
+
+- main. La rama main o principal almacena el historial de publicación oficial
+- develop. rama develop o de desarrollo sirve como rama de integración para las funciones
+
 # GitFlow Workflow
 
 
