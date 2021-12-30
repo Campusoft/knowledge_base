@@ -304,6 +304,16 @@ El Nombre-Cache-Item, se puede establecer con el atributo "CacheName" en la clas
 Using Multiple Databases
 https://docs.abp.io/en/abp/latest/Entity-Framework-Core-Migrations#using-multiple-databases
 
+***Dependency Injection***
+
+ABP's Dependency Injection system is developed based on Microsoft's dependency injection extension library (Microsoft.Extensions.DependencyInjection nuget package)
+
+Autofac Integration
+
+Autofac is one of the most used dependency injection frameworks for .Net. It provides some advanced features compared to .Net Core standard DI library, like dynamic proxying and property injection.
+
+https://docs.abp.io/en/abp/latest/Autofac-Integration
+
 # Exception-Handling
 
 

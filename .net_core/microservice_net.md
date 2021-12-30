@@ -1,6 +1,6 @@
 # Microservices with .net 
 
-# client-to-microservice communication
+# Client-to-microservice communication
 
 
 Why consider API Gateways instead of direct 
@@ -64,6 +64,15 @@ Ocelot is a lightweight API Gateway, recommended for simpler approaches. Ocelot 
 (Codigo) It is a Saga pattern implementation reference through an orchestration approach in a serverless architecture on Azure. The solution leverages Azure Functions for the implementation of Saga participants, Azure Durable Functions for the implementation of the Saga orchestrator, Azure Event Hubs as the data streaming platform and Azure Cosmos DB as the database service.
 https://github.com/Azure-Samples/saga-orchestration-serverless
 
+
+# Observabilidad
+
+***Revisiones***
+
+TraceId
+
+
+
 # Tools
 
 
@@ -98,6 +107,15 @@ Otras opciones:
 
 --------------------
 
+***YARP***
+
+YARP - A toolkit for developing high-performance HTTP reverse proxy applications
+
+Many of the existing proxies were built to support HTTP/1.1, but with workloads changing to include gRPC traffic, they require HTTP/2 support which requires a significantly more complex implementation. By using YARP the projects get to customize the routing and handling behavior without having to implement the http protocol.
+
+YARP is built on .NET using the infrastructure from ASP.NET and .NET (.NET Core 3.1, .NET 5, and .NET 6). The key differentiator for YARP is that it's been designed to be easily customized and tweaked via .NET code to match the specific needs of each deployment scenario.
+
+https://microsoft.github.io/reverse-proxy/index.html
 
 # Referencias
 

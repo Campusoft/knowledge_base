@@ -265,6 +265,8 @@ Architecture Overview
 https://zipkin.io/pages/architecture.html
 
 
+
+
 # Identity and permissions. (Authentication and Authorization)
 
 ***Revisiones***
@@ -415,6 +417,13 @@ With this approach, clients/API-GW sends the request to a component(such as a Lo
 ***Zookeeper***
 
 ***Etcd***
+ A distributed, reliable key-value store for the most critical data of a distributed system 
+
+- Store data in hierarchically organized directories, as in a standard filesystem
+- Watch specific keys or directories for changes and react to changes in values
+
+
+Note that because etcd’s performance is heavily dependent upon storage disk speed, it’s highly recommended to use SSDs in etcd environments
 
 
 # Crosscutting Features

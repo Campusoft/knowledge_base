@@ -28,6 +28,15 @@ Simple mediator implementation in .NET
 In-process messaging with no dependencies.
 Supports request/response, commands, queries, notifications and events, synchronous and async with intelligent dispatching via C# generic variance.
 
+MediatR has two kinds of messages it dispatches:
+
+- Request/response messages, dispatched to a single handler
+- Notification messages, dispatched to multiple handlers
+
+
+Behaviors
+-  It represents a similar pattern to filters in ASP.NET MVC/Web API or pipeline behaviors in NServiceBus.
+
 ***Revision***
 
 Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR

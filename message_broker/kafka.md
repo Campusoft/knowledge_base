@@ -2,7 +2,6 @@
  
  Kafka is a distributed streaming platform with very good horizontal scaling capability. It allows applications to process and re-process streamed data on disk. Due to it's high throughput it's commonly used for real-time data streaming.
  
- 
  The message queue in Kafka is persistent. The data sent is stored until a specified retention period has passed, either a period of time or a size limit. The message stays in the queue until the retention period/size limit is exceeded, meaning the message is not removed once it’s consumed. Instead, it can be replayed or consumed multiple times, which is a setting that can be adjusted. 
  
  Apache Kafka uses Apache ZooKeeper to maintain and coordinate the Apache Kafka brokers.
@@ -60,6 +59,22 @@ Intro to Kafka - Consumer groups. (Posee ilustraciones para explicar concepto de
 - Intro to Kafka - Consumer groups
 - Intro to Kafka - Ordering related records
 https://lankydan.dev/intro-to-kafka-consumer-groups
+
+***Partitions***
+
+ Kafka generates a hash of the key and maps it to a specific partition (i.e., all messages produced with a given key reside on the same partition). Partitions are the primary mechanism in Kafka for parallelizing consumption and scaling a topic beyond the throughput limits of a single node. Each  partition can be hosted in different nodes
+
+
+# Components
+
+***Zookeeper***
+
+Kafka uses Zookeeper for most of the coordination tasks
+
+
+Removing the Apache ZooKeeper Dependency
+https://www.confluent.io/blog/removing-zookeeper-dependency-in-kafka/
+
 
 
 # Command

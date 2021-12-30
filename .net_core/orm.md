@@ -68,6 +68,11 @@ Establecer que una propiedad "String", que no requiere Unicode.
 entity.Property(x => x.ColumnName).IsUnicode(false);  
 ```
 
+## Value converters
+
+Json
+https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=fluent-api#composite-value-objects
+
 
 
 # Migration
@@ -153,6 +158,7 @@ This site provides documentation and tutorials for people looking for help with 
 https://www.learnentityframeworkcore.com/
 
 ***Oracle Mappging GUID***
+
 using .HasConversion<string>(), para especificar que se gestione como un string el GUID.
 ```
 builder.Property(a => a.Id)

@@ -1,16 +1,26 @@
 # Incluir Abp, en soluciones existentes
 
-Localizaciones.
+Se requiere la integracion Autofac, para utilizar abp. Sea un proyecto asp.net o console.
+
+https://docs.abp.io/en/abp/latest/Autofac-Integration#asp-net-core-application
+
+
+
+***Localizaciones.***
 
 Utilizar  app.UseAbpRequestLocalization();, para establecer el lenguaje.
 
+- AbpRequestLocalizationMiddleware
+
 Error
+------------------
 AbpException: Undefined setting: Abp.Localization.DefaultLanguage
 
+Este error se debe porque no existe las dependencias a Volo.Abp.Autofac, la cual es requerida para utilizar abp.
 
 
+***Librerias***
 
-Librerias
 - Volo.Abp.Core
 - Volo.Abp.Ddd.Domain
 - Volo.Abp.Ddd.Application
