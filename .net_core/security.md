@@ -7,6 +7,14 @@ https://docs.nwebsec.com/en/latest/
 
 # Audit
 
+Configure ASP.NET Core to work with proxy servers and load balancers
+https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/proxy-load-balancer?view=aspnetcore-6.0
+
+
+***REvisiones***
+The X-Forwarded-* headers are set by proxies in asp .net core
+https://www.iaspnetcore.com/blog/blogpost/5a068d74e42370369cf0b718
+
 ## Implementaciones
 
 
@@ -44,6 +52,9 @@ Interaction extensions to audit different systems are provided, such as Entity F
 
 https://github.com/thepirat000/Audit.NET
 
+Campos
+- UserName
+
 ***Data providers***
 
 A data provider (or storage sink) contains the logic to handle the audit event output, where you define what to do with the audit logs.
@@ -54,7 +65,7 @@ A data provider (or storage sink) contains the logic to handle the audit event o
 - El audit log, se guarda en JSON en una columna que se configure.
 https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.SqlServer#auditnetsqlserver
 
-Extensions
+***Extensions***
 
 ***Audit.WebApi***
 
@@ -72,6 +83,12 @@ Mode: To indicate the audit operation mode
 - Opt-In: No entity is tracked by default, except those explicitly included.
 https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#settings
 
+- Exclude properties (columns)
+https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#exclude-properties-columns
+
+
+***Custom Actions***
+
 
 ***Laboratorio***
 
@@ -80,6 +97,12 @@ dotnet new ca-sln
 
 
 dotnet new clean-arch -o AuditNet.Lab
+
+
+***Varios***
+
+Using ASP.NET Idenity User instead of Environment.UserName
+https://github.com/thepirat000/Audit.NET/issues/299
 
 # Revisiones / TEMP. (Proyecto BIT)
 

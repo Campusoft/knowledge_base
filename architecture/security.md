@@ -18,6 +18,10 @@ El ataque CSRF funciona porque el servidor receptor no comprueba de dónde proced
 # Audit Trail
 
 
+X-Forwarded-For
+La cabecera X-Forwarded-For (XFF) es un estándar de facto para identificar el origen de la dirección IP de un cliente conectado a un servidor web a través de un proxy HTTP o un balanceador de carga
+https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Forwarded-For
+
 # Varios
 
 cookies  httpOnly

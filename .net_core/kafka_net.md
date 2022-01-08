@@ -11,6 +11,9 @@ Step-by-step guide to building a .NET client application for Kafka
 https://developer.confluent.io/get-started/dotnet/
 
 
+El objeto para publicar mensajes es Message<TKey, TValue>. El cual define una clave, y un valor de un tipo especifico.
+
+
 
 
 

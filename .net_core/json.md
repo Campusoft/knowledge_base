@@ -1,8 +1,14 @@
 
 # System.Text.Json
 
+
+Serialize to UTF-8
+Deserialize from UTF-8
+
 Add JsonPath support to JsonDocument/JsonElement #31068 
 https://github.com/dotnet/runtime/issues/31068
+
+
 
 
 # JsonSchema

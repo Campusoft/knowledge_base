@@ -16,7 +16,6 @@ ILocalEventHandler<EntityCreatedEventData<Plantilla>>
 
 # Distributed Event Bus
 
-
 - Los objetos "Eto", deben tener el mismo namespace, para que los suscriptores recepten los eventos emitidos con este "Eto" 
 
 
@@ -40,6 +39,15 @@ TODO:
 
 TODO:
 - Como trabajar con  confirmation (ACK).  
+
+
+
+***Detalles Implementacion***
+
+Utiliza el tipo mensaje Message<string, byte[]>. 
+- key: Nombre Evento, el cual puede ser establecido como atributo en ETO, si no existe atributo se utilizar el tipo de la clase ETO. Ej. Si nombre evento es el tipo de una clase. Mre.Sb.Notificacion.EmailNotificacionEto
+- Value: Primero el objeto es serializado a JSON, luego convertido a bytes
+
 
 
 ***Configuracion***
@@ -80,6 +88,11 @@ Local: Message timed out
 Solucion:
 Si se utiliza la imagen docker "bitnami/kafka", utilizar docker-compose.yml que se encuentra en la seccion  "Kafka development setup example"
 
+-----------------------------
+
+***Revisiones Kafka***
+
+IKafkaSerializer 
 
 
 # Revision
