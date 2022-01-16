@@ -161,6 +161,7 @@ response_type parameter:
 - code id_token token
 - none
 
+Mapeo entre response_type / Grant Types
 response_type			Flow
 code			  		Authorization Code Flow
 id_token  				Implicit Flow
@@ -168,6 +169,9 @@ id_token token  		Implicit Flow
 code id_token  			Hybrid Flow
 code token  			Hybrid Flow
 code id_token token  	Hybrid Flow
+
+
+Depending on the response_type in the OIDC protocol, some claims are transferred via the id_token and some via the userinfo endpoint. 
 
 
 
@@ -212,7 +216,12 @@ OpenID specifications
 https://openid.net/developers/specs/
 
 ## OpenID Connect (OIDC) authentication protocol
+
+Similar to OAuth 2.0, OpenID Connect also uses the scopes concept. Again, scopes represent something you want to protect and that clients want to access. In contrast to OAuth, scopes in OIDC don’t represent APIs, but identity data like user id, name or email address.
+
+
 OpenID Connect (OIDC) scopes are used by an application during authentication to authorize access to a user's details, like name and picture. Each scope returns a set of user attributes, which are called claims. The scopes an application should request depend on which user attributes the application needs.
+
 
 The basic (and required) scope for OIDC is openid, which indicates that an application intends to use the OIDC protocol to verify a user's identity.
 

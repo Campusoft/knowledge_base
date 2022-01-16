@@ -11,6 +11,8 @@ https://docs.docker.com/docker-for-windows/install/
 
 Docker Desktop for Windows =>  Windows 10 Home 64-bit with WSL 2.
 
+HowTo: Change Docker containers storage location with WSL2 on Windows 10
+https://blog.codetitans.pl/post/howto-docker-over-wsl2-location/
 
 # Repositorios Imagenes Docker
 

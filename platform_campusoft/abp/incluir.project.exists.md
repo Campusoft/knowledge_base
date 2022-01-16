@@ -36,7 +36,7 @@ Revision:
 
 AbpAspNetCoreModule
 
-# 
+  
 
 # Auditoria
 
@@ -56,6 +56,20 @@ IAuditLogSaveHandle
 IAuditingStore 
   
 # Laboratorio
+
+***Incluir en una solucion MVC***
+
+Minimo las librerias que deben existir
+- Volo.Abp.AspNetCore.Mvc
+- Volo.Abp.Autofac
+
+Elementos
+- Crear un modulo abp "NombreModule". Agregar dependencias Volo.Abp.AspNetCore.Mvc,Volo.Abp.Autofac
+- En el proyecto host "pricipal":
+  - En Startup.ConfigureServices, llamar a "services.AddApplication<NombreModule>()". NombreModule, es el modulo que se encuentra en el proyecto principal el host. 
+  - En Startup.Configure, llamar a " app.InitializeApplication();"
+- Agregar .UseAutofac(); en CreateHostBuilder //Integrate Autofac!
+
 
 ***En una solucion. Clean.Architecture.Solution.Template***
 

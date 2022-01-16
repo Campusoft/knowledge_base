@@ -59,11 +59,47 @@ Campos
 
 A data provider (or storage sink) contains the logic to handle the audit event output, where you define what to do with the audit logs.
 
+***FileDataProvider***
+
+
 ***SqlDataProvider***
 - Se guarda en una unica tabla.
 - Se puede configurar las columnas especificas para guardar alguna informacion existente en el audit log.
 - El audit log, se guarda en JSON en una columna que se configure.
 https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.SqlServer#auditnetsqlserver
+
+***Kafka***
+Apache Kafka Server provider for Audit.NET library (An extensible framework to audit executing operations in .NET).
+https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.NET.Kafka/README.md
+
+***Elasticsearch***
+
+
+Elasticsearch provider for Audit.NET library (An extensible framework to audit executing operations in .NET).
+https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.NET.ElasticSearch/README.md
+
+Errores
+
+-------
+
+ElasticsearchClientException: Request failed to execute. Call: Status code 400 from: PUT /GET.Home.Index/_create/18bccbbf-962a-4f53-bd60-1c22677c9ddc. ServerError: Type: invalid_index_name_exception Reason: "Invalid index name [GET.Home.Index], must be lowercase"
+
+Relacionado, al problema Invalid index name, must be lowercase
+https://github.com/thepirat000/Audit.NET/issues/266
+
+Elasticsearch.Net.ElasticsearchClientException: Request failed to execute. Call: Status code 400 from: PUT /AppDbContext/_create/99063695-d9f1-4953-897d-0b0777844a85. ServerError: Type: invalid_index_name_exception Reason: "Invalid index name [AppDbContext], must be lowercase"
+
+Establecer en minusculas.
+```
+mvcOptions.AddAuditFilter(config => config
+           ...
+          .WithEventType(ctx => $"{ctx.HttpContext.Request.Method.ToLower()}.{(ctx.ActionDescriptor as ControllerActionDescriptor)?.ControllerName.ToLower()}.{(ctx.ActionDescriptor as ControllerActionDescriptor)?.ActionName.ToLower()}")
+          ...
+```
+
+-------
+
+
 
 ***Extensions***
 

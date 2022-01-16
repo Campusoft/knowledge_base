@@ -72,6 +72,15 @@ https://github.com/Azure-Samples/saga-orchestration-serverless
 TraceId
 
 
+# Resilient 
+
+Polly 
+
+Polly is a .NET resilience and transient-fault-handling library that allows developers to express policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
+
+
+ .NET Core: Use HttpClientFactory and Polly to build rock solid services 
+https://dev.to/rickystam/net-core-use-httpclientfactory-and-polly-to-build-rock-solid-services-2edh
 
 # Tools
 

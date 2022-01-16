@@ -22,10 +22,8 @@ Instead, always use template properties to include variables in messages:
 Log.Information("The time is {Now}", DateTime.Now);
 
 
-# Proveedores
 
-
-## Nlog
+# Nlog
 
 Nlog. (Configuracion net core)
 https://github.com/NLog/NLog.Web/wiki/Getting-started-with-ASP.NET-Core-2
@@ -36,7 +34,7 @@ https://github.com/nlog/NLog/wiki/File-target#size-based-file-archival
 COnfiguracion de Nlog en console. 
 https://github.com/NLog/NLog.Extensions.Logging/wiki/Getting-started-with-.NET-Core-2---Console-application
 
-## Serilog 
+# Serilog 
 
 Serilog provides sinks for writing log events to storage in various formats.
 
@@ -63,10 +61,41 @@ Algunos ejemplos configuraciones appsettings.json
 https://stackoverflow.com/questions/54715142/serilog-not-writing-to-file-net-core-2-2
 
 
-***Serilog integration for ASP.NET Core***
-https://github.com/serilog/serilog-aspnetcore
  
-### Enrichers
+Agregar campos con valores estaticos, en los logs, desde appsettings. Agregar campo "Application", con el valor "Sample"
+
+```
+"Serilog": {
+    ...
+    "Properties": {
+      "Application": "Sample"
+    }
+}
+``` 
+
+***Serilog integration for ASP.NET Core***
+
+Serilog logging for ASP.NET Core. This package routes ASP.NET Core log messages through Serilog, so you can get information about ASP.NET's internal operations written to the same Serilog sinks as your application events.
+
+- package Serilog.AspNetCore
+- During request processing, additional properties can be attached to the completion event using IDiagnosticContext.Set():
+https://github.com/serilog/serilog-aspnetcore
+
+Request logging
+The package includes middleware for smarter HTTP request logging. 
+
+```
+[11:47:33 INF] HTTP GET / responded 200 in 910.9299 ms
+[11:47:36 INF] HTTP GET /Home/Privacy responded 200 in 17.6987 ms
+[11:47:48 INF] HTTP GET /Identity/Account/Manage responded 200 in 1994.1863 ms
+[11:47:59 INF] HTTP GET /Identity/Account/Manage/TwoFactorAuthentication responded 200 in 106.7120 ms
+[11:48:01 INF] HTTP GET /Identity/Account/Manage/ChangePassword responded 200 in 45.2777 ms
+```
+By default, Serilog ignores providers, since there are usually equivalent Serilog sinks available, and these work more efficiently with Serilog's pipeline. If provider support is needed, it can be optionally enabled.
+https://github.com/serilog/serilog-aspnetcore#enabling-microsoftextensionsloggingiloggerproviders
+ 
+
+##  Enrichers
 
 Enrichers are simple components that add, remove or modify the properties attached to a log event.
 
@@ -75,31 +104,47 @@ Enrich.WithProcessId() and/or .WithProcessName()
 https://github.com/serilog/serilog-enrichers-process
 
 Enriches Serilog events with information from the process environment.
+- WithMachineName() - adds MachineName based on either %COMPUTERNAME% (Windows) or $HOSTNAME (macOS, Linux)
+- WithEnvironmentUserName() - adds EnvironmentUserName based on USERNAME and USERDOMAIN (if available)
 https://github.com/serilog/serilog-enrichers-environment
 https://github.com/serilog/serilog-enrichers-environment#included-enrichers
 
+enricher packages
 
-### Output templates
+- Serilog.Enrichers.CorrelationId - WithCorrelationId() will add a CorrelationId property to produced events
+- Serilog.Enrichers.ClientInfo - WithClientIp() and WithClientAgent() will add properties with client IP and UserAgent
+  - https://github.com/mo-esmp/serilog-enrichers-clientinfo
+
+##  Output templates
 
 https://github.com/serilog/serilog/wiki/Configuration-Basics#output-templates
 
-### Sinks
+##  Sinks
 
 ***Serilog.Sinks.File***
 Write Serilog events to files in text and JSON formats, optionally rolling on time or size 
 https://github.com/serilog/serilog-sinks-file#rolling-policies
 
+***Serilog.Sinks.Async***
+An asynchronous wrapper for other Serilog sinks. Use this sink to reduce the overhead of logging calls by delegating work to a background thread. This is especially suited to non-batching sinks like the File and RollingFile sinks that may be affected by I/O bottlenecks.
+
+Note: many of the network-based sinks (CouchDB, Elasticsearch, MongoDB, Seq, Splunk...) already perform asynchronous batching natively and do not benefit from this wrapper.
+
+https://github.com/serilog/serilog-sinks-async
+
+
+
 
 ***Serilog.Formatting.Compact***
 
 A simple, compact JSON-based event format for Serilog. CompactJsonFormatter significantly reduces the byte count of small log events when compared with Serilog's default JsonFormatter, while remaining human-readable
-
+- Install-Package Serilog.Formatting.Compact
 https://github.com/serilog/serilog-formatting-compact
 
 
 
 
-### Tools
+##  Tools
 
 Roslyn-based analysis for code using the Serilog logging library. Checks for common mistakes and usage problems.
 https://marketplace.visualstudio.com/items?itemName=Suchiman.SerilogAnalyzer
@@ -116,12 +161,12 @@ Añadimos Serilog obteniendo la configuración desde Microsoft.Extensions.Config
 })
 ```
 
-### Referencias
+##  Referencias
 
 Serilog Best Practices
 https://benfoster.io/blog/serilog-best-practices/
 
-### Revisiones
+##  Revisiones
 
 - TODO: Colocar porque serilog es diferente a los tipicos liberias de logs.
 - TODO: A Serilog event sink that writes to Microsoft Teams 

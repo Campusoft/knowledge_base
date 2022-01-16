@@ -315,6 +315,10 @@ Microservices shall generate and pass through microservice  call chain  a correl
 Logging  agent  shall  include  correlation  ID  in  every log message
 
  
+Audit Trails 201: Technical Deep Dive
+- Data Store. Algunas razones porque utilizar no-sql mongodb
+- Audit Service responsible  
+https://harness.io/blog/audit-trails-technical/ 
 
 # Microservices Frameworks
 

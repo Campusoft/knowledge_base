@@ -26,6 +26,9 @@ https://github.com/khellang/Scrutor
 # Referencias
 
 Informacion inyeccion dependencias, para diferentes componentes en asp.net core
+- Razor views
+- Injection in MVC Core
+- View components
 [ASP.NET Core Dependency Injection Deep Dive](https://joonasw.net/view/aspnet-core-di-deep-dive)
  
  

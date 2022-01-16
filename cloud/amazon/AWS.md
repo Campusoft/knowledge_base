@@ -33,3 +33,13 @@ https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-b
 ## Cloudtrail
 
 AWS CloudTrail es un servicio que le permite realizar auditorías de gobernanza, de conformidad, operativas y de riesgo en su cuenta de AWS.
+
+
+# Buenas practicas
+
+
+Prowler is a command line tool that helps you with AWS security assessment, auditing, hardening and incident response.
+
+It follows guidelines of the CIS Amazon Web Services Foundations Benchmark (49 checks) and has more than 100 additional checks including related to GDPR, HIPAA, PCI-DSS, ISO-27001, FFIEC, SOC2 and others.
+
+https://github.com/toniblyx/prowler

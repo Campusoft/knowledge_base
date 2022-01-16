@@ -25,6 +25,30 @@ Examples for clients are web applications, native mobile or desktop applications
 ***Resources***
 Resources are something you want to protect with IdentityServer - either identity data of your users, or APIs.
 
+***Grant Types***
+
+Mapeo entre response_type / Grant Types "Flows". 
+
+response_type			Flow
+code			  		Authorization Code Flow. 
+id_token  				Implicit Flow
+id_token token  		Implicit Flow
+code id_token  			Hybrid Flow
+code token  			Hybrid Flow
+code id_token token  	Hybrid Flow
+
+Mapeo entre ResponseTypes, con las constantes GrantType IdentityServer
+```
+{ OidcConstants.ResponseTypes.Code, GrantType.AuthorizationCode },
+{ OidcConstants.ResponseTypes.Token, GrantType.Implicit },
+{ OidcConstants.ResponseTypes.IdToken, GrantType.Implicit },
+{ OidcConstants.ResponseTypes.IdTokenToken, GrantType.Implicit },
+{ OidcConstants.ResponseTypes.CodeIdToken, GrantType.Hybrid },
+{ OidcConstants.ResponseTypes.CodeToken, GrantType.Hybrid },
+{ OidcConstants.ResponseTypes.CodeIdTokenToken, GrantType.Hybrid }
+```
+
+https://github.com/IdentityServer/IdentityServer4/blob/main/src/IdentityServer4/src/Constants.cs
  
 # Federation Gateway
 
@@ -36,6 +60,18 @@ your applications only need to know about the one token service (the gateway) an
 http://docs.identityserver.io/en/latest/topics/federation_gateway.html
 
 # Flujos
+
+## application scenarios
+
+***Machine to Machine Communication***
+
+This is the simplest type of communication. Tokens are always requested on behalf of a client, no interactive user is present.
+
+In this scenario, you send a token request to the token endpoint using the client credentials grant type. The client typically has to authenticate with the token endpoint using its client ID and secret.
+
+***Interactive Clients***
+This is the most common type of client scenario: web applications, SPAs or native/mobile apps with interactive users.
+
 
 ## Interactive Applications with ASP.NET Core
 
@@ -116,6 +152,51 @@ Tambien se puede utilizar el sitio para generar certificados:
 - En Download. (PKCS#12 Certificate and key)
 https://certificatetools.com/
 
+
+
+# Varios
+
+***Agregar claims personalizados***
+
+Profile Service
+
+Often IdentityServer requires identity information about users when creating tokens or when handling requests to the userinfo or introspection endpoints. By default, IdentityServer only has the claims in the authentication cookie to draw upon for this identity data.
+
+http://docs.identityserver.io/en/latest/reference/profileservice.html#
+
+Aplica para el flujo "AllowedGrantTypes = GrantTypes.Code".
+
+Para agregar la personalizacion de IProfileService, utilizar el metodo AddProfileService.
+```
+services.AddIdentityServer()
+    .AddProfileService<CustomProfileService>();
+```
+http://docs.identityserver.io/en/latest/topics/startup.html?highlight=AddProfileService#additional-services
+
+
+	
+
+Identity Server 4: adding claims to access token
+https://newbedev.com/identity-server-4-adding-claims-to-access-token
+
+
+AlwaysIncludeUserClaimsInIdToken
+    When requesting both an id token and access token, should the user claims always be added to the id token instead of requiring the client to use the userinfo endpoint. Default is false.
+
+The GetProfileDataAsync is being invoked correctly whenever I hit the /connect/token endpoint and I can verify that my email claim indeed does get added to the context.IssuedClaims collection. See the screenshot below:
+
+-----------------
+
+La interfaz IClaimsService, tambien permite agregar claims personalizados. 
+Se puede crear una clase que herede de la implementacion por defecto DefaultClaimsService.
+
+Se puede sobreescribir el metodo GetOptionalClaims, para agregar claims.
+
+
+
+
+
+
 # Errores
 
 Si el token posee una audicencias. En este caso "Base Public PersonRegistration", pero el cliente que valida el cliente valida otra audiencia que no se encuentra en las existentes en el token.
@@ -139,11 +220,26 @@ Se puede desactivar la validacion de la audicencia. En la configuracion de valid
 		});
 				
 ```
+---------------------------
+
+Client cannot request OpenID scopes in client credentials flow
+
+
+--------------------------
+
+
+
+
+
 
 # Referencias
 
 User Authentication and Identity with Angular, Asp.Net Core and IdentityServer
 https://fullstackmark.com/post/21/user-authentication-and-identity-with-angular-aspnet-core-and-identityserver
+
+
+Codigo fuente de Demo instance of IdentityServer4 demo.identityserver.io
+https://github.com/IdentityServer/IdentityServer4.Demo
 
 
 # Revisiones
@@ -157,3 +253,7 @@ ValidateAudience = false
 https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credentials.html
 
 .AddDeveloperSigningCredential()        //This is for dev only scenarios when you don’t have a certificate to use.
+
+---------------------------
+
+Grant Types. Soportados por IdentityServer4. Mapeo options.ResponseType 

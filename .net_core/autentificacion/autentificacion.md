@@ -1,5 +1,3 @@
-ASP.NET Core supports both role-based and policy-based authorization
-
 
 
 # Identity on ASP.NET Core
@@ -65,53 +63,7 @@ Ejemplos:
 Add sign-in with Microsoft to an ASP.NET Core web app
 https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-aspnet-core-webapp
 
-
  
-
-# Policy-based Authorization.
-
-The policy-based security model is centered on three main concepts. These include policies, requirements, and handlers
-
-
-## Policy
-
-A policy is composed of one or more requirements. 
-
-## Requirements
-
-A requirement comprises a collection of data parameters. These data parameters are used by a policy to evaluate the user identity. To create a requirement, you need to create a class that implements the IAuthorizationRequirement interface
-
-
-The Authorization Requirement defines the collection of conditions that the policy must evaluate. For the Policy to be successful, it must satisfy all the requirements. It is similar to AND Condition. If one of the requirements fails. then the policy fails.
-
-
-## Authorization Handlers
-
-A requirement can have one or more handlers. An authorization handler is used to evaluate the properties of a requirement. To create an authorization handler, you should create a class that extends AuthorizationHandler<T> and implements the HandleRequirementAsync() method
-
-## Process
-
-The three “main” services involved in the authorization process are:
-
-- AuthorizationMiddleware
-- PolicyEvaluator
-- DefaultAuthorizationService
-	
-
-
-## Referencias
-
-Policy-based Authorization in ASP.NET Core
-- Simple Authorization Policies
-- Applying the Authorization Policy
-- Custom Policy using a Func
-- Custom Policy using requirement & Handlers
-- Example of Requirement & Requirement handler 
-https://www.tektutorialshub.com/asp-net-core/policy-based-authorization-in-asp-net-core/
-
-Permission-Based Authorization in ASP.NET Core – Complete User Management Guide in .NET 5
-https://codewithmukesh.com/blog/permission-based-authorization-in-aspnet-core/
-
 
 # Framework / Librerias
 

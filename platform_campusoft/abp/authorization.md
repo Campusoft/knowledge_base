@@ -22,7 +22,11 @@ Abp. Aplica permisos con politicas autorizacion de .net core.
 Existe la implementaciones
 - PermissionsRequirement. "IAuthorizationRequirement" (El requerimiento para las politicas de permisos). Posee una lista permisos a evaluar, y si se aplican todos los permisos o unicamente uno
 - PermissionsRequirementHandler. "AuthorizationHandler" Procesar el requerimiento PermissionsRequirement. Segun el PermissionsRequirement, se verifica si se posee todos los permisos o unicamnete uno. Utiliza IPermissionChecker, para verificar si el usuario  posee la lista permisos
-- AbpAuthorizationPolicyProvider.  "DefaultAuthorizationPolicyProvider". 
+- AbpAuthorizationPolicyProvider.  "DefaultAuthorizationPolicyProvider". Implementa IAuthorizationPolicyProvider, para crear las politicas en tiempo ejecucion, con el requerimiento PermissionsRequirement 
+
+
+IAbpAuthorizationPolicyProvider
+
 
 PermissionManagement
 https://docs.abp.io/en/abp/latest/Modules/Permission-Management
