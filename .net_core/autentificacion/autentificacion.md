@@ -67,12 +67,31 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-as
 
 # Framework / Librerias
 
+## Belea
+
 Balea is an authorization framework for ASP.NET Core developers. 
  
 Authentication and authorization might sound similar, but both are distinct security processes in the world of identity and access management and understanding the difference between these two concepts is the key to successfully implementing a good IAM solution.
+
+- Applications. Allow you to manage multiple different software projects, for example. Each application has its own unique set of roles and delegations.
+- Roles. Are similar to security groups, to which users can become members and acquire a level of security that gives them the ability to perform some business operations. Roles can contain permissions, subjects and mappings
+
+- Store. A mechanism that allow you to store persistent the Balea’s object model such as applications, roles, permissions, delegations. Balea provides out-of-the-box two stores:
+  - ASP.NET Core JSON Configuration Provider.
+  - Entity Framework Core.
+
+
 https://github.com/Xabaril/Balea
 
 https://www.youtube.com/watch?v=UnbJrC0WN1U
+
+***Revision Codigo***
+
+Tiene la siguiente clase para crear las politicas en runtime.
+- Una ves creada la politica, la guarda AuthorizationOptions
+
+AuthorizationPolicyProvider : DefaultAuthorizationPolicyProvider
+
 
 # Referencias
 

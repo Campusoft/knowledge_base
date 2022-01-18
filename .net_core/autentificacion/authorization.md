@@ -1,7 +1,7 @@
+# Authorization 
+
 ASP.NET Core supports both role-based and policy-based authorization
  
-
-
 
 
 # Policy-based Authorization.
@@ -25,7 +25,13 @@ The Authorization Requirement defines the collection of conditions that the poli
 
 ## Authorization Handlers
 
-A requirement can have one or more handlers. An authorization handler is used to evaluate the properties of a requirement. To create an authorization handler, you should create a class that extends AuthorizationHandler<T> and implements the HandleRequirementAsync() method
+A requirement can have one or more handlers. An authorization handler is used to evaluate the properties of a requirement. To create an authorization handler, you should create a class that extends AuthorizationHandler<T> and implements the HandleRequirementAsync() method.
+
+An Authorization Handler can return one of the three values
+- Fail
+- Succeded
+- Do Nothing
+	
 
 ## Process
 
@@ -39,7 +45,6 @@ The three “main” services involved in the authorization process are:
 ***Custom Authorization Policy Providers***
 
  If we have a large number of policies, this is not a desirable way to register all policies. In such a case, we can use a custom policy provider (IAuthorizationPolicyProvider).
- 
  
  The following scenarios may be a candidate for Custom Authorization Policy Provider:
 
@@ -55,6 +60,7 @@ https://docs.microsoft.com/en-us/aspnet/core/security/authorization/iauthorizati
 Policy-based Authorization in ASP.NET Core
 - Simple Authorization Policies
 - Applying the Authorization Policy
+- Policy with Single Claim
 - Custom Policy using a Func
 - Custom Policy using requirement & Handlers
 - Example of Requirement & Requirement handler 
