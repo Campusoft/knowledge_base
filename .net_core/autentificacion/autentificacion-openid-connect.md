@@ -63,6 +63,16 @@ OpenIddict aims at providing a versatile solution to implement an OpenID Connect
 https://github.com/openiddict/openiddict-core
 
 
+# Errores comunes
+
+```
+2022-01-20 17:39:57.738 -05:00 [ERR] scope is missing
+```
+
+Se requiere establecer un scope.
+
+------------
+
 # Referencias
 
 ASP.NET Core and JSON Web Tokens - where are my claims?

@@ -84,6 +84,13 @@ https://github.com/serilog/serilog-aspnetcore
 Request logging
 The package includes middleware for smarter HTTP request logging. 
 
+Serilog RequestLoggingMiddleware
+
+The Request Logging Middleware is included in the Serilog.AspNetCore package and can be used to add a single summary log message for each request. When we add the UseSerilogRequestLogging() to the services collection, this in turn add the RequestLoggingMiddleWare the pipeline.
+
+UseSerilogRequestLogging() condenses the important information about requests handled by ASP.NET Core in one clean, streamlined, request completion event.
+
+
 ```
 [11:47:33 INF] HTTP GET / responded 200 in 910.9299 ms
 [11:47:36 INF] HTTP GET /Home/Privacy responded 200 in 17.6987 ms
@@ -99,6 +106,10 @@ https://github.com/serilog/serilog-aspnetcore#enabling-microsoftextensionsloggin
 
 Enrichers are simple components that add, remove or modify the properties attached to a log event.
 
+Serilog enrichers:
+- Log Context enricher - Built in to Serilog, this enricher ensures any properties added to the Log Context are pushed into log events
+- https://github.com/serilog/serilog/wiki/Enrichment#the-logcontext
+
 
 Enrich.WithProcessId() and/or .WithProcessName() 
 https://github.com/serilog/serilog-enrichers-process
@@ -112,8 +123,26 @@ https://github.com/serilog/serilog-enrichers-environment#included-enrichers
 enricher packages
 
 - Serilog.Enrichers.CorrelationId - WithCorrelationId() will add a CorrelationId property to produced events
+  - https://github.com/ekmsystems/serilog-enrichers-correlation-id
+  - WithCorrelationIdHeader(headerKey) - adds a CorrelationId extracted from the current request header (or created if one does not exist).
 - Serilog.Enrichers.ClientInfo - WithClientIp() and WithClientAgent() will add properties with client IP and UserAgent
   - https://github.com/mo-esmp/serilog-enrichers-clientinfo
+
+
+	
+***Configuracion***
+
+Pasar un parametro a un enrich
+
+```
+"Enrich": [
+  ...
+  {
+	"Name": "WithCorrelationIdHeader",
+	"Args": { "headerKey": "Cookie" }
+  } 
+]
+```
 
 ##  Output templates
 
@@ -149,7 +178,7 @@ https://github.com/serilog/serilog-formatting-compact
 Roslyn-based analysis for code using the Serilog logging library. Checks for common mistakes and usage problems.
 https://marketplace.visualstudio.com/items?itemName=Suchiman.SerilogAnalyzer
 
-### Laboratorios
+## Laboratorios
 
 
 Añadimos Serilog obteniendo la configuración desde Microsoft.Extensions.Configuration
@@ -165,6 +194,10 @@ Añadimos Serilog obteniendo la configuración desde Microsoft.Extensions.Config
 
 Serilog Best Practices
 https://benfoster.io/blog/serilog-best-practices/
+
+Injecting services into Serilog filters, enrichers, and sinks
+https://nblumhardt.com/2020/09/serilog-inject-dependencies/
+
 
 ##  Revisiones
 

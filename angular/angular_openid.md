@@ -3,9 +3,12 @@
 
 # MSAL Angular
 
-Initial alpha release of MSAL Angular v2. First release of MSAL Angular with support for MSAL Browser v2 (Auth Code Flow w/ PKCE for SPAs) and Angular v9 and v10 (and v11 in an upcoming release).
 
-https://github.com/AzureAD/microsoft-authentication-library-for-js/releases/tag/msal-angular-v2.0.0-alpha.0
+MSAL for Angular enables Angular web applications to authenticate users using Azure AD work and school accounts (AAD), Microsoft personal accounts (MSA) and social identity providers like Facebook, Google, LinkedIn, Microsoft accounts, etc. through Azure AD B2C service. It also enables your app to get tokens to access Microsoft Cloud services such as Microsoft Graph.
+https://github.com/AzureAD/microsoft-authentication-library-for-js/tree/dev/lib/msal-angular
+
+
+
 
 # angular-oauth2-oidc
 
@@ -18,7 +21,6 @@ TODO: Documentar lo que se realiza en el CLIENTE.
 - Adfs.
 
 Configuracion. Clase AuthConfig
-
 https://github.com/manfredsteyer/angular-oauth2-oidc/blob/master/projects/lib/src/auth.config.ts
 
 

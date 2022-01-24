@@ -42,3 +42,6 @@ https://security-code-scan.github.io/
 
 # blockchain
 
+Ethereum funciona como una plataforma de código abierto basada en la tecnología blockchain.
+
+El blockchain de ethereum es similar al del bitcoin en el sentido de que funciona también como registro del historial de transacciones

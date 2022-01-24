@@ -11,3 +11,11 @@ DevSecOps takes care that security is part of every stage of DevOps loop - Plan,
 
 This library contains list of tools and methodologies accompanied with resources. The main goal is to provide to the engineers a guide through opensource DevSecOps tooling. This repository covers only cyber security in the cloud and the DevSecOps scope.
 https://github.com/sottlmarek/DevSecOps
+
+# Referencias
+
+
+90DaysOfDevOps
+
+This repository is used to document my journey on getting a better foundational knowledge of DevOps. I will be starting this journey on the 1st January 2022 but the idea is that we take 90 days which just so happens to be January 1st to March 31st.
+https://github.com/MichaelCade/90DaysOfDevOps

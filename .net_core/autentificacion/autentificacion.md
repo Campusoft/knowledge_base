@@ -85,6 +85,7 @@ https://github.com/Xabaril/Balea
 
 https://www.youtube.com/watch?v=UnbJrC0WN1U
 
+
 ***Revision Codigo***
 
 Tiene la siguiente clase para crear las politicas en runtime.
@@ -92,6 +93,23 @@ Tiene la siguiente clase para crear las politicas en runtime.
 
 AuthorizationPolicyProvider : DefaultAuthorizationPolicyProvider
 
+
+
+## Identity .net core / Mongo
+
+AspNetCore.Identity.Mongo
+
+https://github.com/matteofabbri/AspNetCore.Identity.Mongo
+
+***Errores***
+```
+InvalidOperationException: No service for type 'Microsoft.AspNetCore.Identity.UserManager`1[Microsoft.AspNetCore.Identity.IdentityUser]' has been registered.
+```
+
+Solucionar actual. Cambiar todas las referecias IdentityUser con MongoUser, agregando el codigo Identity Scaffolding, para realizar los cambios.
+
+
+------------------------------------
 
 # Referencias
 
@@ -102,6 +120,24 @@ https://learningprogramming.net/net/asp-net-core-3-web-api/basic-authentication-
 
 Build Secure ASP.NET Core API with JWT Authentication – Detailed Guide
 https://codewithmukesh.com/blog/aspnet-core-api-with-jwt-authentication/
+
+
+Build Secure ASP.NET Core API with JWT Authentication – Detailed Guide
+- Generate JWT Token
+- Consume JWT Token
+https://codewithmukesh.com/blog/aspnet-core-api-with-jwt-authentication/
+
+ASP.NET Core: Identity Scaffolding
+ASP.NET Core provides ASP.NET Core Identity as a Razor Class Library. Applications that include Identity can apply the scaffolder to selectively add the source code contained in the Identity Razor Class Library (RCL). You might want to generate source code so you can modify the code and change the behavior.
+https://elanderson.net/2019/04/asp-net-core-identity-scaffolding/
+
+User Registration with Angular and ASP.NET Core Identity
+In this article, we are going to learn about User Registration with Angular and ASP.NET Core Web API. 
+https://code-maze.com/user-registration-angular-aspnet-identity/
+
+Angular Authentication Functionality with ASP.NET Core Identity
+https://code-maze.com/angular-authentication-aspnet-identity/
+
 
 # Revisiones
 
@@ -140,3 +176,9 @@ https://www.c-sharpcorner.com/article/authentication-authorization-using-net-cor
 
 ASP.NET Core Swagger UI Authorization using IdentityServer4
 https://www.scottbrady91.com/identity-server/aspnet-core-swagger-ui-authorization-using-identityserver4
+
+Swagger UI (OpenApi) with Authorization code flow + PKCE using Swashbuckle ASP.NET Core
+https://lurumad.github.io/swagger-ui-with-pkce-using-swashbuckle-asp-net-core
+
+Swashbuckle.AspNetCore - Add Security Definitions and Requirements
+https://github.com/domaindrivendev/Swashbuckle.AspNetCore#add-security-definitions-and-requirements

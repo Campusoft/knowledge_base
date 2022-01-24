@@ -125,6 +125,10 @@ OAuth 2.0 Authorization Code with PKCE Flow
 These security issues led to a reassessment of the value of the Implicit flow, and in November of 2018, new guidance was released that effectively deprecated this flow. 
 
 
+
+
+
+
 TODO: Revision.
 On The Nature of OAuth2’s Scopes
 Stretching OAuth2 scopes beyond intended usage leads to trouble in complex architectures.
@@ -230,6 +234,8 @@ The basic (and required) scope for OIDC is openid, which indicates that an appli
 - profile 	Returns claims that represent basic profile information, including name, family_name, given_name, middle_name, nickname, picture, and updated_at.
 
 - email 	Returns the email claim, which contains the user's email address, and email_verified, which is a boolean indicating whether the email address was verified by the user.
+	
+- offline_access When a user approves the offline_access scope, your app can receive refresh tokens from the Microsoft identity platform token endpoint. Refresh tokens are long-lived. Your app can get new access tokens as older ones expire.
 	
 
 ## Library or Product
