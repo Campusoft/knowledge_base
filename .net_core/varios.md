@@ -308,3 +308,9 @@ Directory.Build.props and Directory.Build.targets
 You can add a new property to every project by defining it in a single file called Directory.Build.props in the root folder that contains your source. When MSBuild runs, Microsoft.Common.props searches your directory structure for the Directory.Build.props file (and Microsoft.Common.targets looks for Directory.Build.targets). If it finds one, it imports the file and reads the properties defined within it. Directory.Build.props is a user-defined file that provides customizations to projects under a directory. 
 https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=vs-2019 
 
+# Errores
+
+## Unable to connect to web server 'IIS Express' 
+ 
+- Posible problema con puertos, verificar y cambiar el puerto utilizado en: launchSettings.json utilizando el comando: netsh interface ipv4 show excludedportrange protocol=tcp para listar los puertos ocupados
+- Fuente: https://www.variablenotfound.com/2020/06/como-solucionar-el-error-unable-to.html
