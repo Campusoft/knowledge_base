@@ -15,6 +15,9 @@ https://ng-bootstrap.github.io/#/components/datepicker/overview
 
 # ngbTypeahead
 
+Typeahead
+https://ng-bootstrap.github.io/#/components/typeahead/api
+
 
 # Referencias
 

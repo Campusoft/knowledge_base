@@ -62,8 +62,6 @@ Form groups can accept both individual form control instances and other form gro
 ## Angular Form Array
 
 
-
-
 How to implement complex forms in Angular using FormArray
 https://blog.sreyaj.dev/implement-complex-forms-in-angular-using-formarray
 
@@ -95,6 +93,13 @@ https://betterprogramming.pub/build-fast-json-powered-forms-on-angular-with-ngx-
 
 https://github.com/ngx-formly/ngx-formly
 
+# Controles
+
+## Select 
+
+event change vs ngModelChange
+- ngModelChange will only be fired when the model will change or update.
+https://stackoverflow.com/questions/48980171/ngvalue-returning-index-and-value
 
 
 # Validating form input

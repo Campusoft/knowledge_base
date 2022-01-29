@@ -125,7 +125,7 @@ form-utils
 ***ListService***
 
 ListService is a utility service to provide easy pagination, sorting, and search implementation.
-
+- Extending query with custom variables
 https://docs.abp.io/en/abp/latest/UI/Angular/List-Service
 
 
