@@ -245,7 +245,12 @@ public override void ConfigureServices(ServiceConfigurationContext context)
 # Globalization and localization
 
 
-No es necesario. El proyecto, que posee los archivos de localizaciones, debe tener una referencia a "Microsoft.Extensions.FileProviders.Embedded", para que funcione ?
+No es necesario (Revision). El proyecto, que posee los archivos de localizaciones, debe tener una referencia a "Microsoft.Extensions.FileProviders.Embedded", para que funcione ?
+
+El archivo del proyecto debe tener "GenerateEmbeddedFilesManifest" a true, en alguna etiqueta "PropertyGroup"
+```		
+ <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+```   
 		
 TODO:
 - Como establecer los nombres en los campos, en validaciones dataannotation

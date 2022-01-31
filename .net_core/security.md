@@ -123,6 +123,11 @@ https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/R
 https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#exclude-properties-columns
 
 
+Configuration (https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#settings)
+
+- IncludeEntityObjects: To indicate if the output should contain the complete entity object graphs. (Default is false)
+
+
 ***Custom Actions***
 
 

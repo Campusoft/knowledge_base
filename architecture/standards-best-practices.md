@@ -44,6 +44,13 @@ Command Query Responsibility Segregation (CQRS) pattern
 - Stage 3: Separate read and write databases
 https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/
 
+***Event Sourcing***
+
+Event Sourcing is a design pattern in which results of business operations are stored as a series of events.
+
+It is an alternative way to persist data. In contrast with state-oriented persistence that only keeps the latest version of the entity state, Event Sourcing stores each state change as a separate event.
+
+Thanks for that, no business data is lost. Each operation results in the event stored in the database. That enables extended auditing and diagnostics capabilities (both technically and business-wise). What's more, as events contains the business context, it allows wide business analysis and reporting.
 
 Revision
 CQRS and Event Sourcing in Event Driven Architecture of Ordering Microservices

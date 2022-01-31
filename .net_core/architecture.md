@@ -72,6 +72,50 @@ https://github.com/vietnam-devs/coolstore-microservices
 - In medium and large software projects, we normally implement the CRUD actions over and over again. And it might take around 40-50% codebase just to do CRUD in the projects. The question is can we make standardized CRUD APIs, then we can use them in potential projects in the future?
 https://github.com/thangchung/clean-architecture-dotnet
 
+***StudentCourseManagement***
+Fullstack Hub is developed to help students and professionals to quickly learn the industry standard applications development for FREE. - Yaseer Mumtaz
+- Mediator
+- ExceptionFilterAttribute
+- UnitOfWork
+- Redis
+- RabbitMQ 
+- API Gateway project is using the Ocelot
+https://github.com/fullstackhub-io/StudentCourseManagement
+https://fullstackhub.io/asp-net-core-microservices-with-angular11/
+
+***Distributed-eStore***
+Containerized .NET Core Online Store application with a microservices architecture and a React and Redux frontend solution. Technologies used - RabbitMQ, .NET Core, .NET Core MVC, MongoDB, React, Redux, Docker, Consul, Fabio, JWT Authentication, Swagger, Vault.
+- Forwarded headers
+https://github.com/evgenirusev/Distributed-eStore
+
+***Convey***
+
+Convey - a simple recipe for .NET Core microservices
+
+    Authentication JWT with secret key & certificates extensions
+    CQRS basic abstractions
+    Consul service registry integration
+    Swagger extensions
+    RestEase extensions
+    Fabio load balancer integration
+    Logging extensions for Serilog & integration with Seq, ELK, Loki
+    Message brokers abstractions & CQRS support
+    RabbitMQ integration
+    Inbox + Outbox implementation for EF Core, Mongo
+    AppMetrics extensions
+    Prometheus integration
+    MongoDB extensions
+    OpenStack OCS support
+    Redis extensions
+    Vault secrets engine (settings, dynamic credentials, PKI etc.) integration
+    Security extensions (certificates, mTLS, encryption etc.)
+    Jaeger tracing integration
+    Web API extensions (minimal routing-based API, CQRS support)
+https://github.com/snatch-dev/Convey
+
+***GoldenEye***
+- Messaging infrastructure - both internal based on MediatR and external with Kafka,
+https://github.com/oskardudycz/GoldenEye
 
 # Revisiones
 

@@ -16,7 +16,21 @@ ILocalEventHandler<EntityCreatedEventData<Plantilla>>
 
 # Distributed Event Bus
 
+Distributed Event bus system allows to publish and subscribe to events that can be transferred across application/service boundaries. 
+https://docs.abp.io/en/abp/latest/Distributed-Event-Bus
+
 - Los objetos "Eto", deben tener el mismo namespace, para que los suscriptores recepten los eventos emitidos con este "Eto" 
+
+***Event Name***
+
+
+https://docs.abp.io/en/abp/latest/Distributed-Event-Bus#event-name
+
+Revisar.
+- GenericEventNameAttribute
+```
+[GenericEventName(Postfix = ".Created")]
+```
 
 
 ***Exception Handling***

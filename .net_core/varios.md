@@ -57,6 +57,10 @@ IHostApplicationLifetime
 Inject the IHostApplicationLifetime (formerly IApplicationLifetime) service into any class to handle post-startup and graceful shutdown tasks. Three properties on the interface are cancellation tokens used to register app start and app stop event handler methods. The interface also includes a StopApplication method.
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host?view=aspnetcore-5.0#ihostapplicationlifetime
 
+Background tasks with hosted services in ASP.NET Core
+In ASP.NET Core, background tasks can be implemented as hosted services.
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-6.0&tabs=visual-studio
+
 
 # Files
 
@@ -314,3 +318,19 @@ https://docs.microsoft.com/en-us/visualstudio/msbuild/customize-your-build?view=
  
 - Posible problema con puertos, verificar y cambiar el puerto utilizado en: launchSettings.json utilizando el comando: netsh interface ipv4 show excludedportrange protocol=tcp para listar los puertos ocupados
 - Fuente: https://www.variablenotfound.com/2020/06/como-solucionar-el-error-unable-to.html
+
+# elasticsearch-net ( Elasticsearch.Net & NEST)
+
+NEST
+
+NEST is the official high-level .NET client of Elasticsearch.
+
+It aims to be a solid, strongly typed client with a very concise API. The client internally uses the low-level Elasticsearch.Net client.
+
+https://github.com/elastic/elasticsearch-net
+
+***Mapping***
+
+
+https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/mapping.html 
+
