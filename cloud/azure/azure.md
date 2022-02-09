@@ -29,6 +29,14 @@ Application Insights for monitoring and auditing the applications
 # Devops
 
 
+Azure DevOps
+
+
+***Azure DevOps Server***
+
+The on-premises offering, Azure DevOps Server, is built on a SQL Server back end. Customers usually choose the on-premises version when they need their data to stay within their network. Or, when they want access to SQL Server reporting services that integrate with Azure DevOps Server data and tools.
+
+
 # Adoption / Migration
 
 

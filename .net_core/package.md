@@ -17,6 +17,9 @@ dotnet nuget push AppLogger.1.0.0.nupkg --api-key <API-KEY-NUGET-ACCOUNT> --sour
 
 https://docs.microsoft.com/en-us/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli
 
+Publishing packages
+- Publish with nuget push
+https://docs.microsoft.com/en-us/nuget/nuget-org/publish-a-package
 
 # Revision
 

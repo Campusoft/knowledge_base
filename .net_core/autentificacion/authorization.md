@@ -67,6 +67,28 @@ Policy-based Authorization in ASP.NET Core
 https://www.tektutorialshub.com/asp-net-core/policy-based-authorization-in-asp-net-core/
 
 Permission-Based Authorization in ASP.NET Core – Complete User Management Guide in .NET 5
+-   What’s Role-Based Authorization?
+-   Limitations of Role-Based Authorization
+-   Permission-Based Authorization in ASP.NET Core
+-   What we will build? (Screenshots Included)
+        List of all Registered Users
+        Manage User Roles
+        Add New Roles
+        Manage Permissions – UI
+-   Getting Started with Permission-Based Authorization
+-   Pre-Defined Roles
+-   Seeding Users and Roles
+-   Displaying a List of Registered Users
+-   Role Management UI
+-   Roles-Permission Management UI
+-   Claims Helper
+-   Permission Requirement
+-   Authorization Handler
+-   Permission Policy Provider
+-   Registering the Service
+-   Product Controller
+-   Summary
+	
 https://codewithmukesh.com/blog/permission-based-authorization-in-aspnet-core/
 
 

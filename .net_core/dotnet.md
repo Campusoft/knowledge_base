@@ -28,6 +28,11 @@ Establecer ambiente produccion
 set ASPNETCORE_ENVIRONMENT="Production"
 dotnet Gradebook.Register.dll run --environment="Production"
 ```
+
+## dotnet build 
+
+
+
 ## Custom templates for dotnet new
 
 The template engine offers features that allow you to replace values, include and exclude files, and execute custom processing operations when your template is used.

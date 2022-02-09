@@ -352,8 +352,10 @@ ng generate component config/foo-settings
 ## Volo.Abp.Ldap
 
 Utiliza ldap4net
-
+- Cross platform LdapForNet library is used for Windows LDAP authentication.
 https://github.com/flamencist/ldap4net
+
+https://docs.abp.io/en/commercial/latest/modules/account/ldap
  
 
 # Timing

@@ -138,6 +138,13 @@ https://code-maze.com/user-registration-angular-aspnet-identity/
 Angular Authentication Functionality with ASP.NET Core Identity
 https://code-maze.com/angular-authentication-aspnet-identity/
 
+Password Reset with ASP.NET Core Identity
+https://code-maze.com/password-reset-aspnet-core-identity/
+
+Creating custom password validators for ASP.NET Core Identity 
+- Mecanismo para agregar nuevas validaciones de claves.
+- Validacion ejemplo, para validar que la clave no sea igual al usuario 
+https://andrewlock.net/creating-custom-password-validators-for-asp-net-core-identity-2/
 
 # Revisiones
 

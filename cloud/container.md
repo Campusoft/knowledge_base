@@ -25,6 +25,9 @@ Open Service Mesh (OSM) is Microsoft’s implementation of the SMI in an actual 
 
 
 Service Mesh - Arquitectura de Microservicios 
+-  Un service mesh proporciona servicios de vigilancia, escalabilidad y alta disponibilidad a través de una API de servicios, en lugar de obligar su implementación en cada microservicio. El beneficio está en reducir la complejidad operativa asociada con las aplicaciones modernas de microservicios.
+- ¿Cómo hace una malla de servicios para abstraer esta complejidad en cada microservicio? Para entenderlo, revisemos el patrón de arquitectura conocido como sidecar.
+- El contenedor sidecar funciona como proxy, e implementa las funcionalidades comunes como proxy, autenticación, monitoreo, etc, dejando los microservicios libres para enfocarse en su funcionalidad específica. Un controlador central (control plane) organiza las conexiones, dirige el flujo de tráfico entre los proxies y el plano de control recolectando las métricas de rendimiento.
 https://www.aplyca.com/es/blog/service-mesh 
 
 
@@ -38,3 +41,17 @@ https://blog.christianposta.com/microservices/do-i-need-an-api-gateway-if-i-have
 
 Service Mesh vs API Gateway
 https://medium.com/microservices-in-practice/service-mesh-vs-api-gateway-a6d814b9bf56
+
+
+How eBPF will solve Service Mesh - Goodbye Sidecars
+- What is Service Mesh?
+- Library Service Mesh Model
+- service meshes are commonly implemented using an architecture called the sidecar model.
+- Kernel Service Mesh with eBPF
+https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh
+
+## Cilium
+
+Cilium is an open source project to provide networking, security, and observability for cloud native environments such as Kubernetes clusters and other container orchestration platforms.
+
+https://cilium.io/learn/

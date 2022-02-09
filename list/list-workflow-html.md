@@ -58,5 +58,13 @@ https://argoproj.github.io/
 
 ## Power Automate
 
+
+## Cadence
+
+Cadence is designed to scale out horizontally to handle millions of concurrent workflows.
+
+Cadence provides out-of-the-box asynchronous history event replication that can help you recover from zone failures.
+https://cadenceworkflow.io/
+
 # Referencias
 https://www.goodfirms.co/blog/best-free-open-source-workflow-management-software

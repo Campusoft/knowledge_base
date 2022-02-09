@@ -9,8 +9,8 @@ The Kubernetes control plane is split into a set of components, which can all ru
 - Identifiers and Names in Kubernetes
 - Design Principles
 - Kubernetes Architectural Roadmap
-
 https://github.com/kubernetes/community/tree/master/contributors/design-proposals/architecture
+
 
 # Controllers
 

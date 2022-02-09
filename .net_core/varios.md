@@ -2,6 +2,49 @@
 
 # CancellationToken 
 
+
+Utilizar HttpContext.RequestAborted, como CancellationToken
+
+```
+public class AspNetUserManager<TUser> : UserManager<TUser>, IDisposable where TUser : class
+{
+    private readonly CancellationToken _cancel;
+
+    /// <summary>
+    /// Constructs a new instance of <see cref="AspNetUserManager{TUser}"/>.
+    /// </summary>
+    /// <param name="store">The persistence store the manager will operate over.</param>
+    /// <param name="optionsAccessor">The accessor used to access the <see cref="IdentityOptions"/>.</param>
+    /// <param name="passwordHasher">The password hashing implementation to use when saving passwords.</param>
+    /// <param name="userValidators">A collection of <see cref="IUserValidator{TUser}"/> to validate users against.</param>
+    /// <param name="passwordValidators">A collection of <see cref="IPasswordValidator{TUser}"/> to validate passwords against.</param>
+    /// <param name="keyNormalizer">The <see cref="ILookupNormalizer"/> to use when generating index keys for users.</param>
+    /// <param name="errors">The <see cref="IdentityErrorDescriber"/> used to provider error messages.</param>
+    /// <param name="services">The <see cref="IServiceProvider"/> used to resolve services.</param>
+    /// <param name="logger">The logger used to log messages, warnings and errors.</param>
+    public AspNetUserManager(IUserStore<TUser> store,
+        IOptions<IdentityOptions> optionsAccessor,
+        IPasswordHasher<TUser> passwordHasher,
+        IEnumerable<IUserValidator<TUser>> userValidators,
+        IEnumerable<IPasswordValidator<TUser>> passwordValidators,
+        ILookupNormalizer keyNormalizer,
+        IdentityErrorDescriber errors,
+        IServiceProvider services,
+        ILogger<UserManager<TUser>> logger)
+        : base(store, optionsAccessor, passwordHasher, userValidators, passwordValidators, keyNormalizer, errors, services, logger)
+    {
+        _cancel = services?.GetService<IHttpContextAccessor>()?.HttpContext?.RequestAborted ?? CancellationToken.None;
+    }
+
+    /// <summary>
+    /// The cancellation token associated with the current HttpContext.RequestAborted or CancellationToken.None if unavailable.
+    /// </summary>
+    protected override CancellationToken CancellationToken => _cancel;
+}
+```
+
+https://github.com/dotnet/aspnetcore/blob/main/src/Identity/Core/src/AspNetUserManager.cs
+
 # Certificados SSL
 
 
@@ -156,6 +199,12 @@ Uttilizar uid
 Autenticación de usuarios con registros LDAP en un bosque de Microsoft Active Directory
 - menciona que es mejor utilizar userPrincipalName, que el sAMAccountName
 https://www.ibm.com/docs/es/was/9.0.5?topic=umada-authenticating-users-ldap-registries-in-microsoft-active-directory-forest
+
+
+Active Directory Explorer
+Active Directory Explorer (AD Explorer) is an advanced Active Directory (AD) viewer and editor. You can use AD Explorer to easily navigate an AD database, define favorite locations, view object properties and attributes without having to open dialog boxes, edit permissions, view an object's schema, and execute sophisticated searches that you can save and re-execute.
+https://docs.microsoft.com/en-us/sysinternals/downloads/adexplorer
+
 
 # Thread
 
