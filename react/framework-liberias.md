@@ -110,3 +110,21 @@ https://swr.now.sh
 Hooks for fetching, caching and updating asynchronous data in React
 Transport/protocol/backend agnostic data fetching (REST, GraphQL, promises, whatever!)
 https://github.com/tannerlinsley/react-query
+
+## Set custom port start
+If you don't want to set the environment variable, another option is to modify the scripts part of package.json from:
+"start": "react-scripts start"
+to
+Linux (tested on Ubuntu 14.04/16.04) and MacOS (tested by @aswin-s on MacOS Sierra 10.12.4):
+"start": "PORT=3006 react-scripts start"
+or (may be) more general solution by @IsaacPak
+"start": "export PORT=3006 react-scripts start"
+Windows @JacobEnsor solution
+"start": "set PORT=3006 && react-scripts start"
+https://stackoverflow.com/questions/40714583/how-to-specify-a-port-to-run-a-create-react-app-based-project
+
+## Create new project react typescript based
+npx create-react-app project-name --template typescript
+https://medium.com/codex/typescript-and-create-react-app-11bdebcbf763
+
+Nota: El nombre no debe llevar puntos u otros caracteres especiales, en caso de requerir un nombre con esas condiciones renombrar después de crear
