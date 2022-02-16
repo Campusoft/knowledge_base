@@ -11,7 +11,12 @@ npx react-native init <project name> --template react-native-template-typescript
 Error de metro
 Unable to load script. Make sure you're either running metro
 
-Solución
+### Solución 1
+Ejecutar agregando parametro port: npx react-native run-android --port=1234
+
+### Solución 2
 Ejecutar agregando parametro variant: npx react-native run-android --variant=release
 
 https://stackoverflow.com/questions/61827240/unable-to-load-script-make-sure-youre-either-running-a-metro-server-or-that-yo
+
+
