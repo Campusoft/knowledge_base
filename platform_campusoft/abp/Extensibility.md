@@ -59,6 +59,7 @@ https://docs.abp.io/en/abp/latest/UI/Angular/Entity-Action-Extensions
 
 ## Reemplazar componentes 
 
+
 export const enum eThemeBasicComponents {
   ApplicationLayout = 'Theme.ApplicationLayoutComponent',
   AccountLayout = 'Theme.AccountLayoutComponent',
@@ -134,6 +135,38 @@ ERROR NullInjectorError: R3InjectorError(IdentityModule)[ValidationGroupDirectiv
 
 ***TODO.***
 - Generacion proxy, en una libreria. (Como volver a generar el proxy para una libreria con abp)
+
+***Personalizar SettingManagementComponent *** 
+
+En el archivo  SettingManagementRoutingModule.js
+abp/npm/ng-packs/packages/setting-management/src/lib/setting-management-routing.module.ts
+
+Se indica el key del componente para reemplazar
+
+```
+replaceableComponent: {
+            key: eSettingManagementComponents.SettingManagement,
+            defaultComponent: SettingManagementComponent,
+          } as ReplaceableComponents.RouteData,
+```
+
+1. Generar nuevo componente
+
+```
+ng generate component components/gestion-configuracion
+```
+
+2. Configurar el reemplazo del componente, en app.component.ts. (Mas detalles https://docs.abp.io/en/abp/latest/UI/Angular/Component-Replacement#how-to-replace-a-component)
+
+```
+  this.replaceableComponents.add({ component: GestionConfiguracionComponent, key: eSettingManagementComponents.SettingManagement });
+
+```
+
+3. Personalizar el componente. 
+- Copiar el codigo componente origenal, y cambiar lo que se requiere personalizar
+
+
 
 
 # Modificar Codigo Abp.

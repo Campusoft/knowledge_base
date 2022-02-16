@@ -166,6 +166,9 @@ ASP.NET Core 3.1 - Send Emails via SMTP with MailKit
 - office 365
 https://jasonwatmore.com/post/2020/07/15/aspnet-core-3-send-emails-via-smtp-with-mailkit
 
+How can I create a message with attachments
+https://github.com/jstedfast/MailKit/blob/master/FAQ.md#CreateAttachments
+
 # LDAP
 
 Utiliza ldap4net

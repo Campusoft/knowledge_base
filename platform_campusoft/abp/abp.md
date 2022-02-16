@@ -321,6 +321,17 @@ https://docs.abp.io/en/abp/latest/Autofac-Integration
 
 # Exception-Handling
 
+# BLOB Storing
+
+
+The ABP Framework has already the following storage provider implementations:
+-   File System: Stores BLOBs in a folder of the local file system, as standard files.
+-   Database: Stores BLOBs in a database.
+-   Azure: Stores BLOBs on the Azure BLOB storage.
+-   Aliyun: Stores BLOBs on the Aliyun Storage Service.
+-   Minio: Stores BLOBs on the MinIO Object storage.
+-  Aws: Stores BLOBs on the Amazon Simple Storage Service.
+https://docs.abp.io/en/abp/latest/Blob-Storing
 
 
 # Modules

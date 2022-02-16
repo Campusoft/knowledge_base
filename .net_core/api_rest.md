@@ -11,6 +11,12 @@ Typed clients
 
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-5.0#typed-clients-1
 
+# Upload File API REST
+
+Sending Files & JSON using multipart/form-data
+-  Large Image as Base64 using JSON is not a good idea. It will take a lot of memory & time for converting back to the actual image for copying on the Server.
+https://dottutorials.net/dotnet-core-web-api-multipart-form-data-upload-file/
+
 # Client
 
 
