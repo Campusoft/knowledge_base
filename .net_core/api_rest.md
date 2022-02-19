@@ -17,6 +17,12 @@ Sending Files & JSON using multipart/form-data
 -  Large Image as Base64 using JSON is not a good idea. It will take a lot of memory & time for converting back to the actual image for copying on the Server.
 https://dottutorials.net/dotnet-core-web-api-multipart-form-data-upload-file/
 
+
+Upload files in ASP.NET Core
+- Validation
+- File signature validation
+https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-6.0
+
 # Client
 
 

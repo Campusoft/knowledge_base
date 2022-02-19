@@ -4,8 +4,7 @@ Antiforgery
 
 # Audit Logging
 
-
-bpAuditingOptions is the main options object to configure the audit log system. You can configure it in the ConfigureServices method of your module
+AuditingOptions is the main options object to configure the audit log system. You can configure it in the ConfigureServices method of your module
 https://docs.abp.io/en/abp/latest/Audit-Logging#abpauditingoptions
 
 ***Entity History Selectors***
