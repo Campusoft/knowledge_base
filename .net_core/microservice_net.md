@@ -101,6 +101,11 @@ tye run -v Debug
 
 tye build
 
+Ejecutar con un archivo yaml especifico
+
+```
+tye run tye.Repositorio.Cliente.yaml
+```
 
 
 Errores

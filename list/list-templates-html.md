@@ -84,9 +84,16 @@ https://codedthemes.com/
 
 
 
-Guru Able Bootstrap Admin Template includes Vertical, Horizontal, Box, light, dark and many more layouts with fully RTL support.
-
+Guru  Able Angular Free/Lite Admin Template is complete solution for  your dashboard creation. It a comes with default layout version, with limited options,  Google optimised, font integration, high speed, mature and sophisticated, extremely well organised code makes Guru  Able Lite a completely flexible solution for any type of back-end application project.
+- Angular 
 https://codedthemes.com/item/guru-able-free-angular-admin-template/
+
+
+## AdminLTE
+
+
+ AdminLTE - Free admin dashboard template based on Bootstrap 4 
+https://github.com/ColorlibHQ/AdminLTE
 
 ## Componentes
 

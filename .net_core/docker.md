@@ -71,10 +71,17 @@ Crear las imagenes, con los Dockerfile que genera visual studio. El contexto "..
 docker build -f Dockerfile ../..
 ```
 
+
+
+
 # Referencias
 
 What is Docker, Why use it? | Docker and .NET Core 101 [1 of 3]
 https://www.youtube.com/watch?v=vmnvOITMoIg&list=PLdo4fOcmZ0oUvXP_Pt2zOgk8dTWagGs_P
+
+HOW TO RUN CONTAINER WITH HTTPS — Kestrel ASP.net
+https://thingtrax.medium.com/how-to-run-container-with-https-kestrel-asp-net-4af9f36db9b7
+
 
 
 # Revisiones

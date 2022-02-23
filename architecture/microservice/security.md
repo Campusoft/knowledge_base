@@ -11,9 +11,13 @@ Edge-level authorization. In simple scenario, authorization can happen only at t
 We believe that authorization is part of domain and should be modelled accordingly within a bounded context, which corresponds to a microservice in our architecture.
 
 How We Solved Authentication and Authorization in Our Microservice Architecture
+- Enlase roto
 https://medium.com/technology-learning/how-we-solved-authentication-and-authorization-in-our-microservice-architecture-994539d1b6e6
 
 Building a fine-grained permission system in a distributed environment: Architecture | Very Good Security
+- UMA and XACML
+- a team that manages identities and access (IAM) can work on developing a sidecar while another team can work on the business logic of the service.
+- Policy-based control for cloud native environments Flexible, fine-grained control for administrators across the stack 
 https://www.verygoodsecurity.com/blog/posts/building-a-fine-grained-permission-system-in-a-distributed-environment
 
 Handling Authentication and Authorization in Microservices - Part 2
@@ -56,9 +60,21 @@ https://harness.io/blog/audit-trails-technical/
 
 #  Herramientas
 
-oauth2-proxy
+***oauth2-proxy***
 
 A reverse proxy and static file server that provides authentication using Providers (Google, GitHub, and others) to validate accounts by email, domain or group.
+
+
+***Open Policy Agent (OPA)***
+ 
+Policy-based control for cloud native environments Flexible, fine-grained control for administrators across the stack 
+
+Stop using a different policy language, policy model, and policy API for every product and service you use. Use OPA for a unified toolset and framework for policy across the cloud native stack.
+
+Whether for one service or for all your services, use OPA to decouple policy from the service's code so you can release, analyze, and review policies (which security and compliance teams love) without sacrificing availability or performance.
+
+https://www.openpolicyagent.org/
+
 
 
 #  Referencias

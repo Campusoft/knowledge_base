@@ -275,6 +275,11 @@ https://docs.docker.com/compose/extends/#understanding-multiple-compose-files
 By default, Docker Compose creates a single network for each container defined in the compose file. All the containers defined in the compose file connect and communicate through the default network.
 
 
+You can inspect it by using the Docker inspect command:
+```
+docker network inspect mynetwork
+```
+
 Explicacion oficial de redes
 - acceder servicio, que se encuentra en la misma red.
 - se utiliza los nombres de los servicios dentro de la red, para acceder a la IP
@@ -295,8 +300,35 @@ https://earthly.dev/blog/docker-networking/
 
 How to link multiple docker-compose services via network
 - Ejemplo como crear dos archivos docker-compose.yml, y que sus servicios se comuniquen entre ellos.
+- If you want define services in multiple docker-compose.yml files, and also have network connectivity between the services, you need to configure your services to use the same network.
 https://tjtelan.com/blog/how-to-link-multiple-docker-compose-via-network/
 
 Communication between multiple docker-compose projects
  - Ejemplos comuicacion entre varios docker-compose.xml
 https://medium.com/@matayoshi.mariano/communication-between-multiple-docker-compose-projects-d79a68af3348
+
+
+Errores
+
+```
+warning: network default: network.external.name is deprecated in favor of network.name
+```
+
+warning :
+
+```
+networks: 
+  default: 
+    external: 
+      name: base  
+```
+use the external option
+
+```      
+networks:
+  default:
+    name: base
+    external: true   
+```
+
+https://docs.docker.com/compose/networking/#use-a-pre-existing-network
