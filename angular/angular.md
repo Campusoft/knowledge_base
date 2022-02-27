@@ -108,19 +108,7 @@ https://dev.to/fullstapps/creando-nuestro-primer-angular-schematics-4b2o
 Generar codigo (CRUD). Con schematics
 https://github.com/manfredsteyer/angular-crud
  
-# Library
 
-In Angular, a project that provides functionality that can be included in other Angular applications. A library isn't a complete Angular application and can't run independently.
-
-
-https://angular.io/guide/libraries
-
-Creating libraries
- 
-```
-ng generate library my-lib
-```
-https://angular.io/guide/creating-libraries
 
 # best practice standards
 

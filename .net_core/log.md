@@ -170,7 +170,18 @@ A simple, compact JSON-based event format for Serilog. CompactJsonFormatter sign
 - Install-Package Serilog.Formatting.Compact
 https://github.com/serilog/serilog-formatting-compact
 
+***Serilog.Sinks.Elasticsearch***
 
+Elasticsearch
+https://github.com/serilog-contrib/serilog-sinks-elasticsearch
+
+
+Options
+https://github.com/serilog-contrib/serilog-sinks-elasticsearch/wiki/Configure-the-sink
+
+
+ IndexFormat = $"{Assembly.GetExecutingAssembly().GetName().Name.ToLower().Replace(".", "-")}-{environment?.ToLower().Replace(".", "-")}-{DateTime.UtcNow:yyyy-MM}",
+        
 
 
 ##  Tools

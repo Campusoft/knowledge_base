@@ -13,15 +13,21 @@ CQRS & Mediator in .NET Core — “A piece of cake”
 https://letienthanh0212.medium.com/cqrs-and-mediator-in-net-core-project-c0b477eab6e9
 
 
-
-
 Simple CQRS implementation with raw SQL and DDD
 - Write Model should be implemented with DDD approach. The level of DDD implementation should depend on level of domain complexity.
 - reads utiliza directamente sql. (Sin intermediarios)
 https://www.kamilgrzybek.com/design/simple-cqrs-implementation-with-raw-sql-and-ddd/
 
+# CQRS - Sin librerias 
 
-***MediatR***
+
+Understand CQRS pattern in a real world application
+- Query Dispatcher and Command Dispatcher are used to choose a proper handler for a giving query/command and execute it.
+https://abdelmajid-baco.medium.com/cqrs-pattern-with-c-a9aff05aae3f
+
+
+
+# MediatR 
 
 Simple mediator implementation in .NET
 
@@ -37,11 +43,73 @@ MediatR has two kinds of messages it dispatches:
 Behaviors
 -  It represents a similar pattern to filters in ASP.NET MVC/Web API or pipeline behaviors in NServiceBus.
 
-***Revision***
+***Publish strategies***
+
+```
+/// <summary>
+/// Strategy to use when publishing notifications
+/// </summary>
+public enum PublishStrategy
+{
+    /// <summary>
+    /// Run each notification handler after one another. Returns when all handlers are finished. In case of any exception(s), they will be captured in an AggregateException.
+    /// </summary>
+    SyncContinueOnException = 0,
+
+    /// <summary>
+    /// Run each notification handler after one another. Returns when all handlers are finished or an exception has been thrown. In case of an exception, any handlers after that will not be run.
+    /// </summary>
+    SyncStopOnException = 1,
+
+    /// <summary>
+    /// Run all notification handlers asynchronously. Returns when all handlers are finished. In case of any exception(s), they will be captured in an AggregateException.
+    /// </summary>
+    Async = 2,
+
+    /// <summary>
+    /// Run each notification handler on it's own thread using Task.Run(). Returns immediately and does not wait for any handlers to finish. Note that you cannot capture any exceptions, even if you await the call to Publish.
+    /// </summary>
+    ParallelNoWait = 3,
+
+    /// <summary>
+    /// Run each notification handler on it's own thread using Task.Run(). Returns when all threads (handlers) are finished. In case of any exception(s), they are captured in an AggregateException by Task.WhenAll.
+    /// </summary>
+    ParallelWhenAll = 4,
+
+    /// <summary>
+    /// Run each notification handler on it's own thread using Task.Run(). Returns when any thread (handler) is finished. Note that you cannot capture any exceptions (See msdn documentation of Task.WhenAny)
+    /// </summary>
+    ParallelWhenAny = 5,
+}
+
+```
+***Pipeline Behaviours***
 
 Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR
 
 
+Pipeline behaviours are a type of middleware that get executed before and after a request (only supports requests, not notifications). They can be useful for a number of different tasks, such as logging, error handling, request validation etc.
+
+
+***Referencias***
+
+MediatR supports different Publish strategies that you can use.
+https://github.com/jbogard/MediatR/wiki#publish-strategies
+
+CQRS Design Pattern C#
+- Benefits of CQRS
+- Refactoring Towards a Task-based Interface
+- Segregating Commands and Queries
+- Segregating Commands and Queries
+- Decorators vs. ASP.NET Middleware
+https://codewithshadman.com/cqrs-design-pattern-csharp/#cqrs-in-the-real-world
+
+# CQRSlite
+
+CQRSlite is a small CQRS and Eventsourcing Framework. It is written in C# and targets .NET 4.5.2 and .NET Core. CQRSlite originated as a CQRS sample project Greg Young and I did in the autumn of 2010. This code is located at http://github.com/gregoryyoung/m-r
+
+CQRSlite has been made with pluggability in mind. So every standard implementation should be interchangeable with a custom one if needed.
+https://github.com/gautema/CQRSlite
 
 # Saga
 

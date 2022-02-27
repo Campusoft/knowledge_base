@@ -84,6 +84,10 @@ Message design is not object-oriented design. Messages should contain state, not
 
 ## outbox pattern
 
+This pattern provides an effective solution to publish events reliably. The idea of this approach is to have an “Outbox” table in the command service’s database.
+
+When receiving a request for creating entity (Command), not only an insert into the Entity table is done, but a record representing the event is also inserted into the Outbox table.
+
 Pattern: Transactional outbox
 https://microservices.io/patterns/data/transactional-outbox.html
 

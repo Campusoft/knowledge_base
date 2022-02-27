@@ -208,7 +208,6 @@ Why we failed to implement CQRS in Microservice architecture.
 - How we are going to update UI, We don’t know whether record is successfully saved or not
 - We can implement CQRS without using Asynchronous communication.
 - We can implement CQRS without using Asynchronous communication.
-
 https://faun.pub/why-we-failed-implementing-cqrs-in-microservice-architecture-5c39a2d0b2dd
 
 # Observabilidad 

@@ -1,6 +1,18 @@
 # REST
 
 
+***ApiController attribute***
+
+The [ApiController] attribute can be applied to a controller class to enable the following opinionated, API-specific behaviors:
+
+- Attribute routing requirement
+- Automatic HTTP 400 responses
+- Binding source parameter inference
+- Multipart/form-data request inference
+- Problem details for error status codes
+https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-6.0#apicontroller-attribute
+
+
 # IHttpClientFactory 
 
 An IHttpClientFactory can be registered and used to configure and create HttpClient instances in an app

@@ -33,3 +33,18 @@ https://angular.io/guide/creating-libraries
 
 ng-packagr
 https://github.com/ng-packagr/ng-packagr/blob/master/README.md
+
+
+# Library
+
+In Angular, a project that provides functionality that can be included in other Angular applications. A library isn't a complete Angular application and can't run independently.
+
+
+https://angular.io/guide/libraries
+
+Creating libraries
+ 
+```
+ng generate library my-lib
+```
+https://angular.io/guide/creating-libraries

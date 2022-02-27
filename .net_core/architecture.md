@@ -31,6 +31,7 @@ https://github.com/jasontaylordev/CleanArchitecture
 ASP.NET Core Hero Boilerplate - .NET 5 Clean Architecture
 - Onion Architecture - WebAPI & MVC
 - CQRS with MediatR Library
+  - PaginatedList: (PageNumber, PageSize) https://github.com/aspnetcorehero/Boilerplate/blob/master/AspNetCoreHero.Boilerplate.Application/Extensions/QueryableExtensions.cs
 - Entity Framework Core – Code First
 - Permission Management
 - MediatR Pipeline Logging & Validation
@@ -74,7 +75,8 @@ https://github.com/thangchung/clean-architecture-dotnet
 
 ***StudentCourseManagement***
 Fullstack Hub is developed to help students and professionals to quickly learn the industry standard applications development for FREE. - Yaseer Mumtaz
-- Mediator
+- Mediator. Crea los IRequestHandler como subclases de  IRequest
+- CQRS
 - ExceptionFilterAttribute
 - UnitOfWork
 - Redis
@@ -82,6 +84,7 @@ Fullstack Hub is developed to help students and professionals to quickly learn t
 - API Gateway project is using the Ocelot
 https://github.com/fullstackhub-io/StudentCourseManagement
 https://fullstackhub.io/asp-net-core-microservices-with-angular11/
+
 
 ***Distributed-eStore***
 Containerized .NET Core Online Store application with a microservices architecture and a React and Redux frontend solution. Technologies used - RabbitMQ, .NET Core, .NET Core MVC, MongoDB, React, Redux, Docker, Consul, Fabio, JWT Authentication, Swagger, Vault.
@@ -92,30 +95,45 @@ https://github.com/evgenirusev/Distributed-eStore
 
 Convey - a simple recipe for .NET Core microservices
 
-    Authentication JWT with secret key & certificates extensions
-    CQRS basic abstractions
-    Consul service registry integration
-    Swagger extensions
-    RestEase extensions
-    Fabio load balancer integration
-    Logging extensions for Serilog & integration with Seq, ELK, Loki
-    Message brokers abstractions & CQRS support
-    RabbitMQ integration
-    Inbox + Outbox implementation for EF Core, Mongo
-    AppMetrics extensions
-    Prometheus integration
-    MongoDB extensions
-    OpenStack OCS support
-    Redis extensions
-    Vault secrets engine (settings, dynamic credentials, PKI etc.) integration
-    Security extensions (certificates, mTLS, encryption etc.)
-    Jaeger tracing integration
-    Web API extensions (minimal routing-based API, CQRS support)
+-    Authentication JWT with secret key & certificates extensions
+-    CQRS basic abstractions
+-    Consul service registry integration
+-    Swagger extensions
+-    RestEase extensions
+-    Fabio load balancer integration
+-    Logging extensions for Serilog & integration with Seq, ELK, Loki
+-    Message brokers abstractions & CQRS support
+-    RabbitMQ integration
+-    Inbox + Outbox implementation for EF Core, Mongo
+-    AppMetrics extensions
+-    Prometheus integration
+-    MongoDB extensions
+-    OpenStack OCS support
+-    Redis extensions
+-    Vault secrets engine (settings, dynamic credentials, PKI etc.) integration
+-    Security extensions (certificates, mTLS, encryption etc.)
+-    Jaeger tracing integration
+-    Web API extensions (minimal routing-based API, CQRS support)
 https://github.com/snatch-dev/Convey
 
 ***GoldenEye***
 - Messaging infrastructure - both internal based on MediatR and external with Kafka,
+- CQRS and Domain Driven Development stack - sending and handling commands, queries, events (with usage of MediatR library),
+- Validation flow with FluentValidation.NET,
+- Examples of complete usage (Cinema Ticket Reservations),
 https://github.com/oskardudycz/GoldenEye
+
+
+***.NET Microservices Sample Reference Application***
+Sample .NET Core reference application, powered by Microsoft, based on a simplified microservices architecture and Docker containers.
+- Domain events: design and implementation
+  - The reference app uses MediatR to propagate domain events synchronously across aggregates, within a single transaction. 
+https://github.com/dotnet-architecture/eShopOnContainers
+
+
+
+book, .NET Microservices: Architecture for Containerized .NET Applications.
+https://docs.microsoft.com/en-us/dotnet/architecture/microservices/
 
 # Revisiones
 

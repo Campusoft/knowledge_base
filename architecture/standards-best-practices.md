@@ -21,6 +21,10 @@ Refactoring.Guru te ayuda a descubrir todo lo que necesitas saber sobre la refac
 (Posee conceptos, ilustraciones)
 https://refactoring.guru/es
 
+## Mediator Pattern
+
+The mediator pattern is a behavioral design pattern that helps to reduce chaotic dependencies between objects. The pattern restricts direct communications between the objects and forces them to collaborate only via a mediator object. Mediator is used to reduce communication complexity between multiple objects or classes. This pattern provides a mediator class which normally handles all the communications between different classes and supports easy maintenance of the code by loose coupling.
+
 
 ## CQRS - Command and Query Responsibility Segregation
 
@@ -29,10 +33,7 @@ The Command and Query Responsibility Segregation (CQRS) pattern propose separati
 In the CQRS context, commands are methods whose sole purpose is performing an action. Simply put, commands in our example would be responsible for creating, updating, and deleting tasks (write operations). In the CQRS architecture, commands cannot return data, since that functionality is unique to queries. In that regard, queries are methods that are only able to read and return data without modifying it.
 
 The CQRS pattern is a great expression of the single responsibility principle. It states that we should have separate models for Queries and Commands because in the real-world application the requirements for read operations are normally different than the write operations. If you are using separate models, then you can handle complex scenarios without worrying about disturbing the other operations. Without this separation, we can easily end up with domain models that are full of state, commands, and queries and harder to maintain over time.
-
-
-
-
+ 
 
 Command Query Responsibility Segregation (CQRS) pattern
 (Excelete articulo, contiene niveles aplicacion del CQRS). 
@@ -43,6 +44,25 @@ Command Query Responsibility Segregation (CQRS) pattern
 - Stage 2: Separate read and write models
 - Stage 3: Separate read and write databases
 https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/
+
+***Queries***
+
+Queries are used to get data from the database. Queries objects only return data and do not make any changes.
+
+Queries will only contain the methods for getting data. They are used to read the data in the database to return the DTOs to the client, which will be displayed in the user interface.
+
+***Command***
+
+Commands represent the intention of changing the state of an entity. They execute operations like Insert, Update, Delete. Commands objects alter state and do not return data.
+
+Commands represent a business operation and are always in the imperative tense, because they are always telling the application server to do something.
+
+
+The command handler is in fact the heart of the application layer in terms of CQRS and DDD. However, all the domain logic should be contained in the domain classes—within the aggregate roots (root entities), child entities, or domain services, but not within the command handler, which is a class from the application layer.
+
+https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api
+
+
 
 ***Event Sourcing***
 

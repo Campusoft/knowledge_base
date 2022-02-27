@@ -354,6 +354,23 @@ https://github.com/jasontaylordev/NorthwindTraders
 
 Automapper
 
+Profile Instances
+
+A good way to organize your mapping configurations is with profiles. Create classes that inherit from Profile and put the configuration in the constructor:
+https://docs.automapper.org/en/latest/Configuration.html
+
+
+If you are using ASP.NET Core there is a helper extension to register all Profiles in Startup.ConfigureServices
+
+// UI project
+services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+Open Generics
+
+AutoMapper can support an open generic type map. Create a map for the open generic types
+https://docs.automapper.org/en/stable/Open-Generics.html#open-generics
+
+
 
 # Building
 
