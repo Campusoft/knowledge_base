@@ -114,13 +114,19 @@ Serilog enrichers:
 Enrich.WithProcessId() and/or .WithProcessName() 
 https://github.com/serilog/serilog-enrichers-process
 
+
+***serilog-enrichers-environment***
+
 Enriches Serilog events with information from the process environment.
 - WithMachineName() - adds MachineName based on either %COMPUTERNAME% (Windows) or $HOSTNAME (macOS, Linux)
 - WithEnvironmentUserName() - adds EnvironmentUserName based on USERNAME and USERDOMAIN (if available)
 https://github.com/serilog/serilog-enrichers-environment
 https://github.com/serilog/serilog-enrichers-environment#included-enrichers
 
-enricher packages
+Si el programa se ejecuta en docker el nombre maquina "WithMachineName" sera Id Container
+
+
+***enricher packages***
 
 - Serilog.Enrichers.CorrelationId - WithCorrelationId() will add a CorrelationId property to produced events
   - https://github.com/ekmsystems/serilog-enrichers-correlation-id

@@ -5,6 +5,21 @@
 
 - SQL Server Data Tools (SSDT) for Visual Studio
   - with Extensions: Analysis Services,Integration Services, Reporting Services
+  - Extensions: Reporting Services. VS 2019
+  - https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio
+
+
+# Implementacion
+
+Convert rdlc to rdl
+
+How to Convert .rdlc Files to .rdl Files
+https://docs.microsoft.com/en-us/previous-versions/ms252109(v=vs.140)?redirectedfrom=MSDN#how-to-convert-rdlc-files-to-rdl-files
+
+Basically, you can rename the .rdlc file to .rdl. Other than that, you will need to define the data source information in the .rdl file, e.g. by using the report designer embedded in SQL Server Business Intelligence Development Studio.
+http://www.windows-tech.info/4/25dd94933da0245a.php
+
+
 
 # Reporting Services 2019
 

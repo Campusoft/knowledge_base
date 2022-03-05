@@ -83,17 +83,17 @@ Apache Kafka Quickstart
 
 Create a topic to store your events:
 ```
-$ bin/kafka-topics.sh --create --topic quickstart-events --bootstrap-server localhost:9092
+$ kafka-topics --create --topic quickstart-events --bootstrap-server localhost:9092
 ```
 
 Show  details  of one topic: 
 ```
-kafka-topics.sh --describe --topic quickstart-events --bootstrap-server localhost:9092
+kafka-topics --describe --topic quickstart-events --bootstrap-server localhost:9092
 ```
 
 Read the events
 ```
-kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+kafka-console-consumer --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
 ```
 
 Cluster name
@@ -104,7 +104,7 @@ https://kafka.apache.org/quickstart
 Listar los topics:
 
 ```
-$ kafka-topics.sh --list --bootstrap-server localhost:9092
+$ kafka-topics --list --bootstrap-server localhost:9092
 ```
 
 # Client

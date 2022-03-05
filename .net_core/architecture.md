@@ -8,6 +8,8 @@ Clean Architecture Solution Template: A starting point for Clean Architecture wi
 - Utiliza Autofac
 - MediatR
 - Domain Events (MediatR)
+- Posee https://github.com/ardalis/Specification. Base class with tests for adding specifications to a DDD model. Also includes a default generic Repository base class with support for EF6 and EF Core
+- No tiene UnitOfWork
 https://github.com/ardalis/CleanArchitecture
  
  
@@ -22,6 +24,10 @@ This is a solution template for creating a Single Page App (SPA) with Angular an
 - NUnit, FluentAssertions, Moq & Respawn
 - Docker 
 - NSwag.AspNetCore. (Configurado en "HostAplicacion"/api)
+- Domain Events (MediatR)
+  - DbContext lanza  DispatchEvents. 
+  - Las entidades deben implementar IHasDomainEvent para lanza eventos.
+  - Lanza eventos por medio de un servicio DomainEventService : IDomainEventService. Esta implementacion utiliza MediatR
 - Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR. 
   - AuthorizationBehaviour. (Para autorizacion, con mediatR)
 https://github.com/jasontaylordev/CleanArchitecture 
@@ -32,7 +38,7 @@ ASP.NET Core Hero Boilerplate - .NET 5 Clean Architecture
 - Onion Architecture - WebAPI & MVC
 - CQRS with MediatR Library
   - PaginatedList: (PageNumber, PageSize) https://github.com/aspnetcorehero/Boilerplate/blob/master/AspNetCoreHero.Boilerplate.Application/Extensions/QueryableExtensions.cs
-- Entity Framework Core – Code First
+- Entity Framework Core – Code First. Posee UnitOfWork (Incompleto Transacciones)
 - Permission Management
 - MediatR Pipeline Logging & Validation
 - Serilog
@@ -47,6 +53,8 @@ ASP.NET Core Hero Boilerplate - .NET 5 Clean Architecture
 - API Versioning
 - Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
 https://codewithmukesh.com/project/aspnet-core-hero-boilerplate/
+https://github.com/aspnetcorehero/Boilerplate
+
 
 ***CoolStore Web Application***
 
@@ -128,6 +136,14 @@ https://github.com/oskardudycz/GoldenEye
 Sample .NET Core reference application, powered by Microsoft, based on a simplified microservices architecture and Docker containers.
 - Domain events: design and implementation
   - The reference app uses MediatR to propagate domain events synchronously across aggregates, within a single transaction. 
+- Posee UnitOfWork. La implementacion IUnitOfWork se la realiza en DbContext
+  - UnitOfWork esta como propiedad en los IRepository
+- Posee IPipelineBehavior
+  - Un TransactionBehaviour para Transaction
+  - LoggingBehavior para logs los Handling "LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>"
+  - ValidatorBehavior para aplicar validaciones FluentValidation
+- Angular
+  - Posee un servicio base "DataService" que gestiona los errores (console) de los api rest
 https://github.com/dotnet-architecture/eShopOnContainers
 
 

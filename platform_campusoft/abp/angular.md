@@ -103,6 +103,26 @@ Para importar las clases generadas, por el proxy de la carpeta "/proxy/address",
 
 import { <Entity>Dto,<Service> } from "@proxy/Address";
 
+# REST API CLIENT
+
+
+import { RestService } from '@abp/ng.core';
+
+RestService
+- Posee  handleError
+- Configurarion skipHandleError
+abp/npm/ng-packs/packages/core/src/lib/services/rest.service.ts
+
+How to Make HTTP Requests
+https://docs.abp.io/en/abp/5.1/UI/Angular/HTTP-Requests
+
+HttpErrorReporterService is a service which is exposed by @abp/ng.core package. HTTP errors can be reported by using this service. The service emits an event when an error is reported and keeps the errors as an array
+https://docs.abp.io/en/abp/5.1/UI/Angular/HTTP-Error-Reporter-Service
+
+abp posee un  ErrorHandler
+- Presenta una UI con el error
+- Si el estado  401 direcciona al login "this.navigateToLogin();"
+
 
 # Componentes UI
 
@@ -130,8 +150,11 @@ https://docs.abp.io/en/abp/latest/UI/Angular/List-Service
 
 
 Extending query with custom variables
-
 https://docs.abp.io/en/abp/latest/UI/Angular/List-Service#extending-query-with-custom-variables
+
+
+Directive ngx-datatable[list]
+https://github.com/abpframework/abp/blob/dev/npm/ng-packs/packages/theme-shared/src/lib/directives/ngx-datatable-list.directive.ts
 
 # Localization 
 

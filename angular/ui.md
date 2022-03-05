@@ -81,6 +81,37 @@ ngx-datatable is an Angular component for presenting large and complex data. It 
 
 https://github.com/swimlane/ngx-datatable
 
+
+Utilizar el componente 
+
+```
+<ngx-datatable [rows]="configuracionFirmaElectronica.items" [count]="configuracionFirmaElectronica.totalRegistros" >
+</ngx-datatable>
+```
+- rows. Listado registros a visualizar en la tabla
+- count. Total registros existentes. Paginacion
+
+**Server-side Paging**
+http://swimlane.github.io/ngx-datatable/#server-paging
+
+
+**localization**
+
+```
+ <ngx-datatable ... 
+     [messages]="spanishNgxDatatableMessages"
+```
+	 
+```
+  //mensajes
+  spanishNgxDatatableMessages = {
+    emptyMessage: 'No hay datos disponibles',
+    totalMessage: 'Total',
+    selectedMessage: 'Seleccionado',
+  };
+
+```
+
 ## ng-select
 
 Native angular select component 

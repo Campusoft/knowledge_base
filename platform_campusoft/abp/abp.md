@@ -163,12 +163,6 @@ https://docs.abp.io/en/abp/latest/UI/Angular/Authorization
 
 # API Javascript
 
-import { RestService } from '@abp/ng.core';
-
-RestService
-- Posee  handleError
-- Configurarion skipHandleError
-abp/npm/ng-packs/packages/core/src/lib/services/rest.service.ts
 
 
 **Use @abp/ng.core**

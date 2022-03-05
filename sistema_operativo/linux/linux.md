@@ -8,3 +8,5 @@ cat /etc/os-release
 lsb_release -a
 hostnamectl
  
+whoami Command: Find the Current User in Linux 
+ 

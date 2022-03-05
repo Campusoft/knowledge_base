@@ -10,12 +10,6 @@ Crear propios controles, o crear wrapper de controles
 TODO:
 - Revisar. ControlValueAccessor
 
-# RxJS
-Clear examples, explanations, and resources for RxJS.
-https://www.learnrxjs.io/
-
-
-***operators***
 
 
 
