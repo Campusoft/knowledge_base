@@ -23,6 +23,10 @@ Autofac is an addictive Inversion of Control container for .NET Core, ASP.NET Co
 Assembly scanning and decoration extensions for Microsoft.Extensions.DependencyInjection
 https://github.com/khellang/Scrutor 
 
+# Should injected dependencies be readonly fields or private properties
+https://stackoverflow.com/questions/57498480/should-injected-dependencies-be-readonly-fields-or-private-properties
+https://medium.com/@farshadjahanmanesh/constructor-dependency-injection-vs-property-dependency-injection-85ab0f0f26b1
+
 # Referencias
 
 Informacion inyeccion dependencias, para diferentes componentes en asp.net core
