@@ -154,4 +154,7 @@ https://docs.microsoft.com/en-us/dotnet/architecture/microservices/
 # Revisiones
 
 Revisar. Sample Projects
+
+"We came across the decision to orchestrate our microservices by using a "god" like service that controls the business logic or a choreographed approach where the microservices basically pass messages, In microservice architecture choreography is preferred over orchestration."
+
 https://github.com/mjebrahimi/Awesome-Microservices-NetCore#sample-projects

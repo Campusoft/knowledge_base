@@ -20,8 +20,13 @@ An IHttpClientFactory can be registered and used to configure and create HttpCli
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-5.0
 
 Typed clients
-
+- Provide the same capabilities as named clients without the need to use strings as keys.
+- Work with DI and can be injected where required in the app.
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-5.0#typed-clients-1
+
+
+Outgoing request middleware
+- DelegatingHandler
 
 # Upload File API REST
 

@@ -71,7 +71,15 @@ https://pixinvent.com/
 
 
 Free Modern Bootstrap 4 WebApp & Dashboard HTML Template + UI Kit
+Dependencies
+-    Bootstrap v4.3.1
+-    SASS
+-    Gulp
+-    jQuery v3.3.1
+
 https://themeselection.com/products/chameleon-admin-free-bootstrap-dashboard-template/
+https://github.com/themeselection/chameleon-free-bootstrap-admin-template
+
 
 Chameleon Admin is the most complete bootstrap 4
 webapp & admin template with modern & clean design.
