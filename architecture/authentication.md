@@ -274,6 +274,14 @@ https://demo.identityserver.io/
 
 
 Diagrams of All The OpenID Connect Flows
+- code
+- token
+- id_token
+- id_token token
+- code id_token
+- code token
+- code id_token token
+- none
 https://darutk.medium.com/diagrams-of-all-the-openid-connect-flows-6968e3990660
 
 Certificate Decoder

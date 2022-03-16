@@ -16,16 +16,29 @@ Caracteristicas
 # Concept
 
  
-***Client***
+**Client**
 A client is a piece of software that requests tokens from IdentityServer - either for authenticating a user (requesting an identity token) or for accessing a resource (requesting an access token). A client must be first registered with IdentityServer before it can request tokens.
 
 Examples for clients are web applications, native mobile or desktop applications, SPAs, server processes etc.
 
 
-***Resources***
+**Resources**
 Resources are something you want to protect with IdentityServer - either identity data of your users, or APIs.
 
-***Grant Types***
+The two fundamental resource types in IdentityServer are:
+
+-    identity resources: represent claims about a user like user ID, display name, email address etc…
+-    API resources: represent functionality a client wants to access. Typically, they are HTTP-based endpoints (aka APIs), but could be also message queuing endpoints or similar.
+
+Identity Resources. An identity resource is a named group of claims that can be requested using the scope parameter.
+
+API Resources
+- support for the JWT aud claim. The value(s) of the audience claim will be the name of the API resource(s)
+https://docs.identityserver.io/en/latest/topics/resources.html#api-resources
+
+**Scopes**
+
+**Grant Types**
 
 Mapeo entre response_type / Grant Types "Flows". 
 

@@ -126,6 +126,7 @@ https://github.com/snatch-dev/Convey
 
 ***GoldenEye***
 - Messaging infrastructure - both internal based on MediatR and external with Kafka,
+  - Consume Kafka mensajes  y luego publish event to internal event bus  (MediatR)
 - CQRS and Domain Driven Development stack - sending and handling commands, queries, events (with usage of MediatR library),
 - Validation flow with FluentValidation.NET,
 - Examples of complete usage (Cinema Ticket Reservations),

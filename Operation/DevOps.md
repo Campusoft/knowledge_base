@@ -3,6 +3,11 @@
 ***Secrets management***
 Secrets Management is the set of tools and techniques that grant confidentiality for your sensitive information, i.e., your secrets. In the application development context, typical secrets include application credentials, API keys, SSH keys, database passwords, encryption keys, and so on.
 
+
+DevOps Roadmap
+- Step by step guide for DevOps, SRE or any other Operations Role in 2022
+- Imagen Roadmap
+
 # DevSecOps 
 
 DevSecOps focuses on security automation, testing and enforcement during DevOps - Release - SDLC cycles. The whole meaning behind this methodology is connecting together Development, Security and Operations. DevSecOps is methodology providing different methods, techniques and processes backed mainly with tooling focusing on developer / security experience.

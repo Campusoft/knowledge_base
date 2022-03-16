@@ -86,7 +86,7 @@ AbpIdentity.Roles.Create
 
 # IdentityServer
 
-Proyect => AbpAccountWebIdentityServerModule => AbpIdentityServerDomainModule.
+Proyecto => AbpAccountWebIdentityServerModule => AbpIdentityServerDomainModule.
 
 El modulo AbpIdentityServerDomainModule, realiza la configuracion  IdentityServer.
 
@@ -109,6 +109,13 @@ if (!services.IsAdded<IClientStore>())
 	identityServerBuilder.AddInMemoryClients(configuration.GetSection("IdentityServer:Clients"));
 }
 ```
+
+CreateStandardResourcesAsync
+- Crea los IdentityResources estandar. Estos recursos de identidad tiene los claims correspondientes
+  - OpenId Profile  Email Address Phone
+  - IdentityResources para los roles "role". Claims: "role"
+
+
 
 # External provider authentication 
 
