@@ -237,6 +237,16 @@ https://cloud.google.com/architecture/devops/devops-measurement-monitoring-and-o
 Distributed logging is one other challenging thing. In a monolithic application, request process inside a single application because of that all the logs are in a one log file. When it comes to the microservices, request can span multiple services. We must have a way to trace that request across multiple services. We usually use a correlation id for that.
 https://faun.pub/why-microservices-fail-eda3e25069a0
 
+Microservices logging best practices every team should know
+- Use a correlation ID
+- Structure logs appropriately
+- Provide informative application logs
+- Visualize log data
+- Use centralized log storage
+- Query logs
+- Handle failures
+https://www.techtarget.com/searchapparchitecture/tip/5-essential-tips-for-logging-microservices
+
 
 ***Traces***
 Traces—or more precisely, “distributed traces”—are samples of causal chains of events (or transactions) between different components in a microservices ecosystem. And like events and logs, traces are discrete and irregular in occurrence.

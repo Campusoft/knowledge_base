@@ -94,6 +94,9 @@ Utilizar el componente
 **Server-side Paging**
 http://swimlane.github.io/ngx-datatable/#server-paging
 
+**Server-side Sorting**
+ 
+http://swimlane.github.io/ngx-datatable/#server-sorting
 
 **localization**
 

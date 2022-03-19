@@ -124,12 +124,45 @@ https://www.paradigmadigital.com/dev/oauth-2-0-equilibrio-y-usabilidad-en-la-sec
 OAuth 2.0 Authorization Code with PKCE Flow 
 These security issues led to a reassessment of the value of the Implicit flow, and in November of 2018, new guidance was released that effectively deprecated this flow. 
 
+## grants 
+
+**Authorisation Code Grant**
+
+The Flow (Part One)
+- response_type: code
+
+The Flow (Part Two)
+- grant_type: authorization_code
+
+**Resource owner credentials grant**
+
+- grant_type: password
+
+**Client credentials grant**
+
+The simplest of all of the OAuth 2.0 grants, this grant is suitable for machine-to-machine authentication where a specific user’s permission to access data is not required.
+
+This flow exchanges the client credentials for a token immediately, which is suitable for machine-to-machine applications
+
+- grant_type: client_credentials
 
 
+**Refresh token grant**
+
+Access tokens eventually expire; however some grants respond with a refresh token which enables the client to get a new access token without requiring the user to be redirected.
+- grant_type: refresh_token
 
 
+A Guide To OAuth 2.0 Grants
+- parameters  segun el tipo Grants
+https://alexbilbie.com/guide-to-oauth-2-grants/
 
-TODO: Revision.
+Una introducción a OAuth 2
+- Posee ilustraciones tipos Grants
+- Posee ejemplos con endpoint parameters response
+https://www.digitalocean.com/community/tutorials/una-introduccion-a-oauth-2-es
+
+## TODO: Revision.
 On The Nature of OAuth2’s Scopes
 Stretching OAuth2 scopes beyond intended usage leads to trouble in complex architectures.
 https://auth0.com/blog/on-the-nature-of-oauth2-scopes/
@@ -253,7 +286,6 @@ Ref: https://www.thinktecture.com/en/identity/three-alternatives-to-identityserv
 -------------------
 
 oidc-client
-
 https://github.com/IdentityModel/oidc-client-js/wiki
 
  A simple demonstration of using IdentityModel/oidc-client with angular 2 

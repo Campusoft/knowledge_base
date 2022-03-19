@@ -156,6 +156,10 @@ https://docs.abp.io/en/abp/latest/UI/Angular/List-Service#extending-query-with-c
 Directive ngx-datatable[list]
 https://github.com/abpframework/abp/blob/dev/npm/ng-packs/packages/theme-shared/src/lib/directives/ngx-datatable-list.directive.ts
 
+ListService. Source code
+https://github.com/abpframework/abp/blob/dev/npm/ng-packs/packages/core/src/lib/services/list.service.ts
+
+
 # Localization 
 
 The Localization key format consists of 2 sections which are Resource Name and Key. ResourceName::Key

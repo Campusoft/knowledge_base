@@ -60,7 +60,30 @@ Alternativa a  IdentityServer
 
 OpenIddict aims at providing a versatile solution to implement an OpenID Connect server and token validation in any ASP.NET Core 2.1, 3.1 and 5.0 application, and starting in OpenIddict 3.0, any ASP.NET 4.x application using Microsoft.Owin too.
 
+OpenIddict is little bit more low-level than IdentityServer. Identity Server gives you a running solution out-of-the-box, where for OpenIddict to work you need to implement some details yourself, like creating claim identities and setting up the correct endpoints. 
+
+
 https://github.com/openiddict/openiddict-core
+
+
+OpenIddict natively supports Entity Framework Core, Entity Framework 6 and MongoDB out-of-the-box and custom stores can be implemented to support other providers.
+
+Informacion importante
+- OpenIddict encrypts the access token by default.
+
+
+Server with OpenIddict
+The articles in this series will guide you through the process of setting up an OAuth2 + OpenID Connect authorization server on the the ASPNET Core platform using OpenIddict.
+-    Part I: Introduction
+-    Part II: Create ASPNET project
+-    Part III: Client Credentials Flow
+-    Part IV: Authorization Code Flow
+-    Part V: OpenID Connect
+-    Part VI: Refresh tokens
+https://dev.to/robinvanderknaap/setting-up-an-authorization-server-with-openiddict-part-i-introduction-4jid
+
+
+
 
 
 # Errores comunes
