@@ -52,9 +52,11 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-regis
 
 ## Okta
 
-## IdentityServer
+# IdentityServer
 
-## openiddict
+[IdentityServer](IdentityServer.md)
+
+# Openiddict
 
 Alternativa a  IdentityServer
 
@@ -63,13 +65,17 @@ OpenIddict aims at providing a versatile solution to implement an OpenID Connect
 OpenIddict is little bit more low-level than IdentityServer. Identity Server gives you a running solution out-of-the-box, where for OpenIddict to work you need to implement some details yourself, like creating claim identities and setting up the correct endpoints. 
 
 
-https://github.com/openiddict/openiddict-core
-
-
 OpenIddict natively supports Entity Framework Core, Entity Framework 6 and MongoDB out-of-the-box and custom stores can be implemented to support other providers.
 
 Informacion importante
 - OpenIddict encrypts the access token by default.
+
+
+
+## Referencias
+
+Source Code
+https://github.com/openiddict/openiddict-core
 
 
 Server with OpenIddict
@@ -81,8 +87,6 @@ The articles in this series will guide you through the process of setting up an 
 -    Part V: OpenID Connect
 -    Part VI: Refresh tokens
 https://dev.to/robinvanderknaap/setting-up-an-authorization-server-with-openiddict-part-i-introduction-4jid
-
-
 
 
 

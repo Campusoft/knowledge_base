@@ -364,6 +364,14 @@ Where Is My Cache? Architectural Patterns for Caching Microservices.
 
 https://hazelcast.com/blog/architectural-patterns-for-caching-microservices/
 
+
+Revisiones
+One of the most important aspects of caching is not to use a central caching layer 
+that is shared between microservices. However, the instances of a given microservice will 
+all have the same data requirements, so it makes sense to share a caching layer across 
+these instances
+
+
 #  Ejemplos 
 
 

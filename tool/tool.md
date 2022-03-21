@@ -52,6 +52,11 @@ Herramienta segun el tipo proyecto
 - Instalar DB Postgress
 - Instalar ActiveMQ
 
+Prettier
  
+- An opinionated code formatter
+- Supports many languages
+- Integrates with most editors
+https://prettier.io/
 
  

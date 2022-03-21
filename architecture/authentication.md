@@ -134,6 +134,13 @@ The Flow (Part One)
 The Flow (Part Two)
 - grant_type: authorization_code
 
+
+Proof Key for Code Exchange
+PKCE (RFC 7636) is an extension to the Authorization Code flow to prevent CSRF and authorization code injection attacks.
+
+PKCE is not a replacement for a client secret, and PKCE is recommended even if a client is using a client secret.
+
+
 **Resource owner credentials grant**
 
 - grant_type: password

@@ -151,11 +151,25 @@ This article provides an overview of such UI tools, including:
 - Conduktor
 https://towardsdatascience.com/overview-of-ui-tools-for-monitoring-and-management-of-apache-kafka-clusters-8c383f897e80
 
-Open-Source Web GUI for Apache Kafka Management 
+
+AKHQ
+AKHQ is a GUI for monitoring & managing Apache Kafka topics, topics data, consumers group etc.
+https://akhq.io/
+
+
+Open-Source Web GUI for Apache Kafka Management
+Kafka UI for Apache Kafka is a simple tool that makes your data flows observable, helps find and troubleshoot issues faster and deliver optimal performance. Its lightweight dashboard makes it easy to track key metrics of your Kafka clusters - Brokers, Topics, Partitions, Production, and Consumption. 
 https://github.com/provectus/kafka-ui
 
 This repository is a collection of tools for working with Apache Kafka.
 https://github.com/linkedin/kafka-tools
+
+
+# Hosting  Cloud
+
+Serverless Data for Kafka
+- Free Max 10,000 Messages Daily
+https://upstash.com/#section-pricing
 
 # Referencias
 

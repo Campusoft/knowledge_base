@@ -11,5 +11,5 @@ Applies to:
 
 # Referencias
 
-
+What is change data capture (CDC)?
 https://docs.microsoft.com/en-us/sql/relational-databases/track-changes/about-change-data-capture-sql-server?view=sql-server-2017
