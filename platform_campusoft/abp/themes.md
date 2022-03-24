@@ -94,3 +94,9 @@ https://docs.abp.io/en/abp/latest/UI/Angular/Component-Replacement
 
 Using Angular Material Components With the ABP Framework
 https://community.abp.io/articles/using-angular-material-components-with-the-abp-framework-af8ft6t9
+
+
+# Referencias
+
+Customizing the ABP Basic Theme with Bootswatch
+https://community.abp.io/posts/customizing-the-abp-basic-theme-with-bootswatch-4luoqzr0

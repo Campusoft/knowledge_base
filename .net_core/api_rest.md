@@ -41,10 +41,14 @@ Upload files in ASP.NET Core
 https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-6.0
 
 
+# API versioning
+
 # CORS 
 
 ASP.NET Core API - Allow CORS requests from any origin and with credentials
 https://jasonwatmore.com/post/2020/05/20/aspnet-core-api-allow-cors-requests-from-any-origin-and-with-credentials
+
+
 
 # Client
 

@@ -176,6 +176,8 @@ https://auth0.com/blog/on-the-nature-of-oauth2-scopes/
 
 
 # OpenID Connect
+
+OpenID Connect 1.0 is a simple identity layer on top of the OAuth 2.0 protocol. It allows Clients to verify the identity of the End-User based on the authentication performed by an Authorization Server, as well as to obtain basic profile information about the End-User in an interoperable and REST-like manner. 
  
 OpenID Connect describes a metadata document (RFC) that contains most of the information required for an app to do sign in. This includes information such as the URLs to use and the location of the service's public signing keys. You can find this document by appending the discovery document path to the authority URL:
 

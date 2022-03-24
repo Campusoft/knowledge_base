@@ -136,16 +136,6 @@ CloudNative.CloudEvents.Amqp 	AMQP protocol binding using AMQPNetLite
 stable 2.0.0 release within the summer of 2021 (May/June/July).
 https://github.com/cloudevents/sdk-csharp/blob/master/docs/changes-since-1x.md
 
-# Linq
-
-**MoreLINQ**
-
-LINQ to Objects is missing a few desirable features. This project enhances LINQ to Objects with extra methods, in a manner which keeps to the spirit of LINQ.
-
-https://github.com/morelinq/MoreLINQ
-
-
-https://www.tutorialsteacher.com/linq/linq-tutorials
 
 
 # Emails
