@@ -28,6 +28,9 @@ https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=asp
 Outgoing request middleware
 - DelegatingHandler
 
+
+
+
 # Upload File API REST
 
 Sending Files & JSON using multipart/form-data

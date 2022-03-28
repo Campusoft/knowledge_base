@@ -210,6 +210,9 @@ Why we failed to implement CQRS in Microservice architecture.
 - We can implement CQRS without using Asynchronous communication.
 https://faun.pub/why-we-failed-implementing-cqrs-in-microservice-architecture-5c39a2d0b2dd
 
+## Circuit Breaker
+
+
 # Observabilidad 
 
 - Logging

@@ -72,11 +72,28 @@ It is an alternative way to persist data. In contrast with state-oriented persis
 
 Thanks for that, no business data is lost. Each operation results in the event stored in the database. That enables extended auditing and diagnostics capabilities (both technically and business-wise). What's more, as events contains the business context, it allows wide business analysis and reporting.
 
-Revision
+
+
+**Refencias**
+Can command return a value?
+-  generate an identifier In the controller method and create the command based on that. The same identifier can then be returned to the Created status.
+- For error handling, I usually make a processing error by throwing an appropriate exception and mapping it to HTTP status, e.g. via middleware
+https://event-driven.io/en/can_command_return_a_value/
+
+Tackling Complexity in CQRS
+- Complexity Trap #1: One-Way Commands, or Overzealous Segregation
+- Complexity Trap #2: Event sourcing
+- Complexity Trap #3: Too Much of a Good Thing
+- 
+https://vladikk.com/2017/03/20/tackling-complexity-in-cqrs/
+
+**Revision**
+
 CQRS and Event Sourcing in Event Driven Architecture of Ordering Microservices
 https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architecture-of-ordering-microservices-fb67dc44da7a
 
-
+- Porque un CQRS commad no retorna valores. Should the Command Handler return a value?
+- Should the Command Handler throw an exception?
 
 
 ## Resiliency / resiliente / Resistencia
