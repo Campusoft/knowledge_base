@@ -104,8 +104,11 @@ Una app resiliente es una que continúa funcionando a pesar de tener fallas en lo
 
 Enable an application to handle transient failures when it tries to connect to a service or network resource, by transparently retrying a failed operation
 
-
 Before writing custom retry logic, consider using a general framework such as Polly for .NET or Resilience4j for Java.
+
+## Circuit Breaker
+
+
 
 # Web
 
