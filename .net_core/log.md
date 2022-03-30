@@ -131,6 +131,8 @@ Si el programa se ejecuta en docker el nombre maquina "WithMachineName" sera Id 
 - Serilog.Enrichers.CorrelationId - WithCorrelationId() will add a CorrelationId property to produced events
   - https://github.com/ekmsystems/serilog-enrichers-correlation-id
   - WithCorrelationIdHeader(headerKey) - adds a CorrelationId extracted from the current request header (or created if one does not exist).
+  
+  
 - Serilog.Enrichers.ClientInfo - WithClientIp() and WithClientAgent() will add properties with client IP and UserAgent
   - https://github.com/mo-esmp/serilog-enrichers-clientinfo
 

@@ -1,5 +1,19 @@
 # Varios
 
+# Configurations 
+
+
+Multiple Ways To Access Configurations In .NET Applications. (appsettings)
+- IConfiguration
+- GetValue
+- GetSection
+- GetChildren
+- Exists
+- Bind
+- Options Pattern
+https://thecodeblogger.com/2021/04/20/multiple-ways-to-access-configurations-in-net-applications/
+
+
 # CancellationToken 
 
 

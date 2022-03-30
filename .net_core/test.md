@@ -1,3 +1,31 @@
+# General
+
+Read appsettings JSON in .NET Core Test Project
+https://www.thecodebuzz.com/read-appsettings-json-in-net-core-test-project-xunit-mstest/
+
+Read appsettings json values in .NET Core Test Project
+
+- Add NuGet package. Microsoft.Extensions.Configuration.Binder
+- Add NuGet package. Microsoft.Extensions.Configuration.Json
+- Use the configuration in your unit tests
+
+```
+[TestClass]
+public class IntegrationTests
+{
+    public IntegrationTests()
+    {
+        var config = new ConfigurationBuilder().AddJsonFile("appconfig.json").Build();
+        
+        _numberOfPumps = Convert.ToInt32(config["NumberOfPumps"]);
+
+        _numberOfMessages = Convert.ToInt32(config["NumberOfMessages"]);
+
+        _databaseUrl = config["DatabaseUrlAddress"];
+    }
+} 
+```
+
 # BDD (Behauvior Driven Development)
 
 - Dado: los pasos necesarios para poner al sistema en el estado que se desea probar
