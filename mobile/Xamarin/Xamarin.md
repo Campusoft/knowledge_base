@@ -68,12 +68,29 @@ http://xybernetics.com/techtalk/how-to-resolve-err_cleartext_not_permitted-error
 # Referencias
 
 
+Set Up Device for Development
+https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/set-up-device-for-development
+
+Error en Xiaomi
+
+[INSTALL_FAILED_USER_RESTRICTED: Install canceled by user]
+
+In some Xiaomi devices “Install via USB” option in “developer options” cannot be turned on with a message popping:”this device is temporarily restricted”. By default, this option will be turned off to ensure the security of the device.
+
+
 
 ## Herramientas
 
 AirDroid 
 
 Transfiere archivos a través de dispositivos, controla dispositivos Android en remoto, duplica la pantalla y gestiona los SMS y las notificaciones en el ordenador.   hace que el trabajo y la vida sean más eficientes. 
+
+Iconos
+Generar iconos
+https://appicon.co/
+
+
+
 
 
 ## Aplicaciones / Codigo / Librerias
@@ -82,7 +99,7 @@ Transfiere archivos a través de dispositivos, controla dispositivos Android en 
 Librerias de App/UI. Listado de aplicaciones realizadas en Xamarin. 
 https://github.com/jsuarezruiz/xamarin-forms-goodlooking-UI
 
-# Publicar a Google Play
+## Publicar a Google Play
 
 Publish smaller apps with the Android App Bundle
 https://devblogs.microsoft.com/xamarin/android-app-bundle/

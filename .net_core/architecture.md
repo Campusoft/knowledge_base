@@ -159,3 +159,10 @@ Revisar. Sample Projects
 "We came across the decision to orchestrate our microservices by using a "god" like service that controls the business logic or a choreographed approach where the microservices basically pass messages, In microservice architecture choreography is preferred over orchestration."
 
 https://github.com/mjebrahimi/Awesome-Microservices-NetCore#sample-projects
+
+
+
+There is a couple of microservices which implemented e-commerce modules over Catalog, Basket, Discount and Ordering microservices with NoSQL (MongoDB, Redis) and Relational databases (PostgreSQL, Sql Server) with communicating over RabbitMQ Event Driven Communication and using Ocelot API Gateway.
+- gRPC Communication
+- Microservices Resilience Implementations
+https://github.com/aspnetrun/run-aspnetcore-microservices

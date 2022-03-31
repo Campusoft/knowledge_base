@@ -169,7 +169,12 @@ https://github.com/linkedin/kafka-tools
 
 Serverless Data for Kafka
 - Free Max 10,000 Messages Daily
+- No permite crear topic con los clientes. (Se debe crear en panel upstash)
 https://upstash.com/#section-pricing
+
+
+https://confluent.cloud/welcome
+
 
 # Referencias
 

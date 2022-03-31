@@ -4,6 +4,12 @@
 
 # Publicar paquetes
 
+Importante:
+- Un paquete no puede actualizarse. Se debe subir nuevas versiones
+- Un paquete no puede eliminarse.
+- Utilizar siempre en el nombre del paquetes y en los namespace el nombre de empresa
+  - Empresa.Producto.Modulo/Capa. Ejemmplo Campusoft.Core.EntityFrameworkCore Campusoft.Sync.EntityFrameworkCore
+
 Quickstart: Create and publish a NuGet package using Visual Studio (.NET Standard, Windows only)
 - Configure package properties
 - Run the pack command
@@ -21,7 +27,49 @@ Publishing packages
 - Publish with nuget push
 https://docs.microsoft.com/en-us/nuget/nuget-org/publish-a-package
 
+
+**Recomendaciones**
+
+- Publicar los paquetes en release
+- Utilizar un archivo comun para compartir informacion de paquete en todos los proyectos de una solucion. 
+
+Archivo comun con informacion paquete:
+
+```
+<Project>
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+    <Version>0.3.2</Version>
+	<Copyright>Nombre comun cliente...</Copyright>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <AbpProjectType>module</AbpProjectType>
+  </PropertyGroup>
+
+</Project>
+```
+
+Reutilizar archivo comun en un proyecto:
+```
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\..\common.props" />
+
+```
+
+- En etapas de desarrollo utilizar versiones menores para actualizar cambios en paquetes parte del desarrollo. 
+  -  Ejemplo: Verion 0.4.5,  0.4.6 ...
+
+
+# Eliminar 
+
+nuget.org does not support permanent deletion of packages. 
+- Escenario. Si no se puede eliminr pasar el control a otro usuario (Ej. Al cliente)
+https://docs.microsoft.com/en-us/nuget/nuget-org/policies/deleting-packages
+
+
+
 # Revision
+
 
 Tener un repositorio privado de packages
 
