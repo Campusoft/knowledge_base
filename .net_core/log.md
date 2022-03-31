@@ -249,6 +249,14 @@ FileNotFoundException: Could not find file 'D:\proyectos\CodigoFuente\Utpl.Integ
 
 Seq creates the visibility you need to quickly identify and diagnose problems in complex applications and microservices.
 
+# Metrics
+
+App Metrics?
+
+App Metrics is an open-source and cross-platform .NET library used to record metrics within an application. App Metrics can run on .NET Core or on the full .NET framework also supporting .NET 4.5.2.
+
+App Metrics abstracts away the underlying repository of your Metrics for example InfluxDB, Prometheus, Graphite, Elasticsearch etc, by sampling and aggregating in memory and providing extensibility points to flush metrics to a repository at a specified interval.
+https://www.app-metrics.io/
 
 # Referencias
 

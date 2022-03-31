@@ -98,7 +98,8 @@ https://github.com/reactiveui/refit
 - Refit 6 makes System.Text.Json the default JSON serializer.
 
 
-***RestEase***
+**RestEase**
+
 To use it, you define an interface which represents the endpoint you wish to communicate with (more on that in a bit), where methods on that interface correspond to requests that can be made on it. RestEase will then generate an implementation of that interface for you, and by calling the methods you defined, the appropriate requests will be made
 - Using RestEase.SourceGenerator
 The advantages of using a Source Generator are:  "You will need to be using the .NET 5 SDK (or higher) to make use of source generators. "

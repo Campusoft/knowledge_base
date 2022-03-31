@@ -124,6 +124,14 @@ Convey - a simple recipe for .NET Core microservices
 -    Web API extensions (minimal routing-based API, CQRS support)
 https://github.com/snatch-dev/Convey
 
+Pacco
+
+- Pacco does use an event-driven approach in order to asynchronously integrate between the microservices.
+- Use Convey 
+- Operations Service. Subscribes to all messages and inform the user about operations status via web socets push notifications.
+https://github.com/devmentors/Pacco
+
+
 ***GoldenEye***
 - Messaging infrastructure - both internal based on MediatR and external with Kafka,
   - Consume Kafka mensajes  y luego publish event to internal event bus  (MediatR)
@@ -166,3 +174,6 @@ There is a couple of microservices which implemented e-commerce modules over Cat
 - gRPC Communication
 - Microservices Resilience Implementations
 https://github.com/aspnetrun/run-aspnetcore-microservices
+
+A collection of awesome training series, articles, videos, books, courses, sample projects, and tools for Microservices in .NET
+https://github.com/mjebrahimi/Awesome-Microservices-DotNet

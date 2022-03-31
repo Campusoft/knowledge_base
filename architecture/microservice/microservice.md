@@ -212,6 +212,17 @@ https://faun.pub/why-we-failed-implementing-cqrs-in-microservice-architecture-5c
 
 ## Circuit Breaker
 
+# Error handling
+
+During message processing there might be a chance that an exception will be thrown. We can distinguish two types of exceptions:
+
+- domain exception - informs that message cannot be further processed due to some domain logic like. PasswordToShortException
+- infrastructure exception - informs that message cannot be further processed due to infrastructure issues like. connecting to database etc.
+
+In the first scenario, it’s better not to retry the processing (wrong password is not going to be better once we try again). n the second one, we can try a few times before we give up
+https://convey-stack.github.io/documentation/messaging/
+
+
 
 # Observabilidad 
 
@@ -250,18 +261,21 @@ Microservices logging best practices every team should know
 - Handle failures
 https://www.techtarget.com/searchapparchitecture/tip/5-essential-tips-for-logging-microservices
 
+logging
+- excludePaths - optional endpoints that should be excluded from logging (e.g. while performing the health checks by other services).
 
-***Traces***
+
+**Traces**
 Traces—or more precisely, “distributed traces”—are samples of causal chains of events (or transactions) between different components in a microservices ecosystem. And like events and logs, traces are discrete and irregular in occurrence.
 
-***Metrics***
+**Metrics**
 To put it simply, metrics are numeric measurements. Metrics can include:
 - A numeric status at a moment in time (like CPU % used)
 - Aggregated measurements (like a count of events over a one-minute time, or a rate of events-per-minute)
 	
 
 
-***OpenTelemetry***
+**OpenTelemetry**
 
 An observability framework for cloud-native software.
 
@@ -269,7 +283,7 @@ OpenTelemetry is a collection of tools, APIs, and SDKs. You can use it to instru
 
 
 
-***Zipkin***
+**Zipkin**
 
 Zipkin is a distributed tracing system. It helps gather timing data needed to troubleshoot latency problems in service architectures. Features include both the collection and lookup of this data.
 

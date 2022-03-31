@@ -77,6 +77,21 @@ Error en Xiaomi
 
 In some Xiaomi devices “Install via USB” option in “developer options” cannot be turned on with a message popping:”this device is temporarily restricted”. By default, this option will be turned off to ensure the security of the device.
 
+Updating Icon and Name (Android)
+
+-    Replace the png's in mipmap folders with your new icon
+-    If name was changed, update Icon value in MainActivity.cs
+-    If name was changed, update name of (or create a new copy of) icon.xml and icon_round.xml
+-    If name of launcher-foreground.png was changed then update value in icon.xml. Eg:
+```
+    <adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+      <background android:drawable="@color/my_launcher_background"/>
+      <foreground android:drawable="@mipmap/my_launcher_foreground"/>
+    </adaptive-icon>
+```
+    If name wasn't changed and you've cleaned and re-built project but still your new icons are not deploying: Delete obj folder from Android project directory
+
+https://stackoverflow.com/questions/37945767/how-to-change-application-icon-in-xamarin-forms
 
 
 ## Herramientas
