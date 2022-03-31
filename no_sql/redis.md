@@ -23,6 +23,14 @@ This image is based on the popular Alpine Linux project, available in the alpine
 
 # Command
 
+Connect to redis
+By default redis-cli connects to the server at the address 127.0.0.1 with port 6379.
+
+Connect to a different host and port
+```
+$ redis-cli -h redis15.localnet.org -p 6390
+```
+
 List all keys using the KEYS command:
 
 ```
@@ -37,6 +45,7 @@ $ redis-cli FLUSHALL
 
 redis-cli, the Redis command line interface
 https://redis.io/topics/rediscli
+
 
 # Client
 
