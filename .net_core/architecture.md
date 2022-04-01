@@ -131,6 +131,11 @@ Pacco
 - Operations Service. Subscribes to all messages and inform the user about operations status via web socets push notifications.
 https://github.com/devmentors/Pacco
 
+FeedR
+
+Sample (and rather simple) .NET6 microservices solution which acts as the data aggregator for the different feeds. The purpose of this solution is to explore the latest framework and play with different patterns, tools & libraries that can be useful when building distributed applications (but not only)
+- Creado devmentors. (Existe videos)
+https://github.com/devmentors/FeedR
 
 ***GoldenEye***
 - Messaging infrastructure - both internal based on MediatR and external with Kafka,

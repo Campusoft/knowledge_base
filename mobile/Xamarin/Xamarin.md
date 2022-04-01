@@ -93,6 +93,11 @@ Updating Icon and Name (Android)
 
 https://stackoverflow.com/questions/37945767/how-to-change-application-icon-in-xamarin-forms
 
+How to change Android application name in Xamarin.Forms?
+- Opcion 1: Go to your MainActivity and change the Label property:
+- Opcion 2: Or remove the Label of the MainActivity and add the name in the Manifest.xml via UI or code:
+https://stackoverflow.com/questions/44613974/how-to-change-android-application-name-in-xamarin-forms
+https://stackoverflow.com/questions/48337869/how-can-i-change-the-application-name-in-xamarin-android
 
 ## Herramientas
 

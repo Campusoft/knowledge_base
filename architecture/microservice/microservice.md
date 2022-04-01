@@ -344,13 +344,14 @@ With this approach, clients/API-GW sends the request to a component(such as a Lo
 
 
 
-***Consul***
+**Consul**
 
-***Eureka***
+**Eureka**
 
-***Zookeeper***
+**Zookeeper**
 
-***Etcd***
+**Etcd**
+
  A distributed, reliable key-value store for the most critical data of a distributed system 
 
 - Store data in hierarchically organized directories, as in a standard filesystem
@@ -358,6 +359,16 @@ With this approach, clients/API-GW sends the request to a component(such as a Lo
 
 
 Note that because etcd’s performance is heavily dependent upon storage disk speed, it’s highly recommended to use SSDs in etcd environments
+
+etcd is a distributed reliable key-value store for the most critical data of a distributed system, with a focus on being:
+
+-    Simple: well-defined, user-facing API (gRPC)
+-    Secure: automatic TLS with optional client cert authentication
+-    Fast: benchmarked 10,000 writes/sec
+-    Reliable: properly distributed using Raft
+
+
+Por diseño, etcd almacena datos como un par clave-valor de múltiples versiones; lo que significa es que cualquier operación en sus datos no actualiza los datos existentes, sino que creará una nueva versión, de ahí el término multi-versión. Si crea algunos datos en etcd, es la versión 1, entonces cuando realiza alguna operación en esos mismos datos, se crea la versión 2 y la versión 1 permanece como está. Entonces, etcd es efectivamente inmutable. Todas las versiones de datos siguen siendo accesibles y visibles todo el tiempo.
 
 
 # Crosscutting Features
