@@ -191,6 +191,9 @@ Herramienta de línea de comandos para administar kubernates
 		-	NODE: Nombre del nodo
 		-	NOMINATED NODE 
 		-	READINESS GATES
+	Examples:
+	   kubectl get pods --output=wide
+	
 -	Eliminar pod
 	-	[alias] -n [nombre del namespace] delete pod [nombre del pod]
 	-	Esto causa que inmediatamente kubernates cree un nuevo nodo de reemplazo. Esto se puede revisar por el valor en AGE. Esto solo sucede cuando al crear un pod se especifica que siempre debe existir ese pod, en caso contrario, al eliminarlo, no se reiniciará por si solo.
@@ -231,6 +234,13 @@ Herramienta de línea de comandos para administar kubernates
 	-	El archivo kustomize debe llamarse kustomization.yaml
 	-	kubectl kustomize [path archivo yaml]
 	-	Si se ejecuta el comando en el mismo directorio en que está el archivo kustomization.yaml
+	
+-   Connect to terminal in a pod
+    kubectl exec [pod_name] -it -- sh
+    Example:
+    	kubectl exec base-deploy-7d5fff4f77-m467b -it -- sh
+		
+		
 # Kube context
 
 
