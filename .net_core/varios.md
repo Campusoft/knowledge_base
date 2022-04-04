@@ -1,5 +1,11 @@
 # Varios
 
+# Roadmap  
+
+
+This is my (very opinionated) roadmap for .NET developers that want to focus on backend and specifically work with microservices.
+https://github.com/Elfocrash/.NET-Backend-Developer-Roadmap
+
 # Configurations 
 
 
@@ -12,6 +18,14 @@ Multiple Ways To Access Configurations In .NET Applications. (appsettings)
 - Bind
 - Options Pattern
 https://thecodeblogger.com/2021/04/20/multiple-ways-to-access-configurations-in-net-applications/
+
+# date and time
+
+
+nodatime
+Noda Time is an alternative date and time API for .NET. It helps you to think about your data more clearly, and express operations on that data more precisely.
+
+https://github.com/nodatime/nodatime
 
 
 # CancellationToken 
@@ -356,7 +370,7 @@ https://github.com/jasontaylordev/NorthwindTraders
 # Mapping Objects
 
 
-Automapper
+**Automapper**
 
 Profile Instances
 
@@ -374,7 +388,10 @@ Open Generics
 AutoMapper can support an open generic type map. Create a map for the open generic types
 https://docs.automapper.org/en/stable/Open-Generics.html#open-generics
 
-
+**Mapster**
+Mapster - The Mapper of Your Domain
+Writing mapping methods is a machine job. Do not waste your time, let Mapster do it.
+https://github.com/MapsterMapper/Mapster
 
 # Building
 

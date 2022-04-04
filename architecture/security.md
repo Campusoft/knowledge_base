@@ -7,6 +7,11 @@ Autenticación de Doble Factor (2FA).
 
 La prueba de seguridad de aplicaciones dinámicas (DAST) es una metodología de prueba de seguridad de caja negra en la que una aplicación se prueba desde el exterior. Un evaluador que usa DAST examina una aplicación cuando se está ejecutando e intenta piratearla como lo haría un atacante. En el otro extremo del espectro está la prueba de seguridad de aplicaciones estáticas (SAST), que es una metodología de prueba de caja blanca. Un evaluador que usa SAST examina la aplicación desde adentro, buscando en su código fuente condiciones que indiquen que podría haber una vulnerabilidad de seguridad.
 
+# Rest API
+
+ Checklist of the most important security countermeasures when designing, testing, and releasing your API 
+https://github.com/shieldfy/API-Security-Checklist
+
 # OWASP
 
 OWASP es un proyecto de código abierto dedicado a determinar y combatir las causas que hacen que el software sea inseguro
