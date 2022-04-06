@@ -1,5 +1,9 @@
 # Security
 
+
+- principle of least privilege or deny by default
+
+
 Autenticación de Factor Único - solo en una contraseña
 Autenticación Multifactor (MFA).
 Autenticación de Doble Factor (2FA).
@@ -15,10 +19,52 @@ https://github.com/shieldfy/API-Security-Checklist
 # OWASP
 
 OWASP es un proyecto de código abierto dedicado a determinar y combatir las causas que hacen que el software sea inseguro
+https://owasp.org/www-project-top-ten/
+
+
+## Broken Access Control 
+
+- Stateful session identifiers should be invalidated on the server after logout. Stateless JWT tokens should rather be short-lived so that the window of opportunity for an attacker is minimized. For longer lived JWTs it's highy recommended to follow the OAuth standards to revoke access.
+
+https://owasp.org/Top10/A01_2021-Broken_Access_Control/
 
 ## CSRF
 
 El ataque CSRF funciona porque el servidor receptor no comprueba de dónde procede la solicitud. Es decir, no queda claro si la solicitud HTTP ha sido creada por la propia página web o si su origen es externo. En este contexto, el atacante se aprovecha de una laguna de seguridad del navegador; transmite las solicitudes sin evaluar las consecuencias.
+
+## Cross-site scripting (XSS)
+
+
+X-XSS-Protection - Preventing Cross-Site Scripting Attacks
+
+- Posee un digrama
+- Enable in Nginx
+- Enable in Apache
+- Enable on IIS
+- An important thing to keep in mind is that the X-XSS-Protection header is pretty much being replaced with the new Content Security Policy (CSP) reflected-xss directive
+https://www.keycdn.com/blog/x-xss-protection
+
+## X-Frame-Options
+
+X-Frame-Options
+https://developer.mozilla.org/en-US/docs/web/http/headers/x-frame-options
+
+## X-Content-Type-Options
+
+X-Content-Type-Options
+https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Content-Type-Options
+
+## Content Security Policy
+
+Content Security Policy (CSP). Quick Reference Guide 
+https://content-security-policy.com/
+
+
+Content-Security-Policy
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy
+
+## CORS (Cross-Origin Resource Sharing) 
+
 
 # Audit Trail
 
@@ -26,6 +72,7 @@ El ataque CSRF funciona porque el servidor receptor no comprueba de dónde proced
 X-Forwarded-For
 La cabecera X-Forwarded-For (XFF) es un estándar de facto para identificar el origen de la dirección IP de un cliente conectado a un servidor web a través de un proxy HTTP o un balanceador de carga
 https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Forwarded-For
+
 
 # Varios
 

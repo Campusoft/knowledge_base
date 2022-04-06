@@ -424,3 +424,15 @@ https://github.com/elastic/elasticsearch-net
 
 https://www.elastic.co/guide/en/elasticsearch/client/net-api/current/mapping.html 
 
+
+# Kestrel
+
+Kestrel is a cross-platform web server for ASP.NET Core.
+Kestrel supports the following scenarios:
+
+- HTTPS
+- HTTP/2 (except on macOS†)
+- Opaque upgrade used to enable WebSockets
+- Unix sockets for high performance behind Nginx
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-6.0

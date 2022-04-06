@@ -1,22 +1,33 @@
 # Security
 
-
 NWebsec consists of several security libraries for ASP.NET applications. These libraries work together to remove version headers, control cache headers, stop potentially dangerous redirects, and set important security headers
 https://docs.nwebsec.com/en/latest/
 
+- NWebsec features can be enabled through middleware or MVC filter attributes.
+- Strict-Transport-Security
+- X-Content-Type-Options
+- X-Download-Options
+- X-Frame-Options
+- X-Xss-Protection
+- Content-Security-Policy
+- X-Robots-Tag
+
+
+
+Revizar
+The NWebsec.SessionSecurity library improves ASP.NET session security by enforcing a strong binding between an authenticated user’s identity and the user’s session identifier.
+http://docs.nwebsec.com/projects/SessionSecurity/en/latest/
 
 # Audit
 
 Configure ASP.NET Core to work with proxy servers and load balancers
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/proxy-load-balancer?view=aspnetcore-6.0
 
-
-***REvisiones***
-The X-Forwarded-* headers are set by proxies in asp .net core
+**_REvisiones_**
+The X-Forwarded-\* headers are set by proxies in asp .net core
 https://www.iaspnetcore.com/blog/blogpost/5a068d74e42370369cf0b718
 
 ## Implementaciones
-
 
 Creating Simple Audit Trail With Entity Framework Core
 In this article, you will see how to do this inside the SaveChanges() method.
@@ -24,19 +35,17 @@ https://www.codeproject.com/Articles/5259677/Creating-Simple-Audit-Trail-With-En
 
 ## Entity Framework Core Plus Audit
 
- 
 Z.EntityFramework.Plus.EFCore. EF+ Audit easily tracks changes, exclude/include entity or property and auto save audit entries in the database.
 
 https://entityframework-plus.net/ef-core-audit
 
-***Errores***
----------------------
+## **_Errores_**
+
 System.ArgumentException: Destination array was not long enough. Check the destination index, length, and the array's lower bounds.
 Parameter name: destinationArray
-   at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
-   at System.Collections.Generic.List`1.CopyTo(T[] array, Int32 arrayIndex)
-   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
-   at Z.EntityFramework.Plus.AuditConfiguration.Clone()
+at System.Array.Copy(Array sourceArray, Int32 sourceIndex, Array destinationArray, Int32 destinationIndex, Int32 length, Boolean reliable)
+at System.Collections.Generic.List`1.CopyTo(T[] array, Int32 arrayIndex) at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+at Z.EntityFramework.Plus.AuditConfiguration.Clone()
 
 Solucion:
 move the call of the audit configuration in a static constructor (called only once)
@@ -53,43 +62,44 @@ Interaction extensions to audit different systems are provided, such as Entity F
 https://github.com/thepirat000/Audit.NET
 
 Campos
+
 - UserName
 
-***Data providers***
+**_Data providers_**
 
 A data provider (or storage sink) contains the logic to handle the audit event output, where you define what to do with the audit logs.
 
-***FileDataProvider***
+**_FileDataProvider_**
 
+**_SqlDataProvider_**
 
-***SqlDataProvider***
 - Se guarda en una unica tabla.
 - Se puede configurar las columnas especificas para guardar alguna informacion existente en el audit log.
 - El audit log, se guarda en JSON en una columna que se configure.
-https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.SqlServer#auditnetsqlserver
+  https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.SqlServer#auditnetsqlserver
 
-***Kafka***
+**_Kafka_**
 Apache Kafka Server provider for Audit.NET library (An extensible framework to audit executing operations in .NET).
 https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.NET.Kafka/README.md
 
-***Elasticsearch***
-
+**_Elasticsearch_**
 
 Elasticsearch provider for Audit.NET library (An extensible framework to audit executing operations in .NET).
 https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.NET.ElasticSearch/README.md
 
 Errores
 
--------
+---
 
-ElasticsearchClientException: Request failed to execute. Call: Status code 400 from: PUT /GET.Home.Index/_create/18bccbbf-962a-4f53-bd60-1c22677c9ddc. ServerError: Type: invalid_index_name_exception Reason: "Invalid index name [GET.Home.Index], must be lowercase"
+ElasticsearchClientException: Request failed to execute. Call: Status code 400 from: PUT /GET.Home.Index/\_create/18bccbbf-962a-4f53-bd60-1c22677c9ddc. ServerError: Type: invalid_index_name_exception Reason: "Invalid index name [GET.Home.Index], must be lowercase"
 
 Relacionado, al problema Invalid index name, must be lowercase
 https://github.com/thepirat000/Audit.NET/issues/266
 
-Elasticsearch.Net.ElasticsearchClientException: Request failed to execute. Call: Status code 400 from: PUT /AppDbContext/_create/99063695-d9f1-4953-897d-0b0777844a85. ServerError: Type: invalid_index_name_exception Reason: "Invalid index name [AppDbContext], must be lowercase"
+Elasticsearch.Net.ElasticsearchClientException: Request failed to execute. Call: Status code 400 from: PUT /AppDbContext/\_create/99063695-d9f1-4953-897d-0b0777844a85. ServerError: Type: invalid_index_name_exception Reason: "Invalid index name [AppDbContext], must be lowercase"
 
 Establecer en minusculas.
+
 ```
 mvcOptions.AddAuditFilter(config => config
            ...
@@ -97,56 +107,48 @@ mvcOptions.AddAuditFilter(config => config
           ...
 ```
 
--------
+---
 
+**_Extensions_**
 
-
-***Extensions***
-
-***Audit.WebApi***
+**_Audit.WebApi_**
 
 ASP.NET MVC Web API Audit Extension for Audit.NET library (An extensible framework to audit executing operations in .NET).
 
 Generate Audit Trails for ASP.NET MVC Web API calls. This library provides a configurable infrastructure to log interactions with your Asp.NET (or Asp.NET Core) Web API.
 https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.WebApi#auditwebapi
 
-***Audit.EntityFramework***
+**_Audit.EntityFramework_**
 Automatically generates Audit Logs for EntityFramework's operations. Supporting EntityFramework and EntityFramework Core
 
 Mode: To indicate the audit operation mode
 
 - Opt-Out: All the entities are tracked by default, except those explicitly ignored. (Default)
 - Opt-In: No entity is tracked by default, except those explicitly included.
-https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#settings
+  https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#settings
 
 - Exclude properties (columns)
-https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#exclude-properties-columns
-
+  https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#exclude-properties-columns
 
 Configuration (https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.EntityFramework/README.md#settings)
 
 - IncludeEntityObjects: To indicate if the output should contain the complete entity object graphs. (Default is false)
 
+**_Custom Actions_**
 
-***Custom Actions***
-
-
-***Laboratorio***
+**_Laboratorio_**
 
 Utiliza Clean.Architecture.Solution.Template
 dotnet new ca-sln
 
-
 dotnet new clean-arch -o AuditNet.Lab
 
-
-***Varios***
+**_Varios_**
 
 Using ASP.NET Idenity User instead of Environment.UserName
 https://github.com/thepirat000/Audit.NET/issues/299
 
 # Revisiones / TEMP. (Proyecto BIT)
 
-●	https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project
-●	https://www.owasp.org/images/5/5e/OWASP-Top-10-2017-es.pdf
-
+● https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project
+● https://www.owasp.org/images/5/5e/OWASP-Top-10-2017-es.pdf
