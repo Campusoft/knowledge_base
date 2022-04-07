@@ -85,7 +85,7 @@ The header of the JWT contains information about the key and encryption method u
 
 The alg claim indicates the algorithm that was used to sign the token, while the kid claim indicates the particular public key that was used to validate the token.
 
-***Validar con jwt.io, la firma del Token.***
+**Validar con jwt.io, la firma del Token.**
 
 Using jwt.io to verify the signature of a JWT token
 - Requiere  x5c
@@ -374,8 +374,16 @@ Propietarios
 A one-time password (OTP) is an automatically generated sequence of numeric or alphanumeric characters that will authenticate a user for a single login or transaction. It is used in a multifactor authentication (MFA) process to secure access to data.
 
 
+# Revoking Access
+
+
+Revoking Access
+- Token Database
+- Self-Encoded Tokens
+https://www.oauth.com/oauth2-servers/listing-authorizations/revoking-access/
 
 # Referencias
+
 
 
 
