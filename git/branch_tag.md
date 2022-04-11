@@ -19,3 +19,7 @@ https://david-estevez.gitbooks.io/the-git-the-bad-and-the-ugly/content/es/buenas
 
 Flujo de trabajo de Gitflow
 https://www.atlassian.com/es/git/tutorials/comparing-workflows/gitflow-workflow
+
+
+Ilustracion squash vs merge vs rebase
+https://twitter.com/kamranahmedse/status/1512392092537999368

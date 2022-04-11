@@ -222,6 +222,7 @@ During message processing there might be a chance that an exception will be thro
 In the first scenario, it’s better not to retry the processing (wrong password is not going to be better once we try again). n the second one, we can try a few times before we give up
 https://convey-stack.github.io/documentation/messaging/
 
+"Error responses are classified as “retryable” or “non-retryable”"
 
 
 # Observabilidad 

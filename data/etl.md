@@ -1,3 +1,13 @@
+# ETL
+
+Data Pipeline vs ETL
+While the terms “data pipeline” and ETL are often used interchangeably, there are some key differences between the two. Unlike traditional ETL systems, data pipelines don’t have to move data in batches. Data can be processed in real-time (or streamed) through a data pipeline. In addition, a data pipeline might not transform the data at all but simply move it across systems.
+
+Types of Data Pipelines Solutions
+
+Data pipelines can be categorized based on the type of analytics and workflows they support. Thus, the two main types of data pipelines are batch processing, which is used for traditional analytics, and streaming, which is used for real-time analytics.
+
+
 # Apache Airflow
 
 Airflow.md

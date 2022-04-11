@@ -146,6 +146,14 @@ Creating custom password validators for ASP.NET Core Identity
 - Validacion ejemplo, para validar que la clave no sea igual al usuario 
 https://andrewlock.net/creating-custom-password-validators-for-asp-net-core-identity-2/
 
+
+
+**Books**
+
+Pro ASP.NET Core Identity
+Under the Hood with Authentication and Authorization in ASP.NET Core 5 and 6 Applications
+
+
 # Revisiones
 
 
