@@ -256,7 +256,7 @@ Local kubernetes development
 https://kapernikov.com/local-kubernetes-development/
 
 
-***minikube***
+**minikube**
 
 Errores con virtualbox
 
@@ -264,7 +264,7 @@ Exiting due to RSRC_DOCKER_MEMORY: Docker Desktop tiene solo 985MiB disponible
 s, menos que los 1800MiB requeridos por Kubernetes
 
 
-***K3s***
+**K3s**
 
 - Lightweight Kubernetes
 - The certified Kubernetes distribution built for IoT & Edge computing
@@ -273,7 +273,7 @@ https://k3d.io/
 
 
 
-***Skaffold***
+**Skaffold**
 
 Local Kubernetes Development. 
 
@@ -306,7 +306,7 @@ If Kubernetes is the operating  system of the internet,  then Helm is a package 
 
 https://helm.sh/
 
-
+ 
 # Referencias
 
 etcd is the backend for service discovery and stores cluster state and configuration
@@ -357,3 +357,10 @@ https://kubernetes.io/docs/reference/glossary/?fundamental=true
 
 Manage TLS Certificates in a Cluster
 https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
+
+
+**GitOps**
+
+GitOps allows you to store configuration and policy in Git and to apply it across your Kubernetes infrastructure using agents. The advantages over devops include consistency, avoiding configuration drift, and ensuring that security, testing, and policy checks are initiated early in the CI/CD process. You may have encountered GitOps with Flux or Argo CD, two open source projects that allow you to implement GitOps.
+ 
+ 

@@ -525,3 +525,10 @@ Composite UIs for Microservices
 -    Data composition
 -    Vertical Slice APIs
 https://jimmybogard.com/composite-uis-for-microservices-vertical-slice-apis/
+
+
+# Ideas/Conceptualizaciones
+
+
+Porque .net core facilita microservicios?. Para ejecutarse no requiere un componente centralizado tipo IIS sino posee un componente integrado para exponerse. Kestrel server. Es similar en spring boot ?. Esto facilita la aplicaciones independientes que fluye en arquitectura microservicios. Ademas son cross-platform.
+ 

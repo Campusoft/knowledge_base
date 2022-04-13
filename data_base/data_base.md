@@ -11,7 +11,11 @@ Once they are set, changing them may break dependent applications. This is all t
 Developer Context Switching
 
 Having consistent naming conventions across your data model means that developers will need to spend less time looking up the names of tables, views, and columns. Writing and debugging 
+# IDs
 
+## Snowflake IDs
+
+Snowflake is a service used to generate unique IDs for objects within Twitter (Tweets, Direct Messages, Users, Collections, Lists etc.). These IDs are unique 64-bit unsigned integers, which are based on time, instead of being sequential. The full ID is composed of a timestamp, a worker number, and a sequence number.
 
 # Tools
 

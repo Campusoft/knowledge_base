@@ -118,6 +118,12 @@ http://docs.identityserver.io/en/latest/endpoints/endsession.html
 Events are structured data and include event IDs, success/failure information, categories and details. This makes it easy to query and analyze them and extract useful information that can be used for further processing.
 http://docs.identityserver.io/en/latest/topics/events.html
 
+IEventSink
+
+Default implementation of the event service. Write events raised to the log.
+https://github.com/IdentityServer/IdentityServer4/blob/main/src/IdentityServer4/src/Services/Default/DefaultEventSink.cs
+
+
 # Firma y Validacion Token
 
 
