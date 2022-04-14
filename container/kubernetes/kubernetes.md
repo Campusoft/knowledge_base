@@ -263,6 +263,14 @@ Errores con virtualbox
 Exiting due to RSRC_DOCKER_MEMORY: Docker Desktop tiene solo 985MiB disponible
 s, menos que los 1800MiB requeridos por Kubernetes
 
+minikube is the most popular option for running the local Kubernetes cluster for the following reasons:
+
+-    It can be deployed on VM, bare metal, or as a Docker container.
+-    It supports different container runtimes(Docker, containerd, etc.).
+-    It has out-of-the-box support for a Kubernetes dashboard and load balancing.
+-    It supports various VM drivers.
+
+
 
 **K3s**
 
@@ -317,6 +325,16 @@ etcd is the backend for service discovery and stores cluster state and configura
 - Site Reliability Engineering: https://sre.google/sre-book/table-of-contents/
 	- La ingeniería de confiabilidad del sitio (SRE) es un enfoque de ingeniería de software para las operaciones de TI. Los equipos de SRE utilizan el software para gestionar los sistemas, resolver los problemas y automatizar las tareas operativas.
 	
+
+Kubernetes on Windows: 6 Life-Saving Tools & Tips
+- Native Linux Commands with WSL
+- Docker Desktop on Windows
+- Rancher Desktop
+- kind
+- minikube
+- Lens
+https://loft.sh/blog/kubernetes-on-windows-6-life-saving-tools-and-tips
+
 
 # Glosario
 
