@@ -36,7 +36,7 @@ Los componentes que forman el plano de control toman decisiones globales sobre e
 - Cloud controller manager ejecuta controladores que interactúan con proveedores de la nube. El binario cloud-controller-manager es una característica alpha que se introdujo en la versión 1.6 de Kubernetes.
 
 
-***Node***
+**Node**
 
 Componentes de nodo
 
@@ -58,12 +58,31 @@ Cada objeto de Kubernetes incluye dos campos como objetos anidados que determina
 
 # Servicios
 
--	Cluster IP
-	-	IP fija dentro del cluster. Load balancer entre los pods del servicio
--	Node Port
-	-	Crea un puerto en cada nodo que recibe el tráfico y lo dirige al pod determinado a través de kube-proxy
--	Load Balancer
-	-	Servicio del proveedor de cloud. Redirecciona el tráfico a los pods a través de un balanceador creado por kubernetes en el proveedor de cloud
+Todos los servicios de Kubernetes tienen la capacidad de proporcionar acceso a un Cluster desde el exterior, pero cada uno lo hace de una manera diferente.
+
+En Kubernetes existen 4 tipos de Servicios:
+	
+- Cluster IP
+  -	IP fija dentro del cluster. Load balancer entre los pods del servicio
+- Node Port
+  -	Crea un puerto en cada nodo que recibe el tráfico y lo dirige al pod determinado a través de kube-proxy
+- Load Balancer
+  -	Servicio del proveedor de cloud. Redirecciona el tráfico a los pods a través de un balanceador creado por kubernetes en el proveedor de cloud
+- Ingress
+
+**Cluster IP**
+
+**Ingress**
+
+Este servicio funciona de un modo diferente a los demás. Cuando creamos un ClusterIP o un NodePort basta con crear un objeto Kuberntes de ese tipo de servicio y aplicarlo al Cluster. Pero antes de poder usar Ingress necesitamos de algo llamado “Controlador”.
+
+Un controlador de Ingress es un Pod o conjunto de Pods que se ejecutan en nuestro Cluster y cuya función es asegurarse de que el tráfico entrante se administra del modo que nosotros hayamos especificado.
+
+El problema es que en Kubernetes no hay un controlador de Ingress por defecto, por lo que debemos instalarlo nosotros.
+
+**Referencias**
+Ingress en Kubernetes Desmitificado: ¿Qué lo diferencia de un NodePort o un LoadBalancer?
+https://desarrollofront.medium.com/ingress-en-kubernetes-desmitificado-qu%C3%A9-lo-diferencia-de-un-nodeport-o-un-loadbalancer-b0cf060a6f8a
 
 # Features
 
@@ -375,6 +394,11 @@ https://kubernetes.io/docs/reference/glossary/?fundamental=true
 
 Manage TLS Certificates in a Cluster
 https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
+
+
+Cloud Native certificate management. X.509 certificate management for Kubernetes and OpenShift
+
+https://cert-manager.io/
 
 
 **GitOps**

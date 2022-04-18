@@ -1,6 +1,7 @@
 # CSS
 
 # Selectors
+
 Selectors are patterns used to select elements to style
 
 - Id selector (#id): uses the id attribute defined for an element
@@ -29,14 +30,6 @@ Reference:
 - https://www.w3docs.com/snippets/css/how-to-override-css-styles.html
 
 
-# CSS Preprocesor
-
-# Sass
-Sass is a CSS extension language, Sass allows to write code fro generate CSS.
-
-- https://sass-lang.com/guide
-
-
 # flex 
 
  A Complete Guide to Flexbox 
@@ -46,10 +39,34 @@ Conceptos Básicos de flexbox
 https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 
 
+# Gradients 
+
+## Radial  Gradients 
+
+A Deep CSS Dive Into Radial And Conic Gradients
+- How Does A Radial Gradient Work?. Existe ilustraciones para mejor entendimiento
+- Conic Gradient
+- Use Cases For Conic Gradients. Varios ejemplos
+https://www.smashingmagazine.com/2022/01/css-radial-conic-gradient/
+
+
+CSS Gradient is a happy little website and free tool that lets you create a gradient background for websites
+https://cssgradient.io/
+
+# CSS Preprocesor
+
+## Sass
+
+Sass is a CSS extension language, Sass allows to write code fro generate CSS.
+
+- https://sass-lang.com/guide
+
+
+
 # CSS Framework
 
-# Bootstrap
+## Bootstrap
 
-# Tailwind CSS
+## Tailwind CSS
 
-# Bulma
+## Bulma

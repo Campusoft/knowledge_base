@@ -28,3 +28,6 @@ Apache Superset is a modern data exploration and visualization platform.
 Apache Superset is a modern, enterprise-ready business intelligence web application. It is fast, lightweight, intuitive, and loaded with options that make it easy for users of all skill sets to explore and visualize their data, from simple pie charts to highly detailed deck.gl geospatial charts.
 
 https://superset.apache.org/
+
+Preset Cloud is a fully hosted, hassle free cloud service for Apache Superset™. Get started for free today!
+https://www.preset.io/product/

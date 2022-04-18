@@ -1,4 +1,8 @@
 
+
+ A component is an encapsulated part of a software system. A component has an interface. Components serve as the building blocks for the structure of a system. At a programming-language level, components may be represented as modules, classes, objects or a set of related functions.
+ 
+ 
 # Recomendaciones
 
 - Se consistente. Si hace algo de cierta manera, haga todas las cosas similares de la misma manera

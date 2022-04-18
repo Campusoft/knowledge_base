@@ -129,20 +129,26 @@ abp posee un  ErrorHandler
 
 form-utils
 
-***abp-modal***
+**abp-modal**
 
 - Posee un comportamiento de dirty, sobre las modificaciones relacionadas en la forma, para solicitar confirmacion en salir sin guardar. 
 
-***abp-extensible-form***
+**abp-extensible-form**
 
 
-***abp-page***
+**abp-page**
 
+**abp-page-alert-container**
 
+Utiliza servicio PageAlertService para presentar alertas bootstrap en theme-basic
+https://github.com/abpframework/abp/blob/dev/npm/ng-packs/packages/theme-basic/src/lib/components/page-alert-container/page-alert-container.component.html 
 
-***mapEnumToOptions***
+PageAlertService posee show para visualizar alertas
+https://github.com/abpframework/abp/blob/dev/npm/ng-packs/packages/theme-shared/src/lib/services/page-alert.service.ts
 
-***ListService***
+**mapEnumToOptions**
+
+**ListService**
 
 ListService is a utility service to provide easy pagination, sorting, and search implementation.
 - Extending query with custom variables

@@ -38,6 +38,16 @@ Routing en Angular: Guía completa: Parte 4
 -  query params
 https://www.acontracorrientech.com/routing-en-angular-guia-completa-parte-4/
 
+# router-outlet
+
+Acts as a placeholder that Angular dynamically fills based on the current router state.
+
+<router-outlet #outlet="outlet"></router-outlet>
+
+Each outlet can have a unique name, determined by the optional name attribute. Named outlets can be the targets of secondary routes. 
+https://angular.io/api/router/RouterOutlet
+
+
 # Util
 
 Se puede activar tracing de route 

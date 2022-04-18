@@ -23,6 +23,15 @@ https://docs.abp.io/en/abp/latest/UI/AspNetCore/Layout-Hooks#layout-hook-points
 
 **Theme**
 
+abp posee tres layout
+- eLayoutType.account. Component abp AccountLayoutComponent
+- eLayoutType.application. Component abp ApplicationLayoutComponent
+- eLayoutType.empty. Component abp EmptyLayoutComponent
+
+Con RoutesService se agrega los routes. Cada route posee propiedad layout defines in which layout the route will be loaded. (default: eLayoutType.empty)
+https://docs.abp.io/en/abp/latest/UI/Angular/Modifying-the-Menu#via-routesservice
+
+
 Implementing a Theme. (Personalizar la plantilla)
 
 The easiest way to create a new theme is to add Basic Theme Source Code to your project via ABP CLI command and customize it.

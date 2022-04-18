@@ -1,3 +1,11 @@
+# Microservices 
+
+A microservices architecture is not just built around design principles. Some call it a  culture. It’s a result of many other collaborative efforts. Yes, the design is a key element, but we also need to worry about collaboration between developers and domain experts, the communication between teams and team members, continuous integration and delivery, and many other issues. 
+
+When we develop microservices, we need to consider that not all microservices are similar
+
+
+
 # Microservices Characteristics
 
 James Lewis and Martin Fowler provided a reasonable common set of characteristics that fit most of the microservices architectures:
@@ -530,5 +538,6 @@ https://jimmybogard.com/composite-uis-for-microservices-vertical-slice-apis/
 # Ideas/Conceptualizaciones
 
 
-Porque .net core facilita microservicios?. Para ejecutarse no requiere un componente centralizado tipo IIS sino posee un componente integrado para exponerse. Kestrel server. Es similar en spring boot ?. Esto facilita la aplicaciones independientes que fluye en arquitectura microservicios. Ademas son cross-platform.
- 
+Porque .net core facilita microservicios?. Para ejecutarse no requiere un componente centralizado tipo IIS sino posee un componente integrado para exponerse. Kestrel server.  Esto facilita la aplicaciones independientes que fluye en arquitectura microservicios. Ademas son cross-platform. . Tambien Spring Boot, a popular Java-based  microservices framework, lets you build microservices as self contained, self-executable JAR files. 
+
+The twelve-factor app” es una metodología para construir aplicaciones SaaS. VII. Asignación de puertos. Las aplicaciones “twelve factor” son completamente auto-contenidas y no dependen de un servidor web en ejecución para crear un servicio web público. 

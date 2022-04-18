@@ -1,0 +1,3 @@
+# Timescale 
+
+TimescaleDB is a category-defining relational database for time-series data. Packaged as a PostgreSQL extension, TimescaleDB is designed to be easy to use, easy to get started, and easy to maintain. All your PostgreSQL knowledge and tools should just work. Our documentation includes multiple resources to help you get started with your first project, dive into the details of our products and services, and learn more about time-series data 

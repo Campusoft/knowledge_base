@@ -1,5 +1,5 @@
 
-***Why Naming Conventions Are Important***
+**Why Naming Conventions Are Important**
 
 Names Are Contracts
 
@@ -11,6 +11,7 @@ Once they are set, changing them may break dependent applications. This is all t
 Developer Context Switching
 
 Having consistent naming conventions across your data model means that developers will need to spend less time looking up the names of tables, views, and columns. Writing and debugging 
+
 # IDs
 
 ## Snowflake IDs
