@@ -90,8 +90,6 @@ https://themeselection.com/demo/chameleon-admin-template/landing/
 
 https://codedthemes.com/
 
-
-
 Guru  Able Angular Free/Lite Admin Template is complete solution for  your dashboard creation. It a comes with default layout version, with limited options,  Google optimised, font integration, high speed, mature and sophisticated, extremely well organised code makes Guru  Able Lite a completely flexible solution for any type of back-end application project.
 - Angular 
 https://codedthemes.com/item/guru-able-free-angular-admin-template/

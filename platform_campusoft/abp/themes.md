@@ -15,6 +15,11 @@ Abp posee Layout Hook Points, para inyectar contenido en los diferentes puntos d
 https://docs.abp.io/en/abp/latest/UI/AspNetCore/Layout-Hooks#layout-hook-points
 
 
+Ejemplo de una proyecto para personalizar la plantilla abp con plantilla bootstrap "Stisla"
+Stisla Is a bootstrap-based admin template
+https://github.com/realLiangshiwei/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla
+https://github.com/stisla/stisla
+
 # Angular
 
 -    Ng Bootstrap will be used as the UI component library.

@@ -26,9 +26,7 @@ https://pixelbag.net/bootstrap-4-grid-ai-template-with-guides/
 - Cual es el ancho que se debe trabajar el area trabajo en algun programa (ilustrador photoshop) para crear plantillas Bootstrap
 
 
-algunas plantillas generan  1920 x 860 imagenes para fondos  o slide. El ancho 1920 el alto es un valor proporcionar segun el contenido de las imagenes
-
-
+Algunas plantillas generan  1920 x 860 imagenes para fondos  o slide. El ancho 1920 el alto es un valor proporcionar segun el contenido de las imagenes
 
 
 Extra large
