@@ -70,6 +70,13 @@ En Kubernetes existen 4 tipos de Servicios:
   -	Servicio del proveedor de cloud. Redirecciona el tráfico a los pods a través de un balanceador creado por kubernetes en el proveedor de cloud
 - Ingress
 
+
+There are several ways to expose your application to the outside of your Kubernetes cluster, and you'll want to select the appropriate one based on your specific use case. 
+
+The four main options we'll be comparing in this post are: ClusterIP, NodePort, LoadBalancer, and Ingress. Each provides a way to expose services and is useful in different situations. A service is essentially a frontend for your application that automatically reroutes traffic to available pods in an evenly distributed way. Services are an abstract way of exposing an application running on a set of pods as a network service. Pods are immutable, which means that when they die, they are not resurrected. The Kubernetes cluster creates new pods in the same node or in a new node once a pod dies. 
+
+
+
 **Cluster IP**
 
 **Ingress**
@@ -80,9 +87,18 @@ Un controlador de Ingress es un Pod o conjunto de Pods que se ejecutan en nuestr
 
 El problema es que en Kubernetes no hay un controlador de Ingress por defecto, por lo que debemos instalarlo nosotros.
 
+Kubernetes Ingress is an API object that provides routing rules to manage external users' access to the services in a Kubernetes cluster. 
+
+Ingress is made up of an Ingress API object and the Ingress Controller. As we have discussed, Kubernetes Ingress is an API object that describes the desired state for exposing services to the outside of the Kubernetes cluster. An Ingress Controller is essential because it is the actual implementation of the Ingress API. An Ingress Controller reads and processes the Ingress Resource information and usually runs as pods within the Kubernetes cluster.  
+
+Ingress Controller
+
+
 **Referencias**
 Ingress en Kubernetes Desmitificado: ¿Qué lo diferencia de un NodePort o un LoadBalancer?
 https://desarrollofront.medium.com/ingress-en-kubernetes-desmitificado-qu%C3%A9-lo-diferencia-de-un-nodeport-o-un-loadbalancer-b0cf060a6f8a
+
+
 
 # Features
 
