@@ -421,4 +421,5 @@ https://cert-manager.io/
 
 GitOps allows you to store configuration and policy in Git and to apply it across your Kubernetes infrastructure using agents. The advantages over devops include consistency, avoiding configuration drift, and ensuring that security, testing, and policy checks are initiated early in the CI/CD process. You may have encountered GitOps with Flux or Argo CD, two open source projects that allow you to implement GitOps.
  
- 
+ Understanding kubernetes networking: pods
+https://medium.com/google-cloud/understanding-kubernetes-networking-pods-7117dd28727 
