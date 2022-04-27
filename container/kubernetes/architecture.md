@@ -34,3 +34,28 @@ For every newly created pod or other unscheduled pods, kube-scheduler selects an
 
 
 https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/
+
+# Pod
+
+Kubernetes makes a bolder step and chooses a group of cohesive containers, called a Pod, as the smallest deployable unit.
+
+Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.
+
+Pod networking
+
+Each Pod is assigned a unique IP address for each address family. Every container in a Pod shares the network namespace, including the IP address and network ports
+
+Within a Pod, containers share an IP address and port space, and can find each other via localhost.
+
+
+Pods in a Kubernetes cluster are used in two main ways:
+Pods that run a single container. 
+Pods that run multiple containers that need to work together.
+
+## Multi Container Pods In Kubernetes
+
+Multi Container Pods In Kubernetes
+- Design-patterns of Multi Container Pods. (Ilustraciones)
+- Communication Inside a Multi Container Pod
+- How To Deploy A Multi Container Pod? 
+https://k21academy.com/docker-kubernetes/multi-container-pods/

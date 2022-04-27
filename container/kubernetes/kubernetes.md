@@ -111,17 +111,24 @@ Se requiere tener instalado un controlador en el proveedor. Ej. nginx. https://w
 Al instalar nginx se crea un loadBalancer y clusterIP
 
 # ConfigMaps
+
+Un configmap es un objeto de la API utilizado para almacenar datos no confidenciales en el formato clave-valor. Los Pods pueden utilizar los ConfigMaps como variables de entorno, argumentos de la linea de comandos o como ficheros de configuración en un Volumen.
+
 -	https://kubernetes.io/es/docs/concepts/configuration/configmap/	
--	Un configmap es un objeto de la API utilizado para almacenar datos no confidenciales en el formato clave-valor. Los Pods pueden utilizar los ConfigMaps como variables de entorno, argumentos de la linea de comandos o como ficheros de configuración en un Volumen.
+
 
 # Secret
+
+Los objetos de tipo Secret en Kubernetes te permiten almacenar y administrar información confidencial, como contraseñas, tokens OAuth y llaves ssh. Poniendo esta información en un Secret es más seguro y más flexible que ponerlo en la definición de un Pod o en un container image.
+
+No están fuertemente cifrados solo codificados en base64.
+
 -	https://kubernetes.io/es/docs/concepts/configuration/secret/
--	Los objetos de tipo Secret en Kubernetes te permiten almacenar y administrar información confidencial, como contraseñas, tokens OAuth y llaves ssh. Poniendo esta información en un Secret es más seguro y más flexible que ponerlo en la definición de un Pod o en un container image.
--	No están fuertemente cifrados solo codificados en base64.
 
 # Kustomization
+Permite con un cliente generar manifiestos
+
 -	https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
--	Permite con un cliente generar manifiestos
 
 # Providers
 
