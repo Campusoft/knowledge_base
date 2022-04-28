@@ -377,6 +377,9 @@ Kubernetes on Windows: 6 Life-Saving Tools & Tips
 - Lens
 https://loft.sh/blog/kubernetes-on-windows-6-life-saving-tools-and-tips
 
+Adding Windows nodes
+You can use Kubernetes to run a mixture of Linux and Windows nodes, so you can mix Pods that run on Linux on with Pods that run on Windows. This page shows how to register Windows nodes to your cluster.
+https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/
 
 # Glosario
 

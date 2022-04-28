@@ -98,6 +98,14 @@ https://dev.to/robinvanderknaap/setting-up-an-authorization-server-with-openiddi
 
 Se requiere establecer un scope.
 
+
+
+AADSTS50011: The redirect URI 'http://localhost:44332/signin-azuread-oidc' specified in the request does not match the redirect URIs configured for the application '45d1eeda-660d-4ae9-9ccc-d04e28605c2b'. Make sure the redirect URI sent in the request matches one added to your application in the Azure portal. Navigate to https://aka.ms/redirectUriMismatchError to learn more about how to fix this. 
+
+
+AADSTS50020: User account 'juan.saavedra@grupobusiness.it' from identity provider 'https://sts.windows.net/24884996-6863-4925-a1ba-f1a160b581e2/' does not exist in tenant 'MINISTERIO DE RELACIONES EXTERIORES MRE CANCILLERIA' and cannot access the application '45d1eeda-660d-4ae9-9ccc-d04e28605c2b'(Visas regulación QA) in that tenant. The account needs to be added as an external user in the tenant first. Sign out and sign in again with a different Azure Active Directory user account.
+
+
 ------------
 
 # Referencias

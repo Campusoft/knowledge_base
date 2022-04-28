@@ -276,3 +276,18 @@ https://identityserver4.readthedocs.io/en/latest/quickstarts/1_client_credential
 ---------------------------
 
 Grant Types. Soportados por IdentityServer4. Mapeo options.ResponseType 
+
+
+-------------
+
+
+sign out for openId
+https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc#send-a-sign-out-request
+
+Sign-out of External Identity Providers
+To detect that a user must be redirected to an external identity provider for sign-out is typically done by using a idp claim issued into the cookie at IdentityServer. 
+http://docs.identityserver.io/en/latest/topics/signout_external_providers.html
+
+
+External authentication cookie not saved in Identity.External
+https://github.com/IdentityServer/IdentityServer4/issues/1826
