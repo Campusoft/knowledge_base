@@ -59,3 +59,14 @@ Multi Container Pods In Kubernetes
 - Communication Inside a Multi Container Pod
 - How To Deploy A Multi Container Pod? 
 https://k21academy.com/docker-kubernetes/multi-container-pods/
+
+
+# probes
+
+Kubernetes (since version 1.16) has three types of probe, which are used for three different purposes:
+
+- Liveness probe. This is for detecting whether the application process has crashed/deadlocked. If a liveness probe fails, Kubernetes will stop the pod, and create a new one.
+- Readiness probe. This is for detecting whether the application is ready to handle requests. If a readiness probe fails, Kubernetes will leave the pod running, but won't send any requests to the pod.
+- Startup probe. This is used when the container starts up, to indicate that it's ready. Once the startup probe succeeds, Kubernetes switches to using the liveness probe to determine if the application is alive. This probe was introduced in Kubernetes version 1.16.
+
+To add some context, in most applications a "probe" is an HTTP endpoint. If the endpoint returns a status code from 200 to 399, the probe is successful

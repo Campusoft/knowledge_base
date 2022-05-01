@@ -28,3 +28,7 @@ Singer describes how data extraction scripts—called “taps” —and data loa
 How to do Change Data Capture (CDC), using Singer
 https://www.startdataengineering.com/post/cdc-using-singer/
 
+# Reverse ETL
+
+grouparoo
+Castled

@@ -48,6 +48,35 @@ have microservices using different kinds of databases based on the capabilities 
 
 Change data capture (CDC) means identifying and tracking what has changed in a database so that you can take action, like updating your data warehouse or generating other outputs. The idea is to replicate a dataset using incremental updates so that you don’t have to copy your entire database every time a table gets updated.
 
+# Observabilidad 
+
+- Logging
+- Trazabilidad en logs
+- Alertas
+
+## Metrics
+
+A metric is a measurement about a service, captured at runtime. Logically, the moment of capturing one of these measurements is known as a metric event which consists not only of the measurement itself, but the time that it was captured and associated metadata.
+
+Application and request metrics are important indicators of availability and performance. Custom metrics can provide insights into how availability indicators impact user experience or the business. Collected data can be used to alert of an outage or trigger scheduling decisions to scale up a deployment automatically upon high demand.
+
+## Traces
+
+Traces track the progression of a single request, called a trace, as it is handled by services that make up an application. The request may be initiated by a user or an application. Distributed tracing is a form of tracing that traverses process, network and security boundaries. Each unit of work in a trace is called a span; a trace is a tree of spans. Spans are objects that represent the work being done by individual services or components involved in a request as it flows through a system. A span contains a span context, which is a set of globally unique identifiers that represent the unique request that each span is a part of. A span provides Request, Error and Duration (RED) metrics that can be used to debug availability as well as performance issues.
+
+## Logs
+
+A log is a timestamped text record, either structured (recommended) or unstructured, with metadata.
+
+## OpenTelemetry 
+
+An observability framework for cloud-native software.
+
+OpenTelemetry is a collection of tools, APIs, and SDKs. You can use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior.
+
+OpenTelemetry, which is the next major version of the OpenTracing and OpenCensus projects. The leadership of those two projects have come together to create OpenTelemetry, which combines the best parts of OpenTracing and OpenCensus to create one open source project to help with your instrumentation needs.
+
+OpenTelemetry is a set of APIs, SDKs, tooling and integrations that are designed for the creation and management of telemetry data such as traces, metrics, and logs. The project provides a vendor-agnostic implementation that can be configured to send telemetry data to the backend(s) of your choice. It supports a variety of popular open-source projects including Jaeger and Prometheus.
 
 # Referencias
 

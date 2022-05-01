@@ -56,6 +56,13 @@ The "AdditionalProtocArguments" parameter is not supported by the "ProtoCompile"
 can be solved by restarting VS
 https://github.com/grpc/grpc/issues/26116#issuecomment-866770710
 
+
+# health checks
+
+
+gRPC health checks in ASP.NET Core
+https://docs.microsoft.com/en-us/aspnet/core/grpc/health-checks?view=aspnetcore-6.0
+
 # Test
 
 Set up gRPC reflection

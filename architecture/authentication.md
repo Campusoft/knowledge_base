@@ -220,6 +220,10 @@ code id_token token  	Hybrid Flow
 Depending on the response_type in the OIDC protocol, some claims are transferred via the id_token and some via the userinfo endpoint. 
 
 
+Authentication Request
+- login_hint. OPTIONAL. Hint to the Authorization Server about the login identifier the End-User might use to log in (if necessary). 
+https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
+
 
 **Implicit Flow**
 

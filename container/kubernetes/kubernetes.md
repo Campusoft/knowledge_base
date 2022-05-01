@@ -180,6 +180,7 @@ En el archivo .yaml del objeto de Kubernetes que quieras crear, obligatoriamente
 También deberás indicar el campo spec del objeto. El formato del campo spec es diferente según el tipo de objeto de Kubernetes, y contiene campos anidados específicos de cada objeto.
 
 
+
 # Kubectl
 
 Herramienta de línea de comandos para administar kubernates

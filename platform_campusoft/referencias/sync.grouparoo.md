@@ -14,7 +14,11 @@ UI Editions
 
 The Grouparoo User Interface (UI) is offered in two separate editions: @grouparoo/ui-community and @grouparoo/ui-enterprise.
 
+Airbyte acquires Grouparoo to accelerate Data Movement
+The consolidation of these two communities around one single project will allow Airbyte to deliver the high quality, reliable integrations, and be the only solution to cover the long-tail of connectors across ELT and reverse-ETL.
+
 # Castled
+
 Castled is a Reverse ETL tool which enables you to perodically sync the data from a source, the public cloud warehouse where you store all your data, to a destination which is your favorite operational tool there by enabling the sales,marketing or service teams.
 
 https://docs.castled.io/

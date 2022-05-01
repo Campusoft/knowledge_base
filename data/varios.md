@@ -10,3 +10,23 @@ https://hazelcast.com/glossary/kappa-architecture/
 The Open Source
 Segment Alternative
 Jitsu is a fully-scriptable data ingestion engine for modern data teams. Set-up a real-time data pipeline in minutes, not days
+
+
+Jitsu Server Architecture
+https://jitsu.com/docs/internals/jitsu-server
+
+
+Event API
+
+- Jitsu has API for direct event collection. You can use it for sending events directly from apps or backends.
+
+Bulk API
+
+- Jitsu has events bulk API. The endpoint can consume ~50,000 events in one HTTP request and store them into destinations synchronously.
+
+GIF Pixel API
+
+- Jitsu has a GIF Pixel API endpoint for tracking email opens, impressions of advertisements
+
+
+https://jitsu.com/
