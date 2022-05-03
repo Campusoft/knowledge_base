@@ -68,6 +68,8 @@ Traces track the progression of a single request, called a trace, as it is handl
 
 A log is a timestamped text record, either structured (recommended) or unstructured, with metadata.
 
+Structured Logging
+
 ## OpenTelemetry 
 
 An observability framework for cloud-native software.
@@ -93,3 +95,11 @@ https://github.com/kgrzybek/modular-monolith-with-ddd
  A curated list of awesome articles, videos, and other resources to learn and practice about software architecture, patterns, and principles. 
  https://github.com/mehdihadeli/awesome-software-architecture
  
+ ## book
+ 
+ Software Engineering at Google
+
+In March, 2020, we published a book titled “Software Engineering at Google” curated by Titus Winters, Tom Manshreck and Hyrum Wright.
+
+The Software Engineering at Google book (“SWE Book”) is not about programming, per se, but about the engineering practices utilized at Google to make their codebase sustainable and healthy. (These practices are paramount for common infrastructural code such as Abseil.)
+ https://abseil.io/resources/swe-book

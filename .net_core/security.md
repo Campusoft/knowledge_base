@@ -21,6 +21,7 @@ http://docs.nwebsec.com/projects/SessionSecurity/en/latest/
 # Audit
 
 Configure ASP.NET Core to work with proxy servers and load balancers
+- Forwarded headers
 https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/proxy-load-balancer?view=aspnetcore-6.0
 
 **_REvisiones_**

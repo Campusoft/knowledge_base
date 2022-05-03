@@ -158,18 +158,10 @@ Sample .NET Core reference application, powered by Microsoft, based on a simplif
   - ValidatorBehavior para aplicar validaciones FluentValidation
 - Angular
   - Posee un servicio base "DataService" que gestiona los errores (console) de los api rest
+- book, .NET Microservices: Architecture for Containerized .NET Applications.
+  - https://docs.microsoft.com/en-us/dotnet/architecture/microservices/
 https://github.com/dotnet-architecture/eShopOnContainers
 
-
-
-book, .NET Microservices: Architecture for Containerized .NET Applications.
-https://docs.microsoft.com/en-us/dotnet/architecture/microservices/
-
-Online Boutique is a cloud-native microservices demo application. Online Boutique consists of a 10-tier microservices application. The application is a web-based e-commerce app where users can browse items, add them to the cart, and purchase them.
-- Online Boutique is composed of 11 microservices written in different languages that talk to each other over gRPC. 
-- Go C#  Node.js Python Java
-- Tool Skaffold
-https://github.com/GoogleCloudPlatform/microservices-demo.git
 
 # Revisiones
 

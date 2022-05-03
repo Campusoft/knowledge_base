@@ -79,7 +79,7 @@ The four main options we'll be comparing in this post are: ClusterIP, NodePort, 
 
 **Cluster IP**
 
-**Ingress**
+## Ingress
 
 Este servicio funciona de un modo diferente a los demás. Cuando creamos un ClusterIP o un NodePort basta con crear un objeto Kuberntes de ese tipo de servicio y aplicarlo al Cluster. Pero antes de poder usar Ingress necesitamos de algo llamado “Controlador”.
 
@@ -98,6 +98,8 @@ Ingress Controller
 Ingress en Kubernetes Desmitificado: ¿Qué lo diferencia de un NodePort o un LoadBalancer?
 https://desarrollofront.medium.com/ingress-en-kubernetes-desmitificado-qu%C3%A9-lo-diferencia-de-un-nodeport-o-un-loadbalancer-b0cf060a6f8a
 
+Comparison of Kubernetes Ingress controllers. The research compares several Ingress controllers for Kubernetes
+https://learnk8s.io/research#ingress-controllers
 
 
 # Features

@@ -175,7 +175,12 @@ https://certificatetools.com/
 
 # Varios
 
-***Agregar claims personalizados***
+
+**Entendimiento**
+
+
+
+**Agregar claims personalizados**
 
 Profile Service
 

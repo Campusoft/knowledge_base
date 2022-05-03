@@ -51,6 +51,11 @@ Código 	Nombre 	Descripción
 -	iss 	Issuer 	Identifica el proveedor de identidad que emitió el JWT. (The claim identifies the principal that issued the JWT.) (Mandatory)
 -	sub 	Subject 	Identifica el objeto o usuario en nombre del cual fue emitido el JWT (Mandatory)
 -	aud 	Audience 	Identifica la audiencia o receptores para lo que el JWT fue emitido. Cada servicio que recibe un JWT para su validación tiene que controlar la audiencia a la que el JWT está destinado. Si el proveedor del servicio no se encuentra presente en el campo aud, entonces el JWT tiene que ser rechazado
+
+The audience (aud), which represents the particular application which the token has been  issued for. It is very important to check this claim. As an app receives this token, the middleware used for validating it will compare what was configured to be the app identifier (in the case  of sign-in and ID tokens, that will correspond to the client ID of the app) with the audience claim. If there is a mismatch, that means that someone stole a token from somewhere else, 
+and they're trying to trick the app into accepting it
+
+
 -	exp 	Expiration time 	Identifica la marca temporal luego de la cual el JWT no tiene que ser aceptado.  (Mandatory)
 -	nbf 	Not before 	Identifica la marca temporal en que el JWT comienza a ser válido. EL JWT no tiene que ser aceptado si el token es utilizando antes de este tiempo. 
 -	iat 	Issued at 	Identifica la marca temporal en qué el JWT fue emitido.
@@ -377,6 +382,9 @@ Propietarios
 
 A one-time password (OTP) is an automatically generated sequence of numeric or alphanumeric characters that will authenticate a user for a single login or transaction. It is used in a multifactor authentication (MFA) process to secure access to data.
 
+## Passwordless
+
+Passwordless connections do not require the user to remember a password. Instead, another mechanism is used to prove identity, such as a one-time code sent through email or SMS, every time the user logs in.
 
 # Revoking Access
 

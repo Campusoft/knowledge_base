@@ -61,7 +61,7 @@ Multi Container Pods In Kubernetes
 https://k21academy.com/docker-kubernetes/multi-container-pods/
 
 
-# probes
+# Probes  - Health checking
 
 Kubernetes (since version 1.16) has three types of probe, which are used for three different purposes:
 
@@ -70,3 +70,9 @@ Kubernetes (since version 1.16) has three types of probe, which are used for thr
 - Startup probe. This is used when the container starts up, to indicate that it's ready. Once the startup probe succeeds, Kubernetes switches to using the liveness probe to determine if the application is alive. This probe was introduced in Kubernetes version 1.16.
 
 To add some context, in most applications a "probe" is an HTTP endpoint. If the endpoint returns a status code from 200 to 399, the probe is successful
+
+
+
+Health checking for a Kafka application
+- Posee animaciones ilustrar Readiness probe Liveness probe
+https://mikeldeltio.com/2020/06/23/kubernetes-health-check-for-a-kafka-application/

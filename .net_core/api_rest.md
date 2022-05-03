@@ -51,7 +51,28 @@ https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnet
 ASP.NET Core API - Allow CORS requests from any origin and with credentials
 https://jasonwatmore.com/post/2020/05/20/aspnet-core-api-allow-cors-requests-from-any-origin-and-with-credentials
 
+# Health checks
 
+If your ASP.NET Core application communicates with any 3rd party systems, it is beneficial to have health checks to determine if your connection to the 3rd party system is healthy, degraded, or unhealthy.
+
+When developing an ASP.NET Core microservice or web application, you can use the built-in health checks feature that was released in ASP .NET Core 2.2 (Microsoft.Extensions.Diagnostics.HealthChecks). Like many ASP.NET Core features, health checks come with a set of services and a middleware.
+
+
+ASP.NET Core offers Health Checks Middleware and libraries for reporting the health of app infrastructure components.
+https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-6.0
+
+
+Application Health Check Using ASP.NET Core
+https://www.c-sharpcorner.com/article/health-check-using-asp-net-core/
+ 
+
+Customize output
+To customize the output of a health checks report, set the HealthCheckOptions.ResponseWriter property to a delegate that writes the response
+https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-6.0#customize-output
+
+This repository offers a wide collection of ASP.NET Core Health Check packages for widely used services and platforms.
+ASP.NET Core versions supported: 6.0, 5.0, 3.1, 3.0 and 2.2
+https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
 
 # Client
 
