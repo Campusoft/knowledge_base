@@ -75,7 +75,11 @@ Kafka uses Zookeeper for most of the coordination tasks
 Removing the Apache ZooKeeper Dependency
 https://www.confluent.io/blog/removing-zookeeper-dependency-in-kafka/
 
+# Architecture
 
+
+Apache Kafka in detail
+https://mikeldeltio.com/2020/05/20/distributed-databases-kafka/
 
 # Command
 

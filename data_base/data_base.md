@@ -44,3 +44,15 @@ Supports any database which has JDBC driver (which basically means - ANY databas
 
 
 https://github.com/dbeaver/dbeaver
+
+
+# CockroachDB
+
+CockroachDB se basa una arquitectura descentralizada peer to peer (P2P) de nodos simétricos que conforman un cluster, en el que cada uno de ellos tiene exactamente el mismo conjunto de responsabilidades que el resto. Es decir, no hay distintas tipologías de nodos que ejerzan funciones dedicadas, si bien algunos de ellos pueden desempeñar adicionalmente ligeras tareas de coordinación.
+
+
+La capa SQL se encarga de exponer una API SQL compatible con PostgreSQL con la que interactúan las aplicaciones, convirtiendo dichas sentencias en operaciones clave-valor, que son las que a la postre utiliza internamente la base de datos. Recordar que, tal y como se comentó en la introducción, CockroachDB emplea un sistema de almacenamiento distribuido clave-valor basado basado en RocksDB, una variante de LevelDB.
+
+
+CockroachDB in detail
+https://mikeldeltio.com/2022/01/25/distributed-databases-cockroachdb/
