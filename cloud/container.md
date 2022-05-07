@@ -50,6 +50,32 @@ How eBPF will solve Service Mesh - Goodbye Sidecars
 - Kernel Service Mesh with eBPF
 https://isovalent.com/blog/post/2021-12-08-ebpf-servicemesh
 
+
+Service Mesh Comparison Matrix
+- The Layer5 Service Mesh Landscape is a community-curated collection of service mesh projects. We encourage project maintainers to directly update and represent their service mesh’s functional and non-functional details.
+- Cilium
+- Consul
+- Istio
+- Kuma
+- Linkerd 2.x(Conduit)
+- Maistra
+- Traefik Mesh
+https://layer5.io/service-mesh-landscape
+
+
+
+Comparison of service meshes
+- Istio		
+- Linkerd2
+- Kuma
+- Maesh
+- Consul connect
+- AWS App Mesh
+- NGINX Service Mesh
+- Open Service Mesh	
+- Traefik Mesh
+https://learnk8s.io/research#service-meshes
+
 ## Cilium
 
 Cilium is an open source project to provide networking, security, and observability for cloud native environments such as Kubernetes clusters and other container orchestration platforms.

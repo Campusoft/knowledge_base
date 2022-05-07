@@ -211,13 +211,12 @@ The GetProfileDataAsync is being invoked correctly whenever I hit the /connect/t
 
 -----------------
 
+
 La interfaz IClaimsService, tambien permite agregar claims personalizados. 
 Se puede crear una clase que herede de la implementacion por defecto DefaultClaimsService.
+- IdentityServer4/src/IdentityServer4/src/Services/Default/DefaultClaimsService.cs
 
 Se puede sobreescribir el metodo GetOptionalClaims, para agregar claims.
-
-
-
 
 
 

@@ -14,7 +14,7 @@ To add support for OpenID Connect authentication to the MVC application, you fir
 dotnet add package Microsoft.AspNetCore.Authentication.OpenIdConnect
 ```
 
-***Claims***
+**Claims**
 
 Para recuperar claims especificos que existan en el token access, se debe configurar
 - Utilizar ClaimActions.MapJsonKey, para mapear el claim X del token, a los claim identity

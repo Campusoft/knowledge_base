@@ -99,7 +99,13 @@ Ingress en Kubernetes Desmitificado: ¿Qué lo diferencia de un NodePort o un Lo
 https://desarrollofront.medium.com/ingress-en-kubernetes-desmitificado-qu%C3%A9-lo-diferencia-de-un-nodeport-o-un-loadbalancer-b0cf060a6f8a
 
 Comparison of Kubernetes Ingress controllers. The research compares several Ingress controllers for Kubernetes
+- Ingress Nginx 
+- Kong
+- Istio Ingress
+- Contour
+- Gloo
 https://learnk8s.io/research#ingress-controllers
+
 
 
 # Features

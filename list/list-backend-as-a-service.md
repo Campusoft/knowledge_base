@@ -4,7 +4,7 @@ BaaS started to gain momentum as well. BaaS systems are those that provide infra
 
 
  
-## Appwrite
+# Appwrite
 
 Secure Open-Source Backend Server for Web, Mobile & Flutter Developers
 
@@ -43,7 +43,7 @@ User Interface
 
 Appwrite uses an internal micro-framework called Litespeed.js to build simple UI components in vanilla JS and less for compiling CSS code. To apply any of your changes to the UI, use the gulp build or gulp less commands, and restart the Appwrite main container to load the new static files to memory using docker-compose restart appwrite.
 
-## Parse 
+# Parse 
 
 The Complete Application Stack
 
@@ -65,26 +65,26 @@ https://parseplatform.org/
  
 
 
-## Supabase
+# Supabase
 
 Supabase is a combination of open source tools. We’re building the features of Firebase using enterprise-grade, open source products. If the tools and communities exist, with an MIT, Apache 2, or equivalent open license, we will use and support that tool. If the tool doesn't exist, we build and open source it ourselves. Supabase is not a 1-to-1 mapping of Firebase. Our aim is to give developers a Firebase-like developer experience using open source tools.
 
 https://github.com/supabase/supabase
 
-## AWS Amplify 
+# AWS Amplify 
 
 AWS Amplify makes it easy to create, configure, and implement scalable mobile applications powered by AWS. Amplify seamlessly provisions and manages your mobile backend and provides a simple framework to easily integrate your backend with your iOS, Android, Web, and React Native frontends. Amplify also automates the application release process of both your frontend and backend allowing you to deliver features faster.
 
 
-## Azure Mobile Apps 
+# Azure Mobile Apps 
 
 Azure Mobile Apps is a technology that allows you to connect your mobile app to resources that are important in cloud connected mobile applications such as table data, authentication, and push notifications.
 
-## Google Firebase 
+# Google Firebase 
 
 
 
-## Apache Usergrid
+# Apache Usergrid
  
 
 Apache Usergrid is an open-source Backend-as-a-Service) composed of an integrated distributed NoSQL database, application layer and client tier with SDKs for developers looking to rapidly build web and/or mobile applications. It provides elementary services (user registration & management, data storage, file storage, queues) and retrieval features (full text search, geolocation search, joins) to power common app features.
@@ -93,7 +93,7 @@ Features: Sign-up users, reset password, store data in JSON format, file storage
 
 https://usergrid.apache.org/
 
-## Varios 
+# Varios 
 
 Se puede considerar un headless CMS, como backend as a service basico; ya que proporciona un elemento APIs Ejemplo:
 - Directus

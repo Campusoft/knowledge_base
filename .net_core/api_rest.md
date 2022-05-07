@@ -1,7 +1,7 @@
 # REST
 
 
-***ApiController attribute***
+**ApiController attribute**
 
 The [ApiController] attribute can be applied to a controller class to enable the following opinionated, API-specific behaviors:
 
@@ -77,7 +77,7 @@ https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
 # Client
 
 
-***Nswag***
+**Nswag**
 
 (Generar CLient)
 
@@ -98,7 +98,7 @@ https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
   - Problemas con la generación de Enumerables.
 
 
-***Flurl***
+**Flurl**
 
 Informacion
 Flurl is a modern, fluent, asynchronous, testable, portable, buzzword-laden URL builder and HTTP client library for .NET.
@@ -109,9 +109,8 @@ api.postcodes.io – no authentication required, uses GET and POST verbs
 api.nasa.gov – authentication via an API key passed in the query string
 api.github.com – Basic Authentication required to access private repo information
 
-
  
-**refit**
+**Refit**
   
 The automatic type-safe REST library for .NET Core, Xamarin and .NET. Heavily inspired by Square's Retrofit library, Refit turns your REST API into a live interface. 
 https://github.com/reactiveui/refit 

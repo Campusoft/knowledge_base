@@ -117,6 +117,44 @@ CreateStandardResourcesAsync
 
 
 
+
+
+
+
+
+**Agregar claims IdentityServer**
+
+Abp posee AbpClaimsService que agregar claims especificos a IdentityServer. Hereda de la clase DefaultClaimsService de  IdentityServer 
+abp/modules/identityserver/src/Volo.Abp.IdentityServer.Domain/Volo/Abp/IdentityServer/AbpClaimsService.cs
+
+Se agrega los siguientes claims
+AbpClaimTypes.TenantId,
+AbpClaimTypes.ImpersonatorTenantId,
+AbpClaimTypes.ImpersonatorUserId,
+AbpClaimTypes.Name,
+AbpClaimTypes.SurName,
+JwtRegisteredClaimNames.UniqueName,
+JwtClaimTypes.PreferredUserName,
+JwtClaimTypes.GivenName,
+JwtClaimTypes.FamilyName,
+
+Si se agregan Claims a la identidad en abp con el metodo de IAbpClaimsPrincipalFactory. Se debe configurar los nuevos claims  con  AbpClaimsServiceOptions para que estos claims se incluyan en los tokens que se generan con IdentityServer
+
+ABP uses the IAbpClaimsPrincipalFactory service to create claims on authentication
+https://docs.abp.io/en/abp/latest/Authorization#claims-principal-factory
+
+
+```
+//Agregar claim personalizados
+            Configure<AbpClaimsServiceOptions>(options =>
+            {
+                options.RequestedClaims.AddRange(new[]{
+                     BaseConsts.Claims.SelloSeguridad
+                });
+            });
+```
+
+
 # External provider authentication 
 
 

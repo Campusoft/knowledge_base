@@ -45,7 +45,15 @@ https://forms.office.com/
 
 Appsmith is an open source framework to build admin panels, CRUD apps and workflows. Build everything you need, 10x faster.
 
+Appsmith is a low code, open-source framework to build internal applications.
+
+With our JavaScript-based visual development platform, build CRUD apps, Dashboards, Admin Panels, and many more 10x faster.
+You can use our pre-built UI widgets, connect them to your APIs and databases to build dynamic apps and complex workflows. And the best part? Deploy these apps on the technology you prefer! (self-host for free!).
+
+
 Build beautiful admin panels, dashboards, and CRUD apps that connect to any API or database. Try it at: https://app.appsmith.com Open source and self-hosting friendly. 
+- Appsmith automagically works using any DB, Rest API or GraphQL as a datasource, with support for OAuth 2.0 and CURL.
+- Currently works with PostgreSQL, MongoDB, MySQL, Firestore, S3, Redshift, Elastic Search, DynamoDB, Redis, and MSFT SQL Server.
 
 https://github.com/appsmithorg/appsmith
 
