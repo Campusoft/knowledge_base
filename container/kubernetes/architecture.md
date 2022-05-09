@@ -12,6 +12,9 @@ The Kubernetes control plane is split into a set of components, which can all ru
 https://github.com/kubernetes/community/tree/master/contributors/design-proposals/architecture
 
 
+"If an application runs in containers, it can run on Kubernetes."
+
+
 # Controllers
 
 In Kubernetes, controllers are control loops that watch the state of your cluster, then make or request changes where needed. Each controller tries to move the current cluster state closer to the desired state.
@@ -22,7 +25,7 @@ A controller tracks at least one Kubernetes resource type. These objects have a 
 
 Job is a Kubernetes resource that runs a Pod, or perhaps several Pods, to carry out a task and then stop.
 
-# Scheduler
+## Scheduler
 
 In Kubernetes, scheduling refers to making sure that Pods are matched to Nodes so that Kubelet can run them.
 
@@ -35,7 +38,12 @@ For every newly created pod or other unscheduled pods, kube-scheduler selects an
 
 https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/
 
-# Pod
+# Kubernetes objects
+
+Kubernetes objects consist of two main fields. The first is the object "spec," which is provided by the user. The spec dictates the desired state for this object. The second field is the "status," which is provided by Kubernetes. 
+
+
+##  Pod
 
 Kubernetes makes a bolder step and chooses a group of cohesive containers, called a Pod, as the smallest deployable unit.
 
@@ -52,13 +60,22 @@ Pods in a Kubernetes cluster are used in two main ways:
 Pods that run a single container. 
 Pods that run multiple containers that need to work together.
 
-## Multi Container Pods In Kubernetes
+### Multi Container Pods In Kubernetes
 
 Multi Container Pods In Kubernetes
 - Design-patterns of Multi Container Pods. (Ilustraciones)
 - Communication Inside a Multi Container Pod
 - How To Deploy A Multi Container Pod? 
 https://k21academy.com/docker-kubernetes/multi-container-pods/
+
+# namespaces
+
+These are just a few common patterns, but the key point is that namespaces can be usedto provide logical separation of a cluster into virtual clusters
+
+Names obviously provide a level of uniqueness within a namespace. But if you want to provide attributes to an object without specifying any uniqueness, labels are a great place to start. Labels are key/value pairs that can be attached to objects in order to identify those objects.
+
+
+## kube-system namespace
 
 
 # Probes  - Health checking
