@@ -102,3 +102,11 @@ https://security-code-scan.github.io/
 Ethereum funciona como una plataforma de código abierto basada en la tecnología blockchain.
 
 El blockchain de ethereum es similar al del bitcoin en el sentido de que funciona también como registro del historial de transacciones
+
+
+# Reglamento General de Protección de Datos - GDPR
+
+# (LOPD) La Ley Orgánica de Protección de Datos Personales de Ecuador
+
+Con fecha de 26 de mayo de 2021 se ha publicó La Ley Orgánica de Protección de Datos de Ecuador, una vez que el texto fue aprobado por la Asamblea Nacional tras los correspondientes debates y sancionado por el señor Presidente de la República. Cabe destacar que las empresas cuentan desde ese momento con un período de adaptación de dos años con el objetivo de poder adecuar todos sus procesos a lo exigido por esta nueva normativa
+

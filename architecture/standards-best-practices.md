@@ -161,6 +161,10 @@ The purpose of ISO 3166 is to define internationally recognized codes of letters
 [Microsoft REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md)
 
 
+Guía de diseño de API - Google
+Esta guía se aplica a las API de REST y a las API de RPC, con un enfoque particular en las API de gRPC
+https://cloud.google.com/apis/design/
+
 # Varios
 
 ## Twelve-factor methodology. (12-factor)

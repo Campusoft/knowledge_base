@@ -341,7 +341,11 @@ Skaffold handles the workflow for building, pushing and deploying your applicati
 https://skaffold.dev/
  
 
+**Play with Kubernetes**
 
+Si no quieres instalar nada en tu máquina local, aquí tienes otra buena opción llamada Play with Kubernetes. Se trata de una página web que te permite tener entornos de cuatro horas de duración, totalmente gratuitos, donde puedes crear un clúster con varios nodos de una forma súper rápida.
+
+https://labs.play-with-k8s.com/
 
 # KEDA - Kubernetes-based Event Driven Autoscaler
 
@@ -389,6 +393,12 @@ https://loft.sh/blog/kubernetes-on-windows-6-life-saving-tools-and-tips
 Adding Windows nodes
 You can use Kubernetes to run a mixture of Linux and Windows nodes, so you can mix Pods that run on Linux on with Pods that run on Windows. This page shows how to register Windows nodes to your cluster.
 https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/
+
+
+## OpenShift 
+
+OpenShift is a family of containerization software offerings created by open-source software provider Red Hat. According to the company, Kubernetes is the kernel of distributed systems, while OpenShift is the distribution. At its core, OpenShift is a cloud-based Kubernetes container platform that's considered both containerization software and a platform-as-a-service (PaaS)
+
 
 # Glosario
 

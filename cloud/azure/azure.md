@@ -26,15 +26,24 @@ Azure
 Application Insights for monitoring and auditing the applications
 
 
-# Devops
+# Azure DevOps
 
 
-Azure DevOps
+## Azure DevOps Services 
 
+Azure DevOps. Azure DevOps Services for the SaaS version, hosted by Microsoft in Azure.
 
-***Azure DevOps Server***
+## Azure DevOps Server
+
+Azure DevOps Server for the On-premise version, that you can install on your own servers.
+
+Collaborative software development tools for the entire team
+
+Previously known as Team Foundation Server (TFS), Azure DevOps Server is a set of collaborative software development tools, hosted on-premises. Azure DevOps Server integrates with your existing IDE or editor, enabling your cross-functional team to work effectively on projects of all sizes.
 
 The on-premises offering, Azure DevOps Server, is built on a SQL Server back end. Customers usually choose the on-premises version when they need their data to stay within their network. Or, when they want access to SQL Server reporting services that integrate with Azure DevOps Server data and tools.
+
+Azure DevOps Server 2019
 
 
 # Adoption / Migration

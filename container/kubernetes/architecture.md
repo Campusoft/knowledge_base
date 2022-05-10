@@ -1,5 +1,14 @@
 # kubernetes - architecture
 
+Un clúster de Kubernetes se divide en dos componentes:
+
+- Plano de control: proporciona los servicios básicos de Kubernetes y la orquestación de las cargas de trabajo de las aplicaciones.
+- Nodos: ejecutan las cargas de trabajo de las aplicaciones.
+
+![imagen](https://user-images.githubusercontent.com/222181/167459955-7a89b94e-d896-4e09-a367-4c0e59372c10.png)
+Ref: https://docs.microsoft.com/es-es/azure/aks/concepts-clusters-workloads
+
+
 A running Kubernetes cluster contains node agents (kubelet) and a cluster control plane (AKA master), with cluster state backed by a distributed storage system (etcd).
 
 The Kubernetes control plane is split into a set of components, which can all run on a single master node, or can be replicated in order to support high-availability clusters, or can even be run on Kubernetes itself (AKA self-hosted).
