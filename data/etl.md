@@ -32,7 +32,7 @@ https://www.startdataengineering.com/post/cdc-using-singer/
 
 ## grouparoo
 
-/platform_campusoft/referencias/sync.grouparoo.md
+[Mas informacion grouparoo](/platform_campusoft/referencias/sync.grouparoo.md)
 
 ## Castled
 
