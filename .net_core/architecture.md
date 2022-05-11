@@ -56,7 +56,7 @@ https://codewithmukesh.com/project/aspnet-core-hero-boilerplate/
 https://github.com/aspnetcorehero/Boilerplate
 
 
-***CoolStore Web Application***
+**CoolStore Web Application**
 
 
 CoolStore Website is a containerised microservices application consisting of services based on .NET Core running on Dapr. It demonstrates how to wire up small microservices into a larger application using microservice architectural principals.
@@ -69,7 +69,7 @@ CoolStore Website is a containerised microservices application consisting of ser
 https://github.com/vietnam-devs/coolstore-microservices
 
 
-***clean-architecture-dotnet***
+**clean-architecture-dotnet**
 
 - DDD
 - Command and Query Responsibility Segregation (a.k.a CQRS) (Use CQRSlite)
@@ -81,7 +81,7 @@ https://github.com/vietnam-devs/coolstore-microservices
 - In medium and large software projects, we normally implement the CRUD actions over and over again. And it might take around 40-50% codebase just to do CRUD in the projects. The question is can we make standardized CRUD APIs, then we can use them in potential projects in the future?
 https://github.com/thangchung/clean-architecture-dotnet
 
-***StudentCourseManagement***
+**StudentCourseManagement**
 Fullstack Hub is developed to help students and professionals to quickly learn the industry standard applications development for FREE. - Yaseer Mumtaz
 - Mediator. Crea los IRequestHandler como subclases de  IRequest
 - CQRS
@@ -94,13 +94,12 @@ https://github.com/fullstackhub-io/StudentCourseManagement
 https://fullstackhub.io/asp-net-core-microservices-with-angular11/
 
 
-***Distributed-eStore***
+**Distributed-eStore**
 Containerized .NET Core Online Store application with a microservices architecture and a React and Redux frontend solution. Technologies used - RabbitMQ, .NET Core, .NET Core MVC, MongoDB, React, Redux, Docker, Consul, Fabio, JWT Authentication, Swagger, Vault.
 - Forwarded headers
 https://github.com/evgenirusev/Distributed-eStore
 
-***Convey***
-
+**Convey**
 Convey - a simple recipe for .NET Core microservices
 
 -    Authentication JWT with secret key & certificates extensions
@@ -122,6 +121,7 @@ Convey - a simple recipe for .NET Core microservices
 -    Security extensions (certificates, mTLS, encryption etc.)
 -    Jaeger tracing integration
 -    Web API extensions (minimal routing-based API, CQRS support)
+-    Scrutor - Assembly scanning and decoration extensions for Microsoft.Extensions.DependencyInjection 
 https://github.com/snatch-dev/Convey
 
 Pacco
@@ -137,7 +137,7 @@ Sample (and rather simple) .NET6 microservices solution which acts as the data a
 - Creado devmentors. (Existe videos)
 https://github.com/devmentors/FeedR
 
-***GoldenEye***
+**GoldenEye**
 - Messaging infrastructure - both internal based on MediatR and external with Kafka,
   - Consume Kafka mensajes  y luego publish event to internal event bus  (MediatR)
 - CQRS and Domain Driven Development stack - sending and handling commands, queries, events (with usage of MediatR library),
@@ -146,7 +146,7 @@ https://github.com/devmentors/FeedR
 https://github.com/oskardudycz/GoldenEye
 
 
-***.NET Microservices Sample Reference Application***
+**.NET Microservices Sample Reference Application**
 Sample .NET Core reference application, powered by Microsoft, based on a simplified microservices architecture and Docker containers.
 - Domain events: design and implementation
   - The reference app uses MediatR to propagate domain events synchronously across aggregates, within a single transaction. 

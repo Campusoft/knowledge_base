@@ -30,5 +30,12 @@ https://www.startdataengineering.com/post/cdc-using-singer/
 
 # Reverse ETL
 
-grouparoo
-Castled
+## grouparoo
+
+/platform_campusoft/referencias/sync.grouparoo.md
+
+## Castled
+
+Castled is a Reverse ETL tool which enables you to perodically sync the data from a source, the public cloud warehouse where you store all your data, to a destination which is your favorite operational tool there by enabling the sales,marketing or service teams.
+
+https://docs.castled.io/
