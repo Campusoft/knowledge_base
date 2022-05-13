@@ -30,3 +30,13 @@ GIF Pixel API
 
 
 https://jitsu.com/
+
+## Architecture
+
+Jitsu is written primarily in Go with the frontend written in JavaScript.
+
+## Install
+
+
+## Revision
+Airbyte is an open-source ETL-framework. Jitsu supports Airbyte as an of the connector backend (the other one being Singer and native connectors

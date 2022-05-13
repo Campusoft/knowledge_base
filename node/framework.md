@@ -25,3 +25,22 @@ These are the main features and principles on which fastify has been built:
 -   TypeScript ready: we work hard to maintain a TypeScript type declaration file so we can support the growing TypeScript community.
 	
 https://www.fastify.io/
+
+# typeorm
+
+TypeORM is an ORM that can run in NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo, and Electron platforms and can be used with TypeScript and JavaScript (ES5, ES6, ES7, ES8). Its goal is to always support the latest JavaScript features and provide additional features that help you to develop any kind of application that uses databases - from small applications with a few tables to large scale enterprise applications with multiple databases.
+
+TypeORM supports both Active Record and Data Mapper patterns, unlike all other JavaScript ORMs currently in existence, which means you can write high quality, loosely coupled, scalable, maintainable applications the most productive way.
+
+TypeORM is highly influenced by other ORMs, such as Hibernate, Doctrine and Entity Framework.
+
+https://typeorm.io/
+
+# Actionhero
+
+Actionhero is a node.js API framework for both tcp sockets, web sockets, and http clients. The goal of Actionhero is to create an easy-to-use toolkit for making reusable & scalable APIs. Clients connected to an Actionhero server can consume the API, consume static content, and communicate with each other.
+
+Unlike Express and Koa, but similar to Loopback, Actionhero is an API server framework. Instead of focusing on HTTP request handling Actionhero separates the transport mechanism (HTTP, Websocket, etc) from the API logic with the concept of Actions. Actions are discrete and synchronous units of logic that can be invoked using any transport (i.e. Servers). This separation helps us to accomplish many things.
+
+
+https://www.actionherojs.com

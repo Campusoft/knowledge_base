@@ -146,6 +146,12 @@ Un cliente web necesita información que esta en varios microservicios. En este c
 
 ## Asynchronous messaging
 
+## Request/Reply Pattern
+
+Another approach for decoupling synchronous HTTP messages is a Request-Reply Pattern, which uses 
+queuing communication. Communication using a queue is always a one-way channel, with a producer 
+sending the message and consumer receiving it. With this pattern, both a request queue and response 
+queue are implemented
 
 ## Patrón Saga
 

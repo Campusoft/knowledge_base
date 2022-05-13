@@ -34,6 +34,10 @@ Common time series database use cases
 - Processing self-driving car data
 https://aiven.io/blog/an-introduction-to-time-series-databases
 
+# The CAP theorem
+
+
+
 # Tools
 
 

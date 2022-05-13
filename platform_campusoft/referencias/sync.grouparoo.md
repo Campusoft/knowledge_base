@@ -1,6 +1,5 @@
 # grouparoo
  
- 
 Grouparoo is an open source framework that helps you move data between your data warehouse and all of your cloud-based tools.
 
 Reverse ETL, on the other hand, is the process that takes data from a data warehouse and sends that data to any number of different destinations or tools, finally letting you use your data warehouse for more than just analysis.
@@ -17,8 +16,41 @@ The Grouparoo User Interface (UI) is offered in two separate editions: @grouparo
 Airbyte acquires Grouparoo to accelerate Data Movement
 The consolidation of these two communities around one single project will allow Airbyte to deliver the high quality, reliable integrations, and be the only solution to cover the long-tail of connectors across ELT and reverse-ETL.
 
-# Castled
+# architecture
 
-Castled is a Reverse ETL tool which enables you to perodically sync the data from a source, the public cloud warehouse where you store all your data, to a destination which is your favorite operational tool there by enabling the sales,marketing or service teams.
+Grouparoo is written in Typescript
 
-https://docs.castled.io/
+
+Dependencies
+- Actionhero
+- Sequelize
+- resque [node-resque] (/knowledge_base/node/varios.md)
+Web
+- Next.js
+- React
+- React-Bootstrap
+- fontawesome
+	
+https://www.grouparoo.com/docs/development#dependencies
+
+
+Grouparoo stores all of your data in a database. You can use a Postgres or SQLITE database.
+
+The Grouparoo Community Web UI. This package is the open-source Grouparoo Enterprise website UI. It is a Next.JS + React Project. It is meant to be run alongside @grouparoo/core inside a Grouparoo client installation.
+
+# API
+
+Grouparoo's REST API contains endpoints for over 25 topics -- everything from installing a Grouparoo Plugin to getting a list of all your Schedules. To see a full list of API endpoints, navigate to /swagger in the UI of your Grouparoo instance.
+# Plugins
+
+
+# revisiones
+
+npm install @grouparoo/awesome-plugin
+npm install @grouparoo/demo
+
+Grouparoo Environment Variables
+https://github.com/grouparoo/grouparoo/blob/main/documents/environment-variables.md
+
+No se logra iniciar el programa localmente.
+- Inconvenientes con inicio sesion

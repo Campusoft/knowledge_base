@@ -68,6 +68,15 @@ DELETE “http://localhost:9200/NombreIndiceEliminar”
 ```
 # Licencias
 
-***Revisar***
+
+Preguntas frecuentes sobre la licencia Elastic 2.0 (ELv2)
+
+- No puedes proporcionar los productos a terceros como un servicio gestionado. 
+- No puedes eludir la funcionalidad de claves de licencia o eliminar/ocultar características protegidas por las claves de licencia.
+- No puedes eliminar u ocultar cualquier aviso de licenciamiento, derechos de autor u otros.
+
+https://www.elastic.co/es/licensing/elastic-license/faq
+
+**Revisar**
 https://www.elastic.co/what-is/open-x-pack 
 
