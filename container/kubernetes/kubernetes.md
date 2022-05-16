@@ -307,7 +307,7 @@ Local kubernetes development
 https://kapernikov.com/local-kubernetes-development/
 
 
-**minikube**
+## minikube
 
 Errores con virtualbox
 
@@ -323,7 +323,7 @@ minikube is the most popular option for running the local Kubernetes cluster for
 
 
 
-**K3s**
+## K3s
 
 - Lightweight Kubernetes
 - The certified Kubernetes distribution built for IoT & Edge computing
@@ -332,7 +332,7 @@ https://k3d.io/
 
 
 
-**Skaffold**
+## Skaffold
 
 Local Kubernetes Development. 
 
