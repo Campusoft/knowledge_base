@@ -1,23 +1,6 @@
 # Docker
 
-# Windows
 
-Docker Toolbox has been deprecated and is no longer in active development. Please use Docker Desktop instead. See Docker Desktop for Mac and Docker Desktop for Windows.
-https://docs.docker.com/docker-for-windows/docker-toolbox/
-
-
-Install Docker Desktop on Windows
-https://docs.docker.com/docker-for-windows/install/
-
-Docker Desktop for Windows =>  Windows 10 Home 64-bit with WSL 2.
-
-HowTo: Change Docker containers storage location with WSL2 on Windows 10
-https://blog.codetitans.pl/post/howto-docker-over-wsl2-location/
-
-# Repositorios Imagenes Docker
-
-Various versions of ActiveMQ neatly packet into Docker images 
-https://hub.docker.com/r/rmohr/activemq
 
 # Commandos
 
@@ -35,9 +18,37 @@ $ docker run [options] IMAGE [command] [args]
 
 Ejemplo
 9000 Puerto Contenedor, al 9000 puerto host, igual para 12201. Imagen:   graylog2/allinone
-docker run -t -p 9000:9000 -p 12201:12201 graylog2/allinone
 
-## Ejemplos:
+```
+docker run -t -p 9000:9000 -p 12201:12201 graylog2/allinone
+```
+
+
+**Ejecutar commandos en un contenedor que se encuentra ejecutandose.**
+
+```
+docker exec -it [container-id] bash
+```
+-i, --interactive=false    Keep STDIN open even if not attached
+-t, --tty=false            Allocate a pseudo-TTY
+
+**Iniciar un contenedor existente**
+``` 
+Docker start [container-id]
+```
+
+Ejemplo:
+Iniciar un contenedor visualizando la salida “STDIN”
+docker start -i cassandra
+
+**Detener un contenedor existente**
+``` 
+docker stop [OPTIONS] [container-id] [CONTAINER...]
+``` 
+
+Ejemplo:
+docker stop my_container
+
 
 ---------------
 Mysql
@@ -51,8 +62,129 @@ Status : Failure -Test failed: Access denied for user 'admin'@'172.17.0.1' (usin
 
 ----------------------
 
+**Listar contenedores descargados**
 
-# Docker Toolbox
+Visualizar todas las imagenes
+```
+docker images
+```
+
+Primeros por fecha de creación 
+```
+docker images | head
+```
+
+Filtrados por nombre
+
+```
+docker images | grep [nombre]
+```
+
+**Listar contenedores corriendo**
+
+Todos: 
+```
+docker ps
+```
+
+Histórico: 
+```
+docker ps -a
+```
+
+**Ejecutar un contenedor específico**
+- Se ejecuta en background por lo que no mostrará una salida por consola
+- Obtener su id: docker ps -a
+- docker start [id]
+
+**Ver logs**
+
+- docker logs [id]
+- docker logs [nombre del contenedor]
+- Modo listener
+  - docker logs -f [id] 
+
+**Ejecutar un comando dentro de un contenedor**
+- Interactivo Terminal: docker exec -it [id] [comando]
+	- Linux, ejecutar shell: docker exec -it [id] sh
+	
+
+
+**Descarga de contenedores**
+- Cada contenedor puede tener dependencias de otros contenedores así que docker solo baja los que no se han descargado
+- Latest: docker pull [container]
+- Custom version: docker pull [container]:[tag]
+- Tag es la version específica a descargar
+
+**Ejecutar**
+- El comando run incluye el comando pull, si no está descargado el contenedor run también lo descargará
+- Latest: docker run [container]
+- Custom version: docker run [container]:[tag]
+- Asignando un nombre al contenedor: docker run --name [nombre del contenedor] [container] 
+- Ejecutar en background (detach): docker run -d [container]
+- Es posible que el contenedor requiera variables de entorno para su ejecución.
+	- Ej. postgres requiere un password para configurarse y se debe enviar a través de la opción -e
+	- docker run -e POSTGRE_PASSWORD=[password] postgres
+- Por defecto la red del container no es compartida y recharazá las peticiones por lo que hay que especificar el puerto
+	- docker run -p 3000:3000 [name]
+	
+
+
+# Volumenes
+
+- Anonymous volumes
+- Named volumes
+- Bind mounts
+
+## Docker host-mounted volumes
+
+Syntax: /host/path:/container/path
+
+## Referencias
+
+Setting Up Docker for Windows and WSL to Work Flawlessly
+- Ensure Volume Mounts Work. WSL your volume paths in a format that matches this: /mnt/c/Users/nick/dev/myapp format. 
+https://nickjanetakis.com/blog/setting-up-docker-for-windows-and-wsl-to-work-flawlessly#running-windows-10-1803
+
+
+Docker Desktop WSL 2 backend
+- Performance is much higher when files are bind-mounted from the Linux filesystem, rather than remoted from the Windows host. Therefore avoid docker run -v /mnt/c/users:/users (where /mnt/c is mounted from Windows).
+https://docs.docker.com/desktop/windows/wsl/
+
+
+Where are Docker volumes located when running WSL using Docker Desktop?
+- docker run -ti -v host_dir:/app amazing-container will get mapped to /mnt/wsl/docker-desktop-data/data/docker/volumes/host_dir/_data/
+https://localcoder.org/where-are-docker-volumes-located-when-running-wsl-using-docker-desktop
+
+
+# Install
+
+## Linux 
+
+Install Docker Engine on Ubuntu
+https://docs.docker.com/engine/install/ubuntu/
+
+## Windows
+
+Docker Toolbox has been deprecated and is no longer in active development. Please use Docker Desktop instead. See Docker Desktop for Mac and Docker Desktop for Windows.
+https://docs.docker.com/docker-for-windows/docker-toolbox/
+
+
+Install Docker Desktop on Windows
+https://docs.docker.com/docker-for-windows/install/
+
+Docker Desktop for Windows =>  Windows 10 Home 64-bit with WSL 2.
+
+HowTo: Change Docker containers storage location with WSL2 on Windows 10
+https://blog.codetitans.pl/post/howto-docker-over-wsl2-location/
+
+
+
+Docker Desktop WSL 2 backend
+- Best practices
+https://docs.docker.com/desktop/windows/wsl/
+
+**Docker Toolbox**
 
 Oracle VM VirtualBox
 
@@ -62,6 +194,12 @@ If you want to access the container through your Windows host, you also need to 
 I see you are using VirtualBox, which allows you to do that by adding an entry in Settings > Network > Advanced > Port Forwarding.
 
 https://stackoverflow.com/questions/50592890/container-is-not-available-on-localhost-in-windows-docker-toolbox
+
+
+# Repositorios Imagenes Docker
+
+Various versions of ActiveMQ neatly packet into Docker images 
+https://hub.docker.com/r/rmohr/activemq
 
 # Orchestrators 
 
@@ -74,10 +212,9 @@ Mesosphere DC/OS: Mesosphere Enterprise DC/OS (based on Apache Mesos) is a produ
 Azure Service Fabric: It is an orchestrator of services and creates clusters of machines. Service Fabric can deploy services as containers or as plain processes. It can even mix services in processes with services in containers within the same application and cluster. Service Fabric provides additional and optional prescriptive Service Fabric programming models like stateful services and Reliable Actors. Service Fabric is mature in Windows (years evolving in Windows), less mature in Linux. Both Linux and Windows containers are supported in Service Fabric since 2017.
 
 
-# Swarm
+## Swarm
 
 Docker swarm is a container orchestration tool, meaning that it allows the user to manage multiple containers deployed across multiple host machines. 
-
 
 
 # Aprendizaje
@@ -85,59 +222,8 @@ Docker swarm is a container orchestration tool, meaning that it allows the user 
 This repo contains Docker labs and tutorials authored both by Docker, and by members of the community. We welcome contributions and want to grow the repo.
 https://github.com/docker/labs
 
-# Varios
 
-Azure Container Registr y: recurso público para trabajar con imágenes de Docker y sus componentes en
-Azure. Esto proporciona un registro cercano a las implementaciones en Azure que le proporciona control sobre
-el acceso, lo que le permite usar los grupos y los permisos de Azure Active Directory
-
-# Conceptos clave, comandos y acciones
-- os + software + app
-- **Documentación:** https://docs.docker.com/
-- **Descarga docker:** https://www.docker.com/get-started
-- **Repositorio de docker:** https://hub.docker.com/
-- **Tutorial:** https://www.youtube.com/watch?v=CV_Uf3Dq-EU
-- Los contenedores son descartables por lo que siempre que se inicien tendrán datos por defecto
-- Se pueden pasar varios parámetros a la vez. Ej. -d, -p, -dp
-## Descarga de contenedores
-- Cada contenedor puede tener dependencias de otros contenedores así que docker solo baja los que no se han descargado
-- Latest: docker pull [container]
-- Custom version: docker pull [container]:[tag]
-- Tag es la version específica a descargar
-## Ejecutar
-- El comando run incluye el comando pull, si no está descargado el contenedor run también lo descargará
-- Latest: docker run [container]
-- Custom version: docker run [container]:[tag]
-- Asignando un nombre al contenedor: docker run --name [nombre del contenedor] [container] 
-- Ejecutar en background (detach): docker run -d [container]
-- Es posible que el contenedor requiera variables de entorno para su ejecución.
-	- Ej. postgres requiere un password para configurarse y se debe enviar a través de la opción -e
-	- docker run -e POSTGRE_PASSWORD=[password] postgres
-- Por defecto la red del container no es compartida y recharazá las peticiones por lo que hay que especificar el puerto
-	- docker run -p 3000:3000 [name]
-## Detener
-- Uno: docker stop [id]
-- Varios: docker stop [id1] [id2] [id3]
-## Listar contenedores descargados
-- Todos: docker images
-- Primeros por fecha de creación: docker images | head
-- Filtrados por nombre: docker images | grep [nombre]
-## Listar contenedores corriendo
-- Todos: docker ps
-- Histórico: docker ps -a
-## Ejecutar un contenedor específico
-- Se ejecuta en background por lo que no mostrará una salida por consola
-- Obtener su id: docker ps -a
-- docker start [id]
-## Ver logs
-- docker logs [id]
-- docker logs [nombre del contenedor]
-	- Modo listener
-		- docker logs -f [id] 
-## Ejecutar un comando dentro de un contenedor
-- Interactivo Terminal: docker exec -it [id] [comando]
-	- Linux, ejecutar shell: docker exec -it [id] sh
-## Crear un contenedor
+# Crear un contenedor
 - Ubicarse en el directorio del proyecto
 - Crear el archivo Dockerfile
 	- FROM [imagen base para la app]
@@ -158,6 +244,23 @@ el acceso, lo que le permite usar los grupos y los permisos de Azure Active Dire
 - Crear contenedor
 	- Solo con id: docker build .
 	- Con tag: docker build -t [nombre del tag] .
+	
+
+# Docker Engine SDKs
+
+Docker provides an API for interacting with the Docker daemon (called the Docker Engine API), as well as SDKs for Go and Python. The SDKs allow you to build and scale Docker apps and solutions quickly and easily. If Go or Python don’t work for you, you can use the Docker Engine API directly.
+
+By default, the Docker engine uses a Unix socket mounted under /var/run/docker.sock on the host OS:
+
+
+Unofficial libraries
+- c#: https://github.com/dotnet/Docker.DotNet
+
+	
+# Varios
+
+Azure Container Registr y: recurso público para trabajar con imágenes de Docker y sus componentes en Azure. Esto proporciona un registro cercano a las implementaciones en Azure que le proporciona control sobre el acceso, lo que le permite usar los grupos y los permisos de Azure Active Directory
+
 ## Persistencia
 - Se consigue a través de un volumen
 - Es bidireccional local -] docker, docker -] local
@@ -207,128 +310,9 @@ https://docs.docker.com/engine/reference/commandline/run/#options
 - docker network create [nombre]
 
 
-# Docker compose
 
-Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration
+# Referencias
 
+Tutorial
+https://www.youtube.com/watch?v=CV_Uf3Dq-EU
 
-Permite agrupar configuraciones para reducir utilización de línea de comandos 
-- https://docs.docker.com/compose/
-
-Opciones del commando "Overview of docker-compose CLI"
-https://docs.docker.com/compose/reference/
-
-Comentarios con #
-
-Crear el archivo docker-compose.yaml:
-	- Version de composer
-		- version: "3.7"
-	- Lista de servicios a ejecutar
-		- services:
-		- Nombre del servicio que será tambien el alias
-		- Dependiendo de la necesidad se usa ports o volumes
-		- app:
-			- image: jpchsubzero/app-test:v1
-			- ports:
-				- ```- 3000:3000```
-			- volumes:
-				- ```- ./todo-mysql-data:/var/lib/mysql```
-			- environment:
-				- [key]: [value]
-- Ejecutar el compose
-	- docker-compose up -d
-- Detener
-	- docker-compose down
-	
-Ejemplos:
-
-Especificar el nombre del archivo *.yml, que no es por defecto "docker-compose.yml"
-
-```
-docker-compose -f docker-compose.with.sql-server.yml up
-```	
-
-Construir las imagenes de los docker, de los servicios que se encuentra configuradas
-```	
-docker-compose up --build
-```
-
-***environment***
-
-Compose supports declaring default environment variables in an environment file named .env placed in the folder docker-compose command is executed from (current working directory).
-
-Compose expects each line in an env file to be in VAR=VAL format. Lines beginning with # (i.e. comments) are ignored, as are blank lines.
-
-Note: Values present in the environment at runtime will always override those defined inside the .env file. Similarly, values passed via command-line arguments take precedence as well.
-
-
-
-***Multiple Compose files***
-
-By default, Compose reads two files, a docker-compose.yml and an optional docker-compose.override.yml file. By convention, the docker-compose.yml contains your base configuration. The override file, as its name implies, can contain configuration overrides for existing services or entirely new services.
-
-https://docs.docker.com/compose/extends/#understanding-multiple-compose-files
-
-
-***Networking in Compose***
-
-By default, Docker Compose creates a single network for each container defined in the compose file. All the containers defined in the compose file connect and communicate through the default network.
-
-
-You can inspect it by using the Docker inspect command:
-```
-docker network inspect mynetwork
-```
-
-Explicacion oficial de redes
-- acceder servicio, que se encuentra en la misma red.
-- se utiliza los nombres de los servicios dentro de la red, para acceder a la IP
-https://docs.docker.com/compose/networking/
-
-
-Understanding Docker Networking 
-- What Is a Docker Network?
-- What Are Docker Network Drivers?
-  - The Bridge Driver
-  - The Host Driver
-  - The None Driver
-  - The Overlay Driver
-- Basic Docker Networking Commands
-- Connecting a Container to a Network
-- Creating a Network
-https://earthly.dev/blog/docker-networking/
-
-How to link multiple docker-compose services via network
-- Ejemplo como crear dos archivos docker-compose.yml, y que sus servicios se comuniquen entre ellos.
-- If you want define services in multiple docker-compose.yml files, and also have network connectivity between the services, you need to configure your services to use the same network.
-https://tjtelan.com/blog/how-to-link-multiple-docker-compose-via-network/
-
-Communication between multiple docker-compose projects
- - Ejemplos comuicacion entre varios docker-compose.xml
-https://medium.com/@matayoshi.mariano/communication-between-multiple-docker-compose-projects-d79a68af3348
-
-
-Errores
-
-```
-warning: network default: network.external.name is deprecated in favor of network.name
-```
-
-warning :
-
-```
-networks: 
-  default: 
-    external: 
-      name: base  
-```
-use the external option
-
-```      
-networks:
-  default:
-    name: base
-    external: true   
-```
-
-https://docs.docker.com/compose/networking/#use-a-pre-existing-network

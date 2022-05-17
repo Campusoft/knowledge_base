@@ -43,6 +43,13 @@ The Grouparoo Community Web UI. This package is the open-source Grouparoo Enterp
 Grouparoo's REST API contains endpoints for over 25 topics -- everything from installing a Grouparoo Plugin to getting a list of all your Schedules. To see a full list of API endpoints, navigate to /swagger in the UI of your Grouparoo instance.
 # Plugins
 
+# install
+
+Grouparoo is not supported on Windows
+https://www.grouparoo.com/docs/installation/node
+
+
+https://github.com/grouparoo/app-example-docker
 
 # revisiones
 

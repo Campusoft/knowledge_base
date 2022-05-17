@@ -30,6 +30,12 @@ Why You Should NOT Build Your Data Pipeline on Top of Singer
 https://airbyte.com/blog/why-you-should-not-build-your-data-pipeline-on-top-of-singer
 
 
+
+Meltano is built on top of Singer, which is open source (AGPL).
+
+
+Talend (acquirer of StitchData) seems to have stopped investing in maintaining Singer’s community and connectors. As most connectors see schema changes several times a year, more and more Singer’s taps and targets are not actively maintained and are becoming outdated. 
+
 ## Referencias
 
 How to do Change Data Capture (CDC), using Singer

@@ -38,7 +38,19 @@ Airbyte Licensing Overview
 - Airbyte Protocol is open sourced and available under the MIT License.
 https://docs.airbyte.com/project-overview/licenses/license-faq
 
+# Connector
+
+## HubSpot
+
+Supported Streams
+https://docs.airbyte.com/integrations/sources/hubspot/#supported-streams
 
 # Revisiones
 
 Airbyte is an open-source data integration platform capable of moving data from OLTP databases such as MySQL to destinations such as Apache Kafka using change data capture (CDC) with low latency.
+
+
+# Campusoft.Sync
+
+airbyte posee un workflow orchestration 
+https://airbyte.com/blog/scale-workflow-orchestration-with-temporal
