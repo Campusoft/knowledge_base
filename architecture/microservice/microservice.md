@@ -146,6 +146,12 @@ Un cliente web necesita información que esta en varios microservicios. En este c
 
 ## Asynchronous messaging
 
+## Request/Reply Pattern
+
+Another approach for decoupling synchronous HTTP messages is a Request-Reply Pattern, which uses 
+queuing communication. Communication using a queue is always a one-way channel, with a producer 
+sending the message and consumer receiving it. With this pattern, both a request queue and response 
+queue are implemented
 
 ## Patrón Saga
 
@@ -300,6 +306,11 @@ Architecture Overview
 https://zipkin.io/pages/architecture.html
 
 
+**Health checks**
+
+Health monitoring can allow near-real-time information about the state of your containers and microservices. Health monitoring is critical to multiple aspects of operating microservices and is especially important when orchestrators perform partial application upgrades in phases, as explained later.
+
+Microservices-based applications often use heartbeats or health checks to enable their performance monitors, schedulers, and orchestrators to keep track of the multitude of services. If services cannot send some sort of "I'm alive" signal, either on demand or on a schedule, your application might face risks when you deploy updates, or it might just detect failures too late and not be able to stop cascading failures that can end up in major outages.
 
 # Microservices Frameworks
 
@@ -413,6 +424,19 @@ these instances
 
 
 - All these services are deployed into the same monolithic runtime (such as application servers). When one service requires more CPU, while the other requires more memory. (monolith 
+
+# Referencias Aplicaciones - Microservices
+
+
+Online Google
+
+Online Boutique is a cloud-native microservices demo application. Online Boutique consists of a 10-tier microservices application. The application is a web-based e-commerce app where users can browse items, add them to the cart, and purchase them.
+- Online Boutique is composed of 11 microservices written in different languages that talk to each other over gRPC. 
+- Go C#  Node.js Python Java
+- Tool Skaffold
+https://github.com/GoogleCloudPlatform/microservices-demo.git
+
+
 
 
 

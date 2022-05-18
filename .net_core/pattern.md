@@ -43,7 +43,40 @@ MediatR has two kinds of messages it dispatches:
 Behaviors
 -  It represents a similar pattern to filters in ASP.NET MVC/Web API or pipeline behaviors in NServiceBus.
 
-***Publish strategies***
+
+**Sending Notifications**
+
+Sending notifications is very similar to sending requests, in that a notification object and a notification handler object must be created. The difference here is that multiple notification handler objects can be created, which will all be called when a notification is sent to MediatR
+
+```
+public class FooNotification : INotification
+{
+    // some properties
+}
+
+public class FooNotificationHandler : INotificationHandler<FooNotification>
+{
+    public Task Handle(FooNotification notification, CancellationToken cancellationToken)
+    {
+        // do stuff
+
+        return Task.CompletedTask;
+    }
+}
+
+public class BarNotificationHandler : INotificationHandler<FooNotification>
+{
+    public Task Handle(FooNotification notification, CancellationToken cancellationToken)
+    {
+        // do stuff
+
+        return Task.CompletedTask;
+    }
+}
+
+```
+
+**Publish strategies**
 
 ```
 /// <summary>
@@ -83,7 +116,8 @@ public enum PublishStrategy
 }
 
 ```
-***Pipeline Behaviours***
+
+**Pipeline Behaviours**
 
 Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR
 
@@ -91,7 +125,7 @@ Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR
 Pipeline behaviours are a type of middleware that get executed before and after a request (only supports requests, not notifications). They can be useful for a number of different tasks, such as logging, error handling, request validation etc.
 
 
-***Referencias***
+**Referencias**
 
 MediatR supports different Publish strategies that you can use.
 https://github.com/jbogard/MediatR/wiki#publish-strategies

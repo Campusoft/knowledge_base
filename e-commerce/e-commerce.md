@@ -1,7 +1,7 @@
 # Medusa
 
 
-Medusa is an open-source headless commerce engine that enables developers to create amazing digital commerce experiences. 
+Medusa is an open-source headless commerce engine that enables developers to create amazing digital commerce experiences.  The Open Source Shopify Alternative
 
 
 Architecture overview

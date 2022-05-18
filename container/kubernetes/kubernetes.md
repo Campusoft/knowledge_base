@@ -70,9 +70,16 @@ En Kubernetes existen 4 tipos de Servicios:
   -	Servicio del proveedor de cloud. Redirecciona el tráfico a los pods a través de un balanceador creado por kubernetes en el proveedor de cloud
 - Ingress
 
+
+There are several ways to expose your application to the outside of your Kubernetes cluster, and you'll want to select the appropriate one based on your specific use case. 
+
+The four main options we'll be comparing in this post are: ClusterIP, NodePort, LoadBalancer, and Ingress. Each provides a way to expose services and is useful in different situations. A service is essentially a frontend for your application that automatically reroutes traffic to available pods in an evenly distributed way. Services are an abstract way of exposing an application running on a set of pods as a network service. Pods are immutable, which means that when they die, they are not resurrected. The Kubernetes cluster creates new pods in the same node or in a new node once a pod dies. 
+
+
+
 **Cluster IP**
 
-**Ingress**
+## Ingress
 
 Este servicio funciona de un modo diferente a los demás. Cuando creamos un ClusterIP o un NodePort basta con crear un objeto Kuberntes de ese tipo de servicio y aplicarlo al Cluster. Pero antes de poder usar Ingress necesitamos de algo llamado “Controlador”.
 
@@ -80,9 +87,26 @@ Un controlador de Ingress es un Pod o conjunto de Pods que se ejecutan en nuestr
 
 El problema es que en Kubernetes no hay un controlador de Ingress por defecto, por lo que debemos instalarlo nosotros.
 
+Kubernetes Ingress is an API object that provides routing rules to manage external users' access to the services in a Kubernetes cluster. 
+
+Ingress is made up of an Ingress API object and the Ingress Controller. As we have discussed, Kubernetes Ingress is an API object that describes the desired state for exposing services to the outside of the Kubernetes cluster. An Ingress Controller is essential because it is the actual implementation of the Ingress API. An Ingress Controller reads and processes the Ingress Resource information and usually runs as pods within the Kubernetes cluster.  
+
+Ingress Controller
+
+
 **Referencias**
 Ingress en Kubernetes Desmitificado: ¿Qué lo diferencia de un NodePort o un LoadBalancer?
 https://desarrollofront.medium.com/ingress-en-kubernetes-desmitificado-qu%C3%A9-lo-diferencia-de-un-nodeport-o-un-loadbalancer-b0cf060a6f8a
+
+Comparison of Kubernetes Ingress controllers. The research compares several Ingress controllers for Kubernetes
+- Ingress Nginx 
+- Kong
+- Istio Ingress
+- Contour
+- Gloo
+https://learnk8s.io/research#ingress-controllers
+
+
 
 # Features
 
@@ -95,17 +119,24 @@ Se requiere tener instalado un controlador en el proveedor. Ej. nginx. https://w
 Al instalar nginx se crea un loadBalancer y clusterIP
 
 # ConfigMaps
+
+Un configmap es un objeto de la API utilizado para almacenar datos no confidenciales en el formato clave-valor. Los Pods pueden utilizar los ConfigMaps como variables de entorno, argumentos de la linea de comandos o como ficheros de configuración en un Volumen.
+
 -	https://kubernetes.io/es/docs/concepts/configuration/configmap/	
--	Un configmap es un objeto de la API utilizado para almacenar datos no confidenciales en el formato clave-valor. Los Pods pueden utilizar los ConfigMaps como variables de entorno, argumentos de la linea de comandos o como ficheros de configuración en un Volumen.
+
 
 # Secret
+
+Los objetos de tipo Secret en Kubernetes te permiten almacenar y administrar información confidencial, como contraseñas, tokens OAuth y llaves ssh. Poniendo esta información en un Secret es más seguro y más flexible que ponerlo en la definición de un Pod o en un container image.
+
+No están fuertemente cifrados solo codificados en base64.
+
 -	https://kubernetes.io/es/docs/concepts/configuration/secret/
--	Los objetos de tipo Secret en Kubernetes te permiten almacenar y administrar información confidencial, como contraseñas, tokens OAuth y llaves ssh. Poniendo esta información en un Secret es más seguro y más flexible que ponerlo en la definición de un Pod o en un container image.
--	No están fuertemente cifrados solo codificados en base64.
 
 # Kustomization
+Permite con un cliente generar manifiestos
+
 -	https://kubernetes.io/docs/tasks/manage-kubernetes-objects/kustomization/
--	Permite con un cliente generar manifiestos
 
 # Providers
 
@@ -155,6 +186,7 @@ En el archivo .yaml del objeto de Kubernetes que quieras crear, obligatoriamente
 - metadata - Datos que permiten identificar unívocamente al objeto, incluyendo una cadena de texto para el name, UID, y opcionalmente el namespace
 
 También deberás indicar el campo spec del objeto. El formato del campo spec es diferente según el tipo de objeto de Kubernetes, y contiene campos anidados específicos de cada objeto.
+
 
 
 # Kubectl
@@ -275,7 +307,7 @@ Local kubernetes development
 https://kapernikov.com/local-kubernetes-development/
 
 
-**minikube**
+## minikube
 
 Errores con virtualbox
 
@@ -291,7 +323,7 @@ minikube is the most popular option for running the local Kubernetes cluster for
 
 
 
-**K3s**
+## K3s
 
 - Lightweight Kubernetes
 - The certified Kubernetes distribution built for IoT & Edge computing
@@ -300,7 +332,7 @@ https://k3d.io/
 
 
 
-**Skaffold**
+## Skaffold
 
 Local Kubernetes Development. 
 
@@ -309,7 +341,11 @@ Skaffold handles the workflow for building, pushing and deploying your applicati
 https://skaffold.dev/
  
 
+**Play with Kubernetes**
 
+Si no quieres instalar nada en tu máquina local, aquí tienes otra buena opción llamada Play with Kubernetes. Se trata de una página web que te permite tener entornos de cuatro horas de duración, totalmente gratuitos, donde puedes crear un clúster con varios nodos de una forma súper rápida.
+
+https://labs.play-with-k8s.com/
 
 # KEDA - Kubernetes-based Event Driven Autoscaler
 
@@ -353,6 +389,15 @@ Kubernetes on Windows: 6 Life-Saving Tools & Tips
 - minikube
 - Lens
 https://loft.sh/blog/kubernetes-on-windows-6-life-saving-tools-and-tips
+
+Adding Windows nodes
+You can use Kubernetes to run a mixture of Linux and Windows nodes, so you can mix Pods that run on Linux on with Pods that run on Windows. This page shows how to register Windows nodes to your cluster.
+https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/adding-windows-nodes/
+
+
+## OpenShift 
+
+OpenShift is a family of containerization software offerings created by open-source software provider Red Hat. According to the company, Kubernetes is the kernel of distributed systems, while OpenShift is the distribution. At its core, OpenShift is a cloud-based Kubernetes container platform that's considered both containerization software and a platform-as-a-service (PaaS)
 
 
 # Glosario
@@ -405,4 +450,5 @@ https://cert-manager.io/
 
 GitOps allows you to store configuration and policy in Git and to apply it across your Kubernetes infrastructure using agents. The advantages over devops include consistency, avoiding configuration drift, and ensuring that security, testing, and policy checks are initiated early in the CI/CD process. You may have encountered GitOps with Flux or Argo CD, two open source projects that allow you to implement GitOps.
  
- 
+ Understanding kubernetes networking: pods
+https://medium.com/google-cloud/understanding-kubernetes-networking-pods-7117dd28727 

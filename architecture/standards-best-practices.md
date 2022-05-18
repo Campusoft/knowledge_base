@@ -45,13 +45,13 @@ Command Query Responsibility Segregation (CQRS) pattern
 - Stage 3: Separate read and write databases
 https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/
 
-***Queries***
+**Queries**
 
 Queries are used to get data from the database. Queries objects only return data and do not make any changes.
 
 Queries will only contain the methods for getting data. They are used to read the data in the database to return the DTOs to the client, which will be displayed in the user interface.
 
-***Command***
+**Command**
 
 Commands represent the intention of changing the state of an entity. They execute operations like Insert, Update, Delete. Commands objects alter state and do not return data.
 
@@ -64,7 +64,7 @@ https://docs.microsoft.com/en-us/dotnet/architecture/microservices/microservice-
 
 
 
-***Event Sourcing***
+**Event Sourcing**
 
 Event Sourcing is a design pattern in which results of business operations are stored as a series of events.
 
@@ -94,6 +94,9 @@ https://medium.com/aspnetrun/cqrs-and-event-sourcing-in-event-driven-architectur
 
 - Porque un CQRS commad no retorna valores. Should the Command Handler return a value?
 - Should the Command Handler throw an exception?
+
+"According to CQS, a method should never be both simultaneously. For example, if you look at the typical data structure of the stack, the push function is a command, while the top is a query. Finally, the pop function violates the CQS pattern because it modifies the stack’s internal state and returns information simultaneously."
+https://levelup.gitconnected.com/what-is-cqrs-8ddd74ca05bb
 
 
 ## Resiliency / resiliente / Resistencia
@@ -157,6 +160,10 @@ The purpose of ISO 3166 is to define internationally recognized codes of letters
 
 [Microsoft REST API Guidelines](https://github.com/Microsoft/api-guidelines/blob/vNext/Guidelines.md)
 
+
+Guía de diseño de API - Google
+Esta guía se aplica a las API de REST y a las API de RPC, con un enfoque particular en las API de gRPC
+https://cloud.google.com/apis/design/
 
 # Varios
 

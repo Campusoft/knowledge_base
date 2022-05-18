@@ -1,5 +1,14 @@
 # kubernetes - architecture
 
+Un clúster de Kubernetes se divide en dos componentes:
+
+- Plano de control: proporciona los servicios básicos de Kubernetes y la orquestación de las cargas de trabajo de las aplicaciones.
+- Nodos: ejecutan las cargas de trabajo de las aplicaciones.
+
+![imagen](https://user-images.githubusercontent.com/222181/167459955-7a89b94e-d896-4e09-a367-4c0e59372c10.png)
+Ref: https://docs.microsoft.com/es-es/azure/aks/concepts-clusters-workloads
+
+
 A running Kubernetes cluster contains node agents (kubelet) and a cluster control plane (AKA master), with cluster state backed by a distributed storage system (etcd).
 
 The Kubernetes control plane is split into a set of components, which can all run on a single master node, or can be replicated in order to support high-availability clusters, or can even be run on Kubernetes itself (AKA self-hosted).
@@ -12,6 +21,9 @@ The Kubernetes control plane is split into a set of components, which can all ru
 https://github.com/kubernetes/community/tree/master/contributors/design-proposals/architecture
 
 
+"If an application runs in containers, it can run on Kubernetes."
+
+
 # Controllers
 
 In Kubernetes, controllers are control loops that watch the state of your cluster, then make or request changes where needed. Each controller tries to move the current cluster state closer to the desired state.
@@ -22,7 +34,7 @@ A controller tracks at least one Kubernetes resource type. These objects have a 
 
 Job is a Kubernetes resource that runs a Pod, or perhaps several Pods, to carry out a task and then stop.
 
-# Scheduler
+## Scheduler
 
 In Kubernetes, scheduling refers to making sure that Pods are matched to Nodes so that Kubelet can run them.
 
@@ -34,3 +46,59 @@ For every newly created pod or other unscheduled pods, kube-scheduler selects an
 
 
 https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/
+
+# Kubernetes objects
+
+Kubernetes objects consist of two main fields. The first is the object "spec," which is provided by the user. The spec dictates the desired state for this object. The second field is the "status," which is provided by Kubernetes. 
+
+
+##  Pod
+
+Kubernetes makes a bolder step and chooses a group of cohesive containers, called a Pod, as the smallest deployable unit.
+
+Pods are the smallest deployable units of computing that you can create and manage in Kubernetes.
+
+Pod networking
+
+Each Pod is assigned a unique IP address for each address family. Every container in a Pod shares the network namespace, including the IP address and network ports
+
+Within a Pod, containers share an IP address and port space, and can find each other via localhost.
+
+
+Pods in a Kubernetes cluster are used in two main ways:
+Pods that run a single container. 
+Pods that run multiple containers that need to work together.
+
+### Multi Container Pods In Kubernetes
+
+Multi Container Pods In Kubernetes
+- Design-patterns of Multi Container Pods. (Ilustraciones)
+- Communication Inside a Multi Container Pod
+- How To Deploy A Multi Container Pod? 
+https://k21academy.com/docker-kubernetes/multi-container-pods/
+
+# namespaces
+
+These are just a few common patterns, but the key point is that namespaces can be usedto provide logical separation of a cluster into virtual clusters
+
+Names obviously provide a level of uniqueness within a namespace. But if you want to provide attributes to an object without specifying any uniqueness, labels are a great place to start. Labels are key/value pairs that can be attached to objects in order to identify those objects.
+
+
+## kube-system namespace
+
+
+# Probes  - Health checking
+
+Kubernetes (since version 1.16) has three types of probe, which are used for three different purposes:
+
+- Liveness probe. This is for detecting whether the application process has crashed/deadlocked. If a liveness probe fails, Kubernetes will stop the pod, and create a new one.
+- Readiness probe. This is for detecting whether the application is ready to handle requests. If a readiness probe fails, Kubernetes will leave the pod running, but won't send any requests to the pod.
+- Startup probe. This is used when the container starts up, to indicate that it's ready. Once the startup probe succeeds, Kubernetes switches to using the liveness probe to determine if the application is alive. This probe was introduced in Kubernetes version 1.16.
+
+To add some context, in most applications a "probe" is an HTTP endpoint. If the endpoint returns a status code from 200 to 399, the probe is successful
+
+
+
+Health checking for a Kafka application
+- Posee animaciones ilustrar Readiness probe Liveness probe
+https://mikeldeltio.com/2020/06/23/kubernetes-health-check-for-a-kafka-application/

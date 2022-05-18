@@ -34,3 +34,10 @@ Introducción a Istio
 - Escenarios y casos de uso de Istio
 - Istio y las aplicaciones de 12 factores
 https://developer.ibm.com/es/articles/istio-and-the-12-factor-apps/
+
+
+
+
+Authentication against Azure Active Directory using Istio
+- OpenID
+https://mikeldeltio.com/2019/06/24/istio-authenticacion-against-azure-active-directory/

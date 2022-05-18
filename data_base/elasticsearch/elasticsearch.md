@@ -1,5 +1,10 @@
 # Elasticsearch
 
+# Architecture
+
+Elasticsearch se basa una arquitectura descentralizada peer to peer (P2P) de nodos simétrico, en la que, a diferencia de otras soluciones, cada nodo puede desempeñar una o mas funciones. 
+
+Apache Lucene
 
 # Versiones
 
@@ -15,6 +20,15 @@ https://dev.to/jinnabalu/elasticsearch-as-a-container-for-beginners-d1e
 
 
 Optional but important when we are running in dev machine ES_JAVA_OPTS: "-Xms512m -Xmx1024m". En ambientes de desarrollo para controlar asignacion recursos no sean altos.
+
+
+
+Calcular requerimientos:
+
+Benchmarking and sizing your Elasticsearch cluster for logs and metrics
+https://www.elastic.co/es/blog/benchmarking-and-sizing-your-elasticsearch-cluster-for-logs-and-metrics
+
+
 
 Errores
 
@@ -54,6 +68,15 @@ DELETE “http://localhost:9200/NombreIndiceEliminar”
 ```
 # Licencias
 
-***Revisar***
+
+Preguntas frecuentes sobre la licencia Elastic 2.0 (ELv2)
+
+- No puedes proporcionar los productos a terceros como un servicio gestionado. 
+- No puedes eludir la funcionalidad de claves de licencia o eliminar/ocultar características protegidas por las claves de licencia.
+- No puedes eliminar u ocultar cualquier aviso de licenciamiento, derechos de autor u otros.
+
+https://www.elastic.co/es/licensing/elastic-license/faq
+
+**Revisar**
 https://www.elastic.co/what-is/open-x-pack 
 

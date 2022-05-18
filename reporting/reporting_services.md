@@ -1,4 +1,4 @@
-#Reporting_services
+# Reporting Services
 
 
 # Herramientas
@@ -8,6 +8,10 @@
   - Extensions: Reporting Services. VS 2019
   - https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio
 
+
+# Develop with the REST APIs for Reporting Services
+
+- APPLIES TO: ✔️ SQL Server Reporting Services (2017 and later) 
 
 # Implementacion
 

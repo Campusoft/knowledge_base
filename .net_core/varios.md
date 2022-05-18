@@ -130,6 +130,7 @@ https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host?view
 
 Background tasks with hosted services in ASP.NET Core
 In ASP.NET Core, background tasks can be implemented as hosted services.
+- BackgroundService is a base class for implementing a long running IHostedService.
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-6.0&tabs=visual-studio
 
 

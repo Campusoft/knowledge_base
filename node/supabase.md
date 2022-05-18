@@ -17,8 +17,20 @@ Supabase uses several tools with PostgreSQL to give real-time updates. They are 
 -    GoTrue manages users through an SWT API which generates SWT tokens
 -    Kong is a cloud-native API gateway
 
+# Architecture
 
+# APIs
 
+Supabase generates three types of API directly from your database schema.
+
+- REST - interact with your database through a restful interface.
+- Realtime - listen to database changes.
+- GraphQL - in beta.
+	
+## REST API
+
+Supabase provides a RESTful API using PostgREST. This is a very thin API layer on top of Postgres
+	
 
 # Storage
 
@@ -26,5 +38,4 @@ Storage is now available in Supabase.
 Architecture Storage
 
 - The storage server is built with Fastify and Typescript
-- 
 https://supabase.io/blog/2021/03/30/supabase-storage

@@ -5,3 +5,7 @@ XACML, siglas en inglés para "eXtensible Access Control Markup Language", es un 
 
 
 
+# policies 
+
+Policies help you manage access to your applications and APIs. You can restrict access based on a number of conditions such as user and group membership, device, location, or time.
+

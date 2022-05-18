@@ -39,6 +39,7 @@ Asp.Net Core 5 Clean Architecture (Microservices, Modular Monolith, Monolith) sa
 - Crud / Page separadas por lista, creacion-edicion.
 - ngx-bootstrap 
 - Storage
+- Health Checks UI
 https://github.com/phongnguyend/Practical.CleanArchitecture
 
 # Referencias Aplicaciones

@@ -25,9 +25,17 @@ uPDaTE "my_TabLE" SeT a = 5;
 
 # Install
 
-***Docker***
+**Docker**
 
 https://hub.docker.com/_/postgres
+
+
+**Referencias**
+
+Migrating Database from SQL Server(MSSQL) to PostgreSQL 
+- Migrating Database Schema manually 
+- EnterpriseDB Migration Toolkit
+https://dev.to/abhinavgupta1997/migrating-database-from-sql-server-mssql-to-postgresql-1mje
 
 
 #  Schemas

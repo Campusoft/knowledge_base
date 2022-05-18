@@ -24,3 +24,7 @@ https://www.vendure.io/
  A modular, high performance, headless e-commerce platform built with Python, GraphQL, Django, and React. 
  
  https://github.com/mirumee/saleor
+ 
+# Medusa
+
+Medusa is an open-source headless commerce engine that enables developers to create amazing digital commerce experiences. 

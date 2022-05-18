@@ -32,22 +32,23 @@ Obviously this model works for relatively simple microservices based application
 
 
 
-***Service Aggregator Pattern***
+**Service Aggregator Pattern**
+
 Another option for eliminating microservice-to-microservice coupling is an Aggregator microservice
 
 The pattern isolates an operation that makes calls to multiple back-end microservices, centralizing its logic into a specialized microservice.
  
 
-***Materialized View pattern***
+**Materialized View pattern**
 
 
 
-***service mesh***
+**service mesh**
 A service mesh is a software layer that handles service-to-service communication
 
 Right now, the main options for a service mesh in Kubernetes are linkerd and Istio.
 
-***Referencias***
+**Referencias**
 Service-to-service communication
 https://docs.microsoft.com/en-us/dotnet/architecture/cloud-native/service-to-service-communication
 
@@ -58,8 +59,6 @@ Ocelot is a lightweight API Gateway, recommended for simpler approaches. Ocelot 
 
 
 # Saga
-
- 
 
 (Codigo) It is a Saga pattern implementation reference through an orchestration approach in a serverless architecture on Azure. The solution leverages Azure Functions for the implementation of Saga participants, Azure Durable Functions for the implementation of the Saga orchestrator, Azure Event Hubs as the data streaming platform and Azure Cosmos DB as the database service.
 https://github.com/Azure-Samples/saga-orchestration-serverless
