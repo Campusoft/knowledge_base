@@ -11,6 +11,10 @@ Technical Stack
 - Orchestration: Temporal
   https://docs.airbyte.io/understanding-airbyte/tech-stack
 
+
+At Airbyte, we use Java as our main language for backend development, Gradle as our build tool, jOOQ as the object-relational mapping library (ORM), and Flyway to manage database migrations.
+
+
 High-level View
 A high level view of Airbyte's components.
 
@@ -22,12 +26,39 @@ https://docs.airbyte.io/understanding-airbyte/high-level-view
 
 # Airbyte Specification
 
-# ConnectorSpecification
+The specification is Docker-based; this allows a developer to write a connector in any language they want.
+
+## Source
+
+A source is implemented as a Docker container. 
+Existe 4 commandos
+
+### Command Spec
+
+The objective of the spec command is to pull information about how to use a source. The ConnectorSpecification contains this information
+
+Como se llama a la imagen de docker, para ejecutar el commando
+ 
+```
+docker run --rm -i <source-image-name> spec
+```
+
+Ejemplo
+
+```
+docker run --rm -i airbyte/source-hubspot spec
+```
+
+```
+docker run --rm -i airbyte/source-woocommerce spec
+```
+
+**ConnectorSpecification**
 
 - The UI reads the JsonSchema in this field in order to render the input fields for a user to fill in.
 - This JsonSchema is also used to validate that the provided inputs are valid. e.g. If port is one of the fields and the JsonSchema in the connectorSpecification specifies that this filed should be a number, if a user inputs "airbyte", they will receive an error. Airbyte adheres to JsonSchema validation rules.
 
-# AirbyteCatalog
+## AirbyteCatalog
 
 An AirbyteCatalog describes the structure of data in a data source. It has a single field called streams that contains a list of AirbyteStreams. Each of these contain a name and json_schema field. The json_schema field accepts any valid JsonSchema and describes the structure of a stream. This data model is intentionally flexible.
 
@@ -44,6 +75,11 @@ https://docs.airbyte.com/project-overview/licenses/license-faq
 
 Supported Streams
 https://docs.airbyte.com/integrations/sources/hubspot/#supported-streams
+
+
+# Install
+
+
 
 # Revisiones
 

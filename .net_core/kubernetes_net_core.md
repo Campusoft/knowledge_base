@@ -1,5 +1,14 @@
-# 
+# Kubernetes with .net core
 
+
+# Client Libraries
+
+
+Kubernetes C# Client
+https://github.com/kubernetes-client/csharp
+
+Client libraries for using the Kubernetes API from various programming languages.
+https://kubernetes.io/docs/reference/using-api/client-libraries/
 
 # Referencias
 

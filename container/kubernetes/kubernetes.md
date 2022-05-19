@@ -77,7 +77,7 @@ The four main options we'll be comparing in this post are: ClusterIP, NodePort, 
 
 
 
-**Cluster IP**
+## Cluster IP
 
 ## Ingress
 
@@ -93,6 +93,9 @@ Ingress is made up of an Ingress API object and the Ingress Controller. As we ha
 
 Ingress Controller
 
+**Ingress rules**
+
+
 
 **Referencias**
 Ingress en Kubernetes Desmitificado: ¿Qué lo diferencia de un NodePort o un LoadBalancer?
@@ -107,6 +110,12 @@ Comparison of Kubernetes Ingress controllers. The research compares several Ingr
 https://learnk8s.io/research#ingress-controllers
 
 
+
+Kubernetes: Ingress Overview
+- Diagramas routes redes en un Ingress
+- A fanout configuration routes traffic from a single IP address to more than one Service, based on the HTTP URI being requested. 
+- Name-based virtual hosts support routing HTTP traffic to multiple host names at the same IP address
+https://able8.medium.com/kubernetes-ingress-overview-682b2a86c834
 
 # Features
 
