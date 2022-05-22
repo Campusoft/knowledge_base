@@ -53,6 +53,49 @@ docker run --rm -i airbyte/source-hubspot spec
 docker run --rm -i airbyte/source-woocommerce spec
 ```
 
+
+### Command Check
+
+
+```
+docker run --rm -i <source-image-name> check --config <config-file-path>
+```
+
+Para pasar el archivo de configuracion al contenedor utilizar volumnes
+```
+docker run --rm -v $(pwd)/secrets:/secrets airbyte/source-hubspot check --config /secrets/sample_config.json
+```
+
+Windows Test con WSL
+- Crear una carpeta local 
+- Utilizar el path absoluto a los archivos que se desea colocar en el volumens
+
+```
+docker run --rm -v c/temp/secrets:/secrets airbyte/source-hubspot check --config /secrets/sample_config.json
+```
+
+
+### Command Discover
+
+```
+docker run --rm -i <source-image-name> discover --config <config-file-path>
+```
+
+Ejemplo windows test con WSL
+```
+docker run --rm -v c/temp/secrets:/secrets airbyte/source-hubspot discover --config /secrets/sample_config.json
+```
+
+### Command Read
+
+```
+docker run --rm -i <source-image-name> read --config <config-file-path> --catalog <catalog-file-path> [--state <state-file-path>] > message_stream.json
+```
+
+docker run --rm -v $(pwd)/secrets:/secrets -v $(pwd)/sample_files:/sample_files airbyte/source-hubspot:dev read --config /secrets/config.json --catalog /sample_files/configured_catalog.json
+
+
+
 **ConnectorSpecification**
 
 - The UI reads the JsonSchema in this field in order to render the input fields for a user to fill in.
@@ -61,6 +104,31 @@ docker run --rm -i airbyte/source-woocommerce spec
 ## AirbyteCatalog
 
 An AirbyteCatalog describes the structure of data in a data source. It has a single field called streams that contains a list of AirbyteStreams. Each of these contain a name and json_schema field. The json_schema field accepts any valid JsonSchema and describes the structure of a stream. This data model is intentionally flexible.
+
+# syncing
+
+## Incremental Sync - Append
+
+A cursor is the value used to track whether a record should be replicated in an incremental sync. A common example of a cursor would be a timestamp from an updated_at column in a database table.
+
+A cursor field is the field or column in the data where that cursor can be found. Extending the above example, the updated_at column in the database would be the cursor field, while the cursor is the actual timestamp value used to determine if a record should be replicated.
+
+We will refer to the set of records that the source identifies as being new or updated as a delta.
+
+https://docs.airbyte.com/understanding-airbyte/connections/incremental-append
+
+# Basic Normalization
+
+A core tenet of ELT philosophy is that data should be untouched as it moves through the E and L stages so that the raw data is always accessible. If an unmodified version of the data exists in the destination, it can be retransformed without needing to sync data again.
+
+The normalization rules are not configurable. They are designed to pick a reasonable set of defaults to hit the 80/20 rule of data normalization. We respect that normalization is a detail-oriented problem and that with a fixed set of rules, we cannot normalize your data in such a way that covers all use cases.
+
+
+- En el proceso se crean dos trablas raw table "_airbyte_raw_<stream name>" y data table "<stream name>". 
+https://docs.airbyte.com/understanding-airbyte/basic-normalization#rules
+
+
+
 
 # Licencias
 

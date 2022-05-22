@@ -60,3 +60,21 @@ La capa SQL se encarga de exponer una API SQL compatible con PostgreSQL con la q
 
 CockroachDB in detail
 https://mikeldeltio.com/2022/01/25/distributed-databases-cockroachdb/
+
+
+# Ejemplos de base de datos
+
+
+A sample MySQL database with an integrated test suite, used to test your applications and database servers
+https://github.com/datacharmer/test_db
+
+Sakila sample database
+https://dev.mysql.com/doc/sakila/en/
+
+Pagila is a port of the Sakila example database available for MySQL, which was originally developed by Mike Hillyer of the MySQL AB documentation team. It is intended to provide a standard schema that can be used for examples in books, tutorials, articles, samples, etc.
+https://github.com/devrimgunduz/pagila
+
+AdventureWorks Databases – 2012, 2008R2 and 2008
+http://msftdbprodsamples.codeplex.com/releases/view/93587
+Example Databases – Mysql
+https://dev.mysql.com/doc/index-other.html

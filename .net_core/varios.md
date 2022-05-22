@@ -28,6 +28,22 @@ Noda Time is an alternative date and time API for .NET. It helps you to think ab
 https://github.com/nodatime/nodatime
 
 
+# Channels
+
+Channel basically is a data structure which supports the communication between a producer and consumer, it’s thread safe and has an excellent notification framework in both directions.
+
+The System.Threading.Channels namespace provides us with the necessary constructs to make building a pipeline of producers/consumers easier, without having to worry about locking and other potential concurrency issues. It also provides bounded and unbounded “channels”
+
+- System.Threading.Channels is always available in .NET Core
+- Thread safe
+- Concurrency
+
+Producer/consumer pipelines with System.Threading.Channels
+- Explicacion con un escanario
+- El ejemplo son una serie pasos que se colocan en pipeline
+- producer-consumer pattern
+https://blog.maartenballiauw.be/post/2020/08/26/producer-consumer-pipelines-with-system-threading-channels.html
+
 # CancellationToken 
 
 

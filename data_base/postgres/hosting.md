@@ -1,7 +1,7 @@
 # Hosting
 
 
-# elephantsql
+# Elephantsql
 
 
 FREE
