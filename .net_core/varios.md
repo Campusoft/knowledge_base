@@ -261,7 +261,15 @@ https://github.com/axuno/SmartFormat
 
 # Schedule 
 
+## Hangfire
 
+
+## Quartz.NET
+
+Open-source job scheduling system for .NET 
+https://www.quartz-scheduler.net/
+
+ 
 ##  Cron expressions
 
 Cronos is a .NET library for parsing Cron expressions and calculating next occurrences. It was designed with time zones in mind, and intuitively handles Daylight saving time (also known as Summer time) transitions as in *nix Cron.

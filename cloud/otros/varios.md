@@ -6,7 +6,6 @@ Infrastructure as code (IaC) tools allow you to manage infrastructure with confi
 
 Terraform es un software de infraestructura como código desarrollado por HashiCorp. Permite a los usuarios definir y configurar la infraestructura de un centro de datos en un lenguaje de alto nivel
 
-
 Write, Plan, Apply
 Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files.
 

@@ -64,6 +64,13 @@ Azure Kubernetes Service (AKS) is a free container service that simplifies the d
 
 Paying for only the virtual machines, and associated storage and networking resources consumed makes AKS the most efficient and cost-effective container service on the market.
 
+
+# cloud provider cli - Azure CLI
+
+The Azure command-line interface (Azure CLI) is a set of commands used to create and manage Azure resources. The Azure CLI is available across Azure services and is designed to get you working quickly with Azure, with an emphasis on automation. 
+
+The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources. It allows the execution of commands through a terminal using interactive command-line prompts or a script.
+
 # Referencias
 
 ***Build microservices on Azure***

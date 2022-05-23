@@ -55,15 +55,15 @@ https://docs.docker.com/compose/compose-file/#volumes
 Linux:
 - No existe inconvenientes
 
-## License
-MIT License
-https://github.com/jitsucom/jitsu/blob/master/LICENSE
 
 -----------------
 
 [ERROR]: ❌ Airbyte integration is disabled: error executing docker image ls: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?. For using Airbyte run Jitsu docker with: -v /var/run/docker.sock:/var/run/docker.sock
 
 
+## License
+MIT License
+https://github.com/jitsucom/jitsu/blob/master/LICENSE
 
 # Extending Jitsu
 

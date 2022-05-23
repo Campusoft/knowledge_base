@@ -24,6 +24,13 @@ A high level view of Airbyte's components.
 
 https://docs.airbyte.io/understanding-airbyte/high-level-view
 
+# Architecture
+
+Why You Should NOT Build Your Data Pipeline on Top of Singer
+- The Singer protocol does not specify how an integration should define what inputs it requires.
+https://airbyte.com/blog/why-you-should-not-build-your-data-pipeline-on-top-of-singer
+
+
 # Airbyte Specification
 
 The specification is Docker-based; this allows a developer to write a connector in any language they want.
@@ -152,6 +159,13 @@ https://docs.airbyte.com/integrations/sources/hubspot/#supported-streams
 # Revisiones
 
 Airbyte is an open-source data integration platform capable of moving data from OLTP databases such as MySQL to destinations such as Apache Kafka using change data capture (CDC) with low latency.
+
+Scaling data pipelines on Kubernetes
+- How to horizontally scale: use Kubernetes.
+- Using socat to redirect STDIO between pods in different nodes
+- Using the sidecar pattern to create a sidecar socat container
+- How to pipe data between our two containers: use named pipes
+https://airbyte.com/blog/scaling-data-pipelines-kubernetes
 
 
 # Campusoft.Sync
