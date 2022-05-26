@@ -92,3 +92,14 @@ Advantages of using an API gateway include:
 
 -    Out-of-the-box policies, like for throttling, caching, transformation, or validation.
 
+
+# Revisiones
+
+Azure Cognitive Service for Language ofrece ahora la posibilidad de resumir documentos y conversaciones. (build-2022)
+
+
+Azure Form Recognizer
+The AI-powered document extraction service that understands your forms
+
+
+Azure Arc

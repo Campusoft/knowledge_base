@@ -336,7 +336,7 @@ https://medium.com/rubrikkgroup/understanding-async-avoiding-deadlocks-e41f8f2c6
 Avoid GetAwaiter().GetResult() at all cost
 https://gsferreira.com/archive/2020/08/avoid-getawaiter-getresult-at-all-cost/
 
-# CommandLine
+# CommandLine - (CLI)
 
  Command line parsing, invocation, and rendering of terminal output. 
 https://github.com/dotnet/command-line-api
@@ -344,6 +344,20 @@ https://github.com/dotnet/command-line-api
 features 
 - Soporta Subcommands
 https://github.com/dotnet/command-line-api/blob/main/docs/Features-overview.md
+
+## CliWrap
+
+CliWrap is a library for interacting with external command line interfaces. It provides a convenient model for launching processes, redirecting input and output streams, awaiting completion, handling cancellation, and more.
+https://github.com/Tyrrrz/CliWrap
+
+
+Para direcioncar el Console.In a un commando con CliWrap, utilizar streams con Console.OpenStandardInput()
+
+```
+Stream inputStream = Console.OpenStandardInput();
+await (inputStream | Cli.Wrap(command)).ExecuteAsync();
+```
+
 
 # Workflow
 ## Workflow Core

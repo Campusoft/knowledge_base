@@ -275,9 +275,26 @@ El proyecto abp - cli, se encuentra en abp\framework\src\Volo.Abp.Cli
 
 # Versiones
 
+**5.3.x**
+- Batch Publish Events from Outbox to the Event Bus
+- OpenIddict Module & Keycloack Integration
+https://blog.abp.io/abp/ABP.IO-Platform-5.3-RC-Has-Been-Published
+
+**5.2.x**
+
+- API Versioning
+- libs Folder Has been Removed from Source Control
+https://blog.abp.io/abp/ABP.IO-Platform-5-2-RC-Has-Been-Published
+
+**5.0.x**
+- Transactional Outbox & Inbox for the Distributed Event Bus
+https://blog.abp.io/abp/ABP-IO-Platform-5.0-RC-1-Has-Been-Released
+
 **4.4.x**
 
 - angular: 12.x
+
+
 
 # Referencias
 

@@ -112,7 +112,10 @@ docker run --rm -v $(pwd)/secrets:/secrets -v $(pwd)/sample_files:/sample_files 
 
 An AirbyteCatalog describes the structure of data in a data source. It has a single field called streams that contains a list of AirbyteStreams. Each of these contain a name and json_schema field. The json_schema field accepts any valid JsonSchema and describes the structure of a stream. This data model is intentionally flexible.
 
-# syncing
+# Syncing (Sync Modes)
+
+
+https://docs.airbyte.com/understanding-airbyte/connections/#sync-modes
 
 ## Incremental Sync - Append
 
@@ -153,6 +156,18 @@ https://docs.airbyte.com/integrations/sources/hubspot/#supported-streams
 
 
 # Install
+
+
+# Temporal
+
+Temporal is a scalable and reliable runtime for Reentrant Processes called Temporal Workflow Executions.
+
+The Temporal Platform consists of a Temporal Cluster and Worker Processes. Together these components create a runtime for Workflow Executions.
+
+Worker Processes are hosted by you and execute your code. They communicate with a Temporal Cluster via gRPC.
+
+https://docs.temporal.io/
+
 
 
 

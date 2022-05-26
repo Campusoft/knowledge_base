@@ -60,6 +60,9 @@ Linux:
 
 [ERROR]: ❌ Airbyte integration is disabled: error executing docker image ls: Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?. For using Airbyte run Jitsu docker with: -v /var/run/docker.sock:/var/run/docker.sock
 
+-----------------------
+
+[ERROR]: ❌ Airbyte integration is disabled: volume with name: jitsu_workspace hasn't been mounted to the current docker container. The volume is required for Airbyte integration. Please add -v jitsu_workspace:/home/eventnative/data/airbyte to your Jitsu container run
 
 ## License
 MIT License
