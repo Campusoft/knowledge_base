@@ -40,4 +40,13 @@ Activating the virtual environment will change your shell’s prompt to show wha
 (tutorial-env) $ python
 ```
 
+# Revisiones
+
+Celery es un gestor de tareas distribuido y asíncrono desarrollado en Python. Es una herramienta magnífica para aplicaciones de alta disponibilidad y con alta carga, y también recomendable cuando consideramos que la carga va a ir aumentando progresivamente y vamos a ir incorporando nuevas máquinas poco a poco a nuestro cluster inicial.
+
+Los nodos o workers
+
+Los nodos o workers son programas Python que se pueden ejecutar en modo demonio en un servidor. Se pueden ejecutar uno o varios nodos por servidor. Cada nodo se puede configurar para que coja tareas de un determinado tipo y según una configuración particular.
+
+Si tienes tareas especializadas que quieres ejecutar en un servidor concreto, entonces solo lanzarás nodos de un determinado tipo en dicho servidor.
 

@@ -74,6 +74,17 @@ With Jitsu SDK you can implement extension for Jitsu using Typescript. Each exte
 
 https://jitsu.com/docs/extending/overview
 
+Destination Extensions (Plugins)
+https://jitsu.com/docs/extending/destination-plugins
+
+# Bulk API
+
+
+
+# CLI
+
+Jitsu CLI reads files with events JSONs from local file system and send them to Jitsu via Bulk API where 1 file = 1 HTTP request with synchronous response.
+https://jitsu.com/docs/other-features/cli
 
 # Revision
 Airbyte is an open-source ETL-framework. Jitsu supports Airbyte as an of the connector backend (the other one being Singer and native connectors

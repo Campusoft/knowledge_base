@@ -38,6 +38,15 @@ The System.Threading.Channels namespace provides us with the necessary construct
 - Thread safe
 - Concurrency
 
+
+Now, a Channel can be bounded or unbounded:
+
+- Bounded Channels have a finite capacity for incoming messages, meaning that a Producer can publish only a specific amount of times before fulfilling the space. Then it will have to wait for the Consumers to execute their work and free up some space for new messages.
+- Unbounded Channels instead don’t have this limitation, meaning that Publishers can publish as many times as they want, hoping that the Consumers are able to keep up.
+
+
+
+
 Producer/consumer pipelines with System.Threading.Channels
 - Explicacion con un escanario
 - El ejemplo son una serie pasos que se colocan en pipeline
@@ -277,6 +286,19 @@ Cronos is a .NET library for parsing Cron expressions and calculating next occur
 https://github.com/HangfireIO/Cronos
 
 
+## Gofer.NET: Easy distributed tasks/jobs for .NET Core
+
+This is a distributed job runner for .NET Standard 2.0 Applications.
+
+Inspired by Celery for Python, it allows you to quickly queue code execution on a worker pool.
+
+- Use natural expression syntax to queue jobs for execution.
+- Queued jobs are persisted, and automatically run by the first available worker.
+- Scale your worker pool by simply adding new nodes.
+- Backed by Redis, all tasks are persistent.
+
+
+https://github.com/brthor/Gofer.NET
 
 ## Referencias
 
