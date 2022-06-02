@@ -3,7 +3,7 @@
 Business Intelligence (BI). Business Analytics. The Cloud. On-Premises. Artificial intelligence (AI). Machine learning (ML). Self-service analytics. Augmented Analytics. All of these concepts are important to understand
 
 
-# metabase
+# Metabase
 
 The simplest, fastest way to get business intelligence and analytics to everyone in your company 😋
 metabase.com 
@@ -24,7 +24,8 @@ Holistics is a nice BI alternative to Metabase. It works similar to Metabase in 
 
 # Apache Superset
 
-Apache Superset is a modern data exploration and visualization platform.
+Superset is a modern data exploration and data visualization platform. Superset can replace or augment proprietary business intelligence tools for many teams. Superset integrates well with a variety of data sources.
+
 
 Apache Superset is a modern, enterprise-ready business intelligence web application. It is fast, lightweight, intuitive, and loaded with options that make it easy for users of all skill sets to explore and visualize their data, from simple pie charts to highly detailed deck.gl geospatial charts.
 
@@ -34,13 +35,8 @@ Preset Cloud is a fully hosted, hassle free cloud service for Apache Superset™
 https://www.preset.io/product/
 
 
-Superset is also cloud-native in the sense that it is flexible and lets you choose the:
 
-- web server (Gunicorn, Nginx, Apache),
-- metadata database engine (MySQL, Postgres, MariaDB, etc),
-- message queue (Redis, RabbitMQ, SQS, etc),
-- results backend (S3, Redis, Memcached, etc),
-- caching layer (Memcached, Redis, etc),
+
 	
 ## Superset Architecture
 
@@ -48,6 +44,41 @@ In distributed mode superset spread the queries(only it do it for sql_lab, not f
 
 Apache superset is built entirely on top of python; it uses flask app builder internally.
 It supports python version > 3.6
+
+Superset is also cloud-native in the sense that it is flexible and lets you choose the:
+
+- web server (Gunicorn, Nginx, Apache), (can run multiple instances). The web server is a flask python app, using sqlalchemy ORM to connect to any database.
+- metadata database engine (MySQL, Postgres, MariaDB, etc),
+- message queue (Redis, RabbitMQ, SQS, etc),
+- results backend (S3, Redis, Memcached, etc),
+- caching layer (Memcached, Redis, etc)
+
+
+
+## Dashboard & Slices
+
+Dashboard is nothing but a user interface that allows you to examine various graphs and data. So, each section inside the Dashboard is called Slice. Slices can be in the form of data, text, graph, or anything that shares insights–for example, the total number of users who bought a product in a specific city.
+
+## SQL Lab
+
+SQL Lab is a React-based SQL IDE with a wide range of features.
+
+## Install
+
+ Apache Superset Setup Methods 
+- Method 1. Docker
+- Method 2: Superset GitHub Configuration Through the Installation of Python Packages 
+https://tech-mags.com/apache-superset-setup-methods/
+
+# Redash
+
+Redash is designed to enable anyone, regardless of the level of technical sophistication, to harness the power of data big and small. SQL users leverage Redash to explore, query, visualize, and share data from any data sources. Their work in turn enables anybody in their organization to use the data. Every day, millions of users at thousands of organizations around the world use Redash to develop insights and make data-driven decisions.
+
+https://github.com/getredash/redash
+
+# Google Data Studio 
+
+
 
 # CartoDB
 

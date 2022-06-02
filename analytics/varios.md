@@ -68,3 +68,17 @@ Amundsen:
 Amundsen Metadata service can use Apache Atlas as a backend. Some of the benefits of using Apache Atlas instead of Neo4j is that Apache Atlas offers plugins to several services (e.g. Apache Hive, Apache Spark) that allow for push based updates. It also allows to set policies on what metadata is accesible and editable by means of Apache Ranger.
 
 # Apache Avro
+
+# prestodb
+
+Distributed SQL Query Engine for Big Data
+
+Presto allows querying data where it lives, including Hive, Cassandra, relational databases or even proprietary data stores. A single Presto query can combine data from multiple sources, allowing for analytics across your entire organization. 
+
+ 
+https://prestodb.io/
+
+## AWS Athena 
+
+AWS Athena is a serverless interactive analytics service offered by Amazon that can be readily used to gain insights on data residing in S3. Under to hood, Athena used a distributed SQL engine called Presto, which is used to run the SQL queries.
+
