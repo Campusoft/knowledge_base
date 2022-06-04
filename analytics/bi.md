@@ -11,7 +11,11 @@ metabase.com
 https://github.com/metabase/metabase
 
 Metabase is an analytics open-source project written in Clojure. Metabase architecture is relatively simple, deployed in a jar file, and an application database (local H2, MySQL or Postgres)
- 
+
+## Install
+
+Running Metabase on Docker
+https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html 
 
 # Holistics
 
@@ -35,9 +39,6 @@ Preset Cloud is a fully hosted, hassle free cloud service for Apache Superset™
 https://www.preset.io/product/
 
 
-
-
-	
 ## Superset Architecture
 
 In distributed mode superset spread the queries(only it do it for sql_lab, not for dashboards and explore_json) between its celery workers. Superset can use RabbitMQ or Redis for distributing the tasks and it uses Redis for caching queries.
@@ -52,8 +53,6 @@ Superset is also cloud-native in the sense that it is flexible and lets you choo
 - message queue (Redis, RabbitMQ, SQS, etc),
 - results backend (S3, Redis, Memcached, etc),
 - caching layer (Memcached, Redis, etc)
-
-
 
 ## Dashboard & Slices
 

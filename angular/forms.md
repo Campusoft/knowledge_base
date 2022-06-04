@@ -78,20 +78,28 @@ https://angular.io/guide/dynamic-form
 **Formly**
 
 JSON powered / Dynamic forms for Angular. (ngx-formly)
-Formularios en:
+
+Formularios en diferentes librerias UI:
 - Bootstrap 	
 - Material2 
 - Ionic 	
 - PrimeNG 
-- Kendo 	
+- Kendo 
+	
 Caracteristicas
 - Ngx Formly is built on top of the Reactive forms in Angular.
+- Support multiple schemas:
+  - Formly Schema (core)
+  - JSON Schema
+
 
 Informacion
 - Build Fast, JSON-Powered Forms on Angular With Ngx Formly
 https://betterprogramming.pub/build-fast-json-powered-forms-on-angular-with-ngx-formly-b7a00733e66e
 
+Sitio Oficial
 https://github.com/ngx-formly/ngx-formly
+https://formly.dev/
 
 # Controles
 

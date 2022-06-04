@@ -71,6 +71,8 @@ https://orion-docs.prefect.io/
 
 Introducing Prefect 2.0 
 - Prefect 2.0 is loaded with new features and built on top of our second-generation orchestration engine, Orion. 
+- Prefect 2.0 is actually its license: Apache 2.0 
+- Prefect 2.0 introduces a completely new UI.
 https://www.prefect.io/blog/introducing-prefect-2-0
 
 ## Referencias
@@ -95,11 +97,9 @@ https://www.singer.io/
 Singer describes how data extraction scripts—called “taps” —and data loading scripts—called “targets”— should communicate, allowing them to be used in any combination to move data from any source to any destination. Send data between databases, web APIs, files, queues, and just about anything else you can think of. 
 
 
-
 Why You Should NOT Build Your Data Pipeline on Top of Singer
 - The Singer protocol does not specify how an integration should define what inputs it requires.
 https://airbyte.com/blog/why-you-should-not-build-your-data-pipeline-on-top-of-singer
-
 
 
 Meltano is built on top of Singer, which is open source (AGPL).
@@ -111,6 +111,42 @@ Talend (acquirer of StitchData) seems to have stopped investing in maintaining S
 
 How to do Change Data Capture (CDC), using Singer
 https://www.startdataengineering.com/post/cdc-using-singer/
+
+# Pentaho Data Integration ( ETL ) a.k.a Kettle
+
+
+
+# SQL Server Integration Services
+
+SQL Server Integration Services is a platform for building enterprise-level data integration and data transformations solutions. Use Integration Services to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing SQL Server objects and data.
+
+# talend
+
+[Mas informacion talend](/talend/talend.md)
+
+# Apache Hop
+
+The Hop Orchestration Platform, or Apache Hop, aims to facilitate all aspects of data and metadata orchestration.
+
+Hop is an open-source data integration tool, which is a fork of Pentaho Data Integration (PDI) or Kettle. It offers a visual development tool that can make developers more productive and less daunting for those who prefer building their pipelines without writing any code. Hop workflow and pipeline can be run on various engines including its own native Hop engine, Spark, Flink, Google Dataflow, or AWS EMR through Beam. Hop is one of the first GUI based designers out there for building Apache Beam pipeline.
+
+
+## Apache Hop Architecture 
+https://hop.apache.org/docs/architecture/
+
+
+
+# Apache Beam
+
+Apache Beam is an open source, unified model for defining both batch and streaming data-parallel processing pipelines. Using one of the open source Beam SDKs, you build a program that defines the pipeline. The pipeline is then executed by one of Beam’s supported distributed processing back-ends, which include Apache Flink, Apache Spark, and Google Cloud Dataflow.
+
+## SDKs
+
+Beam supports multiple language-specific SDKs for writing pipelines against the Beam Model.
+
+Currently, this repository contains SDKs for Java, Python and Go
+
+
 
 # Reverse ETL
 
@@ -127,25 +163,8 @@ https://docs.castled.io/
 El repositorio github es vacio. (mayo-2022)
 https://github.com/orgs/castledio/repositories
 
-**Revisiones**
 
-https://www.getcensus.com/
-
-
-
-**RudderStack**
-
-RudderStack is a stand-alone system dependent only on a database (PostgreSQL). Its backend is written in Go, with a rich UI written in React.js.
-
-RudderStack's architecture consists of 2 major components: the control plane and data plane
-
-https://www.rudderstack.com/docs/get-started/rudderstack-architecture/
-
-
-RudderStack Open Source. No soportados
-- Reverse ETL
-
-**Hightouch**
+## Hightouch
 
 Hightouch is a Data Activation platform that connects and orchestrates data from sources to business tools. The platform manages the varying integrations and logic to activate data models from sources.
 https://hightouch.io/
@@ -158,6 +177,46 @@ Hightouch’s Visual Audience Builder can be used to segment a Model to build au
 Regardless of how a Model is built, it is configured with a unique Primary Key that is used by Hightouch to search and keep track of records. This is important to ensure HIghtouch is only syncing new and updated data to a destination tool. How Hightouch manages difference checking will be covered in Diffing.
 
 A single Model can be configured with multiple Syncs to different Destinations. For example, a Model containing customer data is commonly configured to sync between Sales (ie Salesforce), Marketing (ie Iterable), and Support (ie Zendesk) tools. Doing so enables all business tools to leverage the same source of truth.
+
+
+**Revisiones**
+
+https://www.getcensus.com/
+
+**RudderStack**
+
+RudderStack is a stand-alone system dependent only on a database (PostgreSQL). Its backend is written in Go, with a rich UI written in React.js.
+
+RudderStack's architecture consists of 2 major components: the control plane and data plane
+
+Control plane
+
+The control plane offers a UI to configure your event data sources and destinations. It consists of:
+
+- RudderStack web app: The front-end application where you set up and configure your data pipelines in RudderStack.
+- Configuration backend: The web app leverages this module to store all the relevant information around your configured sources, destinations, and the connections between them.
+	
+Data plane
+
+The data plane (backend) is RudderStack's core engine responsible for:
+
+    Receiving and processing event data
+    Transforming events in the required destination format
+    Relaying events to the destination
+
+The RudderStack data plane consists of three major components:
+
+    RudderStack server (rudder-server)
+    Transformations module
+    Standalone streaming database (PostgreSQL) for event data
+	
+https://www.rudderstack.com/docs/static/a188699e9ddc1f56f525fa14a08bac80/aa440/rudderstack-backend-architecture.png	
+	
+https://www.rudderstack.com/docs/get-started/rudderstack-architecture/
+
+
+RudderStack Open Source. No soportados
+- Reverse ETL
 
 
 # Referencias

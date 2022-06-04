@@ -1,5 +1,16 @@
 # airbyte
 
+
+
+# Architecture
+
+Airbyte is conceptually composed of two parts: platform and connectors.
+
+The platform provides all the horizontal services required to configure and run data movement operations e.g: the UI, configuration API, job scheduling, logging, alerting, etc. and is structured as a set of microservices.
+
+Connectors are independent modules which push/pull data to/from sources and destinations. Connectors are built in accordance with the Airbyte Specification, which describes the interface with which data can be moved between a source and a destination using Airbyte. Connectors are packaged as Docker images, which allows total flexibility over the technologies used to implement them. 
+https://docs.airbyte.com/assets/images/understanding_airbyte_high_level_architecture-ac5aa905ca8916521b41cdaecec4cd08.png
+
 Technical Stack
 
 - Airbyte Core Backend
@@ -24,7 +35,6 @@ A high level view of Airbyte's components.
 
 https://docs.airbyte.io/understanding-airbyte/high-level-view
 
-# Architecture
 
 Why You Should NOT Build Your Data Pipeline on Top of Singer
 - The Singer protocol does not specify how an integration should define what inputs it requires.
@@ -32,6 +42,8 @@ https://airbyte.com/blog/why-you-should-not-build-your-data-pipeline-on-top-of-s
 
 
 # Airbyte Specification
+
+
 
 The specification is Docker-based; this allows a developer to write a connector in any language they want.
 
