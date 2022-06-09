@@ -128,6 +128,7 @@ dotnet ef database update --context AdministrativeUnitDbContext
 ```
 
 # Interceptors
+
 Entity Framework Core (EF Core) interceptors enable interception, modification, and/or suppression of EF Core operations. This includes low-level database operations such as executing a command, as well as higher-level operations, such as calls to SaveChanges.
 
 Interceptors are different from logging and diagnostics in that they allow modification or suppression of the operation being intercepted.  
@@ -145,6 +146,21 @@ https://github.com/dotnet/EntityFramework.Docs/tree/main/samples/core/Miscellane
 entity.Property(x => x.ColumnName).IsUnicode(false);  
 ```
 
+# Reverse Engineering
+
+
+Reverse Engineering
+- With Visual Studio o With .NET Core CLI
+https://docs.microsoft.com/en-us/ef/core/managing-schemas/scaffolding?tabs=vs
+
+
+Creating a Model for an Existing Database in Entity Framework Core
+- Tener instalado: Microsoft.EntityFrameworkCore.Tools
+- Si tiene problemas con las conexion con las claves. Change double quotes " for single quotes ' It is not necessary to add a escape character 
+https://www.entityframeworktutorial.net/efcore/create-model-for-existing-database-in-ef-core.aspx
+
+
+
 
 # Versiones
 
@@ -153,6 +169,8 @@ Save Changes Interceptors were introduced in EF Core 5.0.
 
 
 # Reference
+
+
 
 This site provides documentation and tutorials for people looking for help with using Entity Framework Core
 https://www.learnentityframeworkcore.com/
@@ -166,7 +184,7 @@ builder.Property(a => a.Id)
 ```
 https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=fluent-api
 
-# Revisiones
+## Revisiones
 
 - TODO: Interceptores EntityFramework ORM
 

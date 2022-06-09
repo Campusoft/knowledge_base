@@ -147,9 +147,10 @@ The normalization rules are not configurable. They are designed to pick a reason
 
 
 - En el proceso se crean dos trablas raw table "_airbyte_raw_<stream name>" y data table "<stream name>". 
+- Arrays u objetos seran copiados a otra tabla 
+- Basic Normalization expands arrays into separate tables
+- If the nested items in the array are not objects then they are expanded into a string field of comma separated values
 https://docs.airbyte.com/understanding-airbyte/basic-normalization#rules
-
-
 
 
 # Licencias

@@ -5,9 +5,31 @@
 
 RDLC es el acrónimo de Report Definition Language Client-side, o Lenguaje de Definición de Informes de lado Cliente
 
+Microsoft RDLC Report Designer 2022
+https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftRdlcReportDesignerforVisualStudio2022
+
+
+RDLC Report using Entity Framework
+
+How to create RDLC report using Business Object Data Source 
+https://www.syncfusion.com/kb/8799/how-to-create-rdlc-report-using-business-object-data-source
+ 
+ 
+Dynamically add and display external Image in RDLC Report from code behind in ASP.Net
+https://www.aspsnippets.com/Articles/Dynamically-add-and-display-external-Image-in-RDLC-Report-from-code-behind-in-ASPNet.aspx
+
+
+## ReportViewer Core
+
+This project is a port of Microsoft Reporting Services (Report Viewer) to .NET Core 3.1+. It is feature-complete and ready for production use, but keep in mind it is not officially supported by Microsoft.
+- HTML4.0 / HTML5 / MHTML (works on Windows, Linux and Mac OS)
+https://github.com/lkosson/reportviewercore 
+
 # RDL - Report Definition Language
 
 Report Definition Language (RDL) is an XML representation of a SQL Server Reporting Services report definition. 
+
+[Report designer](/reporting/reporting_services.md)
 
 
 # PDF.

@@ -1,4 +1,11 @@
 
+# Fluid
+
+Fluid is an open-source .NET template engine based on the Liquid template language. It's a secure template language that is also very accessible for non-programmer audiences.
+
+https://github.com/sebastienros/fluid
+
+
 # Scriban
 
 Scriban is a fast, powerful, safe and lightweight scripting language and engine for .NET, which was primarily developed for text templating with a compatibility mode for parsing liquid templates.

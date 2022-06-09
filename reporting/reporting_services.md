@@ -8,6 +8,12 @@
   - Extensions: Reporting Services. VS 2019
   - https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio
 
+Microsoft Reporting Services Projects 2022
+- The Microsoft RDL report designer, projects and wizards for creating professional reports.
+- Visual Studio 2022
+https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio2022
+
+
 
 # Develop with the REST APIs for Reporting Services
 
