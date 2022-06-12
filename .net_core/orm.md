@@ -146,7 +146,20 @@ https://github.com/dotnet/EntityFramework.Docs/tree/main/samples/core/Miscellane
 entity.Property(x => x.ColumnName).IsUnicode(false);  
 ```
 
+# Provider
+
+## sql server
+
+
+
 # Reverse Engineering
+
+How it works
+
+Reverse engineering starts by reading the database schema. It reads information about tables, columns, constraints, and indexes.
+
+Next, it uses the schema information to create an EF Core model. Tables are used to create entity types; columns are used to create properties; and foreign keys are used to create relationships.
+
 
 
 Reverse Engineering
@@ -160,7 +173,9 @@ Creating a Model for an Existing Database in Entity Framework Core
 https://www.entityframeworktutorial.net/efcore/create-model-for-existing-database-in-ef-core.aspx
 
 
+If you use Visual Studio, the EF Core Power Tools community extension, a graphical tool which builds on top of the EF Core command line tools, offers additional workflow and customization options.
 
+https://github.com/ErikEJ/EFCorePowerTools
 
 # Versiones
 

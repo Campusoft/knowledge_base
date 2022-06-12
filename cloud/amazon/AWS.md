@@ -13,6 +13,13 @@ Get your access key ID and secret access key
 
 # IAM users
 
+# Observabilidad
+
+The first and most important rule of microservice logging is those logs should go to a single place.
+
+AWS Cloudwatch 
+
+
 
 
 #  Varios.

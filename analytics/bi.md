@@ -75,6 +75,10 @@ Redash is designed to enable anyone, regardless of the level of technical sophis
 
 https://github.com/getredash/redash
 
+Redash supports more than 35 SQL and NoSQL data sources. 
+- MongoDB
+- Prometheus
+
 # Google Data Studio 
 
 

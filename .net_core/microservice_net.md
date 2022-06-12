@@ -10,8 +10,6 @@ Coupling: Without the API Gateway pattern, the client apps are coupled to the in
 The API Gateway pattern is also sometimes known as the “backend for frontend” (BFF) because you build it while thinking about the needs of the client app.
 
 
-
-
 # Service-to-service communication
 
 

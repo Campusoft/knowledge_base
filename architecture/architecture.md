@@ -70,6 +70,8 @@ A log is a timestamped text record, either structured (recommended) or unstructu
 
 Structured Logging
 
+Structured logging is a methodology that creates logs based on a consistent, predetermined message format. It converts the log data to a format that can help developers query, search and analyze the log data seamlessly. Developers should structure an application's log data to simplify parsing and to only log relevant information. 
+
 ## OpenTelemetry 
 
 An observability framework for cloud-native software.

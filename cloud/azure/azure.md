@@ -71,6 +71,14 @@ The Azure command-line interface (Azure CLI) is a set of commands used to create
 
 The Azure Command-Line Interface (CLI) is a cross-platform command-line tool to connect to Azure and execute administrative commands on Azure resources. It allows the execution of commands through a terminal using interactive command-line prompts or a script.
 
+
+# Observabilidad
+
+The first and most important rule of microservice logging is those logs should go to a single place.
+
+Azure Monitor.
+
+
 # Referencias
 
 ***Build microservices on Azure***

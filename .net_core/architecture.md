@@ -162,6 +162,9 @@ Sample .NET Core reference application, powered by Microsoft, based on a simplif
   - https://docs.microsoft.com/en-us/dotnet/architecture/microservices/
 https://github.com/dotnet-architecture/eShopOnContainers
 
+# Exceptions 
+
+Exceptions should be uncommon. In comparison to other code flow patterns, the catch and throw of exceptions is slow. Exceptions are not used to control the program’s flow. Consider the program’s logic when identifying and resolving exception-prone scenarios.
 
 # Revisiones
 
