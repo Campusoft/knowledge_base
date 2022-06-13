@@ -13,6 +13,9 @@ https://ng-bootstrap.github.io
 
 https://ng-bootstrap.github.io/#/components/datepicker/overview
 
+Disabling and limiting dates 
+https://ng-bootstrap.github.io/#/components/datepicker/overview#limiting-dates
+
 # ngbTypeahead
 
 Typeahead

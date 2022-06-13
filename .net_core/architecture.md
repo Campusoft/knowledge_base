@@ -9,15 +9,20 @@ Clean Architecture Solution Template: A starting point for Clean Architecture wi
 - MediatR
 - Domain Events (MediatR)
 - Posee https://github.com/ardalis/Specification. Base class with tests for adding specifications to a DDD model. Also includes a default generic Repository base class with support for EF6 and EF Core
-- No tiene UnitOfWork
+- Persistencia
+  - No tiene UnitOfWork
 https://github.com/ardalis/CleanArchitecture
  
  
 This is a solution template for creating a Single Page App (SPA) with Angular and ASP.NET Core following the principles of Clean Architecture. Create a new project based on this template by clicking the above Use this template button or by installing and running the associated NuGet package (see Getting Started for full details).
 - Posee linea commandos. (Cli)
 - ASP.NET Core 6
-- Entity Framework Core 6
-- Angular 12
+- Persistencia
+  - Entity Framework Core 6	
+  - No utiliza repositorios utiliza directamente DbContext
+- UI
+  - Angular 12
+  - Utiliza NSwag  para generar los proxys del Clientes API REST
 - MediatR
 - AutoMapper
 - FluentValidation
@@ -38,11 +43,14 @@ ASP.NET Core Hero Boilerplate - .NET 5 Clean Architecture
 - Onion Architecture - WebAPI & MVC
 - CQRS with MediatR Library
   - PaginatedList: (PageNumber, PageSize) https://github.com/aspnetcorehero/Boilerplate/blob/master/AspNetCoreHero.Boilerplate.Application/Extensions/QueryableExtensions.cs
-- Entity Framework Core – Code First. Posee UnitOfWork (Incompleto Transacciones)
+- Persistencia
+  - Entity Framework Core – Code First. Posee UnitOfWork (Incompleto Transacciones)
 - Permission Management
 - MediatR Pipeline Logging & Validation
 - Serilog
-- Swagger UI
+- API 
+  - Swagger UI
+  - API Versioning
 - Response Wrappers
 - Entity Framework Core - Audit Logs.
 - Pagination
@@ -50,7 +58,6 @@ ASP.NET Core Hero Boilerplate - .NET 5 Clean Architecture
 - Role based Authorization
 - Database Seeding
 - Custom Exception Handling Middleware.
-- API Versioning
 - Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
 https://codewithmukesh.com/project/aspnet-core-hero-boilerplate/
 https://github.com/aspnetcorehero/Boilerplate
@@ -75,7 +82,8 @@ https://github.com/vietnam-devs/coolstore-microservices
 - Command and Query Responsibility Segregation (a.k.a CQRS) (Use CQRSlite)
 - MediatR - Simple, unambitious mediator implementation in .NET
 - YARP - A toolkit for developing high-performance HTTP reverse proxy applications
-- RestEase - Easy-to-use typesafe REST API client library for .NET Standard 1.1 and .NET Framework 4.5 and higher, which is simple and customisable
+- API 
+  - RestEase - Easy-to-use typesafe REST API client library for .NET Standard 1.1 and .NET Framework 4.5 and higher, which is simple and customisable
 - Blazor - WASM - Client web apps with C#
 - opentelemetry-dotnet - The OpenTelemetry .NET Client
 - In medium and large software projects, we normally implement the CRUD actions over and over again. And it might take around 40-50% codebase just to do CRUD in the projects. The question is can we make standardized CRUD APIs, then we can use them in potential projects in the future?
@@ -105,8 +113,10 @@ Convey - a simple recipe for .NET Core microservices
 -    Authentication JWT with secret key & certificates extensions
 -    CQRS basic abstractions
 -    Consul service registry integration
--    Swagger extensions
--    RestEase extensions
+-    API 
+	 -    Swagger extensions
+	 -    RestEase extensions
+	 -    Web API extensions (minimal routing-based API, CQRS support)
 -    Fabio load balancer integration
 -    Logging extensions for Serilog & integration with Seq, ELK, Loki
 -    Message brokers abstractions & CQRS support
@@ -120,7 +130,6 @@ Convey - a simple recipe for .NET Core microservices
 -    Vault secrets engine (settings, dynamic credentials, PKI etc.) integration
 -    Security extensions (certificates, mTLS, encryption etc.)
 -    Jaeger tracing integration
--    Web API extensions (minimal routing-based API, CQRS support)
 -    Scrutor - Assembly scanning and decoration extensions for Microsoft.Extensions.DependencyInjection 
 https://github.com/snatch-dev/Convey
 

@@ -41,3 +41,17 @@ We recommend you target .NET Standard in the following scenarios:
 - Use netstandard2.1 to share code between Mono, Xamarin, and .NET Core 3.x.
 
 
+# Migraciones a .net core
+
+OneService Journey to .NET 6
+- 29% reduction in infrastructure costs.
+- 30% CPU improvement (on average) for migrated services.
+- 8-27% improvement in P95 latency for primary APIs.
+- Reduced technical debt and can now easily upgrade to annual .NET releases.
+- Happier and more productive team.
+https://devblogs.microsoft.com/dotnet/one-service-journey-to-dotnet-6/
+
+
+Incremental ASP.NET to ASP.NET Core Migration
+- 
+https://devblogs.microsoft.com/dotnet/incremental-asp-net-to-asp-net-core-migration/

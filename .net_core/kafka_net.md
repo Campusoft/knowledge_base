@@ -28,6 +28,12 @@ A host and port pair uses : as the separator.
 - localhost:9092
 - localhost:9092,another.host:9092
 
+
+# Framework 
+
+An Event Stream Processing Micro-Framework for Apache Kafka
+https://blog.tonysneed.com/2020/06/25/event-stream-processing-micro-framework-apache-kafka/
+
 # Revisiones
 
 Kafka Resiliency — Retry/Delay Topic, Dead Letter Queue (DLQ)

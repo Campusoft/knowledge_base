@@ -18,27 +18,11 @@ https://github.com/RicoSuter/NSwag/wiki/Templates
 
 
 
-Los templates para generar codigo c#
-- github: NSwag/src/NSwag.CodeGeneration.CSharp/Templates/ 
-- https://github.com/RicoSuter/NSwag/tree/master/src/NSwag.CodeGeneration.CSharp/Templates
-
 
 Los templates para desealizar objetos  
 - Client.Class.ReadObjectResponse.liquid
 - aspnetboilerplate: Sobrescribir los clientes (Proxy de APIS) para consumir el formato aspnetboilerplate.
 
-
-Las templates para la generacion de DTO para Csharp se encuentra:
-- Class.liquid. (Template principal que propiedades)
-- https://github.com/RicoSuter/NJsonSchema/tree/master/src/NJsonSchema.CodeGeneration.CSharp/Templates 
-
-
-** Models que se envian a los templates **
-
-- Models Class
- - https://github.com/RicoSuter/NJsonSchema/blob/master/src/NJsonSchema.CodeGeneration.CSharp/Models/ClassTemplateModel.cs
-- Models Property
- - https://github.com/RicoSuter/NJsonSchema/blob/master/src/NJsonSchema.CodeGeneration.CSharp/Models/PropertyModel.cs
 
 
 
@@ -61,11 +45,6 @@ Client.ProcessResponse.liquid
 
 
 
-TypeScript DTO templates (NJsonSchema)
-- https://github.com/RicoSuter/NJsonSchema/tree/master/src/NJsonSchema.CodeGeneration.TypeScript/Templates
-
-Modelo Property, para la generacion typescript
-- NJsonSchema/src/NJsonSchema.CodeGeneration.TypeScript/Models/PropertyModel.cs 
 
 
 ** NSwagStudio **
@@ -74,6 +53,45 @@ NSwagStudio, permite generar proxy para consumir servicios.
 
 ** command line tool** 
 
+
+## Template Csharp
+
+
+Los templates para generar codigo c#
+- github: NSwag/src/NSwag.CodeGeneration.CSharp/Templates/ 
+- https://github.com/RicoSuter/NSwag/tree/master/src/NSwag.CodeGeneration.CSharp/Templates
+
+
+Las templates para la generacion de DTO para Csharp se encuentra:
+- Class.liquid. (Template principal)
+- https://github.com/RicoSuter/NJsonSchema/tree/master/src/NJsonSchema.CodeGeneration.CSharp/Templates 
+
+** Models que se envian a los templates **
+
+- Models Class
+ - https://github.com/RicoSuter/NJsonSchema/blob/master/src/NJsonSchema.CodeGeneration.CSharp/Models/ClassTemplateModel.cs
+- Models Property
+ - https://github.com/RicoSuter/NJsonSchema/blob/master/src/NJsonSchema.CodeGeneration.CSharp/Models/PropertyModel.cs
+
+
+
+## Template TypeScript
+
+TypeScript templates 
+- https://github.com/RicoSuter/NJsonSchema/tree/master/src/NJsonSchema.CodeGeneration.TypeScript/Templates
+
+** Models que se envian a los templates **
+
+Ruta:
+- https://github.com/RicoSuter/NJsonSchema/tree/master/src/NJsonSchema.CodeGeneration.TypeScript/Models
+
+Modelo Property, para la generacion typescript
+- NJsonSchema/src/NJsonSchema.CodeGeneration.TypeScript/Models/PropertyModel.cs 
+
+## Liquid
+
+Liquid is a template language created by Shopify and written in Ruby. It is now available as an open source project on GitHub, and used by many different software projects and companies. Liquid is the backbone of all Shopify themes, and is used to load dynamic content in the pages of online stores.
+https://shopify.dev/api/liquid
 
 
 # Versiones
@@ -98,4 +116,5 @@ https://marketplace.visualstudio.com/items?itemName=igorfle.VSLiquidSyntax
 # Revisiones
 
 El proyecto nswag permite generar codigo de diferentes fuentes (openAPI, JsonSchema, Dll), para csharp , typescript. 
+
 

@@ -30,5 +30,10 @@ The design of error handling was settled after a long discussion. The main desig
 https://go-kratos.dev/en/docs/intro/design#error-handling
 	
 	
+# aplicaciones with go
 
+
+Ory Kratos is the first cloud native Identity and User Management System in the world. Finally, it is no longer necessary to implement a User Login process for the umpteenth time!
+
+https://github.com/ory/kratos
 
