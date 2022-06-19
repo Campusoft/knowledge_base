@@ -45,13 +45,64 @@ Now, a Channel can be bounded or unbounded:
 - Unbounded Channels instead don’t have this limitation, meaning that Publishers can publish as many times as they want, hoping that the Consumers are able to keep up.
 
 
+Reading from a Channel
 
+Option: ReadAllAsync
+Another option ("Option 1" in the code) is to use "ReadAllAsync".
+
+```
+// Read person objects from the channel until the channel is closed
+    // OPTION 1: Using ReadAllAsync (IAsyncEnumerable)
+    await foreach (Person person in channel.Reader.ReadAllAsync())
+    {
+        Console.WriteLine($"{person.ID}: {person}");
+    }
+```
+
+ "ReadAllAsync" is a method on the channel "Reader" property. This returns an "IAsyncEnumerable<Person>". This combines the power of enumeration ("foreach") with the concurrency of "async".
+
+The "foreach" loop condition looks pretty normal -- we iterate on the result of "ReadAllAsync" and use the "Person" object from that iteration.
+
+What is a little different is that there is an "await" before the "foreach". This means that the "foreach" loop may pause between iterations if it needs to wait for an item to be populated in the channel.
+
+The effect is that the "foreach" will continue to provide values until the channel is closed and empty. Inside the loop, we write the value to the console. 
+
+
+Option: WaitToReadAsync / TryRead
+"Option 2" uses a couple of "while" loops to read from the channel.
+
+```
+    // Read person objects from the channel until the channel is closed
+    // OPTION 2: Using WaitToReadAsync / TryRead
+    while (await channel.Reader.WaitToReadAsync())
+    {
+      while (channel.Reader.TryRead(out Person person))
+      {
+        Console.WriteLine($"{person.ID}: {person}");
+      }
+    }
+```
+
+Closing a Channel
+
+When we are done writing to a channel, we should close it. This tells anyone reading from the channel that there will be no more values, and they can stop reading. We'll see why this is important when we look at reading from a channel. 
+
+
+
+
+## Referencias
 
 Producer/consumer pipelines with System.Threading.Channels
 - Explicacion con un escanario
 - El ejemplo son una serie pasos que se colocan en pipeline
 - producer-consumer pattern
 https://blog.maartenballiauw.be/post/2020/08/26/producer-consumer-pipelines-with-system-threading-channels.html
+
+
+An Introduction to Channels in C# 
+- Formas de leer desde un canal.
+https://jeremybytes.blogspot.com/2021/02/an-introduction-to-channels-in-c.html
+
 
 # CancellationToken 
 

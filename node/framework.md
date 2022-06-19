@@ -6,8 +6,24 @@ Nest is a framework for building efficient, scalable Node.js server-side applica
 
 Under the hood, Nest makes use of Express, but also, provides compatibility with a wide range of other libraries, like e.g. Fastify, allowing for easy use of the myriad third-party plugins which are available.
 
-
 A progressive Node.js framework for building efficient, scalable, and enterprise-grade server-side applications on top of TypeScript & JavaScript (ES6, ES7, ES8) 
+
+
+Services
+
+
+Dependency injection
+
+Nest is built around the strong design pattern commonly known as Dependency injection. We recommend reading a great article about this concept in the official Angular documentation.
+
+## Modules
+
+
+## microservice 
+
+
+https://docs.nestjs.com/microservices/basics
+
 
 # Fastify
 

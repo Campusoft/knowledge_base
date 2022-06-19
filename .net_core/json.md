@@ -8,7 +8,22 @@ Deserialize from UTF-8
 Add JsonPath support to JsonDocument/JsonElement #31068 
 https://github.com/dotnet/runtime/issues/31068
 
+## JsonDocument
 
+The JsonDocument class within the namespace is responsible for examining the structural content of a JSON value, similar to JToken within Json.NET.
+
+
+
+## Reference
+
+Manipulate JSON with System.Text.Json.Nodes
+https://kevsoft.net/2021/12/29/manipulate-json-with-system-text-json-nodes.html
+
+
+C# JSON
+- The JsonElement.EnumerateArray enumerates the values in the JSON array represented by a JsonElement. 
+- The Utf8JsonWriter provides a high-performance API for forward-only, non-cached writing of UTF-8 encoded JSON text. 
+https://zetcode.com/csharp/json/
 
 
 # JsonSchema
@@ -24,3 +39,4 @@ System.Text.Json-based support for all of your JSON needs.
 - A vocabulary for accessing instance and external data
 - A vocabulary for validating item uniqueness based on specific item values
 https://github.com/gregsdennis/json-everything
+

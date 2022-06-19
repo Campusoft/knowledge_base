@@ -45,6 +45,21 @@ Command Query Responsibility Segregation (CQRS) pattern
 - Stage 3: Separate read and write databases
 https://www.ibm.com/cloud/architecture/architectures/event-driven-cqrs-pattern/
 
+
+Real-World CQRS/ES with ASP.NET and Redis Part 2 - The Write Model
+- Commands are things that will happen in the future, so we name them using future tense and imperative (e.g. "X must be done")
+- Events are things that have already happened, so we name them using past tense (e.g. "X has been done").
+- Order of Operations. 
+  - A command for the request is issued. 
+  - The command handler processes the command and changes the correct Aggregate Root.
+  - The Aggregate Root creates an Event and sends it to the bus.
+  - The Event Store saves the new event.
+  - The Event Handlers process the new event.
+- Un ICommandHandler, puede Handle varios commands
+https://www.exceptionnotfound.net/real-world-cqrs-es-with-asp-net-and-redis-part-2-the-write-model/
+
+
+
 **Queries**
 
 Queries are used to get data from the database. Queries objects only return data and do not make any changes.
@@ -56,7 +71,6 @@ Queries will only contain the methods for getting data. They are used to read th
 Commands represent the intention of changing the state of an entity. They execute operations like Insert, Update, Delete. Commands objects alter state and do not return data.
 
 Commands represent a business operation and are always in the imperative tense, because they are always telling the application server to do something.
-
 
 The command handler is in fact the heart of the application layer in terms of CQRS and DDD. However, all the domain logic should be contained in the domain classes—within the aggregate roots (root entities), child entities, or domain services, but not within the command handler, which is a class from the application layer.
 
@@ -76,7 +90,7 @@ Thanks for that, no business data is lost. Each operation results in the event s
 
 **Refencias**
 Can command return a value?
--  generate an identifier In the controller method and create the command based on that. The same identifier can then be returned to the Created status.
+- Generate an identifier In the controller method and create the command based on that. The same identifier can then be returned to the Created status.
 - For error handling, I usually make a processing error by throwing an appropriate exception and mapping it to HTTP status, e.g. via middleware
 https://event-driven.io/en/can_command_return_a_value/
 
@@ -84,7 +98,6 @@ Tackling Complexity in CQRS
 - Complexity Trap #1: One-Way Commands, or Overzealous Segregation
 - Complexity Trap #2: Event sourcing
 - Complexity Trap #3: Too Much of a Good Thing
-- 
 https://vladikk.com/2017/03/20/tackling-complexity-in-cqrs/
 
 **Revision**

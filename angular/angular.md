@@ -97,6 +97,12 @@ Crear un componente "new-component" en el modulo "Person", en el proyecto princi
 ng g component Person/new-component
 ```
 
+Crear un nuevo proyecto
+
+```
+ng new <Name-Project>
+```
+
 https://angular.io/cli
 
 # Schematics 

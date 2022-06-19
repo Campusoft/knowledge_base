@@ -94,10 +94,24 @@ Fullstack Hub is developed to help students and professionals to quickly learn t
 - Mediator. Crea los IRequestHandler como subclases de  IRequest
 - CQRS
 - ExceptionFilterAttribute
-- UnitOfWork
+- Persistencia
+  - UnitOfWork. Simple. En el IUnitOfWork, posee las entidades 
+  - Libreria. https://github.com/DapperLib/Dapper.Contrib
 - Redis
-- RabbitMQ 
-- API Gateway project is using the Ocelot
+- Mensajes
+  - RabbitMQ 
+  - Desde command llaman: eventBusRabbitMQProducer.PublishCoursesCheckout
+- API REST
+  - Api con controller de asp.net core
+  - No posee seguridad. Autentificacion, Autorizacion en los API Rest
+  - Retorna los metodos con Task<ActionResult<Entidad>>. Ej: Task<ActionResult<List<CourseBasketVM>>>
+- UI
+  - Angular 11
+  - Material
+  - Utiliza un servicio generico para llamar a los API REST. 
+- Otros
+  - AutoMapper	
+  - API Gateway project is using the Ocelot  
 https://github.com/fullstackhub-io/StudentCourseManagement
 https://fullstackhub.io/asp-net-core-microservices-with-angular11/
 

@@ -82,7 +82,10 @@ TypeScript templates
 
 ** Models que se envian a los templates **
 
-Ruta:
+Modelo Request/Response API REST
+- https://github.com/RicoSuter/NSwag/tree/master/src/NSwag.CodeGeneration.TypeScript/Models
+
+Modelo DTO 
 - https://github.com/RicoSuter/NJsonSchema/tree/master/src/NJsonSchema.CodeGeneration.TypeScript/Models
 
 Modelo Property, para la generacion typescript

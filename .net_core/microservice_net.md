@@ -135,3 +135,12 @@ Improving microservices reliability – part 3: Outbox Pattern in action
 https://www.davidguida.net/improving-microservices-reliability-part-3-outbox-pattern-in-action
 
 
+
+
+This is my (very opinionated) roadmap for .NET developers that want to focus on backend and specifically work with microservices.
+- API SDK library. Refit, RestSharp NSwag
+- Task Scheduling. Native BackgroudService Hangfire
+- Design Pattern: CORS. Event Sourcing. Strategy. Builder
+https://github.com/Elfocrash/.NET-Backend-Developer-Roadmap
+
+

@@ -28,6 +28,20 @@ https://jitsu.com/
 
 Jitsu is written primarily in Go with the frontend written in JavaScript.
 
+
+JavaScript Transform
+
+Provided javascript must return:
+
+- single object - modified incoming event or completely new object
+- array of objects - a single incoming event will result in multiple events in destinations
+- null - to skip event from processing
+https://jitsu.com/docs/configuration/javascript-transform
+
+deprecated.
+Jitsu utiliza jsonPath para configurar mapeos entre origen / destino. Se utiliza JsonPath para extraer propiedad de origen, y JsonPath para establecer la propiedad en el destino.
+https://jitsu.com/docs/configuration/schema-and-mappings
+
 # Install
 
 The easiest way to start Jitsu locally is docker-compose. 
@@ -77,8 +91,20 @@ https://jitsu.com/docs/extending/overview
 Destination Extensions (Plugins)
 https://jitsu.com/docs/extending/destination-plugins
 
+
+
+
 # Bulk API
 
+Jitsu has events bulk API. The endpoint can consume ~50,000 events in one HTTP request and store them into destinations synchronously. 
+
+Events should be formatted with \n delimiter (1 event per line):
+
+```
+{"field1": 1, "field2": "value"}\n
+{"field3": 999}\n
+{"field4": "value3", "field5": 123}
+```
 
 
 # CLI

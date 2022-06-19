@@ -3,10 +3,11 @@
 Bounded Context. Un dominio, está dividido en subdominios más pequeños conocidos como bounded contexts. Un subdominio es una división lógica de un dominio en contextos más pequeños. Un bounded context es un espacio lógico en el que compartimos un lenguaje ubicuo. Es decir, en este espacio lógico, todos utilizamos las mismas palabras para referirnos a los mismos elementos. Es un limite logico, similar a un modulo en un sistema. 
 
 
-
 # Domain Service
 
-A Domain Service is a stateless service that implements core business rules of the domain. It is useful to implement domain logic that depends on multiple aggregate (entity) type or some external services
+A Domain Service is a stateless service that implements core business rules of the domain. It is useful to implement domain logic that depends on multiple aggregate (entity) type or some external services.
+
+
 
 # Domain Event
 

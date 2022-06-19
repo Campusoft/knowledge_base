@@ -29,8 +29,6 @@ Outgoing request middleware
 - DelegatingHandler
 
 
-
-
 # Upload File API REST
 
 Sending Files & JSON using multipart/form-data
@@ -73,6 +71,9 @@ https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=
 This repository offers a wide collection of ASP.NET Core Health Check packages for widely used services and platforms.
 ASP.NET Core versions supported: 6.0, 5.0, 3.1, 3.0 and 2.2
 https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
+
+
+
 
 # Client
 
