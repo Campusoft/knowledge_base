@@ -12,12 +12,12 @@ Angular is an entire platform for building modern applications.
 Pass data to a child component
 The @Input() decorator indicates that the property value passes in from the component's parent
 
-- https://angular.io/start#pass-data-to-a-child-component
+https://angular.io/start#pass-data-to-a-child-component
 
 Pass data to a parent component
 @Output(). Decorator that marks a class field as an output property and supplies configuration metadata
 
-- https://angular.io/start#pass-data-to-a-parent-component
+https://angular.io/start#pass-data-to-a-parent-component
  
 
 Establecer class en el host element de un componente. Utilizar propiedad host del @Component
@@ -31,6 +31,14 @@ export class App implements OnInit {
 ...
 } 
 ```
+
+## Referencias
+
+Passing data from child to parent component in Angular 
+- The @Output() decorator in a child component or directive lets data flow from the child to the parent.
+- Bind Property in Parent Component template
+- Use Property in Parent Component class 
+https://dev.to/this-is-angular/passing-data-from-child-to-parent-component-in-angular-2f0m
  
 # Routing
  

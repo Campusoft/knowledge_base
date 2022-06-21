@@ -133,6 +133,10 @@ form-utils
 
 - Posee un comportamiento de dirty, sobre las modificaciones relacionadas en la forma, para solicitar confirmacion en salir sin guardar. 
 
+Propiedades
+- suppressUnsavedChangesWarning 
+
+
 **abp-extensible-form**
 
 

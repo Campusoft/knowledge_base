@@ -37,3 +37,7 @@ Ory Kratos is the first cloud native Identity and User Management System in the 
 
 https://github.com/ory/kratos
 
+
+Go Client/Server for Celery Distributed Task Queue
+https://github.com/gocelery/gocelery
+
