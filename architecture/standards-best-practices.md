@@ -94,6 +94,12 @@ Can command return a value?
 - For error handling, I usually make a processing error by throwing an appropriate exception and mapping it to HTTP status, e.g. via middleware
 https://event-driven.io/en/can_command_return_a_value/
 
+
+Some people say that processing a command should not return a result.
+- This is an understandable approach but sometimes impractical, especially when you want to immediately return the ID of a newly created resource. Sometimes the boundary between Command and Query is blurry. One example is AuthenticateCommand - it returns a token but it is not a query because it has a side effect.
+https://github.com/kgrzybek/modular-monolith-with-ddd
+
+
 Tackling Complexity in CQRS
 - Complexity Trap #1: One-Way Commands, or Overzealous Segregation
 - Complexity Trap #2: Event sourcing

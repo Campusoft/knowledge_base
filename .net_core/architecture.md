@@ -1,3 +1,11 @@
+# C# Coding Style
+
+
+C# Coding Style
+- The general rule we follow is "use Visual Studio defaults".
+https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md
+
+
 # Referencias Arquitecturas
 
 
@@ -184,6 +192,23 @@ Sample .NET Core reference application, powered by Microsoft, based on a simplif
 - book, .NET Microservices: Architecture for Containerized .NET Applications.
   - https://docs.microsoft.com/en-us/dotnet/architecture/microservices/
 https://github.com/dotnet-architecture/eShopOnContainers
+
+
+
+Full Modular Monolith application with Domain-Driven Design approach. 
+- C4 model is a lean graphical notation technique for modelling the architecture of software systems. 
+- Module: API, User Access, Meetings, Administration , Payments.
+  - Module initialization. Each module has a static Initialize method which is invoked in the API Startup class.
+  - Each Module has Clean Architecture
+  - Module Requests Processing via CQRS
+- Modules Integration
+  - To ensure maximum reliability, the Outbox / Inbox pattern is used. 
+- Security
+  - Authentication is implemented using JWT Token and Bearer scheme using IdentityServer.
+  - Authorization is achieved by implementing RBAC (Role Based Access Control) using Permissions. 
+- All Architectural Decisions (AD) are documented in the Architecture Decision Log (ADL).  
+https://github.com/kgrzybek/modular-monolith-with-ddd
+
 
 # Exceptions 
 

@@ -41,3 +41,19 @@ https://github.com/ory/kratos
 Go Client/Server for Celery Distributed Task Queue
 https://github.com/gocelery/gocelery
 
+## Benthos
+
+Benthos is a declarative data streaming service that solves a wide range of data engineering problems with simple, chained, stateless processing steps. It implements transaction based resiliency with back pressure, so when connecting to at-least-once sources and sinks it's able to guarantee at-least-once delivery without needing to persist messages during transit.
+https://www.benthos.dev/
+
+Input
+- An input is a source of data piped through an array of optional processors:
+
+Processors
+
+- Benthos processors are functions applied to messages passing through a pipeline. The function signature allows a processor to mutate or drop messages depending on the content of the message. There are many types on offer but the most powerful is the bloblang processor.
+
+
+Outputs
+
+- An output is a sink where we wish to send our consumed data after applying an optional array of processors. Only one output is configured at the root of a Benthos config. However, the output can be a broker which combines multiple outputs under a chosen brokering pattern, or a switch which is used to multiplex against different outputs.

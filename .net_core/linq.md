@@ -7,7 +7,15 @@ LINQ to Objects is missing a few desirable features. This project enhances LINQ 
 https://github.com/morelinq/MoreLINQ
 
 
+These LINQ tests/quizes will help you to check how much you know, or don't know, about .NET LINQ to prepare for the interviews. You may also go through LINQ tutorials before giving tests.
 https://www.tutorialsteacher.com/linq/linq-tutorials
+
+
+
+# Tools
+
+LINQPad is not just for LINQ queries, but any C#/F#/VB expression, statement block or program. 
+https://www.linqpad.net/
 
 # referencias
 

@@ -1,9 +1,23 @@
 # EntityFramework
 
-
+EF o Entity Framework es el ORM oficial de Microsoft
 
 # Conventions
 
+Code First Conventions
+- Conventions are sets of rules that are used to automatically configure a conceptual model based on class definitions when working with Code First.
+- Type Discovery
+- Primary Key Convention
+- Relationship Convention
+https://docs.microsoft.com/en-us/ef/ef6/modeling/code-first/conventions/built-in
+
+Conventions in Entity Framework Core. (Reglas aplicadas)
+- Primary Key 
+- Foreign Key 
+- Table 
+- Columns 
+- Data Types 
+https://www.learnentityframeworkcore.com/conventions
 
 Entity Framework Core: Naming Convention
 https://www.meziantou.net/entity-framework-core-naming-convention.htm
@@ -147,6 +161,7 @@ entity.Property(x => x.ColumnName).IsUnicode(false);
 ```
 
 # Provider
+
 
 ## sql server
 
