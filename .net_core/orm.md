@@ -2,6 +2,26 @@
 
 EF o Entity Framework es el ORM oficial de Microsoft
 
+
+# DbContext 
+
+El AddDbContext, agrega un Db con el ciclo vida por defecto. ServiceLifetime.Scoped
+
+DbContext Configuration
+- There are various ways the tools try to create the DbContext:
+  - From application services
+  - Using a constructor with no parameters
+  - From a design-time factory
+  - Configuring DbContextOptions
+  - Using DbContext with dependency injection
+https://riptutorial.com/ef-core-advanced-topics/learn/100000/dbcontext-configuration
+
+
+
+Codigo
+- EntityFrameworkServiceCollectionExtensions.AddDbContext
+https://github.com/dotnet/efcore/blob/main/src/EFCore/Extensions/EntityFrameworkServiceCollectionExtensions.cs
+
 # Conventions
 
 Code First Conventions
@@ -214,9 +234,50 @@ builder.Property(a => a.Id)
 ```
 https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=fluent-api
 
+
+## Manuales / Tutoriales
+
+For Beginners "Principiante"
+
+**Entity Framework Core for Beginners video series**
+
+- Posee videos.
+- Posee codigo.
+- Posee documentacion de los tutoriales
+Temas
+- Persist and retrieve relational data with Entity Framework Core (Microsoft Learn)
+- Reverse Engineering
+- Tutorial: Create a Razor Pages web app with ASP.NET Core
+- Azure Cosmos DB local emulator
+- No-tracking queries. Loading related data. Split queries. DbContext pooling. Raw SQL queries
+https://github.com/MicrosoftDocs/ef-core-for-beginners
+
+- Los videos del curso
+Getting Started with Entity Framework Core [1 of 5] | Entity Framework Core for Beginners
+https://www.youtube.com/watch?v=SryQxUeChMc
+
+Working with an Existing Database [2 of 5] | Entity Framework Core for Beginners
+https://www.youtube.com/watch?v=DCYVfLT5_QI
+
+ASP.NET Core Web Apps with EF Core [3 of 5] | Entity Framework Core for Beginners
+https://www.youtube.com/watch?v=c-wN-fc594c
+
+Database Providers [4 of 5] | Entity Framework Core for Beginners
+https://www.youtube.com/watch?v=moRmKo3nrN4
+
+Performance Tips [5 of 5] | Entity Framework Core for Beginners
+https://www.youtube.com/watch?v=jgESld7U5Bw&t=68s
+
+
 ## Revisiones
 
 - TODO: Interceptores EntityFramework ORM
+
+
+
+- AddDbContextPool:
+https://docs.microsoft.com/es-es/ef/core/performance/advanced-performance-topics?tabs=with-di%2Cwith-constant#dbcontext-pooling
+
 
 # Dapper
 
@@ -247,6 +308,7 @@ https://dapper-tutorial.net/transaction
 
 
 ## Referencias
+
 
 [Oracle - Dapper]
 (https://github.com/DIPSAS/Dapper.Oracle)

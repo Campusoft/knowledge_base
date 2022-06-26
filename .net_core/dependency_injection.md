@@ -13,6 +13,16 @@ var foo = HttpContext.RequestServices.GetService<IFoo>();
 ```
 
 
+Register groups of services with extension methods
+
+The ASP.NET Core framework uses a convention for registering a group of related services. The convention is to use a single Add{GROUP_NAME} extension method to register all of the services required by a framework feature. For example, the AddControllers extension method registers the services required for MVC controllers.
+
+
+Note: Each services.Add{GROUP_NAME} extension method adds and potentially configures services. For example, AddControllersWithViews adds the services MVC controllers with views require, and AddRazorPages adds the services Razor Pages requires. We recommended that apps follow the naming convention of creating extension methods in the Microsoft.Extensions.DependencyInjection namespace. Creating extension methods in the Microsoft.Extensions.DependencyInjection namespace:
+
+https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-6.0
+
+
 
 # Autofac
 
