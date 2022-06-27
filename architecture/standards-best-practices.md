@@ -86,7 +86,7 @@ It is an alternative way to persist data. In contrast with state-oriented persis
 
 Thanks for that, no business data is lost. Each operation results in the event stored in the database. That enables extended auditing and diagnostics capabilities (both technically and business-wise). What's more, as events contains the business context, it allows wide business analysis and reporting.
 
-
+**When to use CQRS**
 
 **Refencias**
 Can command return a value?

@@ -4,6 +4,13 @@
 
 .NET 6 is supported with Visual Studio 2022 and Visual Studio 2022 for Mac. It is not supported in Visual Studio 2019
 
+Unified platform across browser, cloud, desktop, IoT, and mobile apps, all using the same .NET Libraries and the ability to share code easily.
+
+Minimal APIs introduced in ASP.NET Core to simplify the getting started experience and improve the performance of HTTP services.
+
+Hot Reload enables you to skip rebuilding and restarting your app to view a new change — while your app is running — supported in Visual Studio 2022 and from the .NET CLI, for C# and Visual Basic.
+
+
 # .net Core 3.0
 
 After .NET Core 3.0 we will not port any more features from .NET Framework. If you are a Web Forms developer and want to build a new application on .NET Core, we would recommend Blazor which provides the closest programming model. If you are a remoting or WCF Server developer and want to build a new application on .NET Core, we would recommend either ASP.NET Core Web APIs or gRPC, which provides cross platform and cross programming language contract based RPCs). If you are a Windows Workflow developer there is an open source port of Workflow to .NET Core.  
