@@ -10,7 +10,7 @@ https://github.com/wesdoyle/design-patterns-explained-with-food
 
 ***SOLID principles***
 
-Single responsibility principle
+Single responsibility principle. SRP
 Open/closed principle
 Liskov substitution principle
 Interface segregation principle
@@ -58,6 +58,9 @@ Real-World CQRS/ES with ASP.NET and Redis Part 2 - The Write Model
 - Un ICommandHandler, puede Handle varios commands
 https://www.exceptionnotfound.net/real-world-cqrs-es-with-asp-net-and-redis-part-2-the-write-model/
 
+
+Consequences
+- We have optimized models for writes and reads (SRP principle).
 
 
 **Queries**

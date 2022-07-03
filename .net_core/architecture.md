@@ -196,6 +196,9 @@ https://github.com/dotnet-architecture/eShopOnContainers
 
 
 Full Modular Monolith application with Domain-Driven Design approach. 
+- Posee codigo
+- Posee diagramas
+- Posee documentacion 
 - C4 model is a lean graphical notation technique for modelling the architecture of software systems. 
 - Module: API, User Access, Meetings, Administration , Payments.
   - Module initialization. Each module has a static Initialize method which is invoked in the API Startup class.
@@ -208,6 +211,37 @@ Full Modular Monolith application with Domain-Driven Design approach.
   - Authorization is achieved by implementing RBAC (Role Based Access Control) using Permissions. 
 - All Architectural Decisions (AD) are documented in the Architecture Decision Log (ADL).  
 https://github.com/kgrzybek/modular-monolith-with-ddd
+
+
+nopCommerce
+The most popular open-source eCommerce shopping cart solution based on ASP.NET Core 
+- Linq2DB is an open-source ORM framework for .NET applications. It is a .NET Foundation project. 
+- Fluent Validation
+- Razor View Engine
+- AutoMapper
+- JQuery
+- Kendo UI
+- Microsoft SQL Server, MySQL Server, PostgreSQL
+- Redis (cache)
+- nopCommerce 4.5.x: We've migrated nopCommerce to .NET 6
+https://github.com/nopSolutions/nopCommerce
+
+
+
+Northwind Traders is a sample application built using ASP.NET Core and Entity Framework Core. 
+
+- .NET Core 3
+- ASP.NET Core 3
+- Entity Framework Core 3
+- Validation with FluentValidation
+- Object-Object Mapping with AutoMapper
+- Angular 8
+- Open API with NSwag
+- Using CQRS + MediatR simplifies your overall design
+- Security using ASP.NET Core Identity + IdentityServer  
+- Automated testing with xUnit.net, Moq, and Shouldly
+https://github.com/jasontaylordev/NorthwindTraders
+
 
 
 # Exceptions 

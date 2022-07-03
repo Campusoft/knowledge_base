@@ -1,5 +1,17 @@
 # Pattern implement .net core
 
+
+# Unit of Work and Repository Patterns
+
+
+Unit of Work and Repository Patterns. Should we implement these patterns?
+It isn’t always the best choice, because:
+- EF Core insulates your code from database changes
+- DbContext acts as a unit of work
+- DbSet acts as a repository
+- EF Core has features for unit testing without repositories
+https://github.com/jasontaylordev/NorthwindTraders
+
 # CQRS (*)
 
 

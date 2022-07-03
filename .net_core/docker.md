@@ -1,5 +1,5 @@
 
-# docker
+# Docker .net Core
 
 The Microsoft Container Registry (MCR, mcr.microsoft.com) is a syndicate of Docker Hub - which hosts publicly accessible containers.
  
@@ -16,8 +16,8 @@ docker build -t counter-image -f Dockerfile .
 This command builds the image and creates a local repository named counter-image that points to that image. After this command finishes, run docker images to see a list of images installed
 
 
-
 Otros ejemplos con nombres archivos Dockerfile diferentes
+
 ```
 docker build -t base-api -f Dockerfile.Base.Api .
 docker build -t base-identity-server -f Dockerfile.Base.IdentityServer .

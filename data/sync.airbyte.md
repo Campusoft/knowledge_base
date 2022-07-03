@@ -43,8 +43,6 @@ https://airbyte.com/blog/why-you-should-not-build-your-data-pipeline-on-top-of-s
 
 # Airbyte Specification
 
-
-
 The specification is Docker-based; this allows a developer to write a connector in any language they want.
 
 ## Source
@@ -113,6 +111,10 @@ docker run --rm -i <source-image-name> read --config <config-file-path> --catalo
 
 docker run --rm -v $(pwd)/secrets:/secrets -v $(pwd)/sample_files:/sample_files airbyte/source-hubspot:dev read --config /secrets/config.json --catalog /sample_files/configured_catalog.json
 
+## Destination
+
+### Command Write
+
 
 
 **ConnectorSpecification**
@@ -126,7 +128,11 @@ An AirbyteCatalog describes the structure of data in a data source. It has a sin
 
 # Syncing (Sync Modes)
 
-
+A sync mode governs how Airbyte reads from a source and writes to a destination. Airbyte provides different sync modes to account for various use cases.
+- Full Refresh Overwrite: Sync the whole stream and replace data in destination by overwriting it.
+- Full Refresh Append: Sync the whole stream and append data in destination.
+- Incremental Append: Sync new records from stream and append data in destination.
+- Incremental Deduped History: Sync new records from stream and append data in destination, also provides a de-duplicated view mirroring the state of the stream in the source.
 https://docs.airbyte.com/understanding-airbyte/connections/#sync-modes
 
 ## Incremental Sync - Append

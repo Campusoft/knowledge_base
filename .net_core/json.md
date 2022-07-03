@@ -13,6 +13,22 @@ https://github.com/dotnet/runtime/issues/31068
 The JsonDocument class within the namespace is responsible for examining the structural content of a JSON value, similar to JToken within Json.NET.
 
 
+## Deserialize dynamic
+
+System.Text.Json provides two ways to build a JSON DOM:
+- JsonNode 
+- JsonDocument 
+
+Consider the following factors when choosing between JsonDocument and JsonNode:
+
+- The JsonNode DOM can be changed after it's created. The JsonDocument DOM is immutable.
+- The JsonDocument DOM provides faster access to its data
+	
+**Use JsonNode**
+https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-use-dom-utf8jsonreader-utf8jsonwriter?pivots=dotnet-6-0#use-jsonnode
+
+**Use JsonDocument**
+https://docs.microsoft.com/en-us/dotnet/standard/serialization/system-text-json-use-dom-utf8jsonreader-utf8jsonwriter?pivots=dotnet-6-0#use-jsondocument
 
 ## Reference
 

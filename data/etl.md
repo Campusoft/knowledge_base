@@ -21,6 +21,9 @@ Best Practices to Design a Data Ingestion Pipeline
 - Keep a copy of all raw data in your warehouse at all times
 https://airbyte.com/blog/best-practices-data-ingestion-pipeline
 
+# AWS Data Pipeline 
+
+
 
 # Apache Airflow
 
@@ -214,9 +217,20 @@ https://www.rudderstack.com/docs/static/a188699e9ddc1f56f525fa14a08bac80/aa440/r
 	
 https://www.rudderstack.com/docs/get-started/rudderstack-architecture/
 
+## licensing
 
-RudderStack Open Source. No soportados
+The core of RudderStack - the components that make up our Event Stream feature - is open source.
+
+A majority of RudderStack’s third-party destination integrations live in the rudder-transformer repository. They are open source as well, licensed under the MIT License.
+
+Features licensed under our enterprise license include:
+
 - Reverse ETL
+- ETL
+- Transformations
+- Event Replay
+- SSO (Single Sign-On)
+https://www.rudderstack.com/blog/rudderstacks-licensing-explained/
 
 
 # Referencias

@@ -1,11 +1,10 @@
-
 # Clean Architecture
 
 Though these architectures all vary somewhat in their details, they are very similar. They all have the same objective, which is the separation of concerns. They all achieve this separation by dividing the software into layers. Each has at least one layer for business rules, and another for interfaces.
 
 https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
-# component
+# Component
 
  A component is an encapsulated part of a software system. A component has an interface. Components serve as the building blocks for the structure of a system. At a programming-language level, components may be represented as modules, classes, objects or a set of related functions.
  

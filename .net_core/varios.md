@@ -1,5 +1,10 @@
 # Varios
 
+# Exceptions
+
+
+https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
+
 # Roadmap  
 
 
@@ -459,25 +464,7 @@ ASP.NET Core supports uploading one or more files using buffered model binding f
 https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1
 
 
-# Application Referencias
-
-nopCommerce
-The most popular open-source eCommerce shopping cart solution based on ASP.NET Core 
-https://github.com/nopSolutions/nopCommerce
-
-Full Modular Monolith application with Domain-Driven Design approach. 
-- Posee codigo
-- Posee diagramas
-- Posee documentacion 
-https://github.com/kgrzybek/modular-monolith-with-ddd
-
-Northwind Traders is a sample application built using ASP.NET Core and Entity Framework Core. 
-
-- .NET Core 3
-- ASP.NET Core 3
-- Entity Framework Core 3
-- Angular 8
-https://github.com/jasontaylordev/NorthwindTraders
+ 
 
 # Mapping Objects
 

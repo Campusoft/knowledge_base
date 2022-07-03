@@ -565,3 +565,7 @@ https://jimmybogard.com/composite-uis-for-microservices-vertical-slice-apis/
 Porque .net core facilita microservicios?. Para ejecutarse no requiere un componente centralizado tipo IIS sino posee un componente integrado para exponerse. Kestrel server.  Esto facilita la aplicaciones independientes que fluye en arquitectura microservicios. Ademas son cross-platform. . Tambien Spring Boot, a popular Java-based  microservices framework, lets you build microservices as self contained, self-executable JAR files. 
 
 The twelve-factor app” es una metodología para construir aplicaciones SaaS. VII. Asignación de puertos. Las aplicaciones “twelve factor” son completamente auto-contenidas y no dependen de un servidor web en ejecución para crear un servicio web público. 
+
+Design Microservice Architectures the Right Way
+- Code generation can be used to set strict standards across the systems
+https://www.youtube.com/watch?v=j6ow-UemzBc

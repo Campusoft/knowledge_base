@@ -28,6 +28,8 @@ https://jitsu.com/
 
 Jitsu is written primarily in Go with the frontend written in JavaScript.
 
+Posee Batch or/and Stream pipeline 
+
 
 JavaScript Transform
 

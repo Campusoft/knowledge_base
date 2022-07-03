@@ -4,6 +4,5 @@ Azure Cosmos DB es un servicio de base de datos NoSQL totalmente administrado pa
 
 # Ef - Cosmos
 
-
 EF Core Azure Cosmos DB Provider Limitations
 https://docs.microsoft.com/en-us/ef/core/providers/cosmos/limitations

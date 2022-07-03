@@ -127,13 +127,79 @@ There are two options to install Apache Kafka using Confluent Platform :
 - Docker: https://docs.confluent.io/platform/current/quickstart/ce-docker-quickstart.html
  
  
+Indica las diferentes opciones de docker-compose existents
+https://docs.confluent.io/platform/current/tutorials/build-your-own-demos.html?utm_source=github&utm_medium=demo&utm_campaign=ch.examples_type.community_content.cp-all-in-one
+ 
+ 
 Docker (Proveedor Alternativo). bitnami
 - Posee zookeeper
 - kafka
 
 https://hub.docker.com/r/bitnami/kafka
+
+# Schema Registry
+
+Confluent Schema Registry provides a serving layer for your metadata. It provides a RESTful interface for storing and retrieving your Avro®, JSON Schema, and Protobuf schemas.
+
  
 # Kafka Streams
+
+# Kafka Connectors
+
+Kafka Connect is a framework for connecting Kafka with external systems such as databases, key-value stores, search indexes, and file systems, using so-called Connectors.
+
+Kafka Connect is a free, open-source component of Apache Kafka® that works as a centralized data hub for simple data integration between databases, key-value stores, search indexes, and file systems. 
+
+A source connector collects data from a system. Source systems can be entire databases, streams tables, or message brokers. A source connector could also collect metrics from application servers into Kafka topics, making the data available for stream processing with low latency.
+
+A sink connector delivers data from Kafka topics into other systems, which might be indexes such as Elasticsearch, batch systems such as Hadoop, or any kind of database.
+
+
+Inside Kafka Connect
+
+- Connectors are responsible for the interaction between Kafka Connect and the external technology being integrated with
+- Converters handle the serialization and deserialization of data
+- Transformations can optionally apply one or more transformations to the data passing through the pipeline
+
+## Converters
+
+Converters are responsible for the serialization and deserialization of data flowing between Kafka Connect and Kafka itself.  Common converters include:
+
+- JSON
+- Avro
+- Protobuf
+
+## Transformations - Single Message Transforms (SMTs)
+
+The third key component with Kafka Connect is Single Message Transforms (SMT). Unlike connectors and converters, these are entirely optional. You can use them to modify data from a source connector before it is written to Kafka, and modify data read from Kafka before it’s written to the sink.
+
+For more complex transformations, including aggregations and joins to other topics or lookups to other systems, a full stream processing layer in ksqlDB or Kafka Streams is recommended.
+
+
+## Connectors
+
+**tasks**
+
+
+Kafka Connect Deep Dive – JDBC Source Connector
+https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/
+
+
+Add Connectors or Software
+create a Docker image that extends from one of Confluent’s Kafka Connect images but which contains a custom set of connectors.
+https://docs.confluent.io/home/connect/self-managed/extending.html
+
+## Error Handling in Kafka Connect
+
+Kafka Connect supports several error-handling patterns, including fail fast, silently ignore, and dead letter queues.
+https://developer.confluent.io/learn-kafka/kafka-connect/error-handling-and-dead-letter-queues/
+
+
+# REST Proxy API
+
+
+Confluent REST Proxy API Reference
+https://docs.confluent.io/platform/current/kafka-rest/api.html
 
 
 # Tools
@@ -180,6 +246,70 @@ https://upstash.com/#section-pricing
 https://confluent.cloud/welcome
 
 
+
+
+# ksqlDB
+
+ksqlDB is a database purpose-built to help developers create stream processing applications on top of Apache Kafka®.
+
+ksqlDB enables you to build event streaming applications leveraging your familiarity with relational databases. Three categories are foundational to building an application: collections, stream processing, and queries.
+
+What use cases is ksqlDB a good fit for?
+
+- Materialized cache. Build and serve incrementally-updated stateful views.
+- Streaming ETL pipeline. Manipulate in-flight data to connect arbitrary sources and sinks.
+- Event-driven microservices. Trigger changes based on observed patterns of events in a stream.
+
+https://ksqldb.io/
+
+
+Interacting with ksqlDB
+- Command Line Interface (CLI). ksqlDB CLI
+- Web UI. One of the simplest ways to interact with ksqlDB is via the web UI in Confluent Cloud.
+- REST API. The ksqlDB REST API provides programmatic access to ksqlDB for managing objects and querying them
+- Client Libraries
+
+## Use Case
+
+
+ksqlDB allows us to read, filter, transform, or otherwise process streams and tables of events, which are backed by Kafka topics. 
+
+Some key ksqlDB use cases include:
+
+- Materialized caches
+- Streaming ETL pipelines
+- Event-driven microservices
+
+
+## Examples
+
+Transforming Data with ksqlDB
+ksqlDB allows you to transform events in one stream and then send them to a new stream.
+https://developer.confluent.io/learn-kafka/ksqldb/transform-data/#transforming-data-with-ksqldb
+
+Stateful Aggregations (Materialized Views)
+ksqlDB can filter, join, and enrich events as they happen. But you may wish to look beyond individual events to a composite view.
+https://developer.confluent.io/learn-kafka/ksqldb/stateful-aggregations/
+
+
+
+## ksqlDB CLI
+
+Si se utilizo docker-compose para instalar ksqlDb.
+
+-  ksqldb-server. Es el nombre del servicio en el archivo docker-compose.yml para la imagen "cp-ksqldb-server"
+
+```
+docker exec -it ksqldb-cli ksql http://ksqldb-server:8088
+```
+
+## Clients
+
+ksqlDb.RestApi.Client is a C# LINQ-enabled client API for issuing and consuming ksqlDB push queries and executing statements. SqlServer.Connector is a client API for consuming row-level table changes (CDC - Change Data Capture) from Sql Server databases with the Debezium connector streaming platform. 
+ 
+https://github.com/tomasfabian/ksqlDB.RestApi.Client-DotNet
+ 
+
 # Referencias
 
 The Cloud Vendors provide alternative solutions for Kafka’s storage layer. These solutions include Azure Event Hubs, and to some extent, AWS Kinesis Data Streams. There are also cloud-specific and open source alternatives to Kafka’s stream processing capabilities
@@ -205,29 +335,3 @@ Kafka uses a pull model. Consumers request batches of messages from a specific o
 
 A pull model is logical for Kafka because of its partitions. Kafka provides message order in a partition with no contending consumers. This allows users to leverage the batching of messages for effective message delivery and higher throughput.
 
-***ksqlDB***
-
-- streaming database like ksqlDB
-
-ksqlDB
-The database purpose-built for stream processing applications.
-
-ksqlDB enables you to build event streaming applications leveraging your familiarity with relational databases. Three categories are foundational to building an application: collections, stream processing, and queries.
-
-
-
-What use cases is ksqlDB a good fit for?
-
-
-Materialized cache
-Build and serve incrementally-updated stateful views.
-
-
-Streaming ETL pipeline
-Manipulate in-flight data to connect arbitrary sources and sinks.
-
-
-Event-driven microservices
-Trigger changes based on observed patterns of events in a stream.
-
-https://ksqldb.io/

@@ -52,8 +52,6 @@ Argo Workflows is an open source container-native workflow engine for orchestrat
 
 - Define workflows where each step in the workflow is a container.
 - Model multi-step workflows as a sequence of tasks or capture the dependencies between tasks using a graph (DAG).
-
-
 https://argoproj.github.io/
 
 
