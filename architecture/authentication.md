@@ -114,6 +114,9 @@ https://wiki.oasis-open.org/security
 
 # OAuth 2
 
+OAuth 2 is an authorization framework that enables applications — such as Facebook, GitHub, and DigitalOcean — to obtain limited access to user accounts on an HTTP service. It works by delegating user authentication to the service that hosts a user account and authorizing third-party applications to access that user account. OAuth 2 provides authorization flows for web and desktop applications, as well as mobile devices.
+
+
 
 In OAuth2, the term Grant Type refers to the way for a client application to acquire an access token depending on the type of the resource owner, type of the application and the trust relationship between the authorization server and the resource owner. 
 
@@ -174,10 +177,21 @@ Una introducción a OAuth 2
 - Posee ejemplos con endpoint parameters response
 https://www.digitalocean.com/community/tutorials/una-introduccion-a-oauth-2-es
 
+## Referencias
+
+An Introduction to OAuth 2
+
+https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2
+
+What the Heck is OAuth? 
+- Ilustraciones
+https://developer.okta.com/blog/2017/06/21/what-the-heck-is-oauth
+
 ## TODO: Revision.
 On The Nature of OAuth2’s Scopes
 Stretching OAuth2 scopes beyond intended usage leads to trouble in complex architectures.
 https://auth0.com/blog/on-the-nature-of-oauth2-scopes/
+
 
 
 # OpenID Connect

@@ -1,6 +1,5 @@
 # REST
 
-
 **ApiController attribute**
 
 The [ApiController] attribute can be applied to a controller class to enable the following opinionated, API-specific behaviors:
@@ -73,8 +72,6 @@ ASP.NET Core versions supported: 6.0, 5.0, 3.1, 3.0 and 2.2
 https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
 
 
-
-
 # Client
 
 
@@ -135,3 +132,13 @@ https://github.com/canton7/RestEase
 Comparing RestSharp and Flurl.Http while consuming a web service in .NET Core
 https://jeremylindsayni.wordpress.com/2018/12/27/comparing-restsharp-and-flurl-http-while-consuming-a-web-service-in-net-core/
 
+
+
+# Referencias
+
+AutoFilterer is a mini filtering framework library for dotnet. The main purpose of the library is to generate LINQ expressions for Entities over DTOs automatically. The first aim is to be compatible with Open API 3.0 Specifications 
+https://github.com/enisn/AutoFilterer
+
+
+Sieve is a simple, clean, and extensible framework for .NET Core that adds sorting, filtering, and pagination functionality out of the box. Most common use case would be for serving ASP.NET Core GET queries.
+https://github.com/Biarity/Sieve

@@ -118,9 +118,6 @@ Basic Authentication with Middleware in ASP.NET Core 3 Web API
 https://learningprogramming.net/net/asp-net-core-3-web-api/basic-authentication-with-middleware-in-asp-net-core-3-web-api/
 
 
-Build Secure ASP.NET Core API with JWT Authentication – Detailed Guide
-https://codewithmukesh.com/blog/aspnet-core-api-with-jwt-authentication/
-
 
 Build Secure ASP.NET Core API with JWT Authentication – Detailed Guide
 - Generate JWT Token
