@@ -88,3 +88,9 @@ Turbo.net Power BI Desktop Application
 The Turbo.net tools allow applications to run on any desktop. Their version allows Power BI Desktop to run on an Apple Mac.
 Contributed and supported by: Turbo.net
 https://turbo.net/run/powerbi/powerbi 
+
+# Training
+
+
+Top 5 Free Microsoft Power BI Online Courses for Beginners to Learn in 2022 - Best of Lot
+https://www.java67.com/2021/05/top-5-free-power-bi-courses-for..html

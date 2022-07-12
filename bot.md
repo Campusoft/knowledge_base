@@ -20,6 +20,10 @@ Free (10,000 messages/month)
 S1 $0,50 per 1,000 messages (on Premium Channels)
 
 
+
+Chatbots 
+https://wotnot.io/
+
 # Referencias
 
 Chatbots: The Definitive Guide (2021)

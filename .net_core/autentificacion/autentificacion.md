@@ -144,6 +144,15 @@ Creating custom password validators for ASP.NET Core Identity
 https://andrewlock.net/creating-custom-password-validators-for-asp-net-core-identity-2/
 
 
+How to Implement JWT Authentication in Web API Using .Net 6.0, Asp.Net Core
+- Generar token Jwt. Con claims
+- Configurar validacion tokens Jwt. 
+https://www.c-sharpcorner.com/article/how-to-implement-jwt-authentication-in-web-api-using-net-6-0-asp-net-core/
+
+Implement JWT Authentication in Asp.net Core 5 Web API [Token Base Auth] 
+- Understanding JWT Authentication Workflow. (Diagrama)
+- Install NuGet Package (JwtBearer) 
+https://codepedia.info/jwt-authentication-in-aspnet-core-web-api-token
 
 **Books**
 

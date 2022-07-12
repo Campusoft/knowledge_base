@@ -1,8 +1,14 @@
 # Varios
 
+
+# Globalization and localization in ASP.NET Core
+
+***Revision***
+Configure portable object localization in ASP.NET Core
+
 # Exceptions
 
-
+Best practices for exceptions
 https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
 
 # Roadmap  
@@ -23,6 +29,35 @@ Multiple Ways To Access Configurations In .NET Applications. (appsettings)
 - Bind
 - Options Pattern
 https://thecodeblogger.com/2021/04/20/multiple-ways-to-access-configurations-in-net-applications/
+
+
+TimeSpan configuration values in .NET Core by Mark Seemann
+- Leer numero entero. (Total segundos, minutos, o la medida que se establece que significa el numero)
+
+Configuracion Json
+```
+{
+  "SeatingDurationInSeconds": "9000"
+}
+```
+Codigo
+```
+var seatingDuration = TimeSpan.FromSeconds(Configuration.GetValue<int>("SeatingDurationInSeconds"));
+```
+
+Use the [standard TimeSpan string](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-timespan-format-strings) representation instead:
+
+Configuracion Json
+```
+{
+  "SeatingDuration": "2:30:00"
+}
+```
+Codigo
+```
+var seatingDuration = Configuration.GetValue<TimeSpan>("SeatingDuration");
+```
+https://blog.ploeh.dk/2019/11/25/timespan-configuration-values-in-net-core/ 
 
 # date and time
 
@@ -213,6 +248,15 @@ Background tasks with hosted services in ASP.NET Core
 In ASP.NET Core, background tasks can be implemented as hosted services.
 - BackgroundService is a base class for implementing a long running IHostedService.
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/hosted-services?view=aspnetcore-6.0&tabs=visual-studio
+
+# Release
+
+ASP.Net Core Reverse Proxy with different root
+https://stackoverflow.com/questions/45311393/asp-net-core-reverse-proxy-with-different-root
+
+
+.NET Core hosted on subdirectories in Nginx
+https://www.billbogaiv.com/posts/net-core-hosted-on-subdirectories-in-nginx
 
 
 # Files
