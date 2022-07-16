@@ -54,6 +54,54 @@ A veces, queremos reutilizar alguna lógica de estado entre componentes. Tradici
 Reusing logic in React has been complex, and patterns like HOCs and Render Props tried to solve that problem. With the recent addition of Hooks, reusing logic becomes easier
 
 
+# React applications
+
+## Create React App
+
+Create React apps with no build configuration.
+
+https://github.com/facebook/create-react-app
+
+
+Errores
+------------------
+cannot run yarn create if yarn is in a folder where the file path has a space #6851 
+- Obtener el nombre carpeta con caracteres ~
+```
+dir /x in C:\Users
+``` 
+- Obtener carpeta cache
+```
+yarn cache dir
+```
+- Obtener carpeta bin global
+```
+ yarn global bin
+```
+- Establecer estas carpetas con nombres estilo ~. Ej. El nombre usuario "C:\Users\L E N O V O" al ejecutar dir /x in c:\users se obtiene C:\Users\LENOVO~1
+
+```
+yarn config set cache-folder "C:\Users\LENOVO~1\AppData\Local\Yarn\Cache\v6"
+```
+
+```
+yarn config set prefix "C:\Users\LENOVO~1\AppData\Local\Yarn"
+```
+https://github.com/yarnpkg/yarn/issues/6851
+
+-------------
+
+
+## Vite
+
+Create React App or Vite.
+
+Under the hood, CRA uses Webpack which is a popular asset bundler that helps us develop and build a web app. The Webpack was fine until 2–3 years ago but today, we have almighty Esbuild. 
+
+
+You Should Choose Vite Over CRA for React Apps, Here’s Why
+https://medium.com/codex/you-should-choose-vite-over-cra-for-react-apps-heres-why-47e2e7381d13
+
 
 ## Referencias
 
@@ -85,4 +133,5 @@ Cross-platform web development with Visual Studio Code, C#, F#, JavaScript, ASP.
 https://github.com/kriasoft/aspnet-starter-kit
 
 
+# Revisiones
 

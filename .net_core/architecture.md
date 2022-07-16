@@ -34,6 +34,7 @@ This is a solution template for creating a Single Page App (SPA) with Angular an
 - MediatR
 - AutoMapper
 - FluentValidation
+  - RFC 7807 provides - details from HTTP APIs
 - NUnit, FluentAssertions, Moq & Respawn
 - Docker 
 - NSwag.AspNetCore. (Configurado en "HostAplicacion"/api)

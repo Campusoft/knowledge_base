@@ -11,6 +11,12 @@ The [ApiController] attribute can be applied to a controller class to enable the
 - Problem details for error status codes
 https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-6.0#apicontroller-attribute
 
+Automatic HTTP 400 responses
+
+- The [ApiController] attribute makes model validation errors automatically trigger an HTTP 400 response. 
+- The default response type for an HTTP 400 response is ValidationProblemDetails
+- Complies with the RFC 7807 specification
+https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-6.0#automatic-http-400-responses
 
 # IHttpClientFactory 
 

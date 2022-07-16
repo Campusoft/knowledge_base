@@ -187,6 +187,13 @@ Guía de diseño de API - Google
 Esta guía se aplica a las API de REST y a las API de RPC, con un enfoque particular en las API de gRPC
 https://cloud.google.com/apis/design/
 
+
+
+REST API Error Handling — Problem Details Response
+- RFC 7807 provides a standard format for returning problem details from HTTP APIs.
+https://dzone.com/articles/rest-api-error-handling-problem-details-response
+
+
 # Varios
 
 ## Twelve-factor methodology. (12-factor)

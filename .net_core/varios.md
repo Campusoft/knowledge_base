@@ -6,7 +6,33 @@
 ***Revision***
 Configure portable object localization in ASP.NET Core
 
+# Validaciones
+
+
+IModelValidator 
+
+## FluentValidation
+
+FluentValidationModelValidator
+FluentValidation's implementation of an ASP.NET Core model validator.
+https://github.com/FluentValidation/FluentValidation.AspNetCore/blob/main/src/FluentValidation.AspNetCore/FluentValidationModelValidatorProvider.cs
+
+return result.Errors.Select(x => new ModelValidationResult(x.PropertyName, x.ErrorMessage));
+
+
+throw new ValidationException("foo");
+
+
+ValidationActionFilter 
+ValidationPipelineBehavior 
+FluentValidationModelValidatorProvider
+
+Deep Dive Into Different Validators with FluentValidation
+https://code-maze.com/deep-dive-validators-fluentvalidation/
+
+
 # Exceptions
+
 
 Best practices for exceptions
 https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
