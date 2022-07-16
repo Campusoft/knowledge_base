@@ -12,8 +12,6 @@ https://reactjs.org/docs/thinking-in-react.html
 - Cual es diferencia React y Angular ?
 -- Bind. (Es una sola Via).
 
-# JSX
-
 
 ##  Estados, Propiedades. Componete Padre / Hijo
 ![imagen](https://user-images.githubusercontent.com/222181/116284217-7363a880-a752-11eb-9549-ba257159ebf1.png)
@@ -23,6 +21,8 @@ https://reactjs.org/docs/thinking-in-react.html
 ## Propiedades 
 
 ## Contexto
+
+# JSX
 
 
 
@@ -94,22 +94,24 @@ https://github.com/yarnpkg/yarn/issues/6851
 
 ## Vite
 
-Create React App or Vite.
-
 Under the hood, CRA uses Webpack which is a popular asset bundler that helps us develop and build a web app. The Webpack was fine until 2–3 years ago but today, we have almighty Esbuild. 
+
+Vite is another build tool like Webpack
 
 
 You Should Choose Vite Over CRA for React Apps, Here’s Why
 https://medium.com/codex/you-should-choose-vite-over-cra-for-react-apps-heres-why-47e2e7381d13
 
 
-## Referencias
+# Referencias
+
 
 Pagina dedicada a patrones en react. 
 https://reactpatterns.com/
 
 10 React mini-patterns React
 https://hackernoon.com/10-react-mini-patterns-c1da92f068c5
+
 
 
 

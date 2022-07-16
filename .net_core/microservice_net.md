@@ -64,6 +64,12 @@ https://github.com/Azure-Samples/saga-orchestration-serverless
 
 # Observabilidad
 
+Microservice — Tracing Log in the Distributed System
+- HttpContext.TraceIdentifier
+- x-request-id 
+- Web API, gRpc, Message queue
+https://betterprogramming.pub/microservice-tracing-log-in-the-distributed-system-96f49bcb7bd
+
 ***Revisiones***
 
 TraceId
