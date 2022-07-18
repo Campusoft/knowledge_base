@@ -34,7 +34,19 @@ In Next.js, you use the Link Component from next/link to wrap the <a> tag. <Link
 
 As you can see, the Link component is similar to using <a> tags, but instead of <a href="…">, you use <Link href="…"> and put an <a> tag inside.
 
+## Pre-rendering
+
+By default, Next.js pre-renders every page. This means that Next.js generates HTML for each page in advance, instead of having it all done by client-side JavaScript. Pre-rendering can result in better performance and SEO.
+
+Next.js has two forms of pre-rendering
+- Static Generation (Recommended): The HTML is generated at build time and will be reused on each request.
+- Server-side Rendering: The HTML is generated on each request.
+
+
+https://nextjs.org/docs/basic-features/pages#pre-rendering
+
 ## Pre-rendering and Data Fetching
+
 https://nextjs.org/learn/basics/data-fetching/pre-rendering
 
 
@@ -96,7 +108,6 @@ https://github.com/jquense/yup
 ## SWR
 
 React Hooks library for data fetching
-
 
 Therefore, for large-scale applications or projects that have to do with the distribution of data, SWR is preferred, while react-query is better for side projects or smaller applications.
 

@@ -1,5 +1,7 @@
 # javascript
 
+Diferencias clave entre var, let y const en JavaScript JavaScript 
+https://cybmeta.com/var-let-y-const-en-javascript
 
 ## Promises
 

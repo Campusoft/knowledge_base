@@ -24,11 +24,44 @@ https://reactjs.org/docs/thinking-in-react.html
 
 # JSX
 
+JSX es una extensión de sintaxis de JavaScript que nos permite mezclar JS y HTML (XML), de ahí su nombre JavaScript XML.
 
+Characteristics of JSX:
+
+- JSX is not mandatory to use there are other ways to achieve the same thing but using JSX makes it easier to develop react application.
+- JSX allows writing expression in { }. The expression can be any JS expression or React variable.
+- To insert a large block of HTML we have to write it in a parenthesis i.e, ().
+- JSX produces react elements.
+- JSX follows XML rule.
+- After compilation, JSX expressions become regular JavaScript function calls.
+- JSX uses camelcase notation for naming HTML attributes. For example, tabindex in HTML is used as tabIndex in JSX.
+- ClassName and HTMLFor, not class and for in JSX	
+- Write all HTML Attributes in camelCase in JSX. You need to write all HTML attributes and event references in camelCase while writing JSX. So, onclick becomes onClick, onmouseover becomes onMouseOver, and so on:
+- Write Inline Styles as Objects in JSX. And lastly, to define inline styles for JSX, you write it as an object, with the properties in camelCase, the values in quotes, and then you pass it inline to the JSX.
+
+```
+  const inlineStyle = {
+    color: "#2ecc71",
+    fontSize: "26px",
+  };
+  return (
+    <>
+      <div className="container">
+        <p style={inlineStyle}>Hi campers</p>         
+      </div>
+    </>
+  );
+```
+
+# Elemento
+
+Los elementos son livianos, sin estado y, por lo tanto, son más rápidos.
 
 # Components
 
 
+What is the difference between Element and Component ?
+https://www.geeksforgeeks.org/what-is-the-difference-between-element-and-component/
 
 # Patrones
 
@@ -52,6 +85,8 @@ componentDidMount() {    document.title = `You clicked ${this.state.count} times
 
 A veces, queremos reutilizar alguna lógica de estado entre componentes. Tradicionalmente, había dos soluciones populares para este problema: componente de orden superior y render props. Los Hooks personalizados te permiten hacer esto, pero sin agregar más componentes a tu árbol.
 Reusing logic in React has been complex, and patterns like HOCs and Render Props tried to solve that problem. With the recent addition of Hooks, reusing logic becomes easier
+
+
 
 
 # React applications
@@ -98,6 +133,8 @@ Under the hood, CRA uses Webpack which is a popular asset bundler that helps us 
 
 Vite is another build tool like Webpack
 
+JSX transpilation is also handled via esbuild.
+
 
 You Should Choose Vite Over CRA for React Apps, Here’s Why
 https://medium.com/codex/you-should-choose-vite-over-cra-for-react-apps-heres-why-47e2e7381d13
@@ -113,6 +150,12 @@ https://reactpatterns.com/
 https://hackernoon.com/10-react-mini-patterns-c1da92f068c5
 
 
+This course serves as an introduction to modern web application development with JavaScript. The main focus is on building single page applications with ReactJS that use REST APIs built with Node.js. The course also contains a section on GraphQL, a modern alternative to REST APIs.
+https://fullstackopen.com/en/about
+
+Learning React: The Main Concepts
+- Posee los conceptos, con ilustraciones. 
+https://owlypixel.com/learning-react-main-concepts/
 
 
 # Varios
