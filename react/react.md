@@ -16,11 +16,27 @@ https://reactjs.org/docs/thinking-in-react.html
 ##  Estados, Propiedades. Componete Padre / Hijo
 ![imagen](https://user-images.githubusercontent.com/222181/116284217-7363a880-a752-11eb-9549-ba257159ebf1.png)
 
-## State (Estado)
-
 ## Propiedades 
 
+## State (Estado)
+
+Difference of Props and State.
+
+- Props are immutable i.e. once set the props cannot be changed, while State is an observable object that is to be used to hold data that may change over time and to control the behavior after each change.
+- States can be used in Class Components, Functional components with the use of React Hooks (useState and other methods) while Props don’t have this limitation.
+- While Props are set by the parent component, State is generally updated by event handlers. 
+
+
+
 ## Contexto
+
+# Ciclo de Vida
+
+
+How to use React Lifecycle Methods
+- Indica cuales metodos estan deprecated 
+- Indica algunos Use Case
+https://www.andreasreiterer.at/reactjs-lifecycle-methods/
 
 # JSX
 
@@ -62,6 +78,11 @@ Los elementos son livianos, sin estado y, por lo tanto, son más rápidos.
 
 What is the difference between Element and Component ?
 https://www.geeksforgeeks.org/what-is-the-difference-between-element-and-component/
+
+# Event Handler
+
+Should you use arrow functions in React components?
+https://sebhastian.com/react-arrow-function/
 
 # Patrones
 
@@ -145,6 +166,9 @@ https://medium.com/codex/you-should-choose-vite-over-cra-for-react-apps-heres-wh
 
 Pagina dedicada a patrones en react. 
 https://reactpatterns.com/
+(Git de reactpatterns.com)
+https://github.com/chantastic/reactpatterns
+
 
 10 React mini-patterns React
 https://hackernoon.com/10-react-mini-patterns-c1da92f068c5
@@ -157,17 +181,38 @@ Learning React: The Main Concepts
 - Posee los conceptos, con ilustraciones. 
 https://owlypixel.com/learning-react-main-concepts/
 
+React Function Components
+- React Function Component Example
+- React Function Component: props
+- React Arrow Function Component
+- React Stateless Function Component
+- React Function Component: state
+- React Function Component: Event Handler
+- React Function Component: Callback Function
+- React Function Component: Lifecycle
+- Pure React Function Component
+- React Function Component: Export and Import
+- React Function Component: ref
+- React Function Component: PropTypes
+- React Function Component: TypeScript
+- React Function Component vs Class Component
+https://www.robinwieruch.de/react-function-component/
 
 # Varios
-
 
 Establecer el contenido html  de un div:
 
 dangerouslySetInnerHTML is React’s replacement for using innerHTML in the browser DOM. 
 https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml
 
+# Traning
 
+10 ReactJS Coding Challenge
+- Soluciones Incluidas 
+https://dev.to/frontendengineer/10-reactjs-coding-exercises-with-codepen-exercise-and-solution--22k7
 
+React exercise 
+https://www.w3schools.com/react/exercise.asp
 
 # Codigo Referencias
 
@@ -177,6 +222,12 @@ starter-kit
 Cross-platform web development with Visual Studio Code, C#, F#, JavaScript, ASP.NET Core, EF Core, React (ReactJS), Redux, Babel. Single-page application boilerplate.
 https://github.com/kriasoft/aspnet-starter-kit
 
+"The mother of all demo apps" — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more medal_sports https://realworld.io/
+https://github.com/gothinkster/realworld
+
+React + Vite Example App
+- react-query
+https://github.com/romansndlr/react-vite-realworld-example-app
 
 # Revisiones
 

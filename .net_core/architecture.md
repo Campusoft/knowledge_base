@@ -126,7 +126,7 @@ https://fullstackhub.io/asp-net-core-microservices-with-angular11/
 
 
 **Distributed-eStore**
-Containerized .NET Core Online Store application with a microservices architecture and a React and Redux frontend solution. Technologies used - RabbitMQ, .NET Core, .NET Core MVC, MongoDB, React, Redux, Docker, Consul, Fabio, JWT Authentication, Swagger, Vault.
+Containerized .NET Core Online Store application with a microservices architecture and a React and Redux frontend solution. Technologies used - RabbitMQ, .NET Core, .NET Core MVC, MongoDB, React (Typescript), Redux, Docker, Consul, Fabio, JWT Authentication, Swagger, Vault.
 - Forwarded headers
 https://github.com/evgenirusev/Distributed-eStore
 
