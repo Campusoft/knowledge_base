@@ -80,7 +80,7 @@ CoolStore Website is a containerised microservices application consisting of ser
 - Dapr
 - MediatR
 - Scrutor - Assembly scanning and decoration extensions for Microsoft.Extensions.DependencyInjection
-- React
+- React. (Remix is a web framework that helps you build better websites with React)
 - WebApiGateway. (YARP Reverse Proxy)
 https://github.com/vietnam-devs/coolstore-microservices
 

@@ -68,34 +68,9 @@ The Gatsby ecosystem includes built-in connectors to several database systems. T
 
 # Form Helper
 
-## Formik
+[Forms](form.md)
 
-Formik is a popular form building solution because it provides you a reusable form component where you can simply use its API for handling the three most annoying part in form building:
 
- -   Getting values in and out of form state
- -   Validation and error messages
- -   Handling form submission
-	
-https://formik.org/
-
-## React Hook Form
-
-Performant, flexible and extensible forms with easy-to-use validation.
-
-https://react-hook-form.com/
-
-## Redux Form
-
-The best way to manage your form state in Redux.
-https://redux-form.com/
-
-##  formsy-react
-
-A form input builder and validator for React.
-
-https://github.com/formsy/formsy-react/
-
-https://github.com/christianalfoni/formsy-react
 
 # Validations
 
@@ -121,7 +96,12 @@ https://swr.now.sh
 
 Hooks for fetching, caching and updating asynchronous data in React
 Transport/protocol/backend agnostic data fetching (REST, GraphQL, promises, whatever!)
+
+-  Backend agnostic
+
 https://github.com/tannerlinsley/react-query
+https://tanstack.com/query/v4
+
 
 ## Set custom port start
 If you don't want to set the environment variable, another option is to modify the scripts part of package.json from:
@@ -135,7 +115,8 @@ Windows @JacobEnsor solution
 "start": "set PORT=3006 && react-scripts start"
 https://stackoverflow.com/questions/40714583/how-to-specify-a-port-to-run-a-create-react-app-based-project
 
-## Create new project react typescript based
+
+# Create new project react typescript based
 npx create-react-app project-name --template typescript
 https://medium.com/codex/typescript-and-create-react-app-11bdebcbf763
 

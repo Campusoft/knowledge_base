@@ -107,7 +107,12 @@ componentDidMount() {    document.title = `You clicked ${this.state.count} times
 A veces, queremos reutilizar alguna lógica de estado entre componentes. Tradicionalmente, había dos soluciones populares para este problema: componente de orden superior y render props. Los Hooks personalizados te permiten hacer esto, pero sin agregar más componentes a tu árbol.
 Reusing logic in React has been complex, and patterns like HOCs and Render Props tried to solve that problem. With the recent addition of Hooks, reusing logic becomes easier
 
+*Revisiones*
 
+Utilizar Hooks, para tener una especie de servicio para consumir API REST.
+
+¿Por qué deberías usar React Query o SWR?
+https://www.thisdot.co/blog/por-que-deberias-usar-react-query-o-swr
 
 
 # React applications
