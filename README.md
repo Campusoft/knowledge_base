@@ -9,6 +9,17 @@ Este repositorio tiene contenidos e información sobre diferentes, temas, cursos
 
 ## Guia para desarrollo Front-End
 
+Here is the list of available roadmaps with more being actively worked upon.
+- Frontend Roadmap
+- Backend Roadmap
+- DevOps Roadmap
+- React Roadmap
+- Angular Roadmap
+- Android Roadmap
+- Python Roadmap
+- Go Roadmap
+- Java Roadmap
+- DBA Roadmap
 https://github.com/kamranahmedse/developer-roadmap
 
 

@@ -170,6 +170,12 @@ You Should Choose Vite Over CRA for React Apps, Here’s Why
 https://medium.com/codex/you-should-choose-vite-over-cra-for-react-apps-heres-why-47e2e7381d13
 
 
+## bundling 
+
+División de código
+https://es.reactjs.org/docs/code-splitting.html
+
+
 # Referencias
 
 
@@ -214,6 +220,14 @@ Establecer el contenido html  de un div:
 dangerouslySetInnerHTML is React’s replacement for using innerHTML in the browser DOM. 
 https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml
 
+# Best Practices
+
+React Best Practices – Tips for Writing Better React Code in 2022
+- Solid Understanding of React. Another root cause for problems React devs have is a poor basic understanding of how React works under the hood. 
+https://www.freecodecamp.org/news/best-practices-for-react/
+
+
+
 # Traning
 
 10 ReactJS Coding Challenge
@@ -222,6 +236,15 @@ https://dev.to/frontendengineer/10-reactjs-coding-exercises-with-codepen-exercis
 
 React exercise 
 https://www.w3schools.com/react/exercise.asp
+
+React Developer
+Everything that is there to learn about React and the ecosystem in 2022.
+https://roadmap.sh/react
+
+Develop a Single Page App (SPA) that shows a simple dashboard that displays four tiles, each displaying a single statistic for a dataset that is retrieved via a REST API call. The user should be able to request new data to be loaded and to see the statistics in the tiles update to reflect the new dataset.
+- React
+- Node.js
+https://github.com/briang123/stats-challenge-in-react-js
 
 # Codigo Referencias
 

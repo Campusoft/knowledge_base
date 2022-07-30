@@ -37,11 +37,7 @@ https://code-maze.com/deep-dive-validators-fluentvalidation/
 Best practices for exceptions
 https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions
 
-# Roadmap  
 
-
-This is my (very opinionated) roadmap for .NET developers that want to focus on backend and specifically work with microservices.
-https://github.com/Elfocrash/.NET-Backend-Developer-Roadmap
 
 # Configurations 
 

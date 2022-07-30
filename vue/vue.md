@@ -2,6 +2,39 @@
 
 Vue, facilita migrar aplicaciones existentes
 
+# directive
+
+A directive is a special attribute that starts with the v- prefix
+
+Attribute Bindings. 
+
+```
+<div v-bind:id="dynamicId"></div>
+```
+
+We can listen to DOM events using the v-on directive
+```
+<button v-on:click="increment">{{ count }}</button>
+```
+v-on also has a shorthand
+```
+<button @click="increment">{{ count }}</button>
+```
+
+Form Bindings 
+Using v-bind and v-on together, we can create two-way bindings on form input elements
+
+To simplify two-way bindings, Vue provides a directive, v-model
+```
+<input v-model="text">
+```
+
+Conditional Rendering 
+```
+<h1 v-if="awesome">Vue is awesome!</h1>
+```
+
+
 # framework
 
 ## Nuxt 

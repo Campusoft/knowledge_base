@@ -6,6 +6,10 @@ Build Better Apps with React
 The ultimate collection of design-agnostic, flexible and accessible React UI Components.
 https://www.primefaces.org/primereact/
 
+Validation Form. PrimeReact components can be easily used/integrated 
+- React Hook Form
+- Formik
+- React Final Form
 
 # Syncfusion React
 

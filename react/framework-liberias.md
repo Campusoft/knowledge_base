@@ -121,3 +121,11 @@ npx create-react-app project-name --template typescript
 https://medium.com/codex/typescript-and-create-react-app-11bdebcbf763
 
 Nota: El nombre no debe llevar puntos u otros caracteres especiales, en caso de requerir un nombre con esas condiciones renombrar después de crear
+
+# Animaciones
+
+Framer Motion
+
+A production-ready motion library for React. Utilize the power behind Framer, the best prototyping tool for teams. Proudly open source.
+
+https://www.framer.com/motion/
