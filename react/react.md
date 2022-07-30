@@ -30,6 +30,10 @@ Difference of Props and State.
 
 ## Contexto
 
+Now, with the help of the Context API, you can create a Context in your App. This Context will help you share your in-app data globally irregardless of the tree structure in your React app.
+
+
+
 # Ciclo de Vida
 
 
