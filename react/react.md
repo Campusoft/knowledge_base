@@ -23,7 +23,7 @@ https://reactjs.org/docs/thinking-in-react.html
 Difference of Props and State.
 
 - Props are immutable i.e. once set the props cannot be changed, while State is an observable object that is to be used to hold data that may change over time and to control the behavior after each change.
-- States can be used in Class Components, Functional components with the use of React Hooks (useState and other methods) while Props don’t have this limitation.
+- States can be used in Class Components, Functional components with the use of React \ (useState and other methods) while Props don’t have this limitation.
 - While Props are set by the parent component, State is generally updated by event handlers. 
 
 
@@ -94,29 +94,6 @@ https://sebhastian.com/react-arrow-function/
 
 Un componente de orden superior (HOC por las siglas en inglés de higher-order component) 
 
-
-## Hooks
-
-Hooks son funciones que te permiten “enganchar” el estado de React y el ciclo de vida desde componentes funcionales. Los hooks no funcionan dentro de las clases — te permiten usar React sin clases.
-
-useEffect
-
-Cuando llamas a useEffect, le estás diciendo a React que ejecute tu función de “efecto” después de vaciar los cambios en el DOM. Los efectos se declaran dentro del componente para que tengan acceso a sus props y estado. De forma predeterminada, React ejecuta los efectos después de cada renderizado — incluyendo el primer renderizado.
-
-Esto es porque en muchas ocasiones queremos llevar a cabo el mismo efecto secundario sin importar si el componente acaba de montarse o si se ha actualizado
-componentDidMount() {    document.title = `You clicked ${this.state.count} times`;  }  componentDidUpdate() {    document.title = `You clicked ${this.state.count} times`;  }
-
-¿Qué hace useEffect? Al usar este Hook, le estamos indicando a React que el componente tiene que hacer algo después de renderizarse. React recordará la función que le hemos pasado (nos referiremos a ella como nuestro “efecto”), y la llamará más tarde después de actualizar el DOM. En este efecto, actualizamos el título del documento, pero también podríamos hacer peticiones de datos o invocar alguna API imperativa.
-
-A veces, queremos reutilizar alguna lógica de estado entre componentes. Tradicionalmente, había dos soluciones populares para este problema: componente de orden superior y render props. Los Hooks personalizados te permiten hacer esto, pero sin agregar más componentes a tu árbol.
-Reusing logic in React has been complex, and patterns like HOCs and Render Props tried to solve that problem. With the recent addition of Hooks, reusing logic becomes easier
-
-*Revisiones*
-
-Utilizar Hooks, para tener una especie de servicio para consumir API REST.
-
-¿Por qué deberías usar React Query o SWR?
-https://www.thisdot.co/blog/por-que-deberias-usar-react-query-o-swr
 
 
 # React applications
@@ -246,6 +223,10 @@ Develop a Single Page App (SPA) that shows a simple dashboard that displays four
 - Node.js
 https://github.com/briang123/stats-challenge-in-react-js
 
+React Interview Questions & Answers
+- List of top 500 ReactJS Interview Questions & Answers
+https://github.com/sudheerj/reactjs-interview-questions
+
 # Codigo Referencias
 
 
@@ -257,9 +238,16 @@ https://github.com/kriasoft/aspnet-starter-kit
 "The mother of all demo apps" — Exemplary fullstack Medium.com clone powered by React, Angular, Node, Django, and many more medal_sports https://realworld.io/
 https://github.com/gothinkster/realworld
 
+
 React + Vite Example App
 - react-query
 https://github.com/romansndlr/react-vite-realworld-example-app
+
+
+Mattermost is an open source platform for secure collaboration across the entire software development lifecycle. This repo is the primary source for core development on the Mattermost platform; it's written in Golang and React, and runs as a single Linux binary with MySQL or PostgreSQL. 
+- Architecture overview
+  - https://docs.mattermost.com/getting-started/architecture-overview.html
+https://github.com/mattermost/mattermost-webapp
 
 # Revisiones
 

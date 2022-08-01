@@ -1,25 +1,25 @@
 # React - Native
 React Native is an open-source UI software framework created by Meta Platforms, Inc. It is used to develop applications for Android, Android TV, iOS, macOS, tvOS, Web, Windows and UWP by enabling developers to use the React framework along with native platform capabilities. It is also being used to develop virtual reality applications at Oculus.
 
-## Setup
+# Setup
 https://reactnative.dev/docs/environment-setup
 
-## Crear proyecto TS
+# Crear proyecto TS
 npx react-native init <project name> --template react-native-template-typescript
 
-## Errores
+# Errores
 Error de metro
 Unable to load script. Make sure you're either running metro
 
-### Solución 1
+## Solución 1
 Ejecutar agregando parametro port: npx react-native run-android --port=1234
 
-### Solución 2
+## Solución 2
 Ejecutar agregando parametro variant: npx react-native run-android --variant=release
 
 https://stackoverflow.com/questions/61827240/unable-to-load-script-make-sure-youre-either-running-a-metro-server-or-that-yo
 
-## Navegación
+# Navegación
 https://reactnavigation.org/docs/getting-started
 
 ## SOLUCIÓN Para react-native-reanimated
@@ -116,3 +116,7 @@ funciona pero con warnings:
 npm remove react-native-reanimated
 npm install react-native-reanimated@2.2.4 
 ```
+
+# Tools 
+
+Expo is a set of tools built around React Native to help you quickly start an app and, while it has many features.

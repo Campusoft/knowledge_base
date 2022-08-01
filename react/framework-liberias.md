@@ -124,8 +124,12 @@ Nota: El nombre no debe llevar puntos u otros caracteres especiales, en caso de 
 
 # Animaciones
 
-Framer Motion
+## Framer Motion
 
 A production-ready motion library for React. Utilize the power behind Framer, the best prototyping tool for teams. Proudly open source.
 
 https://www.framer.com/motion/
+
+react-transition-group
+A set of components for managing component states (including mounting and unmounting) over time, specifically designed with animation in mind.
+https://github.com/reactjs/react-transition-group

@@ -54,6 +54,21 @@ They need npm install bootstrap to import Bootstrap stylesheet file inside index
 react-bootstrap vs reactstrap
 https://npmtrends.com/react-bootstrap-vs-reactstrap
 
+Github: 20k
+
+## Install
+
+```
+npm i react-bootstrap
+```
+
+## Revisar
+
+Integration between React Router v6 and React Bootstrap.
+https://github.com/react-bootstrap/react-router-bootstrap
+
+Use React Router Link with Bootstrap
+https://medium.com/how-to-react/use-react-router-link-with-bootstrap-315a8b88e129
 
 # react-bootstrap-table2
 
