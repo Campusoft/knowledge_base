@@ -133,3 +133,8 @@ https://www.framer.com/motion/
 react-transition-group
 A set of components for managing component states (including mounting and unmounting) over time, specifically designed with animation in mind.
 https://github.com/reactjs/react-transition-group
+
+react-spring
+A spring physics based React animation library
+https://github.com/pmndrs/react-spring
+

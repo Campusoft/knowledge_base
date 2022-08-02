@@ -9,6 +9,12 @@ Performant, flexible and extensible forms with easy-to-use validation.
 https://react-hook-form.com/
 
 
+
+Schema Validation
+
+We also support schema-based form validation with Yup, Zod , Superstruct & Joi, where you can pass your schema to useForm as an optional config. It will validate your input data against the schema and return with either errors or a valid result.
+
+
 # Formik
 
 

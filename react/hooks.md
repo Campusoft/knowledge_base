@@ -19,6 +19,26 @@ Reusing logic in React has been complex, and patterns like HOCs and Render Props
 
 # useEffect
 
+
+**Tools**
+
+How the React Hooks ESLint plugin promotes understanding of the rules of Hooks
+
+There’s a handy ESLint plugin that assists you in following the rules of Hooks. It lets you know if you violate one of the rules.
+
+
+
+**Referencias**
+
+How to solve the React useEffect Hook’s infinite loop patterns
+
+https://blog.logrocket.com/solve-react-useeffect-hook-infinite-loop-patterns/
+
+Cancelling an Axios call when component unmounts
+- useEffect
+https://www.leighhalliday.com/use-effect-hook
+
+
 # useContext
 
 # useReducer

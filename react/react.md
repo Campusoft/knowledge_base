@@ -100,9 +100,20 @@ Un componente de orden superior (HOC por las siglas en inglés de higher-order c
 
 ## Create React App
 
+El paquete create-react-app, es un CLI oficial de React. Dicho paquete nos permite crear la estructura base de un proyecto en React con un simple comando.
+
+- Internamente usa Babel y webpack, pero no necesitas saber nada de estas herramientas para usar Create React App.
+
+
+
 Create React apps with no build configuration.
 
 https://github.com/facebook/create-react-app
+
+
+Para ello internamente usa Babel y webpack, pero no necesitas saber nada de estas herramientas para usar Create React App.
+
+
 
 
 Errores
@@ -133,6 +144,12 @@ https://github.com/yarnpkg/yarn/issues/6851
 
 -------------
 
+Adding Custom Environment Variables
+https://create-react-app.dev/docs/adding-custom-environment-variables
+
+
+How to add a custom ESLint configuration to a Create React App project
+https://levelup.gitconnected.com/how-to-add-a-custom-eslint-configuration-to-a-create-react-app-project-aea3f7c1d7af
 
 ## Vite
 
