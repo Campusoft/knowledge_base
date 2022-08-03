@@ -1,15 +1,15 @@
 # PHP
 
-## Composer
+# Composer
 
 
 
-## Estandares
+# Estandares
 
 Moving PHP forward through collaboration and standards.
 https://www.php-fig.org/
 
-## Framework
+# Framework
 
 The Laravel Framework. 
 https://github.com/laravel/framework

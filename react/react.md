@@ -115,6 +115,13 @@ Para ello internamente usa Babel y webpack, pero no necesitas saber nada de esta
 
 
 
+**Create new project react typescript based**
+npx create-react-app project-name --template typescript
+https://medium.com/codex/typescript-and-create-react-app-11bdebcbf763
+
+Nota: El nombre no debe llevar puntos u otros caracteres especiales, en caso de requerir un nombre con esas condiciones renombrar después de crear
+
+
 
 Errores
 ------------------

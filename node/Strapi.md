@@ -7,8 +7,6 @@ Strapi  is  the  leading  open-source  headless  CMS.  It’s  100%  Javascript,
 https://strapi.io/
 
 
-
-
 API creation made simple, secure and fast.
 The most advanced open-source Content Management Framework to build powerful API with no effort.
 Features

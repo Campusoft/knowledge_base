@@ -11,6 +11,8 @@ UI
 - Vue
 
 
+
+
 # Features 
 
 - Authentication
@@ -46,6 +48,15 @@ Current database support includes: PostgreSQL, MySQL, SQLite, MS-SQL Server, Ora
 Custom API Endpoints register new API routes which can be used to infinitely extend the core functionality of the platform.
 
 https://docs.directus.io/guides/api-endpoints/
+
+
+# Architecture
+
+Directus only requires Node.js and supports most operating systems and SQL database vendors.
+
+    Node.js 12.20+
+    npm 6.x+
+
 
 
 # Laboratorios
