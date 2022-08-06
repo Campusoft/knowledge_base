@@ -21,11 +21,9 @@ https://www.syncfusion.com/react-ui-components
 # Material UI
 
 React components for faster and easier web development. Build your own design system, or start with Material Design.
-https://material-ui.com/
 
-
-https://ant.design/docs/react/introduce
-
+Material UI is an open-source React component library that implements Google's Material Design.
+https://mui.com/
 
 # Semantic UI React
 
