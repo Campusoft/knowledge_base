@@ -23,7 +23,6 @@ The Gatsby ecosystem includes built-in connectors to several database systems. T
 -    MongoDB
 -    Firebase/Firestore
 
-
 # Form Helper
 
 [Forms](form.md)

@@ -25,6 +25,22 @@ https://marketplace.visualstudio.com/items?itemName=vs-publisher-2795.SnippetDes
 A collection of snippets for C++, C#, HTML, VB, XAML and XML. 
 https://github.com/JosefPihrt/Snippetica
 
+## 2022
+
+Errores
+-------------
+
+No se pudo instalar el paquete "Microsoft.VisualCpp.Redist.14.Latest,version=14.32.31332,chip=x86".
+
+
+I had this exact issue. To fix it I had to manually run the following installer:
+
+"C:\ProgramData\Microsoft\VisualStudio\Packages\Microsoft.VisualCpp.CRT.ClickOnce.Msi,version=14.32.31327,language=en-US\vcpp_crt.redist.clickonce.msi"
+
+After that Visual Studio Installer didn't have the issue anymore.
+
+https://docs.microsoft.com/en-us/answers/questions/879993/vs-2022-couldn39t-install-microsoftvisualcppredist.html
+-------------
 
 # Visual Code
 
