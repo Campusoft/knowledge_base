@@ -29,3 +29,15 @@ The pipe function is the assembly line from your observable data source through 
 ***tap***
 
 The tap operator returns a new observable which is a mirror copy of the source observable. We use it mostly for debugging purposes ( for example for logging the values of observable as shown below).
+
+# Referencias
+
+**T3 Stack**
+The "T3 Stack" is a web development stack made by Theo focused on simplicity, modularity, and full-stack typesafety. It consists of:
+- Next.js
+- tRPC
+- Tailwind CSS
+- TypeScript
+- Prisma
+- NextAuth.js
+https://github.com/t3-oss/create-t3-app
