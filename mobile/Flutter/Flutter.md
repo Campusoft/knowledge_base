@@ -69,6 +69,10 @@ It indicated once it is developed, we cannot modify or alter it unless they are 
 ## StatefulWidget
 
 A Stateful Widget has a state, and it is dynamic. It indicates we can alter or change it simply across the lifecycle without reinitiating it again. 
+
+## InheritedWidget 
+
+Base class for widgets that efficiently propagate information down the tree.
  
 ## Layout widgets
 
@@ -115,11 +119,66 @@ MaterialApp Class: MaterialApp is a predefined class in a flutter. It is likely 
 A widget that displays its children in a vertical array.
 https://api.flutter.dev/flutter/widgets/Column-class.html
 
+# NavigationRail and BottomNavigationBar
+
+Using NavigationRail and BottomNavigationBar in Flutter 
+- This article shows you how to create an adaptive layout in Flutter by using both NavigationRail and BottomNavigationBar 
+https://www.kindacode.com/article/using-navigationrail-and-bottomnavigationbar-in-flutter/
+
 ## Other Widgets
 
 **ClipRRect**
 
 A widget that clips its child using a rounded rectangle.
+
+**Image**
+
+- Image.new, for obtaining an image from an ImageProvider.
+- Image.asset, for obtaining an image from an AssetBundle using a key.
+- Image.network, for obtaining an image from a URL.
+- Image.file, for obtaining an image from a File.
+- Image.memory, for obtaining an image from a Uint8List.
+
+
+How to display a placeholder image when the image is loading.
+```
+FadeInImage.assetNetwork(
+  placeholder: 'assets/images/placeholder.png', // Before image load
+  image: 'https://picsum.photos/id/237/200/300', // After image load
+  height: 200,
+  width: 300,
+)
+``` 
+ 
+How To Use Images In Flutter — To The Point
+- A guide on showing how to work with images in Flutter.
+https://medium.com/flutter-community/how-to-use-images-in-flutter-to-the-point-5542b4412a53 
+
+Set Background Image in Flutter – The Right Way in 2022
+- Steps to Set Background Image in Flutter
+- Setting Background Image in Full Screen
+- Preventing Image Resize
+https://www.flutterbeads.com/set-background-image-in-flutter/
+
+**WebView a tu app de Flutte**
+
+Agrega WebView a tu app de Flutter
+https://codelabs.developers.google.com/codelabs/flutter-webview#0
+
+**Google Maps for Flutter**
+
+Cómo agregar Google Maps a una app creada con Flutter
+https://codelabs.developers.google.com/codelabs/google-maps-in-flutter#0
+
+Package: Google Maps for Flutter 
+https://pub.dev/packages/google_maps_flutter
+
+
+**SafeArea**
+
+SafeArea is an important and useful widget in Flutter which makes UI dynamic and adaptive to a wide variety of devices. While designing the layout of widgets, we consider different types of devices and their pre-occupied constraints of screen like status bar, notches, navigation bar, etc. 
+
+It will also indent the child by the amount necessary to avoid The Notch on the iPhone X, or other similar creative physical features of the display.
 
 
 ## Routes and Navigator in Flutter
@@ -183,6 +242,9 @@ flutter:
   assets:
     - images/lake.jpg
 ```
+
+
+
 # Networking - REST API
 
 - FutureBuilder<T> class
@@ -193,10 +255,28 @@ Working with REST APIs — Flutter
 - Source Code
 https://blog.codemagic.io/rest-api-in-flutter/
 
+
+# Store Data Offline
+
+
+5 Ways to Store Data Offline in Flutter 
+- Using Text/CSV/JSON files
+- SQLite
+- Hive Database
+- Shared Preferences Storage
+- Objectbox
+https://www.kindacode.com/article/ways-to-store-data-offline-in-flutter/
+
 # Internationalizing 
 
 Internationalizing Flutter apps
 https://docs.flutter.dev/development/accessibility-and-localization/internationalization
+
+# Theme 
+
+
+**Use a custom font**
+https://docs.flutter.dev/cookbook/design/fonts
  
 # Install
 
@@ -211,7 +291,6 @@ Add web support to an existing app
 ```
  flutter create .
 ```
-
 
 Add desktop support to an existing Flutter app
 ```
@@ -241,10 +320,11 @@ Android Studio
 - Check Android SDK Command Line Tools 
 - Apply
 
+# Versions
+
+
 
 # Training
-
-
 
 
 100+ Flutter Examples 
@@ -262,6 +342,19 @@ The Ultimate Guide to App Development with Flutter
 - Best Practices
 - Challenge Project
 https://github.com/antz22/ultimate-guide-to-flutter
+
+Main repository containing all the example apps demonstrating features/functionality/integrations in Flutter application development
+https://github.com/nisrulz/flutter-examples
+
+Flutter 3.0 Master Class for Beginners to Advanced 2022 | Ticket Booking App Development Tutorial
+- reusable style component
+- reusable color pallet
+- reusable column widget
+- reusable layout builder widget
+- reusable column widget
+- reusable row widget
+- reusable ticket widget
+https://www.youtube.com/watch?v=71AsYo2q_0Y
 
 # Referencias
 
@@ -306,13 +399,30 @@ completely free for everyone. Its build-in Flutter Dart.
 
 https://github.com/mitesh77/Best-Flutter-UI-Templates
 
+Flutter Travel UI
+https://github.com/MarcusNg/flutter_travel_ui
 
 ## Plugin
 
 Flutter plugin that allows you to showcase your features on flutter application.
 https://github.com/SimformSolutionsPvtLtd/flutter_showcaseview
 
+## Flutter starter kit
+
+Flutter Login Screen with Firebase Auth and Facebook Login 
+https://github.com/instaflutter/flutter-login-screen-firebase-auth-facebook-login
+
+
 ## Application
 
 E-Commerce Complate App - Flutter UI
 https://github.com/abuanwar072/E-commerce-Complete-Flutter-UI
+
+Flutter News App with newsapi.org. Developed using the Test Driven Development. 
+- List daily news.
+- Filter daily news by category.
+- Refresh list daily news with pull to refresh style.
+- Go to detail news website.
+- Search news.
+- Dark mode support. 
+https://github.com/CoderJava/Flutter-News-App
