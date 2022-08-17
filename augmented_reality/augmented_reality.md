@@ -14,9 +14,12 @@ Geo AR (Points of Interest)
 The Point Of Interest (POI) example series will show how you can create a marker that is placed at a specific geolocation
 Geo AR (Points of Interest)
 
+## WebAR 
+
+WebAR is short for Web-based Augmented Reality, and it's a relatively new technology that does not require a mobile application to function. Users can access AR experiences directly from their smartphone using the native camera and mobile web browser. This seamless user experience is one of the main reasons WebAR is rapidly growing in popularity.
 
 
-# volumetric video technology
+# Volumetric video technology
 
 Volumetric video is an emerging format of video featuring moving images of real people that exist truly in 3D — like holograms — allowing them to be viewed from any angle at any moment in time. The trick is that this media requires a fundamentally different video technology capable of capturing 3D images of actors at fast framerates.
 
@@ -38,7 +41,7 @@ AR.js is a lightweight library for Augmented Reality on the Web, coming with fea
 https://github.com/AR-js-org/AR.js
 
 
-## easyar
+## Easyar
 
 ## ARCore (Android)
 
@@ -50,6 +53,16 @@ https://www.appoly.co.uk/arcore-location/
 ## ARKit (iOS)
 
 ## Vuforia
+
+## Revisiones
+
+- Unity
+- ArFoundation,
+- WebAr,
+- HandTracking,
+- Facetracking,
+- Niantic
+
 
 # Referencias
 

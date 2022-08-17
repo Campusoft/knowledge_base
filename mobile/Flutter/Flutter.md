@@ -70,9 +70,19 @@ It indicated once it is developed, we cannot modify or alter it unless they are 
 
 A Stateful Widget has a state, and it is dynamic. It indicates we can alter or change it simply across the lifecycle without reinitiating it again. 
 
+Flutter state management for minimalists
+- That’s where this article comes in. I’m going to introduce a way to manage your app state that doesn’t use any of the third-party state management solutions.
+- the UI layer, the state management layer
+- and the service layer. 
+https://suragch.medium.com/flutter-state-management-for-minimalists-4c71a2f2f0c1
+
 ## InheritedWidget 
 
 Base class for widgets that efficiently propagate information down the tree.
+
+In short and with simple words, the InheritedWidget allows to efficiently propagate (and share) information down a tree of widgets.
+
+The InheritedWidget is a special Widget, that you put in the Widgets tree as a parent of another sub-tree. All widgets part of that sub-tree will have to ability to interact with the data which is exposed by that InheritedWidget.
  
 ## Layout widgets
 
@@ -323,6 +333,15 @@ Android Studio
 # Versions
 
 
+# Authentication
+
+**OAuth 2.0 and OpenID Connect**
+
+Get Started with Flutter Authentication
+-  flutter_appauth : A well-maintained wrapper package around AppAuth for Flutter 
+- fluttersecurestorage: A library to securely persist data locally
+https://auth0.com/blog/get-started-with-flutter-authentication/
+
 
 # Training
 
@@ -369,6 +388,9 @@ Getting Started With Flutter
 https://www.raywenderlich.com/24499516-getting-started-with-flutter
 
 
+Widget - State - Context - InheritedWidget
+This article covers the important notions of Widget, State, Context and InheritedWidget in Flutter Applications. Special attention is paid on the InheritedWidget which is one of the most important and less documented widgets.
+https://www.didierboelens.com/2018/06/widget-state-context-inheritedwidget/
 
 ## Tools
 
@@ -407,6 +429,12 @@ https://github.com/MarcusNg/flutter_travel_ui
 Flutter plugin that allows you to showcase your features on flutter application.
 https://github.com/SimformSolutionsPvtLtd/flutter_showcaseview
 
+
+Flutter Community Plus Plugins
+The official Flutter Community Plus plugins for Flutter
+- Share Plus. A Flutter plugin to share content from your Flutter app via the platform's share dialog.
+https://plus.fluttercommunity.dev/
+
 ## Flutter starter kit
 
 Flutter Login Screen with Firebase Auth and Facebook Login 
@@ -426,3 +454,7 @@ Flutter News App with newsapi.org. Developed using the Test Driven Development.
 - Search news.
 - Dark mode support. 
 https://github.com/CoderJava/Flutter-News-App
+
+
+Cross-platform wordpress news app built with Flutter and WP REST API. 
+https://github.com/l3lackcurtains/Flutter-for-Wordpress-App

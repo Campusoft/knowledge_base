@@ -27,6 +27,11 @@ https://www.keycloak.org/docs/latest/authorization_services/
 # Auth0
 
 
+Free plan
+
+Get Auth0 for free with up to 7,000 active users and unlimited logins. No credit card required.
+
+
 # WSO2 Identity Server
 
 
