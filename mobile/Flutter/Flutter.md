@@ -135,6 +135,42 @@ Using NavigationRail and BottomNavigationBar in Flutter
 - This article shows you how to create an adaptive layout in Flutter by using both NavigationRail and BottomNavigationBar 
 https://www.kindacode.com/article/using-navigationrail-and-bottomnavigationbar-in-flutter/
 
+## Forms
+
+The Form widget acts as a container for grouping and validating multiple form fields.
+
+Using a GlobalKey is the recommended way to access a form. However, if you have a more complex widget tree, you can use the Form.of() method to access the form within nested widgets.
+ 
+ 
+Form Fields
+
+- TextFormField. A FormField that contains a TextField.
+  - keyboardType. The type of information for which to optimize the text input control. datetime, emailAddress, multiline, etc
+- CheckboxListTile. A ListTile with a Checkbox. In other words, a checkbox with a label.
+
+There are a couple ways to go about tracking text input form elements. You can use Form widgets, or you can track each text input separately.
+
+**Form**
+
+- _formKey.currentState.validate() method fires up the validators defined for every field inside the Form widget. 
+
+- _formKey.currentState.save() that will run the save function inside all our inputs.
+
+
+**TextEditingController**
+
+A TextEditingController is basically a class that listens to its assigned TextField, and updates it's own internal state every time the text in the TextField changes.
+
+
+
+Create and Handle Flutter Input Form like a Pro 
+https://dev.to/erozonachi/create-and-handle-flutter-input-form-like-a-pro-2k9c
+
+Handle changes to a text field
+- Supply an onChanged() callback to a TextField or a TextFormField.
+- Use a TextEditingController.
+https://docs.flutter.dev/cookbook/forms/text-field-changes
+
 ## Other Widgets
 
 **ClipRRect**
@@ -307,7 +343,6 @@ Add desktop support to an existing Flutter app
 flutter create --platforms=windows,macos,linux .
 ```
 
-
 Warning: Hot reload is not supported in a web browser Currently, Flutter supports hot restart, but not hot reload in a web browser.
  
 Errores
@@ -342,38 +377,10 @@ Get Started with Flutter Authentication
 - fluttersecurestorage: A library to securely persist data locally
 https://auth0.com/blog/get-started-with-flutter-authentication/
 
+# Architecture
 
-# Training
-
-
-100+ Flutter Examples 
-- Code
-- Video
-https://afgprogrammer.com/flutter/
-
-
-The Ultimate Guide to App Development with Flutter 
-- Learning Dart
-- Learning Flutter UI
-- Learning Firebase
-- Connecting Firebase wth Flutter
-- State Management
-- Best Practices
-- Challenge Project
-https://github.com/antz22/ultimate-guide-to-flutter
-
-Main repository containing all the example apps demonstrating features/functionality/integrations in Flutter application development
-https://github.com/nisrulz/flutter-examples
-
-Flutter 3.0 Master Class for Beginners to Advanced 2022 | Ticket Booking App Development Tutorial
-- reusable style component
-- reusable color pallet
-- reusable column widget
-- reusable layout builder widget
-- reusable column widget
-- reusable row widget
-- reusable ticket widget
-https://www.youtube.com/watch?v=71AsYo2q_0Y
+**Revision**
+- BLoC stands for Business Logic Components. 
 
 # Referencias
 
