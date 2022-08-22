@@ -116,6 +116,12 @@ ListView, a column-like widget, automatically provides scrolling when its conten
 
 Scaffold is a class in flutter which provides many widgets or we can say APIs like Drawer, SnackBar, BottomNavigationBar, FloatingActionButton, AppBar, etc. Scaffold will expand or occupy the whole device screen.
 
+Drawer. A material design panel that slides in horizontally from the edge of a Scaffold to show navigation links in an application.
+
+BottomNavigationBar. 
+
+
+
 **Container**
 
 Container class in flutter is a convenience widget that combines common painting, positioning, and sizing of widgets. A Container class can be used to store one or more widgets and position them on the screen according to our convenience. Basically, a container is like a box to store contents. 
@@ -173,9 +179,6 @@ https://docs.flutter.dev/cookbook/forms/text-field-changes
 
 ## Other Widgets
 
-**ClipRRect**
-
-A widget that clips its child using a rounded rectangle.
 
 **Image**
 
@@ -226,6 +229,24 @@ SafeArea is an important and useful widget in Flutter which makes UI dynamic and
 
 It will also indent the child by the amount necessary to avoid The Notch on the iPhone X, or other similar creative physical features of the display.
 
+**ClipRRect**
+
+A widget that clips its child using a rounded rectangle.
+
+**ClipPath**
+
+Clippath is a widget, that has a property a clipper to define how it’s going to define the clipping path. Then it will create a shape that we can customize to the container or image.
+
+
+Using ClipPath in Flutter
+https://medium.com/@taufansyahrudin9/using-clippath-in-flutter-bfdbd06824f5
+
+
+Custom Clipping using fluttershapemaker.com and ClipPath in Flutter
+https://prasadsunny1.medium.com/custom-clipping-using-fluttershapemaker-com-and-clippath-in-flutter-953d3fdf54ce
+
+ClipRRect & ClipPath In Flutter
+https://medium.flutterdevs.com/cliprrect-clippath-in-flutter-4c41abe4e8
 
 ## Routes and Navigator in Flutter
 
@@ -277,6 +298,8 @@ The GestureDetector widget doesn’t have a visual representation but instead de
 
 Many widgets use a GestureDetector to provide optional callbacks for other widgets. For example, the IconButton, ElevatedButton, and FloatingActionButton widgets have onPressed() callbacks that are triggered when the user taps the widget.
 
+Material design applications typically react to touches with ink splash effects. The InkWell class implements this effect and can be used in place of a GestureDetector for handling taps.
+
 # Assets 
 
 Flutter apps can include both code and assets (sometimes called resources). An asset is a file that is bundled and deployed with your app, and is accessible at runtime. Common types of assets include static data (for example, JSON files), configuration files, icons, and images (JPEG, WebP, GIF, animated WebP/GIF, PNG, BMP, and WBMP).
@@ -317,6 +340,9 @@ https://www.kindacode.com/article/ways-to-store-data-offline-in-flutter/
 
 Internationalizing Flutter apps
 https://docs.flutter.dev/development/accessibility-and-localization/internationalization
+
+Localization / Multi-Language In Flutter
+https://medium.flutterdevs.com/localization-multi-language-in-flutter-5cedb6ff459b
 
 # Theme 
 
