@@ -30,6 +30,11 @@ The pipe function is the assembly line from your observable data source through 
 
 The tap operator returns a new observable which is a mirror copy of the source observable. We use it mostly for debugging purposes ( for example for logging the values of observable as shown below).
 
+# Training
+
+An interactive TypeScript tutorial for beginners 
+https://github.com/total-typescript/beginners-typescript-tutorial
+
 # Referencias
 
 **T3 Stack**

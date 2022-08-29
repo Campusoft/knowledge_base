@@ -1,6 +1,5 @@
 # Flutter
 
-
 Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.
 
 
@@ -72,8 +71,9 @@ A Stateful Widget has a state, and it is dynamic. It indicates we can alter or c
 
 Flutter state management for minimalists
 - That’s where this article comes in. I’m going to introduce a way to manage your app state that doesn’t use any of the third-party state management solutions.
-- the UI layer, the state management layer
-- and the service layer. 
+- the UI layer
+- the state management layer. Some people call it a ViewModel. Others call it a Controller. Still others call it a Bloc or a Model or a Reducer or a ChangeNotifier. This state management layer is the place to perform logic based on UI events and then update the app state.
+- and the service layer. which is sometimes called a data repository. That layer of protection allows you to swap out service implementations without breaking the rest of your app code.
 https://suragch.medium.com/flutter-state-management-for-minimalists-4c71a2f2f0c1
 
 ## InheritedWidget 
@@ -83,6 +83,12 @@ Base class for widgets that efficiently propagate information down the tree.
 In short and with simple words, the InheritedWidget allows to efficiently propagate (and share) information down a tree of widgets.
 
 The InheritedWidget is a special Widget, that you put in the Widgets tree as a parent of another sub-tree. All widgets part of that sub-tree will have to ability to interact with the data which is exposed by that InheritedWidget.
+ 
+
+Widget - State - Context - InheritedWidget
+This article covers the important notions of Widget, State, Context and InheritedWidget in Flutter Applications. Special attention is paid on the InheritedWidget which is one of the most important and less documented widgets.
+https://www.didierboelens.com/2018/06/widget-state-context-inheritedwidget/ 
+ 
  
 ## Layout widgets
 
@@ -135,7 +141,7 @@ MaterialApp Class: MaterialApp is a predefined class in a flutter. It is likely 
 A widget that displays its children in a vertical array.
 https://api.flutter.dev/flutter/widgets/Column-class.html
 
-# NavigationRail and BottomNavigationBar
+## NavigationRail and BottomNavigationBar
 
 Using NavigationRail and BottomNavigationBar in Flutter 
 - This article shows you how to create an adaptive layout in Flutter by using both NavigationRail and BottomNavigationBar 
@@ -286,6 +292,45 @@ MaterialApp(
   // Navigate to the second screen using a named route.
   Navigator.pushNamed(context, '/second');
 ```
+# State management
+
+Flutter is declarative. This means that Flutter builds its user interface to reflect the current state of your app:
+
+List of state management approaches
+- Provider
+- Riverpod
+- Redux
+- BLoC / Rx. A family of stream/observable based patterns.
+- GetIt
+- MobX
+https://docs.flutter.dev/development/data-and-backend/state-mgmt/options
+
+## Provider package
+
+- ChangeNotifier : the store of your state from which state is updated and widgets consuming the state are notified.
+- ChangeNotifierProvider : this widget makes the ChangeNotifier accessible to underlying widgets in the tree.
+- Consumer : a widget that listens to state changes and updates the UI accordingly.
+	
+
+Starting with Flutter: A simple guide for Provider
+- we will build a simple app that will change its main color scheme using Provider.
+https://medium.com/theotherdev-s/starting-with-flutter-a-simple-guide-for-provider-401b25957989
+
+How To Manage State in Flutter With Provider
+https://betterprogramming.pub/how-to-manage-state-in-flutter-with-provider-661ff322dd22
+
+Using Provider for State Management in Flutter (2022) 
+- Example: we will build a favorite movie list feature 
+https://www.kindacode.com/article/using-provider-for-state-management-in-flutter/
+
+
+
+Flutter Provider Http Get Request | Restful Api Example
+- 
+https://www.dbestech.com/tutorials/flutter-provider-http-get-request-restful-api-example
+
+## getx
+
 
 
 # Gestures
@@ -335,6 +380,16 @@ https://blog.codemagic.io/rest-api-in-flutter/
 - Shared Preferences Storage
 - Objectbox
 https://www.kindacode.com/article/ways-to-store-data-offline-in-flutter/
+
+## Hive
+
+hive_flutter. Extension for Hive. Make it easier to use Hive in Flutter apps.
+
+## isar
+
+Extremely fast, easy to use, and fully async NoSQL database for Flutter  
+https://github.com/isar/isar
+
 
 # Internationalizing 
 
@@ -390,6 +445,35 @@ Android Studio
 - SDK Tools tab
 - Check Android SDK Command Line Tools 
 - Apply
+----------------
+
+
+Flutter: Building with plugins requires symlink support
+
+Go to Windows settings. Select Update & Security. On that, select For Developers. In that window, there is an option called Install apps from any source, including loose files on the Developer Mode. Enable that option.
+
+https://stackoverflow.com/questions/68089177/flutter-building-with-plugins-requires-symlink-support
+# Command
+
+Add a package as a direct dependency:
+```
+flutter pub add <package-name>
+```
+
+Add a package as a dev-dependency:
+
+```
+flutter pub add -d <package-name>
+```
+
+Remove a package:
+
+```
+flutter pub remove <package-name>
+```
+
+
+
 
 # Versions
 
@@ -403,10 +487,6 @@ Get Started with Flutter Authentication
 - fluttersecurestorage: A library to securely persist data locally
 https://auth0.com/blog/get-started-with-flutter-authentication/
 
-# Architecture
-
-**Revision**
-- BLoC stands for Business Logic Components. 
 
 # Referencias
 
@@ -421,9 +501,7 @@ Getting Started With Flutter
 https://www.raywenderlich.com/24499516-getting-started-with-flutter
 
 
-Widget - State - Context - InheritedWidget
-This article covers the important notions of Widget, State, Context and InheritedWidget in Flutter Applications. Special attention is paid on the InheritedWidget which is one of the most important and less documented widgets.
-https://www.didierboelens.com/2018/06/widget-state-context-inheritedwidget/
+
 
 ## Tools
 
@@ -486,8 +564,25 @@ Flutter News App with newsapi.org. Developed using the Test Driven Development.
 - Go to detail news website.
 - Search news.
 - Dark mode support. 
+- Hive, Flutter BLoC, Dio, JSON Serializable
 https://github.com/CoderJava/Flutter-News-App
 
 
 Cross-platform wordpress news app built with Flutter and WP REST API. 
 https://github.com/l3lackcurtains/Flutter-for-Wordpress-App
+
+
+A privacy-friendly Twitter frontend for mobile devices 
+- sqflite, sqflite_migration_plan, sqflite_common
+- dio
+- catcher
+- infinite_scroll_pagination
+https://github.com/jonjomckay/fritter
+
+
+A Music Player App made with Flutter 
+- hive, hive_flutter
+- supabase. (Rev: Auth User)
+- carousel_slider
+- flip_card
+https://github.com/Sangwan5688/BlackHole

@@ -1,3 +1,4 @@
+
 # Varios
 
 
@@ -81,4 +82,17 @@ https://prestodb.io/
 ## AWS Athena 
 
 AWS Athena is a serverless interactive analytics service offered by Amazon that can be readily used to gain insights on data residing in S3. Under to hood, Athena used a distributed SQL engine called Presto, which is used to run the SQL queries.
+
+
+
+# Web Scraping
+
+
+Learn everything web scraping with David Teather Codes on YouTub 
+https://github.com/davidteather/everything-web-scraping
+
+Ptyhon
+An open source and collaborative framework for extracting the data you need from websites.
+In a fast, simple, yet extensible way.
+https://scrapy.org/
 

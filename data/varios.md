@@ -8,3 +8,8 @@ https://hazelcast.com/glossary/kappa-architecture/
 # jitsu
 
 (Informacion jitsu)[jitsu.md] 
+
+# Generar Graficas - Online
+
+Enrich your stories with charts, maps, and tables.
+https://www.datawrapper.de/

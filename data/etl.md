@@ -23,71 +23,13 @@ https://airbyte.com/blog/best-practices-data-ingestion-pipeline
 
 # AWS Data Pipeline 
 
-
-
 # Apache Airflow
 
 Airflow.md
 
 # Prefect 
 
-https://www.prefect.io/
-
-
-Prefect Server is an open source backend that makes it easy to monitor and execute your Prefect flows. 
-
-Prefect Agents are lightweight processes for orchestrating flow runs. Agents run inside a user's architecture, and are responsible for starting and monitoring flow runs. During operation the agent process queries the Prefect API for any scheduled flow runs, and allocates resources for them on their respective deployment platforms.
-
-Prefect supports several different agent types for deploying on different platforms.
-
-- Local: The Local Agent executes flow runs as local processes.
-- Docker: The Docker Agent executes flow runs in docker containers.
-- Kubernetes: The Kubernetes Agent executes flow runs as Kubernetes Jobs
-- GCP Vertex: The Vertex Agent executes flow runs as Vertex Custom Jobs
-- AWS ECS: The ECS Agent executes flow runs as AWS ECS tasks
-(on either ECS or Fargate).
-
-
-##  Installation
-
-Prefect requires Python 3.7+.
-https://docs.prefect.io/core/getting_started/install.html
-
-
-Archivo docker-compose para levantar manualmente todos los servicios. 
-- Este archivo docker-compose posee instrucciones healthcheck
-https://github.com/PrefectHQ/prefect/blob/master/src/prefect/cli/docker-compose.yml
-
-##  Architecture
-
-Prefect Server Architecture
-- PostgreSQL
-- Hasura
-- Apollo
-- Towel
-https://docs.prefect.io/orchestration/server/architecture.html
-
-## Prefect 2.0
-
-
-https://orion-docs.prefect.io/
-
-Introducing Prefect 2.0 
-- Prefect 2.0 is loaded with new features and built on top of our second-generation orchestration engine, Orion. 
-- Prefect 2.0 is actually its license: Apache 2.0 
-- Prefect 2.0 introduces a completely new UI.
-https://www.prefect.io/blog/introducing-prefect-2-0
-
-## Referencias
-
-Airflow Vs. Prefect — Workflow management for Data projects
-- Both are built using python. 
-- Workflows are an integral part of many production-related applications. It ranges from MLOps, automation, batch processing, portfolio tracking, etc. One system needs to process and send data to another system/task in sequential order in the data world.
-- Airflow has a learning curve. You need to understand DAG and the different operators in it.
-- Prefect is as simple as a primary python function. We need to wrap it under a with the flow.
-- Versioned Workflows. An essential feature of any code-based system is the ability to version your code.
-https://towardsdatascience.com/airflow-vs-prefect-workflow-management-for-data-projects-5d1a0c80f2e3
-
+Prefect.md
 
 # Singer
 
@@ -232,6 +174,16 @@ Features licensed under our enterprise license include:
 - SSO (Single Sign-On)
 https://www.rudderstack.com/blog/rudderstacks-licensing-explained/
 
+# dbt 
+
+dbt enables analytics engineers to transform data in their warehouses by simply writing select statements. dbt handles turning these select statements into tables and views.
+
+dbt does the T in ELT (Extract, Load, Transform) processes – it doesn’t extract or load data, but it’s extremely good at transforming data that’s already loaded into your warehouse.
+
+
+Models are written in the mix of SQL and JINJA templating which is friendly for non-data engineers, while makes it quite expressive and fairly easy for data engineers
+
+Materializations are strategies for persisting dbt models in a warehouse. There are four types of materializations built into dbt. They are: - table- view- incremental - ephemeral
 
 # Referencias
 

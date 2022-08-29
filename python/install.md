@@ -6,6 +6,14 @@ To install Python using the Microsoft Store:
 https://docs.microsoft.com/en-us/windows/python/beginners
 
 
+How to Install Python on Windows 10
+https://www.digitalocean.com/community/tutorials/install-python-windows-10
+
+
+CMD opens Windows Store when I type 'python'
+Use the Windows search bar to find "Manage app execution aliases". There should be two aliases for Python. Unselect them, and this will allow the usual Python aliases "python" and "python3". See the image below.
+https://stackoverflow.com/questions/58754860/cmd-opens-windows-store-when-i-type-python
+
 # Varios
 
 Requirements Files

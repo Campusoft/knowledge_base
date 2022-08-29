@@ -35,8 +35,7 @@ Apache Superset is a modern, enterprise-ready business intelligence web applicat
 
 https://superset.apache.org/
 
-Preset Cloud is a fully hosted, hassle free cloud service for Apache Superset™. Get started for free today!
-https://www.preset.io/product/
+
 
 
 ## Superset Architecture
@@ -61,6 +60,18 @@ Dashboard is nothing but a user interface that allows you to examine various gra
 ## SQL Lab
 
 SQL Lab is a React-based SQL IDE with a wide range of features.
+
+## Alerts and Reports
+
+Users can configure automated alerts and reports to send dashboards or charts to an email recipient or Slack channel.
+
+https://superset.apache.org/docs/installation/alerts-reports/
+
+
+## Cloud - Hosting
+
+Preset Cloud is a fully hosted, hassle free cloud service for Apache Superset™. Get started for free today!
+https://www.preset.io/product/
 
 ## Install
 
