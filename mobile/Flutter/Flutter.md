@@ -183,6 +183,10 @@ Handle changes to a text field
 - Use a TextEditingController.
 https://docs.flutter.dev/cookbook/forms/text-field-changes
 
+
+Flutter TextField Validation: How to work with TextEditingController, Form, and TextFormField
+https://codewithandrea.com/articles/flutter-text-field-form-validation/#1-flutter-textfield-validation-with-texteditingcontroller
+
 ## Other Widgets
 
 
@@ -507,6 +511,10 @@ https://www.raywenderlich.com/24499516-getting-started-with-flutter
 
 DartPad is a free, open-source online editor to help developers learn about Dart and Flutter. 
 https://dartpad.dev
+
+Rive allows developers to create and ship beautiful, interactive animations to any platform. Their open-source runtimes make it possible for creators to animate once, then launch on any platform they want.
+- Consolidating Flare and 2Dimensions Into One Brand
+https://rive.app/
 
 
 ## Themes

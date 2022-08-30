@@ -28,3 +28,10 @@ Flutter 3.0 Master Class for Beginners to Advanced 2022 | Ticket Booking App Dev
 - reusable row widget
 - reusable ticket widget
 https://www.youtube.com/watch?v=71AsYo2q_0Y
+
+
+Flutter tutorials
+- 67 temas
+- animation-basics, firestore, remote-config, sqlite-and-migrations
+- Flutter Architecture - A complete guide to Provider
+https://github.com/FilledStacks/flutter-tutorials
