@@ -2,7 +2,6 @@
 
 Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.
 
-
 Open source flutter apps
 https://github.com/tortuvshin/open-source-flutter-apps
 
@@ -12,8 +11,6 @@ Flutter architecture application mainly consists of:
 - Gestures
 - Concept of State
 - Layers
-	
-
 
 # Features
 
@@ -273,7 +270,10 @@ The pop() method removes the current Route from the stack of routes managed by t
 
 **Navigate with named routes**
 
+Flutter also supports named routes, which are defined in the routes parameter on MaterialApp or CupertinoApp:
+
 if you need to navigate to the same screen in many parts of your app: The solution is to define a named route, and use the named route for navigation.
+
 
 - To work with named routes, use the Navigator.pushNamed() function.
 - The MaterialApp.initialRoute property defines which route the app should start with. 
@@ -296,6 +296,9 @@ MaterialApp(
   // Navigate to the second screen using a named route.
   Navigator.pushNamed(context, '/second');
 ```
+
+
+
 # State management
 
 Flutter is declarative. This means that Flutter builds its user interface to reflect the current state of your app:
@@ -330,7 +333,6 @@ https://www.kindacode.com/article/using-provider-for-state-management-in-flutter
 
 
 Flutter Provider Http Get Request | Restful Api Example
-- 
 https://www.dbestech.com/tutorials/flutter-provider-http-get-request-restful-api-example
 
 ## getx
@@ -405,6 +407,7 @@ https://medium.flutterdevs.com/localization-multi-language-in-flutter-5cedb6ff45
 
 # Theme 
 
+Theming is the process of using a set of colors, fonts, shapes and design styles throughout your app. It’s a way to centralize all your stylistic decisions in one place.
 
 **Use a custom font**
 https://docs.flutter.dev/cookbook/design/fonts
@@ -490,6 +493,13 @@ Get Started with Flutter Authentication
 -  flutter_appauth : A well-maintained wrapper package around AppAuth for Flutter 
 - fluttersecurestorage: A library to securely persist data locally
 https://auth0.com/blog/get-started-with-flutter-authentication/
+
+# Labs
+
+## List Pagination
+
+***ScrollController***
+***infinite_scroll_pagination***
 
 
 # Referencias
