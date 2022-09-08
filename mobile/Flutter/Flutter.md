@@ -138,6 +138,15 @@ MaterialApp Class: MaterialApp is a predefined class in a flutter. It is likely 
 A widget that displays its children in a vertical array.
 https://api.flutter.dev/flutter/widgets/Column-class.html
 
+**Rows**
+
+
+
+Flutter Expanded and Flex (Expanded vs Flexible)
+- Using an Expanded widget makes a child of a Row or Column (also for Flex) expand to fill the available space in the main axis ( horizontally for a Row or vertically for a Column)
+https://medium.com/@apmntechdev/flutter-expanded-and-flex-cfd4e9f1e069
+
+
 ## NavigationRail and BottomNavigationBar
 
 Using NavigationRail and BottomNavigationBar in Flutter 
@@ -254,6 +263,9 @@ https://prasadsunny1.medium.com/custom-clipping-using-fluttershapemaker-com-and-
 
 ClipRRect & ClipPath In Flutter
 https://medium.flutterdevs.com/cliprrect-clippath-in-flutter-4c41abe4e8
+ 
+
+
 
 ## Routes and Navigator in Flutter
 
