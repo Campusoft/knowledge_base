@@ -230,14 +230,56 @@ https://www.flutterbeads.com/set-background-image-in-flutter/
 Agrega WebView a tu app de Flutter
 https://codelabs.developers.google.com/codelabs/flutter-webview#0
 
+
+
 **Google Maps for Flutter**
 
 Cómo agregar Google Maps a una app creada con Flutter
 https://codelabs.developers.google.com/codelabs/google-maps-in-flutter#0
 
+Add Custom Marker Images to your Google Maps in Flutter
+- Tiene codigo
+https://medium.com/flutter-community/ad-custom-marker-images-for-your-google-maps-in-flutter-68ce627107fc
+
+
+Add A Custom Info Window to your Google Map Pins in Flutter
+- Tiene codigo
+https://medium.com/flutter-community/add-a-custom-info-window-to-your-google-map-pins-in-flutter-2e96fdca211a
+
+
+Build Mobile Apps With Flutter and Google Maps (Cloud Next '19)
+https://github.com/brandon-irl/CloudNextFlutterMapsDemo
+https://www.youtube.com/watch?v=RpQLFAFqMlw
+
 Package: Google Maps for Flutter 
 https://pub.dev/packages/google_maps_flutter
 
+
+Errores
+
+--------------
+```
+App requires Multidex support
+```
+
+No esta claro que realizar.
+https://docs.flutter.dev/deployment/android#enabling-multidex-support
+
+-------------------
+
+```
+Cannot enable MyLocation layer as location permissions are not grantedCannot enable MyLocation layer as location permissions are not granted
+```
+
+-----------------
+Revision
+
+https://mapstyle.withgoogle.com/
+
+**Maps mapbox**
+
+
+https://pub.dev/packages/mapbox_gl
 
 **SafeArea**
 
@@ -265,6 +307,19 @@ ClipRRect & ClipPath In Flutter
 https://medium.flutterdevs.com/cliprrect-clippath-in-flutter-4c41abe4e8
  
 
+
+**TabBar and TabBarView**
+
+TabBar is used to create the tabs, while TabBarView is used to define the content of each tab. 
+
+- DefaultTabController. Allows you to define a Tabs controller Widget, which works in conjunction with TabBar and TabBarView.
+This controller has an attribute called length that identifies the number of Tabs it contains.
+- TabBar. Allows you to create the tabs that go in the header/footer, it has an attribute called tabs that receives a list of widgets of type Tab.
+- TabBarView. Allows you to create the widgets that will go inside each tab in the children attribute.
+
+The DefaultTabController widget is one of the simplest ways to create tabs in flutter.
+- DefaultTabController
+https://www.geeksforgeeks.org/flutter-tabs/
 
 
 ## Routes and Navigator in Flutter
@@ -375,7 +430,15 @@ flutter:
     - images/lake.jpg
 ```
 
+To include all assets under a directory, specify the directory name with the / character at the end:
 
+```
+flutter:
+  assets:
+    - directory/
+    - directory/subdirectory/
+
+```
 
 # Networking - REST API
 

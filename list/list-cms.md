@@ -1,5 +1,10 @@
 # CMS
 
+Piranha CMS is the friendly editor-focused CMS for .NET6 that can be used both as an integrated CMS or as a headless API. 
+- The admin interface is powered by Vue.js for maximum interactivity and speed in the client.
+- Posts can be organized with categories and tags and can be used for various purposes.
+https://github.com/PiranhaCMS/piranha.core
+
 ## Wordpress
 
 
