@@ -270,6 +270,13 @@ https://docs.flutter.dev/deployment/android#enabling-multidex-support
 ```
 Cannot enable MyLocation layer as location permissions are not grantedCannot enable MyLocation layer as location permissions are not granted
 ```
+--------------------
+
+```
+E/Google Maps Android API(10597): Authorization failure.  Please see https://developers.google.com/maps/documentation/android-api/start for how to correctly set up the map.
+E/Google Maps Android API(10597): In the Google Developer Console (https://console.developers.google.com)
+E/Google Maps Android API(10597): Ensure that the "Google Maps Android API v2" is enabled.
+```
 
 -----------------
 Revision
@@ -321,6 +328,18 @@ The DefaultTabController widget is one of the simplest ways to create tabs in fl
 - DefaultTabController
 https://www.geeksforgeeks.org/flutter-tabs/
 
+5 Ways of styling Tab in Flutter
+- 1. Rounded Corner tab style
+- 2. Rounded Corner with Gradient tab style​
+- 3. Square tab style
+- 4. Diamond tab style
+- 5. Diamond tab style(2)
+https://mightytechno.com/style-tabs-in-flutter-app/
+
+Change Tab Bar Color in Flutter | Ultimate Guide 2022
+- Steps to change tab bar background color in Flutter
+- How to change tab bar text color (selected/unselected)
+https://www.flutterbeads.com/change-tab-bar-color-in-flutter/
 
 ## Routes and Navigator in Flutter
 
