@@ -285,8 +285,13 @@ https://mapstyle.withgoogle.com/
 
 **Maps mapbox**
 
-
+ 
 https://pub.dev/packages/mapbox_gl
+
+**Maps flutter_map**
+
+
+https://docs.fleaflet.dev/
 
 **SafeArea**
 
@@ -340,6 +345,15 @@ Change Tab Bar Color in Flutter | Ultimate Guide 2022
 - Steps to change tab bar background color in Flutter
 - How to change tab bar text color (selected/unselected)
 https://www.flutterbeads.com/change-tab-bar-color-in-flutter/
+
+## Revision widgets
+
+InteractiveViewer 
+https://api.flutter.dev/flutter/widgets/InteractiveViewer-class.html
+
+AnimatedBuilder 
+https://api.flutter.dev/flutter/widgets/AnimatedBuilder-class.html
+
 
 ## Routes and Navigator in Flutter
 
@@ -698,3 +712,15 @@ A Music Player App made with Flutter
 - carousel_slider
 - flip_card
 https://github.com/Sangwan5688/BlackHole
+
+
+A showcase app for the Flutter SDK. Wonderous will educate and entertain as you uncover information about some of the most famous structures in the world. 
+ 
+Built by gskinner in partnership with the Flutter team, Wonderous deliberately pushes visual fidelity, effects and transitions to showcase what Flutter is truly capable of on modern mobile hardware.
+https://github.com/gskinnerTeam/flutter-wonderous-app
+
+
+Demo App for The FlutterVikings Conference Session 
+- Complex Hero animations
+- Animating ScrollView Items: Scrolling animations with lists, grids, and slivers.
+https://github.com/Roaa94/recipes_ui_app

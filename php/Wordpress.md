@@ -21,3 +21,6 @@ Visualizar los api disponibles.
 
 Registers a meta key.
 https://developer.wordpress.org/reference/functions/register_meta/
+
+In-Depth Guide in Creating and Fetching Custom WP REST API Endpoints
+https://awhitepixel.com/blog/in-depth-guide-in-creating-and-fetching-custom-wp-rest-api-endpoints/
