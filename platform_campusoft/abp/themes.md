@@ -20,6 +20,10 @@ Stisla Is a bootstrap-based admin template
 https://github.com/realLiangshiwei/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla
 https://github.com/stisla/stisla
 
+ASP.NET Core MVC / Razor Pages: Branding
+IBrandingProvider is a simple interface that is used to show the application name and logo on the layout.
+https://docs.abp.io/en/abp/latest/UI/AspNetCore/Branding#asp-net-core-mvc-razor-pages-branding
+
 # Angular
 
 -    Ng Bootstrap will be used as the UI component library.

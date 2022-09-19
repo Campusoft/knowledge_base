@@ -113,6 +113,10 @@ Material widgets
 
 ListView, a column-like widget, automatically provides scrolling when its content is too long for its render box.
 
+Flutter ListView and ScrollPhysics: A Detailed Look
+https://medium.com/flutter-community/flutter-listview-and-scrollphysics-a-detailed-look-7f0912df2754
+
+
 ## Basic widgets
 
 **Scaffold**
@@ -677,6 +681,14 @@ https://plus.fluttercommunity.dev/
 Flutter Login Screen with Firebase Auth and Facebook Login 
 https://github.com/instaflutter/flutter-login-screen-firebase-auth-facebook-login
 
+## Demos
+
+Flutter apps with cool design and animations
+
+This is a set of small projects focused solely on the development of the graphical interface with Flutter 
+- Travel App with ANIMATIONS!. https://www.youtube.com/watch?v=bEHPCwjLdno
+
+https://github.com/brocodev/flutter_projects
 
 ## Application
 
@@ -724,3 +736,5 @@ Demo App for The FlutterVikings Conference Session
 - Complex Hero animations
 - Animating ScrollView Items: Scrolling animations with lists, grids, and slivers.
 https://github.com/Roaa94/recipes_ui_app
+
+
