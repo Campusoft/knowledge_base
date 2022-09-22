@@ -140,7 +140,7 @@ Crear un certificado con dotnet dev-certs.
 -ep nombre del archivo del certificado
 
 ```
-dotnet dev-certs https -ep identityserver.pfx -p Test@2021
+dotnet dev-certs https -ep identityserver.dev.pfx -p Test@2022
 ```
 
 Agregar configuracion

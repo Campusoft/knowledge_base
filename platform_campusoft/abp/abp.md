@@ -102,6 +102,13 @@ El archivo del proyecto debe tener "GenerateEmbeddedFilesManifest" a true, en al
  <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
 ```
   
+
+Extending Existing Resource. (Cambiar localizacion de modulos de abp)
+- Inheriting from a resource creates a new resource without modifying the existing one.
+- If an extension file defines the same localized string, it overrides the string.
+https://docs.abp.io/en/abp/latest/Localization#extending-existing-resource  
+  
+  
 TODO:
 
 - Como establecer los nombres en los campos, en validaciones dataannotation
@@ -116,6 +123,12 @@ DataAnnotation
 - Utilizar atributo Display, para establecer la clave de localizacion
   - Ej: [Display(Name = "NameFieldKeyLocalizacion")]
   - Con el NameFieldKeyLocalizacion, se puede establecer sus valores  en los archivos de localizacion que existen.
+
+TODO:
+
+"DisplayName:Email": "Dirección de e-mail",
+
+
 
 # Fundamentals
 
