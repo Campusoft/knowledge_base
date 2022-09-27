@@ -135,7 +135,10 @@ https://www.postgresql.org/docs/current/ddl-rowsecurity.html
 
 # Tools
 
+# PostGIS
 
+
+PostGIS extends its capabilities for geographic objects
 
 # Referencias
 

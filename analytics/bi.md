@@ -108,4 +108,6 @@ A cloud-based solution for all your mapping needs
 Location Intelligence & Data Visualization tool
 http://cartodb.com/
 
+# Architecture
 
+Behind the scenes, CARTO leverages PostgreSQL + PostGIS as a web service. That means you the user can have complete control of a fully managed database.

@@ -110,3 +110,14 @@ El blockchain de ethereum es similar al del bitcoin en el sentido de que funcion
 
 Con fecha de 26 de mayo de 2021 se ha publicó La Ley Orgánica de Protección de Datos de Ecuador, una vez que el texto fue aprobado por la Asamblea Nacional tras los correspondientes debates y sancionado por el señor Presidente de la República. Cabe destacar que las empresas cuentan desde ese momento con un período de adaptación de dos años con el objetivo de poder adecuar todos sus procesos a lo exigido por esta nueva normativa
 
+# X.509 certificate
+
+Defined in RFC 5280
+
+Certificates may be distributed in a multitude of other formats as well. What is important to understand is that regardless of the encoding format—DER, PEM, PFX or something else—all certificates are basically the same when they are decoded. Tools, such as OpenSSL, are able to read or convert any of these formats easily.
+
+
+The certificate encodes two very important pieces of information: the server's public key and a digital signature that can be used to confirm the certificate's authenticity. Additionally, the certificate will include metadata used by the CA to track the certificate and provide guidelines on how the public key can be used. 
+
+Understanding Public Key Infrastructure and X.509 Certificates
+https://www.linuxjournal.com/content/understanding-public-key-infrastructure-and-x509-certificates 
