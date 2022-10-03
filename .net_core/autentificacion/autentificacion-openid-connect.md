@@ -113,3 +113,22 @@ AADSTS50020: User account 'juan.saavedra@grupobusiness.it' from identity provide
 ASP.NET Core and JSON Web Tokens - where are my claims?
 https://mderriey.com/2019/06/23/where-are-my-jwt-claims/
 
+
+ 
+
+Listado de codigos (IDX10000 - IDX10999)
+Microsoft.IdentityModel.Tokens
+Range: 10000 - 10999 
+Ej:
+- IDX10222: Lifetime validation failed. The token is not yet valid. ValidFrom: '{0}', Current time: '{1}'.
+- IDX10223: Lifetime validation failed. The token is expired. ValidTo: '{0}', Current time: '{1}'.
+https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/blob/dev/src/Microsoft.IdentityModel.Tokens/LogMessages.cs
+
+
+Listado de codigos (IDX10000 - IDX10999)
+System.IdentityModel.Protocols
+Range: 20000 - 20999
+Ej:
+- IDX20803 = "IDX20803: Unable to obtain configuration from: '{0}'."
+- IDX20804 = "IDX20804: Unable to retrieve document from: '{0}'."
+https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/blob/dev/src/Microsoft.IdentityModel.Protocols/LogMessages.cs

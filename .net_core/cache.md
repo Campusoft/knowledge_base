@@ -14,3 +14,9 @@ A distributed cache is a cache shared by multiple app servers, typically maintai
 -   Distributed NCache cache
 
 
+
+
+
+Sliding Expiration: If a cache entry is accessed during this period, the period resets.
+Absolute Expiration: Absolute expiration date for the cache entry.
+AbsoluteExpirationRelativeToNow: Expiration time, relative to the current time.

@@ -146,7 +146,22 @@ Configure<AbpDistributedCacheOptions>(options =>
     options.KeyPrefix = ...
 });
 
+
 ```
+
+
+Ejemplo configuracion Global.
+
+```
+Configure<AbpDistributedCacheOptions>(options =>
+{
+	options.KeyPrefix = configuration["Cache:KeyPrefix"];
+	
+	var cacheAbsoluteExpiration = configuration.GetValue<int?>("Cache:CacheAbsoluteExpiration");
+	options.GlobalCacheEntryOptions.AbsoluteExpirationRelativeToNow = TimeSpan.FromMinutes(cacheAbsoluteExpiration??30);
+});
+```
+
 
 Set the cache key prefix for the application.
 <https://docs.abp.io/en/abp/latest/Caching#abpdistributedcacheoptions>
