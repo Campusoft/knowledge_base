@@ -133,6 +133,9 @@ Before writing custom retry logic, consider using a general framework such as Po
 
 ## Circuit Breaker
 
+## Unidad de Trabajo (UnitOfWork)
+
+El patrón UoW es nuestra abstracción sobre la idea de operaciones atómicas. Se hace referencia a UoW como una sola transacción que implica múltiples operaciones de inserción, actualización, eliminación, etc.
 
 
 # Web

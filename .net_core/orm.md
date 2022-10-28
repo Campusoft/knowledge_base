@@ -107,6 +107,14 @@ entity.Property(x => x.ColumnName).IsUnicode(false);
 Json
 https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=fluent-api#composite-value-objects
 
+# Ejecutar Sql Directamente
+
+
+
+- Use the DbSet.FromSql method for queries that return entity types. The returned objects must be of the type expected by the DbSet object, and they're automatically tracked by the database context unless you turn tracking off.
+
+- Use the Database.ExecuteSqlCommand for non-query commands.
+
 
 
 # Migration

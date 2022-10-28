@@ -12,6 +12,11 @@ It isn’t always the best choice, because:
 - EF Core has features for unit testing without repositories
 https://github.com/jasontaylordev/NorthwindTraders
 
+
+Implementación del repositorio y los patrones de unidad de trabajo en una aplicación MVC de ASP.NET (9 de 10)
+- Los repositorios, posee un metodo Save, el cual llama a dbContext.SaveChange
+https://learn.microsoft.com/es-es/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
+
 # CQRS (*)
 
 

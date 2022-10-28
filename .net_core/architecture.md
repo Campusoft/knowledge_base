@@ -18,6 +18,8 @@ Clean Architecture Solution Template: A starting point for Clean Architecture wi
 - Domain Events (MediatR)
 - Posee https://github.com/ardalis/Specification. Base class with tests for adding specifications to a DDD model. Also includes a default generic Repository base class with support for EF6 and EF Core
 - Persistencia
+  - Tiene repositorios, que son una libreria. Ardalis.Specification.EntityFrameworkCore
+  - Los repositorios, llaman en cada metodo (CRUD), al SaveChangesAsync
   - No tiene UnitOfWork
 https://github.com/ardalis/CleanArchitecture
  
@@ -54,6 +56,9 @@ ASP.NET Core Hero Boilerplate - .NET 5 Clean Architecture
   - PaginatedList: (PageNumber, PageSize) https://github.com/aspnetcorehero/Boilerplate/blob/master/AspNetCoreHero.Boilerplate.Application/Extensions/QueryableExtensions.cs
 - Persistencia
   - Entity Framework Core – Code First. Posee UnitOfWork (Incompleto Transacciones)
+  - En los repositorios, utiliza IDistributedCache 
+  - Tiene un RepositoryAsync<T>, para CRUD, posee un metodo para obtener listados paginados. Esta clase posee una dependencia inyectada en el constructor del dbContexto. (ApplicationDbContext dbContext)
+  - Tiene un UnitOfWork que implementa IDisposable, utiliza dbContext.SaveChangesAsync, para el Commit
 - Permission Management
 - MediatR Pipeline Logging & Validation
 - Serilog
@@ -104,7 +109,7 @@ Fullstack Hub is developed to help students and professionals to quickly learn t
 - CQRS
 - ExceptionFilterAttribute
 - Persistencia
-  - UnitOfWork. Simple. En el IUnitOfWork, posee las entidades 
+  - UnitOfWork. Simple. En el IUnitOfWork, posee las entidades. El UnitOfWork crea los objetos repository.
   - Libreria. https://github.com/DapperLib/Dapper.Contrib
 - Redis
 - Mensajes
@@ -182,8 +187,9 @@ https://github.com/oskardudycz/GoldenEye
 Sample .NET Core reference application, powered by Microsoft, based on a simplified microservices architecture and Docker containers.
 - Domain events: design and implementation
   - The reference app uses MediatR to propagate domain events synchronously across aggregates, within a single transaction. 
-- Posee UnitOfWork. La implementacion IUnitOfWork se la realiza en DbContext
-  - UnitOfWork esta como propiedad en los IRepository
+- Posee UnitOfWork. La implementacion IUnitOfWork se la realiza con DbContext. Posee el metodo Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken)), el cual es un metodo del DBContext.
+  - UnitOfWork esta como propiedad en los IRepository. Y se asigna por el parametro que se recibe en el constructor. (XContext context)
+  - La transaccion se maneja a nivel de un IPipelineBehavior. 
 - Posee IPipelineBehavior
   - Un TransactionBehaviour para Transaction
   - LoggingBehavior para logs los Handling "LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>"
@@ -209,7 +215,9 @@ Full Modular Monolith application with Domain-Driven Design approach.
   - To ensure maximum reliability, the Outbox / Inbox pattern is used. 
 - Security
   - Authentication is implemented using JWT Token and Bearer scheme using IdentityServer.
-  - Authorization is achieved by implementing RBAC (Role Based Access Control) using Permissions. 
+  - Authorization is achieved by implementing RBAC (Role Based Access Control) using Permissions
+- Varios
+  - Usa Autofac
 - All Architectural Decisions (AD) are documented in the Architecture Decision Log (ADL).  
 https://github.com/kgrzybek/modular-monolith-with-ddd
 
