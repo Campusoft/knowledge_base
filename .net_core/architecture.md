@@ -253,6 +253,14 @@ https://github.com/jasontaylordev/NorthwindTraders
 
 
 
+PiranhaCMS
+- Tiene Repository, con DbContext de entity framework. En cada metodo (Save), se llama a SaveChangesAsync
+```
+await _db.SaveChangesAsync().ConfigureAwait(false);
+```
+- Soporta Postgre, SQLite, SQLServer, MySql
+https://github.com/PiranhaCMS
+
 # Exceptions 
 
 Exceptions should be uncommon. In comparison to other code flow patterns, the catch and throw of exceptions is slow. Exceptions are not used to control the program’s flow. Consider the program’s logic when identifying and resolving exception-prone scenarios.

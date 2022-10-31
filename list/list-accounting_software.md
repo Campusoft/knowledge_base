@@ -1,6 +1,6 @@
 # Software para Contabilidad
 
-## akaunting
+# akaunting
 
 Akaunting is a free, open source and online accounting software designed for small businesses and freelancers. It is built with modern technologies such as Laravel, VueJS, Bootstrap 4, RESTful API etc. Thanks to its modular structure, Akaunting provides an awesome App Store for users and developers.
 
@@ -14,7 +14,7 @@ Akaunting uses Laravel, the best existing PHP framework, as the foundation frame
 https://github.com/akaunting/akaunting
 
 
-## Odoo
+# Odoo
 
 Odoo. Open Source Apps To Grow Your Business. 
 
@@ -29,7 +29,7 @@ Odoo Data Model
 https://soft-builder.com/en/docs/Odoo/index.html
 
 
-## Gestionix
+# Gestionix
 
 Sistema ERP y Software Contable para Pymes - Gestionix
 https://www.gestionix.com/
