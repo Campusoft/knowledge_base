@@ -28,3 +28,13 @@ Command Palette#
 Access all available commands based on your current context.
 
 Ctrl+Shift+P
+
+# Git
+
+
+Errores
+-------------------
+There are no active source control providers
+
+
+Extensions > burger menu > Show built-in

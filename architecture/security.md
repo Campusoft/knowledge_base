@@ -13,7 +13,15 @@ La prueba de seguridad de aplicaciones dinámicas (DAST) es una metodología de pr
 
 # Rest API
 
- Checklist of the most important security countermeasures when designing, testing, and releasing your API 
+Checklist of the most important security countermeasures when designing, testing, and releasing your API 
+- Authentication
+- JWT (JSON Web Token)
+- OAuth
+- Access
+- Input
+- Processing
+- Output
+- CI & CD
 https://github.com/shieldfy/API-Security-Checklist
 
 # OWASP

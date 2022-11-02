@@ -261,6 +261,11 @@ await _db.SaveChangesAsync().ConfigureAwait(false);
 - Soporta Postgre, SQLite, SQLServer, MySql
 https://github.com/PiranhaCMS
 
+Clean Architecture with .NET Core & React+Redux
+- Manga is a Virtual Wallet Solution in which the customer register an account then manage the balance by Deposit, Withdraw and Transfer operations.
+https://github.com/ivanpaulovich/clean-architecture-manga
+
+
 # Exceptions 
 
 Exceptions should be uncommon. In comparison to other code flow patterns, the catch and throw of exceptions is slow. Exceptions are not used to control the program’s flow. Consider the program’s logic when identifying and resolving exception-prone scenarios.

@@ -53,6 +53,8 @@ Multiple Ways To Access Configurations In .NET Applications. (appsettings)
 https://thecodeblogger.com/2021/04/20/multiple-ways-to-access-configurations-in-net-applications/
 
 
+
+
 TimeSpan configuration values in .NET Core by Mark Seemann
 - Leer numero entero. (Total segundos, minutos, o la medida que se establece que significa el numero)
 
@@ -80,6 +82,28 @@ Codigo
 var seatingDuration = Configuration.GetValue<TimeSpan>("SeatingDuration");
 ```
 https://blog.ploeh.dk/2019/11/25/timespan-configuration-values-in-net-core/ 
+
+
+**Options pattern**
+
+- Is registered as a Singleton and can be injected into any service lifetime.
+
+Options pattern suggests two things:
+
+- there should be a class, Options class, which is not abstract with public parameter-less constructor
+- which has public read-write properties
+	
+IOptionsSnapshot:
+When you use IOptionsSnapshot<TOptions>, options are computed once per request when accessed and are cached for the lifetime of the request. Changes to the configuration are read after the app starts when using configuration providers that support reading updated configuration values.
+
+	
+IOptionsMonitor:
+
+Some file systems, such as Docker containers and network shares, may not reliably send change notifications. When using the IOptionsMonitor<TOptions> interface in these environments, set the DOTNET_USE_POLLING_FILE_WATCHER environment variable to 1 or true to poll the file system for changes. The interval at which changes are polled is every four seconds and is not configurable.	
+
+## Revisiones
+
+IOption<T> o IOptionsSnapshot<T> o tal vez IOptionsMonitor<T> 
 
 # date and time
 
@@ -334,6 +358,15 @@ https://jasonwatmore.com/post/2020/07/15/aspnet-core-3-send-emails-via-smtp-with
 
 How can I create a message with attachments
 https://github.com/jstedfast/MailKit/blob/master/FAQ.md#CreateAttachments
+
+## Herramientas
+
+SMTP para probar envíos de correos electrónicos, el cual registra una petición de envío de correo 
+electrónico sin llegar a enviarlo realmente. Existen múltiples herramientas de código abierto en este 
+ámbito, incluyendo fake-smtp-server, el cual representa correos electrónicos dentro de una interfaz 
+de usuario web para pruebas visuales, y mountebank, que expone los correos electrónicos enviados 
+a través de una API REST para realizar pruebas de integración. Recomendamos explorar esta técnica 
+para reducir el riesgo y mejorar la eficiencia de las pruebas.
 
 # LDAP
 
@@ -601,3 +634,11 @@ Kestrel supports the following scenarios:
 - Unix sockets for high performance behind Nginx
 
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?view=aspnetcore-6.0
+
+
+# web crawler
+
+Abot Build Status
+
+ Cross Platform C# web crawler framework built for speed and flexibility. Please star this project! +1. 
+https://github.com/sjdirect/abot
