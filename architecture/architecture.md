@@ -14,6 +14,17 @@ https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 - Se consistente. Si hace algo de cierta manera, haga todas las cosas similares de la misma manera
 - Comunicacion.
 
+# protocol 
+
+## ActivityPub
+
+ The ActivityPub protocol is a decentralized social networking protocol based upon the [ActivityStreams] 2.0 data format. It provides a client to server API for creating, updating and deleting content, as well as a federated server to server API for delivering notifications and content. 
+ 
+open protocol to implement federation
+
+Mastodon is based on open web protocols
+
+
 # Varios
 
 To identify and select the optimal model(s), architects must understand advantages and disadvantages of each model 

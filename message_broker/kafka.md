@@ -144,6 +144,10 @@ Confluent Schema Registry provides a serving layer for your metadata. It provide
  
 # Kafka Streams
 
+Kafka Streams se basa en la mensajería de Kafka para permitir procesar datos en tiempo real. Pero mientras un productor Kafka sólo publica datos en un topic, y un consumidor únicamente consume datos de topics, las aplicaciones Kafka Streams pueden utilizar uno o varios topics como entrada, realizar algún tipo de transformación o procesado de esos datos y dejar el resultado como salida en otro u otros topics.
+
+
+
 # Kafka Connectors
 
 Kafka Connect is a framework for connecting Kafka with external systems such as databases, key-value stores, search indexes, and file systems, using so-called Connectors.
@@ -251,6 +255,9 @@ https://confluent.cloud/welcome
 # ksqlDB
 
 ksqlDB is a database purpose-built to help developers create stream processing applications on top of Apache Kafka®.
+
+ksqlDB can be described as a real-time event-streaming database built on top of Apache Kafka and Kafka Streams. It combines powerful stream processing with a relational database model using SQL syntax.
+
 
 ksqlDB enables you to build event streaming applications leveraging your familiarity with relational databases. Three categories are foundational to building an application: collections, stream processing, and queries.
 

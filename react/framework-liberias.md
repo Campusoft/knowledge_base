@@ -97,3 +97,16 @@ react-spring
 A spring physics based React animation library
 https://github.com/pmndrs/react-spring
 
+# refine 
+
+refine is a React-based framework for the rapid ✨ development of web applications. It eliminates the repetitive tasks demanded by CRUD operations and provides industry standard solutions for critical parts like authentication, access control, routing, networking, state management, and i18n.
+https://refine.dev
+
+
+Architecture	
+- Hooks Based 
+- State Management	React Query
+
+
+refine is licensed under the MIT Licence. It only requires the preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+

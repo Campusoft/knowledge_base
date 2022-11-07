@@ -38,3 +38,9 @@ There are no active source control providers
 
 
 Extensions > burger menu > Show built-in
+
+# Refererencias
+
+Keyboard reference sheets
+- Keyboard shortcuts for Windows. Se puede descargar PDF.
+https://code.visualstudio.com/docs/getstarted/tips-and-tricks#_keyboard-reference-sheets
