@@ -18,19 +18,11 @@ https://github.com/payloadcms/payload
  
 ## Directus
 
-Directus is an Open Data Platform for managing the content of any SQL database. It provides a powerful API layer for developers and an intuitive App for non-technical users. Written entirely in JavaScript (primarily Node.js (opens new window) and Vue.js
+Directus dynamically generates custom API endpoints based on your SQL database's schema in real-time — something we call "Database Mirroring". Whether you install fresh or on top of an existing database, you always maintain end-to-end control over your actual database, including: tables, columns, datatypes, default values, indexes, relationships, etc.
 
-(opens new window)), Directus is completely open-source, modular, and extensible, allowing it to be fully tailored to your exact project needs.
-
-Directus is an Open-Source Headless CMS & API for Managing Custom Databases
-
-Our platform can be used as a headless CMS for managing digital experiences, a database client for democratizing data, or as a standalone back-office web app for CRM, inventory, business intelligence, project management, etc.
-
-https://directus.io/
-
-Getting Started with Directus 9 — Platform Overview & Tutorial. (Video)
-https://www.youtube.com/watch?v=AicEmIeuuLw
-
+[Directus detalles](/node/directus.md)
+ 
+ 
 ## Strapi
 
 Design APIs fast, manage content easily.

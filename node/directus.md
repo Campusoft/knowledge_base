@@ -11,8 +11,6 @@ UI
 - Vue
 
 
-
-
 # Features 
 
 - Authentication
@@ -57,8 +55,6 @@ Directus only requires Node.js and supports most operating systems and SQL datab
     Node.js 12.20+
     npm 6.x+
 
-
-
 # Laboratorios
 
 Iniciar
@@ -66,3 +62,8 @@ Iniciar
 ```
 npx directus start
 ``
+
+# Referencias
+
+Getting Started with Directus 9 — Platform Overview & Tutorial. (Video)
+https://www.youtube.com/watch?v=AicEmIeuuLw

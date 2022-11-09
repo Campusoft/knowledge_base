@@ -129,3 +129,17 @@ The certificate encodes two very important pieces of information: the server's p
 
 Understanding Public Key Infrastructure and X.509 Certificates
 https://www.linuxjournal.com/content/understanding-public-key-infrastructure-and-x509-certificates 
+
+**CertificateTools.com**
+CertificateTools.com X509 Certificate Generator
+https://certificatetools.com/
+
+# PFX
+
+Los archivos con extensión .PFX contienen datos de certificados encriptados que se utilizan para autenticar personas y dispositivos como servidores web u ordenadores.
+
+RSA Lab published multiple standards in cryptography. Which in general are called PKCS. PKCS #12 defines an archive file format for storing many cryptography objects as a single file. The filename extension for PKCS #12 files is .p12 or .pfx
+
+PFX file, is a single, password protected or password-less certificate archive which contains the certificate chain and the private key. You can think of it as an archive that stores everything you need to deploy a certificate.
+
+
