@@ -226,6 +226,8 @@ nopCommerce
 The most popular open-source eCommerce shopping cart solution based on ASP.NET Core 
 - Linq2DB is an open-source ORM framework for .NET applications. It is a .NET Foundation project. 
 - Fluent Validation
+  - Posee una configuracion, para determinar si se aplica validaciones de propiedades (telefonos, email,nombres, apellidos, etc) de clientes. 
+  - Posee una clase base "BaseNopValidator<TModel> : AbstractValidator<TModel> where TModel : class"
 - Razor View Engine
 - AutoMapper
 - JQuery

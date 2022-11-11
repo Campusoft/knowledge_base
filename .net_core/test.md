@@ -85,6 +85,9 @@ https://xunit.net/docs/getting-started/netcore/visual-studio
 Testing Exceptions with xUnit and Actions
 https://ardalis.com/testing-exceptions-with-xunit-and-actions/
 
+Using .NET Core with the .NET SDK command line
+https://xunit.net/docs/getting-started/netcore/cmdline
+
 ## Mock 
 
 Bogus
