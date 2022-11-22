@@ -334,6 +334,9 @@ https://openidconnect.net/
 Demo que posee algunos tipos grant type
 https://demo.identityserver.io/
 
+Demo OpenId
+https://demo.duendesoftware.com/
+
 
 Diagrams of All The OpenID Connect Flows
 - code

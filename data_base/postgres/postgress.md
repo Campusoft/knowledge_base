@@ -61,6 +61,11 @@ https://github.com/efcore/EFCore.NamingConventions
 
 CREATE DATABASE databasename;
 
+Crear usuario
+CREATE USER <name> WITH CREATEROLE CREATEDB PASSWORD '<password>';
+ 
+
+
 # Naming conventions
 
 

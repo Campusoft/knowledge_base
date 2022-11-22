@@ -50,6 +50,14 @@ https://docs.microsoft.com/en-us/azure/active-directory/develop/scenario-spa-app
 Quickstart: Register an application with the Microsoft identity platform
 https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
+
+Archivo de descubrimiento, para 
+https://login.microsoftonline.com/TENANT-NAME/.well-known/openid-configuration
+
+
+Authority, en Azure AD: En el archivo https://login.microsoftonline.com/{Tenant}/.well-known/openid-configuration, la propiedad "issuer"
+
+
 ## Okta
 
 # IdentityServer
@@ -131,4 +139,8 @@ Range: 20000 - 20999
 Ej:
 - IDX20803 = "IDX20803: Unable to obtain configuration from: '{0}'."
 - IDX20804 = "IDX20804: Unable to retrieve document from: '{0}'."
+- IDX20807 = "IDX20807: Unable to retrieve document from: '{0}'. HttpResponseMessage: '{1}', HttpResponseMessage.Content: '{2}'."
+
 https://github.com/AzureAD/azure-activedirectory-identitymodel-extensions-for-dotnet/blob/dev/src/Microsoft.IdentityModel.Protocols/LogMessages.cs
+
+

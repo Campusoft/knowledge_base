@@ -225,6 +225,26 @@ https://github.com/ErikEJ/EFCorePowerTools
 
 Save Changes Interceptors were introduced in EF Core 5.0.
 
+Entity Framework 6.x
+- Configuración del modelo anterior a la convención
+```
+configurationBuilder
+    .Properties<string>()
+    .AreUnicode(false)
+    .HaveMaxLength(1024);
+```
+- 
+
+Entity Framework 7.x
+- JSON columns
+- Bulk updates and deletes
+- Faster SaveChanges
+- Table-per-concrete-type (TPC) inheritance mapping
+- Stored procedure mapping for insert/update/delete
+
+Examples entity framework 7.x
+https://github.com/dotnet/EntityFramework.Docs/tree/main/samples/core/Miscellaneous/NewInEFCore7
+
 
 # Reference
 

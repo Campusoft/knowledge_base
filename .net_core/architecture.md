@@ -238,6 +238,11 @@ The most popular open-source eCommerce shopping cart solution based on ASP.NET C
 https://github.com/nopSolutions/nopCommerce
 
 
+Orchard Core
+- Orchard Core Framework: An application framework for building modular, multi-tenant applications on ASP.NET Core.
+- Orchard Core CMS: A Web Content Management System (CMS) built on top of the Orchard Core Framework.
+https://docs.orchardcore.net/en/main/
+
 
 Northwind Traders is a sample application built using ASP.NET Core and Entity Framework Core. 
 

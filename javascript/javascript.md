@@ -9,6 +9,15 @@ JavaScript Promises for Dummies
 https://scotch.io/tutorials/javascript-promises-for-dummies
 
 
+# Events
+
+
+What Is the Difference Between target and currentTarget?
+- Event.currentTarget is the element to which the event is attached. It will never change.
+- Event.target is the element that triggered the event. It depends on exactly where the user clicks.
+https://blog.devgenius.io/what-is-the-difference-between-target-and-currenttarget-2f91ca2ad7d8
+
+
 # Versiones
 
 ECMAScript is the standard name for JavaScript.
@@ -47,7 +56,6 @@ https://www.w3schools.com/js/js_es5.asp
 # REST 
 
 Call REST 
-
 Para hacer esto, puedes utilizar dos funciones nativas de javascript, en ECMAScript 5 podemos utilizar ”XMLHttpRequest()” y en ECMAScript 6 tenemos ”fetch()”,
 
 # Documents

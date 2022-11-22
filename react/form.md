@@ -1,5 +1,15 @@
 # Form
 
+
+
+React Uncontrolled Elements With “useRef” Hooks
+- 
+https://medium.com/technofunnel/react-uncontrolled-elements-with-useref-hooks-9c5873476c6f
+
+You May Not Need Controlled Form Components
+- You can access HTML name attributes in event handlers. event.currentTarget.nameField.value
+https://www.swyx.io/no-controlled-forms
+
 # React Hook Form
 
 React Hook Form is a performant and easy-to-use library that takes advantage of React Hooks to build forms. It works by registering components to a React hook using a provided register method, and provides a handleSubmit method that validates all form data before calling the onSubmit callback that you provide.
