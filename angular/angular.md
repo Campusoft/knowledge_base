@@ -146,7 +146,16 @@ A common pattern in Angular is sharing data between a parent component and one o
 
 https://angular.io/guide/inputs-outputs
 
- 
+
+....
+- Estructura 
+
+# Versiones
+
+**Angular 15**
+
+- Standalone components are long-awaited features that enable developers to build Angular applications without using Modules.
+
 
 # Referencias
 
@@ -200,7 +209,5 @@ https://goalkicker.com/Angular2Book/
 We developed this book to be used as course material for Rangle's Angular training, but many people have found it to be useful for learning Angular on their own. This book will cover the most important Angular topics, from getting started with the Angular toolchain to writing Angular applications in a scalable and maintainable manner. We hope you enjoy this book.
 https://angular-training-guide.rangle.io/
 
-# Varios
 
-- Estructura 
  

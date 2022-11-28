@@ -29,6 +29,19 @@ set ASPNETCORE_ENVIRONMENT="Production"
 dotnet Gradebook.Register.dll run --environment="Production"
 ```
 
+
+## dotnet tool
+
+- dotnet tool install - Installs the specified .NET tool on your machine.
+
+
+Global tools can be installed in the default directory or in a specific location. The default directories are:
+
+OS 	Path
+Linux/macOS 	$HOME/.dotnet/tools
+Windows 	%USERPROFILE%\.dotnet\tools
+
+
 ## dotnet build 
 
 

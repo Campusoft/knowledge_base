@@ -18,3 +18,10 @@ Redis
 Redis is an open-source in memory data structure store which is used in Medusa to emit messages in the system and cache data. 
  
 https://medusajs.com/
+
+## Referencias
+
+Create an Ecommerce Storefront with Medusa, Strapi, and Remix
+- With Medusa, you can perform ecommerce functionalities while using Strapi to control the content displayed on your store.
+- To top it off, with Remix you can create awesome and fast UI. Remix is an open source react framework focused on web standards and modern web app UX.
+https://medusajs.com/blog/ecommerce-storefront-medusa-strapi-remix/?utm_content=229218640&utm_medium=social&utm_source=twitter&hss_channel=tw-3832252517

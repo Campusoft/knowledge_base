@@ -225,6 +225,16 @@ El objeto que se retorna es tipo "CurrentUserDto". Ver las propiedades "https://
 Mas detalles sobre ConfigStateService
 https://docs.abp.io/en/abp/latest/UI/Angular/Config-State-Service
 
+
+# Dynamic Permissions and Features
+
+
+With ABP 7.0, we've introduced the dynamic permissions and dynamic features systems
+https://blog.abp.io/abp/ABP.IO-Platform-7.0-RC-Has-Been-Published#Dynamic%20Permissions%20and%20Features
+
+Authorization in a Distributed / Microservice System | .NET Conf 2022 
+https://www.youtube.com/watch?v=DVqvRZ0w-7g
+
 # Referencias
 
 # Revisiones

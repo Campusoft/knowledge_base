@@ -36,7 +36,7 @@ Para recuperar claims especificos que existan en el token access, se debe config
 
 # Labatororios
 
-## Azure AD
+# Azure AD
 
 Single-page application: App registration
 
@@ -51,14 +51,16 @@ Quickstart: Register an application with the Microsoft identity platform
 https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app
 
 
-Archivo de descubrimiento, para 
-https://login.microsoftonline.com/TENANT-NAME/.well-known/openid-configuration
+Archivo de descubrimiento, para cuentas de Azure AD. (OpenId Connect).
+- <TENANT-NAME>, nombre del tenant o el Identificador del tenant
+https://login.microsoftonline.com/<TENANT-NAME>/.well-known/openid-configuration
 
 
-Authority, en Azure AD: En el archivo https://login.microsoftonline.com/{Tenant}/.well-known/openid-configuration, la propiedad "issuer"
+Authority, en Azure AD: 
+- En el archivo https://login.microsoftonline.com/{Tenant}/.well-known/openid-configuration, la propiedad "issuer"
 
 
-## Okta
+# Okta
 
 # IdentityServer
 

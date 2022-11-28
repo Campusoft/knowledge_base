@@ -174,6 +174,29 @@ https://medium.com/codex/you-should-choose-vite-over-cra-for-react-apps-heres-wh
 ## bundling 
 
 División de código
+- import() dinámico
+```
+import("./math").then(math => {
+  console.log(math.add(16, 26));
+});
+```
+- La función React.lazy te deja renderizar un import dinámico como un componente regular.
+- El componente lazy debería entonces ser renderizado adentro de un componente Suspense, lo que nos permite mostrar algún contenido predeterminado (como un indicador de carga) mientras estamos esperando a que el componente lazy cargue.
+```
+import React, { Suspense } from 'react';
+
+const OtherComponent = React.lazy(() => import('./OtherComponent'));
+
+function MyComponent() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+  );
+}
+```
 https://es.reactjs.org/docs/code-splitting.html
 
 
@@ -182,6 +205,7 @@ https://es.reactjs.org/docs/code-splitting.html
 
 Pagina dedicada a patrones en react. 
 https://reactpatterns.com/
+
 (Git de reactpatterns.com)
 https://github.com/chantastic/reactpatterns
 

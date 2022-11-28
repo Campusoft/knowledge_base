@@ -25,6 +25,29 @@ React components for faster and easier web development. Build your own design sy
 Material UI is an open-source React component library that implements Google's Material Design.
 https://mui.com/
 
+
+- Material UI uses Emotion as its default styling engine.
+- Material UI is designed to use the Roboto font by default. You may add it to your project with npm or yarn via Fontsource, or with the Google Fonts CDN.
+
+
+**Templates**
+
+
+React Material Admin — Material-UI Dashboard Template
+- This version uses React 16.14.0, React Router v5, MaterialUI v4, built with React Hooks and React Context (No Redux)
+https://github.com/flatlogic/react-material-admin
+
+
+Free React Admin Dashboard made with MUI's components, React and of course Next.js to boost your app development process!
+- Depende next
+https://github.com/devias-io/material-kit-react
+
+
+Material Dashboard 2 React is our newest free MUI Admin Template based on React.
+- 
+https://github.com/creativetimofficial/material-dashboard-react
+
+
 # Semantic UI React
 
 https://react.semantic-ui.com/
@@ -38,6 +61,7 @@ https://github.com/reactstrap/reactstrap
 They need npm install bootstrap to import Bootstrap stylesheet file inside index.js or App.js to enable Bootstrap default styling with import 'bootstrap/dist/css/bootstrap.min.css';. 
 
 React Reduction - Free Admin Template Built with React and Bootstrap4 
+- react: 16.x
 https://github.com/reduction-admin/react-reduction
 
 

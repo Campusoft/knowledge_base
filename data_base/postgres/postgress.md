@@ -161,3 +161,15 @@ https://github.com/pipelinedb/pipelinedb
 
 A curated list of awesome PostgreSQL software, libraries, tools and resources
 https://github.com/dhamaniasad/awesome-postgres
+
+
+Building a Scalable Event-Driven Search Architecture With Postgres’ Full-Text Search
+- Terminologies
+  - Stemming
+  - NGram
+  - Fuzziness
+  - Similarity
+  - Ranking
+- pg_trgm Postgres extension and added a words column to the table to store the searchable text.
+https://betterprogramming.pub/building-a-scalable-event-driven-search-architecture-with-postgres-full-text-search-4780b87a34ef
+
