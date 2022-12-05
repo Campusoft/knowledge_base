@@ -9,7 +9,6 @@ Successful DevOps depends on cultural change—adopting a collaboration-first ap
 - Collaboration. Build and foster a collaborative culture with b communication.
 
 
-
 history of DevOps 
 DevOps sets a new standard for how we build software. Before the mid-2000s, developers, IT operations, and security teams typically worked in silos. Developers wrote code, QA teams tested it, and IT operations teams deployed it to production. Security teams checked code for vulnerabilities only after deployment. If someone reported an issue, the entire process started over again. This linear approach to software was slow and frustrating for everyone involved. Then in 2008, system administrator Patrick Debois and software developer Andrew Shafer created a working group to help bridge the gap between operations and development teams. Their best practices became the DevOps processes we know today
 
@@ -24,6 +23,17 @@ DevOps Roadmap
 - Imagen Roadmap
 
 # Continuous integration and continuous delivery (CI/CD)
+
+
+# Jenkins 
+
+Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks related to building, testing, and delivering or deploying software.
+
+# Gitlab 
+
+
+GitLab is a single application with all the functionality of a DevSecOps Platform, allowing organizations to deliver software faster, while strengthening security and compliance, thereby maximizing the return on software development.
+
 
 
 # DevSecOps 

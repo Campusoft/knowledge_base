@@ -61,16 +61,53 @@ It’s very easy to create a new template and they are surprisingly easy to main
 Fortunately, the designers of the template engine have thought about this, and come up with a much nicer way of working: running templates.
 
 The idea is simple — the template is just plain text files. No special formats, no special markers. So, a C# file is always a valid C# file. If a template wishes to substitute some text, such as replacing a C# namespace for one that's based on the project name, this is handled with simple search and replace
-
 https://www.infoq.com/articles/dotnet-core-template-engine/
 
 
+.NET template, the template engine offers features like:
 
-***template.json***
+- Replace values.
+- Include and exclude files.
+- Preprocessor conditional directives to include or exclude entire blocks of code.
+- Execute custom operations when your template is used.
+
+
+
+Custom templates for dotnet new
+https://learn.microsoft.com/en-us/dotnet/core/tools/custom-templates
+
+**template.json**
 
 The name in the source tree to replace with the name the user specifies. The template engine will look for any occurrence of the sourceName mentioned in the config file and replace it in file names and file contents. The value to be replaced with can be given using the -n or --name options while running a template. If no name is specified, the current directory is used.
-
+- sourceName: 	string 	The name in the source tree to replace with the name the user specifies. The template engine will look for any occurrence of the sourceName mentioned in the config file and replace it in file names and file contents. The value to be replaced with can be given using the -n or --name options while running a template. If no name is specified, the current directory is used.
 https://docs.microsoft.com/en-us/dotnet/core/tools/custom-templates#templatejson
+
+Reference for template.json
+- This page describes the available properties of template.json configuration file.
+https://github.com/dotnet/templating/wiki/Reference-for-template.json
+
+Creating .NET Project Templates
+- The SourceName Parameter
+- The PreferNameDirectory Property
+- Creating Custom Parameters for .NET Project Templates
+- Adding Optional Contents to a .NET Project Template 
+https://code-maze.com/dotnet-project-templates-creation/
+
+
+
+**Ejemplo**
+
+Especificaciones:
+- Utilizar nombres proyectos: MyCompanyName.MyProjectName
+- Utilizar namaspace: MyCompanyName.MyProjectName
+
+Pasos:
+- Crear carpeta: .template.config, en el proyecto que se requiere colocarlo como template
+- Crear archivo, dentro de la carpeta creada: template.json
+- Configurar archivo template.json
+
+**Ejemplo**
+
 
 # Https 
 

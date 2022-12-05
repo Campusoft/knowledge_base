@@ -14,6 +14,17 @@ Akaunting uses Laravel, the best existing PHP framework, as the foundation frame
 https://github.com/akaunting/akaunting
 
 
+Akaunting Docker Image
+- This repository defines how the official Akaunting images are built for Docker Hub.
+- Existe docker-compose
+- Included is a watchtower container. This will automatically pull updates for the MariaDB and Akaunting images daily, restarting the containers with the new images when there has been an update.
+https://github.com/akaunting/docker
+
+
+Arquitectura:
+- Akaunting provides a powerful ACL system thanks to the wonderful Laratrust package for Laravel. It ships with very useful functions to be used on both PHP and Blade templates.
+
+
 # Odoo
 
 Odoo. Open Source Apps To Grow Your Business. 

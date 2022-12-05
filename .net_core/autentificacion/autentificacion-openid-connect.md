@@ -4,6 +4,30 @@
 
 You use AddJwtBearer to secure an API, meaning that the client of the API sends JWT-tokens to access the API and there is otherwise no human interaction.
 
+
+
+La propiedad TokenValidationParameters, del AddJwtBearer para configurar las validacion de los token, posee una propiedad "ClockSkew", que por defecto es 300 segundos.
+
+- Este valor permite configurar un rango entre la verificacion de la fecha de caducidad del token, y fecha de no utilizarse antes.
+
+
+Ejemplo
+
+```
+.AddJwtBearer(options =>
+            {
+                options.Authority = Configuration["AuthServer:Authority"];
+                options.RequireHttpsMetadata = Convert.ToBoolean(Configuration["AuthServer:RequireHttpsMetadata"]);
+                options.Audience = Configuration["AuthServer:Audience"];
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ClockSkew = TimeSpan.FromSeconds(300) // 5 min.
+                };
+
+            });
+```
+
+
 # OpenID Connect authentication to the MVC application
 
 AddOpenIdConnect you use to secure a web-application, where you have human interaction (login/logout...), because you typically redirect your user to your identity provider.

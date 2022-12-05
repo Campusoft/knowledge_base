@@ -292,10 +292,6 @@ React + Vite Example App
 https://github.com/romansndlr/react-vite-realworld-example-app
 
 
-Mattermost is an open source platform for secure collaboration across the entire software development lifecycle. This repo is the primary source for core development on the Mattermost platform; it's written in Golang and React, and runs as a single Linux binary with MySQL or PostgreSQL. 
-- Architecture overview
-  - https://docs.mattermost.com/getting-started/architecture-overview.html
-https://github.com/mattermost/mattermost-webapp
 
 # Revisiones
 

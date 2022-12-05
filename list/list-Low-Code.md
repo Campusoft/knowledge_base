@@ -43,7 +43,8 @@ https://retool.com/
 
 NocoDB is an open source #NoCode platform that turns any database into a smart spreadsheet. 
 
--  The Intuitive Vue Framework 
+- The Intuitive Vue Framework 
+- use Lerna to manage multi-packages. 
 
 # ToolJet
 
