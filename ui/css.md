@@ -32,7 +32,14 @@ Reference:
 
 # flex 
 
- A Complete Guide to Flexbox 
+A Complete Guide to Flexbox 
+- Properties for the Parent (flex container)
+  - display
+  - flex-direction
+  - flex-wrap
+- Properties for the Children (flex items)
+  - order
+  - flex-grow
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/#background
 
 Conceptos Básicos de flexbox

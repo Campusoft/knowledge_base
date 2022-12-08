@@ -25,13 +25,34 @@ Temas:
 
 **Entendimiento de un proyecto Maui**
 
+- Instalación y configuración de las herramientas de desarrollo
+
+.NET MAUI Instalación
+https://learn.microsoft.com/es-es/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin
+
+- Preparación del ambiente de desarrollo para Android
+
 Create a .NET MAUI app
 https://learn.microsoft.com/en-us/dotnet/maui/tutorials/notes-app/?view=net-maui-7.0
+
+- Ciclo de vida de las aplicaciones con .NET MAUI
+
+**XAML**
+
+- XAML namespaces
+
+**Page**
+
+- ContentPage
+- NavigationPage
+- FlyoutPage
+- TabbedPage
+
 
 **Layouts**
 
 
-**Navegación en XAML
+**Navegación en XAML**
 
 - Shell de .NET MAUI
 - Modificando el contenido del Shell
@@ -41,20 +62,29 @@ https://learn.microsoft.com/en-us/dotnet/maui/tutorials/notes-app/?view=net-maui
 - Agregando elementos adicionales del menú en el Shell
 - Implementando búsqueda en las páginas con el Shell
 
+**Display collections**
+- CollectionView
 
+**Recursos**
+
+- https://fakestoreapi.com
 
 ## Referencias
 
 
 .NET MAUI - Workshop
-A full day workshop (.NET MAUI Workshop in a Box) on how to build apps with .NET MAUI for iOS, Android, macOS, and Windows 
+- Contiene el material de workshop 
+- A full day workshop (.NET MAUI Workshop in a Box) on how to build apps with .NET MAUI for iOS, Android, macOS, and Windows 
 https://github.com/dotnet-presentations/dotnet-maui-workshop
 
 
 Taller de desarrollo de aplicaciones con .NET MAUI
+- Contiene archivos de presentacion del contenido (Son algunos limitados en su contenido)
 - Este taller es una adaptación de .NET MAUI - Workshop por James Montemagno.
 https://github.com/jsuarezruiz/taller-dotnet-maui
 
 
 NET MAUI esencial
 https://www.linkedin.com/learning/dot-net-maui-esencial
+
+
