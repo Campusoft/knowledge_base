@@ -30,6 +30,10 @@ Temas:
 .NET MAUI Instalación
 https://learn.microsoft.com/es-es/dotnet/maui/get-started/installation?view=net-maui-7.0&tabs=vswin
 
+
+Set up Android device for debugging
+https://learn.microsoft.com/en-us/dotnet/maui/android/device/setup?view=net-maui-7.0
+
 - Preparación del ambiente de desarrollo para Android
 
 Create a .NET MAUI app
@@ -65,6 +69,8 @@ https://learn.microsoft.com/en-us/dotnet/maui/tutorials/notes-app/?view=net-maui
 **Display collections**
 - CollectionView
 
+**MVVM**
+
 **Recursos**
 
 - https://fakestoreapi.com
@@ -85,6 +91,19 @@ https://github.com/jsuarezruiz/taller-dotnet-maui
 
 
 NET MAUI esencial
+- 2. Anatomía de aplicaciones con .NET MAUI
+  - Funcionalidades específicas de las plataformas
+  - Inyección de dependencias
+- 3. El lenguaje XAML
+- 4. Elementos esenciales de la interfaz de usuario
+- 5. Navegación en .NET MAUI
+- 6. Enlace de datos
+- 7. Los comandos
+- 8. El patrón de diseño MVVM
+- 9. Controles para colecciones
+- 10. Invocación de servicios externos
+- 11. Almacenamiento local de datos
+- 12. Autenticación en .NET MAUI
 https://www.linkedin.com/learning/dot-net-maui-esencial
 
 

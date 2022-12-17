@@ -14,6 +14,19 @@ Tables
     - AbpEntityPropertyChanges
 
 
+AuditLogInfo: The root object. El que contiene la informacion general (Cabecera), usuario, fecha, ip, etc.
+AuditLogActionInfo: An audit log action is typically a controller action or an application service method call during the web request.
+EntityChangeInfo: Represents a change of an entity in this web request. An audit log may contain zero or more entity changes.
+EntityPropertyChangeInfo: Represents a change of a property of an entity.
+
+Explicacion.
+
+Se ejecuta un proceso 'Ej: crear una orden de compra' 
+- La auditoria, registrara un registro principal (Cabecera), de esta accion.
+- Se registraran todos los servicios de aplicacion que intervienen en esta accion.
+- Se registraran todas los cambios en las entidades que intervengan en esta accion, y si se encuentra configuradas que se auditen. 
+
+
 Entity History
 
 # Implementaciones

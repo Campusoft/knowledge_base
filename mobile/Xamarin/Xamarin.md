@@ -141,3 +141,7 @@ How to Release Your Xamarin App for iOS and Android
 https://instabug.com/blog/how-to-release-xamarin-app-ios-and-android/
 
 
+
+# Training
+
+Xamarin.Forms full day workshop building an awesome cross-platform app for iOS, Android, and Windows. https://github.com/dotnet-presentations/xamarin.forms-workshop

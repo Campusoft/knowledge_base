@@ -139,3 +139,36 @@ The open-source Calendly alternative.
 - Prisma
 https://github.com/calcom/cal.com
 
+## AdminJS
+
+State management
+- redux
+- react-redux
+
+Styling
+- styled-components
+- styled-system
+
+Other
+- axios
+- recharts
+- flat
+- @carbon/icons-react
+
+An AdminJS application consists of:
+- a core package
+- a plugin (for a framework of your choice)
+  - Express server
+  - Nest server
+  - Hapi server
+  - Koa server
+  - Fastify server
+- an adapter for (for a ORM/ODM of your choice)
+  - TypeORM
+  - Sequelize
+  - Mongoose
+  - MikroORM
+  - Objection
+
+AdminJS is an admin panel for apps written in node.js 
+https://github.com/SoftwareBrothers/adminjs

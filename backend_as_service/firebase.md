@@ -12,6 +12,12 @@ Cloud Firestore en modo nativo o en modo Datastore
 
 Para acceder a todas las nuevas características de Firestore, debes usar Firestore en modo nativo.
 
+#  Firebase Realtime Database (Realtime Database)
+
+
+Rest API, utiliz Using server-sent events (SSE)
+
+
 # Tools
 
 The Powerful GUI Client for Firebase Firestore
