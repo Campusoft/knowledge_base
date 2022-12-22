@@ -1,13 +1,11 @@
 # Training .net
 
-
 ASP.NET Core Developer Roadmap
 https://github.com/MoienTajik/AspNetCore-Developer-Roadmap
 
 # Training .NET MAUI 
 
 Pronunciacion. (mah-wee). 
-
 
 Temas:
 - XAML

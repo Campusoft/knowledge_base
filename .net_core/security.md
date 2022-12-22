@@ -3,6 +3,9 @@
 NWebsec consists of several security libraries for ASP.NET applications. These libraries work together to remove version headers, control cache headers, stop potentially dangerous redirects, and set important security headers
 https://docs.nwebsec.com/en/latest/
 
+
+
+
 - NWebsec features can be enabled through middleware or MVC filter attributes.
 - Strict-Transport-Security
 - X-Content-Type-Options
@@ -40,7 +43,7 @@ Z.EntityFramework.Plus.EFCore. EF+ Audit easily tracks changes, exclude/include 
 
 https://entityframework-plus.net/ef-core-audit
 
-## **_Errores_**
+**_Errores_**
 
 System.ArgumentException: Destination array was not long enough. Check the destination index, length, and the array's lower bounds.
 Parameter name: destinationArray
@@ -62,6 +65,8 @@ Interaction extensions to audit different systems are provided, such as Entity F
 
 https://github.com/thepirat000/Audit.NET
 
+
+
 Campos
 
 - UserName
@@ -77,14 +82,84 @@ A data provider (or storage sink) contains the logic to handle the audit event o
 - Se guarda en una unica tabla.
 - Se puede configurar las columnas especificas para guardar alguna informacion existente en el audit log.
 - El audit log, se guarda en JSON en una columna que se configure.
-  https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.SqlServer#auditnetsqlserver
+
+
+Table constraints
+- The table should exists.
+- The table should have a single ID column (Unique or Primary key).
+- The type of the ID column should be convertible to NVARCHAR.
+
+Script para crear la tabla.
+https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.SqlServer#table-constraints
+
+Informacion Audit.NET.SqlServer
+https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.NET.SqlServer#auditnetsqlserver
+
+
+Ejemplo/Labs
+
+Table:
+
+```
+CREATE TABLE [AuditEvent]
+(
+    [EventId] BIGINT IDENTITY(1,1) NOT NULL,
+    [InsertedDate] DATETIME NOT NULL DEFAULT(GETUTCDATE()),
+    [LastUpdatedDate] DATETIME NULL,
+    [JsonData] NVARCHAR(MAX) NOT NULL,
+    [EventType] NVARCHAR(100) NOT NULL,
+	[User] NVARCHAR(100),
+	[CorrelationId] NVARCHAR(100),
+	[Entity] NVARCHAR(MAX)
+    CONSTRAINT PK_Event PRIMARY KEY (EventId)
+)
+GO
+```
+
+Configuracion Audit.NET.SqlServer:
+- Conexiones
+- Tabla, y campos.
+- Establecer campos en la tabla, con campos personalizados. "CorrelationId"
+
+```
+ Audit.Core.Configuration.Setup()
+    .UseSqlServer(config => config
+        .ConnectionString("Server=(LocalDb)\\MSSQLLocalDB;Database=AuditNet.Labs;Trusted_Connection=True;")
+        .Schema("dbo")
+        .TableName("AuditEvent")
+        .IdColumnName("EventId")
+        .JsonColumnName("JsonData")
+        .LastUpdatedColumnName("LastUpdatedDate")
+        .CustomColumn("EventType", ev => ev.EventType)
+        .CustomColumn("User", ev => ev.Environment.UserName)
+        //.CustomColumn("User", ev => ev.Environment.DomainName)
+        .CustomColumn("CorrelationId", ev => ev.CustomFields.ContainsKey("CorrelationId")? ev.CustomFields["CorrelationId"]:null)
+    );
+
+```
+
+Agregar un campo personalizado "CorrelationId"
+
+```
+var app = builder.Build();
+.
+.
+.
+IHttpContextAccessor ctxAccesor = app.Services.GetRequiredService<IHttpContextAccessor>();
+Audit.Core.Configuration.AddCustomAction(ActionType.OnScopeCreated, scope =>
+{
+  var httpContext = ctxAccesor.HttpContext;
+  if (httpContext != null)
+	scope.Event.CustomFields["CorrelationId"] = httpContext.TraceIdentifier;
+});
+```
 
 **_Kafka_**
 Apache Kafka Server provider for Audit.NET library (An extensible framework to audit executing operations in .NET).
 https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.NET.Kafka/README.md
 
-**_Elasticsearch_**
 
+**_Elasticsearch_**
 Elasticsearch provider for Audit.NET library (An extensible framework to audit executing operations in .NET).
 https://github.com/thepirat000/Audit.NET/blob/master/src/Audit.NET.ElasticSearch/README.md
 
@@ -120,6 +195,7 @@ Generate Audit Trails for ASP.NET MVC Web API calls. This library provides a con
 https://github.com/thepirat000/Audit.NET/tree/master/src/Audit.WebApi#auditwebapi
 
 **_Audit.EntityFramework_**
+
 Automatically generates Audit Logs for EntityFramework's operations. Supporting EntityFramework and EntityFramework Core
 
 Mode: To indicate the audit operation mode

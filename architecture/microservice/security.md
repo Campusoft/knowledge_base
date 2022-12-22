@@ -66,10 +66,11 @@ Microservices shall generate and pass through microservice call chain a correlat
 Logging agent shall include correlation ID in every log message
 
 Audit Trails 201: Technical Deep Dive
-
 - Data Store. Algunas razones porque utilizar no-sql mongodb
 - Audit Service responsible  
-  https://harness.io/blog/audit-trails-technical/
+- Schemaless: Audit records don’t have a fixed schema. Many fields like Timestamp, Action, User, Resource ID, etc. are common to all audit records, but there can be many additional fields in the audit record that depend on the kind of operation being audited.
+https://harness.io/blog/audit-trails-technical/
+
 
 # Herramientas
 

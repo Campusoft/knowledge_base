@@ -73,20 +73,10 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Polic
 
 ## CORS (Cross-Origin Resource Sharing) 
 
-
 # Audit Trail
 
+[Audit](Audit.md)
 
-X-Forwarded-For
-La cabecera X-Forwarded-For (XFF) es un estándar de facto para identificar el origen de la dirección IP de un cliente conectado a un servidor web a través de un proxy HTTP o un balanceador de carga
-https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Forwarded-For
-
-**Revisiones**
-
-Snapshot History vs Audit Logs
-
-Utilizar  time series db para auditar. Ejemplo producto que utiliza time series para Snapshot History
-https://docs.cloudquery.io/docs/cli/history/overview/
 # Varios
 
 cookies  httpOnly
@@ -94,27 +84,31 @@ cookies  httpOnly
 Información Personal Identificable (PII)
 PII es cualquier información sobre un individuo mantenida por una agencia, incluyendo (1) cualquier información que pueda usarse para distinguir o rastrear la identidad de un individuo, tal como nombre, número de seguridad social, fecha y lugar de nacimiento, apellido de soltera de la madre o registros biométricos; y (2) cualquier otra información que esté vinculada o que pueda vincularse con un individuo, como información médica, educativa, financiera y de empleo.
 
-# .NET
-
-NWebsec consists of several security libraries for ASP.NET applications. These libraries work together to remove version headers, control cache headers, stop potentially dangerous redirects, and set important security headers
-https://docs.nwebsec.com/en/latest/
-
+  
 # Tool 
 
 Security Code Scan - static code analyzer for .NET
 https://security-code-scan.github.io/
 
 
-# blockchain
+# Blockchain
 
 Ethereum funciona como una plataforma de código abierto basada en la tecnología blockchain.
 
 El blockchain de ethereum es similar al del bitcoin en el sentido de que funciona también como registro del historial de transacciones
 
+# Normativas
 
-# Reglamento General de Protección de Datos - GDPR
+## Reglamento General de Protección de Datos - GDPR
 
-# (LOPD) La Ley Orgánica de Protección de Datos Personales de Ecuador
+## PCI DSS
+
+Estándar de seguridad de datos de la industria de pagos con tarjeta
+
+
+## HIPAA
+
+## (LOPD) La Ley Orgánica de Protección de Datos Personales de Ecuador
 
 Con fecha de 26 de mayo de 2021 se ha publicó La Ley Orgánica de Protección de Datos de Ecuador, una vez que el texto fue aprobado por la Asamblea Nacional tras los correspondientes debates y sancionado por el señor Presidente de la República. Cabe destacar que las empresas cuentan desde ese momento con un período de adaptación de dos años con el objetivo de poder adecuar todos sus procesos a lo exigido por esta nueva normativa
 

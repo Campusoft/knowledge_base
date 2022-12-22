@@ -67,6 +67,7 @@ ASP.NET Core Hero Boilerplate - .NET 5 Clean Architecture
   - API Versioning
 - Response Wrappers
 - Entity Framework Core - Audit Logs.
+  - https://github.com/aspnetcorehero/EntityFrameworkCore.AuditTrail
 - Pagination
 - Microsoft Identity with JWT Authentication
 - Role based Authorization
@@ -254,7 +255,12 @@ Northwind Traders is a sample application built using ASP.NET Core and Entity Fr
 - Angular 8
 - Open API with NSwag
 - Using CQRS + MediatR simplifies your overall design
-- Security using ASP.NET Core Identity + IdentityServer  
+  - MediatR 
+  - Query : IRequest
+  - Command : IRequest
+- Security using ASP.NET Core Identity + IdentityServer 
+- Domain
+  - List child private set;
 - Automated testing with xUnit.net, Moq, and Shouldly
 https://github.com/jasontaylordev/NorthwindTraders
 

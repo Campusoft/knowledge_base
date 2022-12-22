@@ -59,6 +59,12 @@ Real-World CQRS/ES with ASP.NET and Redis Part 2 - The Write Model
 https://www.exceptionnotfound.net/real-world-cqrs-es-with-asp-net-and-redis-part-2-the-write-model/
 
 
+
+Ricardo Borillo - CQRS y los beneficios surgidos de la necesidad 
+- Al seperar las consultas (Las que son las mas frecuentes en cambiar, segun avance el crecimiento de la aplicacion, hoy se visualiza de esta forma, luego se aumenta o se presenta de otra forma). Parte variable. 
+- Dos naturalezas de la aplicacion. Parte de negocio (Commandos) alteraciones sobre el estado de aplicacion, estas generan eventos.  
+https://www.youtube.com/watch?v=8ZfqPqyyf7M&t=793s
+
 Consequences
 - We have optimized models for writes and reads (SRP principle).
 
