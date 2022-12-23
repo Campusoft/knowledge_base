@@ -1,4 +1,4 @@
-# architecture
+# Architecture
  
  
 Understanding the SQL Server Analysis Services service behind the scene makes you

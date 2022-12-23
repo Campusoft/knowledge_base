@@ -18,6 +18,16 @@ Aplica las configuraciones columnas conceptos genericos.
 abp/framework/src/Volo.Abp.EntityFrameworkCore/Volo/Abp/EntityFrameworkCore/Modeling/AbpEntityTypeBuilderExtensions.cs
 
 
+# Conexion a la base de datos
+
+
+Abp, permite personalizar la forma como se resuelve una conexion a la base de datos. Abp posee implementaciones:
+- DefaultConnectionStringResolver. Resuelve la conexion desde cadenas de conexion configuradas en appsettings. 
+- MultiTenantConnectionStringResolver. Permite resolver la conexion de la base de datos desde el connection string del actual tenant si existe
+
+Para implementar una logica personalizada, se utiliza la interface IConnectionStringResolver 
+https://docs.abp.io/en/abp/latest/Connection-Strings#replace-the-connection-string-resolver
+
 
 
 # Postgres
