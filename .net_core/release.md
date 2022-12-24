@@ -45,7 +45,8 @@ When running application locally, you can use launchsettings.json file (in Prope
     "IGG.DbMigrator.Local": {
       "commandName": "Project",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Local"
+        "ASPNETCORE_ENVIRONMENT": "Local",
+        "DOTNET_ENVIRONMENT": "Local"
       }
     }
   }
@@ -53,8 +54,8 @@ When running application locally, you can use launchsettings.json file (in Prope
 ```
 
 Este archivo posee dos profiles "IGG.DbMigrator", "IGG.DbMigrator.Local".
-- En el profiles "IGG.DbMigrator.Local", se establece el ambiente "Local", en la variable de entorno "ASPNETCORE_ENVIRONMENT"
+- En el profiles "IGG.DbMigrator.Local", se establece el ambiente "Local", en la variable de entorno "ASPNETCORE_ENVIRONMENT" y "DOTNET_ENVIRONMENT"
+  - Utilizar DOTNET_ENVIRONMENT y ASPNETCORE_ENVIRONMENT. Puesto que ASPNETCORE_ENVIRONMENT unicamente es valida en "WebApplication.CreateBuilder"
   - Este profile puede combinarse con appsettings. El archivo "appsettings.Local.json", sera el appsettings para el ambiente "Local", establecido en el profile
-  
   
 
