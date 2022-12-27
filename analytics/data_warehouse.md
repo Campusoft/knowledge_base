@@ -1,7 +1,7 @@
 # Data Warehouse
 
 
-# Data Profiling
+# Data Profiling. Perfilado de datos
 
 Data profiling is the process of collecting statistics and other information about the data available in different source systems. The obtained information is invaluable for the further design of your data warehouse and ETL processes. Data profiling is also an important part of any data quality initiative; before quality can be improved, a baseline has to be established indicating what the current state of the data is. Profiling can be performed at three different levels:
 
@@ -47,5 +47,10 @@ Ptyhon
 An open source and collaborative framework for extracting the data you need from websites.
 In a fast, simple, yet extensible way.
 https://scrapy.org/
+
+# Metodogias
+
+## DMBOK
+
 
 

@@ -1,6 +1,12 @@
 # Azure AD
 
 
+# Licensing
+
+
+Understanding Azure Active Directory Licensing (Free, Basic, P1, P2)
+https://www.agileit.com/news/understanding-azure-active-directory-licensing-free-basic-p1-p2/
+
 # Revisiones
 
 

@@ -60,12 +60,56 @@ https://www.startdataengineering.com/post/cdc-using-singer/
 # Pentaho Data Integration ( ETL ) a.k.a Kettle
 
 
+# AWS Glue
+
+El primer paso de un proyecto de análisis o ML consiste en preparar los datos para obtener resultados de calidad. AWS Glue es un servicio de integración de datos sin servidor que vuelve más fácil, rápido y barato el proceso de preparación de datos. Puede detectar y conectarse a más de 70 orígenes de datos distintos, administrar los datos en un catálogo centralizado, además de visualizar, crear, ejecutar y supervisar las canalizaciones de ETL para cargar los datos en los lagos de datos correspondientes
+https://aws.amazon.com/es/glue/
+
+
+--------------
+Amazon Web Services (AWS) is a Niche Player in this Magic Quadrant; it is a new entrant this year. It is headquartered in Seattle, Washington. It offers AWS Glue as its data integration tool. Its customers use AWS Glue when their primary target data stores reside on the AWS cloud. Gartner estimates thousands of customers using AWS Glue data integration jobs and catalog service. Its operations are global and across various sectors.
+Strengths
+
+- Native integration reduces complexity and improves interoperability within the AWS data ecosystem: AWS Glue’s native integration with other AWS cloud services (like S3, Redshift, Athena and Lake Formation) makes it the most suitable data integration tool choice when selecting an AWS-native data ecosystem.
+- Innovation to support data delivery demands: AWS Glue scores well on innovation for its serverless data integration service that goes beyond scaling infrastructure for data processing. It supports ML-based data cleansing and PII detection at scale. It even extends data processing for other applications (such as Notebooks and IDEs) through its interactive sessions API.
+- Centralizes metadata in its data catalog: AWS Glue offers a rich set of metadata capabilities such as cataloging, search, lineage, data quality checks, PII detection and data access logging for auditability. For example, AWS Glue metadata can be accessed within Athena for exploring the underlying data in S3.
+
+Cautions
+
+- Limited connectors beyond AWS-native services: AWS Glue has a wide range of native connectors from the AWS marketplace for on-premises and other clouds. However, for certain non-AWS sources (like Mainframes, SAP, Azure or GCP) customers will need third-party options, some of which are available from AWS Marketplace (like CData, tCVision and Qlik) to compensate for this deficit.
+- Steep learning curve: AWS Glue is not friendly to beginners — according to Gartner Peer Insights reviews, its product documentation and sample code libraries are not enough for complex data engineering tasks. There is a high reliance on technical expertise for coding (Python or Scala) and debugging, and implementing an enterprise integration framework requires expertise in serverless architectures. In addition to recent product improvements, AWS Glue has added no-code tools like Glue Studio and Glue Databrew to mitigate these challenges.
+- Practitioners report several operational issues: Gartner Peer Insights reviews highlight several operational issues such as high startup times for cluster spin and new jobs, lack of idle timeout settings leading to high costs, and occasional performance bottlenecks during peak hours of data processing. However, the latest AWS Glue 3.0 release should alleviate most of these issues.
+
+ Magic Quadrant for Data Integration Tools	
+https://www.gartner.com/doc/reprints?id=1-2AWA2A6O&ct=220822&st=sb	
 
 # SQL Server Integration Services
 
 SQL Server Integration Services is a platform for building enterprise-level data integration and data transformations solutions. Use Integration Services to solve complex business problems by copying or downloading files, loading data warehouses, cleansing and mining data, and managing SQL Server objects and data.
 
-# talend
+# Azure Data Factory - ADF
+
+
+Microsoft positions ADF and SSIS for technical roles with its data engineering capabilities, which include curating trusted data assets and managing the full life cycle of data pipelines. It positions Power Query for citizen roles with its core data preparation capabilities and ease of use to simplify data access.
+
+
+Azure Data Factory es un servicio en la nube administrado creado para estos complejos proyectos híbridos de extracción, transformación y carga (ETL), extracción, carga y transformación (ELT) e integración de datos.
+
+Organización, supervisión y administración del rendimiento de la canalización
+
+El mantenimiento de canalizaciones con un panorama de datos de rápida evolución puede llevar mucho tiempo, lo que implica intervenciones manuales. En Azure Data Factory, no solo puede supervisar visualmente todas las ejecuciones de actividad, sino que también puede mejorar la productividad operativa mediante la configuración de alertas de forma proactiva para supervisar las canalizaciones. Estas alertas pueden aparecer en los grupos de alertas de Azure, para garantizar que pueda recibir notificaciones puntuales para evitar problemas descendentes o ascendentes antes de que se produzcan.
+
+
+
+Azure Data Factory. Disfrute del único servicio totalmente compatible que facilita el traslado de todos los paquetes de SSIS a la nube.
+
+This is an infographic speaking to the 5 benefits of migrating SSIS to ADF in the cloud.
+- 
+https://azure.microsoft.com/es-mx/resources/benefits-of-migrating-ssis-to-the-cloud/
+
+
+
+# Talend
 
 [Mas informacion talend](/talend/talend.md)
 

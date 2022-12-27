@@ -1,3 +1,17 @@
+# Azure Synapse Analytics
+
+ noviembre, 2019. On November fourth, we announced Azure Synapse Analytics, the next evolution of Azure SQL Data Warehouse. 
+
+With Azure Synapse, data professionals can query both relational and non-relational data using the familiar SQL language. This can be done using either serverless on-demand queries for data exploration and ad hoc analysis or provisioned resources for your most demanding data warehousing needs. A single service for any workload.
+
+
+Taller Azure Synapse Analytics
+- Clase 01
+https://www.youtube.com/watch?v=-AZa_z493vE
+- Clase 14
+https://www.youtube.com/watch?v=hu9jCNtKxQU
+- Todas las clases
+https://www.youtube.com/@eduardocastrom/videos
 
 # Varios
 
