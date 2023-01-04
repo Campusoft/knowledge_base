@@ -124,10 +124,7 @@ https://github.com/manfredsteyer/angular-crud
  
 
 
-# best practice standards
 
-Angular coding style guide
-https://angular.io/guide/styleguide
 
 # Estilos
 

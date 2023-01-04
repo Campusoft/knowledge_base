@@ -238,7 +238,7 @@ Depending on the response_type in the OIDC protocol, some claims are transferred
 
 
 Authentication Request
-- login_hint. OPTIONAL. Hint to the Authorization Server about the login identifier the End-User might use to log in (if necessary). 
+- login_hint. OPTIONAL. Hint to the Authorization Server about the login identifier the End-User might use to log in (if necessary).  Can be used to pre-fill the username/email address field of the sign-in page for the user, if their username is known ahead of time.  
 https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
 
 

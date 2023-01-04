@@ -251,6 +251,9 @@ ABP Framework defines a setting, named Abp.Timing.Timezone, that can be used to 
 
 # Background Jobs
 
+
+
+
 # Background Workers
 
 Background workers are simple independent threads in the application running in the background. Generally, they run periodically to perform some tasks

@@ -23,7 +23,6 @@ https://towardsdatascience.com/data-visualization-101-how-to-choose-a-chart-type
 ## Referencias
 
 Power BI Governance, Good Practices, Part 2: Version Control with OneDrive, Teams and SharePoint Online
-
 https://www.biinsight.com/power-bi-governance-good-practices-part-2-version-control-with-onedrive-teams-and-sharepoint-online/
 
 Whitepapers for Power BI
@@ -33,6 +32,14 @@ https://docs.microsoft.com/en-us/power-bi/guidance/whitepapers
 
 Blog comunitario de la suite de analítica de Microsoft de la mano de Power Platform y Azure Data Platform.  (Tiene algunos articulos interesantes)
 https://blog.ladataweb.com.ar/
+
+
+Diferentes reportes de Power BI. Referencias
+- Análisis población países.pbix 
+- Análisis empleados
+- Proyecto finanzas
+https://github.com/DaniMonsalve/PowerBI.pbix-
+
 
 ### Community Tools
 
@@ -87,7 +94,14 @@ https://www.sqlbi.com/tools/power-pivot-utilities/
 Turbo.net Power BI Desktop Application
 The Turbo.net tools allow applications to run on any desktop. Their version allows Power BI Desktop to run on an Apple Mac.
 Contributed and supported by: Turbo.net
-https://turbo.net/run/powerbi/powerbi 
+https://turbo.net/run/powerbi/powerbi
+
+
+
+## Indicadores referencias
+
+
+https://github.com/DaniMonsalve/PowerBI.pbix- 
 
 # Training
 

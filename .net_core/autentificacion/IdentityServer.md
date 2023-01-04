@@ -90,6 +90,50 @@ This is the most common type of client scenario: web applications, SPAs or nativ
 
 add support for interactive user authentication via the OpenID Connect protocol
 
+
+Adding Support for External Authentication
+https://identityserver4.readthedocs.io/en/aspnetcore1/quickstarts/4_external_authentication.html
+
+
+Ejemplo de configuracion AddOpenIdConnect para   identityserver
+- SignInScheme, colocar IdentityServerConstants.ExternalCookieAuthenticationScheme
+
+```
+.AddOpenIdConnect(openIdConfiguracion.ProveedorNombre, openIdConfiguracion.NombreVisualizar, options =>
+{
+	options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+	//options.SignOutScheme = IdentityServerConstants.SignoutScheme;
+
+	options.Authority = openIdConfiguracion.Autoridad;
+	options.ClientId = openIdConfiguracion.ClienteId;
+	options.ResponseType = OpenIdConnectResponseType.CodeIdToken;
+	options.CallbackPath = openIdConfiguracion.UrlRetorno;
+	options.ClientSecret = openIdConfiguracion.ClienteClave;
+	//options.RequireHttpsMetadata = false;
+	options.SaveTokens = true;
+	options.GetClaimsFromUserInfoEndpoint = true;
+
+	//Personalizar, segun la configuracion final.
+	options.Scope.Add("email");
+	options.ClaimActions.MapJsonKey(ClaimTypes.NameIdentifier, openIdConfiguracion.ClaimMapeoNameIdentifier);
+
+	//Paremtros adicionales
+	options.Events.OnRedirectToIdentityProvider = ctx =>
+	{
+		if (ctx.Properties.Items.TryGetValue("userId", out var userId))
+		{
+			ctx.ProtocolMessage.LoginHint = userId;
+		}
+
+		return Task.CompletedTask;
+	};
+});
+```
+
+ 
+
+
+
 # Endpoint 
 
 Con el endpoint de descubrimiento, se puede obtener todos los endpoint disponibles

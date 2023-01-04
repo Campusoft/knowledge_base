@@ -2,17 +2,46 @@
 
 # Organizacion
 
-
-***Revision***
-
 Scalable Angular app architecture
+- 1. Main ideas and concepts
+- 1.1 State management with observable store services
+- 1.2 Component based architecture
+  - 1.2.1 Presentational components
+  - 1.2.2 Smart container components
+- 1.3 One-way data flow
+- 1.4 Communication with external systems
+- 2. Modules
+- 2.2 Core module
+- 2.3 Feature modules
+- 2.4 Shared module
+- 2.5 Layout module. putting the components like header and footer used to create basic app layout.
+- 2.6 Views module
+- 2.7 Styles
+- 3. Testing
 
+Coffee Election app is an Angular app showcasing the scalable Angular app architecture
 https://georgebyte.com/scalable-angular-app-architecture/
+
+
+
+# State Management 
+
+
+State management in Angular with observable store services
+-  Observable stores are a state management solution for Angular apps implemented using RxJS to mimic Redux architecture. This article explains how to create, use and test these observable store services. 
+https://georgebyte.com/state-management-in-angular-with-observable-store-services/
+
 
 # Documentacion 
 
 The missing documentation tool for your Angular application
 https://compodoc.github.io/compodoc/
+
+# Best practice standards
+
+Angular coding style guide
+https://angular.io/guide/styleguide
+
 
 # Referencias Arquitecturas
  
@@ -47,7 +76,6 @@ https://github.com/phongnguyend/Practical.CleanArchitecture
 Angular Spotify
 
 Spotify client built with Angular 12, Nx Workspace, ngrx, TailwindCSS and ng-zorro 
-A simple Spotify client built with Angular 12, Nx workspace, ngrx, TailwindCSS and ng-zorro. 
 https://github.com/trungk18/angular-spotify
 
 

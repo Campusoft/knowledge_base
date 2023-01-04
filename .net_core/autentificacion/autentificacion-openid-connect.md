@@ -15,16 +15,16 @@ Ejemplo
 
 ```
 .AddJwtBearer(options =>
-            {
-                options.Authority = Configuration["AuthServer:Authority"];
-                options.RequireHttpsMetadata = Convert.ToBoolean(Configuration["AuthServer:RequireHttpsMetadata"]);
-                options.Audience = Configuration["AuthServer:Audience"];
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ClockSkew = TimeSpan.FromSeconds(300) // 5 min.
-                };
+	{
+		options.Authority = Configuration["AuthServer:Authority"];
+		options.RequireHttpsMetadata = Convert.ToBoolean(Configuration["AuthServer:RequireHttpsMetadata"]);
+		options.Audience = Configuration["AuthServer:Audience"];
+		options.TokenValidationParameters = new TokenValidationParameters
+		{
+			ClockSkew = TimeSpan.FromSeconds(300) // 5 min.
+		};
 
-            });
+	});
 ```
 
 
@@ -55,8 +55,59 @@ Para recuperar claims especificos que existan en el token access, se debe config
 	options.GetClaimsFromUserInfoEndpoint = true; 
 	
 	options.ClaimActions.MapJsonKey("FooClaim", "FooClaim"); 
+	
+	options.ClaimActions.MapJsonKey(ClaimTypes.NameIdentifier, "sub"); 
+	
 });
 ```
+
+Mapeo de algunos claim
+- El claim "ClaimTypes.NameIdentifier", por lo general se mapea con "sub" en un JWT. El sub  "Subject", identifica el objeto o usuario en nombre del cual fue emitido 
+
+
+**Pre - Rellenar el usuario/email, en la pagina de inicio de sesion.** 
+
+En el Challenge, agregar una propiedad con el usuario. Ejemplo "userId"
+
+```
+var provider = OpenIdConfiguracion.ProveedorNombre;
+var redirectUrl = Url.Page("./Login", pageHandler: "ExternalLoginCallback", values: new { ReturnUrl, ReturnUrlHash });
+var properties = SignInManager.ConfigureExternalAuthenticationProperties(provider, redirectUrl);
+properties.Items["scheme"] = provider;
+
+//Use for LoginHint
+properties.Items["userId"] = Usuario;
+
+return await Task.FromResult(Challenge(properties, provider));
+```
+
+En la configuracion del AddOpenIdConnect, con el evento "OnRedirectToIdentityProvider", agregar ProtocolMessage.LoginHint con el valor de la propiedad establecida en el Challenge "userId"
+-  
+
+```
+ context.Services.AddAuthentication()
+            .AddOpenIdConnect(openIdConfiguracion.ProveedorNombre, openIdConfiguracion.NombreVisualizar, options =>
+            {
+                options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+                .
+				.
+				.
+				
+                //Paremtros adicionales
+                options.Events.OnRedirectToIdentityProvider = ctx =>
+                {
+                    if (ctx.Properties.Items.TryGetValue("userId", out var userId))
+                    {
+                        ctx.ProtocolMessage.LoginHint = userId;
+                    }
+
+                    return Task.CompletedTask;
+                };
+            });
+```
+
+ 
+
 
 # Labatororios
 
