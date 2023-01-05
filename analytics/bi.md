@@ -3,6 +3,49 @@
 Business Intelligence (BI). Business Analytics. The Cloud. On-Premises. Artificial intelligence (AI). Machine learning (ML). Self-service analytics. Augmented Analytics. All of these concepts are important to understand
 
 
+# Dashboard
+
+El dashboard o también conocido como panel de información o panel de gestión, es una interfaz gráfica que ayuda a los usuarios a visualizar indicadores clave de desempeño o KPI y métricas para la toma de decisiones que llevarán a la empresa a lograr sus objetivos. Por esta razón, muchos profesionales lo ven como un informe de progreso.
+
+Básicamente, reúne una gran cantidad de datos que se encuentran disponibles en la organización, transformándolos en KPI, con tablas y gráficos.
+
+Existe tres tipos comunes de dashboards
+- Operacional
+- Estrategico / Ejecutivo
+- Analitico
+
+**Dashboard Operativos**
+
+Enfatizan el monitoreo mas que el analisis y la administracion. Este tipo muestra datos que facilitan la parte operativa de un negocio. Permite realizar el seguimiento de la situacion de procesos y/o sectores de la organizacional, al menos de forma diaria. 
+
+Operational dashboards provide time-critical data to consumers. I like to think about operational dashboards as of cockpit in the car or plan.
+
+
+**Dashboard Tacticos**
+
+
+On  the other hand, analytical dashboards focus more on identifying trends and patterns from  historical data and enable better mid to long-term decision-making
+
+
+## KPI
+
+**KPI de eCommerce**
+
+Los 8 KPIs de un eCommerce 
+- 1. Tráfico de la tienda online
+- 2. Visitas a las vistas de producto
+- 3. Tasa de conversión
+- 4. Páginas de salida
+- 5. Valor medio de pedido
+- 6. Recurrencia de compra
+- 7. Estacionalidad
+- 8. Tasa abandono carrito 
+http://datablog.zeus.vision/2017/06/28/los-8-kpis-de-un-ecommerce/
+
+
+**Social Media Dashboard**
+
+
 # Metabase
 
 The simplest, fastest way to get business intelligence and analytics to everyone in your company 😋

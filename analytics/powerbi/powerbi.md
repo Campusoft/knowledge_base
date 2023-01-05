@@ -16,11 +16,9 @@ https://blog.hubspot.com/marketing/types-of-graphs-for-data-visualization
 https://towardsdatascience.com/data-visualization-101-how-to-choose-a-chart-type-9b8830e558d6
 
 
-## Conjuntos de Datos para prácticas
-* Datos COVID Microsoft - https://github.com/microsoft/Bing-COVID-19-Data/tree/master/data
-* Datos COVID OMS - https://covid19.who.int/WHO-COVID-19-global-data.csv
 
-## Referencias
+
+# Referencias
 
 Power BI Governance, Good Practices, Part 2: Version Control with OneDrive, Teams and SharePoint Online
 https://www.biinsight.com/power-bi-governance-good-practices-part-2-version-control-with-onedrive-teams-and-sharepoint-online/
@@ -41,7 +39,7 @@ Diferentes reportes de Power BI. Referencias
 https://github.com/DaniMonsalve/PowerBI.pbix-
 
 
-### Community Tools
+## Community Tools
 
 Following are some of the tools contributed by the vibrant Power BI user community. These are independent tools not supported by Microsoft, some of which are free and others are paid products.
 
@@ -103,8 +101,29 @@ https://turbo.net/run/powerbi/powerbi
 
 https://github.com/DaniMonsalve/PowerBI.pbix- 
 
+
+## Examples
+
+15 Power BI Projects Examples and Ideas for Practice
+- This blog lists 15 Microsoft Power BI projects for you. We have categorized these Power BI examples into beginner, intermediate, and advanced levels. You can choose any of these power bi projects for practice to upskill yourself in the Data Science domain. 
+https://www.projectpro.io/article/power-bi-microsoft-projects-examples-and-ideas-for-practice/533
+
+
+## Conjuntos de Datos para prácticas
+
+- Datos COVID Microsoft - https://github.com/microsoft/Bing-COVID-19-Data/tree/master/data
+- Datos COVID OMS - https://covid19.who.int/WHO-COVID-19-global-data.csv
+ 
+ 
 # Training
 
 
-Top 5 Free Microsoft Power BI Online Courses for Beginners to Learn in 2022 - Best of Lot
-https://www.java67.com/2021/05/top-5-free-power-bi-courses-for..html
+# Revisiones
+
+Integrar Power BI con Synapse Analytics
+
+
+
+Power BI — How to Fit 200 Million Rows in Less than 1GB
+- 
+https://towardsdatascience.com/power-bi-how-to-fit-200-million-rows-in-less-than-1gb-63ab5a4eb1c0

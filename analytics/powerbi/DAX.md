@@ -6,8 +6,8 @@ Data Analysis Expressions (DAX) is a formula language used to create custom calc
 Whether you're using Power BI Desktop, Power Pivot in Excel, or Analysis Services, learning Data Analysis Expressions (DAX) is essential to creating effective data models.
 
 # Context
-## row context
 
+## row context
 
 ## filter context
 
@@ -40,6 +40,9 @@ https://support.microsoft.com/es-es/office/iniciar-el-complemento-power-pivot-pa
 
 # dax.do
 
+
+Code, run, and share DAX
+Write your DAX queries, try them and share them easily with DAX.do
 https://dax.do/
 
 
