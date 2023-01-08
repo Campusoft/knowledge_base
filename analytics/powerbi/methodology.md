@@ -5,6 +5,14 @@
 
 
 
+# Fases Power BI
+
+- Get Data. Obtener datos, excel, pdf, base de datos, ect
+- Data Preparation. Preparacion de Datos. De las tablas de datos obtenidas - limpia y organiza en Query Editor.
+- Data Modeling. Modelado de Datos. De las tablas de datos, crea estructuras (modelos) que permitan relacionar datos.
+- Data Visualization. Visualizacion de Datos. Representaciones de datos en forma de graficos, matrices, y mas visualizaciones
+- Data Reporting. Reporteo de Datos. Estructura y Formato de visualizaaciones y elementos que daran lugar a un Reporte. 
+ 
 
 ## Referencias
 

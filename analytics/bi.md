@@ -46,6 +46,41 @@ http://datablog.zeus.vision/2017/06/28/los-8-kpis-de-un-ecommerce/
 **Social Media Dashboard**
 
 
+## Referencias
+
+7-Step Process to Build a Dashboard 
+- 1. Recopilación de requisitos. 
+  - Understand the type of request
+  - Who is your intended user base/audience?
+  - Which platform(s) should the dashboard be accessible through?
+  - What would your users like to see?.  Are there any particular KPIs or metrics they are interested in? Do they want to see any trends or growth/decline in certain metrics? What are the questions or problems your users are trying to solve through the dashboard?
+  - What views would your users like to see
+  - How frequently should the dashboard be refreshed?
+  - Discuss what the data sources can be used
+  - Talk about the deadlines
+- 2. Ideation
+  - Wireframing
+- 3. Extract, Transform & Load Your Data
+https://www.linkedin.com/pulse/7-step-process-build-dashboard-krishnadev-pillai/
+
+
+## Revisiones
+
+MAD Framework
+The MAD framework is a 3-level approach defined as MONITOR - ANALYSE - DETAIL that allows the end user to flow through data using a top down approach to view data at the 3 levels of detail as required.
+
+
+The Data Warehousing Institute (TWDI)"https://tdwi.org" came out with the MAD Framework as the optimal way to design business intelligence delivery.
+
+
+
+Get MAD with your data
+- Monitor. A dashboard is a type of graphical user interface which often provides at-a-glance views of key performance indicators (KPIs) relevant to a particular objective or business process. In other usage, "dashboard" is another name for "progress report" or "report."
+- Analyse. This next level gives us the ability to dig a little deeper to understand the issue, when we look at activities we can compare Country, Campaigns, Products etc. to see how each of those are doing in comparison to each other or to a different period and we can start identifying specific areas where there are issues.
+- Detail. Once you have drilled in and pinpointed a possible issue that needs to be dealt with - Your Actionable Insight - you may require some further detailed pieces of data. For example, a specific category may be performing much lower on average than others and you have identified something that may be causing it. Once you have drilled down to this key area, you might then want to be able to view all the details of what is happening.
+https://www.flockconsulting.co.nz/articles/get-mad-with-your-data
+
+
 # Metabase
 
 The simplest, fastest way to get business intelligence and analytics to everyone in your company 😋
