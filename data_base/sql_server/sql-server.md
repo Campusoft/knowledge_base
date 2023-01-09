@@ -41,5 +41,3 @@ We can also use DACPAC packages for schema comparison as well between different 
 BACPAC
 
 A BACPAC is a Windows file with a .bacpac extension that encapsulates a database's schema and data. The primary use case for a BACPAC is to move a database from one server to another - or to migrate a database from a local server to the cloud - and archiving an existing database in an open format.
-
-# 

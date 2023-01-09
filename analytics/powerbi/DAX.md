@@ -7,15 +7,15 @@ Whether you're using Power BI Desktop, Power Pivot in Excel, or Analysis Service
 
 # Context
 
-## row context
+## Row context
 
-## filter context
+## Filter context
 
 
 # Queries
 
-## Filtros
 
+## Filtros
 
 El Contexto de Filtro en el Lenguaje DAX
 https://www.excelfreeblog.com/el-contexto-de-filtro-en-el-lenguaje-dax/
@@ -28,6 +28,15 @@ https://www.excelfreeblog.com/el-contexto-de-filtro-en-el-lenguaje-dax/
 
 Getting Started with DAX Studio
 https://exceleratorbi.com.au/getting-started-dax-studio/
+
+
+# Funciones
+
+## RELATED
+
+Returns a related value from another table.
+
+https://www.sqlbi.com/articles/using-related-and-relatedtable-in-dax/
 
 
 # Power Pivot para Excel

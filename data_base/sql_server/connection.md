@@ -1,4 +1,11 @@
 
+
+Generar un respaldo de base de datos LocalDB 
+- Conectar Sql Server Management Studio a localDB.
+Connecting Localdb using Sql Server Management Studio
+https://dotnetthoughts.net/connecting-localdb-using-sqlserver-management-studio/
+
+
 # SQLEXPRESS
  
  

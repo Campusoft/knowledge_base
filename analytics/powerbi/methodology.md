@@ -13,6 +13,8 @@
 - Data Visualization. Visualizacion de Datos. Representaciones de datos en forma de graficos, matrices, y mas visualizaciones
 - Data Reporting. Reporteo de Datos. Estructura y Formato de visualizaaciones y elementos que daran lugar a un Reporte. 
  
+https://user-images.githubusercontent.com/11231959/118572546-536a4800-b746-11eb-9b4c-c97ffacf2824.png
+
 
 ## Referencias
 

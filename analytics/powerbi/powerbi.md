@@ -1,5 +1,19 @@
 # Power BI
 
+# Caracteristicas
+
+# Revisiones
+
+
+- Tooltips
+- Cross-highligth. Cross-filter
+- Drill Down. Drill Through
+- Sort visuals & tables
+- Filter pages & visuals
+  - a) Filter a report page. Filter a report page. Filters that you apply at a page level affect all the visuals on that page.
+  - b) Filter a visual. Selecting a visual lets you apply filters just to that visual.
+
+
 # Conceptos 
 
 - Una visualización (u objeto visual) es un tipo de gráfico que han generado diseñadores de Power BI
@@ -34,8 +48,6 @@ Estas colecciones de paneles e informes organizan contenido relacionado entre s�
 
 # Taller Power BI
 Este repo contiene información útil del taller de power bi realizado el 04/12/2020 
-
-
 
 
 
