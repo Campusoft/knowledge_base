@@ -1,7 +1,7 @@
 # Training
 
 
-## Inicializacion
+# Inicializacion
 
 Introducción a la compilación con Power BI
 - Usar Power BI
@@ -31,7 +31,7 @@ Curso Completo de Power BI (2022)
 https://www.youtube.com/watch?v=sjrlIAQnD8M&t=1903s
 
 
-## DAX
+# DAX
 
 Curso de DAX en Power BI - Principiante a Avanzado en 6 horas 
 - 0:00 Introducción a Proyecto DAX
@@ -60,6 +60,10 @@ Curso de DAX en Power BI - Principiante a Avanzado en 6 horas
 - 5:49:58 Tooltips con DAX
 https://www.youtube.com/watch?v=F_xNyI-gtYc&list=PLXR1MU_rf6FLRp8Rjj907_q_KsaJf8EG5&index=4
 
+# Ejercicios
+
+- Crear una columna con calculos. 
+- Crear una medida 
 
 # Referencias
 
@@ -74,12 +78,14 @@ https://www.java67.com/2021/05/top-5-free-power-bi-courses-for..html
    - Sección 4: Part 3: Visualizations in Power BI
    - Sección 5: Part 4: Power BI Online
    - Sección 6: Part 5: Introducction to DAX (Data Analysis Expressions)
+ 
 - [Análisis de Call Center con Business Intelligence y Power BI
 ](https://www.udemy.com/course/power-bi-desarrollo-de-business-intelligence-en-call-center/learn/lecture/28387666?start=0#overview)
    - Sección 1: Introducción
    - Sección 2: Informe de Call Center
    - Sección 3: Call Center de los Bomberos de la Ciudad de San Francisco California
    - Sección 4: Publicación y vista web de los Informes
+
 - [Reporting on maps in Excel & Power BI course
 ](https://www.udemy.com/course/reporting-on-maps-in-excel-power-bi-course/learn/lecture/30335908?start=0#overview)
    - Sección 1: How to learn Excel?
@@ -109,5 +115,35 @@ https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks
 https://www.sqlskills.com/sql-server-resources/sql-server-demos/
 
 
+Datos Abiertos Ecuador
+- conjuntos de datos abiertos de 95 instituciones.
+https://www.datosabiertos.gob.ec/
+
+
+
+Customer Segmentation
+- InvoiceNo
+- StockCode
+- Description
+- Quantity
+- InvoiceDate
+- UnitPrice
+- CustomerID
+- Country
+https://www.kaggle.com/code/fabiendaniel/customer-segmentation/data
+
+
+Bank Customer Segmentation (1M+ Transactions)
+Customer demographics and transactions data from an Indian Bank
+https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation
+
+
 # Revisiones
+
+# Ejercicios
+
+Trabajar con fechas, comparar medidas de periodos anteriores. Ejemplo ventas del 2023, comparadas contra el 2022.
+
+
+
 

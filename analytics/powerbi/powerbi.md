@@ -2,9 +2,6 @@
 
 # Caracteristicas
 
-# Revisiones
-
-
 - Tooltips
 - Cross-highligth. Cross-filter
 - Drill Down. Drill Through
@@ -46,8 +43,34 @@ Las visualizaciones (también conocidas como objetos visuales) muestran la infor
 Estas colecciones de paneles e informes organizan contenido relacionado entre sí en un único paquete. Los diseñadores de Power BI las crean en las áreas de trabajo y comparten aplicaciones con personas, grupos, organizaciones completas o el público. Como usuario profesional, puede estar seguro de que usted y sus compañeros trabajan con la misma información; una única versión de confianza del contenido real.
 
 
-# Taller Power BI
-Este repo contiene información útil del taller de power bi realizado el 04/12/2020 
+# Modelamiento
+
+What a Power BI Hierarchy Is, and How to Use it?
+- Power BI hierarchies are a useful structure for drill-down and data exploration in reports
+- Model hierarchy or Visual hierarchy?
+https://radacad.com/what-a-power-bi-hierarchy-is-and-how-to-use-it
+
+
+
+**DIM Calendarios**
+
+PowerBI genera una DIM automaticamente por cada campo tipo Fecha. 
+
+Apply auto date/time in Power BI Desktop
+- The Auto date/time is a data load option in Power BI Desktop. The purpose of this option is to support convenient time intelligence reporting based on date columns loaded into a model. Specifically, it allows report authors using your data model to filter, group, and drill down by using calendar time periods (years, quarters, months, and days).
+https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-auto-date-time
+
+
+# Medidas(measures)
+
+Measures vs Calculated Columns in DAX and Power BI
+https://endjin.com/blog/2022/04/measures-vs-calculated-columns-in-dax
+
+
+# Visualizaciones / Visualizations 
+
+
+**Matrix** 
 
 
 
@@ -76,6 +99,17 @@ https://powerbi.microsoft.com/en-us/pricing/#features-compare-charts
 Power BI Premium
 - Hybrid tables. Hybrid tables combine the performance of VertiPaq in-memory caches with the capabilities of DirectQuery, allowing users to unlock massive datasets for real-time, interactive analysis.
 https://learn.microsoft.com/en-us/power-platform-release-plan/2021wave2/power-bi/hybrid-tables
+
+
+# Performance
+
+
+Introducing the Power BI Performance Analyzer
+https://www.sqlbi.com/articles/introducing-the-power-bi-performance-analyzer/
+ 
+ 
+# Training
+
 
 
 # Referencias
@@ -138,9 +172,9 @@ http://radacad.com/power-bi-helper
 Power BI Documenter
 Power BI Documenter is a tool which auto-generates documentation from Power BI Desktop, for the purpose of identifying and documenting data usage, visuals, and development practices.
 Contributed and supported by: Data Vizioner
-http://www.datavizioner.com/power-bi-documenter/how-to-use-power-bi-documenter/ 
+https://www.datavizioner.com/resources/how-to-use-power-bi-documenter
 
- 
+
 Power Update
 Power Update is a tool which moves scheduled refresh operations for datasets in Power BI Desktop or Excel to a local machine.
 Contributed and supported by: Power On BI
@@ -161,12 +195,19 @@ The Turbo.net tools allow applications to run on any desktop. Their version allo
 Contributed and supported by: Turbo.net
 https://turbo.net/run/powerbi/powerbi
 
-
+ 
 
 ## Indicadores referencias
 
 
 https://github.com/DaniMonsalve/PowerBI.pbix- 
+
+
+Dashboard Financiero con Power BI
+- Posee los archivos PowerBI.
+- Utiliza un fondo (imagen), para mejorar el diseno.
+https://www.youtube.com/watch?v=aeUA-otL220&t=92s
+
 
 
 ## Examples
@@ -212,10 +253,17 @@ https://blog.hubspot.com/marketing/types-of-graphs-for-data-visualization
 Data Visualization 101: How to Choose a Chart Type
 https://towardsdatascience.com/data-visualization-101-how-to-choose-a-chart-type-9b8830e558d6
  
- 
- 
-# Training
 
+## layouts
+
+Free Power BI Templates Download
+- Fondo gris, barra superior oscura (negra)
+https://www.collaboris.com/downloadable-backgrounds-for-power-bi/
+
+
+Layouts – Purple Haze
+- 
+https://powerbi.tips/product/layouts-purple-haze/
 
 # Revisiones
 

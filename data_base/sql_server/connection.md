@@ -1,3 +1,4 @@
+# Connections
 
 
 Generar un respaldo de base de datos LocalDB 
@@ -8,8 +9,6 @@ https://dotnetthoughts.net/connecting-localdb-using-sqlserver-management-studio/
 
 # SQLEXPRESS
  
- 
-##Configuraciones
 
 Activar SQL Server para escuchar con TCP
  SQL Server Database Engine listens on TCP port 1433
