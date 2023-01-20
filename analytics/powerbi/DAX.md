@@ -176,6 +176,7 @@ https://www.daxpatterns.com/standard-time-related-calculations/
 
 
 **DATESYTD**
+
 Returns a set of dates in the year up to the last date visible in the filter context.
 
 Ejemplos.
@@ -206,6 +207,12 @@ Returns a parallel period of dates by the given set of dates and a specified int
 Returns a table with selected columns from the table and new columns specified by the DAX expressions.
 
 https://dax.guide/selectcolumns/
+
+
+**WINDOW**
+Así se hace para generar acumulados con la función WINDOW 
+https://www.youtube.com/watch?v=wsI4491-qPo
+
 
 # Power Pivot para Excel
 

@@ -1,5 +1,6 @@
 # Power BI
 
+
 # Caracteristicas
 
 - Tooltips
@@ -61,10 +62,27 @@ Apply auto date/time in Power BI Desktop
 https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-auto-date-time
 
 
+# Columns 
+
+
+Power BI Add Calculated Column [With Various Examples]
+https://www.spguides.com/power-bi-add-calculated-column/
+
+
+
 # Medidas(measures)
 
 Measures vs Calculated Columns in DAX and Power BI
 https://endjin.com/blog/2022/04/measures-vs-calculated-columns-in-dax
+
+
+
+Calculated Columns and Measures in DAX
+One of the first concepts to learn in DAX is the difference between calculated columns and measures. This article shortly recaps the differences and describes when to use each one. 
+- The DAX expression defined for a calculated column operates in the context of the current row across that table. Any reference to a column returns the value of that column for the current row. You cannot directly access the values of other rows.
+- One important concept that you need to remember about calculated columns is that they are computed during the database processing and then stored in the model
+https://www.sqlbi.com/articles/calculated-columns-and-measures-in-dax/
+
 
 
 # Visualizaciones / Visualizations 
