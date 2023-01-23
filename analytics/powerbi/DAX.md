@@ -50,6 +50,10 @@ https://www.sqlbi.com/articles/from-sql-to-dax-filtering-data/
 
 
 
+**KEEPFILTERS**
+
+
+
 #  DAX Studio
 
 
@@ -197,6 +201,19 @@ Devuelve una tabla que contiene una columna de fechas desplazadas un año atrás
 
 Returns a parallel period of dates by the given set of dates and a specified interval.
 
+## Matematicas
+
+**FIXED**
+
+Rounds a number to the specified number of decimals and returns the result as text with optional commas.
+
+
+
+**ROUND**
+
+Rounds a number to a specified number of digits.
+
+
 ## RANKX
 
 ## Forecasts 
@@ -210,8 +227,17 @@ https://dax.guide/selectcolumns/
 
 
 **WINDOW**
+
 Así se hace para generar acumulados con la función WINDOW 
 https://www.youtube.com/watch?v=wsI4491-qPo
+
+
+**SELECTEDVALUE**
+
+The SELECTEDVALUE and VALUES functions read the current filter context, not the row context;
+
+Using the SELECTEDVALUE function in DAX
+https://www.sqlbi.com/articles/using-the-selectedvalue-function-in-dax/
 
 
 # Power Pivot para Excel
@@ -222,6 +248,15 @@ Iniciar el complemento Power Pivot para Excel
 https://support.microsoft.com/es-es/office/iniciar-el-complemento-power-pivot-para-excel-a891a66d-36e3-43fc-81e8-fc4798f39ea8
 
 
+# Best Practices
+
+
+DAX Best Practice Guide
+- Last Updated: December 26, 2022 
+https://maqsoftware.com/insights/dax-best-practices
+
+Analyzing a slow report query in DAX Studio  
+https://www.youtube.com/watch?v=C5HBhlLUFsE
 
 
 # Referencias

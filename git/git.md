@@ -82,6 +82,25 @@
 - Shows URLs of remote repositories when listing your current remote connections. By default, listing remote repositories only shows you their shortnames (e.g. "origin"). Using the "-v" option, you will also see the remote's URLs in listings.
  git remote -v
 
+# Varios
+
+
+Escenario
+- Tener un disco externo, en el cual existe algunos repositorios. Utilizar el disco externo en un computador y otro.
+
+
+```
+fatal: detected dubious ownership in repository at '<Folder-Repositorys>'
+'<Folder-Repositorys>'' is owned by:
+        'S-1-5-21-1866082202-1529751841-862191509-1001'
+but the current user is:
+        'S-1-5-21-1448444211-3940322899-2338718349-1001'
+To add an exception for this directory, call:
+
+        git config --global --add safe.directory <Folder-Repositorys>'
+
+```
+
 # Refencias
 
 Monorepo vs Multi-Repo: Ventajas y Desventajas de las Estrategias de Repositorio de Código 

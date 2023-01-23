@@ -278,6 +278,13 @@ Clean Architecture with .NET Core & React+Redux
 - Manga is a Virtual Wallet Solution in which the customer register an account then manage the balance by Deposit, Withdraw and Transfer operations.
 https://github.com/ivanpaulovich/clean-architecture-manga
 
+Raytha 
+- Raytha is a powerful CMS for .NET developers with an easy-to-use interface and fast performance. It offers custom content types, a template engine, and various access controls.
+- .NET 6+
+- SQL Server Express. No utiliza repositorios, directamente utiliza datacontext
+- MediatR. CQRS 
+- Fluid is an open-source .NET template engine based on the Liquid template language. 
+https://github.com/RaythaHQ/raytha
 
 # Exceptions 
 
