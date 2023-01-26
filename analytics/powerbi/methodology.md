@@ -4,7 +4,6 @@
 # Metodogias trabajo (Framework)
 
 
-
 # Fases Power BI
 
 - Get Data. Obtener datos, excel, pdf, base de datos, ect
@@ -54,3 +53,17 @@ As a first step, you should  determine the purpose of the dashboard – operatio
 - Diseñar (tool). Ahora sí, es el momento de diseñar, teniendo en cuenta el feedback recibido y dentro de una plataforma de BI. El lienzo comienza a poblarse de todos los componentes que ya fueron validados por el equipo. 
 https://miamiadschool.com.ar/blog/data-analytics-6-pasos-y-8-consejos-para-disenar-un-dashboard/
 
+
+# Revisiones
+
+
+¿Cómo utilizar la "Metodología Agile" en proyectos de Power BI aplicados a la auditoría? Parte 1 
+- 1. ANÁLISIS GENERAL DEL REQUERIMIENTO (INPUT – OUTPUT)
+- 2. DISEÑO GENERAL DEL TABLERO (VISTAS AGRUPAMIENTO)
+- 3. CONEXIÓN Y TRANSFORMACIÓN DE LA INFORMACIÓN
+- 4. CÁLCULO DE MEDIDAS Y COLUMNAS CALCULADAS (RESULTADOS)
+- 5. DISEÑO DE ASPECTOS VISUALES
+- 6. TESTEO DE LOS RESULTADOS CON INFORMACIÓN REAL
+https://www.auditool.org/blog/auditoria-de-ti/8113-como-utilizar-la-metodologia-agile-en-proyectos-de-power-bi-parte-1
+https://www.auditool.org/blog/auditoria-de-ti/8134-como-utilizar-la-metodologia-agile-en-proyectos-de-power-bi-aplicados-a-la-auditoria-parte-2
+https://www.auditool.org/blog/auditoria-de-ti/8149-como-utilizar-la-metodologia-agile-en-proyectos-de-power-bi-aplicados-a-la-auditoria-parte-3

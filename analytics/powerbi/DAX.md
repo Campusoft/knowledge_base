@@ -65,6 +65,20 @@ https://exceleratorbi.com.au/getting-started-dax-studio/
 
 # Funciones
 
+## Condicionantes
+
+
+
+**IF**
+
+Checks whether a condition is met, and returns one value if TRUE, and another value if FALSE.
+
+```
+IF(<logical_test>, <value_if_true>[, <value_if_false>])
+```
+
+
+
 ## RELATED
 
 Returns a related value from another table. A single value that is related to the current row.
@@ -117,6 +131,22 @@ Función FILTER
 - Posee ilustraccion de los parametros
 - Posee ejemplos 
 https://cartasdax.com/filter/ 
+
+
+
+Power Bi Filter Functions with Examples
+- Using Power Bi All Function
+- Using Power Bi ALLEXCEPT Function
+https://www.enjoysharepoint.com/power-bi-filter-functions/
+
+
+Power BI —All the important filters you need to know
+- KEEPFILTER
+- REMOVEFILTERS
+- ALLEXCEPT
+- ALL
+- ALLSELECTED
+https://towardsdatascience.com/power-bi-all-the-important-filters-you-need-to-know-583fec7c0f8c
 
 ## Funciones de Contar
 
@@ -257,6 +287,13 @@ https://maqsoftware.com/insights/dax-best-practices
 
 Analyzing a slow report query in DAX Studio  
 https://www.youtube.com/watch?v=C5HBhlLUFsE
+
+
+# Performance
+
+Optimizing IF conditions by using variables
+- This article describes a very common optimization pattern that relies on variables to optimize conditional expressions in DAX. 
+https://www.sqlbi.com/articles/optimizing-if-conditions-using-variables/
 
 
 # Referencias

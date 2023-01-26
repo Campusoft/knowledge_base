@@ -85,7 +85,20 @@ https://www.sqlbi.com/articles/calculated-columns-and-measures-in-dax/
 
 
 
+Creating a Measures Table in Power BI
+- A measures table is essentially just a placeholder table that acts as a folder for your measures.
+https://www.phdata.io/blog/creating-a-measures-table-in-power-bi/
+
 # Visualizaciones / Visualizations 
+
+
+
+**Slicer**
+
+
+How to get selected value from Slicer in Power BI
+- 
+https://www.enjoysharepoint.com/power-bi-get-selected-value-from-slicer/
 
 
 **Matrix** 
@@ -124,6 +137,8 @@ https://learn.microsoft.com/en-us/power-platform-release-plan/2021wave2/power-bi
 
 Introducing the Power BI Performance Analyzer
 https://www.sqlbi.com/articles/introducing-the-power-bi-performance-analyzer/
+ 
+ 
  
  
 # Training
@@ -290,7 +305,6 @@ Integrar Power BI con Synapse Analytics
 
 
 Power BI — How to Fit 200 Million Rows in Less than 1GB
-- 
 https://towardsdatascience.com/power-bi-how-to-fit-200-million-rows-in-less-than-1gb-63ab5a4eb1c0
 
 
