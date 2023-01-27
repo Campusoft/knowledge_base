@@ -104,6 +104,10 @@ https://www.enjoysharepoint.com/power-bi-get-selected-value-from-slicer/
 **Matrix** 
 
 
+**KPI**
+
+Power BI KPI
+https://www.wallstreetmojo.com/power-bi-kpi/
 
 # Themes
 
@@ -116,6 +120,28 @@ With Power BI Desktop report themes, you can apply design changes to your entire
 Numerro a Microsoft partner makes it possible for you to implement design best practices and store your building reports. With an archive of numerous dashboards, including those for sales, marketing, social media, human resources, and logistics.
 https://www.numerro.io/
 
+
+# Query Editor
+
+
+
+Create Customized Age Bins (or Groups) in Power BI
+- Power Query Conditional Column
+https://radacad.com/create-customized-age-bins-or-groups-in-power-bi
+
+## Power Query M
+
+
+
+**Valor de tabla**
+- #table para construir una tabla a partir de una lista de listas de filas y una lista de nombres de encabezado
+
+Crear una tabla con dos columnas y tres filas
+```
+#table({"columna 1", "columna 2"}, {{1,1}, {2,4}, {3,9}})
+```
+
+https://learn.microsoft.com/es-es/powerquery-m/m-spec-values#table
 
 # Licencias
 
@@ -132,6 +158,9 @@ Power BI Premium
 https://learn.microsoft.com/en-us/power-platform-release-plan/2021wave2/power-bi/hybrid-tables
 
 
+Power BI Premium features
+https://learn.microsoft.com/en-us/power-bi/enterprise/service-premium-features
+
 # Performance
 
 
@@ -139,7 +168,18 @@ Introducing the Power BI Performance Analyzer
 https://www.sqlbi.com/articles/introducing-the-power-bi-performance-analyzer/
  
  
- 
+# Publish
+
+
+Power BI Sharing Methods Comparison – All in One Review
+- Basic Sharing
+- Workspace
+- Power BI App
+- Publish to Web
+- Embed in SharePoint online
+- Power BI Embedded
+- Secure Embed
+https://radacad.com/power-bi-sharing-methods-comparison-all-in-one-review
  
 # Training
 

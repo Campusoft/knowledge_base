@@ -319,3 +319,8 @@ New and returning customers
 https://www.daxpatterns.com/new-and-returning-customers/
 
 
+
+
+Create Customized Age Bins (or Groups) in Power BI
+- Power Query Conditional Column
+https://radacad.com/create-customized-age-bins-or-groups-in-power-bi

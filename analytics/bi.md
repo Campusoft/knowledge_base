@@ -23,7 +23,6 @@ Operational dashboards provide time-critical data to consumers. I like to think 
 
 **Dashboard Tacticos**
 
-
 On  the other hand, analytical dashboards focus more on identifying trends and patterns from  historical data and enable better mid to long-term decision-making
 
 
