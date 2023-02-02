@@ -65,6 +65,8 @@ https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-auto-date-tim
 **Model relationships**
 
 
+Power Bi Relationship Functions
+https://www.enjoysharepoint.com/power-bi-relationship-functions/
 
 # Columns 
 
@@ -113,11 +115,66 @@ https://blog.aitana.es/2018/09/12/tipos-graficos-power-bi/
 
 
 How to get selected value from Slicer in Power BI
-- 
+- Power BI get selected value from slicer
+- Power BI get selected value from date slicer
+- Power BI get multiple selected value from slicer
+- Power BI get first selected value from slicer
+- Power BI get max selected value from slicer
+- Power BI get selected value from between slicer
+- Power BI get number of selected values from slicer
 https://www.enjoysharepoint.com/power-bi-get-selected-value-from-slicer/
 
 
 **Matrix** 
+
+
+**Radial gauge**
+
+
+Radial gauge charts in Power BI
+- When to use a radial gauge
+- Create a basic radial gauge
+- Use manual format options to set Minimum, Maximum, and Target values
+https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-radial-gauge-charts?tabs=powerbi-desktop
+
+
+
+Gauge Visual Colours in Power BI
+- DAX Solution
+https://www.dearwatson.net.au/blog/gauge-visual-colours-in-power-bi/
+
+
+Power bi gauge chart – How to use with examples
+- When to use Gauge chart in power bi?
+- How to create a power bi gauge chart?
+- Power bi gauge chart conditional formatting
+- Power bi gauge chart percentage
+- Power bi gauge chart multiple values
+- Power bi gauge chart background-color
+- Power bi gauge chart color (dynamically)
+- Power bi gauge chart with multiple targets
+https://www.enjoysharepoint.com/power-bi-gauge-chart/
+
+**Key Influencers**
+
+Influenciadores Clave
+
+
+Internamente esta visualización utiliza algoritmos de Machine Learning (ML) y en la documentación nos dicen que utiliza la biblioteca de código abierto ML.NET.
+
+
+Creación de visualizaciones de influenciadores clave
+- Posee datos, en archivo powerBI.
+- Presenta ejemplos de Principal factor único que influye en la probabilidad de una calificación baja
+https://learn.microsoft.com/es-es/power-bi/visuals/power-bi-visualization-influencers?tabs=powerbi-desktop
+
+
+
+Articulo, de utilizacion del control visual, con datos de Juego de Tronos.
+- Analizando con Influyentes Clave las muertes de Juego de Tronos
+https://vandalytic.com/tutorial-power-bi-influenciadores-clave-aplicado-a-las-muertes-de-juego-de-tronos/
+
+
 
 
 **Waterfall charts**
@@ -132,8 +189,6 @@ Waterfall charts are a great choice:
 - To plot your company's annual profit by showing various sources of revenue and arrive at the total profit (or loss).
 - To illustrate the beginning and the ending headcount for your company in a year.
 - To visualize how much money you make and spend each month, and the running balance for your account.
-
-
 
 
 Waterfall charts in Power BI
@@ -282,6 +337,8 @@ Power BI Sharing Methods Comparison – All in One Review
 - Secure Embed
 https://radacad.com/power-bi-sharing-methods-comparison-all-in-one-review
  
+
+# Power Bi embedded
  
  
 # Training

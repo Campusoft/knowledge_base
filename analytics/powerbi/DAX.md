@@ -227,6 +227,14 @@ Returns a set of dates in the current selection from the previous year.
 Devuelve una tabla que contiene una columna de fechas desplazadas un año atrás en el tiempo desde las fechas de la columna dates especificada, en el contexto actual.
 
 
+Errores
+-------------------
+
+Calculation error in measure 'Medidas'[Total Creditos Anio Anterior]: A date column containing duplicate dates was specified in the call to function 'SAMEPERIODLASTYEAR'. This is not supported.
+
+
+-------------------
+
 **PARALLELPERIOD**
 
 Returns a parallel period of dates by the given set of dates and a specified interval.

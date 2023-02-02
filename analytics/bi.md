@@ -36,6 +36,7 @@ Maneja KPIs como todo un Pro
 - KPI. Es un valor medible que demustra la eficacia con la que una empresa esta logrando los objetivos clave.
 https://www.youtube.com/watch?v=YkAAZTXtBrQ
 
+
 **KPI de eCommerce**
 
 Los 8 KPIs de un eCommerce 
