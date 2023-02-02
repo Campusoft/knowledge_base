@@ -28,6 +28,14 @@ On  the other hand, analytical dashboards focus more on identifying trends and p
 
 ## KPI
 
+
+Maneja KPIs como todo un Pro 
+- Metricas. Es una medicion de datos, unica, especifica, cruda.
+- Indicadores. Son valores que miden el logro de objetivos, generalmente en indices o porcentajes
+- KPI. Indicadores orientales al exito de la estrategia. (No todo indicador es un KPI).
+- KPI. Es un valor medible que demustra la eficacia con la que una empresa esta logrando los objetivos clave.
+https://www.youtube.com/watch?v=YkAAZTXtBrQ
+
 **KPI de eCommerce**
 
 Los 8 KPIs de un eCommerce 

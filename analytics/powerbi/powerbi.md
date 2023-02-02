@@ -62,6 +62,10 @@ Apply auto date/time in Power BI Desktop
 https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-auto-date-time
 
 
+**Model relationships**
+
+
+
 # Columns 
 
 
@@ -92,6 +96,18 @@ https://www.phdata.io/blog/creating-a-measures-table-in-power-bi/
 # Visualizaciones / Visualizations 
 
 
+**Tipos Visualizaciones**
+
+8 tipos de gráficos para la visualización de datos en Power BI
+- Gráfico lineal
+- Gráfico de columnas
+- Gráfico combinado
+- Mapas de calor y mapas de puntos
+- Gráficos de dispersión y gráficos de burbujas
+- Gráficos de cascadas y embudos
+- Gráficos circulares y gráficos de anillos
+- Gráfico con filtros
+https://blog.aitana.es/2018/09/12/tipos-graficos-power-bi/
 
 **Slicer**
 
@@ -104,10 +120,84 @@ https://www.enjoysharepoint.com/power-bi-get-selected-value-from-slicer/
 **Matrix** 
 
 
+**Waterfall charts**
+
+
+Gráfico de cascada
+
+Waterfall charts are a great choice:
+
+- When you have changes for the measure across time, a series, or different categories.
+- To audit the major changes contributing to the total value.
+- To plot your company's annual profit by showing various sources of revenue and arrive at the total profit (or loss).
+- To illustrate the beginning and the ending headcount for your company in a year.
+- To visualize how much money you make and spend each month, and the running balance for your account.
+
+
+
+
+Waterfall charts in Power BI
+- When to use a waterfall chart
+- Create a waterfall chart
+- Sort the waterfall chart
+- Breakdown bucket
+https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-waterfall-charts?tabs=powerbi-desktop
+
+
+Qué es y como se crea un Waterfall Chart o Gráfico Cascada
+- Ejemplo en excel detallado
+https://www.excelfreeblog.com/que-es-y-como-se-crea-un-waterfall-chart-o-grafico-cascada/
+
+
+Power BI Waterfall Charts: A Detailed Guide
+- What is a waterfall chart?
+- What's the difference between a waterfall chart and a bar chart?
+- When should you use a waterfall chart?
+- 7 tips for creating a waterfall chart in Power B
+  - 1. Use colors to tell a story
+  - 2. Add connection lines
+  - 3. Create and customize labels
+  - 4. Set target with thresholds
+  - 5. Define the sequence
+  - 6. Choose Sub-Total Mode
+https://zoomcharts.com/en/microsoft-power-bi-custom-visuals/blog/power-bi-waterfall-charts-a-detailed-guide
+
+
 **KPI**
 
 Power BI KPI
 https://www.wallstreetmojo.com/power-bi-kpi/
+
+
+Use a KPI in a table within Power BI 
+- In this video, Adam shows you how you can import KPIs from Excel into Power BI. Once in Power BI, you can use the KPI in a table or matrix.
+https://www.youtube.com/watch?v=3_bLEIAhaDw
+
+
+
+![image](https://user-images.githubusercontent.com/222181/215827928-3cb818ec-bef4-44b3-99ca-5d9b1b577b13.png)
+
+The measure symbol indicates that it is a KPI which had been created in either Power pivot or SSAS and then imported to Power bi which will show up as it looks in the picture (though not always)
+
+
+
+**Show Values**
+
+Power bi show value as percentage + 13 Examples
+- Power bi show value as percentage
+- Power bi show value as percentage format
+- Power bi show value as percentage of row total
+- Power bi show value as percentage of column total
+- Power bi show value as percentage in matrix
+- Power bi show value as percentage of grand total
+- Power bi show value as percentage of total
+- Power bi show value as percentage of subtotal
+- Power bi show card value as percentage
+- Power bi show value as percentage no decimal
+- Power bi measure percentage column total
+- Power bi measure percentage of total with filter
+- Power bi measure percentage of group
+https://www.enjoysharepoint.com/power-bi-show-value-as-percentage/
 
 # Themes
 
@@ -143,6 +233,12 @@ Crear una tabla con dos columnas y tres filas
 
 https://learn.microsoft.com/es-es/powerquery-m/m-spec-values#table
 
+
+**Revisiones**
+
+- La opcion de transformacion, posee opciones para ver distribuccion y calidad en las columnas. (Esta informacion se basa en 1000 registros)
+
+
 # Licencias
 
 Power BI Pro and Power BI Premium
@@ -166,6 +262,11 @@ https://learn.microsoft.com/en-us/power-bi/enterprise/service-premium-features
 
 Introducing the Power BI Performance Analyzer
 https://www.sqlbi.com/articles/introducing-the-power-bi-performance-analyzer/
+
+
+
+# Power BI gateway
+
  
  
 # Publish
@@ -180,6 +281,8 @@ Power BI Sharing Methods Comparison – All in One Review
 - Power BI Embedded
 - Secure Embed
 https://radacad.com/power-bi-sharing-methods-comparison-all-in-one-review
+ 
+ 
  
 # Training
 
@@ -288,6 +391,12 @@ https://www.youtube.com/watch?v=aeUA-otL220&t=92s
 15 Power BI Projects Examples and Ideas for Practice
 - This blog lists 15 Microsoft Power BI projects for you. We have categorized these Power BI examples into beginner, intermediate, and advanced levels. You can choose any of these power bi projects for practice to upskill yourself in the Data Science domain. 
 https://www.projectpro.io/article/power-bi-microsoft-projects-examples-and-ideas-for-practice/533
+
+
+
+Retail Analysis Sample PBIX
+The Retail Analysis built-in sample contains a dashboard, report, and dataset that analyzes retail sales data of items sold across multiple stores and districts. The metrics compare this year's performance to last year's for sales, units, gross margin, and variance, as well as new-store analysis.
+https://learn.microsoft.com/en-us/power-bi/create-reports/sample-retail-analysis
 
 
 ## Conjuntos de Datos para prácticas

@@ -152,7 +152,7 @@ https://towardsdatascience.com/power-bi-all-the-important-filters-you-need-to-kn
 
 - COUNT(<<ColumnName>>)
 - COUNTROWS(<<Table>>)
-- COUNTA(<<ColumnName>>)
+- COUNTA(<<ColumnName>>). Cuenta el número de filas de la columna especificada que contienen valores que no están en blanco.
 - DISTINCTCOUNT(<<ColumnName>>)
 
 ## Funciones de Suma
