@@ -89,6 +89,17 @@ Get MAD with your data
 https://www.flockconsulting.co.nz/articles/get-mad-with-your-data
 
 
+
+# Methodology 
+
+The SQLBI Methodology defines architecture and implementation of advanced BI solutions using Microsoft SQL Server, SQL Server Analysis Services and – more generally – the Microsoft suite for Business Intelligence. 
+- SIS packages
+- Adventure Works DW. Based on the data warehouse built by the previous package, it is a complete
+BI solution used to demonstrate several features of SSAS.
+https://www.sqlbi.com/whitepapers/sqlbi-methodology/
+
+
+
 # Metabase
 
 The simplest, fastest way to get business intelligence and analytics to everyone in your company 😋

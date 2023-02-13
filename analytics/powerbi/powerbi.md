@@ -68,6 +68,16 @@ https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-auto-date-tim
 Power Bi Relationship Functions
 https://www.enjoysharepoint.com/power-bi-relationship-functions/
 
+**what-if**
+
+El uso de parámetros what-if ofrece la capacidad de transformar dinámicamente los datos, es decir, permite simular cómo los datos cambian en distintos escenarios. 
+
+
+Creación y uso de parámetros what-if para visualizar variables en Power BI Desktop
+
+https://learn.microsoft.com/es-es/power-bi/transform-model/desktop-what-if
+
+
 # Columns 
 
 
@@ -254,6 +264,9 @@ Power bi show value as percentage + 13 Examples
 - Power bi measure percentage of group
 https://www.enjoysharepoint.com/power-bi-show-value-as-percentage/
 
+
+
+
 # Themes
 
 
@@ -340,6 +353,10 @@ https://radacad.com/power-bi-sharing-methods-comparison-all-in-one-review
 
 # Power Bi embedded
  
+
+# Power BI Report Builder
+
+Power BI Report Builder is a tool for authoring paginated reports that you can publish to the Power BI service. Paginated reports are designed to be printed or shared. 
  
 # Training
 
@@ -386,6 +403,17 @@ DAX Formatter
 The DAX Formatter tool improves the readability of DAX.
 Contributed and supported by: SQLBI
 http://www.daxformatter.com/ 
+
+
+
+
+Bravo 
+- Analyze Model
+- Format DAX
+- Manage Dates
+- Export Data. Use Bravo to easily export your data model to Excel spreadsheets or CSV files.
+- Documentación: https://docs.sqlbi.com/bravo/
+https://www.sqlbi.eu/
 
 Lingo
 Lingo is a web-based code editor for editing the linguistic schema in Power BI, for the purpose of improving how the natural language Q&A functionality.
@@ -501,8 +529,13 @@ https://www.collaboris.com/downloadable-backgrounds-for-power-bi/
 
 
 Layouts – Purple Haze
-- 
 https://powerbi.tips/product/layouts-purple-haze/
+
+
+
+Simply Modern Light
+- This free to download package include .JSON file (Power BI theme).
+https://metricalist.com/powerbi-solutions/simply-modern-light/
 
 # Revisiones
 

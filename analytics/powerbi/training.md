@@ -147,3 +147,12 @@ Trabajar con fechas, comparar medidas de periodos anteriores. Ejemplo ventas del
 
 
 
+
+Curso Completo
+- Revisar:  
+  - Reporte de ventas con Power BI .
+  - https://www.youtube.com/watch?v=XYnXieWrJik
+- 9. Bonus Buscador en Slicer. (Colocar un buscador en los listados/combos)
+- 15. Bonus Opciones de Filtros. (Filtros visual, Filtros Pagina, FIltros en todas las Paginas)
+https://drive.google.com/drive/u/0/folders/17xzARZiD29U_IPGJP3-tmZtfAlhwENDW?fbclid=IwAR1OL63xQtVNhy_7XtqRDaCLaNt6hIKKt17PwNXrNRZR48Qb2NzmUJ5zWt8&sort=13&direction=a
+

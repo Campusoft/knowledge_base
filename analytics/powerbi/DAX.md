@@ -63,6 +63,14 @@ Getting Started with DAX Studio
 https://exceleratorbi.com.au/getting-started-dax-studio/
 
 
+
+# Variables
+
+
+DAX 101: Variables in DAX
+https://www.sqlbi.com/articles/variables-in-dax/
+
+
 # Funciones
 
 ## Condicionantes
@@ -164,6 +172,9 @@ Returns the sum of an expression evaluated for each row in a table.
 - SUM is the short version of SUMX, when used with one column only
 - SUMX is required to evaluate formulas, instead of columns
 
+```
+SUMX(<table>, <expression>)  
+```
 
 ## Calendarios 
 
