@@ -10,6 +10,11 @@ Whether you're using Power BI Desktop, Power Pivot in Excel, or Analysis Service
 Understanding the difference between row context and filter context is the first and most important concept to learn to use DAX correctly.
 
 
+DAX 101: Filter context in DAX
+https://www.sqlbi.com/articles/filter-context-in-dax/
+
+
+
 ## Row context
 
 ## Filter context
@@ -108,6 +113,12 @@ You invoke CALCULATE with an expression as its first argument, and a set of filt
 Función CALCULATE
 https://cartasdax.com/calculate/
 
+
+Introducing CALCULATE in DAX
+- The evaluation contexts and CALCULATE are the foundation of the entire DAX language 
+https://www.sqlbi.com/articles/introducing-calculate-in-dax/
+
+
 **CALCULATETABLE**
 
 CALCULATETABLE is identical to CALCULATE, except for the result: it returns a table instead of a scalar value.
@@ -190,11 +201,22 @@ Ejemplo DAX. Generar una DIM con DAX, utilizando la funcion CALENDAR, las fechas
 Dim_Calendar DAX =
 ADDCOLUMNS (
 	CALENDAR ( DATE( YEAR ( MIN ( fuenteDatos[Date] )), 01, 01), DATE( YEAR( MAX( fuenteDatos[Date] ) ), 12, 31 ) )
+	, "Month Number", MONTH ( [Date] )
+    , "YEAR", YEAR(  [Date] )
 )
 ```
 
 
 ## Time Intelligence
+
+
+The date dimension that is acceptable by time intelligence functions of DAX should;
+
+- have one record per day
+- start from the minimum date in the date field or before that, and ends at the maximum date in the date field or later than that.
+- have no date missing (if there are no sales in the 1st of January, still that date should be in this table. This is one of the reasons why you do need to have a separate date table)
+
+
 
 In order to use any time intelligence calculation, you need a well-formed date table. 
 https://learn.microsoft.com/es-es/dax/sameperiodlastyear-function-dax#remarks
@@ -217,19 +239,16 @@ https://www.sqlbi.com/articles/time-intelligence-in-power-bi-desktop/
 Standard time-related calculations. (Guia completa para diferentes escenarios, acumulados, comparativas con periodos anteriores, etc.)
 - Disabling the Auto Date/Time
 - Limitations of standard time intelligence functions
+- Building a Date table
+- Naming convention
 https://www.daxpatterns.com/standard-time-related-calculations/
 
 
-**DATESYTD**
 
-Returns a set of dates in the year up to the last date visible in the filter context.
-
-Ejemplos.
-- Ventas acumuladas (mes x mes) de un year.
-
-
-**TOTALYTD**
-
+Comparing different time periods 
+- the model must contain two date tables
+https://www.daxpatterns.com/comparing-different-time-periods/
+ 
 
 **SAMEPERIODLASTYEAR**
 
@@ -243,12 +262,37 @@ Errores
 
 Calculation error in measure 'Medidas'[Total Creditos Anio Anterior]: A date column containing duplicate dates was specified in the call to function 'SAMEPERIODLASTYEAR'. This is not supported.
 
-
 -------------------
+
+
+**DATEADD**
+
+Moves the given set of dates by a specified interval.
+
+- DateAdd y SamePeriodLastYear son funciones que navegan en un periodo dinámico a través del contexto del filtro (Filter Context); con la diferencia que DateAdd puede retornar más de un año atrás.
+
+
+**DATESYTD**
+
+Returns a set of dates in the year up to the last date visible in the filter context.
+
+Ejemplos.
+- Ventas acumuladas (mes x mes) de un year.
+
+
+**TOTALYTD**
+
+
+
 
 **PARALLELPERIOD**
 
 Returns a parallel period of dates by the given set of dates and a specified interval.
+
+**Otras**
+
+PREVIOUSMONTH
+
 
 ## Matematicas
 
@@ -266,6 +310,13 @@ Rounds a number to a specified number of digits.
 ## RANKX
 
 ## Forecasts 
+
+## Relationship
+
+DAX 101: Using USERELATIONSHIP in DAX
+- USERELATIONSHIP function in DAX to change the active relationship in a CALCULATE function. 
+- If two tables are linked by more than one relationship, you can decide which relationship to activate by using USERELATIONSHIP. 
+https://www.sqlbi.com/articles/using-userelationship-in-dax/
 
 ## Varias
 

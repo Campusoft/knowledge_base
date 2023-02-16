@@ -325,11 +325,34 @@ https://learn.microsoft.com/en-us/power-platform-release-plan/2021wave2/power-bi
 Power BI Premium features
 https://learn.microsoft.com/en-us/power-bi/enterprise/service-premium-features
 
+
+Power BI Licensing Ultimate Guide
+- Power BI Free
+- Power BI Pro
+- Power BI Premium Per User
+- Power BI Embedded
+- Power BI Premium
+- Power BI Report Server Only licensing
+https://radacad.com/power-bi-licensing-walk-through-guide
+
+
 # Performance
 
 
 Introducing the Power BI Performance Analyzer
 https://www.sqlbi.com/articles/introducing-the-power-bi-performance-analyzer/
+
+
+# Workspaces 
+
+How to organize workspaces in a Power BI environment?
+https://radacad.com/how-to-organize-workspaces-in-a-power-bi-environment
+
+Power BI Workspace; Collaborative DEV Environment
+https://radacad.com/groups-in-power-bi
+
+Best Practice for Power BI Workspace Roles Setup
+https://radacad.com/best-practice-for-power-bi-workspace-roles-setup
 
 
 
