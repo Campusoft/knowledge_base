@@ -306,8 +306,48 @@ Rounds a number to the specified number of decimals and returns the result as te
 
 Rounds a number to a specified number of digits.
 
-
 ## RANKX
+
+
+## Parameters
+
+Generating a series of numbers in DAX
+This article describes how to create a table with a series of numbers in DAX by using the new GENERATESERIES function or through a workaround using CALENDAR. 
+https://www.sqlbi.com/articles/generating-a-series-of-numbers-in-dax/
+
+
+Parameter table
+- Changing the scale of a measure
+- Multiple independent parameters
+- Multiple dependent parameters
+- Selecting top N products dynamically
+https://www.daxpatterns.com/parameter-table/
+
+
+**Field Parameters**
+
+The same functionality was achievable using the SWITCH() DAX function, but that took both additional time and expertise. The new Field Parameters feature does not require much time or expertise to implement. 
+
+
+
+What are Field Parameters in Power BI?
+- What are Field Parameters? 
+- Why are Field Parameters Important? 
+- How to Use Field Parameters 
+- Field Parameter Example Use Case 
+https://www.phdata.io/blog/what-are-field-parameters-in-power-bi/
+
+
+
+Fields parameters in Power BI
+- 
+https://www.sqlbi.com/articles/fields-parameters-in-power-bi/
+
+
+
+**GENERATESERIES**
+Returns a table with one column, populated with sequential values from start to end.
+
 
 ## Forecasts 
 

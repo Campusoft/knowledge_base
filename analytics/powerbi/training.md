@@ -95,6 +95,69 @@ https://www.java67.com/2021/05/top-5-free-power-bi-courses-for..html
    - Sección 5: Lesson 4. Maps in Power BI
    - Sección 6: Lesson 5. Examples of map projects in Excel & Power BI
 
+
+
+Power BI Training: 1 Day Introduction
+Introduction: What Is Power BI?
+- What is Power BI and when do I use it?
+- Power BI installation and versions.
+
+Obtaining Data
+- Different data sources: Files, Databases and the Web.
+- Repointing to Moved Data Source
+
+Steps: The Basics
+- Removing Columns/Rows
+- Data Type Changes
+- Filters
+
+Steps: Complex
+- Group
+- Split
+- Duplicate
+- Combine: Append and Merge
+- Pivot/Unpivot
+- Columns: Add Column, Custom Function, Conditional Column
+- Index
+- Extract
+
+Relationships
+- Model View and Relationship management
+- Join Kinds
+- Hierarchies
+- Working with Related Tables
+
+DAX Formula & Measures
+- Formula
+- Measures
+- Quick Measure
+
+Date Tables and Time Intelligence
+- Date Table Rules
+- Setting the Date Table
+- External and Internal
+- Automatic Date Table
+- Time Intelligence Formulas and Measures
+
+Visualisations
+- Matrix
+- Conditional Formatting
+- Chart
+- KPI (Key Performance Indicator)
+- Spatial Intelligence
+
+Visualisation Manipulation
+- Filter: Basic and Advanced
+- Top 10
+- Slicer
+- Drill Through
+
+Publishing/Sharing Reports
+- Publishing to the Web
+- PDF
+https://www.acuitytraining.co.uk/microsoft-training-courses/power-bi/introduction/
+
+
 ## Fuentes Datos
 
 Microsoft Contoso BI Demo Dataset for Retail Industry 
