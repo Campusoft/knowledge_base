@@ -64,6 +64,10 @@ https://developer.mozilla.org/es/docs/Web/HTTP/Headers/X-Content-Type-Options
 
 ## Content Security Policy
 
+The new Content-Security-Policy HTTP response header helps you reduce XSS risks on modern browsers by declaring which dynamic resources are allowed to load.
+
+
+
 Content Security Policy (CSP). Quick Reference Guide 
 https://content-security-policy.com/
 

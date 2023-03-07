@@ -380,6 +380,12 @@ Using the SELECTEDVALUE function in DAX
 https://www.sqlbi.com/articles/using-the-selectedvalue-function-in-dax/
 
 
+**EOMONTH**
+
+Returns the date in datetime format of the last day of the month before or after a specified number of months.
+https://dax.guide/eomonth/
+
+
 # Power Pivot para Excel
 
 
