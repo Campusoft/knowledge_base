@@ -247,6 +247,7 @@ https://www.daxpatterns.com/standard-time-related-calculations/
 
 Comparing different time periods 
 - the model must contain two date tables
+- use USERELATIONSHIP 
 https://www.daxpatterns.com/comparing-different-time-periods/
  
 
