@@ -77,6 +77,12 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Polic
 
 ## CORS (Cross-Origin Resource Sharing) 
 
+
+## Unvalidated Redirects and Forwards
+
+Unvalidated Redirects and Forwards Cheat Sheet
+https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forwards_Cheat_Sheet.html
+
 # Audit Trail
 
 [Audit](Audit.md)

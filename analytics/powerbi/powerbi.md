@@ -316,6 +316,10 @@ Comparacion de caracteristicas por licencia.
 https://powerbi.microsoft.com/en-us/pricing/#features-compare-charts
 
 
+Power BI Premium
+- Incremental refresh is supported for Power BI Premium, Premium per user, Power BI Pro, and Power BI Embedded datasets.
+https://learn.microsoft.com/en-us/power-bi/connect-data/incremental-refresh-overview
+
 
 Power BI Premium
 - Hybrid tables. Hybrid tables combine the performance of VertiPaq in-memory caches with the capabilities of DirectQuery, allowing users to unlock massive datasets for real-time, interactive analysis.

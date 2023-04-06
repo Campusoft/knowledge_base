@@ -110,6 +110,21 @@ it is impossible to properly understand the details of CALCULATE without a prope
 
 You invoke CALCULATE with an expression as its first argument, and a set of filters starting from the second parameter onwards. 
 
+
+
+```
+CALCULATE(<expression>[, <filter1> [, <filter2> [, …]]])
+```
+
+Para cada expresión de filtro hay dos posibles resultados estándar:
+
+- Si las columnas (o tablas) no están en el contexto de filtro, para evaluar la expresión se agregarán filtros nuevos al contexto de filtro.
+- Si las columnas (o tablas) ya están en el contexto de filtro, para evaluar la expresión CALCULATE los filtros nuevos sobrescribirán los existentes.
+
+https://learn.microsoft.com/es-es/dax/calculate-function-dax#remarks
+
+
+
 Función CALCULATE
 https://cartasdax.com/calculate/
 
@@ -117,6 +132,10 @@ https://cartasdax.com/calculate/
 Introducing CALCULATE in DAX
 - The evaluation contexts and CALCULATE are the foundation of the entire DAX language 
 https://www.sqlbi.com/articles/introducing-calculate-in-dax/
+
+
+
+
 
 
 **CALCULATETABLE**
@@ -325,6 +344,20 @@ Parameter table
 https://www.daxpatterns.com/parameter-table/
 
 
+
+Considerations and limitations
+
+There are a couple considerations and limitations for parameters to keep in mind:
+
+- Parameters can only be used with value ranges between 0 and 1,000. For ranges greater than 1,000, the parameter value will be sampled.
+- Parameters are designed for measures within visuals, and might not calculate properly when used in a dimension calculation.
+https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-what-if#considerations-and-limitations
+
+
+Restricciones de la cantidad de valores en parametros.
+https://whatthefact.bi/power-bi/data-model/why-is-it-sometimes-not-possible-to-select-the-exact-number-in-the-what-if-parameter-and-how-can-this-be-solved/
+
+
 **Field Parameters**
 
 The same functionality was achievable using the SWITCH() DAX function, but that took both additional time and expertise. The new Field Parameters feature does not require much time or expertise to implement. 
@@ -385,6 +418,9 @@ https://www.sqlbi.com/articles/using-the-selectedvalue-function-in-dax/
 
 Returns the date in datetime format of the last day of the month before or after a specified number of months.
 https://dax.guide/eomonth/
+
+
+**CROSSJOIN**
 
 
 # Power Pivot para Excel
