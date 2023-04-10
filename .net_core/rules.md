@@ -11,3 +11,8 @@ Features
 
 
 https://github.com/dynamicexpresso/DynamicExpresso
+
+
+Identifiers detection
+- In these cases you can use Interpreter.DetectIdentifiers method to obtain a list of used identifiers, both known and unknown.
+https://github.com/dynamicexpresso/DynamicExpresso#identifiers-detection

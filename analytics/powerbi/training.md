@@ -201,6 +201,17 @@ Customer demographics and transactions data from an Indian Bank
 https://www.kaggle.com/datasets/shivamb/bank-customer-segmentation
 
 
+**Ecuador**
+
+Catálogo de Datos Abiertos Ecuador
+- Conjuntos de datos de más de 95 instituciones. 
+https://www.datosabiertos.gob.ec/
+
+
+Directorio de Compañías. Superintendencia de Compañías, Valores y Seguros 
+https://mercadodevalores.supercias.gob.ec/reportes/directorioCompanias.jsf
+
+
 # Revisiones
 
 # Ejercicios

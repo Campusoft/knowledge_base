@@ -99,6 +99,13 @@ BI solution used to demonstrate several features of SSAS.
 https://www.sqlbi.com/whitepapers/sqlbi-methodology/
 
 
+# Time Intelligence
+
+
+- Week to date (WTD). La expresión inglesa month-to-date («mes hasta la fecha»), frecuentemente abreviada MTD, se utiliza sobre todo en contabilidad para indicar la rentabilidad desde el día 1 del mes hasta hoy. 
+- Month to date (MTD)
+- Year to date (YTD)
+
 
 # Metabase
 

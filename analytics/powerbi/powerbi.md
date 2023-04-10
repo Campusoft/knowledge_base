@@ -362,7 +362,8 @@ https://radacad.com/best-practice-for-power-bi-workspace-roles-setup
 
 # Power BI gateway
 
- 
+Where are the Power BI Gateway logs? I thought I knew... 
+https://www.youtube.com/watch?v=H6sLCVanIYE
  
 # Publish
 
