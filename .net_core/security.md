@@ -225,6 +225,13 @@ dotnet new clean-arch -o AuditNet.Lab
 Using ASP.NET Idenity User instead of Environment.UserName
 https://github.com/thepirat000/Audit.NET/issues/299
 
+# Varios
+
+ASP.NET Core Anti-Forgery Explained
+- The CookieToken stored in .AspNetCore.Antiforgery.xxxxxxxx cookie is marked by the framework as samesite=strict and httponly. So if the front end app and API are hosted in different domain, the browser would not send the cookie. Thus the anti-forgery validation would fail.
+https://jason-ge.medium.com/asp-net-core-anti-forgery-explained-9549edfae926
+
+
 # Revisiones / TEMP. (Proyecto BIT)
 
 ● https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project

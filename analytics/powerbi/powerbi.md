@@ -306,6 +306,33 @@ https://learn.microsoft.com/es-es/powerquery-m/m-spec-values#table
 
 - La opcion de transformacion, posee opciones para ver distribuccion y calidad en las columnas. (Esta informacion se basa en 1000 registros)
 
+# Direct Query  
+
+No Data Tab in DirectQuery Mode
+
+limitations are common to all DirectQuery sources
+- No built-in date hierarchy: This built-in date hierarchy isn't available with DirectQuery.
+
+DirectQuery in Power BI
+- DirectQuery limitations
+- Data transformation limitations
+- Modeling limitations
+https://learn.microsoft.com/en-us/power-bi/connect-data/desktop-directquery-about
+
+
+DirectQuery Connection in Power BI; How does it work? Limitations and Advantages
+https://radacad.com/directquery-connection-in-power-bi-how-does-it-work-limitations-and-advantages
+
+
+Connectors in Power Query
+- Azure Synapse Analytics
+https://learn.microsoft.com/en-us/power-query/connectors/
+
+**Errores con Sql Server**
+
+
+
+
 
 # Licencias
 

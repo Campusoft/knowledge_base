@@ -89,7 +89,11 @@ https://cheatsheetseries.owasp.org/cheatsheets/Unvalidated_Redirects_and_Forward
 
 # Varios
 
-cookies  httpOnly
+Cookies  httpOnly
+
+SameSite cookie restrictions
+- 
+https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions
 
 Información Personal Identificable (PII)
 PII es cualquier información sobre un individuo mantenida por una agencia, incluyendo (1) cualquier información que pueda usarse para distinguir o rastrear la identidad de un individuo, tal como nombre, número de seguridad social, fecha y lugar de nacimiento, apellido de soltera de la madre o registros biométricos; y (2) cualquier otra información que esté vinculada o que pueda vincularse con un individuo, como información médica, educativa, financiera y de empleo.

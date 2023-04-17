@@ -166,6 +166,7 @@ https://www.microsoft.com/en-us/download/details.aspx?id=18279
 
 
 These downloads are scripts and full database backups (.bak) files that you can use to install the AdventureWorks (OLTP) and AdventureWorksDW (data warehouse) sample databases to your SQL Server instance.
+- AdventureWorksDW is the data warehouse sample.
 https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks
 
 
