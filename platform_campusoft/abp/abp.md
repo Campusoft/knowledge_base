@@ -306,6 +306,27 @@ El proyecto abp - cli, se encuentra en abp\framework\src\Volo.Abp.Cli
 
 # Versiones
 
+**7.1 RC**
+
+Entity synchronization is an important concept, especially in distributed applications and module development. If we have an entity that is related to other modules, we need to align/sync their data once the entity changes and versioning entity changes can also be good, so we can know whether they're synced or not.
+
+https://blog.abp.io/abp/ABP.IO-Platform-7.1-RC-Has-Been-Published
+
+**7.0 RC**
+
+
+- Upgraded to .NET 7.0
+- Upgraded to OpenIddict 4.0
+- Dapr Integration
+- Integration Services
+- Dynamic Permissions and Features
+- External Localization Infrastructure
+- Distributed Entity Cache Service
+- Layout Hooks for the Blazor UI
+- Improvements on the eShopOnAbp project
+
+https://blog.abp.io/abp/ABP.IO-Platform-7.0-RC-Has-Been-Published
+
 **5.3.x**
 - Batch Publish Events from Outbox to the Event Bus
 - OpenIddict Module & Keycloack Integration

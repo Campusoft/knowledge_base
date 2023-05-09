@@ -313,6 +313,21 @@ No Data Tab in DirectQuery Mode
 limitations are common to all DirectQuery sources
 - No built-in date hierarchy: This built-in date hierarchy isn't available with DirectQuery.
 
+Here is the list of pros and cons of the DirectQuery;
+
+Advantages
+
+- Large Scale Dataset; Size limitation only for the data source itself
+- No need for data refresh
+
+Disadvantages
+
+- Power Query transformations are limited
+- Modeling is limited
+- DAX is limited
+- Lower speed of the report
+
+
 DirectQuery in Power BI
 - DirectQuery limitations
 - Data transformation limitations
@@ -327,6 +342,22 @@ https://radacad.com/directquery-connection-in-power-bi-how-does-it-work-limitati
 Connectors in Power Query
 - Azure Synapse Analytics
 https://learn.microsoft.com/en-us/power-query/connectors/
+
+
+**Maximum connections per data source**
+
+Depending on the license of Power BI and the environment, there are some limits on this number as below;
+Environment	Upper limit (active connections per data source)
+
+- Power BI Pro	10
+- Power BI Premium	30
+- Power BI Report Server	10
+
+
+**Adding extra Data Sources: Composite Mode**
+
+Back in the older days of using Power BI Desktop, if the DirectQuery was the mode of the connection, it was not possible to add any other data sources. However, that changed a few years ago. You can add extra data sources (Import, or any other connection types) to a DirectQuery-based Power BI file, This will change the file to something we call Composite Mode. The below warning will be, however, visible when you are bringing data from other data sources;
+
 
 **Errores con Sql Server**
 
@@ -603,3 +634,13 @@ https://towardsdatascience.com/power-bi-how-to-fit-200-million-rows-in-less-than
 
 
 aggregation table
+
+
+
+Top Five Mistakes to Avoid When Developing Power BI Reports
+- Mistake 1: Making all the relationships Both-Directional
+- Mistake 2: Load Data without Transform
+- Mistake 3: Writing Calculations Instead of Transformations
+- Mistake 4: Overuse of DAX Measures
+- Mistake 5: Re-Write or Copy Instead of Re-Use
+https://radacad.com/top-five-mistakes-to-avoid-when-developing-power-bi-reports

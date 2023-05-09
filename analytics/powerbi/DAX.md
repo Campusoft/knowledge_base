@@ -145,8 +145,15 @@ CALCULATETABLE is identical to CALCULATE, except for the result: it returns a ta
 
 ## SUMMARIZECOLUMNS
 
+
+Create a summary table for the requested totals over set of groups.
+- SUMMARIZECOLUMNS can compute subtotals as part of the query result. ROLLUPADDISSUBTOTAL 
 https://dax.guide/summarizecolumns/
 
+
+Introducing SUMMARIZECOLUMNS
+- This article explains how to use SUMMARIZECOLUMNS, which is a replacement of SUMMARIZE and does not require the use of ADDCOLUMNS to obtain good performance. 
+https://www.sqlbi.com/articles/introducing-summarizecolumns/
 
 
 From SQL to DAX: Grouping Data

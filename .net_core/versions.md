@@ -48,6 +48,11 @@ We recommend you target .NET Standard in the following scenarios:
 - Use netstandard2.1 to share code between Mono, Xamarin, and .NET Core 3.x.
 
 
+# Migrate from ASP.NET Core 5.0 to 6.0 
+
+Migrate from ASP.NET Core 5.0 to 6.0
+https://learn.microsoft.com/en-us/aspnet/core/migration/50-to-60?view=aspnetcore-7.0&tabs=visual-studio
+
 # Migraciones a .net core
 
 OneService Journey to .NET 6
