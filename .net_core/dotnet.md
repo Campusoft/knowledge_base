@@ -55,7 +55,6 @@ A template is composed of the following parts:
 - Source files and folders.
 - A configuration file (template.json).
 
-
 It’s very easy to create a new template and they are surprisingly easy to maintain. Traditionally, templates that can perform text substitution use a special syntax, like $VARIABLE$ markers that will be replaced when the template is evaluated. Unfortunately, this is usually invalid syntax for the file type, which makes it impossible to run the project to test that the template is correct. This leads to bugs and slow iteration times, and basically, a bit of a maintenance headache.
 
 Fortunately, the designers of the template engine have thought about this, and come up with a much nicer way of working: running templates.
@@ -105,8 +104,6 @@ Pasos:
 - Crear carpeta: .template.config, en el proyecto que se requiere colocarlo como template
 - Crear archivo, dentro de la carpeta creada: template.json
 - Configurar archivo template.json
-
-**Ejemplo**
 
 
 # Https 

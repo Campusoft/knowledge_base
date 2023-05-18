@@ -142,3 +142,12 @@ http://www.arloon.com
 
 
 
+
+# Revisiones
+
+Now, imagine combining @GoogleARVR
+ and @googlemaps
+ platform with @AdobeAero
+. That's exactly what's happening.
+
+World-scale AR creation has legit been democratized. This partnership brings Google's real-world modeling into Adobe's creative design tools (+ engines like Unity) 👇

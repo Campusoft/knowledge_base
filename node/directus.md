@@ -54,6 +54,20 @@ Directus only requires Node.js and supports most operating systems and SQL datab
 
     Node.js 12.20+
     npm 6.x+
+	
+	
+https://docs.directus.io/getting-started/architecture.html
+
+
+# Instalar
+
+
+Docker
+- Docker Compose
+https://docs.directus.io/self-hosted/quickstart.html	
+
+This compose file is meant to spin up a copy of all supported database vendors + Redis and S3 (Minio).
+https://github.com/directus/directus/blob/main/docker-compose.yml
 
 # Laboratorios
 

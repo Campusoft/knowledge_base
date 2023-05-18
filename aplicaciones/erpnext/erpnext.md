@@ -83,45 +83,6 @@ In the Role master, if field "Desk Access" is checked, that Role is for System U
 Los permisos se establecen en los roles y en los tipos de documentos (llamados 'DocType') Se establecen permisos como: lectura, escritura, crear, borrar, validar, cancelar, corregir, reporte, importar, exportar, imprimir, Email y los permisos de usuario
 
 
-#  Frappe Framework.
-
-## DocTypes
-
-A DocType is the core building block of any application based on the Frappe Framework.
-
-It describes the Model and the View of your data. It contains what fields are stored for your data, and how they behave with each other. It contains information about how your data is named
-
-
-
-
-Field Types
-https://docs.erpnext.com/docs/v13/user/manual/en/customize-erpnext/articles/field-types
-
-
-Section Break
-- Section Break is used to divide the form into multiple sections.
-- Ej. Referencia. En bootstrap, seria un row una section.
-
-## REST API 
-
-Frappe framework generates REST API for all of your DocTypes out of the box. You can also run arbitrary python methods using their dotted module path.
-https://frappeframework.com/docs/v14/user/en/api/rest
-
-
-Frappe ships with an HTTP API that can be classified into Remote Procedure Calls (RPC), to call whitelisted methods and Representational State Transfer (REST), to manipulate resources.
-- All documents in Frappe are available via a RESTful API with prefix /api/resource/. You can perform all CRUD operations on them:
-https://frappeframework.com/docs/v14/user/en/guides/integration/rest_api
-
-
-Token Based Authentication 
-- There are two types of authorization: token and Basic
-- Access Token
-https://frappeframework.com/docs/v14/user/en/guides/integration/rest_api/token_based_authentication
-
-## Bench
-
-Bench is a CLI tool to manage Frappe Deployments. It provides an easy interface to help you setup and manage multiple sites and apps based on Frappe Framework.
-
 
 # Referencias
 

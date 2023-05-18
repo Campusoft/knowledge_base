@@ -69,7 +69,7 @@ A team owner must be provided when creating a team in application context.
 https://docs.microsoft.com/en-us/graph/sdks/paging?view=graph-rest-1.0&tabs=csharp
 
 
-# Revisiones (TODO
+# Revisiones (TODO)
 
 Los teams se pueden "Archived"
 
