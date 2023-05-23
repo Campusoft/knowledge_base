@@ -83,6 +83,15 @@ In the Role master, if field "Desk Access" is checked, that Role is for System U
 Los permisos se establecen en los roles y en los tipos de documentos (llamados 'DocType') Se establecen permisos como: lectura, escritura, crear, borrar, validar, cancelar, corregir, reporte, importar, exportar, imprimir, Email y los permisos de usuario
 
 
+# Movil
+
+
+Frappe/ERPNext web views are mobile friendly, has full support for ERPNext features, need less maintenance and users can directly access sites from the mobile browser itself.
+
+Due to this, we planned to deprecate mobile apps and we will be delisting the apps on both the stores.
+
+This Project uses provider for State Management. hive, shared_preferences for storage. dio for making network requests.
+https://github.com/frappe/mobile
 
 # Referencias
 

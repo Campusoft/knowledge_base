@@ -21,6 +21,20 @@ Section Break
 - Section Break is used to divide the form into multiple sections.
 - Ej. Referencia. En bootstrap, seria un row una section.
 
+
+# App
+
+The default app frappe is a frappe app which acts as the framework for all apps
+
+A Frappe app is a python package that uses the Frappe framework. Frappe apps live in a directory called apps in the frappe-bench directory.
+
+To use an app, it must be installed on a site. 
+
+# Sites
+
+Frappe is a multitenant platform and each tenant is called a site. A site has its own database. Sites exist in a directory called sites, assumed as the current working directory when running a bench command.
+
+
 # REST API 
 
 Frappe framework generates REST API for all of your DocTypes out of the box. You can also run arbitrary python methods using their dotted module path.

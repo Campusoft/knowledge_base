@@ -255,25 +255,8 @@ https://www.freecodecamp.org/news/best-practices-for-react/
 
 # Traning
 
-10 ReactJS Coding Challenge
-- Soluciones Incluidas 
-https://dev.to/frontendengineer/10-reactjs-coding-exercises-with-codepen-exercise-and-solution--22k7
+[Traning](traning.md)
 
-React exercise 
-https://www.w3schools.com/react/exercise.asp
-
-React Developer
-Everything that is there to learn about React and the ecosystem in 2022.
-https://roadmap.sh/react
-
-Develop a Single Page App (SPA) that shows a simple dashboard that displays four tiles, each displaying a single statistic for a dataset that is retrieved via a REST API call. The user should be able to request new data to be loaded and to see the statistics in the tiles update to reflect the new dataset.
-- React
-- Node.js
-https://github.com/briang123/stats-challenge-in-react-js
-
-React Interview Questions & Answers
-- List of top 500 ReactJS Interview Questions & Answers
-https://github.com/sudheerj/reactjs-interview-questions
 
 # Codigo Referencias
 
