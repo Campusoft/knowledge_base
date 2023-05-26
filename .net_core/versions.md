@@ -1,5 +1,28 @@
 # Versions
 
+
+# .NET 8.0
+
+- Improvements in System.Text.Json serialization
+
+Native AOT
+
+.NET 8 brings improvements to the native ahead-of-time (AOT) compilation feature that was first introduced in .NET 7. Publishing an application as native AOT generates a self-contained version of the app that doesn’t require a runtime as everything is included in a single file.
+
+The latest improvements to native AOT apps on Linux systems have resulted in significantly reduced application sizes.
+
+
+.NET container images
+
+.NET 8 also makes a few changes to the way .NET container images work. First, Debian 12 (Bookworm) is now the default Linux distribution in the container images.
+
+
+.NET 7
+
+Publish to a container
+
+Containers are one of the easiest ways to distribute and run a wide variety of applications and services in the cloud. Container images are now a supported output type of the .NET SDK, and you can create containerized versions of your applications using dotnet publish.
+
 # .net Core 6
 
 .NET 6 is supported with Visual Studio 2022 and Visual Studio 2022 for Mac. It is not supported in Visual Studio 2019

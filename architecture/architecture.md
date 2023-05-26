@@ -65,6 +65,17 @@ have microservices using different kinds of databases based on the capabilities 
 
 Change data capture (CDC) means identifying and tracking what has changed in a database so that you can take action, like updating your data warehouse or generating other outputs. The idea is to replicate a dataset using incremental updates so that you don’t have to copy your entire database every time a table gets updated.
 
+
+# Base de datos
+
+ACID 
+
+- Atomicidad (Atomicity). Asumamos que cada transacción es una unidad atómica de trabajo. Con esto, el éxito de las acciones de una transacción está condicionada al éxito de todas y cada una de las acciones relacionadas con dicha transacción.
+- Consistencia (Consistency). Cada transacción, ya sea exitosa o no, deja la base de datos en un estado coherente en base a las restricciones definidas en el entorno, ya sean contraints de foreign keys, unicidad de constraints unique o cualquier restricción definida en la lógica transaccional de la base de datos.
+- Aislamiento (Isolation). Cada transacción parece que ocurre aisladamente de otras transacciones con respecto a los cambios en la base de datos. El grado de aislamiento puede variar según el nivel aislamiento que se define en la transacción
+- Durabilidad (Durability). Cada transacción perdura a través de una interrupción del servicio. Cuando se restaura el servicio, todas las transacciones comprometidas se confirman y las transacciones no confirmadas se revierten.
+	
+
 # Observabilidad 
 
 - Logging

@@ -12,6 +12,20 @@
   - b) Filter a visual. Selecting a visual lets you apply filters just to that visual.
 
 
+Exportación de los datos usados para crear una visualización
+
+Si usa DirectQuery, la cantidad máxima de datos que Power BI puede exportar es 16 MB de datos sin comprimir. Un resultado no deseado puede ser que exporte menos que el número máximo de 150 000 filas. Esto es probable si:
+
+- Hay demasiadas columnas. Intente reducir el número de columnas y vuelva a realizar la exportación.
+- Hay datos que son difíciles de comprimir.
+- Hay otros factores que haya en juego que aumentan el tamaño del archivo y disminuyen el número de filas que Power BI puede exportar.
+https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-export-data?tabs=powerbi-desktop#considerations-and-limitations
+
+How to Export up to 500K rows of data in Excel from Power BI
+https://www.youtube.com/watch?v=JMjdWK_imiM
+
+
+
 # Conceptos 
 
 - Una visualización (u objeto visual) es un tipo de gráfico que han generado diseñadores de Power BI
@@ -266,7 +280,6 @@ https://www.enjoysharepoint.com/power-bi-show-value-as-percentage/
 
 
 
-
 # Themes
 
 
@@ -425,7 +438,6 @@ https://www.youtube.com/watch?v=H6sLCVanIYE
  
 # Publish
 
-
 Power BI Sharing Methods Comparison – All in One Review
 - Basic Sharing
 - Workspace
@@ -443,6 +455,8 @@ https://radacad.com/power-bi-sharing-methods-comparison-all-in-one-review
 # Power BI Report Builder
 
 Power BI Report Builder is a tool for authoring paginated reports that you can publish to the Power BI service. Paginated reports are designed to be printed or shared. 
+ 
+ 
  
 # Training
 

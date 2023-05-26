@@ -233,7 +233,8 @@ configurationBuilder
     .AreUnicode(false)
     .HaveMaxLength(1024);
 ```
-- 
+
+---------------------------------
 
 Entity Framework 7.x
 - JSON columns
