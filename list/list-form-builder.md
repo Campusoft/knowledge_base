@@ -83,3 +83,46 @@ https://github.com/ohmyform/ohmyform
 
  A frontend Framework for building B2B applications running in the browser on top of REST/GraphQL APIs, using ES6, React and Material Design
 marmelab.com/react-admin 
+
+
+## FormKit
+
+The open-source form framework for Vue
+
+FormKit equips developers to build their forms 10x faster by simplifying form structure, generation, validation, theming, submission, error handling, and more. 
+
+
+- Zero third-party dependencies
+- TypeScript support 
+- Tree-shakable 
+- Extend with plugins 
+- Plugins can be applied at an input, group, or global level 
+- Share code across inputs with features 
+- Extend with hooks 
+- Event system
+- Write your own inputs
+
+https://formkit.com/
+
+Architecture
+Every <FormKit> component owns a single core node, and each node must be one of three types:
+
+- Input. Most of FormKit’s native inputs have a node type of input — they operate on a single value.
+- List. A list is a node that produces an array value. 
+- Group. A group is a node that produces an object value.
+https://formkit.com/essentials/architecture
+
+
+
+Schema
+- There are 3 types of of schema nodes:
+  - Text nodes — produced by strings.
+  - HTML elements — defined by the $el property.
+  - Components — defined by the $cmp property.
+  - FormKit components — defined by the $formkit property. Syntactic sugar for the full $cmp format.
+	
+https://formkit.com/essentials/schema
+
+
+Vue Forms 
+https://github.com/formkit/formkit

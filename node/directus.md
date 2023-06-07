@@ -52,9 +52,8 @@ https://docs.directus.io/guides/api-endpoints/
 
 Directus only requires Node.js and supports most operating systems and SQL database vendors.
 
-    Node.js 12.20+
-    npm 6.x+
-	
+- Node.js 12.20+
+- npm 6.x+
 	
 https://docs.directus.io/getting-started/architecture.html
 

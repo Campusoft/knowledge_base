@@ -156,6 +156,17 @@ Informacion importante
 - OpenIddict encrypts the access token by default.
 
 
+Application permissions
+
+OpenIddict includes a built-in feature codenamed "application permissions" that allows controlling and limiting the OAuth 2.0/OpenID Connect features each registered client application is able to use.
+
+4 categories of permissions are currently supported:
+- Endpoint permissions.
+- Grant type permissions.
+- Scope permissions.
+- Response type permissions (introduced in OpenIddict 3.0).
+https://documentation.openiddict.com/configuration/application-permissions.html
+
 
 ## Referencias
 

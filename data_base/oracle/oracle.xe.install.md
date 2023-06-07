@@ -58,3 +58,9 @@ Step 3. Execute lsnrctl status to check the status of listener
 
 Step 4. Test Connection on SqlDeveloper
 
+
+# Docker
+
+
+Oracle Database XE Release 21c (21.3.0.0) Docker Image Documentation
+https://container-registry.oracle.com/ords/f?p=113:4:112281940771277:::4:P4_REPOSITORY,AI_REPOSITORY,AI_REPOSITORY_NAME,P4_REPOSITORY_NAME,P4_EULA_ID,P4_BUSINESS_AREA_ID:803,803,Oracle%20Database%20Express%20Edition,Oracle%20Database%20Express%20Edition,1,0&cs=3st_4WOxIF5FW-oa0Z-mDU5ssEfASBrK4ByNe46adfnGlhR31SGCR1Mdx3fg98WXK06QFbgXloJ90MqPVE97X1Q

@@ -67,6 +67,17 @@ nuget.org does not support permanent deletion of packages.
 https://docs.microsoft.com/en-us/nuget/nuget-org/policies/deleting-packages
 
 
+# Nuget
+
+
+You can also view folder locations using the dotnet nuget locals command:
+
+```
+dotnet nuget locals all --list
+```
+
+Managing the global packages, cache, and temp folders
+https://learn.microsoft.com/en-us/nuget/consume-packages/managing-the-global-packages-and-cache-folders
 
 # Revision
 

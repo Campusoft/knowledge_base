@@ -23,6 +23,13 @@ The Gatsby ecosystem includes built-in connectors to several database systems. T
 -    MongoDB
 -    Firebase/Firestore
 
+# Remix 
+
+Remix es un framework de React muy completo con enrutamiento anidado. Te permite dividir tu aplicación en partes anidadas que pueden cargar datos en paralelo y actualizarse en respuesta a las acciones del usuario. Para crear un nuevo proyecto Remix, ejecuta:
+
+Remix es mantenido por Shopify. Cuando creas un proyecto Remix, debes elegir su destino de implementación. Puedes implementar una aplicación Remix en cualquier ambiente Node.js, alojamiento sin servidor usando o escribiendo un adaptador.
+
+
 # Form Helper
 
 [Forms](form.md)

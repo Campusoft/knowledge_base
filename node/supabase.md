@@ -39,3 +39,11 @@ Architecture Storage
 
 - The storage server is built with Fastify and Typescript
 https://supabase.io/blog/2021/03/30/supabase-storage
+
+
+# Install
+
+
+Self-Hosting with Docker
+Docker is the easiest way to get started with self-hosted Supabase.
+https://supabase.com/docs/guides/self-hosting/docker

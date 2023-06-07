@@ -40,6 +40,25 @@ Activating the virtual environment will change your shell’s prompt to show wha
 (tutorial-env) $ python
 ```
 
+# Frameworks
+
+## Flask 
+
+
+
+# WSGI
+
+WSGI son las siglas de Web Server Gateway Interface. Es una especificación que describe cómo se comunica un servidor web con una aplicación web, y cómo se pueden llegar a encadenar diferentes aplicaciones web para procesar una solicitud/petición (o request).
+
+WSGI es un estándar Python que está descrito en detalle en la especificación PEP 3333.
+
+Actualmente Gunicorn es el servidor HTTP WSGI más usado por los Pythonistas. El nombre viene de la abreviatura Green Unicorn. Está escrito en Python y su uso es extremadamente simple.
+
+
+Usar Nginx como proxy inverso y Gunicorn como servidor WSGI
+![image](https://github.com/proyecto-facturacion/erp/assets/222181/24e72ece-f627-4100-a650-1d9e7d634cd3)
+
+
 # Revisiones
 
 Celery es un gestor de tareas distribuido y asíncrono desarrollado en Python. Es una herramienta magnífica para aplicaciones de alta disponibilidad y con alta carga, y también recomendable cuando consideramos que la carga va a ir aumentando progresivamente y vamos a ir incorporando nuevas máquinas poco a poco a nuestro cluster inicial.

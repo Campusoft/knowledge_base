@@ -29,13 +29,20 @@ Access all available commands based on your current context.
 
 Ctrl+Shift+P
 
-# extension
+# Extension
 
 
 Azure Functions for Visual Studio Code
 
 Use the Azure Functions extension to quickly create, debug, manage, and deploy serverless apps directly from VS Code. Check out the Azure serverless community library to view sample projects.
 https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions
+
+## c#
+
+Announcing C# Dev Kit for Visual Studio Code
+- C# Dev Kit extension, which builds from the foundations of Visual Studio to provide solution management, templates, and test discovery/debugging.
+https://devblogs.microsoft.com/visualstudio/announcing-csharp-dev-kit-for-visual-studio-code/
+
 
 # Git
 

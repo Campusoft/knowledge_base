@@ -66,3 +66,12 @@ https://nextjs.org/docs/basic-features/pages#pre-rendering
 
 https://nextjs.org/learn/basics/data-fetching/pre-rendering
 
+# Deploy
+
+Vercel is the fastest way to deploy your Next.js application with zero configuration.
+
+
+# Training
+
+Next.js 13 for Beginners
+https://github.com/gitdagray/next-js-course

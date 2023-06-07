@@ -306,6 +306,8 @@ El proyecto abp - cli, se encuentra en abp\framework\src\Volo.Abp.Cli
 
 # Versiones
 
+
+
 **7.1 RC**
 
 Entity synchronization is an important concept, especially in distributed applications and module development. If we have an entity that is related to other modules, we need to align/sync their data once the entity changes and versioning entity changes can also be good, so we can know whether they're synced or not.

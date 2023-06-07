@@ -93,9 +93,46 @@ Due to this, we planned to deprecate mobile apps and we will be delisting the ap
 This Project uses provider for State Management. hive, shared_preferences for storage. dio for making network requests.
 https://github.com/frappe/mobile
 
+
+# Versions 
+
+
+What’s new in the Frappe and ERPNext V13 redesign?
+- Bootstrap 4
+https://erpnext.com/blog/ERPNext%20Features/what%E2%80%99s-new-in-redesign
+
+
+# Frappe Books
+
+Frappe Books is built on Vue.js and Electron. It is offline by default and uses a local SQLite file as the database.
+
+https://frappebooks.com/
+
+
+Expected version ">=16.13.1 <17". Got "18.14.2"
+
+
+```
+# start the electron app
+yarn electron:serve
+```
+
+## Items
+
+Item is term used by Frappe Books for anything that is purchased or sold using a Sales or Purchase Invoice.
+
+All of the goods and services that are subject to the GST in India are categorized using an HSN code (Harmonized System of Nomenclature) and a SAC (Service Accounting Code), which helps in removing any obstacles to international trade. These HSN and SAC codes have also been applied to invoices and record-keeping, which makes it simple to identify the products and services provided. In this article, we will examine the difference between the HSN and SAC codes in GST.
+
+
 # Referencias
 
 
 How ERPNext superior than Odoo - An Odoo Consultant Perspective
 - Odoo itself was also 100% Open Source when started, until Version 9, the license was changed from AGPL (100% Open) to LGPL (Open Core). Subsequently, serveral key modules have been removed from the community version.
 https://ecosoft-odoo.blogspot.com/2023/05/how-erpnext-superior-than-odoo-odooer.html
+
+
+# Revisiones
+
+Integrating ERPNext With WooCommerce
+https://erpnext.com/blog/ERPNext%20Features/integrating-erpnext-with-woocommerce
