@@ -115,4 +115,5 @@ Jitsu CLI reads files with events JSONs from local file system and send them to 
 https://jitsu.com/docs/other-features/cli
 
 # Revision
+
 Airbyte is an open-source ETL-framework. Jitsu supports Airbyte as an of the connector backend (the other one being Singer and native connectors

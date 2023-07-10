@@ -12,7 +12,7 @@ Data pipelines can be categorized based on the type of analytics and workflows t
 
 
 Best Practices to Design a Data Ingestion Pipeline
-- ‍Compare data ingestion tools
+- Compare data ingestion tools
   - Data connectors available (Shopify, Azure Blob, Facebook, NetSuite, etc.) 
   - Capabilities of your team (time to set-up, time to maintain, skillset, etc.)
   - Budget (monthly costs to ingest expected volume of data)
@@ -62,7 +62,7 @@ https://www.startdataengineering.com/post/cdc-using-singer/
 
 # AWS Glue
 
-El primer paso de un proyecto de análisis o ML consiste en preparar los datos para obtener resultados de calidad. AWS Glue es un servicio de integración de datos sin servidor que vuelve más fácil, rápido y barato el proceso de preparación de datos. Puede detectar y conectarse a más de 70 orígenes de datos distintos, administrar los datos en un catálogo centralizado, además de visualizar, crear, ejecutar y supervisar las canalizaciones de ETL para cargar los datos en los lagos de datos correspondientes
+El primer paso de un proyecto de análisis o ML consiste en preparar los datos para obtener resultados de calidad. AWS Glue es un servicio de integración de datos sin servidor que vuelve más fácil, rápido y barato el proceso de preparación de datos. Puede detectar y conectarse a más de 70 orígenes de datos distintos, administrar los datos en un catálogo centralizado, además de visualizar, crear, ejecutar y supervisar las canalizaciones de ETL para cargar los datos en los lagos de datos correspondientes
 https://aws.amazon.com/es/glue/
 
 
@@ -137,6 +137,56 @@ Currently, this repository contains SDKs for Java, Python and Go
 
 
 
+
+# RudderStack 
+
+RudderStack is a stand-alone system dependent only on a database (PostgreSQL). Its backend is written in Go, with a rich UI written in React.js.
+
+RudderStack's architecture consists of 2 major components: the control plane and data plane
+
+Control plane
+
+The control plane offers a UI to configure your event data sources and destinations. It consists of:
+
+- RudderStack web app: The front-end application where you set up and configure your data pipelines in RudderStack.
+- Configuration backend: The web app leverages this module to store all the relevant information around your configured sources, destinations, and the connections between them.
+	
+Data plane
+
+The data plane (backend) is RudderStack's core engine responsible for:
+
+- Receiving and processing event data
+- Transforming events in the required destination format
+- Relaying events to the destination
+
+The RudderStack data plane consists of three major components:
+
+- RudderStack server (rudder-server)
+- Transformations module
+- Standalone streaming database (PostgreSQL) for event data
+	
+https://www.rudderstack.com/docs/static/a188699e9ddc1f56f525fa14a08bac80/aa440/rudderstack-backend-architecture.png	
+	
+https://www.rudderstack.com/docs/get-started/rudderstack-architecture/
+
+## licensing
+
+The core of RudderStack - the components that make up our Event Stream feature - is open source.
+
+A majority of RudderStack’s third-party destination integrations live in the rudder-transformer repository. They are open source as well, licensed under the MIT License.
+
+Features licensed under our enterprise license include:
+
+- Reverse ETL
+- ETL
+- Transformations
+- Event Replay
+- SSO (Single Sign-On)
+https://www.rudderstack.com/blog/rudderstacks-licensing-explained/
+
+
+
+
 # Reverse ETL
 
 ## grouparoo
@@ -168,56 +218,6 @@ Regardless of how a Model is built, it is configured with a unique Primary Key t
 A single Model can be configured with multiple Syncs to different Destinations. For example, a Model containing customer data is commonly configured to sync between Sales (ie Salesforce), Marketing (ie Iterable), and Support (ie Zendesk) tools. Doing so enables all business tools to leverage the same source of truth.
 
 
-**Revisiones**
-
-https://www.getcensus.com/
-
-**RudderStack**
-
-RudderStack is a stand-alone system dependent only on a database (PostgreSQL). Its backend is written in Go, with a rich UI written in React.js.
-
-RudderStack's architecture consists of 2 major components: the control plane and data plane
-
-Control plane
-
-The control plane offers a UI to configure your event data sources and destinations. It consists of:
-
-- RudderStack web app: The front-end application where you set up and configure your data pipelines in RudderStack.
-- Configuration backend: The web app leverages this module to store all the relevant information around your configured sources, destinations, and the connections between them.
-	
-Data plane
-
-The data plane (backend) is RudderStack's core engine responsible for:
-
-    Receiving and processing event data
-    Transforming events in the required destination format
-    Relaying events to the destination
-
-The RudderStack data plane consists of three major components:
-
-    RudderStack server (rudder-server)
-    Transformations module
-    Standalone streaming database (PostgreSQL) for event data
-	
-https://www.rudderstack.com/docs/static/a188699e9ddc1f56f525fa14a08bac80/aa440/rudderstack-backend-architecture.png	
-	
-https://www.rudderstack.com/docs/get-started/rudderstack-architecture/
-
-## licensing
-
-The core of RudderStack - the components that make up our Event Stream feature - is open source.
-
-A majority of RudderStack’s third-party destination integrations live in the rudder-transformer repository. They are open source as well, licensed under the MIT License.
-
-Features licensed under our enterprise license include:
-
-- Reverse ETL
-- ETL
-- Transformations
-- Event Replay
-- SSO (Single Sign-On)
-https://www.rudderstack.com/blog/rudderstacks-licensing-explained/
-
 # dbt 
 
 dbt enables analytics engineers to transform data in their warehouses by simply writing select statements. dbt handles turning these select statements into tables and views.
@@ -233,3 +233,8 @@ Materializations are strategies for persisting dbt models in a warehouse. There 
 
 Airflow, Prefect, and Dagster: An Inside Look
 https://towardsdatascience.com/airflow-prefect-and-dagster-an-inside-look-6074781c9b77
+
+
+**Revisiones**
+
+https://www.getcensus.com/

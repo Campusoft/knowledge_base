@@ -1,8 +1,5 @@
 # Capa de Presentación
 
- 
- 
-
 Existe las siguientes clases base
 -   BaseReadOnlySearchDtoController, se utiliza para crear funcionalidades de visualizacion de informacion.
     
@@ -24,15 +21,15 @@ La plataforma, tiene implementaciones genéricas para view, utilizando mvc “*.
 Las view de mvc, que corresponden a cada view de la plataforma.
 
 
-#### View Tree.
+## View Tree.
 
 La plataforma genera automáticamente, la vista tipo “Tree”, basado en las propiedades del objeto que se utiliza para generar esta vista “El DTO”, en el caso que se requiera visualizar propiedades específicas de un objeto, se debe establecer explícitamente los campos que se desean, realizando una sobreescritura del método “GetViewTreeTyped(string name)” en el controlador que utiliza los controller base.
  
-#### View Search.
+## View Search.
 
 Para construir las opciones de búsqueda que puede tener una funcionalidad, se debe establecer explícitamente los campos que se requieren, realizando una sobrescritura del método “GetViewSearchTyped(string name)” en el controlador que utiliza los controller base.
 
-#### View Form.
+## View Form.
 
 La plataforma genera automáticamente, la vista tipo “Form”, de todas las propiedades de un objeto para generar la vista “El DTO”, en el caso que se requiera visualizar propiedades específicas de un objeto, se puede establecer manualmente los campos que se utilizan para la acción “Crear”, acción “Editar”, acción “Detalles”.
 

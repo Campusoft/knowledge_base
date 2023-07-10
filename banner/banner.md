@@ -3,18 +3,18 @@
 
 Banner ERP Academico.
 
-## Conceptos
+# Conceptos
 
-### Catálogo de Cursos
+## Catálogo de Cursos
 
 Esto involucra la compilación de datos como título de curso, departamento horas crédito, correquisitos o prerrequisitos, información sobre cuotas, y restricciones para un curso. Elementos (Materias, Cursos)
  
 
-### Oferta Academica / Horarios
+## Oferta Academica / Horarios
 
 - Paralelos ofertados
 
-### Inscripciones / Registro
+## Inscripciones / Registro
 
 - Personas
 - Estudiantes
@@ -25,7 +25,7 @@ Esto involucra la compilación de datos como título de curso, departamento hora
 
   Calificaciones
 
-## Convenciones
+# Convenciones
 
 Las formas y tablas de banner, se forma de 7 caracteres "SSASECT", los tres primeras
 letras tiene significado. 
@@ -44,8 +44,10 @@ SPAIDEN.
 * A: Aplicacion (Forma)
 * IDEN: identificacion de persona
 
-## API
+# API
 
-### Autentificacion
-### GUID
-### Versiones
+## Autentificacion
+
+## GUID
+
+## Versiones

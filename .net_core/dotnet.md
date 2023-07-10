@@ -113,3 +113,36 @@ https://docs.microsoft.com/en-us/aspnet/core/security/docker-https?view=aspnetco
 
 Hosting ASP.NET Core images with Docker Compose over HTTPS
 https://docs.microsoft.com/en-us/aspnet/core/security/docker-compose-https?view=aspnetcore-6.0
+
+
+
+# Certificados SSL
+
+
+
+Use dotnet dev-certs to create self-signed certificates for development and testing.
+
+Generar certificados. Primero limpiar, luego generar
+```
+dotnet dev-certs https --clean
+dotnet dev-certs https --trust
+```
+Si un certificado se caduco, y en el navegador continuea utilizando el certificado caducado a pesar de haber eliminado. En el siguiente enlace se menciona algunos elementos
+- dotnet dev-certs https --clean Fails
+
+https://docs.microsoft.com/en-us/aspnet/core/security/enforcing-ssl?view=aspnetcore-3.1&tabs=visual-studio#all-platforms---certificate-not-trusted-1
+
+Errores relacionados
+
+```
+[13:54:44 ERR] Exception occurred while processing message.
+System.InvalidOperationException: IDX20803: Unable to obtain configuration from:
+ 'System.String'.
+ ---> System.IO.IOException: IDX20804: Unable to retrieve document from: 'System
+.String'.
+ ---> System.Net.Http.HttpRequestException: The SSL connection could not be esta
+blished, see inner exception.
+ ---> System.Security.Authentication.AuthenticationException: The remote certifi
+cate is invalid because of errors in the certificate chain: UntrustedRoot
+
+```

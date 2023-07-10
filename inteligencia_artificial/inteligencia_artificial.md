@@ -7,6 +7,21 @@
 Artificial Intelligence for Beginners
 https://github.com/microsoft/AI-For-Beginners
 
+
+# Varios
+
+## MidJourney
+
+MidJourney es un laboratorio independiente que se dedica a la investigación de la inteligencia artificial, pero también es el nombre que recibe su software de IA. Y este programa de inteligencia artificial conocido como MidJourney sirve para crear imágenes a partir de texto, al cual se le conoce como text to image.
+
+## runwayml
+
+Generate Videos
+- Erase Things from Videos
+- Train Custom Models
+- Instantly remove the background from any video.
+
+
 # Referencias
 
 Canales Youtube sobre IA

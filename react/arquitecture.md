@@ -86,13 +86,22 @@ and not
 
 This was inspired by how NX handles libraries that are isolated but available to be used by the other modules. Think of a feature as a library or a module that is self-contained but can expose different parts to other features via its entry point.
 
+# Autentificacion
+
+
+Keycloak - A gentle introduction to Keycloak using Vite+React, NodeJS 
+https://www.youtube.com/watch?v=5z6gy4WGnUs
+
+
 # Application References
 
 
-## metasfresh
+## Metasfresh
 
 
 metasfresh is a responsive, Free and Open Source ERP System. Our aim is to create fast and easy-to-use enterprise software with an outstanding user experience.
+
+- It has a 3-tier architecture with Rest-API and a Web User Frontend developed in HTML5/ ReactJS/ Redux.
 
 https://github.com/metasfresh/metasfresh
 

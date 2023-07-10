@@ -7,6 +7,8 @@ Shopping on WhatsApp is very easy for the Customers, but for Sellers, it is very
 https://vepaar.com/whatsapp-store/ 
 
 
+SOLUCIÓN DE COMERCIO CONVERSACIONAL
+https://es.yalo.com/
 
 # Close
 

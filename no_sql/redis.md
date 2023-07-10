@@ -47,6 +47,23 @@ redis-cli, the Redis command line interface
 https://redis.io/topics/rediscli
 
 
+
+How to list all databases in Redis?
+
+```
+$ redis-cli INFO keyspace
+```
+
+Select the Redis logical database having the specified zero-based numeric index. New connections always use the database 0.
+
+```
+$ redis-cli SELECT index
+
+```
+
+https://redis.io/commands/select/
+
+
 # Client
 
 

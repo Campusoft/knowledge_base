@@ -31,3 +31,28 @@ nvm install 10.23.1
 nvm use 10.23.1
 ```
 
+
+# package.json
+
+
+## Browserslist
+
+Browserslist 
+
+The config to share target browsers and Node.js versions between different front-end tools. It is used in:
+
+- Autoprefixer
+- Babel
+- postcss-preset-env
+- eslint-plugin-compat
+- stylelint-no-unsupported-browser-features
+- postcss-normalize
+- obsolete-webpack-plugin
+
+https://github.com/browserslist/browserslist
+
+
+
+
+You can check how config works at our playground: browsersl.ist
+

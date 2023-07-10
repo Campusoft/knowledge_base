@@ -29,3 +29,14 @@ ASP.NET Boilerplate Application Architecture Model
 https://aspnetboilerplate.com/Pages/Documents/NLayer-Architecture#asp-net-boilerplate-application-architecture-model
   
   
+  
+# Template
+
+
+React
+
+- React - The JavaScript library for building user interfaces
+- Typescript - Used for static typing
+- Mobx - Simple, scalable state management
+- AntDesign - A design system with values of Nature and Determinacy for better user experience of enterprise applications
+https://github.com/aspnetboilerplate/module-zero-core-template/tree/master/reactjs  

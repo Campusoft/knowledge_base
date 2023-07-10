@@ -1,3 +1,33 @@
+# Architecture Characteristics
+
+
+## Scalability:
+
+The ability for the system to perform and operate as the number of users or requests increases. Scalability is achievable with Horizontal or vertical scaling of the machine or simply attaching AutoScalingGroup.
+
+
+
+## Articulos
+
+Top 10 Architecture Characteristics / Non-Functional Requirements with Cheatsheet
+- Scalability
+- Availability
+- Extensibility
+- Consistency
+- Resiliency
+- Usability
+- Observability
+- Security
+- Durability
+- Agility
+- Deployability
+- 
+https://blog.devgenius.io/top-10-architecture-characteristics-non-functional-requirements-with-cheatsheat-7ad14bbb0a9b
+
+![image](https://github.com/Campusoft/knowledge_base/assets/222181/5443dc1d-fcd4-449c-a033-b0f1e11bba69)
+
+
+
 # Clean Architecture
 
 Though these architectures all vary somewhat in their details, they are very similar. They all have the same objective, which is the separation of concerns. They all achieve this separation by dividing the software into layers. Each has at least one layer for business rules, and another for interfaces.

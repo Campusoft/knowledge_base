@@ -82,6 +82,9 @@ https://learn.microsoft.com/en-us/power-bi/transform-model/desktop-auto-date-tim
 Power Bi Relationship Functions
 https://www.enjoysharepoint.com/power-bi-relationship-functions/
 
+
+
+
 **what-if**
 
 El uso de parámetros what-if ofrece la capacidad de transformar dinámicamente los datos, es decir, permite simular cómo los datos cambian en distintos escenarios. 
@@ -448,8 +451,18 @@ Power BI Sharing Methods Comparison – All in One Review
 - Secure Embed
 https://radacad.com/power-bi-sharing-methods-comparison-all-in-one-review
  
+ 
+Filter a report using query string parameters in the URL
+- Special characters in URL filters
+- Operators Filter
+- URL filters are supported in Power BI Embedded.
+- Considerations and troubleshooting
+https://learn.microsoft.com/en-us/power-bi/collaborate-share/service-url-filters
+ 
 
 # Power Bi embedded
+ 
+ 
  
 
 # Power BI Report Builder

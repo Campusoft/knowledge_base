@@ -104,25 +104,6 @@ https://erpnext.com/blog/ERPNext%20Features/what%E2%80%99s-new-in-redesign
 
 # Frappe Books
 
-Frappe Books is built on Vue.js and Electron. It is offline by default and uses a local SQLite file as the database.
-
-https://frappebooks.com/
-
-
-Expected version ">=16.13.1 <17". Got "18.14.2"
-
-
-```
-# start the electron app
-yarn electron:serve
-```
-
-## Items
-
-Item is term used by Frappe Books for anything that is purchased or sold using a Sales or Purchase Invoice.
-
-All of the goods and services that are subject to the GST in India are categorized using an HSN code (Harmonized System of Nomenclature) and a SAC (Service Accounting Code), which helps in removing any obstacles to international trade. These HSN and SAC codes have also been applied to invoices and record-keeping, which makes it simple to identify the products and services provided. In this article, we will examine the difference between the HSN and SAC codes in GST.
-
 
 # Referencias
 

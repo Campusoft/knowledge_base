@@ -66,6 +66,11 @@ https://nextjs.org/docs/basic-features/pages#pre-rendering
 
 https://nextjs.org/learn/basics/data-fetching/pre-rendering
 
+# Authentication
+
+NextAuth.js. Authentication for Next.js
+https://next-auth.js.org/
+
 # Deploy
 
 Vercel is the fastest way to deploy your Next.js application with zero configuration.

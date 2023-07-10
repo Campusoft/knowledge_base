@@ -76,4 +76,11 @@ Sass is a CSS extension language, Sass allows to write code fro generate CSS.
 
 ## Tailwind CSS
 
+
+The most popular component library component library for Tailwind CSS
+
+daisyUI adds component class names to Tailwind CSS so you can make beautiful websites faster than ever.
+https://daisyui.com/
+
+
 ## Bulma

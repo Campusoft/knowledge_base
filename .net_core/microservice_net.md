@@ -96,6 +96,13 @@ https://github.com/dotnet/tye
 
 Commandos
 
+Run the tye command line in the folder file tye.yaml
+
+```
+tye run
+``
+
+
 Ejecutar con debug
 
 ```
@@ -110,6 +117,12 @@ Ejecutar con un archivo yaml especifico
 tye run tye.Repositorio.Cliente.yaml
 ```
 
+
+Install tye via the following command:
+
+```
+dotnet tool install -g Microsoft.Tye --version "0.11.0-alpha.22111.1"
+```
 
 Errores
 ----------

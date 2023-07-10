@@ -149,6 +149,20 @@ https://angular.io/guide/inputs-outputs
 
 # Versiones
 
+
+**Angular 16**
+
+
+Vite as Dev Server
+
+With the arrival of Angular 14 has been introduced the possibility to use a new Javascript Bundler: EsBuild
+
+This new Bundler has the ability to be very fast and could reduce the build time by about 40%. The main problem is that this new feature and performance gain could only be used for a build and not during development (dev server).
+
+In the next release of Angular, Esbuild can also be used during development thanks to Vite.
+
+
+
 **Angular 15**
 
 - Standalone components are long-awaited features that enable developers to build Angular applications without using Modules.

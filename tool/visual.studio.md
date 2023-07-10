@@ -50,3 +50,11 @@ https://code.visualstudio.com/docs/editor/userdefinedsnippets
 
 
 https://github.com/bartvanhoey/ABPx
+
+
+# Referencias
+
+How to use dev tunnels in Visual Studio 2022 with ASP.NET Core apps
+- The dev tunnels feature of Visual Studio 2022 enables ad-hoc connections between machines that can't directly connect to each other. A URL is created that enables any device with an internet connection to connect to an ASP.NET Core project while it runs on localhost
+https://learn.microsoft.com/en-us/aspnet/core/test/dev-tunnels?view=aspnetcore-7.0
+

@@ -1,5 +1,3 @@
-
-
 # Identity on ASP.NET Core
 
 ASP.NET Core Identity:
@@ -110,6 +108,14 @@ Solucionar actual. Cambiar todas las referecias IdentityUser con MongoUser, agre
 
 
 ------------------------------------
+
+## Casbin.NET
+
+Casbin.NET is a powerful and efficient open-source access control library for .NET (C#) projects. It provides support for enforcing authorization based on various access control models.
+
+An authorization library that supports access control models like ACL, RBAC, ABAC in .NET (C#) 
+ 
+https://github.com/casbin/Casbin.NET
 
 # Referencias
 

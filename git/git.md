@@ -23,6 +23,15 @@
   * `git reset --soft HEAD~1` para deshacer el commit "infierno"
   * `git restore --staged <file|files> para deshacer del "limbo"
 
+
+
+How to discard your local changes in Git example
+The commands to discard all local changes in Git are:
+- git reset –hard
+- git clean -fxd
+https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/remove-revert-discard-local-uncommitted-changes-Git-how-to#:~:text=There%20are%20two%20Git%20commands,git%20clean%20%2Dfxd
+
+
 # Entendiendo el Modelo de Objetos de Git
   * commit -> puntero a un tree
   * tree   -> un directorio
@@ -32,8 +41,40 @@
   * `git cat-file -p <HashCommit>` para ir revisando los detalles de los objetos
 
 # Ramificaciones y Fusiones (Branching y Merging)
+
+
   * [Ramificar y fusionar](https://git-scm.com/book/es/v2/Ramificaciones-en-Git-Procedimientos-B%C3%A1sicos-para-Ramificar-y-Fusionar)
   * [Fusionamiento avanzado](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging)
+
+
+Commandos
+
+Lists all the remote branches.
+
+```
+git branch -r 
+```
+
+Lists all the remote branches with the latest commit hash and commit message.
+
+```
+git branch -r -v 
+```
+
+
+Cambiar a un branch
+
+```
+git checkout nombre_branch
+```   
+
+
+
+How to move a full Git repository
+https://www.atlassian.com/git/tutorials/git-move-repository
+
+
+
 
 # Trabajando con remotos
   * [Repositorios remotos](https://git-scm.com/book/es/v2/Fundamentos-de-Git-Trabajar-con-Remotos)

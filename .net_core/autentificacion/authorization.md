@@ -55,7 +55,7 @@ The three “main” services involved in the authorization process are:
 https://docs.microsoft.com/en-us/aspnet/core/security/authorization/iauthorizationpolicyprovider?view=aspnetcore-6.0
 
 
-## Referencias
+## Referencias Policy
 
 Policy-based Authorization in ASP.NET Core
 - Simple Authorization Policies
@@ -92,11 +92,22 @@ Permission-Based Authorization in ASP.NET Core – Complete User Management Guid
 https://codewithmukesh.com/blog/permission-based-authorization-in-aspnet-core/
 
 
+# Resource-based authorization in ASP.NET Core
+
+Authorization approach depends on the resource. For example, only the author of a document is authorized to update the document. Consequently, the document must be retrieved from the data store before authorization evaluation can occur.
+
+https://learn.microsoft.com/en-us/aspnet/core/security/authorization/resourcebased?view=aspnetcore-7.0
+
+
+# Row Level Security
+
+
+A Fairly Capable Authorization Sub-System with Row-Level Security Capabilities (AFCAS)
+https://www.codeproject.com/Articles/30380/A-Fairly-Capable-Authorization-Sub-System-with-Row
+
 
 
 # Referencias
-
-
 
 # Revisiones
  
