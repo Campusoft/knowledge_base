@@ -79,6 +79,32 @@ dotnet nuget locals all --list
 Managing the global packages, cache, and temp folders
 https://learn.microsoft.com/en-us/nuget/consume-packages/managing-the-global-packages-and-cache-folders
 
+
+Configuration files
+NuGet.config files are located here:
+
+```
+User-specific: %APPDATA%\NuGet\
+Machine-wide: %ProgramFiles(x86)%\NuGet\Config\
+```
+
+Ejemplo, cambiar la carpeta de paquetes globales de nugget
+- <add key="globalPackagesFolder" value="E:\nuget" />
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+    <config>
+        <add key="globalPackagesFolder" value="E:\nuget" />
+    </config>
+  <packageSources>
+    <add key="nuget.org" value="https://api.nuget.org/v3/index.json" protocolVersion="3" />
+  </packageSources>
+</configuration>
+```
+
+
+
 # Revision
 
 

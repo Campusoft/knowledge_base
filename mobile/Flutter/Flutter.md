@@ -697,6 +697,17 @@ https://github.com/brocodev/flutter_projects
 ## Application
 
 E-Commerce Complate App - Flutter UI
+- Onboarding
+- Login
+- Forgot Password
+- Sign Up
+- Complete Profile
+- OTP Verification
+- Home Page
+- Product Details
+- Order
+- Profile (added)
+- Bottom Navigation Bar (added)
 https://github.com/abuanwar072/E-commerce-Complete-Flutter-UI
 
 Flutter News App with newsapi.org. Developed using the Test Driven Development. 

@@ -92,7 +92,6 @@ Caracteristicas
   - Formly Schema (core)
   - JSON Schema
 
-
 Informacion
 - Build Fast, JSON-Powered Forms on Angular With Ngx Formly
 https://betterprogramming.pub/build-fast-json-powered-forms-on-angular-with-ngx-formly-b7a00733e66e

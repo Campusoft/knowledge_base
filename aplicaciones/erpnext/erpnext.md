@@ -44,6 +44,9 @@ A bill sent by a Supplier for delivery of Items (goods or services).
 
 
 Trabajar con el repositorio frappe_docker
+- Docker images for production and development setups of the Frappe framework and ERPNext
+
+
 
 ```
 git clone https://github.com/frappe/frappe_docker
@@ -51,6 +54,7 @@ cd frappe_docker
 ```
 
 Ejecutar docker-compose con el archivo pwd.yml que se encuentra en repositorio
+- Db: mariadb
 
 ```
 docker-compose -f pwd.yml up
@@ -58,6 +62,10 @@ docker-compose -f pwd.yml up
 https://github.com/frappe/frappe_docker/tree/main
 
 
+
+```
+docker-compose -f compose.yaml -f overrides/compose.postgres.yaml config
+```
 
 
 ----------------------
@@ -70,6 +78,19 @@ invalid interpolation format for x-customizable-image.image.
 You may need to escape any $ with another $.
 required variable ERPNEXT_VERSION is missing a value: No ERPNext version set
 ```
+
+Solucion:
+
+We use environment variables to configure our setup. docker-compose uses variables from .env file. To get started, copy example.env to .env.
+
+
+# Development
+
+
+Development using containers
+- Use VSCode Remote Containers extension
+https://github.com/frappe/frappe_docker/blob/main/docs/development.md
+
 
 # Usuarios
 
@@ -92,6 +113,9 @@ Due to this, we planned to deprecate mobile apps and we will be delisting the ap
 
 This Project uses provider for State Management. hive, shared_preferences for storage. dio for making network requests.
 https://github.com/frappe/mobile
+
+
+
 
 
 # Versions 
