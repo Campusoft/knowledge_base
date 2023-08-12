@@ -45,8 +45,6 @@ Client.ProcessResponse.liquid
 
 
 
-
-
 ** NSwagStudio **
 
 NSwagStudio, permite generar proxy para consumir servicios.

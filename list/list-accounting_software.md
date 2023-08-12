@@ -25,6 +25,12 @@ Arquitectura:
 - Akaunting provides a powerful ACL system thanks to the wonderful Laratrust package for Laravel. It ships with very useful functions to be used on both PHP and Blade templates.
 
 
+
+```
+akaunting     | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+```
+
+
 # Odoo
 
 Odoo. Open Source Apps To Grow Your Business. 

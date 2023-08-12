@@ -30,6 +30,27 @@ uPDaTE "my_TabLE" SeT a = 5;
 https://hub.docker.com/_/postgres
 
 
+Postgres with Docker and Docker compose a step-by-step guide for beginners
+```
+version: '3.8'
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+volumes:
+  db: 
+```
+
+https://geshan.com.np/blog/2021/12/docker-postgres/
+
+
 **Referencias**
 
 Migrating Database from SQL Server(MSSQL) to PostgreSQL 

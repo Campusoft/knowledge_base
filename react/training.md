@@ -37,3 +37,7 @@ Curso para aprender React basado en proyectos.
 - 13: JavaScript Quiz con Zustand + TypeScript desde cero
 
 https://github.com/midudev/aprendiendo-react
+
+
+A 30DaysOfReact challenge is a guide for both beginners and advanced JavaScript and React developers. 
+https://github.com/Asabeneh/30-Days-Of-React

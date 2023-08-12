@@ -86,6 +86,14 @@ bench new-site <site-name> --db-type postgres
 Note: Make sure you have Postgres version 9 or greater installed in your system.
 
 
+# Background Jobs
+
+Queue 
+There are 3 default queues that are configured with the framework: short, default, and long. Each queue has a default timeout as follows:
+
+- short: 300 seconds
+- default: 300 seconds
+- long: 1500 seconds
 
 
 # Labs

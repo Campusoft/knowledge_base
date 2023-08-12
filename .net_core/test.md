@@ -83,6 +83,9 @@ https://xunit.net/docs/getting-started/netcore/visual-studio
 
 
 Testing Exceptions with xUnit and Actions
+```
+var caughtException = Assert.Throws<NameRequiredException>(() => customer.UpdateName("", ""));
+```
 https://ardalis.com/testing-exceptions-with-xunit-and-actions/
 
 Using .NET Core with the .NET SDK command line
