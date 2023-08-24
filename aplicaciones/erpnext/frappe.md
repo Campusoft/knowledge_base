@@ -119,3 +119,4 @@ Building An eBook Store on Frappe: Part 1, Building The Storefront
 https://frappe.io/blog/engineering/building-an-online-ebook-store-with-frappe-bulma-razorpay-part-I
 
 
+# install

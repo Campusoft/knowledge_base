@@ -230,7 +230,12 @@ https://docs.abp.io/en/abp/latest/UI/Angular/Config-State-Service
 
 
 With ABP 7.0, we've introduced the dynamic permissions and dynamic features systems
+- Basically, in the solution with ABP 7.0, all microservices serialize their own permission definitions and write them into a shared database on their application startup (with a highly optimized algorithm).
 https://blog.abp.io/abp/ABP.IO-Platform-7.0-RC-Has-Been-Published#Dynamic%20Permissions%20and%20Features
+
+Dynamic permissions
+- Notas del diseno, implementado en abp. Para permisos distribuidos.
+https://github.com/abpframework/abp/pull/13644
 
 Authorization in a Distributed / Microservice System | .NET Conf 2022 
 https://www.youtube.com/watch?v=DVqvRZ0w-7g
