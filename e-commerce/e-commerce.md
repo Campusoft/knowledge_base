@@ -38,6 +38,49 @@ Medusa Architecture Overview
 In this document, you'll get an overview of Medusa's architecture to better understand how all resources and tools work together.
 https://docs.medusajs.com/development/fundamentals/architecture-overview
 
+## Products
+
+Products are items that a business sells to customers. Each product can have options and variants. Options are the different available attributes of a product, and variants are the salable combinations of these options.
+
+For example, a product can have a “Color” option with values blue and green. You can then create two product variants from these options: one using the option value blue, and the other using the value green. This is just a simple example, as you can have multiple options and have variants combine values from each of these options.
+
+Products can be associated with categories, collections, types, and more. This allows merchants to better organize products either internally or for their customers.
+
+**Product variants**
+
+Product variants are the actual salable item in your store. Each variant is a combination of the different option values available on the product
+
+**Customizing**
+
+Customizing the Product Entity
+- For those cases, you can use the metadata attribute. This is an object stored in the database as a JSONB type in the database.
+
+## install
+
+
+
+
+Base de datos Postgres. (docker-compose.yml)
+
+```
+version: '3.8'
+services:
+  db:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '5432:5432'
+    volumes: 
+      - db:/var/lib/postgresql/data
+volumes:
+  db:
+   # driver: local
+```
+
+
 ## Referencias
 
 Create an Ecommerce Storefront with Medusa, Strapi, and Remix

@@ -203,6 +203,140 @@ REST API Error Handling — Problem Details Response
 https://dzone.com/articles/rest-api-error-handling-problem-details-response
 
 
+**API Specification Format**
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>API Specification Format</th>
+
+<th>Version</th>
+
+<th>File Format</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td>OpenAPI/Swagger</td>
+
+<td>3.1 3.0 2.0 1.x</td>
+
+<td>JSON/YAML JSON/YAML JSON/YAML JSON</td>
+
+</tr>
+
+<tr>
+
+<td>RAML</td>
+
+<td>1.0 0.8</td>
+
+<td>YAML YAML</td>
+
+</tr>
+
+<tr>
+
+<td>Postman Collection</td>
+
+<td>2.0 1.0</td>
+
+<td>JSON JSON</td>
+
+</tr>
+
+<tr>
+
+<td>Insomnia</td>
+
+<td>3</td>
+
+<td>JSON/YAML</td>
+
+</tr>
+
+<tr>
+
+<td>HAR</td>
+
+<td>1.2</td>
+
+<td>JSON</td>
+
+</tr>
+
+<tr>
+
+<td>API Blueprint</td>
+
+<td>1A</td>
+
+<td>Markdown</td>
+
+</tr>
+
+<tr>
+
+<td>WADL - W3C</td>
+
+<td>2009</td>
+
+<td>XML</td>
+
+</tr>
+
+<tr>
+
+<td>WSDL - W3C</td>
+
+<td>1.1</td>
+
+<td>XML</td>
+
+</tr>
+
+<tr>
+
+<td>Google Discovery</td>
+
+<td>-</td>
+
+<td>JSON</td>
+
+</tr>
+
+<tr>
+
+<td>I/O Docs - Mashery</td>
+
+<td>-</td>
+
+<td>JSON</td>
+
+</tr>
+
+<tr>
+
+<td>APIMATIC</td>
+
+<td>-</td>
+
+<td>JSON</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
 # Varios
 
 ## Twelve-factor methodology. (12-factor)

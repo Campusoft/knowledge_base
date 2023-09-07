@@ -49,6 +49,10 @@ https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnet
 
 # API versioning
 
+
+How to use API versioning in ASP.NET Core
+https://www.infoworld.com/article/3562355/how-to-use-api-versioning-in-aspnet-core.html
+
 # CORS 
 
 ASP.NET Core API - Allow CORS requests from any origin and with credentials

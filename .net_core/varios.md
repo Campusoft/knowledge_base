@@ -282,6 +282,12 @@ IFileProvider
 
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers?view=aspnetcore-5.0#physical-file-provider
 
+# Read Excel
+
+Fast, Low-Memory, Easy Excel .NET helper to import/export/template spreadsheet
+https://github.com/mini-software/MiniExcel
+
+
 # CloudEvents 
 
 Serializar un CloudEvents

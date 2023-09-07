@@ -83,4 +83,6 @@ daisyUI adds component class names to Tailwind CSS so you can make beautiful web
 https://daisyui.com/
 
 
+Tailwind CSS utiliza POST-CSS 
+
 ## Bulma
