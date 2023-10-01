@@ -262,6 +262,7 @@ Northwind Traders is a sample application built using ASP.NET Core and Entity Fr
 - Domain
   - List child private set;
 - Automated testing with xUnit.net, Moq, and Shouldly
+- This repository has been archived by the owner on Jul 1, 2023. It is now read-only. For an updated version of this project, you can check out the Clean Architecture Solution Template. The Clean Architecture Solution Template is a new project that demonstrates the simplest approach to Clean Architecture with .NET.
 https://github.com/jasontaylordev/NorthwindTraders
 
 
@@ -285,6 +286,12 @@ Raytha
 - MediatR. CQRS 
 - Fluid is an open-source .NET template engine based on the Liquid template language. 
 https://github.com/RaythaHQ/raytha
+
+
+Restaurant App 🍔 is a sample open-source e-Commerce 🛒 application for ordering foods, powered by polyglot microservices architecture and cross-platform development including mobile and web
+
+
+https://github.com/chayxana/Restaurant-App
 
 # Exceptions 
 

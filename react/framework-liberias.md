@@ -108,7 +108,7 @@ https://github.com/pmndrs/react-spring
 
 # refine 
 
-refine is a React-based framework for the rapid ✨ development of web applications. It eliminates the repetitive tasks demanded by CRUD operations and provides industry standard solutions for critical parts like authentication, access control, routing, networking, state management, and i18n.
+refine is a React-based framework for the rapid development of web applications. It eliminates the repetitive tasks demanded by CRUD operations and provides industry standard solutions for critical parts like authentication, access control, routing, networking, state management, and i18n.
 https://refine.dev
 
 
@@ -116,8 +116,34 @@ Architecture
 - Hooks Based 
 - State Management	React Query
 
-
 refine is licensed under the MIT Licence. It only requires the preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+
+Instead of being limited to a set of pre-styled components, refine provides collections of helper hooks, components and providers and more. Since business logic and UI are completely decoupled, you can customize UI without constraints.
+
+It means, refine just works seamlessly with any custom designs or UI frameworks. Thanks to it's headless architecture, you can use popular CSS frameworks like TailwindCSS or even create your own styles from scratch.
+
+refine also provides integrations with Ant Design, Material UI, Mantine, and Chakra UIto get you started quickly. These libraries are set of components which are nicely integrated with headless @refinedev/core package.
+
+refine also provides integrations with Ant Design, Material UI, Mantine, and Chakra UIto get you started quickly.
+
+## Concepts
+
+refine core is fully independent of UI, meaning that you can use core components and hooks without any UI dependency. All of the data-related hooks, such as useTable, useForm, useList, of refine can also be given some common properties like resource, meta, queryOptions etc. that are independent of UI.
+
+**resource**
+
+resource is a prop that gets passed to dataProvider as a paremeter by refine. It is usually used as an API endpoint path but it all depends on how you handle it in your dataProvider
+
+**meta**
+
+meta is a special property that can be used to pass additional information to data provider methods for the following purposes:
+
+## Examples
+
+
+This is a complete eCommerce storefront app built with refine, Medusa.js, Next.js, and Stripe.
+
+https://github.com/refinedev/refine/tree/master/examples/store
 
 # AdminJS 
 

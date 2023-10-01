@@ -26,18 +26,17 @@ One way to understand Blazor Server apps is to understand how it differs from tr
 - In the Blazor WebAssembly app, the host page is a simple static HTML file under wwwroot/index.html. 
 
 
-## UI components with Blazor
+# UI components with Blazor
 
-### Component parameters
+## Component parameters
 
-### Event handlers
+## Event handlers
 
-### Data binding
+## Data binding
 
-### Child content
+## Child content
 
-### Code-behind
-
+## Code-behind
 
 ## Pages, routing, and layouts
 
@@ -49,19 +48,19 @@ One way to understand Blazor Server apps is to understand how it differs from tr
 Blazor supports the sharing of validation logic between both the client and the server. ASP.NET provides pre-built JavaScript implementations of many common server validations. In many cases, the developer still has to write JavaScript to fully implement their app-specific validation logic. The same model types, data annotations, and validation logic can be used on both the server and client.
 
 
-## Work with data
+# Work with data
 
-### REST
+## REST
 Call a web API from ASP.NET Core Blazor
 https://docs.microsoft.com/en-us/aspnet/core/blazor/call-web-api?view=aspnetcore-3.1
 
-#### Cross-origin resource sharing (CORS)
+### Cross-origin resource sharing (CORS)
 
 
 Using multiple APIs in Blazor with Azure AD authentication
 https://damienbod.com/2020/12/14/using-multiple-apis-in-blazor-with-azure-ad-authentication/
 
-## App configuration
+# App configuration
 
 
 # Framework
@@ -69,6 +68,13 @@ https://damienbod.com/2020/12/14/using-multiple-apis-in-blazor-with-azure-ad-aut
 A Modular Application Framework for Blazor
 Modern, Flexible, and Open Source!
 https://www.oqtane.org/
+
+
+# Blazor Hybrid
+
+Hybrid apps use a blend of native and web technologies. A Blazor Hybrid app uses Blazor in a native client app. Razor components run natively in the .NET process and render web UI to an embedded Web View control using a local interop channel. WebAssembly isn't used in Hybrid apps.
+
+
 
 # Referencias
 
@@ -80,6 +86,11 @@ https://github.com/dotnet-presentations/blazor-workshop
 
 Create A Blazor Server SPA With Dapper
 https://www.c-sharpcorner.com/article/create-a-blazor-server-spa-with-dapper/
+
+## Training
+
+Blazor - app building workshop
+https://github.com/dotnet-presentations/blazor-workshop/
 
 ## Libros
 

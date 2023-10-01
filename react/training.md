@@ -41,3 +41,15 @@ https://github.com/midudev/aprendiendo-react
 
 A 30DaysOfReact challenge is a guide for both beginners and advanced JavaScript and React developers. 
 https://github.com/Asabeneh/30-Days-Of-React
+
+
+**Conceptos**
+
+¿Por qué React?. declarativa VS imperativa
+https://www.youtube.com/watch?v=7iobxzd_2wY&t=1130s
+
+
+**Herramientas**
+
+SWC is 20x faster than Babel 
+https://swc.rs/

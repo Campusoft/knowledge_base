@@ -74,14 +74,6 @@ public class MyTestClass
 https://xunit.net/docs/capturing-output
 
 
-Errores Comunes
-
-Si no se ejecutan los test, en visual studio asegurarse que "Microsoft.NET.Test.Sdk" este en las dependencias del proyecto
-
-The packages xunit.runner.visualstudio and Microsoft.NET.Test.Sdk are required for being able to run your test project inside Visual Studio as well as with dotnet test. 
-https://xunit.net/docs/getting-started/netcore/visual-studio
-
-
 Testing Exceptions with xUnit and Actions
 ```
 var caughtException = Assert.Throws<NameRequiredException>(() => customer.UpdateName("", ""));
@@ -90,6 +82,24 @@ https://ardalis.com/testing-exceptions-with-xunit-and-actions/
 
 Using .NET Core with the .NET SDK command line
 https://xunit.net/docs/getting-started/netcore/cmdline
+
+
+**Errores Comunes**
+
+---------------------
+Si no se ejecutan los test, en visual studio asegurarse que "Microsoft.NET.Test.Sdk" este en las dependencias del proyecto
+
+The packages xunit.runner.visualstudio and Microsoft.NET.Test.Sdk are required for being able to run your test project inside Visual Studio as well as with dotnet test. 
+https://xunit.net/docs/getting-started/netcore/visual-studio
+
+
+--------------------------
+
+```
+Test project Campusoft.Generate.Model.Test does not reference any .NET NuGet adapter. Test discovery or execution might not work for this project.
+It's recommended to reference NuGet test adapters in each test project in the solution.
+```
+----------------------
 
 ## Mock 
 

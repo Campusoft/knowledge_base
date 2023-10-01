@@ -5,6 +5,13 @@ Fluid is an open-source .NET template engine based on the Liquid template langua
 
 https://github.com/sebastienros/fluid
 
+This is a collection of examples and tutorials for the Fluid templating library.
+https://deanebarker.net/tech/fluid/
+
+Liquid
+Official VS Code extension for Shopify Liquid powered by Theme Check the Liquid linter and language server for online store themes.
+https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode
+
 
 # Scriban
 
