@@ -86,3 +86,10 @@ https://daisyui.com/
 Tailwind CSS utiliza POST-CSS 
 
 ## Bulma
+
+
+# Estadisticas
+
+State of CSS
+The annual developer survey about the latest trends in CSS
+https://stateofcss.com/en-US
