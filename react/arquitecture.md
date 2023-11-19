@@ -93,6 +93,18 @@ Keycloak - A gentle introduction to Keycloak using Vite+React, NodeJS
 https://www.youtube.com/watch?v=5z6gy4WGnUs
 
 
+# Meta-Frameworks
+
+
+- Nextjs
+- Gatsby
+- Remix
+- Astro
+- Redwoodjs
+- Blitzjs
+
+
+
 # Application References
 
 

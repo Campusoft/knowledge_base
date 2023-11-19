@@ -1,6 +1,6 @@
 # SEQUENCE
 
-
+Oracle sequence - skipped numbers
 https://stackoverflow.com/questions/26001204/oracle-sequence-skipped-numbers
 
 

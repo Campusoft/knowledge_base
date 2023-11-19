@@ -22,6 +22,16 @@ Section Break
 - Ej. Referencia. En bootstrap, seria un row una section.
 
 
+## Referencias
+
+Understanding Doctype and its types in Frappe ERPnext
+- 1. Single DocTypes
+- 2. Child Table Doctypes
+- 3. Submittable Doctypes
+- 4. Tree Doctypes
+- 
+https://medium.com/@ogoigbe12/understanding-doctype-and-its-types-in-frappe-erpnext-cfe02bacd307
+
 # App
 
 The default app frappe is a frappe app which acts as the framework for all apps

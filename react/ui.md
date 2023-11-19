@@ -114,3 +114,16 @@ Fabric’s robust, up-to-date components are built with the React framework. Loo
 React components for building experiences for Office and Office 365. 
 https://github.com/OfficeDev/office-ui-fabric-react
 
+# shadcn-ui
+
+Re-usable components built using Radix UI and Tailwind CSS. 
+
+Build your component library.
+Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
+
+
+- You can use any framework that supports React. Next.js, Astro, Remix, Gatsby etc.
+
+
+
+https://github.com/shadcn-ui/ui#shadcnui

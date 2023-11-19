@@ -25,27 +25,40 @@ https://github.com/ardalis/CleanArchitecture
  
  
 This is a solution template for creating a Single Page App (SPA) with Angular and ASP.NET Core following the principles of Clean Architecture. Create a new project based on this template by clicking the above Use this template button or by installing and running the associated NuGet package (see Getting Started for full details).
-- Posee linea commandos. (Cli)
+- Posee linea commandos. (Cli). dotnet new.
 - ASP.NET Core 6
 - Persistencia
   - Entity Framework Core 6	
   - No utiliza repositorios utiliza directamente DbContext
+  - Utiliza SaveChangesInterceptor, para agregar valores a propiedades generales. *Ej. Valores de auditoria. 
 - UI
-  - Angular 12
+  - Angular 14
   - Utiliza NSwag  para generar los proxys del Clientes API REST
 - MediatR
 - AutoMapper
+  - Utiliza Profile para las configuraciones de mapeo.
+  - Utiliza metodo para inyectar todos los profile existente en un proyecto
+ 
+`services.AddAutoMapper(Assembly.GetExecutingAssembly());`
+  
 - FluentValidation
   - RFC 7807 provides - details from HTTP APIs
 - NUnit, FluentAssertions, Moq & Respawn
 - Docker 
 - NSwag.AspNetCore. (Configurado en "HostAplicacion"/api)
+- Api Rest
+  - Utiliza minimal api.
+  - Posee una clase base EndpointGroupBase, para facilitar el mapeo de minimal api.  
 - Domain Events (MediatR)
   - DbContext lanza  DispatchEvents. 
   - Las entidades deben implementar IHasDomainEvent para lanza eventos.
   - Lanza eventos por medio de un servicio DomainEventService : IDomainEventService. Esta implementacion utiliza MediatR
 - Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR. 
   - AuthorizationBehaviour. (Para autorizacion, con mediatR)
+  - ValidationBehaviour. Para aplicar validaciones con FluentValidation
+- Posee un archivo "DependencyInjection" por cada proyecto para las configuraciones de inyeccion de dependencias
+  - Posee archivos con global using
+- Version .net (8.0.100-preview)
 https://github.com/jasontaylordev/CleanArchitecture 
 
 
@@ -74,6 +87,7 @@ ASP.NET Core Hero Boilerplate - .NET 5 Clean Architecture
 - Database Seeding
 - Custom Exception Handling Middleware.
 - Complete User Management Module (Register / Generate Token / Forgot Password / Confirmation Mail)
+- Last commits. Mar 21, 2021
 https://codewithmukesh.com/project/aspnet-core-hero-boilerplate/
 https://github.com/aspnetcorehero/Boilerplate
 
@@ -292,6 +306,13 @@ Restaurant App 🍔 is a sample open-source e-Commerce 🛒 application for orde
 
 
 https://github.com/chayxana/Restaurant-App
+
+
+Sample ASP.NET Core 7.0 reference application, powered by Microsoft, demonstrating a layered application architecture with monolithic deployment model. Download the eBook PDF from docs folder.
+- The main application in the eShopOnWeb solution is a monolithic ASP.NET Core web app. It is organized according to Clean Architecture principles, such that dependencies on infrastructure concerns are minimized throughout the application. 
+- Usa MinimalApi.Endpoint, para configurar minimal apis. https://www.nuget.org/packages/MinimalApi.Endpoint
+- Usa Ardalis.Specification.EntityFrameworkCore
+https://github.com/dotnet-architecture/eShopOnWeb
 
 # Exceptions 
 

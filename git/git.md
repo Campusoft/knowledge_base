@@ -142,6 +142,18 @@ To add an exception for this directory, call:
 
 ```
 
+
+
+Cómo deshacer los últimos commits de Git en local
+Para deshacer un commit en local ejecutaremos el siguiente comando:
+```
+git reset HEAD~
+```
+- git reset es el comando responsable de deshacer los cambios. Deshará tu último commit dejando tu proyecto sin modificar, es decir, que no perderás los cambios que hayas hecho.
+
+https://geekytheory.com/como-deshacer-los-ultimos-commits-de-git-en-local/
+
+
 # Refencias
 
 Monorepo vs Multi-Repo: Ventajas y Desventajas de las Estrategias de Repositorio de Código 

@@ -57,7 +57,7 @@ Product variants are the actual salable item in your store. Each variant is a co
 Customizing the Product Entity
 - For those cases, you can use the metadata attribute. This is an object stored in the database as a JSONB type in the database.
 
-# install
+# Install
 
 Prerequisites
 Before you can install and use Medusa, you need the following tools installed on your machine:
@@ -85,6 +85,13 @@ services:
 volumes:
   db:
    # driver: local
+```
+
+
+Iniciar utilizando medusa CLI
+
+```
+medusa develop
 ```
 
 

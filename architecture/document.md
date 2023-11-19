@@ -27,3 +27,7 @@ Documenting Architecture Decisions
 - Status
 - Consequences
 https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
+
+
+Herramientas para generar documentacion. (Manuales) (Revisar)
+https://scribehow.com/

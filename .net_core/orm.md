@@ -96,6 +96,59 @@ Configurar el mapeo de una propiedad que permite asociar dos entidades, que  pos
                  .OnDelete(DeleteBehavior.Restrict);
 ```
 
+
+Configurar un padre, que tiene una lista hija, y esta clase hija, posee explicitamente una propiedad de la clave principal del padre. 
+- Clase Company, tiene una lista de clase "Stores"
+- Clase Stores, no posee una propiedad de navegacion al padre "Company", solo una propiedad "CompanyId" de la clave principal del padre (Clave Foranea)
+- Se debe realizar la configuracion en el padre, ya que si se realiza alguna configuracion en la clase hija "Stores" se va obtener errores porque EF va crear "Shadow foreign keys"
+
+
+Error "Shadow foreign keys"
+
+```
+warn: Microsoft.EntityFrameworkCore.Model.Validation[10625]
+      The foreign key property 'PointSale.StoreId1' was created in shadow state because a conflicting property with the simple name 'StoreId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.  
+```
+
+Configuracion en el hijo. (Error Shadow foreign keys)
+
+```
+public class StoreConfiguration : IEntityTypeConfiguration<Store>
+{
+    public void Configure(EntityTypeBuilder<Store> b)
+    {
+        b.HasKey(ci => ci.Id);
+
+        b.HasOne<Company>().WithMany(e => e.Stores)
+          .HasForeignKey(x => x.CompanyId)
+          .OnDelete(DeleteBehavior.Restrict);
+         
+    }
+}
+```
+
+Configuracion en el padre. (ok)
+
+```
+
+ public class CompanyConfiguration : IEntityTypeConfiguration<Company>
+ {
+     public void Configure(EntityTypeBuilder<Company> builder)
+     {
+         builder.HasKey(ci => ci.Id);
+
+        
+         builder
+           .HasMany(e => e.Stores)
+             .WithOne()
+             .HasForeignKey(x => x.CompanyId)
+             .OnDelete(DeleteBehavior.Restrict);
+
+     }
+ }
+ 
+```
+
 Establecer que una propiedad "String", que no requiere Unicode. 
 
 ```
@@ -119,8 +172,43 @@ https://docs.microsoft.com/en-us/ef/core/modeling/value-conversions?tabs=fluent-
 
 # Migration
 
+
+- Install the tools
+  - Si desea trabajar en visual studio.  Entity Framework Core tools reference - Package Manager Console in Visual Studio
+  - We generally recommend using the .NET Core CLI tools, which work on all platforms. Entity Framework Core tools reference - .NET Core CLI  
+- Ejecutar commandos
+
+
+
+**.NET Core CLI tools**
+
+Escenario
+- Existe un proyecto DbContext. 
+- Otro proyecto host, proyecto startup, donde se configura el proveedor de base de datos a utilizar.
+
+Crear migracion
+- En el proyecto donde se encuentra DbContext, ejecutar. 
+- El parametro "--startup-project" sirve para establecer donde se encuentra el proyecto startup. 
+- Nombre de la migracion "InitialCreate"
+
+```
+dotnet ef --startup-project ../MyCompanyName.MyProjectName.HttpApi/ migrations add InitialCreate  
+```
+
+Aplicar migracion a la base de datos.
+
+
+```
+dotnet ef database update --startup-project ../MyCompanyName.MyProjectName.HttpApi/
+```
+
+--------------------
+
 .NET Core CLI
-- dotnet ef migrations add InitialCreate
+
+```
+dotnet ef migrations add InitialCreate
+```
 
 
 
@@ -169,6 +257,15 @@ nds.
 dotnet ef database update --context AdministrativeUnitDbContext
 ```
 
+--------------------------------------
+
+```
+Unable to create an object of type 'ApplicationDb'. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728
+```
+
+
+
+
 # Interceptors
 
 Entity Framework Core (EF Core) interceptors enable interception, modification, and/or suppression of EF Core operations. This includes low-level database operations such as executing a command, as well as higher-level operations, such as calls to SaveChanges.
@@ -192,6 +289,8 @@ entity.Property(x => x.ColumnName).IsUnicode(false);
 
 
 ## sql server
+
+## sqlite
 
 
 

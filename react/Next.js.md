@@ -83,6 +83,18 @@ Vercel is the fastest way to deploy your Next.js application with zero configura
 Next.js 13 for Beginners
 https://github.com/gitdagray/next-js-course
 
+Curso de Next.js 13 desde cero
+https://www.youtube.com/watch?v=tA-_vAz9y78
+
+
+Start building with Next.js
+- For this course, we'll be building a simplified version of the financial dashboard that has:
+- A public home page.
+- A login page.
+- Dashboard pages that are protected by authentication.
+- The ability for users to add, edit, and delete invoices.
+https://nextjs.org/learn
+
 
 # Referencias
 

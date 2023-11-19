@@ -32,8 +32,24 @@ https://letienthanh0212.medium.com/cqrs-and-mediator-in-net-core-project-c0b477e
 
 Simple CQRS implementation with raw SQL and DDD
 - Write Model should be implemented with DDD approach. The level of DDD implementation should depend on level of domain complexity.
+  - Utiliza Entity Framework, y repositorios para las escrituras
 - reads utiliza directamente sql. (Sin intermediarios)
+  - Utiliza Dapper, para las lecturas
+- Posee repositorio de codigo. 
+  - Tiene algunas clases base para command, query
 https://www.kamilgrzybek.com/design/simple-cqrs-implementation-with-raw-sql-and-ddd/
+
+
+ASP.NET: Implementando CQRS con MediatR
+- Tiene 14 entradas
+- ASP.NET: Validaciones con FluentValidation
+- ASP.NET: AutoMapper
+- ASP.NET: URLs seguros con HashIds. (Interesantes para keys int, por seguridad)
+- ASP.NET: Identity Core y JWT
+- ASP.NET: Refactorizando la solución (Vertical Slice Architecture)
+- ASP.NET: Creando un Sistema Auditable
+- Otros
+https://dev.to/isaacojeda/parte-1-cqrs-y-mediatr-implementando-cqrs-en-aspnet-56oe
 
 # CQRS - Sin librerias 
 
@@ -138,11 +154,23 @@ public enum PublishStrategy
 
 Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR
 
+MediatR has a similar concept to ASP.NET Core Middleware, and it is called IPipelineBehavior. 
 
 Pipeline behaviours are a type of middleware that get executed before and after a request (only supports requests, not notifications). They can be useful for a number of different tasks, such as logging, error handling, request validation etc.
 
 
+CQRS Validation Pipeline with MediatR and FluentValidation
+
+https://code-maze.com/cqrs-mediatr-fluentvalidation/
+
+
+
 **Referencias**
+
+
+CQRS and MediatR in ASP.NET Core
+- use record, en los request
+https://code-maze.com/cqrs-mediatr-in-aspnet-core/
 
 MediatR supports different Publish strategies that you can use.
 https://github.com/jbogard/MediatR/wiki#publish-strategies

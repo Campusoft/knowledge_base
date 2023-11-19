@@ -82,6 +82,40 @@ ASP.NET Core versions supported: 6.0, 5.0, 3.1, 3.0 and 2.2
 https://github.com/Xabaril/AspNetCore.Diagnostics.HealthChecks
 
 
+# Minimal API Endpoints
+
+Minimal APIs are a simplified approach for building fast HTTP APIs with ASP.NET Core. You can build fully functioning REST endpoints with minimal code and configuration. Skip traditional scaffolding and avoid unnecessary controllers by fluently declaring API routes and actions. 
+
+
+- API versioning. Minimal APIs support API versioning via the Asp.Versioning.Http package
+
+Six Ways To Organize Minimal APIs In ASP.NET Core Applications
+1. Regions
+2. Local functions
+3. Local functions for handlers
+4. Static methods
+5. Extension methods
+6. Separate class with constructor injection
+
+https://www.binaryintellect.net/articles/f3dcbb45-fa8b-4e12-b284-f0cd2e5b2dcf.aspx
+
+
+ASP.NET Core Versioning: Minimal APIs
+- Versioning Setup
+- Versioning Strategy
+- Adding versions to Minimal APIs
+- Versioning via Headers
+- Versioning via QueryStrings
+- Versioning via URLs
+- Other versioning options
+https://im5tu.io/article/2022/10/asp.net-core-versioning-minimal-apis/
+
+
+Simplifying complexity with MediatR and Minimal APIs
+
+https://q.agency/blog/simplifying-complexity-with-mediatr-and-minimal-apis/
+
+
 # Client
 
 
