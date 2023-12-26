@@ -126,6 +126,12 @@ https://www.atlassian.com/git/tutorials/git-move-repository
 # Varios
 
 
+How to Change Folder Name When Cloning a GitHub Repo
+
+```
+git clone https://github.com/facebook/create-react-app.git your-app-name
+```
+
 Escenario
 - Tener un disco externo, en el cual existe algunos repositorios. Utilizar el disco externo en un computador y otro.
 

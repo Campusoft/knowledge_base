@@ -8,7 +8,11 @@ https://github.com/sebastienros/fluid
 This is a collection of examples and tutorials for the Fluid templating library.
 https://deanebarker.net/tech/fluid/
 
-Liquid
+**Localization**
+- By default templates are rendered using an invariant culture so that the results are consistent across systems. 
+
+
+**Liquid**
 Official VS Code extension for Shopify Liquid powered by Theme Check the Liquid linter and language server for online store themes.
 https://marketplace.visualstudio.com/items?itemName=Shopify.theme-check-vscode
 

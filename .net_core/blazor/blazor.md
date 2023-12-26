@@ -75,6 +75,9 @@ Razor components can capture their child content as a RenderFragment and render 
 
 **Razor component lifecycle**
 
+- SetParametersAsync.
+- OnInitialized{Async}.
+- OnParametersSet{Async}.
 
 **Generic Type**
 

@@ -3,7 +3,7 @@
 Razor es una sintaxis ASP.NET que se usa para crear páginas web dinámicas con C#. Cuando un servidor lee una página de Razor, el código de C# se ejecuta antes de representar el HTML. 
 
 
-## Reusable UI using the Razor class library 
+# Reusable UI using the Razor class library 
 
 El proyecto que tiene los objetos UI que seran compartidos, la estructura del proyecto  debe ser similar a:
 ```
