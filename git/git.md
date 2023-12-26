@@ -159,3 +159,8 @@ https://geekytheory.com/como-deshacer-los-ultimos-commits-de-git-en-local/
 Monorepo vs Multi-Repo: Ventajas y Desventajas de las Estrategias de Repositorio de Código 
 https://kinsta.com/es/blog/monorepo-vs-multi-repo/
   
+How To Use Username and Password to Push Commits on GitHub?
+```
+git push -u https://<username>:<access_token>@<remote-url-without-https> main
+```
+https://medium.com/illumination/how-to-use-username-and-password-to-push-commits-on-github-39f184bbafc1
