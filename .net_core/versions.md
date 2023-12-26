@@ -20,6 +20,8 @@ The latest improvements to native AOT apps on Linux systems have resulted in sig
 .NET 8: Why .NET 8 preview doesn’t show up in Visual Studio 2022 ?
 https://anthonygiretti.com/2023/06/10/net-8-why-net-8-preview-doesnt-show-up-in-visual-studio-2022/
 
+
+
 .NET 7
 
 Publish to a container

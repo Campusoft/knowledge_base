@@ -4,17 +4,20 @@ React Native is an open-source UI software framework created by Meta Platforms, 
 # Setup
 https://reactnative.dev/docs/environment-setup
 
-# Crear proyecto TS
-npx react-native init <project name> --template react-native-template-typescript
+**Crear proyecto TS**
 
-# Errores
+```
+npx react-native init <project name> --template react-native-template-typescript
+```
+
+**Errores**
 Error de metro
 Unable to load script. Make sure you're either running metro
 
-## Solución 1
+** Solución 1 **
 Ejecutar agregando parametro port: npx react-native run-android --port=1234
 
-## Solución 2
+** Solución 2 **
 Ejecutar agregando parametro variant: npx react-native run-android --variant=release
 
 https://stackoverflow.com/questions/61827240/unable-to-load-script-make-sure-youre-either-running-a-metro-server-or-that-yo
@@ -120,3 +123,10 @@ npm install react-native-reanimated@2.2.4
 # Tools 
 
 Expo is a set of tools built around React Native to help you quickly start an app and, while it has many features.
+
+
+# React Native for Windows + macOS
+
+React Native for Windows + macOS brings React Native support for the Windows SDK as well as the macOS 10.14 SDK. With this, you can use JavaScript to build native Windows apps for all devices supported by Windows 10 and higher including PCs, tablets, 2-in-1s, Xbox, Mixed reality devices, etc., as well as the macOS desktop and laptop ecosystems.
+
+https://microsoft.github.io/react-native-windows/

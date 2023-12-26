@@ -12,5 +12,9 @@ Electron embeds Chromium and Node.js to enable web developers to create desktop 
 Cross Platform. Compatible with macOS, Windows, and Linux, Electron apps run on three platforms across all supported architectures.
 
 
+# Aplicaciones Referencias
 
+The older Teams app used the Electron framework, also used by communication apps like Slack and Discord.
+
+We are moving away from Electron to Edge Webview2. Teams will continue to remain a hybrid app but now it will be powered by #MicrosoftEdge. Also Angular is gone. We are now 100% on reactjs
 

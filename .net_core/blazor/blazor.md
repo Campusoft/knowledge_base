@@ -331,13 +331,12 @@ To navigate to a different address, use the NavigateTo method:
 }
 ```
 
-# Work with data
 
-## REST
+# REST
 Call a web API from ASP.NET Core Blazor
 https://docs.microsoft.com/en-us/aspnet/core/blazor/call-web-api?view=aspnetcore-3.1
 
-### Cross-origin resource sharing (CORS)
+## Cross-origin resource sharing (CORS)
 
 
 Using multiple APIs in Blazor with Azure AD authentication
@@ -360,9 +359,57 @@ Blazor treats most unhandled exceptions as fatal to the circuit where they occur
 https://learn.microsoft.com/en-us/aspnet/core/blazor/fundamentals/handle-errors?view=aspnetcore-7.0#detailed-circuit-errors
 
 
+
+# JavaScript interoperability (JS interop)
+
+
+Blazor provides an injectable service that implements the IJSRuntime interface. Blazor implements this interface so that we can invoke any JavaScript function from .NET code. To do this the service provides two main methods: InvokeAsync() and InvokeVoidAsync().
+
+
+- InvokeVoidAsync. We are calling the InvokeVoidAsync() method which is intended for invocations when no results are returned from the JavaScript function. The first parameter is the function identifier, which simply specifies which JavaScript function you intend to call. The function identifier is relative to the global scope, meaning the window object in JavaScript. After the function identifier, we can add as many parameters as needed to match the expected parameters in the JavaScript function itself. 
+
+- InvokeAsync. So, what if we need to get a result back from the JavaScript function? In that case we call the generic InvokeAsync() method, which takes the same form of parameters but returns a result.
+
+
+```
+@page "/javascript"
+
+@inject IJSRuntime JsRuntime
+
+<h3>Javascript</h3>
+
+<button class="btn btn-primary" @onclick="Alert">Alert Javascript</button>
+
+@code {
+     
+    private async Task Alert(MouseEventArgs e)
+    {
+        await JsRuntime.InvokeVoidAsync("alert", "C# says hello");
+ 
+    }
+}
+```
+
+
+**JavaScript Isolation in Blazor Components**
+
+JS isolation is based on standard ES modules. ES modules can be loaded on-demand using let mymodule = import("path") and the functions they expose are only accessible from the returned object. 
+https://www.meziantou.net/javascript-isolation-in-blazor-components.htm
+
 # Blazor authentication and authorization
 
 
+## Authentication
+
+Blazor uses the existing ASP.NET Core authentication mechanisms to establish the user's identity. The exact mechanism depends on how the Blazor app is hosted, server-side or client-side.
+
+Server-side Blazor operates over a SignalR connection with the client. Authentication in SignalR-based apps is handled when the connection is established. Authentication can be based on a cookie or some other bearer token, but authentication is managed via the SignalR hub and entirely within the circuit.
+
+
+## Authorization
+
+
+- The AuthorizeView component supports role-based or policy-based authorization.
 
  
 
@@ -381,8 +428,31 @@ https://www.oqtane.org/
 Hybrid apps use a blend of native and web technologies. A Blazor Hybrid app uses Blazor in a native client app. Razor components run natively in the .NET process and render web UI to an embedded Web View control using a local interop channel. WebAssembly isn't used in Hybrid apps.
 
 
+# IDE
+
+
+Visual Studio 2022 version 17.9 Preview 1
+- We have added the ability to scaffold views in .NET 8 Blazor web projects. This includes scaffolding views that use Entity Framework for CRUD (Create-Read-Update-Delete) operations.
+
+
 
 # Referencias
+
+
+
+## Create components
+
+
+
+Blazor Toast Notifications using only C#, HTML and CSS
+- In this post, I’m going to show you how to build toast notifications for your Blazor/Razor Components applications.
+https://chrissainty.com/blazor-toast-notifications-using-only-csharp-html-css/
+
+
+Modal Dialog component with Bootstrap in Blazor
+https://steven-giesel.com/blogPost/5fc5b957-d62e-40e6-b0c4-f2a0df5c8aa1
+
+
 
 ## Manuales, Tutoriales
 
@@ -410,6 +480,23 @@ Building Blazor Server Apps with Clean Architecture
 https://www.ezzylearning.net/tutorial/building-blazor-server-apps-with-clean-architecture
 
 
+
+Blazor Server Series
+
+- Blazor Server – Basics Part 1. https://blog.matrixpost.net/blazor-server-basics-part-i/
+- Blazor Server – Basics Part 2. https://blog.matrixpost.net/blazor-server-basics-part-ii/
+- Blazor Server – Basics Part 3 – Custom Layout. https://blog.matrixpost.net/blazor-server-basics-part-iii-custom-layout/
+- Blazor Server – Basics Part 4 – Program.cs File. https://blog.matrixpost.net/blazor-server-basics-part-iv-program-cs-file/
+- Blazor Server – Basics Part 5 – Authentication and Authorization. https://blog.matrixpost.net/blazor-server-basics-part-v-authentication-and-authorization/
+- Blazor Server – Basics Part 6 – Query the on-premise Active Directory. https://blog.matrixpost.net/blazor-server-basics-part-vi-query-the-on-premise-active-directory/
+- Blazor Server – Basics Part 7 – C# Events, Delegates and the EventCallback Class. https://blog.matrixpost.net/blazor-server-basics-part-vii-c-events-and-delegates/
+- Blazor Server – Basics Part 8 – JavaScript interoperability (JS interop). https://blog.matrixpost.net/blazor-server-basics-part-viii-javascript-interoperability-js-interop/
+- Blazor Server – Basics Part 9 – Responsive Tags and Chips. https://blog.matrixpost.net/blazor-server-basics-part-ix-responsive-tags-and-chips/
+- Blazor Server – Basics Part 10 – MS SQL Server Access and Data Binding. https://blog.matrixpost.net/blazor-server-basics-part-10-ms-sql-server-access-and-data-binding/
+- Blazor Server – Basics Part 11 – Create a Native Blazor UI Toggle Switch Component. https://blog.matrixpost.net/blazor-server-basics-part-11-native-blazor-toggle-switch-by-using-the-eventcallback-class-and-css/
+- Blazor Server – Basics Part 12 – Create a Native Blazor UI Toggle Button Component. https://blog.matrixpost.net/blazor-server-basics-part-12-create-a-native-blazor-ui-toggle-button-component/
+
+
 ## Libros
 
 Blazor for ASP.NET Web Forms Developers
@@ -418,13 +505,10 @@ https://docs.microsoft.com/en-us/dotnet/architecture/blazor-for-web-forms-develo
 
 ## Referencias Codigo, Aplicaciones con codigo
 
-Sample ASP.NET Core 5.0 reference application, powered by Microsoft, demonstrating a layered application architecture with monolithic deployment model
+Sample ASP.NET Core 7.0 reference application, powered by Microsoft, demonstrating a layered application architecture with monolithic deployment model. Download the eBook PDF from docs folder.
+- components: Toast, spinner
+- use modal (crud)
 https://github.com/dotnet-architecture/eShopOnWeb
 
 
 
-A simple but effective data grid for Blazor
-QuickGrid is a simple and efficient grid component built by the Blazor team.
-- To provide a convenient, simple, and flexible datagrid component for Blazor developers with the most common needs
-- To provide a reference architecture and performance baseline for anyone building Blazor datagrid components. Feel free to build on this, or simply copy code from it.
-https://aspnet.github.io/quickgridsamples/
