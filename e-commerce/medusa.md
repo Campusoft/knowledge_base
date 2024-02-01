@@ -55,7 +55,7 @@ Product variants are the actual salable item in your store. Each variant is a co
 **Customizing**
 
 Customizing the Product Entity
-- For those cases, you can use the metadata attribute. This is an object stored in the database as a JSONB type in the database.
+- For those cases, you can use the metadata attribute. This is an object stored in the database as a JSONB  (Binary JSON) type in the database.
 
 # Install
 

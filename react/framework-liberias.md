@@ -69,6 +69,15 @@ https://github.com/tannerlinsley/react-query
 https://tanstack.com/query/v4
 
 
+Beginner's Guide to React Query
+
+- Performing basic data fetching
+- Mutating Data
+- used Jsonplaceholder as our API endpoint and Axios 
+https://refine.dev/blog/react-query-guide/
+
+
+
 ## Set custom port start
 If you don't want to set the environment variable, another option is to modify the scripts part of package.json from:
 "start": "react-scripts start"

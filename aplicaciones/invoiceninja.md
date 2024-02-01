@@ -128,3 +128,11 @@ max_execution_time = 30 ; Maximum execution time of each script, in seconds
 Por:
 max_execution_time = 300 ; Maximum execution time of each script, in seconds
 https://stackoverflow.com/questions/30270316/how-to-solve-a-timeout-error-in-laravel-5/30290770#30290770
+
+
+# Application
+
+Invoice Ninja: Web admin portal built with React
+
+- react-query
+https://github.com/invoiceninja/ui

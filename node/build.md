@@ -13,7 +13,7 @@ Vite (palabra en francés para "rápido", pronunciado como /vit/
 Cons
 - Different tools are used for bundling development and production code. esbuild is used for the development, while the production bundle is built using Rollup. In rare cases, using different tools for the dev and prod environment could result in bugs that are hard to debug and fix. 
 	
-## configuration
+# configuration
 
 hether your application is a Single Page Application (SPA), a Multi Page Application (MPA), or Custom Application (SSR and frameworks with custom HTML handling)
 https://vitejs.dev/config/shared-options.html#apptype
@@ -29,13 +29,13 @@ Backend Integration
 
 https://vitejs.dev/guide/backend-integration.html
 	
-## build
+# build
 
 
 rollupjs	
 	
-## react
+# react
 
-pnpm create vite form-basic-app --template react-ts
+pnpm create vite my-react-app --template react-ts
 
-
+pnpm create vite my-react-app --template react

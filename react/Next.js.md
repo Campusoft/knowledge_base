@@ -108,3 +108,22 @@ npx local-ssl-proxy --key localhost-key.pem --cert localhost.pem --source 3001 -
 ```
 
 https://dev.to/cress/when-you-need-https-on-local-environment-local-ssl-proxy-is-the-best-solution-24n6
+
+## Applications
+
+
+An open-source link management tool for modern marketing teams to create, share, and track short links.
+
+- Next.js – framework
+- TypeScript – language
+- Tailwind – CSS
+- Upstash – redis
+- Tinybird – analytics
+- PlanetScale – database
+- NextAuth.js – auth
+- BoxyHQ – SSO/SAML
+- Turborepo – monorepo
+- Stripe – payments
+- Resend – emails
+- Vercel – deployments
+https://github.com/dubinc/dub

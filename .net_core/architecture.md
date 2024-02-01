@@ -32,7 +32,7 @@ This is a solution template for creating a Single Page App (SPA) with Angular an
   - No utiliza repositorios utiliza directamente DbContext
   - Utiliza SaveChangesInterceptor, para agregar valores a propiedades generales. *Ej. Valores de auditoria. 
 - UI
-  - Angular 14
+  - Angular 15 or React 18
   - Utiliza NSwag  para generar los proxys del Clientes API REST
 - MediatR
 - AutoMapper
@@ -53,6 +53,7 @@ This is a solution template for creating a Single Page App (SPA) with Angular an
   - DbContext lanza  DispatchEvents. 
   - Las entidades deben implementar IHasDomainEvent para lanza eventos.
   - Lanza eventos por medio de un servicio DomainEventService : IDomainEventService. Esta implementacion utiliza MediatR
+  - Version 8.x. Use DispatchDomainEventsInterceptor : SaveChangesInterceptor
 - Posee IPipelineBehavior, para colocar tuberias (pipe), en los flujos de MediatR. 
   - AuthorizationBehaviour. (Para autorizacion, con mediatR)
   - ValidationBehaviour. Para aplicar validaciones con FluentValidation
@@ -117,6 +118,26 @@ https://github.com/vietnam-devs/coolstore-microservices
 - opentelemetry-dotnet - The OpenTelemetry .NET Client
 - In medium and large software projects, we normally implement the CRUD actions over and over again. And it might take around 40-50% codebase just to do CRUD in the projects. The question is can we make standardized CRUD APIs, then we can use them in potential projects in the future?
 https://github.com/thangchung/clean-architecture-dotnet
+
+**Clean Architecture Solution .NET 6**
+- NET 6 / C#
+- ASP.NET Core 6
+- Entity Framework Core 6
+- Angular 12
+- MediatR
+  - Db.SaveChangesAsync lanzan event domain. Las entidades posee IHasDomainEvent, para establecer una lista de eventos 
+
+
+```
+      public List<DomainEvent> DomainEvents { get; set; } = new List<DomainEvent>();
+```
+
+- AutoMapper
+- FluentValidation
+- NUnit, FluentAssertions, Moq & Respawn
+- Docker
+https://github.com/arbems/Clean-Architecture-Solution
+
 
 **StudentCourseManagement**
 Fullstack Hub is developed to help students and professionals to quickly learn the industry standard applications development for FREE. - Yaseer Mumtaz
