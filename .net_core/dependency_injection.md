@@ -29,6 +29,12 @@ https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?v
 Autofac is an addictive Inversion of Control container for .NET Core, ASP.NET Core, .NET 4.5.1+, Universal Windows apps, and more. 
 
 
+# Ninject
+
+Ninject is a lightning-fast, ultra-lightweight dependency injector for .NET applications. It helps you split your application into a collection of loosely-coupled, highly-cohesive pieces, and then glue them back together in a flexible manner. By using Ninject to support your software's architecture, your code will become easier to write, reuse, test, and modify.
+
+https://github.com/ninject/ninject
+
 
 # Util
 

@@ -101,7 +101,7 @@ It's recommended to reference NuGet test adapters in each test project in the so
 ```
 ----------------------
 
-## Mock 
+# Mock 
 
 Bogus
 
@@ -121,3 +121,9 @@ Shouldly 3.0.0
 Shouldly - Assertion framework for .NET. The way asserting *Should* be
 
 In unit test, generally, dependencies of testing class is mocked (by creating fake implementations using some mock frameworks like Moq and NSubstitute). This makes unit testing harder, especially when dependencies grows.
+
+## Moq
+
+Moq is intended to be simple to use, strongly typed (no magic strings!, and therefore full compiler-verified and refactoring-friendly) and minimalistic (while still fully functional!).
+
+https://github.com/devlooped/moq

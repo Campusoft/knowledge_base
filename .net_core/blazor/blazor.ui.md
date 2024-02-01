@@ -18,6 +18,12 @@ Is a set of 70+ free native Blazor UI components packed with DataGrid, Scheduler
 https://github.com/radzenhq/radzen-blazor
 
 
+# MudBlazor
+
+MudBlazor is an ambitious Material Design component framework for Blazor with an emphasis on ease of use and clear structure. It is perfect for .NET developers who want to rapidly build web applications without having to struggle with CSS and Javascript. MudBlazor, being written entirely in C#, empowers you to adapt, fix or extend the framework. There are plenty of examples in the documentation, which makes understanding and learning MudBlazor very easy.
+
+https://github.com/MudBlazor/MudBlazor/
+
 # Librerias
 
 A JavaScript free toast library for Blazor and Razor Component applications
