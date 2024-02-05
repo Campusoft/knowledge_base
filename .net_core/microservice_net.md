@@ -88,11 +88,13 @@ https://dev.to/rickystam/net-core-use-httpclientfactory-and-polly-to-build-rock-
 # Tools
 
 
-***tye***
+**tye**
 
 Tye is a developer tool that makes developing, testing, and deploying microservices and distributed applications easier. Project Tye includes a local orchestrator to make developing microservices easier and the ability to deploy microservices to Kubernetes with minimal configuration.
 
 https://github.com/dotnet/tye
+
+Nota: This repository has been archived by the owner on Nov 20, 2023. It is now read-only.
 
 Commandos
 
@@ -137,7 +139,7 @@ Otras opciones:
 
 --------------------
 
-***YARP***
+**YARP**
 
 YARP - A toolkit for developing high-performance HTTP reverse proxy applications
 
