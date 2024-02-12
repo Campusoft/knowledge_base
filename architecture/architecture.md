@@ -34,6 +34,10 @@ Though these architectures all vary somewhat in their details, they are very sim
 
 https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
+
+
+
+
 # Component
 
  A component is an encapsulated part of a software system. A component has an interface. Components serve as the building blocks for the structure of a system. At a programming-language level, components may be represented as modules, classes, objects or a set of related functions.

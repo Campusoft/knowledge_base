@@ -124,15 +124,21 @@ https://github.com/thangchung/clean-architecture-dotnet
 - ASP.NET Core 6
 - Entity Framework Core 6
 - Angular 12
+- CQRS
+  - Posee interfaces para lanzar eventos, IDomainEventService. La implementacion es con MediatR
+  - Events. Crea un objeto INotification "MediatR" con un generico de clase de eventos "DomainEvent"
 - MediatR
   - Db.SaveChangesAsync lanzan event domain. Las entidades posee IHasDomainEvent, para establecer una lista de eventos 
-
 
 ```
       public List<DomainEvent> DomainEvents { get; set; } = new List<DomainEvent>();
 ```
 
 - AutoMapper
+  - Crea DTO, asociados a las entidades como genericos. Esto se utiliza para realizar mapeos de las clases detectando esta combinacion. 
+  ```
+  PowerDto : IMapFrom<Power>
+  ```
 - FluentValidation
 - NUnit, FluentAssertions, Moq & Respawn
 - Docker
@@ -142,10 +148,23 @@ https://github.com/arbems/Clean-Architecture-Solution
 **StudentCourseManagement**
 Fullstack Hub is developed to help students and professionals to quickly learn the industry standard applications development for FREE. - Yaseer Mumtaz
 - Mediator. Crea los IRequestHandler como subclases de  IRequest
+  - Posee clases implementan IRequestPreProcessor. LoggingBehaviour
+  - Posee clases implementan IPipelineBehavior. UnhandledExceptionBehaviour, ValidationBehaviour con FluentValidation
+
+```
+services.AddTransient(typeof(IPipelineBehavior<,>), typeof(PerformanceBehaviour<,>));
+services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+services.AddTransient(typeof(IPipelineBehavior<,>), typeof(UnhandledExceptionBehaviour<,>));
+```  
+  
 - CQRS
+  - IRequestHandler, subclases de los commandos.
+  - AddXCommand. Retornar identificador registro Creado
+  - DeleteCourseCommand, UpdateCourseCommand retorna bool
 - ExceptionFilterAttribute
 - Persistencia
   - UnitOfWork. Simple. En el IUnitOfWork, posee las entidades. El UnitOfWork crea los objetos repository.
+  - UnitOfWork se inyecta AddTransient
   - Libreria. https://github.com/DapperLib/Dapper.Contrib
 - Redis
 - Mensajes
@@ -161,6 +180,8 @@ Fullstack Hub is developed to help students and professionals to quickly learn t
   - Utiliza un servicio generico para llamar a los API REST. 
 - Otros
   - AutoMapper	
+  - Validaciones FluentValidation.
+	- services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
   - API Gateway project is using the Ocelot  
 https://github.com/fullstackhub-io/StudentCourseManagement
 https://fullstackhub.io/asp-net-core-microservices-with-angular11/
@@ -212,8 +233,14 @@ https://github.com/devmentors/FeedR
 
 **GoldenEye**
 - Messaging infrastructure - both internal based on MediatR and external with Kafka,
-  - Consume Kafka mensajes  y luego publish event to internal event bus  (MediatR)
-- CQRS and Domain Driven Development stack - sending and handling commands, queries, events (with usage of MediatR library),
+  - Consume Kafka mensajes  y luego publish event to internal event bus  (MediatR). (Referencias de Codigo)
+  - Utilizando informacion del mensaje, se obtiene el tipo de mensaje. 
+  - Busca en las dll el tipo. Luego desealiza el tipo desde Json. 
+  - Utiliza IHostedService, para escuchar los mensajes. 
+- CQRS and Domain Driven Development stack - sending and handling commands, queries, events (with usage of MediatR library).
+  - Posee un wrapper, de mediatR. CommandBus: ICommandBus
+  - Posee una clase para lanzar eventos.  EventBus: IEventBus. 
+  - Posee IExternalEventConsumer. Sin implementacion, para lanzar eventos externos
 - Validation flow with FluentValidation.NET,
 - Examples of complete usage (Cinema Ticket Reservations),
 https://github.com/oskardudycz/GoldenEye
@@ -235,6 +262,7 @@ Sample .NET Core reference application, powered by Microsoft, based on a simplif
 - book, .NET Microservices: Architecture for Containerized .NET Applications.
   - https://docs.microsoft.com/en-us/dotnet/architecture/microservices/
 https://github.com/dotnet-architecture/eShopOnContainers
+https://github.com/dotnet/eShop. (New Repository)
 
 
 
@@ -334,6 +362,24 @@ Sample ASP.NET Core 7.0 reference application, powered by Microsoft, demonstrati
 - Usa MinimalApi.Endpoint, para configurar minimal apis. https://www.nuget.org/packages/MinimalApi.Endpoint
 - Usa Ardalis.Specification.EntityFrameworkCore
 https://github.com/dotnet-architecture/eShopOnWeb
+
+
+
+
+Clean Architecture with CQRS Pattern
+- .NET 7.
+- CQRS sin librerias, crea el pattern manualmente. Sin utilizar librerias tipo MediatR
+  - Utiliza record, para los DTO-Command-RequestAPI 
+- API
+  -  Post. Utiliza CreatedAtAction para crear una respuesta con el url get recurso, mas el identificador. Los commandos no deben retornar datos
+- DDD
+  - Posee IDomainEvent. Una lista de eventos, asociados a la entidad. No existe implementacion de lanzar los eventos. 
+- Varios
+  - Utiliza extensiones, para IServiceCollection, en las diferentes proyectos, y subcarpetas de estos proyectos.
+  - Scrutor
+https://github.com/Rezakazemi890/Clean-Architecture-CQRS
+
+
 
 # Exceptions 
 

@@ -84,10 +84,20 @@ https://searchapparchitecture.techtarget.com/tip/Follow-these-10-fundamental-mic
 
 Here I am using the term database to show a logical separation of data, i.e., the Microservices can share the same physical database, but they should use separate Schema/collection/table
 
+
+There are several ways to keep a service’s persistent data private. One may not need to assign a database server for each service. If you are handling a relational database below are the options that we have for our DB design needs:
+
+- Private-tables-per-service: In this design approach, each service has a set of tables that must only be accessed by that service.
+- Schema-per-service: In this design approach, each service owns a database schema that’s controlled by that service.
+- Database-server-per-service: In this design approach, each service has its database server.
+
+Without restriction to enforcing encapsulation, developers will always be motivated to bypass a service’s API and access it’s data directly.
+
+
+
 ## Data separation
 
 - What happens when a service developed by a team requires a change of schema in a database shared by other services?
-
 
 Read Only Data Aggregation In a Microservices Environment: A Real Life Use Case
 - Have an incrementing version id of your entity to support stale data detection.

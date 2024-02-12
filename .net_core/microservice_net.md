@@ -163,9 +163,23 @@ This is my (very opinionated) roadmap for .NET developers that want to focus on 
 https://github.com/Elfocrash/.NET-Backend-Developer-Roadmap
 
 
+# Varios
+
+
+## DotNetCore.CAP
+
+Distributed transaction solution in micro-service base on eventually consistency, also an eventbus with Outbox pattern
+
+CAP is a library based on .Net standard, which is a solution to deal with distributed transactions, has the function of EventBus, it is lightweight, easy to use, and efficient.
+
+
+https://github.com/dotnetcore/CAP
+
 # Revisiones
 
 
  The concept of minimal API is more applicable in Microservices or Serverless Architecture. As we are coming from a mindset of a well-organized monolith approach it's hard to digest asp.net core throwing away all of its charms just to look like a trending concept. In the aspect of scalability and performance, microservices and serverless models outperform monolith. Nowadays people don't care about code duplication and reusability rather they focus on how to scale out. If your application demand high scalability picks the microservice model. If it's required very high scalability go for serverless otherwise monolith is good. 
+ 
+ 
  
  

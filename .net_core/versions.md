@@ -3,6 +3,9 @@
 
 # .NET 8.0
 
+- .NET 8 trae consigo la versión 12 de C#
+
+
 - Improvements in System.Text.Json serialization
 
 Native AOT
@@ -22,11 +25,12 @@ https://anthonygiretti.com/2023/06/10/net-8-why-net-8-preview-doesnt-show-up-in-
 
 
 
-.NET 7
+# .NET 7
 
 Publish to a container
 
 Containers are one of the easiest ways to distribute and run a wide variety of applications and services in the cloud. Container images are now a supported output type of the .NET SDK, and you can create containerized versions of your applications using dotnet publish.
+
 
 # .net Core 6
 
@@ -37,6 +41,13 @@ Unified platform across browser, cloud, desktop, IoT, and mobile apps, all using
 Minimal APIs introduced in ASP.NET Core to simplify the getting started experience and improve the performance of HTTP services.
 
 Hot Reload enables you to skip rebuilding and restarting your app to view a new change — while your app is running — supported in Visual Studio 2022 and from the .NET CLI, for C# and Visual Basic.
+
+# .net 5
+
+- C# 9 was released with .NET 5.
+  - Records (C# reference)
+
+
 
 
 # .net Core 3.0
