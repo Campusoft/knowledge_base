@@ -4,6 +4,7 @@ A microservices architecture is not just built around design principles. Some ca
 
 When we develop microservices, we need to consider that not all microservices are similar
 
+What size should a microservice be? When developing a microservice, size shouldn’t be the important  point. Instead, the important point should be to create loosely coupled services so you have autonomy of development, deployment, and scale, for each service. Of course, when identifying and designing microservices, you should try to make them as small as possible as long as you don’t have too many direct dependencies with other microservices. More important than the size of the microservice is the internal cohesion it must have and its independence from other services
 
 
 # Microservices Characteristics
@@ -23,7 +24,7 @@ James Lewis and Martin Fowler provided a reasonable common set of characteristic
 
 
 - Componentizacion via Servicios
-- Organidos en base a las capacidades del negocio (Business Capabilities)
+- Organizarlos en base a las capacidades del negocio (Business Capabilities)
 - Productos no Proyectos
 - Endpoints inteligentes y pipes tontos (dumb pipes)
 - Governanza descentralizada

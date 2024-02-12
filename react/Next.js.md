@@ -109,6 +109,24 @@ npx local-ssl-proxy --key localhost-key.pem --cert localhost.pem --source 3001 -
 
 https://dev.to/cress/when-you-need-https-on-local-environment-local-ssl-proxy-is-the-best-solution-24n6
 
+
+## Starter Kit. (Plantillas base)
+
+The Open Source Next.js SaaS boilerplate for Enterprise SaaS app development.
+
+- Next.js
+- Tailwind CSS
+- Postgres
+- React
+- Prisma
+- TypeScript
+- SAML Jackson (Provides SAML SSO, Directory Sync)
+- Svix (Provides Webhook Orchestration)
+- Retraced (Provides Audit Logs Service)
+https://github.com/boxyhq/saas-starter-kit
+
+https://dev.to/cress/when-you-need-https-on-local-environment-local-ssl-proxy-is-the-best-solution-24n6
+
 ## Applications
 
 
