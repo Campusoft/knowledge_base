@@ -36,6 +36,7 @@ https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
 
 
+![image](https://github.com/Campusoft/knowledge_base/assets/222181/ef3f265e-93b7-4dea-bb8b-9536d9225be5)
 
 
 # Component

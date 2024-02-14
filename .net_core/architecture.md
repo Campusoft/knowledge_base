@@ -60,6 +60,9 @@ This is a solution template for creating a Single Page App (SPA) with Angular an
 - Posee un archivo "DependencyInjection" por cada proyecto para las configuraciones de inyeccion de dependencias
   - Posee archivos con global using
 - Version .net (8.0.100-preview)
+  - ASP.NET Core Clean Architecture Template v8 Released.
+  https://ardalis.com/aspnetcore-clean-architecture-template-version-8/
+  
 https://github.com/jasontaylordev/CleanArchitecture 
 
 
@@ -363,6 +366,22 @@ Sample ASP.NET Core 7.0 reference application, powered by Microsoft, demonstrati
 - Usa Ardalis.Specification.EntityFrameworkCore
 https://github.com/dotnet-architecture/eShopOnWeb
 
+
+
+
+Modular Monolith with DDD
+- C4 Model. Files architecture decision
+- Modules
+  - Event-driven communication between modules
+- Autofac
+- CQRS
+  - Class Wrapper MediatR
+  - Query. Use Dapper
+  - Command. DDD and EntityFramework. With Repository
+  - implement CQRS pattern using raw sql scripts as Read Model side processing and DDD approach as Write Model side implementation. https://www.kamilgrzybek.com/blog/posts/simple-cqrs-implementation-raw-sql-ddd
+https://github.com/kgrzybek/modular-monolith-with-ddd
+ 
+ 
 
 
 
