@@ -4,7 +4,7 @@
 NoCode
 LowCode
 Low Code
-
+No Code
 
 # Microsoft Power Apps
 
@@ -75,3 +75,11 @@ https://github.com/appsmithorg/appsmith
 Low-Code Platforms and the Rise of the Community Developer: Lots of Solutions, or Lots of Problems?
 
 https://www.infoq.com/articles/low-code-community-developer/
+
+
+
+# Glide
+
+Glide makes it easy to build and deploy powerful custom apps powered by AI with no code. Create your first app by trying Glide for free.
+
+https://www.glideapps.com/

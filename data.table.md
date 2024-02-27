@@ -19,6 +19,11 @@ Using jQuery DataTables Grid With ASP.NET CORE MVC
 https://www.c-sharpcorner.com/article/using-jquery-datatables-grid-with-asp-net-core-mvc/
 
 
+Microsoft AspNet bindings and automatic parsing for jQuery DataTables along with extension methods to help on data queries.
+- This repository has been archived by the owner on Jan 8, 2024. It is now read-only.
+https://github.com/ALMMa/datatables.aspnet
+
+
 syncfusion
 ==========
 
