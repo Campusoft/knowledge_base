@@ -515,3 +515,7 @@ https://github.com/dotnet-architecture/eShopOnWeb
 
 
 
+## Aspire
+
+Did you know that dashboard is completely built with #Blazor 
+https://github.com/dotnet/aspire

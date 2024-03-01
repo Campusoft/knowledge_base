@@ -75,6 +75,17 @@ https://betterprogramming.pub/microservice-tracing-log-in-the-distributed-system
 TraceId
 
 
+# Service discovery in .NET
+
+
+how to use the Microsoft.Extensions.ServiceDiscovery library. Service discovery is a way for developers to use logical names instead of physical addresses (IP address and port) to refer to external services.
+https://learn.microsoft.com/en-us/dotnet/core/extensions/service-discovery?tabs=dotnet-cli
+
+Lo-Fi Service Discovery in .NET8
+- .NET 8 introduces a new extensions package - Microsoft.Extensions.ServiceDiscovery - which is designed to interoperate with .NET Aspire, Kubernetes DNS, and App Config driven service discovery.
+- Using Azure App Configuration Services as a service registry
+https://dev.to/david_whitney/lo-fi-service-discovery-in-net8-2h5o
+
 # Resilient 
 
 Polly 

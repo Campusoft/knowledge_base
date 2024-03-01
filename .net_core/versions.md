@@ -24,6 +24,10 @@ The latest improvements to native AOT apps on Linux systems have resulted in sig
 https://anthonygiretti.com/2023/06/10/net-8-why-net-8-preview-doesnt-show-up-in-visual-studio-2022/
 
 
+**Dependency injection**
+Keyed services refers to a mechanism for registering and retrieving Dependency Injection (DI) services using keys.
+https://learn.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-8.0#keyed-services
+
 
 # .NET 7
 

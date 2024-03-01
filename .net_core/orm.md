@@ -204,25 +204,38 @@ dotnet ef database update --startup-project ../MyCompanyName.MyProjectName.HttpA
 
 --------------------
 
+
+Entity Framework Core tools reference - .NET Core CLI
+
+- The command-line interface (CLI) tools for Entity Framework Core perform design-time development tasks. For example, they create migrations, apply migrations, and generate code for a model based on an existing database. The commands are an extension to the cross-platform dotnet command, which is part of the .NET Core SDK. These tools work with .NET Core projects.
+
+
 .NET Core CLI
+
+Crear nueva migracion
 
 ```
 dotnet ef migrations add InitialCreate
 ```
 
+Actualizar la base de datos. 
+```
+dotnet ef database update
+```
 
-
-Visual Studio
-- Add-Migration InitialCreate
-
-.NET Core CLI
-- dotnet ef database update
+Opcion, para especificar el proyecto inicial. 
 
 --startup-project
 
 ```
 dotnet ef database update --startup-project ../../host/Mre.Sb.AdministrativeUnit.HttpApi.Host --context AdministrativeUnitDbContext
 ```
+ 
+------------------------------------------
+
+Visual Studio
+- Add-Migration InitialCreate
+
 
 Visual Studio (Actualizar base de datos)
 - Update-Database
@@ -243,6 +256,9 @@ dotnet tool install --global dotnet-ef
 
 Entity Framework Core tools reference - .NET Core CLI
 https://docs.microsoft.com/en-us/ef/core/cli/dotnet
+
+
+
 
 Errores .NET Core CLI
 ----------------------
