@@ -437,6 +437,10 @@ Hybrid apps use a blend of native and web technologies. A Blazor Hybrid app uses
 Visual Studio 2022 version 17.9 Preview 1
 - We have added the ability to scaffold views in .NET 8 Blazor web projects. This includes scaffolding views that use Entity Framework for CRUD (Create-Read-Update-Delete) operations.
 
+# Versiones
+
+Blazor in .NET 8
+
 
 
 # Referencias
