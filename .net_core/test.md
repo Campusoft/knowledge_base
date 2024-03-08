@@ -127,3 +127,11 @@ In unit test, generally, dependencies of testing class is mocked (by creating fa
 Moq is intended to be simple to use, strongly typed (no magic strings!, and therefore full compiler-verified and refactoring-friendly) and minimalistic (while still fully functional!).
 
 https://github.com/devlooped/moq
+
+## Mock librerias
+
+
+We are going to learn how to mock an EF Core DbContext by using two popular libraries:
+- Moq.EntityFrameworkCore
+- MockQueryable
+https://code-maze.com/ef-core-mock-dbcontext/

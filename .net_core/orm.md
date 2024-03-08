@@ -279,6 +279,33 @@ dotnet ef database update --context AdministrativeUnitDbContext
 Unable to create an object of type 'ApplicationDb'. For the different patterns supported at design time, see https://go.microsoft.com/fwlink/?linkid=851728
 ```
 
+Design-time DbContext Creation
+- If your startup project uses the ASP.NET Core Web Host or .NET Core Generic Host, the tools try to obtain the DbContext object from the application's service provider.
+- From a design-time factory
+
+You can also tell the tools how to create your DbContext by implementing the Microsoft.EntityFrameworkCore.Design.IDesignTimeDbContextFactory<TContext> interface: If a class implementing this interface is found in either the same project as the derived DbContext or in the application's startup project, the tools bypass the other ways of creating the DbContext and use the design-time factory instead.
+
+```
+public class BloggingContextFactory : IDesignTimeDbContextFactory<BloggingContext>
+{
+    public BloggingContext CreateDbContext(string[] args)
+    {
+        var optionsBuilder = new DbContextOptionsBuilder<BloggingContext>();
+        optionsBuilder.UseSqlite("Data Source=blog.db");
+
+        return new BloggingContext(optionsBuilder.Options);
+    }
+}
+```
+
+-------------------------------------------
+
+How to fix in EF Core: Your startup project '[StartupProjectName]' doesn't reference Microsoft.EntityFrameworkCore.Design. This package is required for the Entity Framework Core Tools to work. Ensure your startup project is correct, install the package, and try again.
+
+
+Make sure you have installed or referenced the Microsoft.EntityFrameworkCore.Design package in your Startup Project.
+
+
 
 
 

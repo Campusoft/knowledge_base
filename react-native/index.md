@@ -130,3 +130,11 @@ Expo is a set of tools built around React Native to help you quickly start an ap
 React Native for Windows + macOS brings React Native support for the Windows SDK as well as the macOS 10.14 SDK. With this, you can use JavaScript to build native Windows apps for all devices supported by Windows 10 and higher including PCs, tablets, 2-in-1s, Xbox, Mixed reality devices, etc., as well as the macOS desktop and laptop ecosystems.
 
 https://microsoft.github.io/react-native-windows/
+
+
+# Applications Referencias
+
+
+- The app contains a simple authentication system implemented using Firebase Auth REST API for the backend.
+- Most data in this project (products, orders, users) is stored in Firebase Realtime Database. Some other user-specific data (auth-token, favorite products) are stored locally in the device using AsyncStorage.
+https://github.com/abdoutech19/shop-app
