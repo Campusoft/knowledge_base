@@ -24,6 +24,22 @@ Microsoft AspNet bindings and automatic parsing for jQuery DataTables along with
 https://github.com/ALMMa/datatables.aspnet
 
 
+SearchPanes
+https://datatables.net/extensions/searchpanes/
+
+SearchPanes - Options
+- Ex. language
+https://datatables.net/reference/option/
+
+
+layout
+Define and position the table control elements to appear on the page.
+https://datatables.net/reference/option/layout
+
+
+DataTables 2
+https://datatables.net/blog/2024/datatables-2
+
 syncfusion
 ==========
 
