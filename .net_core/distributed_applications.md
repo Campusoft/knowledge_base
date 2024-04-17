@@ -21,6 +21,11 @@ https://learn.microsoft.com/en-us/dotnet/aspire/reference/aspire-faq
 
 
 
+## .NET Aspire telemetry
+
+One of the primary objectives of .NET Aspire is to ensure that apps are straightforward to debug and diagnose. .NET Aspire components automatically set up Logging, Tracing, and Metrics configurations, which are sometimes known as the pillars of observability, using the .NET OpenTelemetry SDK.
+
+
 ## Errores
 
 ---------------------------------------

@@ -2,7 +2,11 @@
 
 # Composer
 
+Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
+
+Install Composer On Windows With XAMPP
+https://www.thecodedeveloper.com/install-composer-windows-xampp/
 
 # Estandares
 
