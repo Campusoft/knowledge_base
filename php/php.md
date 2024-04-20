@@ -8,6 +8,8 @@ Composer is a tool for dependency management in PHP. It allows you to declare th
 Install Composer On Windows With XAMPP
 https://www.thecodedeveloper.com/install-composer-windows-xampp/
 
+
+
 # Estandares
 
 Moving PHP forward through collaboration and standards.
@@ -29,3 +31,13 @@ https://laragon.org/
 
 XAMPP Apache + MariaDB + PHP + Perl
 https://www.apachefriends.org/es/index.html
+
+
+How to enable HTTPS on XAMPP server.
+- STEP 1 Installing XAMMP
+- STEP 2 Adding VirtualHost
+- STEP 3 Creating Private Key
+- STEP 4 Configure httpd.config
+- STEP 4 Installing Certificate
+- STEP 5 Configure Chrome
+https://dev.to/iahtisham/how-to-enable-https-on-xampp-server-mb1
