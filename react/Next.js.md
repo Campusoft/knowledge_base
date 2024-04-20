@@ -107,6 +107,13 @@ When you need HTTPS on LOCAL environment, local-ssl-proxy is the best solution
 npx local-ssl-proxy --key localhost-key.pem --cert localhost.pem --source 3001 --target 3000
 ```
 
+In this example, an application is running on port 3000. Run local-ssl-proxy on port 3001 targeting for port 3000.
+
+
+```
+npx local-ssl-proxy --source 3001 --target 3000
+```
+
 https://dev.to/cress/when-you-need-https-on-local-environment-local-ssl-proxy-is-the-best-solution-24n6
 
 
