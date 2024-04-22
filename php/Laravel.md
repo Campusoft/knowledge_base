@@ -38,6 +38,8 @@ php artisan install:api
 # Eloquent ORM
 
 
+Laravel includes Eloquent, an object-relational mapper (ORM) that makes it enjoyable to interact with your database. When using Eloquent, each database table has a corresponding "Model" that is used to interact with that table. In addition to retrieving records from the database table, Eloquent models allow you to insert, update, and delete records from the table as well.
+
 # API REST
 
 
@@ -66,6 +68,24 @@ Artisan is the command line interface included with Laravel. Artisan exists at t
 php artisan help migrate
 ´´´
 
+# deploy
+
+Hacer deploy en Laravel para dummies 
+- Git
+- Cpanel
+https://platzi.com/tutoriales/1842-intro-laravel-2020/6546-hacer-deploy-en-laravel-para-dummies/
+
+
+# Starter Kits
+
+## Breeze
+
+
+Breeze provides a minimal and simple starting point for building a Laravel application with authentication. Styled with Tailwind, Breeze publishes authentication controllers and views to your application that can be easily customized based on your own application's needs.
+
+
+
+
 # Version 
 
 This command will display the Laravel version of your project.
@@ -79,3 +99,17 @@ Laravel stores information about its version in a file Application.php within th
 ´´´
 vendor/laravel/framework/src/Illuminate/Foundation/Application.php
 ´´´
+
+
+
+
+
+# Referencias
+
+
+
+## Training
+
+
+Laravel Bootcamp! In this guide we will walk through building a modern Laravel application from scratch. To explore the framework, we'll build a microblogging platform called Chirper.
+https://bootcamp.laravel.com/

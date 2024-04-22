@@ -20,6 +20,17 @@ https://www.php-fig.org/
 The Laravel Framework. 
 https://github.com/laravel/framework
 
+
+# Version
+
+## PHP 7
+
+PHP 7 is much faster than the previous popular stable release (PHP 5.6)
+PHP 7 has improved Error Handling
+PHP 7 supports stricter Type Declarations for function arguments
+PHP 7 supports new operators (like the spaceship operator: <=>)
+
+
 # Ambientes de desarrollo
 
 **Laragon**

@@ -117,6 +117,16 @@ npx local-ssl-proxy --source 3001 --target 3000
 https://dev.to/cress/when-you-need-https-on-local-environment-local-ssl-proxy-is-the-best-solution-24n6
 
 
+http://localhost:8080, the browser changes it to https.  How do I fix this?
+
+As of 2020, Chrome automatically redirects all HTTP URLs to HTTPS. You can stop Chrome from automatically redirecting HTTP URLs to HTTPS for localhost by doing the following:
+- Go to chrome://net-internals/#hsts
+- Enter "localhost" (without quotes) in the box underneath "delete domain security policies"
+- Click Delete
+- Try accessing localhost again
+- This only changes the setting for the localhost domain. It does not compromise security for other domains.
+https://support.google.com/chrome/thread/162605516/accessing-http-localhost-with-chrome-100?hl=en#:~:text=You%20can%20stop%20Chrome%20from,Click%20Delete
+
 ## Starter Kit. (Plantillas base)
 
 The Open Source Next.js SaaS boilerplate for Enterprise SaaS app development.
