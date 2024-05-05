@@ -26,3 +26,34 @@ https://github.com/langchain-ai/langchain
 # Prompts
 
 Un prompt es la instrucción en formato texto que le damos a un LLM para comenzar a generar (predecir) un resultado. Si el output es el resultado de la probabilidad a partir del input, podemos ver la importancia de aportar un input lo más adecuado posible.
+
+
+# Datos vectorial
+
+
+Las bases de datos vectoriales son sistemas diseñados para almacenar y gestionar vectores de alta dimensión, los cuales son representaciones numéricas de objetos en un espacio multidimensional. Estos vectores suelen ser el resultado de transformar datos no estructurados, como texto, imágenes o sonidos, en una forma que una máquina pueda entender y procesar. Las operaciones más comunes que se realizan sobre estos vectores son las búsquedas de los vecinos más cercanos (Nearest Neighbor Search, NNS), fundamentales en aplicaciones de IA como la búsqueda semántica, el reconocimiento de imágenes y los sistemas de recomendación.
+
+
+
+Las 5 mejores bases de datos vectoriales
+- Chroma
+- Pinecone
+- Weaviate
+- Faiss
+- Qdrant
+https://www.datacamp.com/es/blog/the-top-5-vector-databases
+
+# Qdrant
+
+
+Utiliza una modificación personalizada del algoritmo HNSW (Hierarchical Navigable Small World) para realizar búsquedas aproximadas del vecino más cercano (Approximate Nearest Neighbor Search, ANNS), ofreciendo velocidad y precisión en la recuperación de los vectores más relevantes.
+
+
+
+# Lenguaje natural (NLP)
+
+
+# Incrustaciones "embeddings"
+
+En términos sencillos, los embeddings son representaciones numéricas de datos como palabras, frases o incluso imágenes, diseñadas para su procesamiento eficiente en modelos de aprendizaje automático.
+
