@@ -51,6 +51,10 @@ The Intuitive Vue Framework
 Build your next Vue.js application with confidence using Nuxt.
 An open source framework making web development simple and powerful.
 
+Nuxt UI is a module that provides a set of Vue components and composables built with Tailwind CSS and Headless UI to help you build beautiful and accessible user interfaces.
+https://github.com/nuxt/ui
+
+
 # aplicaciones implementadas vue
 
 Vue Storefront is a e-commerce frontend framework based on Nuxt.js (opens new window) that can work with any e-commerce backend API. 

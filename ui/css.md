@@ -85,6 +85,12 @@ https://daisyui.com/
 
 Tailwind CSS utiliza POST-CSS 
 
+Headless UI
+
+
+Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
+https://github.com/tailwindlabs/headlessui
+
 ## Bulma
 
 
