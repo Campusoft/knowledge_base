@@ -14,6 +14,16 @@ syncfusion
 ==========
 
 
+
+Tabulator
+==========
+
+Easy to use, simple to code, fully featured, interactive JavaScript tables and data grids
+
+
+https://tabulator.info/
+
+
 ag-grid
 ==========
 

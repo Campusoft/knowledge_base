@@ -36,6 +36,11 @@ Collections are used in some of the most important performance optimization feat
 https://blogs.oracle.com/oraclemagazine/working-with-collections
 
 You can't use a locally declared collection in an SQL clause:
+
+```
+PLS-00642: local collection types not allowed in SQL statements
+```
+
 https://stackoverflow.com/questions/16185277/oracle-collection-in-where-clause
 
 
