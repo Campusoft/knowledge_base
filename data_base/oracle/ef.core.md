@@ -1,1 +1,0 @@
-ORA-00907: missing right parenthesis

@@ -1,10 +1,14 @@
 # Tipos datos
 
-record:
+## record:
 
    Cannot be stored in the database.
    Cannot be recursively referenced.
    Cannot have logic defined as part of their definition.
+
+
+
+## Object
 
 object:
 
@@ -12,8 +16,6 @@ object:
    Can be recursively referenced using the SELF parameter.
    Can have logic defined as part of their definition using member methods.
 
-
-## Object
 
 object type is a database object that must be declared using the CREATE statement.
 
