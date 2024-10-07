@@ -166,12 +166,16 @@ https://docs.docker.com/engine/install/ubuntu/
 
 ## Windows
 
+
+Install Docker Desktop on Windows
+https://docs.docker.com/docker-for-windows/install/
+
+
 Docker Toolbox has been deprecated and is no longer in active development. Please use Docker Desktop instead. See Docker Desktop for Mac and Docker Desktop for Windows.
 https://docs.docker.com/docker-for-windows/docker-toolbox/
 
 
-Install Docker Desktop on Windows
-https://docs.docker.com/docker-for-windows/install/
+
 
 Docker Desktop for Windows =>  Windows 10 Home 64-bit with WSL 2.
 

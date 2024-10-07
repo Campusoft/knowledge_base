@@ -15,9 +15,16 @@ https://betterprogramming.pub/serving-a-node-js-express-app-from-a-subfolder-a-r
 
 # Version
 
+
+Uninstall any pre-existing Node installations!! 
+The simplest (recommended) way to get NVM for Windows running properly is to uninstall any prior Node installation before installing NVM for Windows. 
+
 The Microsoft/npm/Google recommended Node.js version manager for Windows.
 https://github.com/coreybutler/nvm-windows
 
+
+Indicaciones para instalar nvm en windows
+https://learn.microsoft.com/en-us/windows/dev-environment/javascript/nodejs-on-windows#install-nvm-windows-nodejs-and-npm
 
 nvm
 
