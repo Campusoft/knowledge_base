@@ -282,10 +282,23 @@ IFileProvider
 
 https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers?view=aspnetcore-5.0#physical-file-provider
 
-# Read Excel
+# Excel
 
 Fast, Low-Memory, Easy Excel .NET helper to import/export/template spreadsheet
 https://github.com/mini-software/MiniExcel
+
+
+
+
+| Biblioteca              | Licencia                             | Compatibilidad con Docker/Linux | Características principales                               |
+|-------------------------|--------------------------------------|---------------------------------|----------------------------------------------------------|
+| **ClosedXML**           | MIT                                  | Sí                              | Generación y manipulación de hojas de cálculo            |
+| **NPOI**                | Apache License 2.0                   | Sí                              | Soporte avanzado de Excel y otros formatos de Office     |
+| **SpreadsheetLight**    | MIT                                  | Sí                              | Ligera, alta eficiencia, soporte básico de Excel         |
+| **ExcelNumberFormat**   | MIT                                  | Sí                              | Formateo de números y fechas en celdas                   |
+| **GemBox.Spreadsheet**  | Versión gratuita (con limitaciones) / Comercial | Sí               | Funcionalidad avanzada, gráficos, formatos avanzados     |
+
+
 
 
 # CloudEvents 

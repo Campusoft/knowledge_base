@@ -28,6 +28,23 @@ https://getbootstrap.com/docs/5.3/getting-started/vite/
 Backend Integration
 
 https://vitejs.dev/guide/backend-integration.html
+
+
+# Cambios
+
+Variables de entorno
+
+Las variables de entorno en Vite se prefijan con VITE_ y se acceden directamente.
+
+```
+VITE_REMOTE_SERVICE_BASE_URL=https://api.example.com
+
+```
+
+```
+const apiUrl = import.meta.env.VITE_REMOTE_SERVICE_BASE_URL;
+console.log(apiUrl); // Debería mostrar "https://api.example.com"
+```
 	
 # build
 
@@ -39,3 +56,8 @@ rollupjs
 pnpm create vite my-react-app --template react-ts
 
 pnpm create vite my-react-app --template react
+
+
+# TODO
+
+assets

@@ -3,7 +3,7 @@
 - Role based access control. RBAC
 - Attribute-based access control (ABAC)
 
-**Authentication Types***
+**Authentication Types**
 
 In Stateful authentication, the server creates a session for the user after successfully authenticating. The session id is then stored as a cookie in the user's browser and the user session store in the cache or database. When the client tries to access the server with a given session id, the server attempts to load the user session context for the session store, checks if the session is valid, and decides if the client has to access the desired resource or rejects the request.
 

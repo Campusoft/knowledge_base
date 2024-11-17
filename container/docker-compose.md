@@ -79,6 +79,27 @@ Explicacion oficial de redes
 https://docs.docker.com/compose/networking/
 
 
+**Tipos de Redes en Docker**
+
+Docker Compose proporciona tres tipos de redes:
+
+- Bridge (puente): Es el tipo de red por defecto para contenedores que se ejecutan en un entorno independiente. En una red de tipo bridge, cada contenedor obtiene su propia IP dentro de una subred específica, y los contenedores pueden comunicarse entre sí por su nombre de servicio en docker-compose.
+
+- Host: Este tipo de red utiliza la red del host para el contenedor, compartiendo la interfaz de red de la máquina física. Es útil para aplicaciones que requieren acceso directo a la red del host, pero sacrifica el aislamiento entre contenedores.
+
+- Overlay: Usado principalmente en configuraciones de Docker Swarm, permite la comunicación entre contenedores en diferentes hosts de Docker. Este tipo de red permite una arquitectura distribuida para clústeres de Docker.
+
+
+**Buenas Prácticas al Configurar Redes**
+
+- Aislar servicios en redes específicas: Usa redes dedicadas para diferentes grupos de servicios. Esto mejora la seguridad y facilita el control del tráfico entre contenedores.
+
+- Usar nombres de servicios en lugar de direcciones IP: Docker proporciona un sistema de DNS interno que resuelve los nombres de servicio automáticamente. Esto hace que las configuraciones sean más portables.
+
+- Configurar redes explícitas: Evita depender solo de la red por defecto (_default) para un mejor control de las conexiones y el tráfico entre servicios.
+
+**Referencias**
+
 Understanding Docker Networking 
 - What Is a Docker Network?
 - What Are Docker Network Drivers?
@@ -101,7 +122,7 @@ Communication between multiple docker-compose projects
 https://medium.com/@matayoshi.mariano/communication-between-multiple-docker-compose-projects-d79a68af3348
 
 
-Errores
+**Errores**
 
 ```
 warning: network default: network.external.name is deprecated in favor of network.name
