@@ -14,6 +14,12 @@ CMD opens Windows Store when I type 'python'
 Use the Windows search bar to find "Manage app execution aliases". There should be two aliases for Python. Unselect them, and this will allow the usual Python aliases "python" and "python3". See the image below.
 https://stackoverflow.com/questions/58754860/cmd-opens-windows-store-when-i-type-python
 
+# Anaconda
+
+Anaconda es una distribución de código abierto de los lenguajes de programación Python y R que se utiliza para aplicaciones de ciencia de datos, aprendizaje automático e inteligencia artificial.
+
+Incluye más de 250 paquetes populares de ciencia de datos y herramientas de gestión para simplificar la instalación y despliegue de paquetes.
+
 # Varios
 
 Requirements Files

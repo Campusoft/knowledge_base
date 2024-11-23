@@ -53,6 +53,19 @@ Utiliza una modificación personalizada del algoritmo HNSW (Hierarchical Navigab
 # Lenguaje natural (NLP)
 
 
+Procesamiento del Lenguaje Natural (NLP):
+- Traducción automática.
+- Análisis de sentimientos.
+- Generación de texto.
+- Resumen de textos.
+
+
+
+## Hugging Face
+
+Hugging Face is a community or company that develops and builds open-source tools to facilitate the use of NLP(Natural Language Processing) tasks. And with this it also enables users to build, train, and deploy machine learning models based on open-source code and technologies.
+
+
 # Incrustaciones "embeddings"
 
 En términos sencillos, los embeddings son representaciones numéricas de datos como palabras, frases o incluso imágenes, diseñadas para su procesamiento eficiente en modelos de aprendizaje automático.
