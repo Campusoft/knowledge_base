@@ -597,6 +597,18 @@ The Retail Analysis built-in sample contains a dashboard, report, and dataset th
 https://learn.microsoft.com/en-us/power-bi/create-reports/sample-retail-analysis
 
 
+
+
+Tutorial: Stephen Few-style bullet chart in Power BI using core visuals!
+
+Tiene Codigo
+- https://github.com/chpayton/BI-Files/tree/main/SVG%20Bullet%20Chart
+
+Video 
+https://www.youtube.com/watch?v=Blrn53FyJ3o
+
+
+
 ## Conjuntos de Datos para prácticas
 
 - Datos COVID Microsoft - https://github.com/microsoft/Bing-COVID-19-Data/tree/master/data
