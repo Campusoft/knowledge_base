@@ -53,3 +53,13 @@ https://www.ag-grid.com/javascript-grid-server-side-model/
 Clipboard
 
 Copy and paste data to and from the Clipboard. Users will be able to edit data in Excel, then copy the data back into the grid when done.
+
+
+
+# Referencias
+
+
+
+A curated list of grid(table) libraries and resources that developers may find useful.
+- Posee una lista de librerias para diferentes framework. Una lista completa de librerias
+https://github.com/FancyGrid/awesome-grid
