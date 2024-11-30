@@ -20,6 +20,13 @@ Anaconda es una distribución de código abierto de los lenguajes de programaci�
 
 Incluye más de 250 paquetes populares de ciencia de datos y herramientas de gestión para simplificar la instalación y despliegue de paquetes.
 
+Anaconda incluye pip como parte de su instalación. Aunque Anaconda tiene su propio administrador de paquetes llamado conda
+
+# pip
+
+pip es el administrador de paquetes oficial de Python. Su función principal es facilitar la instalación, actualización y gestión de bibliotecas y paquetes de Python desde el índice oficial de paquetes, conocido como PyPI (Python Package Index). Es una herramienta esencial para cualquier desarrollador que trabaje con Python.
+
+
 # Varios
 
 Requirements Files
@@ -35,3 +42,19 @@ Crear el archivo requirements.txt utilizando pip en la línea de comandos (ejecu
 ```
 pip3 freeze > requirements.txt
 ```
+
+
+
+
+**Herramientas para entornos virtuales**
+
+1. virtualenv (Clásico y muy usado):
+Una de las herramientas más populares.
+Permite crear entornos virtuales de forma sencilla.
+
+2. venv (Incluido en Python 3.3 y versiones posteriores):
+Es una herramienta estándar de Python.
+Similar a virtualenv pero no necesita instalación adicional.
+
+3. conda (Usado principalmente con Anaconda/Miniconda):
+Más avanzado, permite gestionar Python y paquetes de datos como NumPy y Pandas.
