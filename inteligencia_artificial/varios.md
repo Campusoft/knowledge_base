@@ -109,12 +109,7 @@ Procesamiento del Lenguaje Natural (NLP):
 Hugging Face is a community or company that develops and builds open-source tools to facilitate the use of NLP(Natural Language Processing) tasks. And with this it also enables users to build, train, and deploy machine learning models based on open-source code and technologies.
 
 
-# Incrustaciones "embeddings"
 
-En términos sencillos, los embeddings son representaciones numéricas de datos como palabras, frases o incluso imágenes, diseñadas para su procesamiento eficiente en modelos de aprendizaje automático.
-
-
-Los embeddings son representaciones numéricas de datos, generalmente en forma de vectores de alta dimensionalidad, que capturan las características esenciales de los datos en un espacio matemático. En el contexto de IA y aprendizaje automático, se utilizan para representar de manera eficiente datos como texto, imágenes o sonidos, facilitando cálculos y comparaciones.
 
 
 # nvidia

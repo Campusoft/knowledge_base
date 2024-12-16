@@ -80,3 +80,72 @@ PyTorch tiene una comunidad vibrante y en constante crecimiento, con contribucio
 Currently, PyTorch on Windows only supports Python 3.9-3.12; Python 2.x is not supported.
 
 
+# Generar embeddings con python
+
+Algunas populares son:
+
+- Hugging Face Transformers:
+
+Ofrece modelos como Sentence-BERT.
+Ideal para tareas de texto, como emparejar preguntas y respuestas.
+
+-  Sentence-Transformers:
+
+Especialmente diseñada para generar embeddings semánticos.
+Modelos recomendados:
+
+all-MiniLM-L6-v2 (rápido y preciso).
+multi-qa-MiniLM-L6-v2 (optimizado para búsqueda).
+
+- OpenAI API (si permites servicios no locales):
+
+Utiliza text-embedding-ada-002 para generar embeddings.
+
+
+**openai Vector embeddings**
+
+https://platform.openai.com/docs/guides/embeddings/embedding-models
+
+
+
+# LangChain
+
+
+**Install**
+
+
+It is best practice to create a virtual environment to manage dependencies effectively. You may use venv or conda for creating isolated environments.
+
+
+Create a virtual environment. Replace env_name with your desired environment name:
+
+```
+python -m venv env_name
+```
+
+Activate the virtual environment:
+
+On Windows:
+
+```
+.\env_name\Scripts\activate
+
+```
+
+On macOS or Linux:
+
+```
+source env_name/bin/activate
+```
+
+
+## Referencias
+
+
+Unlocking the Power of Sentence Embeddings with all-MiniLM-L6-v2
+There are two main ways to use this model:
+
+- With Sentence-Transformers (an easy-to-use Python library).
+- With Hugging Face Transformers (if you prefer using Hugging Face’s library).
+
+https://medium.com/@rahultiwari065/unlocking-the-power-of-sentence-embeddings-with-all-minilm-l6-v2-7d6589a5f0aa

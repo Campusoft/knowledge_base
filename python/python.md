@@ -1,7 +1,13 @@
 # Python
 
 
-# Python virtual environment
+# Python virtual environment / Entornos Virtuales
+
+
+
+Un entorno virtual es un entorno Python en el que el intérprete Python, las bibliotecas y los scripts instalados en él están aislados de los instalados en otros entornos virtuales, y (por defecto) cualquier biblioteca instalada en un «sistema» Python, es decir, uno que esté instalado como parte de tu sistema operativo.
+Un entorno virtual es un árbol de directorios que contiene archivos ejecutables de Python y otros archivos que indican que es un entorno virtual.
+
 
  Virtual environment, a self-contained directory tree that contains a Python installation for a particular version of Python, plus a number of additional packages.
  

@@ -399,6 +399,22 @@ Clean Architecture with CQRS Pattern
 https://github.com/Rezakazemi890/Clean-Architecture-CQRS
 
 
+**serenity**
+
+Serenity is an ASP.NET Core / TypeScript application platform that is built on open-source technologies.
+
+It aims to make development easier while reducing maintenance costs by avoiding boilerplate code, reducing the time spent on repetitive tasks, and applying the best software design practices.
+
+Serene is our free, open-source starter application template based on the Serenity platform. We'll mainly use Serene for our tutorial and other samples through this documentation.
+
+StartSharp is the premium application template we offer to our paid customers. It contains everything in Serene, in addition to a more polished theme, and some extra features. They are both based on the Serenity platform.
+
+
+https://github.com/serenity-is/Serenity
+
+
+**fullstacktemplates**
+
 
 # Exceptions 
 
