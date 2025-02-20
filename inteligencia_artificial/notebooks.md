@@ -5,6 +5,23 @@ Project Jupyter exists to develop open-source software, open-standards, and serv
 
 
 
+**Colab**
+
+Colab, también conocido como "Colaboratory", te permite programar y ejecutar Python en tu navegador con las siguientes ventajas:
+
+- No requiere configuración
+- Acceso a GPUs sin coste adicional
+- Permite compartir contenido fácilmente
+
+
+Colab puede facilitar tu trabajo, ya seas estudiante, científico de datos o investigador de IA. 
+
+Los cuadernos de Colab son cuadernos de Jupyter alojados en Colab. 
+
+https://colab.research.google.com/
+
+
+
 # .NET Interactive 
 
 

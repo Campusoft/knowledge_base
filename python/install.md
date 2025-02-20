@@ -58,3 +58,27 @@ Similar a virtualenv pero no necesita instalación adicional.
 
 3. conda (Usado principalmente con Anaconda/Miniconda):
 Más avanzado, permite gestionar Python y paquetes de datos como NumPy y Pandas.
+
+
+***venv***
+
+Create a virtual environment. Replace env_name with your desired environment name:
+
+```
+python -m venv env_name
+```
+
+Activate the virtual environment:
+
+On Windows:
+
+```
+.\env_name\Scripts\activate
+
+```
+
+On macOS or Linux:
+
+```
+source env_name/bin/activate
+```

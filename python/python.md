@@ -65,6 +65,14 @@ Usar Nginx como proxy inverso y Gunicorn como servidor WSGI
 ![image](https://github.com/proyecto-facturacion/erp/assets/222181/24e72ece-f627-4100-a650-1d9e7d634cd3)
 
 
+# ASGI
+
+ASGI (Asynchronous Server Gateway Interface) is a spiritual successor to WSGI, intended to provide a standard interface between async-capable Python web servers, frameworks, and applications.
+
+Where WSGI provided a standard for synchronous Python apps, ASGI provides one for both asynchronous and synchronous apps, with a WSGI backwards-compatibility implementation and multiple servers and application frameworks.
+
+
+
 # Revisiones
 
 Celery es un gestor de tareas distribuido y asíncrono desarrollado en Python. Es una herramienta magnífica para aplicaciones de alta disponibilidad y con alta carga, y también recomendable cuando consideramos que la carga va a ir aumentando progresivamente y vamos a ir incorporando nuevas máquinas poco a poco a nuestro cluster inicial.

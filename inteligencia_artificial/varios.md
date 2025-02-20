@@ -14,10 +14,6 @@
 https://rows.com/product
 
 
-# LLM
-
-
-[Informacion de LLM](LLM.md)
 
 
 # Prompts
