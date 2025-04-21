@@ -172,7 +172,7 @@ https://github.com/Campusoft/LABS/tree/main/sharepoint/SharepointLabs
 
 
 SharePoint / Office 365 Developer Patterns and Practices
-https://github.com/pnp/PnP 
+https://pnp.github.io/
  
 
 Understanding the REST API of SharePoint 2013

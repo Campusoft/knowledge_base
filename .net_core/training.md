@@ -3,6 +3,21 @@
 ASP.NET Core Developer Roadmap
 https://github.com/MoienTajik/AspNetCore-Developer-Roadmap
 
+
+Instalar 
+- Visual Studio Community 2022 (o la version mas alta disponible)
+- Visual Code (Opcional)
+
+
+
+Manuales Introduccion c# .net
+
+Tutorial en el explorador de .NET
+- Se ejecuta en el navegador.
+https://dotnet.microsoft.com/es-es/learn/dotnet/in-browser-tutorial/1
+
+
+
 # Training .NET MAUI 
 
 Pronunciacion. (mah-wee). 

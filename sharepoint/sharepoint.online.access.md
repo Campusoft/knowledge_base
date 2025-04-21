@@ -1,7 +1,7 @@
 # Access
 
 
-## Access Postman / Sin Azure Registration Application
+# Access Postman / Sin Azure Registration Application
 
 Los siguientes tres articulos, son similares para generar ClienteID, y ClientSecret, sin hacerlo con azure registration application. 
 
@@ -14,6 +14,8 @@ http://www.ktskumar.com/2017/01/access-sharepoint-online-using-postman/
 
 3)  Sharepoint Online Authentication for API Access using POSTMAN 
 http://pratapreddypilaka.blogspot.com/2018/05/sharepoint-online-authentication-for.html
+ 
+ 
  
 Notas:
 

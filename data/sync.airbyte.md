@@ -1,4 +1,4 @@
-# airbyte
+# Airbyte
 
 
 
@@ -206,3 +206,13 @@ https://airbyte.com/blog/scaling-data-pipelines-kubernetes
 
 airbyte posee un workflow orchestration 
 https://airbyte.com/blog/scale-workflow-orchestration-with-temporal
+
+
+# Implementaciones/Uso Especificacion de Airbyte connector
+
+
+Pathway is a Python ETL framework for stream processing, real-time analytics, LLM pipelines, and RAG.
+
+Pathway comes with connectors that connect to external data sources such as Kafka, GDrive, PostgreSQL, or SharePoint. Its Airbyte connector allows you to connect to more than 300 different data sources. 
+
+https://github.com/pathwaycom/pathway
