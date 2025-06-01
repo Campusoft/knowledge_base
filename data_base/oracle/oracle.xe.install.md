@@ -81,3 +81,11 @@ docker run --name oracle-db  -p 1521:1521 -p 5500:5500  -e ORACLE_PWD=demo123 co
 ```
 
 
+Oracle Database 23ai Free is the free edition of the industry-leading database. The Oracle Database 23ai Free Container Image contains Oracle Database 23ai Free based on an Oracle Linux 8 base image.
+
+
+
+```
+docker run --name oracle-db-free  -p 1521:1521 -p 5500:5500  -e ORACLE_PWD=demo123 container-registry.oracle.com/database/free:latest
+```
+
