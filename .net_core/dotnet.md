@@ -105,6 +105,60 @@ Pasos:
 - Crear archivo, dentro de la carpeta creada: template.json
 - Configurar archivo template.json
 
+```
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Campusoft",
+  "classifications": [ "C#" ],
+  "identity": "Campusoft.Report",
+  "name": "Campusoft. Utilizar modulo de Reportes.",
+  "shortName": "campusoft-report",
+  "sourceName": "MyCompanyName.MyProjectName",
+  "preferNameDirectory":true,
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sources": [
+    {
+      "exclude": [
+        "**/[Bb]in/**",
+        "**/[Oo]bj/**",
+        "**/.vs/**",
+        "**/.git/**",
+        "**/.idea/**",
+        "**/*.user",
+        "**/*.suo"
+      ]
+    }
+  ]
+}
+```
+
+Instala la plantilla.
+
+- La plantilla esta en la carpeta c:\plantillas\app\MyCompanyName.MyProjectName
+- Utilizar dotnet new para instalar la plantilla
+- --debug:custom-hive ./hive, para evitar que se instale globalmente la plantilla, sino temporalmente.
+
+```
+dotnet new --install c:\plantillas\app\MyCompanyName.MyProjectName --debug:custom-hive ./hive
+```
+
+Si se requiere volver instalar la misma plantilla.
+
+```
+dotnet new --install D:\proyectos\Campusoft.Report\app\MyCompanyName.MyProjectName --debug:custom-hive ./hive --force
+```
+
+- Utilizar la plantilla, en este caso el nombre "shortName" es campusoft-report
+- -n Nuevo.Proyecto, reemplazara todas las ocurrencias en nombres de archivos, o textos dentro de los archivos de "sourceName": "MyCompanyName.MyProjectName" especificado en template.json
+- --output ./TestReport, indicar la carpeta de salida de la creacion de un nuevo proyecto utilizando la plantilla
+
+```
+dotnet new campusoft-report -n Nuevo.Proyecto --output ./TestReport --debug:custom-hive ./hive  
+```
+
 
 # Https 
 

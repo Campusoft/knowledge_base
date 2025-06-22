@@ -3,6 +3,15 @@
 EF o Entity Framework es el ORM oficial de Microsoft
 
 
+
+
+Como crea los objetos Entity Framework
+
+- No utiliza el constructor público predeterminado ni cualquier otro constructor explícito por defecto.
+- Usa reflexión para establecer las propiedades incluso si son privadas o no tienen setters públicos.
+- Por tanto, no necesita que todas las propiedades estén inicializadas en el constructor.
+
+
 # DbContext 
 
 El AddDbContext, agrega un Db con el ciclo vida por defecto. ServiceLifetime.Scoped
