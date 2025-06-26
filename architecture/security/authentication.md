@@ -392,6 +392,7 @@ Propietarios
 
 # Multifactor authentication (MFA)
 
+Añade una capa adicional de seguridad al requerir múltiples formas de verificación.
 
 # OTP - One-time password
 
