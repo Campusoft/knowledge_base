@@ -56,6 +56,24 @@ Copy and paste data to and from the Clipboard. Users will be able to edit data i
 
 
 
+shadcn table
+==========
+
+Shadcn table with server-side sorting, filtering, and pagination.
+
+
+Tech Stack
+- Framework: Next.js
+- Styling: Tailwind CSS
+- UI Components: shadcn/ui
+- Table package: TanStack/react-table
+- Database: Neon
+- ORM: Drizzle ORM
+- Validation: Zod
+
+
+https://github.com/sadmann7/shadcn-table
+
 # Referencias
 
 
