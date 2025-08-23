@@ -1,7 +1,10 @@
 # Moodle
+
 - Moodle significa Entorno de Aprendizaje Dinámico Orientado a Objetos Modular (del inglés, Modular Object-Oriented Dynamic Learning Environment o MOODLE).
 - Open source: licencia en abierto bajo GNU Pública General y Creative Commons.
 - https://es.wikipedia.org/wiki/Moodle
+
+
 ## Requisitos
 Moodle es una aplicación web que se ejecuta sin modificaciones en UNIX, GNU/Linux, OpenSolaris, FreeBSD, Windows, Mac OS X, NetWare y otros sistemas que soportan PHP incluyendo la mayoría de proveedores de hosting Web. Además, para poder utilizar esta plataforma no hace falta saber programar. Además, todos los archivos están en continuas copias de seguridad y cifrados.
 
@@ -15,8 +18,17 @@ En cuanto a los requisitos mínimos de hardware, son los siguientes:
 - **Procesador:** 1 GHz (mínimo), 2 GHz de doble núcleo o más recomendado.
 - **Memoria:** 512 Mb (mínimo), 1 Gb o más recomendado, en los servidores de gran producción se recomiendan 8 Gb.
 - Se recomienda, servidores separados para la web “front-end” y la base de datos.
+
+
 ## Instalación
+
+
 Puede ser a través de un servidor apache (herramienta softaculus en cpanel), instalación local desde [bitnami](https://bitnami.com/stack/moodle). EJ. [Bitnami Docker Image for Moodle LMS](https://hub.docker.com/r/bitnami/moodle/)
+
+Docker
+
+
+
 ## Documentación oficial
 https://docs.moodle.org/311/en/Main_page
 ## Administración
@@ -99,6 +111,28 @@ https://docs.moodle.org/311/en/Main_page
 	- core_message_decline_contact_request, version 3.6
 	- core_role_assign_roles, version 2.0
 	- mod_assign_lock_submissions, version 2.6	
+	
+	
+	
+	
+###  Versiones Principales de Moodle y sus Características
+
+| Versión         | Año de lanzamiento | Características principales                                                                 |
+|-----------------|--------------------|---------------------------------------------------------------------------------------------|
+| Moodle 3.0      | 2015               | Mejoras en compatibilidad móvil, nuevos tipos de preguntas, soporte para plugins modernos. |
+| Moodle 3.5 LTS  | 2018               | Primera LTS con soporte prolongado, GDPR compliance, mejoras en privacidad y reportes.     |
+| Moodle 3.9      | 2020               | Integración con H5P nativa, mejoras en actividades y accesibilidad.                        |
+| Moodle 3.11     | 2021               | Mejora en reportes del estudiante, más accesibilidad, soporte adicional para LTI 1.3.      |
+| Moodle 4.0      | 2022               | Rediseño de interfaz, navegación moderna, nuevo "Course Index", mejoras UX.                |
+| Moodle 4.1 LTS  | 2022 (dic)         | LTS estable con soporte hasta 2027, mejoras en usabilidad, accesibilidad, y rendimiento.   |
+| Moodle 4.2      | 2023               | Mejoras en gestión de cursos, nuevo banco de contenido, filtros avanzados.                |
+| Moodle 4.3      | 2023 (nov)         | Mejora de editores, informes personalizados, rendimiento y compatibilidad LTI Advantage.   |
+| Moodle 4.4      | 2024               | Mejoras a nivel de IA, analíticas, y simplificación en edición de curso.                   |
+	
+	
+	
+	
+	
 ## [Seguridad](https://docs.moodle.org/dev/Security#Security_of_web_applications)
 	- Manual accounts (no desabilitable)
 	- No login (no desabilitable)
