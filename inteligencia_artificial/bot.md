@@ -138,6 +138,13 @@ Casos de uso:
 Free (10,000 messages/month)
 S1 $0,50 per 1,000 messages (on Premium Channels)
 
+## Bot Framework Emulator
+
+Bot Framework Emulator being retired in favor of Agents Playground
+
+We are in the process of archiving the Bot Framework Emulator repository on GitHub. This means that this project will no longer be updated or maintained. Customers using this tool will not be disrupted. However, the tool will no longer be supported through service tickets in the Azure portal and will not receive product updates.
+
+We plan to archive this project no later than end of December of 2025.
 
 
 ## Bot Framework Composer
