@@ -39,6 +39,42 @@ Casos de uso:
 - Centros de contacto automatizados (con CCAI).
 - Bots con alta necesidad de entendimiento semántico.
 
+## Dialogflow CX
+
+Dialogflow CX es una plataforma avanzada de Google Cloud para crear agentes conversacionales (chatbots y asistentes virtuales). 
+
+Conceptos Fundamentales
+
+- Agent (Agente): Es el chatbot completo que contiene toda la lógica conversacional. Representa la aplicación de IA conversacional que interactúa con los usuarios.
+- Flow (Flujo): Define el camino conversacional que puede tomar una conversación. Un agente puede tener múltiples flujos para manejar diferentes temas o procesos de negocio. Por ejemplo, un flujo para "hacer pedidos" y otro para "soporte técnico".
+- Page (Página): Son los estados individuales dentro de un flujo donde ocurre la conversación. Cada página puede capturar información específica del usuario, proporcionar respuestas y decidir hacia dónde dirigir la conversación.
+- Intent (Intención): Representa lo que el usuario quiere hacer o comunicar. Por ejemplo, "quiero hacer un pedido", "necesito ayuda" o "cancelar cita". Los intents se entrenan con frases de ejemplo.
+Elementos de Procesamiento
+- Entity Types (Tipos de Entidad): Definen y extraen información específica de las conversaciones del usuario, como fechas, números, nombres de productos, etc. Pueden ser del sistema (preconfiguradas) o personalizadas.
+- Parameters (Parámetros): Almacenan los valores extraídos de las entidades durante la conversación. Por ejemplo, si el usuario dice "reserva para el viernes", el parámetro "fecha" almacenaría ese valor.
+- Session (Sesión): Mantiene el contexto de una conversación individual con un usuario específico, preservando parámetros y estado a lo largo de múltiples intercambios.
+
+Respuestas y Acciones
+
+-  Fulfillment (Cumplimiento): Permite conectar el agente con servicios externos (APIs, bases de datos) para procesar solicitudes complejas o realizar acciones específicas como procesar pagos o consultar inventarios.
+- Webhooks: Endpoints HTTP que reciben información del agente y pueden devolver respuestas dinámicas o ejecutar lógica de negocio externa.
+Elementos de Control
+- Conditions (Condiciones): Lógica que determina el flujo de la conversación basada en parámetros, respuestas del usuario o datos externos.
+- Event Handlers (Manejadores de Eventos): Responden a eventos específicos como timeouts, errores de reconocimiento de voz, o eventos personalizados.
+- Transition Routes (Rutas de Transición): Definen cómo navegar entre páginas basándose en intents, condiciones o eventos específicos.
+
+Características Avanzadas
+
+-  Training Phrases (Frases de Entrenamiento): Ejemplos de lo que los usuarios podrían decir para activar un intent específico, permitiendo que el modelo de NLU aprenda variaciones naturales del lenguaje.
+- System Functions: Funciones predefinidas para tareas comunes como formateo de texto, manipulación de fechas, o operaciones matemáticas básicas.
+- Version Control: Permite gestionar diferentes versiones del agente para desarrollo, pruebas y producción.
+
+La arquitectura de Dialogflow CX está diseñada para manejar conversaciones complejas y de múltiples turnos, ofreciendo mayor control y flexibilidad que las versiones anteriores de Dialogflow ES (Essentials).
+
+
+<img src="./cx-interaction-sequence.svg" alt="Diagrama" width="320">
+
+
 # Botpress
 
 - Ventajas: Interface visual + código, open source, flujos conversacionales claros
@@ -189,6 +225,23 @@ Casos de uso:
 - Empresas que quieren unificar canales de comunicación.
 - Chatbots simples (FAQ, rutas de conversación fijas).
 - Startups que buscan una solución todo-en-uno de soporte.
+
+## Dialogflow
+
+How to bring your Dialogflow chatbot to Chatwoot?
+
+https://chatwoot.help/hc/user-guide/articles/1677743452-how-to-integrate-your-dialogflow-chatbot-with-chatwoot
+
+## Docker
+
+https://developers.chatwoot.com/self-hosted/deployment/docker
+
+# whaticket
+
+
+Empresa peruana. Fundada por Juan Luis Auccatoma
+
+https://whaticket.com/
 
 
 # Revisiones

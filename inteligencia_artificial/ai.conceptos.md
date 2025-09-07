@@ -81,3 +81,54 @@ Para datos generales:
 
 - OpenAI Embeddings: Usados para múltiples dominios.
 
+
+# Soporte Multimodal
+
+En IA, cuando se habla de soporte multimodal significa que el sistema no se limita a un único tipo de entrada o salida (por ejemplo, solo texto), sino que puede procesar y generar información en múltiples modalidades de datos, como:
+
+Texto: conversación escrita tradicional.
+
+Voz/audio: reconocimiento de voz (STT – speech-to-text), síntesis de voz (TTS – text-to-speech), interacción hablada en tiempo real.
+
+Imágenes: interpretar, describir o generar imágenes a partir de texto (ejemplo: "dibuja un diagrama" o "analiza esta foto").
+
+Video: análisis de escenas, generación de subtítulos o incluso generación de video.
+
+Datos estructurados: tablas, gráficos, documentos.
+
+
+# RAG  (Retrieval-Augmented Generation)
+
+RAG, que significa Retrieval-Augmented Generation (Generación Aumentada con Recuperación), es una técnica en inteligencia artificial que combina modelos de generación de texto (como los modelos de lenguaje) con sistemas de recuperación de información. Este enfoque permite que un modelo de lenguaje genere respuestas informadas y precisas utilizando fuentes de información externas.
+
+
+[Detalles](RAG.md)
+
+
+
+# Lenguaje natural (NLP)
+
+
+Procesamiento del Lenguaje Natural (NLP):
+- Traducción automática.
+- Análisis de sentimientos.
+- Generación de texto.
+- Resumen de textos.
+
+Es el campo amplio que engloba todos los aspectos del trabajo con lenguaje natural.
+
+# NLU (Natural Language Understanding)
+
+Comprensión de Lenguaje Natural
+
+Es una subárea dentro de NLP, enfocada en que la máquina no solo procese el texto, sino que entienda su significado e intención.
+
+Incluye tareas como:
+
+- Detección de intención (intent recognition).
+- Extracción de entidades (NER: named entity recognition).
+- Análisis de sentimiento.
+- Resolución de ambigüedades (“banco” → ¿institución financiera o asiento?).
+- Comprensión semántica para responder preguntas o ejecutar acciones.
+
+Es el nivel semántico del NLP.

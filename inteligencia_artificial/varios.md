@@ -89,14 +89,6 @@ Qdrant is now accessible:
 
 
 
-# Lenguaje natural (NLP)
-
-
-Procesamiento del Lenguaje Natural (NLP):
-- Traducción automática.
-- Análisis de sentimientos.
-- Generación de texto.
-- Resumen de textos.
 
 
 
