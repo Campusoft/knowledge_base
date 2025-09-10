@@ -15,6 +15,79 @@
 https://user-images.githubusercontent.com/11231959/118572546-536a4800-b746-11eb-9b4c-c97ffacf2824.png
 
 
+**Metodología estructurada para diseñar y construir tableros de Power BI**
+
+
+1. Definición de Objetivos
+
+- Entender la necesidad del negocio: ¿Qué preguntas se quieren responder?
+- Definir indicadores clave (KPIs): ventas, rentabilidad, mora, rotación, etc.
+- Identificar usuarios finales: gerencia, analistas, área operativa.
+- Alcance del tablero: estratégico, táctico u operativo.
+
+Herramienta recomendada: entrevistas, workshops, o un canvas de KPIs.
+
+2. Recolección y Análisis de Datos
+- Identificar fuentes de datos: ERP, CRM, archivos Excel, bases de datos (SQL, Oracle, etc.).
+- Validar calidad de datos: duplicados, valores nulos, inconsistencias.
+- Definir periodicidad de actualización: tiempo real, diario, semanal.
+
+Es clave documentar las fuentes y responsables de cada dato (gobernanza de datos).
+
+3. Modelado de Datos (Power Query & Power BI Desktop)
+
+- ETL (Extracción, Transformación y Carga):
+  - Limpieza y normalización en Power Query.
+  -  Aplicar reglas de negocio (ejemplo: categorización de clientes).
+  - Modelo Estrella (Star Schema):
+- Tablas de hechos (ventas, transacciones).
+- Tablas de dimensiones (clientes, productos, tiempo).
+- Buenas prácticas DAX: medidas en tablas separadas, evitar cálculos en columnas cuando sea posible.
+
+Objetivo: modelo optimizado, entendible y flexible.
+
+4. Diseño del Tablero
+
+- Principios de visualización:
+  - Jerarquía visual clara (qué KPI es más importante).
+  - Usar colores corporativos y consistentes.
+  - Evitar sobrecarga (no más de 6–8 visualizaciones por página).
+- Tipos de tableros:
+  - Estratégico → KPIs de alto nivel (ej. rentabilidad).
+  - Táctico → comparaciones y tendencias (ej. ventas por región).
+  - Operativo → detalle granular (ej. facturas pendientes).
+
+- Interactividad:
+  - Segmentadores (slicers).
+  - Navegación entre páginas.
+  - Drill-through / tooltips personalizados.
+
+Usar prototipos (wireframes en Figma, PowerPoint o incluso papel).
+
+5. Validación con el Usuario
+
+- Validar cálculos de KPIs con el negocio.
+- Hacer pruebas de navegación e interactividad.
+- Ajustar diseño según feedback.
+- Importante: que el tablero responda a preguntas reales, no solo mostrar datos.
+
+6. Publicación y Gobernanza
+
+- Publicar en Power BI Service.
+- Configurar workspaces (dev, test, prod).
+- Asignar permisos (lectura, edición, administración).
+- Definir políticas de actualización (gateway de datos).
+- Si es corporativo, aplicar seguridad a nivel de fila (RLS).
+
+7. Mantenimiento y Evolución
+
+- Monitorear uso con el Usage Metrics Report de Power BI Service.
+- Revisar si los KPIs siguen alineados con los objetivos del negocio.
+- Mantener documentación (fuentes, KPIs, reglas de negocio).
+- Plan de mejora continua (nuevos requerimientos, nuevas fuentes de datos).
+
+
+
 ## Referencias
 
 

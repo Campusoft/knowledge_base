@@ -41,6 +41,49 @@ Microsoft SQL Server Analysis
 
 Every data warehouse solution should use a staging area where extracted data is stored and possibly transformed before loading the data into the central warehouse.
 
+Regla de oro
+
+“Staging = lo mínimo indispensable para que el ETL posterior pueda limpiar y transformar sin mirar hacia atrás.”
+
+
+Las tablas de aterrizaje (también conocidas como landing tables, staging tables o tablas de staging) son un componente clave en la arquitectura de un data warehouse (almacén de datos). Se utilizan como una capa temporal de almacenamiento durante el proceso de integración de datos, especialmente en el marco del proceso ETL (Extract, Transform, Load) o ELT (Extract, Load, Transform).
+
+¿Qué son las tablas de aterrizaje?
+
+Las tablas de aterrizaje son estructuras de base de datos donde se cargan los datos tal como vienen de las fuentes, sin aplicar transformaciones ni validaciones complejas. Actúan como una zona de recepción o "área de aterrizaje" para los datos antes de que sean procesados y cargados al data warehouse final.
+
+Características principales
+Datos en bruto (raw data):
+
+- Se almacenan los datos exactamente como se extraen de las fuentes (bases de datos operativas, archivos CSV, APIs, etc.).
+- No se limpian, normalizan ni transforman.
+
+Temporalidad:
+- Son tablas temporales. Una vez que los datos han sido procesados y cargados al data warehouse, suelen eliminarse o archivarse.
+
+Estructura flexible:
+- Pueden tener columnas adicionales para auditoría (fecha de carga, origen del dato, estado del proceso, etc.).
+-  A menudo se usan tipos de datos genéricos (como VARCHAR) para manejar cualquier formato entrante.
+
+Desacoplamiento:
+- Permiten desacoplar el sistema fuente del data warehouse. Si hay un problema en el proceso de transformación, los datos originales siguen disponibles.
+
+Facilitan la trazabilidad y el re-procesamiento:
+- Si ocurre un error en el ETL, puedes volver a procesar los datos desde la tabla de aterrizaje sin necesidad de volver a extraer de la fuente.
+
+
+Ejemplo de flujo con tablas de aterrizaje
+
+Extracción (Extract):
+- Se extraen datos de una base de datos de ventas (por ejemplo, ventas_brutas.csv).
+Carga a tabla de aterrizaje:
+- Se cargan los datos directamente en una tabla como stg_ventas_brutas.
+Transformación (Transform):
+- Se limpian, validan, convierten formatos, se unifican con otras fuentes, etc.
+Carga al data warehouse (Load):
+- Los datos transformados se cargan a tablas dimensionales o hechos, como fact_ventas.
+
+
 # Tools
 
 Ptyhon

@@ -12,7 +12,21 @@ Básicamente, reúne una gran cantidad de datos que se encuentran disponibles en
 Existe tres tipos comunes de dashboards
 - Operacional
 - Estrategico / Ejecutivo
-- Analitico
+- Táctico / Analítico
+
+
+| Tipo de Dashboard | Nivel                    | Frecuencia           | KPIs típicos                 | Ejemplo                |
+| ----------------- | ------------------------ | -------------------- | ---------------------------- | ---------------------- |
+| **Estratégico**   | Alta gerencia            | Mensual / Trimestral | Ingresos, rentabilidad, NPS  | EBITDA vs. meta        |
+| **Táctico**       | Gerencia media           | Semanal / Quincenal  | Ventas por región, gastos    | Ventas vs. presupuesto |
+| **Operativo**     | Analistas / Supervisores | Diario / Tiempo real | Pedidos, tickets, producción | Entregas diarias       |
+
+
+Lo importante es no mezclar todo en un mismo dashboard:
+
+- Los estratégicos son simples y de alto nivel.
+- Los tácticos profundizan un poco más.
+- Los operativos son detallados y muy dinámicos.
 
 **Dashboard Operativos**
 
@@ -20,10 +34,30 @@ Enfatizan el monitoreo mas que el analisis y la administracion. Este tipo muestr
 
 Operational dashboards provide time-critical data to consumers. I like to think about operational dashboards as of cockpit in the car or plan.
 
+**Dashboard Estratégico / Ejecutivo**
+
+- Propósito: Monitorear el cumplimiento de objetivos estratégicos.
+- Usuarios: Alta gerencia, comité ejecutivo.
+
+Características:
+
+- KPIs globales: ingresos, margen, participación de mercado.
+- Se actualiza mensual/trimestral.
+- Gráficos simples y claros, estilo “cockpit”.
+- Ejemplo: Rentabilidad acumulada vs. meta anual.
 
 **Dashboard Tacticos**
 
 On  the other hand, analytical dashboards focus more on identifying trends and patterns from  historical data and enable better mid to long-term decision-making
+
+- Propósito: Explorar datos para entender causas raíz y tendencias.
+- Usuarios: Analistas, financieros, marketing, BI.
+
+Características:
+- Filtros y segmentaciones avanzadas.
+- Comparaciones históricas, correlaciones.
+- No solo muestra KPIs, sino que permite investigar “¿qué pasó y por qué pasó?”.
+- Ejemplo: Análisis de caída de ventas → segmentar por producto, región, cliente, canal.
 
 
 ## KPI
@@ -49,6 +83,66 @@ Los 8 KPIs de un eCommerce
 - 7. Estacionalidad
 - 8. Tasa abandono carrito 
 http://datablog.zeus.vision/2017/06/28/los-8-kpis-de-un-ecommerce/
+
+
+1. Métricas
+
+Definición:
+Son medidas cuantitativas simples que describen un fenómeno o actividad.
+→ Miden “qué está pasando”, sin necesariamente indicar si es bueno o malo.
+
+Uso:
+- Dar contexto o detalle.
+- Base para construir indicadores o KPIs.
+
+Ejemplos:
+
+- Número de llamadas recibidas en un call center.
+- Ventas totales en dólares.
+- Cantidad de productos en stock.
+
+2. Indicadores
+
+Definición:
+Son métricas procesadas y contextualizadas, normalmente expresadas en proporciones, porcentajes o tasas, que permiten evaluar el desempeño de un proceso o actividad.
+→ Ya permiten interpretación, no son solo números sueltos.
+
+Uso:
+- Medir la eficiencia, calidad o productividad de un proceso.
+- Comparar contra estándares o metas.
+
+Ejemplos:
+
+- % de pedidos entregados a tiempo (indicador de puntualidad).
+- Tasa de conversión de prospectos a clientes.
+- Nivel de rotación de empleados (%).
+
+
+3. KPIs (Key Performance Indicators)
+
+Definición:
+Son indicadores estratégicos clave, directamente vinculados a los objetivos del negocio.
+→ No todos los indicadores son KPIs: solo los que ayudan a saber si la empresa cumple sus metas.
+
+Uso:
+
+- Medir el éxito o fracaso de los objetivos estratégicos.
+- Guiar decisiones de alto impacto.
+- Aparecen en tableros estratégicos o ejecutivos.
+
+Ejemplos:
+
+- Crecimiento de ingresos anuales (%).
+- Margen EBITDA (%).
+- Net Promoter Score (NPS) de clientes.
+- Market Share (% de participación de mercado).
+
+
+| Concepto      | Pregunta que responde          | Nivel       | Ejemplo                             |
+| ------------- | ------------------------------ | ----------- | ----------------------------------- |
+| **Métrica**   | ¿Qué pasó?                     | Operativo   | 1,000 llamadas recibidas            |
+| **Indicador** | ¿Cómo vamos en el proceso?     | Táctico     | 85% de llamadas atendidas en <1 min |
+| **KPI**       | ¿Estamos cumpliendo objetivos? | Estratégico | NPS > 70% en servicio al cliente    |
 
 
 **Social Media Dashboard**

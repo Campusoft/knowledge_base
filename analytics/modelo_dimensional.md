@@ -28,6 +28,28 @@ Tablas Hechos y Medidas. En el contexto de UTPL, en el proceso registrado de Cal
 - No es recomendable tener una sola tabla plana para toda la información que se requiera en el modelo, para generar los indicadores. Siempre dividir la información descriptiva en las tablas de dimensiones, y los valores en las tablas de hechos. 
 
 
+# Tabla Dimensiones
+
+¿Las dimensiones pueden tener históricos?
+
+- Sí, las dimensiones también pueden tener históricos, pero se gestionan distinto a los hechos.
+Esto se conoce como Dimensiones de Cambio Lento (SCD – Slowly Changing Dimensions).
+
+Opciones típicas (Kimball):
+
+- SCD Tipo 1 (sin histórico). Se sobreescribe la información.
+  - Ejemplo: si el cargo cambia de “Analista” a “Gerente”, el campo se actualiza y el histórico se pierde.
+- SCD Tipo 2 (con histórico completo). Se guarda una nueva fila por cada cambio. Se agregan campos como: FechaInicio, FechaFin (o 9999-12-31 como vigente), EsVigente (flag)
+  - Ejemplo: una persona pasa de Empresa A → Empresa B → Empresa C, cada versión queda registrada.
+- SCD Tipo 3 (histórico limitado)
+  - Se guarda el valor actual y uno anterior (campos como CargoActual y CargoAnterior).
+
+# Tabla Hechos
+
+¿La tabla de hechos pueden tener históricos?
+
+- La tabla de hechos siempre es histórica, porque almacena eventos en el tiempo (ej. registro en app, llamada al call center, movimiento de cuenta).
+- Cada registro de hecho tiene fecha y queda “congelado”.
 
 # Reference
 
