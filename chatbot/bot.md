@@ -1,3 +1,8 @@
+# chatbot
+
+Un chatbot es un software que le permite automatizar conversaciones con sus clientes. Puede usarse para responder preguntas frecuentes, recopilar clientes potenciales y más.
+
+
 
 
 # Dialogflow

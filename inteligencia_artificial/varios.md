@@ -105,3 +105,11 @@ Hugging Face is a community or company that develops and builds open-source tool
 The NVIDIA® CUDA® Toolkit provides a development environment for creating high-performance, GPU-accelerated applications. With it, you can develop, optimize, and deploy your applications on GPU-accelerated embedded systems, desktop workstations, enterprise data centers, cloud-based platforms, and supercomputers. The toolkit includes GPU-accelerated libraries, debugging and optimization tools, a C/C++ compiler, and a runtime library.
 
 https://developer.nvidia.com/cuda-toolkit
+
+
+# Gemini Cli
+
+Gemini CLI es una herramienta de línea de comandos (Command Line Interface) desarrollada por Google que te permite interactuar directamente desde tu terminal con los modelos de inteligencia artificial Gemini, como Gemini Pro y Gemini Pro Vision.
+
+En lugar de usar la interfaz web con chatbots (como Bard, ahora Gemini), la CLI te da acceso a los modelos a través de comandos de texto, lo que la hace ideal para automatizar tareas, integrarla en scripts y flujos de trabajo de desarrollo.
+
