@@ -15,8 +15,24 @@ Langflow is a new, visual framework for building multi-agent and RAG application
 
 https://www.langflow.org/
 
+Langflow es una herramienta de low-code / visual para construir aplicaciones de IA, especialmente orientada a flujos con modelos de lenguaje (LLMs), agentes multi-herramienta, RAG (Retrieval-Augmented Generation), bases de datos vectoriales, APIs, etc. 
 
+Algunos puntos claves:
 
+- Es open source / libre. Puedes instalarla tú mismo en tu máquina, servidor o en la nube. 
+- Está basada en Python, y es agnóstica respecto a los modelos de lenguaje, APIs, bases de datos vectoriales, etc. Eso significa que puedes usar OpenAI, Hugging Face, modelos propios, etc. 
+- Ofrece una interfaz visual (drag & drop) para diseñar flujos (“flows”): conectas nodos que hacen cosas como llamar a un LLM, recuperar documentos, consultar una base de datos, hacer cálculos, etc.  
+- Tiene un “Playground” para probar los flujos en tiempo real, ver cómo responden los componentes, hacer debugging. 
+- Permite desplegar tus flujos como APIs, exportarlos, reutilizarlos, formar agentes, usar memoria conversacional, integraciones con servicios externos. 
+- Tiene también una versión en la nube (“Cloud Service”) facilitada por DataStax, que permite empezar sin necesidad de instalar. 
+ 
+ 
+**Arquitectura**
+
+- Python (basado en LangChain y FastAPI)
+
+ 
+ 
 # Servicios, Productos, Librerias
 
 

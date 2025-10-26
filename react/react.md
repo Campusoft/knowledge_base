@@ -245,11 +245,31 @@ Establecer el contenido html  de un div:
 dangerouslySetInnerHTML is React’s replacement for using innerHTML in the browser DOM. 
 https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml
 
+
+# Router
+
+
+ 
+Funcionalidad | React Router | TanStack Router
+-- | -- | --
+Navegación declarativa | ✅ | ✅
+Loader / acción (data fetch) | ✅ (desde v6.4) | ✅ (con integración directa con TanStack Query)
+Type safety (params, search) | ❌ No nativo | ✅ Total (inferencia TypeScript)
+React Query integración | 🔧 Manual | 🔥 Nativa
+Rutas anidadas complejas | ✅ | ✅ Mejor estructuradas
+SSR / Suspense | ✅ (con Remix o Next) | ✅ Integración futura (experimental)
+Bundle size | ~9–12 KB | ~13 KB (con tipos generados)
+
+ 
+
 # Best Practices
 
 React Best Practices – Tips for Writing Better React Code in 2022
 - Solid Understanding of React. Another root cause for problems React devs have is a poor basic understanding of how React works under the hood. 
 https://www.freecodecamp.org/news/best-practices-for-react/
+
+
+
 
 
 

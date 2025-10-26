@@ -116,14 +116,23 @@ https://github.com/OfficeDev/office-ui-fabric-react
 
 # shadcn-ui
 
-Re-usable components built using Radix UI and Tailwind CSS. 
-
-Build your component library.
-Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open Source.
-
-
-- You can use any framework that supports React. Next.js, Astro, Remix, Gatsby etc.
-
+shadcn/ui es una colección de componentes reutilizables para React que combina Radix UI (para accesibilidad y comportamiento), Tailwind CSS (para estilos) y una arquitectura basada en código fuente (no en librerías compiladas).
+En lugar de instalar un paquete tradicional, copias el código fuente de los componentes directamente a tu proyecto, lo que te da control total sobre su apariencia, funcionalidad y mantenimiento.
 
 
 https://github.com/shadcn-ui/ui#shadcnui
+
+
+## Características principales
+
+- Basado en Radix UI → Componentes accesibles y bien estructurados (menús, modales, popovers, etc.).
+- Usa Tailwind CSS → Todos los estilos son utilitarios y personalizables.
+- Código fuente incluido → No dependes de una versión del paquete; puedes modificar libremente el código.
+- Integración con Next.js, Vite, Remix o cualquier entorno React moderno.
+- Compatible con TypeScript → Tipado fuerte en todos los componentes.
+ 
+ 
+## Plantillas
+
+Admin Dashboard UI built with Shadcn and Vite.
+https://github.com/satnaing/shadcn-admin?utm_source=chatgpt.com 

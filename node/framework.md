@@ -16,6 +16,23 @@ Dependency injection
 
 Nest is built around the strong design pattern commonly known as Dependency injection. We recommend reading a great article about this concept in the official Angular documentation.
 
+
+ 
+Característica | Descripción
+-- | --
+🧱 Arquitectura modular | Todo se organiza en módulos, lo que permite dividir la aplicación en piezas reutilizables y mantenibles.
+🧭 Inyección de dependencias (DI) | Basado en un contenedor IoC (Inversion of Control), facilita el manejo de dependencias, muy similar a frameworks de backend enterprise (como Spring en Java o Angular en frontend).
+🧰 Soporte nativo de TypeScript | Aunque también puedes usar JavaScript, Nest aprovecha todo el poder de TypeScript: tipos, decoradores, interfaces, etc.
+⚙️ Encima de Express o Fastify | Puedes elegir qué motor HTTP usar. Fastify te da mayor rendimiento; Express tiene más compatibilidad con middleware existente.
+🧩 Decoradores | Define controladores, servicios y módulos con decoradores (@Controller, @Injectable, @Module, @Get, @Post, etc.).
+🧠 Pipes, Guards, Interceptors y Filters | Permiten manejar validación, seguridad, logging, errores y transformación de datos de forma estructurada y centralizada.
+🧬 Soporte de GraphQL, WebSockets, Microservicios y gRPC | Nest integra fácilmente distintos transportes y protocolos.
+🧪 Testing integrado | Compatible con Jest y herramientas modernas de testing.
+📦 CLI oficial | nest new, nest generate, etc. para scaffolding rápido.
+
+ 
+ 
+ 
 ## Modules
 
 
@@ -42,15 +59,7 @@ These are the main features and principles on which fastify has been built:
 	
 https://www.fastify.io/
 
-# typeorm
-
-TypeORM is an ORM that can run in NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo, and Electron platforms and can be used with TypeScript and JavaScript (ES5, ES6, ES7, ES8). Its goal is to always support the latest JavaScript features and provide additional features that help you to develop any kind of application that uses databases - from small applications with a few tables to large scale enterprise applications with multiple databases.
-
-TypeORM supports both Active Record and Data Mapper patterns, unlike all other JavaScript ORMs currently in existence, which means you can write high quality, loosely coupled, scalable, maintainable applications the most productive way.
-
-TypeORM is highly influenced by other ORMs, such as Hibernate, Doctrine and Entity Framework.
-
-https://typeorm.io/
+ 
 
 # Actionhero
 

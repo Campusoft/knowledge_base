@@ -42,6 +42,19 @@ nvm use 10.23.1
 # package.json
 
 
+
+# npx 
+
+Permite ejecutar un paquete de npm temporalmente, sin tener que instalarlo globalmente.
+
+Beneficios 
+- Aislamiento de versiones → nunca más “romper un proyecto al actualizar global”.
+- Cero instalaciones permanentes → no ensucia el sistema ni el disco.
+- Siempre la versión que necesitás → puedes pinchar la exacta (@6.8.0) o probar la última sin miedo.
+- No necesitas permisos de administrador → útil en PCs corporativos o CI donde no podés hacer sudo npm i -g.
+- Empiezas más rápido → npx create-react-app mi-app te genera la app sin que antes hayas hecho absolutamente nada (ni siquiera tener create-react-app instalado).
+
+
 ## Browserslist
 
 Browserslist 

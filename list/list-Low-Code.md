@@ -48,7 +48,10 @@ https://retool.com/
 NocoDB is an open source #NoCode platform that turns any database into a smart spreadsheet. 
 
 - The Intuitive Vue Framework 
+- Node.js + Express + Knex (multi-DB)
 - use Lerna to manage multi-packages. 
+- Usa directamente tus bases de datos existentes (MySQL, PostgreSQL, SQL Server, SQLite, etc.)
+
 
 # ToolJet
 
@@ -58,6 +61,16 @@ https://github.com/ToolJet/ToolJet
 server
 - Nest framework TypeScript
 - ORM typeorm
+
+# Baserow
+
+Baserow es una plataforma open source (código abierto) para crear y gestionar bases de datos en línea, similar a Airtable o Notion Database, pero completamente autohospedable y extensible.
+
+- Backend: Python (Django)
+- Frontend: Vue.js
+- Base de datos: PostgreSQL
+- Licencia: MIT (open source)
+- Despliegue: Docker o instalador nativo
 
 
 # Node-RED

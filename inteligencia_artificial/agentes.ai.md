@@ -10,6 +10,16 @@ Características principales de un Agente Inteligente:
 - Aprendizaje: Mejora su desempeño con la experiencia
 - Razonamiento: Procesa información para tomar decisiones complejas
 
+# sim
+
+ 
+Open-source platform to build and deploy AI agent workflows.
+
+Sim is a visual workflow builder for AI applications that lets you build AI agent workflows visually. Create powerful AI agents, automation workflows, and data processing pipelines by connecting blocks on a canvas—no coding required.
+
+
+# OpenAI AgentKit 
+
 
 
 # Microsoft 365 Agents SDK  

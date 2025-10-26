@@ -249,6 +249,53 @@ Empresa peruana. Fundada por Juan Luis Auccatoma
 https://whaticket.com/
 
 
+# Opciones procesamiento de lenguaje natural (NLP)
+
+| Solución | Integración | Complejidad | Idiomas | Costo |
+|----------|-------------|-------------|---------|-------|
+| Azure AI Language (LUIS) | ⭐⭐⭐⭐⭐ | Media | 30+ | Pago |
+| Azure OpenAI | ⭐⭐⭐⭐ | Baja | Todos | Pago |
+| Rasa | ⭐⭐⭐ | Alta | Muchos | Gratis |
+| Wit.ai | ⭐⭐⭐ | Media | 130+ | Gratis |
+| Dialogflow | ⭐⭐⭐⭐ | Media | 30+ | Freemium |
+| spaCy | ⭐⭐ | Media | 20+ | Gratis |
+
+
+Wit.ai es una plataforma de procesamiento de lenguaje natural (NLP) propiedad de Meta (Facebook) que permite a los desarrolladores construir aplicaciones que puedan entender el lenguaje humano. Esencialmente, es un servicio que convierte el texto o voz en datos estructurados que las aplicaciones pueden entender y actuar upon.
+
+
+
+# Rasa 
+
+
+RASA es un framework de código abierto para construir asistentes conversacionales y chatbots con inteligencia artificial. Te explico sus características principales:
+
+Componentes principales
+- Rasa NLU (Natural Language Understanding): Se encarga de entender el lenguaje natural del usuario, identificando:
+
+Intenciones (intents): lo que el usuario quiere hacer
+Entidades: información específica como nombres, fechas, lugares
+
+- Rasa Core: Gestiona el flujo de la conversación y decide qué acciones tomar basándose en el contexto y el historial del diálogo.
+
+Características destacadas
+
+- Open source: El código es completamente abierto y puede ser modificado
+- On-premise: Puedes instalarlo en tus propios servidores, manteniendo control total sobre los datos
+Machine Learning: Utiliza modelos de aprendizaje automático para mejorar con el tiempo
+- Personalizable: Permite entrenar modelos específicos para tu dominio
+- Multilingüe: Soporta múltiples idiomas
+
+Casos de uso típicos
+
+- Chatbots de atención al cliente
+- Asistentes virtuales empresariales
+- Automatización de procesos mediante conversación
+- Interfaces conversacionales para aplicaciones
+
+Rasa se programa principalmente en Python y es muy popular entre desarrolladores que necesitan crear asistentes conversacionales más sofisticados que los chatbots basados en reglas simples, pero manteniendo control sobre la infraestructura y los datos
+
+
 # Revisiones
 
 https://wit.ai/

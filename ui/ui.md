@@ -15,3 +15,4 @@ Debido a que Astro está inspirado en la sintaxis de JSX, es por esta razón que
 Variables
 
 Al igual que en JSX, podemos obtener el valor de una variable usando la sintaxis de las llaves {}.
+

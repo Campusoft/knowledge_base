@@ -22,3 +22,22 @@ Free and Open-source Headless CMS and Application Framework built with TypeScrip
 
 https://github.com/payloadcms/payload 
  
+ 
+# Socket.IO
+
+
+Socket.IO is a library that enables low-latency, bidirectional and event-based communication between a client and a server.
+
+The Socket.IO connection can be established with different low-level transports:
+
+- HTTP long-polling
+- WebSocket
+- WebTransport
+
+
+ 
+## referencias
+
+
+How to use with React
+https://socket.io/how-to/use-with-react
