@@ -37,3 +37,86 @@ https://typeorm.io/
 
 
 # Prisma
+
+Prisma es un ORM moderno (Object–Relational Mapping) para Node.js y TypeScript, diseñado para simplificar el acceso y la gestión de bases de datos relacionales (como PostgreSQL, MySQL, SQLite, SQL Server, CockroachDB, MongoDB, etc.).
+Se destaca por su tipado fuerte, rendimiento, y productividad para los desarrolladores modernos de JavaScript/TypeScript.
+
+
+ 
+Característica | Prisma | Sequelize | TypeORM | Knex
+-- | -- | -- | -- | --
+Tipado TypeScript | ✅ Excelente | ⚠️ Limitado | ✅ Bueno | ❌ Manual
+Migraciones | ✅ Automáticas | ⚠️ Manuales | ✅ | ❌
+Performance | ✅ Alto | ⚠️ Medio | ⚠️ Medio | ✅ Alto
+Facilidad de uso | ✅ Muy alta | ⚠️ Media | ⚠️ Media | ⚠️ Media
+Soporte MongoDB | ✅ (limitado) | ❌ | ❌ | ❌
+
+ 
+ 
+
+**Integración con TypeScript y Node.js**
+
+Prisma está escrito en TypeScript, y su cliente aprovecha el tipado estático al máximo.
+
+Se integra fácilmente con frameworks backend como:
+
+- Express
+- Fastify
+- NestJS
+- Next.js (API Routes)
+- Remix, SvelteKit, etc.
+
+
+**Migrations automáticas y controladas**
+
+Prisma incluye una herramienta de migraciones (prisma migrate) que:
+
+- Genera archivos SQL a partir del esquema.
+- Permite mantener sincronizado el modelo de datos con la base.
+- Facilita ambientes dev, staging y prod.
+
+```
+npx prisma migrate dev --name init
+```
+
+**Transacciones y atomicidad**
+
+Prisma maneja transacciones con prisma.$transaction():
+
+```
+await prisma.$transaction([
+  prisma.user.create({ data: { name: 'Juan' } }),
+  prisma.post.create({ data: { title: 'Nuevo post' } }),
+]);
+```
+
+
+# Knex.js
+
+Knex.js (se pronuncia "knex") es un constructor de consultas SQL (Query Builder) para Node.js que soporta múltiples sistemas de bases de datos como PostgreSQL, MySQL, SQLite, entre otros.
+
+
+
+En términos simples:
+Es una biblioteca que te permite escribir consultas de base de datos usando JavaScript en lugar de SQL puro, aunque también te permite usar SQL raw cuando lo necesites.
+
+
+```
+// En lugar de escribir SQL así:
+// "SELECT * FROM users WHERE age > 18 AND country = 'Mexico'"
+
+// Con Knex lo escribes en JavaScript:
+knex('users')
+  .select('*')
+  .where('age', '>', 18)
+  .andWhere('country', 'Mexico')
+  
+```
+Ventajas de Usar Knex.js
+
+
+1. Código más legible y mantenible
+2. Protección contra SQL Injection
+3. Multiplataforma
+4. SQL Raw cuando lo necesites
+

@@ -122,6 +122,13 @@ En lugar de instalar un paquete tradicional, copias el código fuente de los com
 
 https://github.com/shadcn-ui/ui#shadcnui
 
+# TanStack Table
+
+TanStack Table (anteriormente conocido como React Table) es una biblioteca de tabla/table headless extremadamente popular y potente para aplicaciones web modernas. Aunque tiene bindings oficiales para React, también ofrece soporte para Vue, Solid, Svelte y más, gracias a su núcleo agnóstico.
+
+"Headless" significa que no incluye estilos ni marcado predefinido: tú controlas completamente el HTML, CSS y la lógica de renderizado. TanStack Table solo se encarga de la lógica compleja de datos (ordenamiento, paginación, filtrado, etc.). 
+
+
 
 ## Características principales
 
@@ -135,4 +142,15 @@ https://github.com/shadcn-ui/ui#shadcnui
 ## Plantillas
 
 Admin Dashboard UI built with Shadcn and Vite.
+
+
+- UI: ShadcnUI (TailwindCSS + RadixUI)
+- Build Tool: Vite
+- Routing: TanStack Router
+- Type Checking: TypeScript
+- Linting/Formatting: Eslint & Prettier
+- Icons: Lucide Icons, Tabler Icons (Brand icons only)
+- Auth (partial): Clerk
+
+
 https://github.com/satnaing/shadcn-admin?utm_source=chatgpt.com 

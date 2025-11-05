@@ -106,6 +106,19 @@ RAG, que significa Retrieval-Augmented Generation (Generación Aumentada con Rec
 
 
 
+# Arquitectura Transformer
+
+La arquitectura Transformer es el modelo base sobre el que se construyen muchos de los avances modernos en inteligencia artificial y procesamiento del lenguaje natural (NLP), como BERT, GPT, T5, RoBERTa, ChatGPT, etc.
+
+
+Idea principal
+
+Antes de los Transformers, los modelos más usados eran los RNN (Recurrent Neural Networks) y LSTM, que procesaban texto secuencialmente (palabra por palabra).
+Eso era lento y dificultaba aprender dependencias largas entre palabras distantes.
+
+El Transformer cambió eso al introducir el mecanismo de atención (attention mechanism), que permite al modelo mirar todas las palabras del texto a la vez y decidir a cuáles prestar más atención.
+
+
 # Lenguaje natural (NLP)
 
 
