@@ -13,6 +13,66 @@ https://www.youtube.com/watch?v=hu9jCNtKxQU
 - Todas las clases
 https://www.youtube.com/@eduardocastrom/videos
 
+
+# ODS (Operational Data Store)
+
+Un ODS (Operational Data Store) es una base de datos intermedia, pensada para consolidar y disponibilizar datos operacionales, casi en tiempo real, para consulta y reporting de corto plazo.
+
+- Se sitúa entre los sistemas transaccionales (OLTP) y el DW (OLAP).
+
+Características principales
+
+- Nivel de detalle alto (grano fino) → guarda datos transaccionales, casi sin agregación.
+- Orientado a integración → puede unir información de varios sistemas operacionales en una estructura común.
+- Datos frescos / casi en tiempo real → a diferencia del DW que suele actualizarse diariamente, el ODS puede actualizarse cada hora o incluso en streaming.
+- Normalización ligera → puede estar más normalizado que el DW (que suele estar en estrella), pero menos que un sistema OLTP.
+- Historización limitada → guarda datos recientes (ej. 30-90 días), no largos historiales como el DW.
+
+Casos de uso
+
+- Consolidación de datos de sistemas operativos heterogéneos
+  - Ejemplo: varias aplicaciones bancarias generan transacciones → el ODS centraliza todas las transacciones en una estructura común para consulta rápida.
+
+- Consulta operacional unificada
+  - Ejemplo: un call center necesita ver en un solo lugar la información actualizada del cliente (saldo, operaciones recientes, últimas solicitudes).
+
+- Fuente de datos para el DW
+  - El ODS sirve de staging avanzado → limpia, transforma mínimamente y luego alimenta al DW.
+
+- Reportes de corto plazo
+  - Cuando se requieren reportes casi en tiempo real, pero no se necesita historización compleja ni agregación.
+- Auditoría y consistencia
+  - Actúa como “snapshot consolidado” de los sistemas transaccionales.
+
+
+Criterios para crear un ODS
+
+Se justifica un ODS cuando:
+
+-  Necesitas información integrada y fresca de múltiples sistemas (DW no basta por su latencia).
+- Los sistemas origen no soportan bien la carga de consultas (evitas consultas pesadas en OLTP).
+- Los reportes necesitan detalle transaccional reciente, no solo históricos agregados.
+- Hay necesidad de gobernanza de datos operacionales (ej. auditorías internas).
+- El DW es batch y no puede cubrir escenarios de near-real-time.
+
+No se recomienda crear ODS cuando:
+
+- Solo tienes un sistema origen (puedes consultar directo).
+- Los requerimientos son puramente analíticos e históricos (DW basta).
+- Vas a terminar duplicando los sistemas sin un valor agregado.
+
+Diferencias con un DW
+
+
+| Característica          | ODS                          | DW                           |
+| ----------------------- | ---------------------------- | ---------------------------- |
+| **Horizonte temporal**  | Corto plazo (días, semanas)  | Largo plazo (meses, años)    |
+| **Nivel de detalle**    | Transaccional (alto detalle) | Agregado, orientado a hechos |
+| **Frecuencia de carga** | Casi en tiempo real / horas  | Batch (diario, semanal)      |
+| **Modelo de datos**     | Normalizado / híbrido        | Dimensional (estrella/copo)  |
+| **Objetivo**            | Soporte operativo, táctico   | Análisis estratégico         |
+
+
 # Varios
 
 
