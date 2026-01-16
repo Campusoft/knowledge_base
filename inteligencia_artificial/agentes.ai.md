@@ -25,3 +25,13 @@ Sim is a visual workflow builder for AI applications that lets you build AI agen
 # Microsoft 365 Agents SDK  
  
 With the Microsoft 365 Agents SDK, you can create agents deployable to channels of your choice, such as Microsoft 365 Copilot, Microsoft Teams, Web & Custom Apps and more, with scaffolding to handle the required communication. Developers can use the AI Services of their choice, and make the agents they build available using the channel management capabilities of the SDK.
+
+# archivos README de instrucciones
+
+
+Los archivos README o de instrucciones para agentes son documentos diseñados para guiar el comportamiento, capacidades, límites y uso adecuado de un agente de software (por ejemplo, un agente de IA, microservicio autónomo, bot, worker, etc.). Funcionan como el “manual operativo” que un agente sigue para ejecutar su función dentro de un sistema.
+
+
+- CLAUDE.md
+- CODEX.md
+- AGENTS.md

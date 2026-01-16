@@ -46,6 +46,16 @@ Serilog.Settings.Configuration
 
 System.ArgumentException: Buffered writes are not available when file sharing is enabled. (Parameter 'buffered')
 
+
+
+- Serilog.AspNetCore — integración con ILogger.
+- Serilog.Settings.Configuration — lee config desde appsettings.json.
+- Serilog.Sinks.File — sink de archivos (rolling).
+- Serilog.Sinks.Console — salida a consola (útil en contenedores).
+- Serilog.Sinks.Async — para envolver sinks y mejorar rendimiento.
+- Opcionales según destino: Serilog.Sinks.Seq, Serilog.Sinks.Elasticsearch, Serilog.Sinks.Loki, Serilog.Sinks.Network...
+
+
 ***configuration***
 
 A Serilog settings provider that reads from Microsoft.Extensions.Configuration sources, including .NET Core's appsettings.json file.

@@ -71,8 +71,8 @@ Tech Stack
 - ORM: Drizzle ORM
 - Validation: Zod
 
-
 https://github.com/sadmann7/shadcn-table
+
 
 # Referencias
 

@@ -58,4 +58,40 @@ Este archivo posee dos profiles "IGG.DbMigrator", "IGG.DbMigrator.Local".
   - Utilizar DOTNET_ENVIRONMENT y ASPNETCORE_ENVIRONMENT. Puesto que ASPNETCORE_ENVIRONMENT unicamente es valida en "WebApplication.CreateBuilder"
   - Este profile puede combinarse con appsettings. El archivo "appsettings.Local.json", sera el appsettings para el ambiente "Local", establecido en el profile
   
+  
+# Native AOT
+
+"Native AOT" significa "Native Ahead-Of-Time compilation", o en español: "compilación nativa por adelantado".
+Es una tecnología de .NET (desde .NET 7 y mejorada en .NET 8+) que permite convertir una aplicación .NET directamente en código nativo de máquina, en lugar de compilarla en tiempo de ejecución (como hace normalmente el JIT).
+
+
+ 
+Ventaja | Descripción
+-- | --
+⚡ Inicio ultra rápido | No hay JIT; ideal para CLI tools o microservicios en contenedores.
+🪶 Tamaño reducido | Solo se incluye lo que el programa realmente usa (no todo el runtime).
+🔒 Seguridad y despliegue más simple | No se depende de versiones instaladas de .NET.
+📦 Portable / auto contenido | Un único binario que puedes copiar y ejecutar en cualquier máquina.
+ 
+
+Limitaciones a considerar al alternar
+
+ 
+Diferencia | Compilación normal | Native AOT
+-- | -- | --
+Uso de reflexión | ✅ Completo | ⚠️ Limitado
+Tamaño del ejecutable | 🔸 Menor | 🔹 Mayor (incluye runtime)
+Velocidad de arranque | ⚠️ Más lenta | ⚡ Instantánea
+Portabilidad | 🚫 Requiere .NET instalado | ✅ Binario independiente
+Compilación dinámica (Emit, proxies, etc.) | ✅ Soportado | 🚫 No soportado
+
+ 
+Muchos equipos hacen esto:
+
+- Durante el desarrollo y pruebas, usan compilación normal (más rápida, flexible).
+- Para despliegue en producción (CLI tools, microservicios, contenedores), publican en modo Native AOT.
+
+Así aprovechan lo mejor de ambos mundos sin mantener dos proyectos distintos.
+
+ 
 

@@ -145,3 +145,32 @@ Incluye tareas como:
 - Comprensión semántica para responder preguntas o ejecutar acciones.
 
 Es el nivel semántico del NLP.
+
+
+
+# A2A (Agent2Agent)
+
+
+Agent2Agent (A2A) es un modelo y protocolo de comunicación usado principalmente en arquitecturas de Sistemas Multi-Agente (MAS – Multi-Agent Systems).
+En este contexto, un agente es un software autónomo que:
+
+- Toma decisiones 
+- Se comunica con otros agentes
+- Coopera o compite
+- Ejecuta tareas sin supervisión directa
+
+El protocolo A2A define cómo los agentes intercambian mensajes, solicitudes y eventos entre ellos.
+
+
+ 
+A2A | MCP
+-- | --
+Comunicación entre pares autónomos | Comunicación entre modelo y un “tool host”
+Cada agente tiene metas y decide estrategias | El LLM solo usa herramientas para responder
+Aparece en IA distribuida y agentes cognitivos | Aparece en asistentes y aplicaciones de IA integrada
+
+ 
+En términos simples:
+
+- A2A = Software inteligente hablando con software inteligente
+- MCP = Un modelo hablando con su “caja de herramientas”

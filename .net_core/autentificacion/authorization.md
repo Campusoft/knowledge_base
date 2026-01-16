@@ -8,7 +8,17 @@ ASP.NET Core supports both role-based and policy-based authorization
 
 In ASP.NET Core, the policy-based authorization framework is designed to decouple authorization and application logic
 
-The policy-based security model is centered on three main concepts. These include policies, requirements, and handlers
+The policy-based security model is centered on three main concepts. These include policies, requirements, and handlers.
+
+
+La autorización con políticas es el mecanismo moderno de ASP.NET Core para controlar qué usuarios pueden ejecutar qué acciones.
+
+Se basa en tres conceptos:
+
+- Requisitos (Requirements) → Lo que se necesita para acceder (ej. "debe tener 18 años").
+- Policies (Políticas) → Conjunto de uno o varios requisitos con un nombre.
+- Handlers (Manejadores) → Lógica que evalúa los requisitos y decide si el usuario cumple.
+
 
 
 ## Policy

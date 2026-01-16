@@ -402,6 +402,16 @@ A one-time password (OTP) is an automatically generated sequence of numeric or a
 
 Passwordless connections do not require the user to remember a password. Instead, another mechanism is used to prove identity, such as a one-time code sent through email or SMS, every time the user logs in.
 
+
+## TOTP (Time-based One-Time Password)
+
+Concepto
+
+TOTP usa una clave secreta compartida entre servidor y cliente (app de autenticador) y el tiempo actual para generar códigos de corta duración (ej. 30s). Es el método estándar en muchas apps (Google Authenticator, Authy). Está definido por RFC 6238.
+
+
+
+
 # Revoking Access
 
 

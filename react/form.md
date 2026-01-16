@@ -16,6 +16,44 @@ React Hook Form is a performant and easy-to-use library that takes advantage of 
 
 Performant, flexible and extensible forms with easy-to-use validation.
 
+react-hook-form (RHF) es una librería para manejo de formularios en React basada en:
+
+- Inputs no controlados (uncontrolled components)
+- Uso intensivo de refs
+- Minimizar re-renders
+- API simple y extensible
+
+Su foco principal es performance + DX (developer experience).
+
+
+Donde RHF brilla
+
+- Formularios grandes o complejos
+- +20 campos
+- Validaciones cruzadas
+- Secciones dinámicas
+
+Sistemas enterprise
+
+- Backoffice
+- Finanzas
+- Educación / elecciones
+- Flujos multi-step
+
+Integración con UI libraries
+
+- MUI
+- Ant Design
+- shadcn/ui
+- Syncfusion (como en tus proyectos)
+
+Formularios dinámicos
+
+- useFieldArray
+- Campos que aparecen/desaparecen
+
+
+
 https://react-hook-form.com/
 
 
@@ -23,6 +61,23 @@ https://react-hook-form.com/
 Schema Validation
 
 We also support schema-based form validation with Yup, Zod , Superstruct & Joi, where you can pass your schema to useForm as an optional config. It will validate your input data against the schema and return with either errors or a valid result.
+
+
+| Aspecto              | React-Hook-Form                                   | TanStack Form                                                                  |
+| -------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------ |
+| Filosofía            | Hooks + uncontrolled inputs                       | Headless, reactivo, framework-agnóstico                                        |
+| UI                   | Tú decides, integra con `register` o `Controller` | Headless, tú conectas UI a la lógica                                           |
+| TypeScript           | Excelente inferencia                              | **Inferencia aún más profunda** y completa en campos complejos ([TanStack][1]) |
+| Frameworks           | **Solo React**                                    | **Multiples (React, Vue, Angular, etc.)** ([TanStack][2])                      |
+| Validación           | Inline o vía schema (Zod, Yup, etc)               | Schema + validación síncrona/asíncrona integrada ([TanStack][2])               |
+| Performance          | Muy alta                                          | Muy alta con enfoque reactivo local ([LogRocket Blog][3])                      |
+| Soporte de comunidad | **Amplio y maduro**                               | **Más nuevo pero creciendo** ([LogRocket Blog][3])                             |
+
+[1]: https://tanstack.com/form/latest/docs/comparison?utm_source=chatgpt.com "Comparison | TanStack Form | TanStack Form Docs"
+[2]: https://tanstack.com/form?utm_source=chatgpt.com "TanStack Form"
+[3]: https://blog.logrocket.com/tanstack-form-vs-react-hook-form/?utm_source=chatgpt.com "TanStack Form vs. React Hook Form - LogRocket Blog"
+
+# TanStack Form       
 
 
 # Formik

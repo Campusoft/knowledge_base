@@ -74,10 +74,35 @@ Sass is a CSS extension language, Sass allows to write code fro generate CSS.
 
 ## Bootstrap
 
-## Tailwind CSS
+## Tailwind CSS (tailwindcss)
 
 
 The most popular component library component library for Tailwind CSS
+
+
+¿Qué es Utility-first?
+- Tradicionalmente, para dar estilo a un elemento, creamos una clase con un nombre (como .card-profile) y le asignamos muchas propiedades en un archivo CSS aparte.
+
+En Tailwind, no inventas nombres de clases. En su lugar, utilizas pequeñas clases predefinidas directamente en tu HTML para construir el diseño.
+
+Clases de Utilidad
+- Una clase de utilidad es una clase CSS que hace una sola cosa. Es como tener piezas de LEGO: cada una tiene una forma y color, y tú las unes para crear algo complejo.
+
+ 
+Ventaja | Descripción
+-- | --
+Adiós al "CSS Fatigue" | No pierdes tiempo pensando en nombres como .container-inner-wrapper-final.
+Seguridad de cambio | Como las clases están en el HTML, si borras un elemento, los estilos se van con él. No dejas "código muerto" en archivos CSS.
+Escalabilidad | Tu archivo CSS final es muy pequeño porque Tailwind solo exporta las clases que realmente usas.
+Consistencia | Usas un sistema de diseño predefinido (colores, sombras y espacios exactos).
+
+ 
+
+
+```
+pnpm add tailwindcss @tailwindcss/vite
+```
+ 
 
 daisyUI adds component class names to Tailwind CSS so you can make beautiful websites faster than ever.
 https://daisyui.com/
@@ -85,8 +110,8 @@ https://daisyui.com/
 
 Tailwind CSS utiliza POST-CSS 
 
-Headless UI
 
+Headless UI
 
 Completely unstyled, fully accessible UI components, designed to integrate beautifully with Tailwind CSS.
 https://github.com/tailwindlabs/headlessui

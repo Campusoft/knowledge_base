@@ -1,6 +1,11 @@
 # Versions
 
 
+# .NET 10
+
+
+
+
 # .NET 8.0
 
 - .NET 8 trae consigo la versión 12 de C#

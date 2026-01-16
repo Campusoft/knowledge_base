@@ -58,7 +58,19 @@ https://github.com/zeit/swr
 
 https://swr.now.sh
 
-## React Query
+## TanStack Query (antes React Query) 
+
+
+- Fetching (peticiones HTTP)
+- Caché inteligente
+- Refetch en segundo plano
+- Reintentos automáticos
+- Sincronización de datos
+- Estados de loading, error, success
+- Invalidación de caché
+- Paginación e infinite scroll
+
+
 
 Hooks for fetching, caching and updating asynchronous data in React
 Transport/protocol/backend agnostic data fetching (REST, GraphQL, promises, whatever!)

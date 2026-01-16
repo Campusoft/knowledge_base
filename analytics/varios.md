@@ -153,6 +153,11 @@ Presto allows querying data where it lives, including Hive, Cassandra, relationa
  
 https://prestodb.io/
 
+
+Trino
+Es un fork de Presto creado por los mismos autores cuando dejaron Facebook. Es la versión moderna y la que sigue evolucionando.
+
+
 ## AWS Athena 
 
 AWS Athena is a serverless interactive analytics service offered by Amazon that can be readily used to gain insights on data residing in S3. Under to hood, Athena used a distributed SQL engine called Presto, which is used to run the SQL queries.

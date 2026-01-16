@@ -21,6 +21,35 @@ Revizar
 The NWebsec.SessionSecurity library improves ASP.NET session security by enforcing a strong binding between an authenticated user’s identity and the user’s session identifier.
 http://docs.nwebsec.com/projects/SessionSecurity/en/latest/
 
+
+# CorrelationId
+
+En software, un CorrelationId (ID de Correlación) es ese "número de rastreo".
+
+¿Por qué es necesario?
+En arquitecturas modernas (Microservicios, Nubes, Sistemas Distribuidos), una sola acción del usuario (ej. "Comprar producto") puede desencadenar una cadena de eventos:
+
+- El Frontend llama a la API Gateway.
+- El Gateway llama al Servicio de Pedidos.
+- El Servicio de Pedidos llama al Servicio de Inventario y al Servicio de Pagos.
+
+Si ocurre un error en el "Servicio de Pagos", y miras sus logs, verás un error genérico. Sin un CorrelationId, es imposible saber qué petición del usuario original causó ese error específico.
+
+El flujo funciona así:
+
+- Se genera un ID único (GUID/UUID) al inicio de la petición (o lo envía el cliente).
+- Este ID se pasa (propaga) a todos los sistemas subsiguientes.
+- Todos los sistemas incluyen este ID en cada línea de Log que escriben.
+
+**La opción Estándar y Moderna (System.Diagnostics.Activity)**
+
+Ideal para: .NET 6/7/8+, Microservicios, OpenTelemetry.
+
+Esta es la forma nativa y recomendada hoy en día. Microsoft integró el rastreo distribuido en el corazón de .NET usando System.Diagnostics.Activity.
+
+Concepto Clave: .NET usa el estándar W3C Trace Context. Ya no se usa tanto X-Correlation-ID, sino un header estándar llamado traceparent.
+
+
 # Audit
 
 Configure ASP.NET Core to work with proxy servers and load balancers

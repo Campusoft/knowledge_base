@@ -284,8 +284,7 @@ https://docs.microsoft.com/en-us/aspnet/core/fundamentals/file-providers?view=as
 
 # Excel
 
-Fast, Low-Memory, Easy Excel .NET helper to import/export/template spreadsheet
-https://github.com/mini-software/MiniExcel
+
 
 
 
@@ -297,6 +296,19 @@ https://github.com/mini-software/MiniExcel
 | **SpreadsheetLight**    | MIT                                  | Sí                              | Ligera, alta eficiencia, soporte básico de Excel         |
 | **ExcelNumberFormat**   | MIT                                  | Sí                              | Formateo de números y fechas en celdas                   |
 | **GemBox.Spreadsheet**  | Versión gratuita (con limitaciones) / Comercial | Sí               | Funcionalidad avanzada, gráficos, formatos avanzados     |
+
+
+**MiniExcel**
+
+Fast, Low-Memory, Easy Excel .NET helper to import/export/template spreadsheet
+https://github.com/mini-software/MiniExcel
+
+Actualmente, MiniExcel (hasta su versión más reciente disponible en junio de 2025) no permite establecer directamente el ancho de las columnas al exportar datos a Excel. Es una librería liviana enfocada en la velocidad y simplicidad, y por eso no incluye soporte para formateo avanzado como:
+
+
+**ExcelDataReader**
+ExcelDataReader tiene mejor compatibilidad multiplataforma
+
 
 
 

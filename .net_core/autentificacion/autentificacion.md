@@ -29,12 +29,28 @@ https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-co
 
 
 ***Claims***
+
 - Role 	
   - A role that the user has 	
   - http://schemas.microsoft.com/ws/2008/06/identity/claims/role
 - Name Identifier 	 
   - The SAML name identifier of the user 	
   - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier
+
+
+
+JwtRegisteredClaimNames.Sub
+
+- Estándar JWT (RFC 7519)
+- Interoperabilidad con otros sistemas
+- Claim corto y limpio
+
+
+ClaimTypes.NameIdentifier
+
+- Requerido por ASP.NET Core Identity
+- UserManager.GetUserAsync() lo busca por defecto
+- Compatibilidad con middleware de autorización
 
 
 
@@ -61,7 +77,40 @@ Ejemplos:
 Add sign-in with Microsoft to an ASP.NET Core web app
 https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-v2-aspnet-core-webapp
 
+
+AspNetUserLogins
+
+La tabla AspNetUserLogins sirve para almacenar la información de los proveedores de autenticación externos que un usuario utiliza para iniciar sesión en tu aplicación.
+
+En lugar de que el usuario ingrese un nombre de usuario y contraseña directamente en tu sistema, usa servicios como Google, Facebook, Microsoft o Twitter. Esta tabla crea el vínculo entre la identidad del usuario en tu base de datos (AspNetUsers) y su identidad externa.
+
+
+La tabla contiene los siguientes campos clave que definen la vinculación:
+
+Columna | Tipo de Dato | Propósito
+-- | -- | --
+LoginProvider | nvarchar(450) | Identifica el servicio externo (e.g., Google, Facebook, Microsoft).
+ProviderKey | nvarchar(450) | Es el identificador único del usuario dentro del proveedor externo (e.g., el ID numérico que Google asigna a ese usuario). Es la clave de la autenticación.
+ProviderDisplayName | nvarchar(max) | El nombre legible del proveedor (opcional, útil para la interfaz de usuario).
+UserId | nvarchar(450) | Foreign Key que apunta al Id del usuario en la tabla AspNetUsers.
+
+
+# Escenarios
  
+## Cierre de sesión en todos los dispositivos	Permitir que el usuario invalide todas las sesiones activas (logout global).
+
+ASP.NET Identity genera un SecurityStamp para cada usuario. Este sello de seguridad se almacena dentro de la cookie de autenticación.
+
+Cuando el SecurityStamp cambia, todas las cookies/ tokens existentes quedan inválidos automáticamente.
+
+User.SecurityStamp
+
+ So the primary purpose of the SecurityStamp is to enable sign out everywhere. The basic idea is that whenever something security related is changed on the user, like a password, it is a good idea to automatically invalidate any existing sign in cookies, so if your password/account was previously compromised, the attacker no longer has access.
+ 
+ 
+IUserSecurityStampStore<IdentityUser>
+IUserSecurityStampStore<TUser, string>
+
 
 # Framework / Librerias
 
@@ -112,6 +161,8 @@ Solucionar actual. Cambiar todas las referecias IdentityUser con MongoUser, agre
 ## Casbin.NET
 
 Casbin.NET is a powerful and efficient open-source access control library for .NET (C#) projects. It provides support for enforcing authorization based on various access control models.
+- based on the PERM metamodel (Policy, Effect, Request, Matchers).
+
 
 An authorization library that supports access control models like ACL, RBAC, ABAC in .NET (C#) 
  
@@ -169,13 +220,7 @@ Under the Hood with Authentication and Authorization in ASP.NET Core 5 and 6 App
 # Revisiones
 
 
-User.SecurityStamp
 
- So the primary purpose of the SecurityStamp is to enable sign out everywhere. The basic idea is that whenever something security related is changed on the user, like a password, it is a good idea to automatically invalidate any existing sign in cookies, so if your password/account was previously compromised, the attacker no longer has access.
- 
- 
-IUserSecurityStampStore<IdentityUser>
-IUserSecurityStampStore<TUser, string>
  
 ------------------------- 
 

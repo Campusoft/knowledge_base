@@ -6,6 +6,57 @@ C# Coding Style
 https://github.com/dotnet/runtime/blob/main/docs/coding-guidelines/coding-style.md
 
 
+# Multi Tenant
+
+
+**Opción Simple: Shared Database, Shared Schema (Base de Datos y Esquema Compartidos)**
+
+
+Concepto: Se añade una columna de TenantId a casi todas las tablas que contienen datos de tenant.
+
+.NET C#	Fácil de implementar con Entity Framework Core y filtros de consulta globales (Query Filters).
+
+{Request} ->{Middleware (Identifica TenantId)} ->{Servicio Scoped} ->{DbContext/EF Core (Aplica Aislamiento)}$$
+
+
+**Opción Media: Shared Database, Separate Schemas (Base de Datos Compartida, Esquemas Separados)**
+
+Concepto: El aislamiento se logra a nivel de esquema de base de datos.
+
+
+.NET C#	Requiere una lógica de conexión/mapeo dinámico en EF Core para apuntar al esquema correcto.
+
+
+**Opción Compleja: Separate Databases (Bases de Datos Separadas)**
+
+Concepto: La aplicación sabe a qué base de datos conectarse basándose en el TenantId (generalmente extraído del hostname o token de autenticación).
+
+
+.NET C#	Requiere un patrón de fábrica de DbContext o inyección dinámica de dependencias para el connection string correcto.
+
+
+ 
+Tipo | Tamaño | Seguridad | Fácil de recordar | Recomendado para
+-- | -- | -- | -- | --
+int | 4 bytes | baja | sí | multiempresa pequeña
+long | 8 bytes | media | sí | más de 2B tenants
+Guid | 16 bytes | alta | no | SaaS multi-tenant moderno
+string | variable | alta | depende | tenants por dominio/subdominio
+
+ 
+ 
+Aumenta tamaño de índices. Tipo de dato para el tenantId
+
+- Guid = 16 bytes
+- int = 4 bytes
+- string 36 char = 36 bytes
+
+Si tu volumen es gigante (millones de registros → por tenant), podría ser relevante.
+
+
+
+
+
 # Referencias Arquitecturas
 
 
@@ -108,6 +159,27 @@ CoolStore Website is a containerised microservices application consisting of ser
 - WebApiGateway. (YARP Reverse Proxy)
 https://github.com/vietnam-devs/coolstore-microservices
 
+
+
+**FullStackHero**
+
+FullStackHero .NET 9 Starter Kit 
+
+With ASP.NET Core Web API & Blazor Client
+
+FullStackHero .NET Starter Kit is a starting point for your next .NET 9 Clean Architecture Solution that incorporates the most essential packages and features your projects will ever need including out-of-the-box Multi-Tenancy support. This project can save well over 200+ hours of development time for your team.
+
+
+Technologies
+- .NET 9
+- Entity Framework Core 9
+- Blazor
+- MediatR
+- PostgreSQL
+- Redis
+- FluentValidation
+
+https://github.com/fullstackhero/dotnet-starter-kit
 
 **clean-architecture-dotnet**
 

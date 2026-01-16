@@ -20,6 +20,9 @@ https://learn.microsoft.com/es-es/aspnet/mvc/overview/older-versions/getting-sta
 # CQRS (*)
 
 
+
+
+
 Implement CQRS Pattern in ASP.NET Core 5
 - Implementa un servicio aplicacion CRUD, normalmente. 
 - Luego implementa el mismo servicio utilizando CQRS, servicios separados Crear, actualizar, borrar, y para diferentes consultas
@@ -50,6 +53,16 @@ ASP.NET: Implementando CQRS con MediatR
 - ASP.NET: Creando un Sistema Auditable
 - Otros
 https://dev.to/isaacojeda/parte-1-cqrs-y-mediatr-implementando-cqrs-en-aspnet-56oe
+
+
+Items.
+
+- Move logic from handlers into domain services or application services when behavior spans multiple aggregates or complex rules. Handlers should orchestrate, not implement business logic.
+
+- Keep authorization checks out of handlers’ core logic where possible; pipeline behaviors centralize this.
+
+- •	Add cross-cutting concerns via MediatR pipeline behaviors (validation, auth, logging, metrics).
+
 
 # CQRS - Sin librerias 
 

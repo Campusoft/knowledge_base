@@ -200,7 +200,15 @@ I see you are using VirtualBox, which allows you to do that by adding an entry i
 https://stackoverflow.com/questions/50592890/container-is-not-available-on-localhost-in-windows-docker-toolbox
 
 
-# Repositorios Imagenes Docker
+# Repositorios Imagenes Docker. Registro (Registry)
+
+
+Es el lugar central donde se almacenan y distribuyen las Imágenes. Es como YouTube, pero para Imágenes de Docker.
+
+- Públicas (Docker Hub): El registro más grande y conocido es Docker Hub. Muchas empresas y proyectos publican sus imágenes oficiales aquí (como nginx, node, ubuntu).
+- Privadas (Ej: Azure, AWS, Google): Son registros que tú o tu empresa gestionan para guardar imágenes que no quieres que sean públicas. Requieren un login y una contraseña para acceder
+
+
 
 Various versions of ActiveMQ neatly packet into Docker images 
 https://hub.docker.com/r/rmohr/activemq

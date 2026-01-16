@@ -111,6 +111,17 @@ Ethereum funciona como una plataforma de código abierto basada en la tecnología 
 
 El blockchain de ethereum es similar al del bitcoin en el sentido de que funciona también como registro del historial de transacciones
 
+
+## Solidity 
+
+Lenguaje para escribir contratos inteligentes
+
+## Nethereum
+
+Nethereum es una librería de código abierto que permite integrar Ethereum con aplicaciones .NET (C#, F#, VB.NET). 
+
+
+
 # Normativas
 
 ## Reglamento General de Protección de Datos - GDPR
@@ -150,4 +161,26 @@ RSA Lab published multiple standards in cryptography. Which in general are calle
 
 PFX file, is a single, password protected or password-less certificate archive which contains the certificate chain and the private key. You can think of it as an archive that stores everything you need to deploy a certificate.
 
+
+# Varios
+
+Nonce 
+salt
+
+Salt (Sal)
+
+Es como un ingrediente secreto aleatorio que se agrega a tu contraseña antes de guardarla. Hace que contraseñas idénticas se vean completamente diferentes en la base de datos.
+
+Algunos sistemas (como bcrypt, Argon2) guardan hash + salt juntos en un solo texto, pero no es obvio a simple vista:
+
+```
+usuario: juan
+hash: $2b$10$**NQoqc9B8a1YJ9G1rWc1Ne**$A1B2C3D4E5F6...
+          |        |              |
+       algoritmo  salt          hash real
+	   
+```	   
+
+Asp.net identity, usa un algoritmo llamado PBKDF2.
+- PBKDF2 es menos robusto que bcrypt/Argon2 (pero aceptable)
 

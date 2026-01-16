@@ -165,3 +165,14 @@ In March, 2020, we published a book titled “Software Engineering at Google” 
 
 The Software Engineering at Google book (“SWE Book”) is not about programming, per se, but about the engineering practices utilized at Google to make their codebase sustainable and healthy. (These practices are paramount for common infrastructural code such as Abseil.)
  https://abseil.io/resources/swe-book
+ 
+ 
+ 
+## Arquitecturas de opciones open-source
+
+
+Documenta con IA repositorios de código abierto. Crear diagramas
+https://codewiki.google/
+
+
+https://deepwiki.org/

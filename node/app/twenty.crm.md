@@ -21,6 +21,13 @@ Twenty uses Recoil for centralized state management with atomic state updates an
 GraphQL API Integration
 The frontend integrates with the backend through Apollo Client with automatic code generation and type safety, using a dual-schema approach for metadata and core operations.
 
+
+Database Systems
+- PostgreSQL as the primary relational database
+- ClickHouse for analytics and time-series data
+- Redis for caching, sessions, and job queues
+
+
 # Características Arquitectónicas Destacadas
 
 - **API GraphQL**: Un solo endpoint, evita over/under fetching

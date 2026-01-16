@@ -4,6 +4,24 @@ Detect Code Quality and Code Security issues on the fly in Visual Studio
 
 https://www.sonarlint.org/visualstudio/
 
+
+**SonarQube**
+
+
+| Herramienta       | Fortalezas                     | Debilidades                 |
+|-------------------|--------------------------------|----------------------------|
+| SonarQube         | Completo, maduro, multi-lenguaje | Configuración compleja     |
+| ESLint/TSLint     | Rápido, específico JS/TS      | Solo JavaScript/TypeScript |
+| Checkstyle        | Específico Java, extensible   | Solo Java                  |
+| Codacy            | SaaS, fácil de usar           | Menos personalizable       |
+| SonarCloud        | Cloud, sin infraestructura    | Pago por análisis          |
+
+
+```
+dotnet tool install --global dotnet-sonarscanner
+``
+
+
 # Revisiones
 
 Cobertura de pruebas - code coverage

@@ -54,6 +54,10 @@ Beneficios
 - No necesitas permisos de administrador → útil en PCs corporativos o CI donde no podés hacer sudo npm i -g.
 - Empiezas más rápido → npx create-react-app mi-app te genera la app sin que antes hayas hecho absolutamente nada (ni siquiera tener create-react-app instalado).
 
+# ESLint
+
+ESLint es una herramienta de análisis de código estático (un "linter") utilizada para identificar y reportar patrones problemáticos, errores de sintaxis, y violaciones de estilos en el código JavaScript y JSX.
+
 
 ## Browserslist
 
