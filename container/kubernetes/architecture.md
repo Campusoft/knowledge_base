@@ -23,6 +23,35 @@ https://github.com/kubernetes/community/tree/master/contributors/design-proposal
 
 "If an application runs in containers, it can run on Kubernetes."
 
+# Control plane
+
+El Control Plane de Kubernetes es la parte del sistema que observa el estado actual del sistema, lo compara con el estado deseado, y toma decisiones para que ambos coincidan.
+
+En Kubernetes:
+
+- El Control Plane es el conjunto de componentes que garantizan que el clúster esté siempre en el estado que el usuario declaró.
+
+
+Cómo aplicar el patrón "Control Plane" a cualquier software
+
+Paso 1: Define “estado deseado”
+- Configuración
+- Reglas
+- Objetivos
+
+Paso 2: Observa “estado real”
+- Lo que está pasando ahora
+
+Paso 3: Reconciliación (clave)
+- Si estado_real ≠ estado_deseado
+  - ejecutar acciones correctivas
+
+Este ciclo se repite constantemente.
+
+Analogía definitiva (muy corta)
+- Control Plane → Director de orquesta
+- Execution Plane → Músicos
+
 
 # Controllers
 

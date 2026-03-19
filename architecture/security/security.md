@@ -161,6 +161,57 @@ RSA Lab published multiple standards in cryptography. Which in general are calle
 
 PFX file, is a single, password protected or password-less certificate archive which contains the certificate chain and the private key. You can think of it as an archive that stores everything you need to deploy a certificate.
 
+# AES
+
+
+AES-256 (Advanced Encryption Standard con clave de 256 bits) es uno de los algoritmos de cifrado simétrico más seguros y ampliamente utilizados en el mundo. 
+
+- AES-128: Más rápido, seguridad muy alta
+- AES-192: Intermedio
+- AES-256: Máxima seguridad, ligeramente más lento pero insignificante en hardware moderno
+
+
+# RSA es uno de los algoritmos de cifrado asimétrico más importantes y utilizados en la criptografía moderna. Aquí te explico todo lo que necesitas saber:
+
+RSA es uno de los algoritmos de cifrado asimétrico más importantes y utilizados en la criptografía moderna.
+
+Cifrado asimétrico: Utiliza un par de claves matemáticamente relacionadas pero distintas:
+- Clave pública: Para cifrar (puede compartirse libremente)
+- Clave privada: Para descifrar (debe mantenerse en secreto)
+
+RSA vs AES: Trabajan juntos
+En la práctica, no se usa RSA para cifrar grandes volúmenes de datos por su lentitud. En su lugar:
+
+1. RSA cifra una clave de sesión AES generada aleatoriamente
+2. AES-256 cifra los datos reales (rápido y eficiente)
+3. Solo el destinatario con la clave privada puede obtener la clave AES
+4. Con la clave AES, descifra los datos
+
+Esto combina la seguridad de RSA con la velocidad de AES.
+
+# ECC
+
+ECC (Elliptic Curve Cryptography o Criptografía de Curvas Elípticas) es un enfoque de cifrado asimétrico que ofrece la misma seguridad que RSA pero con claves mucho más pequeñas y mayor eficiencia.
+
+| Característica                       | RSA       | ECC      | Ventaja ECC            |
+| ------------------------------------ | --------- | -------- | ---------------------- |
+| **Clave para seguridad equivalente** | 3072 bits | 256 bits | **12x más pequeña**    |
+| **Velocidad**                        | Lento     | Rápido   | Menor carga de CPU     |
+| **Consumo energético**               | Alto      | Bajo     | Ideal para móviles/IoT |
+| **Tamaño de certificado**            | Grande    | Compacto | Menos ancho de banda   |
+
+# HSM 
+
+HSM (Hardware Security Module)
+
+Un HSM es un dispositivo de hardware físico, especializado y resistente a la manipulación (tamper-resistant/evident) diseñado específicamente para proteger claves criptográficas y realizar operaciones de cifrado de forma segura 
+
+#  Key Vault - KMS
+
+Key Vault (o KMS - Key Management Service)
+Un Key Vault es un servicio de software (generalmente cloud-native) para gestionar secretos, claves de cifrado y certificados de forma centralizada 
+
+
 
 # Varios
 

@@ -33,6 +33,21 @@ Cada vez que se recibe un mensaje, este permanece en la cola. Para evitar que ot
 un periodo de tiempo durante el cual Amazon SQS impide que otros consumidores reciban y procesen el mensaje. El tiempo de espera de visibilidad predeterminado de un mensaje es de 30 segundos.
 https://docs.aws.amazon.com/es_es/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-visibility-timeout.html
 
+
+# FIFO
+
+
+Para las colas FIFO (First-In-First-Out) en AWS SQS, el nombre no es libre: existe una regla estricta que debes seguir o de lo contrario AWS (o LocalStack) rechazará la creación de la cola.
+
+La regla de oro: El sufijo .fifo
+El nombre de cualquier cola FIFO debe terminar obligatoriamente con el sufijo .fifo.
+
+- Correcto: mi-cola.fifo, pedidos-procesamiento.fifo, logs_sistema.fifo.
+- Incorrecto: mi-cola, pedidos-fifo, cola.fifo.test.
+
+¿Por qué esto es así? AWS utiliza este sufijo para identificar internamente el tipo de arquitectura de la cola y aplicar la lógica de ordenamiento exacto y eliminación de duplicados, diferenciándola de las colas estándar.
+
+
 # .net core 
 
 SDK de AWS para .NET

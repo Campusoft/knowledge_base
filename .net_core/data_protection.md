@@ -1,5 +1,9 @@
 # Data Protection
 
+
+Conceptualmente, la API de Data Protection es una infraestructura diseñada para criptografía de corto plazo.
+
+
 # ASP.NET Core Data Protection
 
 Web applications often need to store security-sensitive data. Windows provides a data protection API (DPAPI) for desktop applications, but Windows DPAPI isn't intended for use in web applications. The ASP.NET Core data protection stack provides a simple, easy to use cryptographic API a developer can use to protect data, including key management and rotation.

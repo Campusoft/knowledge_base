@@ -11,6 +11,14 @@ Listado de variables
 http://nginx.org/en/docs/varindex.html
 
 
+
+
+Nginx tiene dos carpetas:
+
+- sites-available: Donde guardas los archivos (tu bodega).
+- sites-enabled: Donde Nginx busca qué sitios debe activar (tu vitrina).
+
+
 # Referencias
 
 

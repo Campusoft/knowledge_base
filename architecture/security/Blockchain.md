@@ -1,5 +1,9 @@
 # Blockchain
 
+Tu objetivo real no es “gestionar votos en blockchain”, sino:
+
+Registrar una huella criptográfica inmutable de cada voto existente en base de datos, para poder auditar posteriormente comparando DB vs Blockchain.
+
 
 # Conceptos
 
@@ -130,6 +134,29 @@ Es:
 - Tipado estático.
 
 
+¿Qué son los eventos?
+
+Un evento en Solidity es como:
+
+- Un registro en el log del bloque
+- Un historial auditable
+- Una notificación pública
+
+No guarda estado.
+No modifica datos.
+Solo deja constancia.
+
+
+¿Para qué sirven los eventos?
+
+Auditoría pública
+
+- Cualquiera puede ver en Polygonscan:
+- Qué hash se registró
+- Cuándo
+- En qué bloque
+
+
 
 
 ## Remix IDE
@@ -248,3 +275,25 @@ Al guardar solo el CID en la blockchain, se logra:
 
 - Escalabilidad: Se reduce drásticamente la cantidad de datos que la blockchain necesita manejar.
 - Inmutabilidad y Verificación: El CID almacenado en la blockchain sirve como una prueba irrefutable de que el archivo con ese contenido exacto existe en IPFS. Si alguien intenta manipular el archivo, el CID cambiaría, lo que invalidaría el enlace registrado en la blockchain.
+
+
+# Revisar
+
+## Open Badges 3.0
+
+Open Badges 3.0 se ha consolidado como el estándar global para la emisión de credenciales digitales desarrollado por 1EdTech que define cómo deben estructurarse las credenciales digitales para garantizar:
+
+- Interoperabilidad entre sistemas.
+- Verificabilidad criptográfica.
+- Portabilidad de las credenciales.
+- Integración con LMS y sistemas académicos.
+- Uso de estándares abiertos.
+
+Open Badges 3.0 asegura que una credencial digital no sea solo una imagen, sino un objeto digital verificable y estructurado bajo estándares internacionales.
+
+## W3C Verifiable Credentials
+
+
+Las W3C Verifiable Credentials (Credenciales Verificables) son un estándar del World Wide Web Consortium (W3C) para credenciales digitales seguras y portátiles. Funcionan como documentos digitales firmados criptográficamente, como diplomas o licencias, que permiten verificar su autenticidad sin intermediarios centralizados.
+
+## Blockcerts 

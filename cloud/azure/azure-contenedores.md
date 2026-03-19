@@ -14,8 +14,6 @@ Azure Container Apps allows you to run containerized applications without worryi
 Escenarios
 - Carga de Trabajo	Microservicios, APIs web, y cualquier aplicación web de larga duración.
 
-
-
 Utiliza Kubernetes por debajo, pero oculta toda su complejidad.
 
 

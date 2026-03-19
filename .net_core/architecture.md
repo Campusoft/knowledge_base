@@ -318,6 +318,7 @@ https://github.com/devmentors/FeedR
   - Posee IExternalEventConsumer. Sin implementacion, para lanzar eventos externos
 - Validation flow with FluentValidation.NET,
 - Examples of complete usage (Cinema Ticket Reservations),
+- 2026. 4 anos ultimo commit
 https://github.com/oskardudycz/GoldenEye
 
 
