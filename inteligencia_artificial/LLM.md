@@ -33,3 +33,8 @@ Funcionalidades clave:
 
 Cobran una comisión del 5% sobre el costo de inferencia, ya que ellos gestionan el enrutamiento entre múltiples proveedores
 
+
+# Ollama
+
+Ollama es una herramienta de código abierto diseñada para ejecutar modelos de lenguaje de gran tamaño (LLM) de forma local en tu propia computadora, sin depender de servicios en la nube como OpenAI o Anthropic.
+

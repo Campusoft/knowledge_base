@@ -14,9 +14,19 @@ npx n8n
 Docker
 
 
-
 https://docs.n8n.io/hosting/installation/docker/
  
+
+
+Cuando ejecutas n8n start en Windows, el sistema utiliza por defecto una base de datos SQLite. El archivo y toda la configuración asociada se guardan en una carpeta oculta dentro de tu perfil de usuario.
+
+Ubicación exacta
+La ruta predeterminada es:
+C:\Users\TU_USUARIO\.n8n\
+
+Dentro de esa carpeta, encontrarás un archivo llamado:
+database.sqlite
+
 
 # Arquitectura  
  
@@ -99,3 +109,42 @@ Mantiene acceso a TODOS los nodos anteriores con $node.json
 
 
 https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.wait/
+
+
+# Agentes IA
+
+- Claude.ai (La interfaz de Chat)
+  - API: Esta suscripción no te da acceso a la API.
+
+- Console.anthropic.com (La consola de API)
+  - Para qué sirve: Es exclusiva para desarrolladores y herramientas como n8n.
+
+https://console.anthropic.com
+
+
+## openai
+
+
+Entra a la plataforma: Ve a platform.openai.com.
+
+- Dashboard de API: Haz clic en la pestaña "API Keys" en la barra lateral izquierda.
+- Crear Llave: Haz clic en "+ Create new secret key".
+- Saldo (Credits): Al igual que con Claude, debes ir a "Settings" > "Billing" y cargar saldo (mínimo $5). OpenAI no funciona en n8n si no tienes créditos comprados, incluso si tienes la suscripción Plus activa.
+
+# nodos
+
+
+## Puppeteer/Playwright
+
+n8n (Nodos de Puppeteer/Playwright): Permite crear flujos de trabajo donde un nodo recibe datos (ej. de un webhook o base de datos) y un script de Puppeteer ingresa esos datos en un sitio web de facturación.
+
+
+# Trailer
+
+
+# Recursos
+
+280+ free n8n automation templates — ready-to-use workflows for Gmail, Telegram, Slack, Discord, WhatsApp, Google Drive, Notion, OpenAI, and more. AI agents, RAG chatbots, email automation, social media, DevOps, and document processing. The largest open-source n8n template collection.
+
+https://github.com/enescingoz/awesome-n8n-templates
+

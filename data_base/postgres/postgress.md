@@ -177,6 +177,208 @@ PostGIS extends its capabilities for geographic objects
 High-performance time-series aggregation for PostgreSQL 
 https://github.com/pipelinedb/pipelinedb
  
+# Backup
+
+## Generar respaldos y restauraciones con pg_dump / pg_restore
+
+### Concepto
+
+`pg_dump` y `pg_restore` son herramientas oficiales de PostgreSQL para generar respaldos logicos y restaurarlos. Un respaldo logico exporta la estructura y/o los datos de una base de datos en un formato que puede ser restaurado posteriormente en otra base de datos PostgreSQL.
+
+### Descripcion
+
+`pg_dump` se usa para crear respaldos de una base de datos PostgreSQL. Puede generar archivos SQL planos o archivos en formatos especiales como `custom`, `directory` o `tar`.
+
+`pg_restore` se usa para restaurar respaldos generados con `pg_dump` en formatos no planos, principalmente el formato `custom` (`-F c`) y el formato `directory` (`-F d`). Si el respaldo fue generado como SQL plano, se restaura normalmente con `psql`.
+
+Formatos comunes:
+
+- `plain`: genera un archivo `.sql`. Se restaura con `psql`.
+- `custom`: genera un archivo binario comprimido `.dump` o `.backup`. Se restaura con `pg_restore`.
+- `directory`: genera una carpeta con archivos internos del respaldo. Se restaura con `pg_restore`.
+- `tar`: genera un archivo `.tar`. Se restaura con `pg_restore`.
+
+### Datos de conexion de ejemplo
+
+```
+Host: db-prod-demo.campus.local
+Puerto: 5432
+Base de datos: ventas_demo
+Usuario: backup_user
+Password: DemoPass_2026!
+```
+
+### Generar respaldo SQL plano
+
+Este respaldo genera un archivo `.sql` con sentencias SQL. Es facil de revisar manualmente, pero puede ser menos flexible para restauraciones parciales.
+
+```
+PGPASSWORD="DemoPass_2026!" pg_dump \
+  -h db-prod-demo.campus.local \
+  -p 5432 \
+  -U backup_user \
+  -d ventas_demo \
+  -F p \
+  -f ventas_demo_backup.sql
+```
+
+Restaurar un respaldo SQL plano:
+
+```
+PGPASSWORD="DemoPass_2026!" psql \
+  -h db-restore-demo.campus.local \
+  -p 5432 \
+  -U postgres_admin \
+  -d ventas_demo_restaurada \
+  -f ventas_demo_backup.sql
+```
+
+### Generar respaldo en formato custom
+
+Este formato es recomendado para muchos escenarios porque permite compresion, restauracion selectiva y restauracion paralela.
+
+```
+PGPASSWORD="DemoPass_2026!" pg_dump \
+  -h db-prod-demo.campus.local \
+  -p 5432 \
+  -U backup_user \
+  -d ventas_demo \
+  -F c \
+  -b \
+  -v \
+  -f ventas_demo_backup.dump
+```
+
+Restaurar respaldo en formato custom:
+
+```
+PGPASSWORD="RestorePass_2026!" pg_restore \
+  -h db-restore-demo.campus.local \
+  -p 5432 \
+  -U postgres_admin \
+  -d ventas_demo_restaurada \
+  -v \
+  ventas_demo_backup.dump
+```
+
+Restaurar limpiando objetos existentes antes de recrearlos:
+
+```
+PGPASSWORD="RestorePass_2026!" pg_restore \
+  -h db-restore-demo.campus.local \
+  -p 5432 \
+  -U postgres_admin \
+  -d ventas_demo_restaurada \
+  --clean \
+  --if-exists \
+  -v \
+  ventas_demo_backup.dump
+```
+
+### Generar respaldo solo de estructura
+
+Util para migrar o versionar el esquema sin incluir datos.
+
+```
+PGPASSWORD="DemoPass_2026!" pg_dump \
+  -h db-prod-demo.campus.local \
+  -p 5432 \
+  -U backup_user \
+  -d ventas_demo \
+  --schema-only \
+  -F p \
+  -f ventas_demo_schema.sql
+```
+
+### Generar respaldo solo de datos
+
+Util cuando la estructura ya existe y solo se requiere copiar informacion.
+
+```
+PGPASSWORD="DemoPass_2026!" pg_dump \
+  -h db-prod-demo.campus.local \
+  -p 5432 \
+  -U backup_user \
+  -d ventas_demo \
+  --data-only \
+  -F c \
+  -f ventas_demo_data.dump
+```
+
+### Respaldar una tabla especifica
+
+```
+PGPASSWORD="DemoPass_2026!" pg_dump \
+  -h db-prod-demo.campus.local \
+  -p 5432 \
+  -U backup_user \
+  -d ventas_demo \
+  -t public.clientes \
+  -F c \
+  -f clientes_backup.dump
+```
+
+Restaurar una tabla especifica desde un respaldo custom:
+
+```
+PGPASSWORD="RestorePass_2026!" pg_restore \
+  -h db-restore-demo.campus.local \
+  -p 5432 \
+  -U postgres_admin \
+  -d ventas_demo_restaurada \
+  -t public.clientes \
+  -v \
+  clientes_backup.dump
+```
+
+### Crear la base de datos antes de restaurar
+
+`pg_restore` no siempre crea la base de datos destino automaticamente. En muchos casos conviene crearla antes:
+
+```
+PGPASSWORD="RestorePass_2026!" createdb \
+  -h db-restore-demo.campus.local \
+  -p 5432 \
+  -U postgres_admin \
+  ventas_demo_restaurada
+```
+
+Luego se restaura:
+
+```
+PGPASSWORD="RestorePass_2026!" pg_restore \
+  -h db-restore-demo.campus.local \
+  -p 5432 \
+  -U postgres_admin \
+  -d ventas_demo_restaurada \
+  -v \
+  ventas_demo_backup.dump
+```
+
+### Restauracion paralela
+
+Para respaldos en formato `custom` o `directory`, se puede acelerar la restauracion usando varios procesos con `-j`.
+
+```
+PGPASSWORD="RestorePass_2026!" pg_restore \
+  -h db-restore-demo.campus.local \
+  -p 5432 \
+  -U postgres_admin \
+  -d ventas_demo_restaurada \
+  -j 4 \
+  -v \
+  ventas_demo_backup.dump
+```
+
+### Buenas practicas
+
+- Usar usuarios con permisos limitados para generar respaldos.
+- Guardar los respaldos en una ubicacion segura y con control de acceso.
+- Probar periodicamente la restauracion; un respaldo no validado puede no servir en una emergencia.
+- Automatizar respaldos con tareas programadas como `cron`, `systemd timers`, GitHub Actions, Jenkins o herramientas del sistema operativo.
+- Incluir fecha y hora en el nombre del archivo, por ejemplo `ventas_demo_2026_05_21_2300.dump`.
+- Evitar escribir passwords reales directamente en scripts compartidos; preferir variables de entorno, archivos `.pgpass` o gestores de secretos.
+
 # Referencias
 
 

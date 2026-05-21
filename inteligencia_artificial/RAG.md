@@ -7,6 +7,17 @@ RAG se utiliza mucho en aplicaciones como chatbots avanzados, asistentes virtual
 
 
 
+# Vector DB
+
+
+- Qdrant
+- Chroma
+- Pinecone
+- Supabase Vector / pgvector
+- PostgreSQL + pgvector
+- Weaviate
+
+
 
 
 # Langflow
@@ -54,5 +65,21 @@ LlamaIndex es una poderosa herramienta para la indexación y recuperación de da
 ## LangChain
 
 
+Es un framework para construir pipelines de IA:
+
+- prompts
+- chains
+- tools
+- agents
+
 
 LangChain, por otro lado, ofrece funciones avanzadas de retención de contexto. Puede mantener el contexto durante interacciones prolongadas, lo que lo hace adecuado para aplicaciones que requieren conversaciones más largas y complejas, como chatbots. 
+
+
+LangChain (MultiOn / Playwright Tool): LangChain tiene integraciones directas con herramientas de Playwright que permiten a un agente "ver" el DOM de una página y decidir qué campos llenar basándose en una descripción en lenguaje natural.
+
+
+# Herramientas
+
+
+Docling de IBM es una herramienta moderna de procesamiento inteligente de documentos con IA, diseñada principalmente para preparar información para sistemas de inteligencia artificial (como RAG o agentes IA).
