@@ -85,6 +85,41 @@ CREATE DATABASE databasename;
 Crear usuario
 CREATE USER <name> WITH CREATEROLE CREATEDB PASSWORD '<password>';
  
+## Obtener version de PostgreSQL
+
+Para consultar la version de una base de datos PostgreSQL se puede usar la funcion `version()`.
+
+```
+SELECT version();
+```
+
+Ejemplo de resultado:
+
+```
+PostgreSQL 16.3 on x86_64-pc-linux-gnu, compiled by gcc, 64-bit
+```
+
+Si solo se necesita el numero de version del servidor:
+
+```
+SHOW server_version;
+```
+
+Tambien se puede consultar como parametro del sistema:
+
+```
+SELECT current_setting('server_version');
+```
+
+Para obtener informacion mas detallada desde vistas del sistema:
+
+```
+SELECT
+  version() AS postgres_version,
+  current_database() AS database_name,
+  current_user AS connected_user;
+```
+
 
 
 # Naming conventions

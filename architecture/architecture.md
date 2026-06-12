@@ -174,5 +174,14 @@ The Software Engineering at Google book (“SWE Book”) is not about programmin
 Documenta con IA repositorios de código abierto. Crear diagramas
 https://codewiki.google/
 
-
+DeepWiki provides up-to-date documentation you can talk to, for every repo in the world. Think Deep Research for GitHub.
 https://deepwiki.org/
+
+Reverse engineer a codebase into a prompt you can build from.
+- Generar el prompt IA de un respositorio github
+https://www.gitreverse.com/
+
+
+explaingithub.com es una herramienta impulsada por inteligencia artificial diseñada para ayudar a desarrolladores a comprender repositorios de código de manera rápida sin tener que leer cada archivo manualmente.
+
+https://explaingithub.com
