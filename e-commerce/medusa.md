@@ -59,64 +59,312 @@ Customizing the Product Entity
 
 # Install
 
-Prerequisites
-Before you can install and use Medusa, you need the following tools installed on your machine:
+Medusa v2 se puede instalar localmente con `create-medusa-app`, pero para desarrollo es mas comodo levantar PostgreSQL y Redis con Docker. Si se quiere evitar instalar Node/PostgreSQL/Redis en la maquina, tambien se puede levantar todo el stack con Docker Compose.
 
-- Node.js v16+
+## Opcion A: stack completo con Docker
+
+Prerequisitos:
+
+- Docker
+- Docker Compose
 - Git
-- PostgreSQL
 
+Clonar el starter oficial:
 
-Base de datos Postgres. (docker-compose.yml)
-
+```bash
+git clone https://github.com/medusajs/dtc-starter.git --depth=1 my-medusa-store
+cd my-medusa-store
 ```
-version: '3.8'
+
+Crear `docker-compose.yml` en la raiz del proyecto:
+
+```yaml
 services:
-  db:
-    image: postgres:14.1-alpine
-    restart: always
+  postgres:
+    image: postgres:15-alpine
+    container_name: medusa_postgres
+    restart: unless-stopped
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
+      POSTGRES_DB: medusa-store
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
     ports:
-      - '5432:5432'
-    volumes: 
-      - db:/var/lib/postgresql/data
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - medusa_network
+
+  redis:
+    image: redis:7-alpine
+    container_name: medusa_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    networks:
+      - medusa_network
+
+  medusa:
+    build: .
+    container_name: medusa_backend
+    restart: unless-stopped
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "9000:9000"
+      - "5173:5173"
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgres://postgres:postgres@postgres:5432/medusa-store
+      REDIS_URL: redis://redis:6379
+    env_file:
+      - apps/backend/.env
+    volumes:
+      - .:/server
+      - /server/node_modules
+      - /server/apps/backend/node_modules
+    networks:
+      - medusa_network
+
+  storefront:
+    build: .
+    container_name: medusa_storefront
+    restart: unless-stopped
+    depends_on:
+      - medusa
+    ports:
+      - "8000:8000"
+    environment:
+      NEXT_PUBLIC_MEDUSA_BACKEND_URL: http://medusa:9000
+    env_file:
+      - apps/storefront/.env
+    volumes:
+      - .:/server
+      - /server/node_modules
+      - /server/apps/backend/node_modules
+      - /server/apps/storefront/node_modules
+      - /server/apps/storefront/.next
+    entrypoint: ["./start-storefront.sh"]
+    networks:
+      - medusa_network
+
 volumes:
-  db:
-   # driver: local
+  postgres_data:
+
+networks:
+  medusa_network:
+    driver: bridge
 ```
 
+Crear `.env` desde las plantillas:
 
-Iniciar utilizando medusa CLI
-
-```
-medusa develop
-```
-
-
-**Utilizar supabase, como store***
-
-```
-npx local-ssl-proxy --key localhost-key.pem --cert localhost.pem --source 7002 --target 7001
+```bash
+cp apps/backend/.env.template apps/backend/.env
+cp apps/storefront/.env.template apps/storefront/.env
 ```
 
-https://docs.medusajs.com/create-medusa-app#example-connect-to-a-supabase-database
+Crear `start.sh` en la raiz del proyecto:
 
+```sh
+#!/bin/sh
+set -e
 
+cd apps/backend
+npx medusa db:migrate
+npm run dev
+```
 
+Crear `start-storefront.sh` en la raiz del proyecto:
 
-----------------------------------
+```sh
+#!/bin/sh
+set -e
 
-ERR_SSL_PROTOCOL_ERROR not able to see https localhost pages in chrome browser
+cd apps/storefront
+npm run dev -- --hostname 0.0.0.0 --port 8000
+```
 
-Go to chrome://net-internals in the Chrome and switch to the Domain Security Policy tab.
+Si el proyecto usa pnpm, cambiar `npm run dev` por `pnpm dev` en ambos scripts.
 
-In the "Delete domain security policies" section at the bottom, write "localhost" in Domain field and press the "Delete" button.
+Crear `Dockerfile` en la raiz del proyecto:
 
-Note, this is a temporary fix.
+```dockerfile
+FROM node:20-alpine
 
-----------------------------------
+WORKDIR /server
+
+RUN corepack enable
+
+COPY package.json ./
+COPY pnpm-lock.yaml* ./
+COPY pnpm-workspace.yaml* ./
+COPY apps/backend/package.json apps/backend/package.json
+COPY apps/storefront/package.json apps/storefront/package.json
+
+RUN if [ -f pnpm-lock.yaml ]; then pnpm install --frozen-lockfile; else npm install; fi
+
+COPY . .
+
+EXPOSE 9000 5173 8000
+
+ENTRYPOINT ["./start.sh"]
+```
+
+Crear `.dockerignore`:
+
+```gitignore
+node_modules
+apps/backend/node_modules
+apps/storefront/node_modules
+apps/backend/.medusa
+apps/storefront/.next
+.git
+coverage
+dist
+build
+*.log
+```
+
+En macOS/Linux, dar permisos de ejecucion a los scripts:
+
+```bash
+chmod +x start.sh start-storefront.sh
+```
+
+En Windows, asegurar que `start.sh` y `start-storefront.sh` usen saltos de linea LF.
+
+En `apps/backend/medusa-config.ts`, desactivar SSL para PostgreSQL local en Docker y configurar Redis:
+
+```ts
+module.exports = defineConfig({
+  projectConfig: {
+    // ...
+    databaseDriverOptions: {
+      ssl: false,
+      sslmode: "disable",
+    },
+    redisUrl: process.env.REDIS_URL,
+  },
+})
+```
+
+Levantar los servicios:
+
+```bash
+docker compose up --build -d
+docker compose logs -f medusa
+```
+
+URLs principales:
+
+- Backend: `http://localhost:9000`
+- Admin: `http://localhost:9000/app`
+- Storefront: `http://localhost:8000`
+- PostgreSQL: `localhost:5432`
+- Redis: `localhost:6379`
+
+Crear usuario admin:
+
+```bash
+docker compose exec medusa npx medusa user -e admin@example.com -p supersecret
+```
+
+Detener servicios:
+
+```bash
+docker compose down
+```
+
+Eliminar tambien la base de datos local:
+
+```bash
+docker compose down -v
+```
+
+## Opcion B: solo PostgreSQL y Redis con Docker
+
+Usar esta opcion si quieres correr Medusa directamente con Node.js en tu maquina, pero dejar la infraestructura en Docker.
+
+Prerequisitos:
+
+- Node.js v20+ LTS
+- Git
+- Docker
+- Docker Compose
+
+Crear `docker-compose.yml`:
+
+```yaml
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: medusa_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: medusa-store
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+    container_name: medusa_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
+```
+
+Levantar infraestructura:
+
+```bash
+docker compose up -d
+```
+
+Crear el proyecto:
+
+```bash
+npx create-medusa-app@latest my-medusa-store
+cd my-medusa-store/apps/backend
+```
+
+Variables utiles para `apps/backend/.env`:
+
+```env
+DATABASE_URL=postgres://postgres:postgres@localhost:5432/medusa-store
+REDIS_URL=redis://localhost:6379
+```
+
+Iniciar Medusa en desarrollo:
+
+```bash
+npm run dev
+```
+
+o, si el proyecto usa pnpm:
+
+```bash
+pnpm dev
+```
+
+## Problemas comunes
+
+- Si Docker ya tiene servicios usando `5432`, `6379`, `9000`, `5173` o `8000`, cambiar el puerto del lado izquierdo. Ejemplo: `"9001:9000"`.
+- Si hay varios proyectos Medusa en la misma maquina, cambiar `container_name`, nombre del volumen y nombre de la red para evitar conflictos.
+- En Windows, los scripts `.sh` usados dentro del contenedor deben tener saltos de linea LF, no CRLF.
+- Si `http://localhost:9000` muestra `Cannot GET /`, no necesariamente es error. Probar `http://localhost:9000/app` o `http://localhost:9000/health`.
+- Para revisar logs: `docker compose logs -f medusa`.
+
+Docs:
+
+- https://docs.medusajs.com/learn/installation
+- https://docs.medusajs.com/learn/installation/docker
 
 
 # Referencias

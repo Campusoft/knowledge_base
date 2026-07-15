@@ -85,7 +85,12 @@ Conceptualmente, un skill es una unidad de funcionalidad que el agente puede inv
 Un Skill como archivo es una forma de codificar el conocimiento de tu equipo — tus convenciones, patrones, estándares — para que el agente IA los respete automáticamente, sin que tengas que explicárselos cada vez.
 
 
+El repositorio anthropics/skills es un proyecto oficial de Anthropic diseñado para albergar, demostrar y estandarizar el uso de las "Skills" (Habilidades) de Claude.
+https://github.com/anthropics/skills
+
+
 Codex NO usa "Skills" — usa AGENTS.md
+
 
 # sim
 
