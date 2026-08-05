@@ -38,3 +38,35 @@ Cobran una comisión del 5% sobre el costo de inferencia, ya que ellos gestionan
 
 Ollama es una herramienta de código abierto diseñada para ejecutar modelos de lenguaje de gran tamaño (LLM) de forma local en tu propia computadora, sin depender de servicios en la nube como OpenAI o Anthropic.
 
+# llama.cpp
+
+`llama.cpp` es un proyecto de código abierto para ejecutar inferencia de modelos de lenguaje de gran tamaño con una configuración mínima y buen rendimiento. Está implementado principalmente en C/C++ y permite ejecutar modelos localmente en una amplia variedad de hardware.
+
+Características principales:
+
+- Utiliza modelos en formato GGUF.
+- Permite convertir modelos de otros formatos a GGUF mediante las herramientas incluidas en el proyecto.
+- Admite modelos cuantizados para reducir el consumo de memoria y almacenamiento.
+- Puede ejecutar inferencia mediante CPU, GPU o una combinación de ambas, según el backend y el hardware disponibles.
+- Incluye una herramienta de línea de comandos y un servidor HTTP compatible con la API de OpenAI.
+
+Ejecutar un modelo GGUF local:
+
+```bash
+llama-cli -m modelo.gguf
+```
+
+Descargar y ejecutar directamente un modelo compatible desde Hugging Face:
+
+```bash
+llama-cli -hf ggml-org/gemma-3-1b-it-GGUF
+```
+
+Iniciar el servidor compatible con la API de OpenAI:
+
+```bash
+llama-server -hf ggml-org/gemma-3-1b-it-GGUF
+```
+
+Repositorio y documentación oficial: https://github.com/ggml-org/llama.cpp
+
