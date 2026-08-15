@@ -128,6 +128,105 @@ Casos recomendados | Notificaciones en tiempo real, chat, invalidación de cache
  
  
 
+# Valkey
+
+## ¿Qué es Valkey?
+
+Valkey es un almacén de estructuras de datos en memoria, de código abierto y alto rendimiento. Puede utilizarse como base de datos clave-valor, caché, broker de mensajes y motor de streaming.
+
+El proyecto nació como una continuación comunitaria de Redis OSS 7.2.4 y está gobernado por la Linux Foundation. Se distribuye con licencia BSD de 3 cláusulas y mantiene compatibilidad con los protocolos, configuraciones y formatos RDB/AOF de Redis OSS hasta la versión 7.2.x.
+
+## Características principales
+
+- Alto rendimiento y baja latencia al trabajar principalmente en memoria.
+- Estructuras de datos como strings, hashes, listas, sets, sorted sets, bitmaps, HyperLogLogs, índices geoespaciales y streams.
+- Persistencia mediante snapshots RDB y archivos AOF.
+- Replicación y alta disponibilidad con Valkey Sentinel.
+- Particionado automático y escalado horizontal con Valkey Cluster.
+- Compatibilidad con numerosos clientes y herramientas creados para Redis OSS.
+- Proyecto neutral respecto de proveedores, mantenido por una comunidad abierta bajo la Linux Foundation.
+
+## Valkey frente a Redis
+
+Característica | Valkey | Redis
+-- | -- | --
+Origen | Continuación de Redis OSS 7.2.4 | Proyecto original
+Gobernanza | Linux Foundation y comunidad abierta | Redis Ltd.
+Licencia | BSD de 3 cláusulas | Depende de la versión y distribución de Redis
+Compatibilidad | Compatible con Redis OSS hasta 7.2.x | Compatibilidad nativa dentro de su propia línea de versiones
+Uso recomendado | Alternativa abierta para caché, mensajería y almacenamiento en memoria | Ecosistema y productos oficiales de Redis
+
+Valkey suele ser una buena opción cuando se busca mantener una solución completamente abierta y compatible con aplicaciones basadas en Redis OSS 7.2 o anteriores. Antes de migrar desde Redis 7.4 o versiones posteriores se debe revisar la compatibilidad, porque sus archivos RDB/AOF no se pueden usar directamente en Valkey.
+
+## Instalar Valkey con Docker
+
+La imagen oficial está disponible como `valkey/valkey`. El siguiente comando inicia Valkey, publica el puerto predeterminado `6379` y conserva los datos en un volumen de Docker:
+
+```bash
+docker run -d \
+  --name valkey \
+  -p 6379:6379 \
+  -v valkey-data:/data \
+  valkey/valkey:latest \
+  valkey-server --save 60 1 --loglevel warning
+```
+
+Para verificar que el servidor responde:
+
+```bash
+docker exec valkey valkey-cli PING
+```
+
+La respuesta esperada es:
+
+```text
+PONG
+```
+
+También se puede guardar y consultar un valor:
+
+```bash
+docker exec valkey valkey-cli SET saludo "Hola Valkey"
+docker exec valkey valkey-cli GET saludo
+```
+
+Para detener e iniciar nuevamente el contenedor:
+
+```bash
+docker stop valkey
+docker start valkey
+```
+
+En proyectos y ambientes productivos es recomendable fijar una versión concreta de la imagen en lugar de usar `latest`.
+
+## Docker Compose
+
+```yaml
+services:
+  valkey:
+    image: valkey/valkey:latest
+    container_name: valkey
+    command: valkey-server --save 60 1 --loglevel warning
+    ports:
+      - "6379:6379"
+    volumes:
+      - valkey-data:/data
+    restart: unless-stopped
+
+volumes:
+  valkey-data:
+```
+
+Guardar la configuración en `compose.yaml` y ejecutar:
+
+```bash
+docker compose up -d
+docker compose exec valkey valkey-cli PING
+```
+
+No se debe publicar una instancia sin autenticación directamente en Internet. En producción se deben configurar autenticación, red privada, límites de memoria, persistencia y copias de seguridad según las necesidades de la aplicación.
+
+
 # referencias
 
 Redis for .NET Developers. Continue una serie articulos, muy interesantes. 
