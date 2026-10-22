@@ -48,6 +48,8 @@ DevSecOps takes care that security is part of every stage of DevOps loop - Plan,
 This library contains list of tools and methodologies accompanied with resources. The main goal is to provide to the engineers a guide through opensource DevSecOps tooling. This repository covers only cyber security in the cloud and the DevSecOps scope.
 https://github.com/sottlmarek/DevSecOps
 
+Para una guía completa, ver [DevSecOps](DevSecOps.md).
+
 # Referencias
 
 
