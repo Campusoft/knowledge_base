@@ -53,11 +53,19 @@ setw -g pane-base-index 1
 set -g mode-keys vi
 set -g escape-time 10
 EOF
-
-tmux source-file ~/.tmux.conf
 ```
 
 Esto habilita ratón, historial amplio y numeración desde 1. No necesitas plugins para este flujo.
+
+La configuración se aplica automáticamente la primera vez que arrancas tmux (`tmux new -s agente`, en la sección siguiente). `tmux source-file` **no arranca un servidor**: si lo ejecutas sin ninguna sesión abierta, falla con `error connecting to /tmp/tmux-<uid>/default (No such file or directory)`.
+
+Para recargar cambios con una sesión ya abierta, ejecuta desde dentro de tmux:
+
+```bash
+tmux source-file ~/.tmux.conf
+```
+
+O en la línea de comandos de tmux (`Ctrl+B :`): `source-file ~/.tmux.conf`. También puedes arrancar tmux con un archivo concreto usando `tmux -f ~/.tmux.conf new -s agente`.
 
 ## Preparar el repositorio y los planes
 
@@ -253,6 +261,7 @@ Abre un PR y revisa antes de mergear. El agente no debería integrar directament
 |---------|----------------|----------|
 | La TUI se ve mal o no acepta teclas | Falta TTY o `TERM` incorrecto | Usa `ssh -t` y `export TERM=xterm-256color` |
 | La sesión desapareció | El VPS se reinició | tmux no persiste reinicios; relanza la sesión |
+| `error connecting to /tmp/tmux-<uid>/default` | No hay servidor tmux en marcha | Arranca una sesión con `tmux new -s agente`; `source-file` no inicia el servidor |
 | `opencode: command not found` | PATH no actualizado | Abre una shell nueva o revisa la instalación |
 | El agente no responde | Falta conectar proveedor o modelo | `/connect` dentro de la TUI |
 | Se queda esperando aprobación | Permisos interactivos | Revisa la configuración de permisos |
