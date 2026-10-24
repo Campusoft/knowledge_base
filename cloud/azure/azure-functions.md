@@ -1,73 +1,81 @@
 # Azure Functions
 
+## Descripción
 
-Use your preferred language: Write functions in C#, Java, JavaScript, PowerShell, or Python, or use a custom handler to use virtually any other language.
+**Azure Functions** es el servicio de funciones administradas y orientadas a eventos de Microsoft Azure. Una aplicación de funciones agrupa funciones, configuración y recursos de despliegue. Cada función tiene un disparador que inicia su ejecución; puede declarar *bindings* de entrada o salida para integrarse declarativamente con otros servicios.
 
+## Arquitectura y flujo
 
-# Azure Functions triggers and bindings concepts
+```mermaid
+flowchart LR
+    S[Cliente o servicio] --> T[Trigger: HTTP, cola, timer, evento]
+    T --> H[Host de Azure Functions]
+    H --> F[Función]
+    B1[Input binding] --> F
+    F --> B2[Output binding]
+    B2 --> D[Servicio Azure o destino externo]
+    H -.-> O[Azure Monitor y Application Insights]
+```
 
-Triggers are what cause a function to run. A trigger defines how a function is invoked and a function must have exactly one trigger. Triggers have associated data, which is often provided as the payload of the function.
+El **trigger** define el evento y los datos que inician la función; cada función debe tener uno. Los **bindings** conectan recursos y proporcionan datos de entrada o reciben resultados de salida. Se puede acceder directamente a servicios mediante sus SDK cuando se necesita más control que el ofrecido por un binding.
 
-Binding to a function is a way of declaratively connecting another resource to the function; bindings may be connected as input bindings, output bindings, or both. Data from bindings is provided to the function as parameters.
+El plan de hospedaje determina el escalado, las instancias, la disponibilidad de red, las opciones de ejecución y el modelo de cobro. Los planes de consumo y Premium pueden escalar dinámicamente según eventos; en un plan dedicado, el escalado depende de la configuración de App Service. Evaluar el plan con base en latencia, duración, tráfico sostenido, red y requisitos de cómputo.
 
-# Authentication / authorization
+## Características
 
-Azure Functions supports trigger, input, and output bindings for Azure Cosmos DB.
+- Triggers para HTTP, temporizadores, colas, Event Grid, Event Hubs, Service Bus, almacenamiento y otros servicios.
+- Bindings de entrada y salida para simplificar integraciones comunes.
+- Soporte para lenguajes y modelos de programación que dependen de la versión del runtime y del sistema operativo.
+- Varios planes de hospedaje con diferentes comportamientos de escalado y operación.
+- Integración con identidad administrada, Key Vault, Azure Monitor y Application Insights.
+- Desarrollo local, configuración por entorno y despliegue mediante herramientas de Azure o CI/CD.
+- Durable Functions para orquestaciones con estado, tareas de larga duración, temporizadores y patrones de coordinación.
 
-# Configuration
+## Casos de uso
 
-Working with options and settings
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-dotnet-dependency-injection#working-with-options-and-settings
+- APIs HTTP y adaptadores de backend.
+- Procesamiento de mensajes desde Azure Service Bus, Storage Queues o Event Hubs.
+- Automatización por cambios de blobs, documentos o registros.
+- Tareas programadas de mantenimiento y sincronización.
+- Integración de sistemas mediante transformaciones y publicación de eventos.
+- Orquestaciones de varios pasos con Durable Functions.
+- Procesamiento de datos y automatización dentro de soluciones existentes en Azure.
 
-***local development***
+## Ventajas
 
-Local settings file
-- The local.settings.json file stores app settings and settings used by local development tools
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-develop-local#local-settings-file
+- Integración directa con servicios de Azure, identidad y monitoreo.
+- Modelo común de triggers y bindings para construir funciones orientadas a eventos.
+- Opciones de hospedaje para cargas variables o más estables.
+- Posibilidad de desarrollar y probar localmente y automatizar despliegues.
+- Durable Functions ofrece patrones de orquestación sin administrar una plataforma separada de workflows.
 
-# Dependency injection
+## Recomendaciones
 
+- Elegir primero el plan de hospedaje y revisar cómo afecta el escalado, los límites de ejecución, la red y el costo.
+- Diseñar consumidores de colas para procesar lotes, gestionar reintentos e impedir efectos duplicados.
+- Mantener triggers y bindings en configuración clara; usar SDK cuando se necesite control más fino de consultas, transacciones o errores.
+- Usar identidad administrada en lugar de credenciales embebidas cuando el servicio de destino lo admita.
+- Separar configuración local de la configuración desplegada y almacenar secretos en un almacén seguro como Key Vault.
+- Configurar Application Insights o Azure Monitor, identificadores de correlación y alertas para errores y retrasos de cola.
+- Ajustar concurrencia y escalado según el tipo de trigger y la capacidad de las dependencias.
+- Usar Durable Functions para workflows con pasos, reintentos, estado o esperas prolongadas; mantener las actividades idempotentes.
+- Desplegar con infraestructura como código y separar entornos, conexiones y permisos.
+- Verificar las versiones de runtime, extensiones, bindings, cuotas y precios vigentes.
 
+## Límites que revisar
 
-# Cosmos
+Los tiempos máximos, escalado, instancias, disponibilidad de red, versiones de runtime y costos dependen del plan, sistema operativo, región y trigger. Los bindings también tienen diferencias de características entre extensiones. Confirmar esos detalles para la región y el plan elegido antes de producción.
 
-This set of articles explains how to work with Azure Cosmos DB bindings in Azure Functions 2.x and higher. Azure Functions supports trigger, input, and output bindings for Azure Cosmos DB.
-- Supported APIs. Azure Cosmos DB bindings are only supported for use with the SQL API. For all other Azure Cosmos DB APIs, you should access the database from your function by using the static client for your API, including Azure Cosmos DB's API for MongoDB, Cassandra API, Gremlin API, and Table API.
+## Documentación oficial
 
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-cosmosdb-v2
+- [Documentación de Azure Functions](https://learn.microsoft.com/azure/azure-functions/)
+- [Conceptos de triggers y bindings](https://learn.microsoft.com/azure/azure-functions/functions-triggers-bindings)
+- [Opciones de hospedaje](https://learn.microsoft.com/azure/azure-functions/functions-scale)
+- [Escalado y concurrencia](https://learn.microsoft.com/azure/azure-functions/functions-concurrency)
+- [Buenas prácticas](https://learn.microsoft.com/azure/azure-functions/functions-best-practices)
+- [Durable Functions](https://learn.microsoft.com/azure/azure-functions/durable/durable-functions-overview)
 
-This set of articles explains how to work with Azure SQL bindings in Azure Functions. Azure Functions supports input and output bindings for the Azure SQL and SQL Server products.
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-bindings-azure-sql
+## Más información
 
-
-Azure Cosmos DB + Azure Functions - serverless database processing
-https://www.youtube.com/watch?v=Dudcl8le2cE
-
-Integrating Azure Cosmos DB with Azure Functions
-https://www.youtube.com/watch?v=L88quzuyjDY
-
-# Referencias
-
-
-Best practices for reliable Azure Functions
-https://docs.microsoft.com/en-us/azure/azure-functions/functions-best-practices?tabs=csharp
-
-
-Azure Function - An Serverless Architecture
-
-- Create Azure Function using Azure Portal
-- Create Azure Function using Visual Studio
-https://www.c-sharpcorner.com/article/azure-function-an-serverless-architecture/
-
-# Revisar
-
-TNDStudios.Patterns.CQRS
-Example of a robust search brokering system using Azure Function Apps & Web UI built with CQRS & MVVM Patterns using .Net Core in C#. 
-https://tndstudios.github.io/TNDStudios.Patterns.CQRS/
-
-Caching in Azure Function – how you can use Redis
-https://www.jankowskimichal.pl/en/2017/10/caching-in-azure-function-how-you-can-use-redis/
-
-Azure Functions and Caching
-You can use distributed cache, e.g. Redis, by using its SDK from Function code. Might be a bit nicer, since you keep the stateless nature of Functions, but might cost a bit more.
-https://stackoverflow.com/questions/47722722/azure-functions-and-caching
+- [Serverless Functions (FaaS)](../Serverless.md)
+- [Apunte existente sobre Azure Functions](azure-functions.md)
