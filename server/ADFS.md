@@ -1,5 +1,9 @@
 # Active Directory Federation Services - ADFS
 
+AD FS es un servicio de federación y SSO que puede integrarse con Active Directory Domain Services (AD DS). Para el directorio, las cuentas de dominio y la administración de recursos Windows, consultar [Microsoft Active Directory Domain Services](Identity_IAM/Microsoft-Active-Directory.md).
+
+Microsoft recomienda evaluar la migración de AD FS a Microsoft Entra ID en lugar de actualizar AD FS para nuevos escenarios de federación. Revisar la [guía oficial de AD FS](https://learn.microsoft.com/en-us/windows-server/identity/ad-fs/ad-fs-overview) y las necesidades de despliegue antes de decidir.
+
 Configuring Single Sign-on with ADFS can be done in two ways, depending on your ADFS version.
 
 For ADFS 4.0, on Windows Server 2016 and up, use OpenID
