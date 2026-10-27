@@ -1,187 +1,82 @@
-# Architecture Characteristics
-
-
-## Scalability:
-
-The ability for the system to perform and operate as the number of users or requests increases. Scalability is achievable with Horizontal or vertical scaling of the machine or simply attaching AutoScalingGroup.
-
-
-
-## Articulos
-
-Top 10 Architecture Characteristics / Non-Functional Requirements with Cheatsheet
-- Scalability
-- Availability
-- Extensibility
-- Consistency
-- Resiliency
-- Usability
-- Observability
-- Security
-- Durability
-- Agility
-- Deployability
-- 
-https://blog.devgenius.io/top-10-architecture-characteristics-non-functional-requirements-with-cheatsheat-7ad14bbb0a9b
-
-![image](https://github.com/Campusoft/knowledge_base/assets/222181/5443dc1d-fcd4-449c-a033-b0f1e11bba69)
-
-
-
-# Clean Architecture
-
-Though these architectures all vary somewhat in their details, they are very similar. They all have the same objective, which is the separation of concerns. They all achieve this separation by dividing the software into layers. Each has at least one layer for business rules, and another for interfaces.
-
-https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
-
-
-
-![image](https://github.com/Campusoft/knowledge_base/assets/222181/ef3f265e-93b7-4dea-bb8b-9536d9225be5)
-
-
-# Component
-
- A component is an encapsulated part of a software system. A component has an interface. Components serve as the building blocks for the structure of a system. At a programming-language level, components may be represented as modules, classes, objects or a set of related functions.
- 
- 
-# Recomendaciones
-
-- Se consistente. Si hace algo de cierta manera, haga todas las cosas similares de la misma manera
-- Comunicacion.
-
-# protocol 
-
-## ActivityPub
-
- The ActivityPub protocol is a decentralized social networking protocol based upon the [ActivityStreams] 2.0 data format. It provides a client to server API for creating, updating and deleting content, as well as a federated server to server API for delivering notifications and content. 
- 
-open protocol to implement federation
-
-Mastodon is based on open web protocols
-
-
-# Varios
-
-To identify and select the optimal model(s), architects must understand advantages and disadvantages of each model 
-
-
-# Monolith
-
-Types of monoliths
-
-- modular monolith
-- monolith primarily as a unit of deployment.
-
-
-The problem with this is that people tend to be poor at defining module boundaries — more to the point, even if they are good at defining module boundaries, they are not good at having the discipline to maintain those boundaries. 
-
-Modular Monolith with DDD
-https://github.com/kgrzybek/modular-monolith-with-ddd
- 
- 
-# Error handling
-
-
-# Referencias Arquitecturas .Net (Codigo)
-
-ASP.NET Boilerplate - Web Application Framework 
-
-
-# Serverless 
-How to choose a cloud serverless platform
-https://www.infoworld.com/article/3605129/how-to-choose-a-cloud-serverless-platform.html?utm_source=twitter&utm_medium=social&utm_campaign=organic&utm_content=content
-
-
-# Change Data Capture
-
-data sync problem
- 
-have microservices using different kinds of databases based on the capabilities of each database
-
-Change data capture (CDC) means identifying and tracking what has changed in a database so that you can take action, like updating your data warehouse or generating other outputs. The idea is to replicate a dataset using incremental updates so that you don’t have to copy your entire database every time a table gets updated.
-
-
-# Base de datos
-
-ACID 
-
-- Atomicidad (Atomicity). Asumamos que cada transacción es una unidad atómica de trabajo. Con esto, el éxito de las acciones de una transacción está condicionada al éxito de todas y cada una de las acciones relacionadas con dicha transacción.
-- Consistencia (Consistency). Cada transacción, ya sea exitosa o no, deja la base de datos en un estado coherente en base a las restricciones definidas en el entorno, ya sean contraints de foreign keys, unicidad de constraints unique o cualquier restricción definida en la lógica transaccional de la base de datos.
-- Aislamiento (Isolation). Cada transacción parece que ocurre aisladamente de otras transacciones con respecto a los cambios en la base de datos. El grado de aislamiento puede variar según el nivel aislamiento que se define en la transacción
-- Durabilidad (Durability). Cada transacción perdura a través de una interrupción del servicio. Cuando se restaura el servicio, todas las transacciones comprometidas se confirman y las transacciones no confirmadas se revierten.
-	
-
-# Observabilidad 
-
-- Logging
-- Trazabilidad en logs
-- Alertas
-
-## Metrics
-
-A metric is a measurement about a service, captured at runtime. Logically, the moment of capturing one of these measurements is known as a metric event which consists not only of the measurement itself, but the time that it was captured and associated metadata.
-
-Application and request metrics are important indicators of availability and performance. Custom metrics can provide insights into how availability indicators impact user experience or the business. Collected data can be used to alert of an outage or trigger scheduling decisions to scale up a deployment automatically upon high demand.
-
-## Traces
-
-Traces track the progression of a single request, called a trace, as it is handled by services that make up an application. The request may be initiated by a user or an application. Distributed tracing is a form of tracing that traverses process, network and security boundaries. Each unit of work in a trace is called a span; a trace is a tree of spans. Spans are objects that represent the work being done by individual services or components involved in a request as it flows through a system. A span contains a span context, which is a set of globally unique identifiers that represent the unique request that each span is a part of. A span provides Request, Error and Duration (RED) metrics that can be used to debug availability as well as performance issues.
-
-## Logs
-
-A log is a timestamped text record, either structured (recommended) or unstructured, with metadata.
-
-Structured Logging
-
-Structured logging is a methodology that creates logs based on a consistent, predetermined message format. It converts the log data to a format that can help developers query, search and analyze the log data seamlessly. Developers should structure an application's log data to simplify parsing and to only log relevant information. 
-
-## OpenTelemetry 
-
-An observability framework for cloud-native software.
-
-OpenTelemetry is a collection of tools, APIs, and SDKs. You can use it to instrument, generate, collect, and export telemetry data (metrics, logs, and traces) for analysis in order to understand your software's performance and behavior.
-
-OpenTelemetry, which is the next major version of the OpenTracing and OpenCensus projects. The leadership of those two projects have come together to create OpenTelemetry, which combines the best parts of OpenTracing and OpenCensus to create one open source project to help with your instrumentation needs.
-
-OpenTelemetry is a set of APIs, SDKs, tooling and integrations that are designed for the creation and management of telemetry data such as traces, metrics, and logs. The project provides a vendor-agnostic implementation that can be configured to send telemetry data to the backend(s) of your choice. It supports a variety of popular open-source projects including Jaeger and Prometheus.
-
-# Referencias
-
-A proven approach to helping every development organization become an integration agile organization. The Reference Architecture for Agility is a technology neutral logical architecture based on a disaggregated cloud-based model. It can be applied in incremental stages to create an integration agile foundation for any digital enterprises - deployable in private, public or hybrid cloud environments.
-(Arquitecturas Referencias)
-https://github.com/wso2/reference-architecture
-
-
-
-
- A curated list of awesome articles, videos, and other resources to learn and practice about software architecture, patterns, and principles. 
- https://github.com/mehdihadeli/awesome-software-architecture
- 
- ## book
- 
- Software Engineering at Google
-
-In March, 2020, we published a book titled “Software Engineering at Google” curated by Titus Winters, Tom Manshreck and Hyrum Wright.
-
-The Software Engineering at Google book (“SWE Book”) is not about programming, per se, but about the engineering practices utilized at Google to make their codebase sustainable and healthy. (These practices are paramount for common infrastructural code such as Abseil.)
- https://abseil.io/resources/swe-book
- 
- 
- 
-## Arquitecturas de opciones open-source
-
-
-Documenta con IA repositorios de código abierto. Crear diagramas
-https://codewiki.google/
-
-DeepWiki provides up-to-date documentation you can talk to, for every repo in the world. Think Deep Research for GitHub.
-https://deepwiki.org/
-
-Reverse engineer a codebase into a prompt you can build from.
-- Generar el prompt IA de un respositorio github
-https://www.gitreverse.com/
-
-
-explaingithub.com es una herramienta impulsada por inteligencia artificial diseñada para ayudar a desarrolladores a comprender repositorios de código de manera rápida sin tener que leer cada archivo manualmente.
-
-https://explaingithub.com
+# Guía central para construir una arquitectura
+
+Esta guía permite identificar rápidamente qué decisiones y elementos considerar al diseñar una arquitectura de software. Sirve como punto de partida para arquitecturas nuevas o para evolucionar una solución existente. No es una receta: los requisitos, riesgos y restricciones del negocio determinan qué aplicar.
+
+## Ruta rápida
+
+1. **Entender el negocio y el alcance:** quién usa la solución, qué capacidades ofrece, qué sistemas externos intervienen y qué queda fuera.
+2. **Definir requisitos de calidad:** disponibilidad, rendimiento, seguridad, escalabilidad, resiliencia, mantenibilidad, privacidad y costo. Para cada uno, anotar una medida o umbral verificable.
+3. **Registrar restricciones y riesgos:** regulación, residencia de datos, tecnologías existentes, habilidades del equipo, presupuesto, plazos y dependencias.
+4. **Elegir el estilo de arquitectura:** por ejemplo, monolito modular, arquitectura por capas, orientada a eventos, microservicios o serverless. Explicar por qué responde al contexto.
+5. **Identificar componentes y límites:** aplicaciones, módulos o servicios; responsabilidades; propiedad de datos; interfaces y dependencias.
+6. **Diseñar los flujos principales:** entradas, autenticación, procesamiento, comunicación, persistencia, errores y respuestas.
+7. **Definir datos e integración:** sistemas de registro, consistencia, APIs, eventos, colas, formatos y contratos.
+8. **Definir seguridad y operación:** controles por capa, observabilidad, despliegue, escalado, respaldo, recuperación y soporte.
+9. **Comparar alternativas y registrar decisiones:** opciones consideradas, consecuencias, supuestos y preguntas abiertas mediante ADR.
+10. **Validar con escenarios:** flujo normal, carga alta, caída de una dependencia, incidente de seguridad y recuperación.
+
+## Lista básica para revisar una arquitectura
+
+| Área | Pregunta que debe quedar respondida | Referencia |
+|---|---|---|
+| Contexto y alcance | ¿Qué capacidades y actores cubre la solución? | [Dominios](dominios/README.md) |
+| Atributos de calidad | ¿Qué significa que la solución sea segura, disponible y rápida? | [Fundamentos](fundamentos/README.md) |
+| Estilo y límites | ¿Cómo se divide el sistema y por qué? | [Estilos y patrones](estilos-y-patrones/README.md) |
+| Componentes | ¿Qué responsabilidad cumple cada componente y cuándo se necesita? | [Componentes](componentes/README.md) |
+| Comunicación | ¿Cómo intercambian datos las partes y los sistemas externos? | [Comunicación e integración](comunicacion-e-integracion/README.md) |
+| Datos | ¿Quién es dueño de cada dato, dónde vive y cómo se protege? | [Datos](datos/README.md) |
+| Plataforma | ¿Dónde se ejecuta y cómo se conectan los ambientes? | [Infraestructura](infraestructura/README.md) |
+| Seguridad | ¿Cómo se identifican usuarios y servicios, y cómo se reduce el riesgo? | [Seguridad](seguridad/README.md) |
+| Operación | ¿Cómo se detectan fallos, se despliega y se recupera el servicio? | [Operación](operacion/README.md) |
+| Decisiones | ¿Qué opciones se evaluaron y qué consecuencias se aceptan? | [Decisiones y documentación](decisiones-y-documentacion/README.md) |
+
+## Crear una arquitectura nueva
+
+Para iniciar un nuevo diseño, crear una carpeta para la solución o iniciativa y documentar, como mínimo:
+
+1. Propósito, alcance, actores y capacidades de negocio.
+2. Requisitos funcionales y atributos de calidad medibles.
+3. Contexto: sistemas relacionados, límites de confianza y flujos críticos.
+4. Vista lógica: componentes, responsabilidades e interfaces.
+5. Vista de datos: entidades relevantes, propiedad, clasificación y persistencia.
+6. Vista de despliegue: ambientes, redes, servicios de plataforma y dependencias.
+7. Seguridad, disponibilidad, escalado, observabilidad y recuperación.
+8. Decisiones arquitectónicas (ADR), alternativas descartadas y riesgos pendientes.
+9. Diagramas necesarios para explicar contexto, contenedores/componentes y despliegue.
+
+Conviene empezar con las vistas necesarias para responder preguntas concretas; no es necesario diagramar cada detalle antes de validar el diseño.
+
+## Consideraciones por línea de negocio
+
+Las líneas de negocio reutilizan las mismas áreas de arquitectura, pero cambian prioridades, restricciones y escenarios. Estas listas son puntos de análisis, no diseños prescriptivos.
+
+### Financiera
+
+- Analizar regulación aplicable, privacidad, clasificación y residencia de datos.
+- Definir controles de identidad, autorización, segregación de funciones, auditoría y gestión de secretos.
+- Establecer integridad transaccional, idempotencia, conciliación y trazabilidad de operaciones.
+- Evaluar disponibilidad, recuperación, continuidad, protección contra fraude y límites de terceros.
+- Acordar objetivos medibles para latencia, consistencia, recuperación y retención.
+
+### Universidad
+
+- Identificar estudiantes, docentes, personal administrativo, aspirantes e integraciones institucionales.
+- Revisar privacidad de datos académicos y personales, permisos por rol y ciclo de vida de matrícula.
+- Considerar periodos de alta demanda: matrículas, evaluaciones, publicación de notas y pagos.
+- Definir interoperabilidad entre LMS, sistema académico, identidad, biblioteca, pagos y reportes.
+- Considerar accesibilidad, experiencia móvil, conectividad variable y procesos académicos auditables.
+
+### Cómo agregar otra línea de negocio
+
+Crear una sección con: actores y capacidades; datos sensibles y regulación; flujos críticos; integraciones; picos de carga; requisitos de disponibilidad; controles particulares; y decisiones o patrones frecuentes. Mantener los principios comunes en las categorías generales y enlazarlos desde la sección del negocio.
+
+## Plantilla breve de decisión arquitectónica
+
+- **Contexto y problema:**
+- **Requisitos y restricciones:**
+- **Decisión:**
+- **Alternativas consideradas:**
+- **Consecuencias y riesgos:**
+- **Cómo se validará:**
+
+Ver [documentación y ADR](decisiones-y-documentacion/README.md) para ampliar el registro de decisiones.
