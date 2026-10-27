@@ -406,7 +406,7 @@ La interpretación legal y regulatoria corresponde a cada organización; este do
 - [Observabilidad](Observabilidad.md): métricas, logs y trazas.
 - [Training DevOps](Training_DevOps.md): recursos de formación.
 - [Gestión de claves criptográficas](../seguridad/gestion.claves.criptograficas.md): secretos y claves.
-- [Calidad de código](../architecture/code-quality.md): análisis y estándares.
+- [Calidad de código](../architecture/fundamentos/code-quality.md): análisis y estándares.
 - [Git](../git/git.md): control de versiones e historial.
 
 ## Referencias
