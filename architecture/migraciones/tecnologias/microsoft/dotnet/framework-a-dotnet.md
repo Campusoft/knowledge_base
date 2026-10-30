@@ -78,7 +78,7 @@ Analizar código, paquetes de terceros, APIs, herramientas de compilación y dep
 | WCF | Evaluar por separado cliente y servidor. Para servicios existentes, considerar compatibilidad temporal, CoreWCF donde aplique, o migración del contrato a HTTP APIs/gRPC. Revisar bindings, seguridad, transacciones y clientes consumidores. |
 | Windows Services | Migrar al modelo de Worker Service/servicio hospedado u otra plataforma operativa. Revisar instalación, identidad, recuperación, logging, tareas y dependencias del sistema. |
 | WF, .NET Remoting, AppDomains y COM+ | No asumir disponibilidad directa en .NET moderno. Identificar la función de negocio y comparar sustitutos, procesos aislados o rediseño. |
-| Bibliotecas compartidas con aplicaciones antiguas | Considerar multi-targeting solo cuando haya consumidores que lo justifiquen y el costo de mantener varios destinos sea aceptable. |
+| Bibliotecas compartidas con aplicaciones antiguas | Evaluar por biblioteca: mantener el proyecto clásico, convertir a SDK-style, apuntar a `netstandard2.0` o usar multi-target. Decidir según los consumidores (Framework, .NET o ambos), las APIs utilizadas, el soporte de las dependencias y el costo de mantener varios destinos. Ver [.NET Standard 2.0 y multi-targeting](anexos/netstandard2.0-y-multitargeting.md). |
 
 La lista no es exhaustiva. Revisar la [guía oficial de portabilidad desde .NET Framework](https://learn.microsoft.com/en-us/dotnet/core/porting/framework-overview) y la documentación específica de cada modelo.
 
@@ -100,6 +100,17 @@ Se conserva el comportamiento de negocio y se implementa una solución nueva cua
 
 Puede reducir deuda técnica y preparar paquetes o código para una futura migración. No convierte una aplicación en .NET moderno ni resuelve tecnologías no disponibles. Tratarla como una etapa con entregable y plazo propios, y no como sustituto indefinido de la migración.
 
+### 6.5 Coexistencia mediante bibliotecas compartidas
+
+Cuando una biblioteca es consumida por aplicaciones .NET Framework que aún no se migran y por aplicaciones .NET modernas, puede convertirse en el punto de convivencia. Las opciones, evaluadas por biblioteca, son:
+
+1. **Mantener el proyecto clásico** y compilar solo para Framework: no habilita consumidores modernos.
+2. **Convertir a SDK-style sin cambiar el destino:** moderniza el formato y prepara el proyecto, pero sigue siendo Framework.
+3. **Convertir a SDK-style y apuntar a `netstandard2.0`:** permite consumir la biblioteca desde Framework y desde .NET, siempre que las APIs y dependencias lo permitan.
+4. **Usar multi-target** (`net48;net8.0`, etc.) cuando se necesiten APIs específicas de cada destino.
+
+`.NET Standard` es un contrato de API, no un runtime: no se migra una aplicación a .NET Standard. La decisión se registra en un ADR, se valida compilando y probando en cada consumidor y se revisa cuando cambie el destino o las dependencias. El detalle está en [Conversión a SDK-style](anexos/conversion-a-sdk-style.md) y [.NET Standard 2.0 y multi-targeting](anexos/netstandard2.0-y-multitargeting.md).
+
 ## 7. Metodología por fases
 
 ### Fase 0: Mandato y alcance
@@ -115,6 +126,7 @@ Puede reducir deuda técnica y preparar paquetes o código para una futura migra
 
 - Completar inventario y línea base.
 - Ejecutar análisis de dependencias y compatibilidad.
+- Identificar el formato de cada proyecto (SDK-style o clásico), las bibliotecas compartidas, sus consumidores Framework/.NET y las APIs incompatibles con `netstandard2.0`.
 - Identificar tecnologías bloqueantes y hacer pruebas de concepto tempranas.
 - Clasificar aplicaciones por complejidad, criticidad, valor y dependencias entre sí.
 
@@ -124,6 +136,7 @@ Puede reducir deuda técnica y preparar paquetes o código para una futura migra
 
 - Elegir versión destino y comprobar su soporte.
 - Seleccionar estrategia de migración por aplicación o capacidad.
+- Decidir por biblioteca compartida entre mantener el proyecto clásico, convertir a SDK-style, apuntar a `netstandard2.0` o usar multi-target, con su justificación.
 - Definir arquitectura de convivencia, límites, contratos, datos e identidad cuando aplique.
 - Registrar alternativas y consecuencias en un ADR.
 - Preparar backlog, presupuesto, recursos, hitos, plan de pruebas, despliegue y retorno.
@@ -134,6 +147,7 @@ Puede reducir deuda técnica y preparar paquetes o código para una futura migra
 
 - Crear rama de migración, pipeline reproducible y entornos representativos.
 - Actualizar primero la línea base .NET Framework solo si reduce brechas y no agrega riesgos injustificados.
+- Convertir primero bibliotecas hoja a SDK-style; si tienen consumidores duales, apuntar a `netstandard2.0` o multi-target y validar la compilación en ambos destinos.
 - Reducir advertencias, dependencias abandonadas y referencias manuales innecesarias.
 - Separar lógica de negocio de APIs específicas del framework cuando el diseño lo permita.
 - Resolver dependencias críticas o probar sustitutos antes del cambio masivo.
@@ -143,6 +157,7 @@ Puede reducir deuda técnica y preparar paquetes o código para una futura migra
 ### Fase 4: Migración piloto
 
 - Seleccionar una aplicación o biblioteca representativa, de alcance limitado y con propietario disponible.
+- Incluir al menos una biblioteca compartida y un consumidor de cada destino cuando existan.
 - Aplicar conversión de proyecto y cambios de API en incrementos pequeños.
 - Validar la estrategia de coexistencia, despliegue, monitoreo y reversión.
 - Actualizar estimaciones y riesgos con la evidencia obtenida.
@@ -152,6 +167,7 @@ Puede reducir deuda técnica y preparar paquetes o código para una futura migra
 ### Fase 5: Implementación por oleadas
 
 - Migrar primero componentes hoja y bibliotecas compartidas de menor riesgo; luego capas con dependencias externas y finalmente interfaz/servicios cuando convenga.
+- Validar cada biblioteca compartida contra todos sus consumidores y destinos antes de avanzar.
 - Mantener cambios pequeños y compilables; revisar cada paquete y API sustituida.
 - Validar continuamente contratos, datos, seguridad, rendimiento y compatibilidad de despliegue.
 - Evitar cambios funcionales no necesarios dentro del mismo conjunto de trabajo.
@@ -161,6 +177,7 @@ Puede reducir deuda técnica y preparar paquetes o código para una futura migra
 ### Fase 6: Validación y salida a producción
 
 - Ejecutar regresión funcional, integración, seguridad, carga, resiliencia y recuperación.
+- Ejecutar la matriz de compilación y pruebas en los destinos soportados para bibliotecas compartidas y sus consumidores.
 - Hacer despliegue piloto/canario o por segmentos cuando la plataforma lo permita.
 - Comparar métricas, errores y resultados de negocio con la línea base.
 - Confirmar respaldo, migraciones de datos, monitoreo, soporte y procedimiento de reversión.
@@ -200,6 +217,10 @@ Microsoft indica que [Upgrade Assistant está obsoleto](https://learn.microsoft.
 | Configuración o secretos mal migrados | Fallos de arranque o exposición de credenciales | Separar configuración por ambiente; centralizar secretos; revisar permisos, certificados y rotación. |
 | Comportamiento de base de datos distinto | Errores transaccionales, rendimiento o datos inconsistentes | Comparar consultas y transacciones; medir carga; respaldar; probar cambios y recuperación con datos representativos. |
 | APIs específicas de Windows/COM/nativas | Fallos en Linux/contenedores o instalación | Decidir si el destino seguirá siendo Windows; probar arquitectura, permisos, drivers y runtimes nativos. |
+| Conversión incompleta a SDK-style | Elementos duplicados, pérdida de diseñadores, `AssemblyInfo` repetido, paquetes o contenido no incluido | Convertir en rama, revisar el diff, compilar y probar; seguir la checklist del anexo y conservar reversión. |
+| `netstandard2.0` insuficiente para las APIs usadas | Código condicional, bloqueo o necesidad de multi-target | Validar APIs y dependencias antes de decidir; usar multi-target o mantener Framework cuando corresponda. |
+| Dependencia sin soporte `netstandard2.0` | La biblioteca no compila o falla en runtime en uno de los destinos | Verificar el soporte de los paquetes; reemplazar, aislar o conservar un proyecto específico por destino. |
+| `netstandard2.1` con consumidores Framework | Incompatibilidad: .NET Framework no implementa 2.1 | Usar `netstandard2.0` si hay consumidores Framework; reservar 2.1 para entornos sin Framework. |
 | Cambio de identidad y autorización | Acceso indebido o usuarios bloqueados | Revisar inicio de sesión, tokens, roles, cookies, sesiones y flujos de renovación con pruebas de seguridad. |
 | Rendimiento distinto | Degradación de latencia o capacidad | Crear línea base y pruebas comparables; perfilar; validar configuraciones y límites del host. |
 | Coexistencia temporal prolongada | Costo y complejidad operativa crecientes | Asignar propietario, métricas de cierre y fecha límite a cada puente temporal. |
@@ -218,6 +239,7 @@ Definir pruebas antes de portar para poder comparar:
 - **Resiliencia:** caída de servicios externos, reintentos, timeouts, idempotencia, degradación y recuperación.
 - **Despliegue y operación:** instalación, arranque, configuración, logs, métricas, alertas, backups y rollback.
 - **Compatibilidad funcional:** comparar respuestas y datos entre la versión antigua y la nueva con escenarios equivalentes.
+- **Bibliotecas compartidas:** compilar y probar cada destino (`net48`, `netstandard2.0`, `net8.0`/`net10.0`) y consumir la biblioteca desde una aplicación Framework y una moderna; validar empaquetado y APIs condicionales.
 
 Los criterios de aceptación deben expresar umbrales, por ejemplo: flujos críticos pasan; contratos son compatibles; no hay vulnerabilidades críticas abiertas; latencia no supera el presupuesto acordado; y restauración/despliegue fueron ensayados.
 
@@ -228,7 +250,7 @@ Para una aplicación en .NET Framework 4.6.x:
 1. Confirmar el tipo de aplicación y su dependencia de Windows, `System.Web`, WCF, COM, APIs nativas y bibliotecas de terceros.
 2. Inventariar proyectos y consumidores; definir pruebas de caracterización y línea base.
 3. Evaluar .NET 10 LTS como destino de referencia a la fecha de esta guía. No adoptar .NET 6 como destino productivo y evitar iniciar una migración nueva a .NET 8 dado su fin de soporte inminente.
-4. Si la aplicación es una biblioteca o proceso desacoplado, probar conversión y migración directa en un piloto.
+4. Si la aplicación es una biblioteca o proceso desacoplado, probar conversión y migración directa en un piloto; si tiene consumidores Framework y .NET, evaluar `netstandard2.0` o multi-target antes de fijar el destino.
 5. Si es ASP.NET Framework, definir migración incremental o reemplazo por módulos; incluir sesión, identidad y rutas como riesgos de primera clase.
 6. Si es WPF/Windows Forms, mantener Windows como requisito de plataforma salvo que el alcance incluya sustituir la interfaz.
 7. Mantener .NET Framework en convivencia solo con propietario, controles compensatorios y fecha de retiro aprobada.
@@ -238,6 +260,7 @@ Esta secuencia es una guía de decisión, no una promesa de compatibilidad. La e
 ## 12. Artefactos del proyecto
 
 - Inventario de aplicaciones, proyectos, dependencias e integraciones.
+- Inventario de formato de proyecto y bibliotecas compartidas, con la decisión por biblioteca: clásico, SDK-style, `netstandard2.0` o multi-target.
 - Matriz de compatibilidad con bloqueos, alternativas, responsables y estimaciones.
 - ADR de versión destino y estrategia de migración.
 - Backlog desglosado por aplicación, proyecto o capacidad.
@@ -252,6 +275,7 @@ Esta secuencia es una guía de decisión, no una promesa de compatibilidad. La e
 
 - [ ] Alcance, patrocinador, propietarios y criterios de éxito definidos.
 - [ ] Inventario de proyectos, paquetes, integraciones y entornos completo.
+- [ ] Formato de proyecto y bibliotecas compartidas identificados, con consumidores y decisión por biblioteca.
 - [ ] Versión destino confirmada con política de soporte vigente.
 - [ ] Tecnologías bloqueantes y dependencias críticas probadas o con alternativa.
 - [ ] Línea base y pruebas de flujos críticos disponibles.
@@ -260,6 +284,7 @@ Esta secuencia es una guía de decisión, no una promesa de compatibilidad. La e
 ### Antes de producción
 
 - [ ] Build reproducible y artefactos aprobados en pipeline.
+- [ ] Bibliotecas compartidas compilan y pasan pruebas en todos sus destinos y consumidores.
 - [ ] Pruebas funcionales, contractuales, seguridad, rendimiento y resiliencia aceptadas.
 - [ ] Configuración, secretos, permisos, certificados y telemetría revisados.
 - [ ] Migraciones de datos probadas y respaldos/restauración verificados.
@@ -282,3 +307,9 @@ Esta secuencia es una guía de decisión, no una promesa de compatibilidad. La e
 - [Instalar .NET Upgrade Assistant: aviso de obsolescencia y alternativa recomendada](https://learn.microsoft.com/en-us/dotnet/core/porting/upgrade-assistant-install)
 - [GitHub Copilot upgrade: descripción general](https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-upgrade/overview)
 - [Cómo ejecutar una actualización .NET con GitHub Copilot](https://learn.microsoft.com/en-us/dotnet/core/porting/github-copilot-upgrade/dotnet-how-to-upgrade-with-github-copilot)
+
+## 15. Anexos
+
+- [Conversión de proyectos a SDK-style](anexos/conversion-a-sdk-style.md): diferencias con el formato clásico, procedimiento, herramientas, errores frecuentes y validación.
+- [.NET Standard 2.0 y multi-targeting](anexos/netstandard2.0-y-multitargeting.md): cuándo usar cada opción, limitaciones, compilación condicional y empaquetado.
+- [Herramientas y validación](anexos/herramientas-y-validacion.md): comandos, matriz de compilación, automatización y evidencias.
