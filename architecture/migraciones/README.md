@@ -5,6 +5,7 @@ Guías para planificar y ejecutar cambios de plataforma, tecnología o arquitect
 ## Categorías
 
 - [Tecnologías](tecnologias/README.md): migraciones entre plataformas, frameworks y versiones.
+- [Casos](casos/README.md): levantamientos y migraciones reales, con resumen sanitizado, riesgos y decisiones.
 
 ## Principios
 
