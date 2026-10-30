@@ -7,4 +7,5 @@ Principios y criterios transversales para evaluar una arquitectura: atributos de
 - [Atributos de calidad](atributos-de-calidad.md)
 - [Calidad de código](code-quality.md)
 - [Estándares y buenas prácticas](standards-best-practices.md)
+- [Observabilidad](observabilidad.md)
 - [Arquitectura de interfaz de usuario y sistemas de diseño](ui/architecture_ui.md)
