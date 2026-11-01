@@ -235,3 +235,7 @@ hash: $2b$10$**NQoqc9B8a1YJ9G1rWc1Ne**$A1B2C3D4E5F6...
 Asp.net identity, usa un algoritmo llamado PBKDF2.
 - PBKDF2 es menos robusto que bcrypt/Argon2 (pero aceptable)
 
+
+## SAST
+
+Para ampliar el concepto y consultar caracteristicas, herramientas y buenas practicas, revisa la [guia detallada de SAST](sast.md).

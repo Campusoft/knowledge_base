@@ -116,6 +116,8 @@ Detectar credenciales en el código, el historial de Git y los artefactos. Un se
 
 ### SAST
 
+Para concepto, capacidades, herramientas y prácticas detalladas, consulta la [guía de SAST](../architecture/seguridad/seguridad-aplicativa/sast.md).
+
 Análisis estático del código fuente. Es rápido y se integra en el IDE y el pipeline, pero genera falsos positivos. Conviene empezar por código nuevo y por reglas de alto valor.
 
 ### SCA y dependencias
