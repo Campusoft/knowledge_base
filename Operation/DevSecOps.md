@@ -112,6 +112,8 @@ Identificar activos, actores, superficies de ataque y controles antes de impleme
 
 ### Secret scanning
 
+Para implementar este control con Gitleaks, consulta la [guía de Gitleaks](../git/gitleaks.md), que cubre escaneo local, hooks `pre-commit` y GitHub Actions.
+
 Detectar credenciales en el código, el historial de Git y los artefactos. Un secreto detectado debe **rotarse**, no solo borrarse del archivo. La limpieza del historial con `git filter-repo` o BFG es el último paso, no el primero.
 
 ### SAST

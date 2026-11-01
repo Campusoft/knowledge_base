@@ -1,5 +1,7 @@
 # Gestión de Secretos
 
+La detección automatizada complementa la gestión de secretos: ayuda a encontrar credenciales incluidas accidentalmente en código o en el historial, pero no reemplaza un gestor dedicado. Para escaneo local, hooks y CI con Gitleaks, consulta la [guía de Gitleaks](../../../git/gitleaks.md).
+
 Tienes tres niveles de seguridad para guardar la clave que el sistema debe "conocer":
 
 Nivel Básico (Variables de Entorno): La clave se guarda en el servidor, en una variable de entorno (ENV_VAR). El código lee la variable al iniciarse.
@@ -15,4 +17,3 @@ Nivel Recomendado (Gestores de Secretos / Vaults): Usar servicios como AWS KMS, 
 
 Nivel Máximo (HSM): 
 - Hardware dedicado físico para guardar claves. Usado por bancos.
-
