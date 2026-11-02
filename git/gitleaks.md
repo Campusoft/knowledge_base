@@ -210,6 +210,65 @@ Gitleaks admite reglas personalizadas y allowlists en `.gitleaks.toml`. Antes de
 3. Documenta la razón, el responsable y una fecha de revisión.
 4. Nunca agregues un secreto real a una allowlist para hacer pasar el pipeline.
 
+### Ejemplo mínimo de `.gitleaks.toml`
+
+Este archivo conserva las reglas predeterminadas de Gitleaks. Guárdalo con el nombre `.gitleaks.toml` en la raíz del repositorio que se escaneará:
+
+```toml
+title = "Configuración de Gitleaks"
+
+[extend]
+useDefault = true
+```
+
+La configuración completa puede incluir reglas propias (`[[rules]]`) y allowlists globales (`[[allowlists]]`) o específicas de una regla (`[[rules.allowlists]]`). Usa allowlists solo para falsos positivos confirmados y limítalas a la ruta, regla o condición necesaria. La sintaxis y un ejemplo completo están en la [referencia oficial de configuración de Gitleaks](https://github.com/gitleaks/gitleaks#configuration).
+
+### Escenarios de configuración
+
+Los siguientes fragmentos son ejemplos independientes para agregar al `.gitleaks.toml` mínimo anterior. Sustituye los nombres, prefijos y patrones por los de tu proyecto. Las expresiones regulares de Gitleaks usan la sintaxis de Go RE2.
+
+#### 1. Detectar un token interno con prefijo reconocible
+
+Útil cuando el sistema emite tokens como `acme_live_` seguido de 32 caracteres alfanuméricos:
+
+```toml
+[[rules]]
+id = "acme-service-token"
+description = "Token del servicio Acme"
+regex = '''acme_live_[A-Za-z0-9]{32}'''
+keywords = ["acme_live_"]
+tags = ["acme", "token"]
+```
+
+Gitleaks reportará las coincidencias con ese formato. No pongas tokens reales en la configuración ni en ejemplos del repositorio.
+
+#### 2. Excluir un falso positivo conocido solo en un archivo de pruebas
+
+Si una regla propia detecta una cadena de ejemplo conocida en `tests/fixtures/config.example`, se puede limitar la excepción a esa ruta y a esa cadena. Dentro de la regla correspondiente, agrega:
+
+```toml
+    [[rules.allowlists]]
+    description = "Valor ficticio documentado en fixture de pruebas"
+    condition = "AND"
+    paths = ['''^tests/fixtures/config\\.example$''']
+    regexTarget = "match"
+    regexes = ['''acme_live_00000000000000000000000000000000''']
+```
+
+Al usar `AND`, deben coincidir tanto la ruta como la expresión. Ajusta el patrón al valor ficticio exacto y confirma que nunca sea una credencial activa. La ruta se expresa con `/`, incluso al escanear desde Windows.
+
+#### 3. Desactivar una regla predeterminada que no aplica al proyecto
+
+Si tras revisar los hallazgos confirmas que la regla genérica `generic-api-key` produce ruido que no puedes resolver con una allowlist acotada, puedes desactivarla al extender la configuración predeterminada:
+
+```toml
+[extend]
+useDefault = true
+disabledRules = ["generic-api-key"]
+```
+
+Esto deja de detectar todos los casos cubiertos por esa regla; úsalo solo si aceptas esa pérdida de cobertura. Prefiere una allowlist específica cuando el falso positivo corresponda a una ruta o valor concreto.
+
 Para hallazgos históricos conocidos, un baseline puede ayudar a adoptar el control sin ocultar nuevas filtraciones. Debe tener propietario y plan para reducir los hallazgos. Los secretos activos requieren respuesta inmediata.
 
 ## Buenas prácticas
