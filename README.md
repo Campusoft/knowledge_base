@@ -1,43 +1,60 @@
 # Knowledge Base
-Bienvenidos a la base de conocimento de Campusoft Cía. Ltda.
-Este repositorio tiene contenidos e información sobre diferentes, temas, cursos, talleres internos/externos o recursos de libre acceso para estudio e investigación del equipo.
 
+Base de conocimiento de Campusoft Cía. Ltda. Reúne documentación técnica, guías, cursos, talleres y recursos para estudio e investigación del equipo.
 
-## Plataforma
-[Plataforma](platform_campusoft/index.md)
+## Navegación por áreas
 
+### Arquitectura e inteligencia artificial
 
-## Guia para desarrollo Front-End
+- [Arquitectura de software](architecture/)
+- [Plataforma Campusoft](platform_campusoft/index.md)
+- [Inteligencia artificial](inteligencia_artificial/)
 
-Here is the list of available roadmaps with more being actively worked upon.
-- Frontend Roadmap
-- Backend Roadmap
-- DevOps Roadmap
-- React Roadmap
-- Angular Roadmap
-- Android Roadmap
-- Python Roadmap
-- Go Roadmap
-- Java Roadmap
-- DBA Roadmap
-https://github.com/kamranahmedse/developer-roadmap
+### Desarrollo y herramientas
 
+- **Plataformas y lenguajes:** [.NET Core](.net_core/), [.NET Framework](.net_framework/), [Angular](angular/), [Go](Golang/), [Java](java/), [JavaScript](javascript/), [Node.js](node/), [PHP](php/), [Python](python/)
+- **Frontend y móvil:** [React](react/), [React Native](react-native/), [Vue](vue/), [Mobile](mobile/), [UI](ui/), [Usabilidad](usabilidad/)
+- **Prácticas y herramientas:** [Git](git/), [Metodologías](metodologias/), [Pruebas](test/), [Herramientas](tool/), [PowerShell](powershell/), [Workflow](workflow/), [XML](xml/)
 
-## Taller Git Essentials
-[Agenda del Taller Git Essentials](taller_git_essentials/taller_git_essentials.md)
+### Datos e integración
 
-## Taller de Woocommerce
-[Agenda del Taller de Woocommerce](taller_woocommerce/taller_woocommerce.md)
+- [Analítica y BI](analytics/)
+- [Ingeniería de datos](data/)
+- [Bases de datos](data_base/)
+- [Talend](talend/)
+- [Integración y mensajería](integracion/)
 
-## Taller de Banner
-[Banner](banner/banner.md)
+### Infraestructura y operaciones
 
-## Taller Power BI
-[Recursos Taller Power BI](taller_powerbi/taller_powerbi.md)
+- [Cloud](cloud/)
+- [Contenedores](container/)
+- [Servidores](server/)
+- [Sistemas operativos](sistema_operativo/)
+- [Operaciones y DevOps](Operation/)
+- [Seguridad](seguridad/)
 
+### Aplicaciones y negocio
 
-## Herramientas
-[Herramientas en linea](tool/tool_live.md)
+- [Aplicaciones empresariales](aplicaciones/)
+- [Backend as a Service](backend_as_service/)
+- [Chatbots y mensajería](chatbot/)
+- [Comercio electrónico](e-commerce/)
+- [LMS](lms/)
+- [Microsoft y Power Platform](microsoft/)
+- [Líneas de negocio](lineas_negocio/)
+- [Marketing](marketing/)
+- [Reporting](reporting/)
 
-## Xamarin Forms
-[Xamarin Forms](Xamarin/Xamarin.md)
+### Otros temas y recursos
+
+- [Realidad aumentada](augmented_reality/)
+- [Banner](banner/)
+- [Comunicación](comunicacion/)
+- [Ejemplos](examples/)
+- [Juegos](game/)
+- [GIS](GIS/)
+- [Catálogos y listas](list/)
+
+## Organización del repositorio
+
+Las carpetas agrupan contenidos por área. Los índices de cada área enlazan a sus documentos y subsecciones. Al añadir material, reutiliza primero una carpeta existente, actualiza su índice y conserva los términos oficiales en el nombre de productos y tecnologías.
