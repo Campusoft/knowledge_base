@@ -34,7 +34,7 @@ Odata, es un rest con otros complementos. (Igual estandar)
 https://www.odata.org/
 
 
-Protocolo OAuth 2.0 / OpenID Connect 
+Protocolo OAuth 2.0 / OpenID Connect
 
 
 # Implementation
@@ -60,7 +60,7 @@ A team owner must be provided when creating a team in application context.
 
 
 
-[Errores comunes desarrollo teams](error.dev.md)
+[Errores comunes desarrollo teams](error.dev.md.md)
 
 [Utilizando PowerShell](power_shell_teams.md)
 
