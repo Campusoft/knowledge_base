@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Temporary agent plans and specs (keep local; do not commit)
+/docs/superpowers/
