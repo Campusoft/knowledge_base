@@ -28,7 +28,7 @@ Esta guía permite identificar rápidamente qué decisiones y elementos consider
 | Plataforma | ¿Dónde se ejecuta y cómo se conectan los ambientes? | [Infraestructura](infraestructura/README.md) |
 | Seguridad | ¿Cómo se identifican usuarios y servicios, y cómo se reduce el riesgo? | [Seguridad](seguridad/README.md) |
 | Operación | ¿Cómo se detectan fallos, se despliega y se recupera el servicio? | [Operación](operacion/README.md) |
-| Decisiones | ¿Qué opciones se evaluaron y qué consecuencias se aceptan? | [Decisiones y documentación](decisiones-y-documentacion/README.md) |
+| Decisiones y documentación | ¿Qué opciones se evaluaron, cómo se documenta la arquitectura y qué consecuencias se aceptan? | [Decisiones y documentación](decisiones-y-documentacion/README.md) |
 
 ## Crear una arquitectura nueva
 

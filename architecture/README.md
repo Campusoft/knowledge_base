@@ -15,7 +15,7 @@
 | [seguridad](seguridad/README.md) | Controles de seguridad, identidad, protección de aplicaciones y auditoría. |
 | [operacion](operacion/README.md) | Observabilidad, salud, confiabilidad, despliegue y recuperación. |
 | [migraciones](migraciones/README.md) | Guías para evaluar, planificar y ejecutar migraciones tecnológicas y de arquitectura. |
-| [decisiones-y-documentacion](decisiones-y-documentacion/README.md) | ADR, diagramas, formatos y documentación de arquitectura. |
+| [decisiones-y-documentacion](decisiones-y-documentacion/README.md) | ADR, diagramas, enfoques de documentación (arc42) y plantillas de arquitectura. |
 | [dominios](dominios/README.md) | Diseño de dominios, DDD y modelos reutilizables de negocio. |
 | [casos-y-referencias](casos-y-referencias/README.md) | Casos, artículos, libros, herramientas y fuentes externas. |
 
