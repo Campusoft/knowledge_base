@@ -12,7 +12,7 @@ Base de conocimiento de Campusoft Cía. Ltda. Reúne documentación técnica, gu
 
 ### Desarrollo y herramientas
 
-- **Plataformas y lenguajes:** [.NET Core](.net_core/), [.NET Framework](.net_framework/), [Angular](angular/), [Go](Golang/), [Java](java/), [JavaScript](javascript/), [Node.js](node/), [PHP](php/), [Python](python/)
+- **Plataformas y lenguajes:** [.NET](dotnet/net/), [.NET Framework](dotnet/net-framework/), [Angular](angular/), [Go](Golang/), [Java](java/), [JavaScript](javascript/), [Node.js](node/), [PHP](php/), [Python](python/), [Rust](rust/)
 - **Frontend y móvil:** [React](react/), [React Native](react-native/), [Vue](vue/), [Mobile](mobile/), [UI](ui/), [Usabilidad](usabilidad/)
 - **Prácticas y herramientas:** [Git](git/), [Metodologías](metodologias/), [Pruebas](test/), [Herramientas](tool/), [PowerShell](powershell/), [Workflow](workflow/), [XML](xml/)
 
