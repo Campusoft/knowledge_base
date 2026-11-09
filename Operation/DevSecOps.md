@@ -126,6 +126,8 @@ Análisis estático del código fuente. Es rápido y se integra en el IDE y el p
 
 Inventario de dependencias, detección de vulnerabilidades conocidas, licencias y paquetes abandonados. Requiere lockfiles, actualizaciones automatizadas y política de versiones.
 
+Para el flujo específico en .NET, consulta [SCA de dependencias en .NET](../dotnet/net/calidad-y-pruebas/sca-dependencias.md), que cubre NuGet Audit, `dotnet list package --vulnerable` y OWASP Dependency-Check.
+
 ### IaC scanning
 
 Revisar Terraform, Kubernetes, Helm, CloudFormation y Docker antes de desplegar: permisos excesivos, cifrado deshabilitado, puertos abiertos, imágenes sin pin.

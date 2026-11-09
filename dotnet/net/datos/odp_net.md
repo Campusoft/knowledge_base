@@ -6,7 +6,7 @@ ODP.NET, Managed Driver is a 100% native code .NET Framework driver for Oracle D
 
 # Avanzados:
 
-[Trabajar con Arrays](associative_array.md)
+[Trabajar con Arrays](../../../data_base/oracle/associative_array.md)
 
 
 # bulk inserts on databases

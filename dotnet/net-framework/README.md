@@ -1,6 +1,6 @@
-﻿# .NET Framework
+# .NET Framework
 
-Índice y estructura interna de la carpeta `.net_framework`.
+Índice y estructura interna de la carpeta `dotnet/net-framework`.
 
 ## Documentos y archivos
 - [DataSet](DataSet.md) — `DataSet.md`

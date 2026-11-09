@@ -72,6 +72,7 @@ La selección no debe basarse solo en la cantidad de reglas. Compara cobertura d
 
 ## Documentación relacionada
 
+- [Semgrep para .NET y C#](../../../dotnet/net/calidad-y-pruebas/semgrep.md): guía específica de configuración, reglas, CLI, CI y casos de uso SAST en C#.
 - [Seguridad de aplicaciones](security.md): contexto de pruebas estáticas y dinámicas.
 - [DevSecOps](../../../Operation/DevSecOps.md): ubicación de SAST dentro del ciclo y pipeline.
 - [SCA y dependencias](../../../Operation/DevSecOps.md#sca-y-dependencias): análisis de componentes de terceros.
