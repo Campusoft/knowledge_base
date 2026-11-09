@@ -21,6 +21,10 @@ Documentación de productos, plataformas y APIs del ecosistema Microsoft.
 - [Dataverse](power-platform/dataverse.md)
 - [Logic Apps](power-platform/logic_apps.md)
 
+### Azure DevOps
+
+- [Azure DevOps](azure-devops/README.md): plataforma, Pipelines y Server autogestionado.
+
 ### Otros productos
 
 - [Microsoft Dynamics](dynamics/microsoft_dynamics.md)
@@ -36,6 +40,7 @@ Documentación de productos, plataformas y APIs del ecosistema Microsoft.
 | [`dynamics/`](dynamics/) | [Microsoft Dynamics](dynamics/microsoft_dynamics.md). |
 | [`teams/`](teams/) | [Teams](teams/microsoft_teams.md), Dataverse, webhooks, Planner, educación, PowerShell y errores comunes. |
 | [`sharepoint/`](sharepoint/) | [Índice de SharePoint](sharepoint/index.md), acceso en línea, programación y uso con .NET. |
+| [`azure-devops/`](azure-devops/) | Azure DevOps, Azure Pipelines y Azure DevOps Server. |
 
 ## Mantenimiento
 
