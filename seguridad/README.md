@@ -4,6 +4,7 @@
 
 ## Documentos y archivos
 - [ISO/IEC 11770](gestion.claves.criptograficas.md) — `gestion.claves.criptograficas.md`
+- [OSINT (inteligencia de fuentes abiertas)](osint.md) — `osint.md`
 - [Tailscale y WireGuard](tailscale-wireguard.md) — `tailscale-wireguard.md`
 
 ## Mantenimiento
