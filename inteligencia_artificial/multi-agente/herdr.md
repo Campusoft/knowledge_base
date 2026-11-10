@@ -110,6 +110,8 @@ Es más apropiado que un IDE multiagente cuando se necesita un multiplexor persi
 
 ## Fuentes
 
+- [Herdr en una VPS Ubuntu y monitoreo desde tu equipo](herdr-vps-ubuntu.md): instalación y acceso remoto por SSH.
+
 - [Documentación oficial de Herdr](https://herdr.dev/docs/)
 - [Conceptos: workspaces, tabs, panes, agentes y sesiones](https://herdr.dev/docs/concepts/)
 - [Instalación y plataformas](https://herdr.dev/docs/install/)

@@ -183,7 +183,9 @@ No saltes al nivel 6 sin haber validado los anteriores. La complejidad debe reso
 
 ## Ver también
 
+- [Herdr en una VPS Ubuntu y monitoreo desde tu equipo](../herdr-vps-ubuntu.md): instalación y conexión local por SSH.
 - [tmux + OpenCode en un VPS](tmux-opencode.md): guía práctica paso a paso.
+- [Herdr + OpenCode](herdr-opencode.md): workspaces persistentes locales y remotos con la integración oficial.
 - [tmux](../../../sistema_operativo/linux/tmux.md): referencia general del multiplexor.
 - [Herdr](../herdr.md): gestor de workspaces para agentes CLI.
 - [Orca](../orca.md): orquestación de agentes, worktrees y ejecución remota por SSH.
