@@ -9,6 +9,7 @@ Identidad, autenticación y autorización en aplicaciones .NET.
 - [Authorization](authorization.md)
 - [IdentityServer](IdentityServer.md)
 - [MSAL](msal.md)
+- [Implementar TOTP con ASP.NET Core Identity y React](totp-aspnet-core-react.md)
 
 ## Subtemas
 - [diagramas](diagramas/README.md)
