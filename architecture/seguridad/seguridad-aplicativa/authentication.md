@@ -392,25 +392,19 @@ Propietarios
 
 # Multifactor authentication (MFA)
 
-Añade una capa adicional de seguridad al requerir múltiples formas de verificación.
+MFA agrega una capa de seguridad al requerir dos o mas factores de categorias distintas. Consulta [Autenticacion multifactor (MFA)](mfa.md) para conceptos, casos de uso e implementacion.
 
 # OTP - One-time password
 
-A one-time password (OTP) is an automatically generated sequence of numeric or alphanumeric characters that will authenticate a user for a single login or transaction. It is used in a multifactor authentication (MFA) process to secure access to data.
+Un OTP es un codigo que debe aceptarse una sola vez. Consulta [Contrasenas de un solo uso (OTP)](otp.md) para conocer variantes como HOTP y TOTP y sus controles.
 
 ## Passwordless
 
 Passwordless connections do not require the user to remember a password. Instead, another mechanism is used to prove identity, such as a one-time code sent through email or SMS, every time the user logs in.
 
-
 ## TOTP (Time-based One-Time Password)
 
-Concepto
-
-TOTP usa una clave secreta compartida entre servidor y cliente (app de autenticador) y el tiempo actual para generar códigos de corta duración (ej. 30s). Es el método estándar en muchas apps (Google Authenticator, Authy). Está definido por RFC 6238.
-
-
-
+TOTP deriva un codigo de un secreto compartido y del tiempo actual. Consulta [TOTP: OTP basado en tiempo](totp.md) para el algoritmo, enrolamiento, verificacion y recomendaciones de seguridad.
 
 # Revoking Access
 
