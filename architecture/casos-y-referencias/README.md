@@ -4,4 +4,4 @@ Casos reales, lecturas, libros, herramientas y enlaces externos que aportan ejem
 
 ## Documentos
 
-- Aún no hay documentos independientes en esta categoría. Las referencias actuales permanecen junto al tema que explican.
+- [Recursos visuales de arquitectura](recursos-visuales.md): aplicaciones interactivas, animaciones e ilustraciones para aprender conceptos de arquitectura y diseño de sistemas.

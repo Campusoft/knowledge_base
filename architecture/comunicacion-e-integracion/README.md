@@ -5,6 +5,7 @@ Contratos y mecanismos usados para comunicar componentes, servicios y sistemas e
 ## Documentos
 
 - [APIs](api.md)
+- [Estándares y diseño de APIs](estandares-api.md)
 - [Formatos y esquemas](formatos.md)
 - [Especificaciones](specification.md)
 - [Sincronización](sync.md)
