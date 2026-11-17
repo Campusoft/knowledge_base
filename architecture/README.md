@@ -7,6 +7,7 @@
 | Carpeta | Contenido |
 |---|---|
 | [fundamentos](fundamentos/README.md) | Atributos de calidad, principios, estándares, prácticas y calidad de código. |
+| [guias-conceptuales](guias-conceptuales/README.md) | Guías agnósticas a la tecnología que explican cómo implementar diseños y soluciones de arquitectura. |
 | [estilos-y-patrones](estilos-y-patrones/README.md) | Estilos de arquitectura, patrones y material de microservicios. |
 | [componentes](componentes/README.md) | Elementos reutilizables de una solución: función, ubicación, casos de uso y relaciones. |
 | [comunicacion-e-integracion](comunicacion-e-integracion/README.md) | APIs, formatos, eventos, sincronización, flujos e integración entre sistemas. |
