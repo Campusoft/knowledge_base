@@ -7,6 +7,7 @@ Documentación organizacional para los proyectos de software de Campusoft. Separ
 - [Políticas](politicas/README.md): requisitos obligatorios, alcance, responsables, excepciones y gobierno.
 - [Estándares](estandares/README.md): criterios técnicos comunes que concretan las políticas.
 - [Guías de aplicación](guias/ci-cd/README.md): orientación para aplicar estándares por proceso, tecnología o plataforma, enlazando el detalle técnico existente.
+- [Estructura de documentación de proyectos](estandares/documentacion-proyectos/README.md): estándar propuesto y paquete versionado para iniciar la documentación de proyectos de software.
 
 ## Principio de organización
 
