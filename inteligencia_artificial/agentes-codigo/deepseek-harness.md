@@ -13,6 +13,8 @@ Su principio de diseño es **“everything is a plugin”**. Incluso el adaptado
 
 ## Arquitectura
 
+Para profundizar en el contexto `ctx`, los presets del agente, el ciclo de vida y la creación de extensiones, consultar [DeepSeek Harness: arquitectura y sistema de plugins](deepseek-harness-arquitectura-plugins.md).
+
 ```text
 Usuario / aplicación
         │

@@ -5,3 +5,4 @@ Documentos sobre instrumentación, trazas y evaluación de sistemas de inteligen
 ## Documentos
 
 - [Phoenix y OpenTelemetry](phoenix-opentelemetry.md): características, arquitectura, casos de uso, limitaciones y recomendaciones.
+- [LangSmith](../LangChain/LangSmith.md): trazabilidad, evaluación y operación de aplicaciones LLM.

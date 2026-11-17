@@ -1,6 +1,6 @@
 # LangChain
 
-> Documento revisado: 2026-09-26
+> Documento revisado: 2026-11-13
 > Sitio oficial: [docs.langchain.com](https://docs.langchain.com/)
 
 ## Descripción
@@ -9,12 +9,14 @@
 
 Su propósito no es entrenar modelos, sino facilitar la construcción de aplicaciones que utilizan modelos existentes de distintos proveedores. Puede utilizarse con Python y JavaScript/TypeScript y permite comenzar con componentes sencillos o evolucionar hacia agentes y workflows más controlados.
 
-LangChain forma parte de un ecosistema que incluye:
+LangChain forma parte de un ecosistema de productos relacionados:
 
-- **LangChain**: componentes, integraciones y APIs para aplicaciones LLM y agentes.
-- **LangGraph**: runtime y framework orientado a workflows/agentes con estado, ciclos, persistencia y control explícito del flujo.
-- **LangSmith**: trazabilidad, depuración, evaluación, pruebas y monitoreo de aplicaciones de IA.
-- **Deep Agents**: una capa más opinada para agentes con planificación, filesystem, subagentes y gestión de contexto.
+- **LangChain**: framework de mayor nivel con componentes e integraciones para modelos, herramientas y ciclos de agente preconstruidos.
+- **LangGraph**: runtime y framework de orquestación de bajo nivel para workflows y agentes con estado, ejecución durable, streaming, persistencia e intervención humana. Puede usarse con componentes LangChain o sin LangChain.
+- **LangSmith**: plataforma para trazas, depuración, evaluación, gestión de prompts y despliegue/operación de aplicaciones de IA.
+- **Deep Agents**: harness de agentes de mayor nivel, construido sobre LangChain y LangGraph, con planificación, subagentes, filesystem virtual y gestión de contexto.
+
+La elección depende del nivel de control requerido: LangChain facilita iniciar con arquitecturas comunes; LangGraph permite definir explícitamente la orquestación; Deep Agents ofrece más capacidades listas para usar. LangSmith complementa cualquiera de estas opciones con herramientas de desarrollo y operación.
 
 ## Conceptos fundamentales
 
@@ -105,9 +107,9 @@ Una aplicación típica puede entenderse en capas:
 Aplicación
   ├── API, interfaz web, CLI, chatbot o proceso programado
   │
-  ├── Orquestación
-  │     ├── create_agent para agentes estándar
-  │     ├── LangGraph para workflows con estado
+  ├── Orquestación y runtime
+  │     ├── create_agent de LangChain para ciclos de agente comunes
+  │     ├── LangGraph para control explícito, estado y ejecución durable
   │     └── middleware, aprobaciones y límites
   │
   ├── Razonamiento
@@ -140,13 +142,17 @@ Aplicación
 
 ### LangChain y LangGraph
 
-LangChain es apropiado para crear agentes y componentes rápidamente. LangGraph es útil cuando se necesita controlar explícitamente nodos, transiciones, ciclos, estado, reintentos, interrupciones, aprobación humana o reanudación.
+LangChain proporciona abstracciones de agente de mayor nivel y está construido sobre LangGraph. Es apropiado para crear agentes y componentes rápidamente. LangGraph es útil cuando se necesita controlar explícitamente nodos, transiciones, ciclos, estado, reintentos, interrupciones, aprobación humana o reanudación. También puede usarse directamente sin LangChain.
 
 No son alternativas excluyentes: un nodo de LangGraph puede utilizar un agente de LangChain, un retriever, un modelo o una herramienta.
 
 ### LangSmith
 
-LangSmith registra trazas de la ejecución, incluyendo entradas, respuestas del modelo, llamadas a herramientas y decisiones del agente. Esto facilita depurar errores, comparar versiones, crear datasets de evaluación y monitorear aplicaciones en producción.
+LangSmith ofrece trazabilidad, depuración, evaluación y monitoreo para aplicaciones de IA, incluidas aplicaciones construidas con otros frameworks. Para sus componentes, casos de uso, recomendaciones y consideraciones de privacidad, consulta la [guía de LangSmith](LangSmith.md).
+
+### Deep Agents
+
+Deep Agents es una opción para aplicaciones que se benefician de planificación, subagentes, filesystem virtual y gestión automática del contexto. Añade convenciones y capacidades listas para usar; si el proceso requiere control detallado de cada paso, un agente LangChain o un grafo LangGraph explícito puede resultar más adecuado.
 
 ## Casos de uso
 
@@ -263,9 +269,11 @@ El nombre del modelo, la integración del proveedor y el formato de invocación 
 
 - **LangChain**: componentes y abstracciones para aplicaciones LLM y agentes.
 - **LangGraph**: ejecución y orquestación de workflows con estado.
+- **LangSmith**: desarrollo y operación mediante trazas, evaluación y monitoreo.
+- **Deep Agents**: harness con capacidades de agente listas para usar.
 - **MCP**: protocolo para conectar agentes/modelos con herramientas y fuentes de contexto externas.
 
-Una aplicación puede combinar los tres: LangChain define el agente, LangGraph controla el workflow y MCP expone herramientas externas.
+Una aplicación puede combinar estas piezas: LangChain aporta componentes y un agente de alto nivel, LangGraph controla el workflow, MCP conecta herramientas externas y LangSmith ayuda a evaluar y observar las ejecuciones. Deep Agents puede ocupar la capa de harness cuando sus capacidades preconstruidas encajan con el caso.
 
 ## Resumen
 
@@ -278,6 +286,6 @@ Para prototipos, `create_agent` y las integraciones preconstruidas suelen ser su
 - [Documentación oficial de LangChain](https://docs.langchain.com/oss/python/langchain/overview)
 - [Agentes en LangChain](https://docs.langchain.com/oss/python/langchain/agents)
 - [LangGraph](https://docs.langchain.com/oss/python/langgraph/overview)
-- [LangSmith: observabilidad](https://docs.langchain.com/langsmith/observability)
-- [LangSmith: evaluación de RAG](https://docs.langchain.com/langsmith/evaluate-rag-tutorial)
+- [Deep Agents](https://docs.langchain.com/oss/python/deepagents/overview)
+- [Frameworks, runtimes y harnesses](https://docs.langchain.com/oss/python/concepts)
 - [LangChain Reference](https://reference.langchain.com/)
