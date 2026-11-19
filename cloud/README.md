@@ -3,6 +3,10 @@
 Índice y estructura interna de la carpeta `cloud`.
 
 ## Documentos y archivos
+- [Amazon Aurora](amazon/amazon-aurora.md) — Características, arquitectura, casos de uso y limitaciones.
+- [AlloyDB for PostgreSQL](google/alloydb-postgresql.md) — Características, arquitectura, casos de uso y limitaciones.
+- [Azure HorizonDB](azure/azure-horizondb.md) — Características, arquitectura, casos de uso y limitaciones.
+- [Comparativa de bases de datos cloud](../data_base/comparativa-bases-datos-cloud.md) — Criterios de selección y evaluación.
 - [algolia](algolia.md) — `algolia.md`
 - [El software como servicio (SaaS)](cloud.md) — `cloud.md`
 - [Docker](container.md) — `container.md`

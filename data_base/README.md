@@ -3,6 +3,7 @@
 Índice y estructura interna de la carpeta `data_base`.
 
 ## Documentos y archivos
+- [Comparativa de bases de datos cloud](comparativa-bases-datos-cloud.md) — Amazon Aurora, AlloyDB for PostgreSQL y Azure HorizonDB.
 - [Catálogo de bases de datos](catalogo-bases-de-datos.md) — `catalogo-bases-de-datos.md`
 - [IDs](data_base.md) — `data_base.md`
 - [Diagramacion](diagramas.md) — `diagramas.md`
