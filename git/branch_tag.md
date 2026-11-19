@@ -1,5 +1,7 @@
 
-# Bransh / Tags
+# Ramas y etiquetas: introducción a GitFlow
+
+Este documento presenta los conceptos de GitFlow; no establece el flujo obligatorio del equipo. Para el procedimiento paso a paso, consulta la [Guía práctica de gestión de ramas](guia-gestion-ramas.md). Para evaluar alternativas y situaciones particulares, consulta [Escenarios de gestión de ramas](escenarios-gestion-ramas.md).
 
 Ramas, basadas en GitFlow. El GitFlow Workflow es una metodología de trabajo basada en el división de las distintas etapas de producción de software en distintas ramas del repositorio:
 
