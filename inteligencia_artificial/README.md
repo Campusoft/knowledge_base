@@ -1,10 +1,14 @@
-﻿# Inteligencia artificial
+# Inteligencia artificial
 
 Índice y estructura interna de la carpeta `inteligencia_artificial`.
 
 ## Documentos y archivos
 - [Agente Inteligente](agentes.ai.md) — `agentes.ai.md`
+- [Microsoft Agent 365](agentes-ia/gestion-y-gobierno/agent-control-planes/microsoft-agent-365.md) — administración, gobierno y seguridad empresarial de agentes de IA.
+- [Choreo Agent Manager (antes WSO2)](agentes-ia/gestion-y-gobierno/agent-control-planes/choreo-agent-manager.md) — investigación sobre arquitectura, identidad, gobierno, observabilidad, despliegue y licenciamiento.
 - [IA para desarrollo de software](ai.code.md) — `ai.code.md`
+- [Kiro](agentes-codigo/kiro.md) — características, arquitectura, adopción, licencias y precios del entorno de desarrollo con IA de AWS.
+- [Kiro Crew](multi-agente/kiro-crew.md) — espacio persistente de agentes, backends, operación, limitaciones y costos.
 - [Inteligencia Artificial Conceptos](ai.conceptos.md) — `ai.conceptos.md`
 - [AGENTS.md](command-line-AI.md) — `command-line-AI.md`
 - [Agent Plugins](agent-plugins.md) — estándar portable para empaquetar skills y servidores MCP para agentes de IA.
@@ -26,6 +30,7 @@
 - [vLLM y SGLang](vllm_sglang.md) — `vllm_sglang.md`
 
 ## Estructura interna
+- [Agentes de IA](agentes-ia/README.md) — gestión y gobierno de agentes y planos de control.
 - [agentes-codigo/](agentes-codigo/) — Subcarpeta `agentes-codigo` con material relacionado.
 - [ai-gateway/](ai-gateway/) — Subcarpeta `ai-gateway` con material relacionado.
 - [edge_ai/](edge_ai/) — Subcarpeta `edge_ai` con material relacionado.

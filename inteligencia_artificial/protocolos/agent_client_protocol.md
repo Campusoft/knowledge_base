@@ -83,7 +83,7 @@ Un cliente compatible con ACP puede iniciar agentes y trabajar con ellos desde u
 - Plataformas multiagente o de orquestación que lanzan agentes ACP como procesos hijos.
 - Herramientas de terminal que proporcionan un adaptador o registro de agentes.
 - Integraciones de editores, plugins y aplicaciones que implementen el protocolo.
-- Entornos como Kiro Crew cuando la versión instalada registra y habilita el backend ACP correspondiente.
+- Entornos como [Kiro Crew](../multi-agente/kiro-crew.md) cuando la versión instalada registra y habilita el backend ACP correspondiente.
 
 La disponibilidad de un agente dentro de un cliente no implica que todas sus capacidades estén soportadas. Se debe revisar la negociación de capacidades, autenticación, sesiones, subagentes, herramientas y permisos.
 

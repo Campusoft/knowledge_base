@@ -27,6 +27,7 @@ Documentación de productos, plataformas y APIs del ecosistema Microsoft.
 
 ### Otros productos
 
+- [Microsoft Agent 365](../inteligencia_artificial/agentes-ia/gestion-y-gobierno/agent-control-planes/microsoft-agent-365.md): investigación sobre administración, gobierno, seguridad, integraciones y licenciamiento de agentes de IA.
 - [Microsoft Dynamics](dynamics/microsoft_dynamics.md)
 - [Microsoft Teams](teams/microsoft_teams.md)
 - [SharePoint](sharepoint/index.md)
