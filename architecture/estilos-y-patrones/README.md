@@ -4,9 +4,10 @@ Describe formas de organizar sistemas y patrones que resuelven problemas recurre
 
 ## Documentos
 
+- [Control Plane / Data Plane](control-plane-data-plane.md): responsabilidades, interacción, disponibilidad y decisiones de diseño para separar administración y ejecución.
 - [Monolito modular](monolito-modular.md): módulos con límites explícitos dentro de una sola unidad de despliegue.
 - [Arquitectura por capas / N-tier](capas-n-tier.md): separación lógica de responsabilidades y despliegue en niveles físicos.
-- [Arquitectura orientada a servicios (SOA)](soa.md): capacidades empresariales expuestas mediante contratos e integración.
+- [Arquitectura orientada a servicios (SOA)](soa.md): conceptos, contratos, decisiones de diseño, seguridad, gobierno y operación de servicios empresariales.
 - [Serverless / funciones como servicio](serverless.md): principios, criterios y guías oficiales de AWS y Cloudflare.
 - [Arquitectura orientada a eventos](Event-Driven.md)
 - [CQRS](cqrs.md): separación de modelos y operaciones de lectura y escritura.

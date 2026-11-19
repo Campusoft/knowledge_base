@@ -140,6 +140,8 @@ Currently, this repository contains SDKs for Java, Python and Go
 
 # RudderStack 
 
+Para el enfoque arquitectónico general, véase [Separación del plano de control y del plano de datos](../architecture/estilos-y-patrones/control-plane-data-plane.md).
+
 RudderStack is a stand-alone system dependent only on a database (PostgreSQL). Its backend is written in Go, with a rich UI written in React.js.
 
 RudderStack's architecture consists of 2 major components: the control plane and data plane

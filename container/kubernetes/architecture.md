@@ -25,6 +25,8 @@ https://github.com/kubernetes/community/tree/master/contributors/design-proposal
 
 # Control plane
 
+Para el enfoque general, sus responsabilidades y decisiones de diseño, véase [Separación del plano de control y del plano de datos](../../architecture/estilos-y-patrones/control-plane-data-plane.md).
+
 El Control Plane de Kubernetes es la parte del sistema que observa el estado actual del sistema, lo compara con el estado deseado, y toma decisiones para que ambos coincidan.
 
 En Kubernetes:

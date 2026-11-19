@@ -56,6 +56,8 @@ Envoy no es la opción más simple para un servidor único con configuración es
 
 ### xDS y control plane
 
+Para los criterios generales de separación y autonomía entre planos, véase [Control Plane / Data Plane](../../architecture/estilos-y-patrones/control-plane-data-plane.md).
+
 Envoy no descubre servicios por sí solo: recibe configuración de un control plane mediante las APIs xDS. El archivo de bootstrap define el nodo, el listener inicial, el clúster del control plane y los recursos estáticos mínimos.
 
 ```mermaid
