@@ -10,6 +10,7 @@ Esta carpeta contiene la documentación del proyecto. La estructura parte de la 
 - [Desarrollo](desarrollo/README.md): build y convenciones de desarrollo.
 - [Plantillas](plantillas/README.md): formatos documentales reutilizables del proyecto.
 - [Seguridad](seguridad/README.md): arquitectura y controles de seguridad del sistema.
+- [Calidad](calidad/README.md): escenarios, datos y ejecuciones de pruebas funcionales manuales, automatizadas o realizadas por agentes IA.
 - [Operación](operacion/README.md): infraestructura, instalación, despliegue, soporte y observabilidad.
 - [Capacitación](capacitacion/README.md): material de formación para usuarios y equipos.
 - [Guías](guias/README.md): guías prácticas del proyecto con audiencia y propósito definidos.

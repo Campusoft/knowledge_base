@@ -13,7 +13,7 @@
 
 ## 1. Propósito
 
-Proporcionar una organización predecible para la documentación de proyectos, que facilite su creación, consulta, mantenimiento y reutilización. La versión inicial define nueve áreas: producto, requerimientos, arquitectura, desarrollo, plantillas, seguridad, operación, capacitación y guías.
+Proporcionar una organización predecible para la documentación de proyectos, que facilite su creación, consulta, mantenimiento y reutilización. La estructura define diez áreas: producto, requerimientos, arquitectura, desarrollo, plantillas, seguridad, calidad, operación, capacitación y guías.
 
 ## 2. Estructura de referencia
 
@@ -49,9 +49,14 @@ doc/
 │   ├── arquitectura/
 │   └── requerimientos/
 ├── seguridad/
-    ├── README.md
-    ├── arquitectura/
-    └── controles/
+│   ├── README.md
+│   ├── arquitectura/
+│   └── controles/
+├── calidad/
+│   ├── README.md
+│   ├── escenarios/
+│   ├── datos/
+│   └── ejecuciones/
 ├── operacion/
 │   ├── README.md
 │   ├── infraestructura/
@@ -106,6 +111,16 @@ Documenta el diseño y los controles de seguridad específicos del sistema.
 - `controles/`: controles aplicados, verificaciones, responsables y referencias a evidencias.
 Los requisitos de seguridad se registran también en `requerimientos/01-requisitos/` y se enlazan aquí. Esta carpeta no debe contener secretos, credenciales ni datos sensibles innecesarios.
 
+### `calidad/`
+
+Organiza la documentación del aseguramiento de calidad del sistema y sus pruebas funcionales, ejecutadas manualmente, mediante automatización o por agentes IA.
+
+- `escenarios/`: casos de prueba con identificador, requisito relacionado, precondiciones, pasos y resultado esperado.
+- `datos/`: conjuntos de datos e instrucciones para prepararlos o reutilizarlos. No incluir credenciales ni datos sensibles innecesarios.
+- `ejecuciones/`: resultados de cada corrida, incluyendo fecha, versión del sistema, ambiente, modalidad de ejecución, estado y referencias a evidencias o defectos.
+
+La documentación debe permitir relacionar requisitos, escenarios, datos y resultados. No duplicar evidencias o defectos si el proyecto ya dispone de una ubicación oficial; enlazar esos registros desde la ejecución.
+
 ### `desarrollo/`
 
 Reúne instrucciones y acuerdos para desarrollar y construir el sistema.
@@ -156,3 +171,4 @@ La versión de esta estructura identifica el paquete de carpetas e instrucciones
 | Versión | Fecha | Cambio |
 |---|---|---|
 | 1.0.0 | 2026-11-14 | Primera versión propuesta: áreas de producto, requerimientos, arquitectura, desarrollo, plantillas, seguridad, operación, capacitación y guías. |
+| — | 2026-11-17 | Se agregó la estructura inicial del área `calidad/` para documentar escenarios, datos y ejecuciones de pruebas funcionales manuales, automatizadas o realizadas por agentes IA. No se incrementó la versión de la plantilla. |

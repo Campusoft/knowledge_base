@@ -11,7 +11,7 @@
 
 Copiar el contenido de `estructura/doc/` al repositorio del proyecto. Completar los índices y eliminar las áreas que no apliquen. Las plantillas documentales reutilizables están reunidas en [`documentos/`](documentos/README.md); copiarlas juntas a `doc/plantillas/` si el proyecto las utiliza. Registrar la versión de estructura y de formatos utilizada en `doc/README.md`.
 
-Esta plantilla define las áreas `producto`, `requerimientos`, `arquitectura`, `desarrollo`, `plantillas`, `seguridad`, `operacion`, `capacitacion` y `guias`. La estructura corporativa completa está descrita en el [estándar](../../ESTANDAR-ESTRUCTURA-DOCUMENTACION.md).
+Esta plantilla define las áreas `producto`, `requerimientos`, `arquitectura`, `desarrollo`, `plantillas`, `seguridad`, `calidad`, `operacion`, `capacitacion` y `guias`. La estructura corporativa completa está descrita en el [estándar](../../ESTANDAR-ESTRUCTURA-DOCUMENTACION.md). El 2026-11-17 se agregó `calidad/` a la estructura documentada, sin cambiar el identificador de versión de esta plantilla.
 
 ## Árbol incluido
 
@@ -44,6 +44,11 @@ doc/
 │   ├── README.md
 │   ├── arquitectura/README.md
 │   └── controles/README.md
+├── calidad/
+│   ├── README.md
+│   ├── escenarios/README.md
+│   ├── datos/README.md
+│   └── ejecuciones/README.md
 ├── operacion/
 │   ├── README.md
 │   ├── infraestructura/README.md

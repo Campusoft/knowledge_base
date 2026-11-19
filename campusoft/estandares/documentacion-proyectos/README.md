@@ -10,7 +10,7 @@
 
 ## Propósito
 
-Definir una estructura común, versionada y reutilizable para organizar la documentación de proyectos. Esta primera versión contiene nueve áreas: `producto`, `requerimientos`, `arquitectura`, `desarrollo`, `plantillas`, `seguridad`, `operacion`, `capacitacion` y `guias`.
+Definir una estructura común, versionada y reutilizable para organizar la documentación de proyectos. La estructura documentada contiene diez áreas: `producto`, `requerimientos`, `arquitectura`, `desarrollo`, `plantillas`, `seguridad`, `calidad`, `operacion`, `capacitacion` y `guias`.
 
 La estructura se basa en patrones observados en proyectos Campusoft. Es un punto de partida adaptable; no exige crear subcarpetas sin contenido ni reorganizar proyectos existentes automáticamente.
 
@@ -25,3 +25,9 @@ La estructura se basa en patrones observados en proyectos Campusoft. Es un punto
 | Versión | Fecha | Cambio |
 |---|---|---|
 | 1.0.0 | 2026-11-14 | Primera versión propuesta con nueve áreas documentales y archivo de históricos opcional por área. |
+
+## Registro de cambios posteriores
+
+| Fecha | Cambio |
+|---|---|
+| 2026-11-17 | Se agregó el área `calidad/` para organizar escenarios, datos y ejecuciones de pruebas funcionales manuales, automatizadas o realizadas por agentes IA. Se actualizaron los documentos de referencia existentes, sin publicar una nueva versión de la plantilla. |
