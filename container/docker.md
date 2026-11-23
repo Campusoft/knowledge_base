@@ -328,3 +328,4 @@ https://docs.docker.com/engine/reference/commandline/run/#options
 Tutorial
 https://www.youtube.com/watch?v=CV_Uf3Dq-EU
 
+Ver también: [Docker Sandboxes](../inteligencia_artificial/agentes-codigo/docker-sandboxes.md) (aislamiento de agentes de IA en microVMs).

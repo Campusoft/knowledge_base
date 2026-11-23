@@ -75,6 +75,15 @@ ACP no “permite utilizar GPT” o “permite utilizar Claude” directamente c
 
 Por ello, la compatibilidad debe documentarse en tres niveles: cliente ACP, agente/CLI y proveedor/modelo.
 
+## Kiro y ACP
+
+[Kiro](../agentes-codigo/kiro.md) usa ACP como protocolo entre sus clientes y su motor de agentes, que es un proceso independiente. No solo lo ofrece a clientes de terceros: sus propias superficies (IDE, CLI, Web y Mobile) también hablan ACP. Fuente: [Cómo funciona Kiro](https://kiro.dev/docs/how-kiro-works/).
+
+- **Extensiones propias:** Kiro añade métodos bajo el espacio de nombres `_kiro/` para Steering en vivo, flujos de specs, avisos de permisos enriquecidos y seguimiento del uso de contexto. Un cliente ACP que no los implemente funciona con las capacidades estándar, pero no mostrará esas funciones.
+- **Transportes:** los clientes locales (IDE y CLI) se conectan por stdio. Web y Mobile se conectan por WebSocket a un motor en un sandbox cloud. El binario y el comportamiento son los mismos en ambos casos.
+- **Opciones de sesión:** un cliente puede solicitar presets de permisos al abrir la sesión con `_meta.kiro.policyPreset` (véase [permisos de Kiro](../agentes-codigo/kiro.md#permisos)).
+- **Relación con MCP:** el motor de Kiro actúa como agente ACP frente al cliente y como cliente MCP frente a los servidores de herramientas.
+
 ## Clientes que pueden utilizar agentes ACP
 
 Un cliente compatible con ACP puede iniciar agentes y trabajar con ellos desde una interfaz común. Entre los escenarios y clientes documentados o integrables se encuentran:

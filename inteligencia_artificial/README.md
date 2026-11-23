@@ -8,6 +8,7 @@
 - [Choreo Agent Manager (antes WSO2)](agentes-ia/gestion-y-gobierno/agent-control-planes/choreo-agent-manager.md) — investigación sobre arquitectura, identidad, gobierno, observabilidad, despliegue y licenciamiento.
 - [IA para desarrollo de software](ai.code.md) — `ai.code.md`
 - [Kiro](agentes-codigo/kiro.md) — características, arquitectura, adopción, licencias y precios del entorno de desarrollo con IA de AWS.
+- [Docker Sandboxes](agentes-codigo/docker-sandboxes.md) - aislamiento de agentes de código en microVMs: arquitectura, características, casos de uso, limitaciones y recomendaciones.
 - [Kiro Crew](multi-agente/kiro-crew.md) — espacio persistente de agentes, backends, operación, limitaciones y costos.
 - [Inteligencia Artificial Conceptos](ai.conceptos.md) — `ai.conceptos.md`
 - [AGENTS.md](command-line-AI.md) — `command-line-AI.md`
