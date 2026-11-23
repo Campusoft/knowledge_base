@@ -1,0 +1,5 @@
+# Responsables de la estructura de documentacion (CAMP-DOC-STRUCT-001).
+# Reemplazar @ORGANIZACION/equipo-documentacion por el equipo o usuario responsable.
+/doc/.estructura.txt                      @ORGANIZACION/equipo-documentacion
+/scripts/validar-estructura.ps1           @ORGANIZACION/equipo-documentacion
+/.github/workflows/validar-doc.yml        @ORGANIZACION/equipo-documentacion

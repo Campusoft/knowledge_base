@@ -166,9 +166,40 @@ En proyectos nuevos, copiar la estructura de la versión aprobada y completar su
 
 La versión de esta estructura identifica el paquete de carpetas e instrucciones utilizado. No reemplaza la versión, fecha, estado o aprobación propios de cada documento del proyecto.
 
-## 6. Historial de cambios
+## 6. Control de cumplimiento
+
+Para que la estructura no se altere sin control, el paquete incluye un manifiesto y un validador. Los archivos están en [`plantillas/v1.0.0/control/`](plantillas/v1.0.0/control/README.md).
+
+| Control | Archivo en el proyecto | Función |
+|---|---|---|
+| Manifiesto | `doc/.estructura.txt` | Lista las carpetas permitidas de `doc/`. |
+| Validador | `scripts/validar-estructura.ps1` | Verifica la estructura contra el manifiesto. |
+| Workflow | `.github/workflows/validar-doc.yml` | Ejecuta el validador en cada push a `main` y en cada PR. |
+| Responsable | `.github/CODEOWNERS` | Asigna revisor a los cambios del manifiesto, del script y del workflow. |
+
+El validador comprueba que:
+
+1. `doc/README.md` y el manifiesto existan.
+2. Toda carpeta bajo `doc/` esté declarada en el manifiesto.
+3. Cada área tenga su `README.md`.
+4. No haya archivos sueltos en `doc/`, salvo `README.md` y el manifiesto.
+
+Declarar una carpeta en el manifiesto la permite, pero no la hace obligatoria.
+
+Reglas de uso:
+
+- No se crean carpetas fuera del manifiesto. Una carpeta nueva se declara en el manifiesto y se registra como adaptación en `doc/README.md` (regla 8 de la sección 4), en un PR revisado por el responsable.
+- Los proyectos copian los archivos de control. No se referencian desde otro repositorio, porque en repositorios privados de GitHub Free no se pueden compartir workflows entre repositorios de forma fiable.
+- El control se ejecuta también en local y por agentes antes de proponer cambios.
+
+Alcance: con GitHub Free y repositorios privados, el control **detecta, pero no bloquea**. El workflow marca el PR en rojo sin impedir su fusión, y CODEOWNERS asigna revisor sin hacerlo obligatorio. Con un plan que permita protección de ramas, el check `validar` se marca como obligatorio sin cambiar los archivos.
+
+Fuera de esta primera iteración: validación de enlaces y de nombres de carpetas, ejecución programada con aviso automático, hook local y plantilla de PR.
+
+## 7. Historial de cambios
 
 | Versión | Fecha | Cambio |
 |---|---|---|
 | 1.0.0 | 2026-11-14 | Primera versión propuesta: áreas de producto, requerimientos, arquitectura, desarrollo, plantillas, seguridad, operación, capacitación y guías. |
 | — | 2026-11-17 | Se agregó la estructura inicial del área `calidad/` para documentar escenarios, datos y ejecuciones de pruebas funcionales manuales, automatizadas o realizadas por agentes IA. No se incrementó la versión de la plantilla. |
+| - | 2026-11-23 | Se agregó la sección 6 Control de cumplimiento y los archivos de `plantillas/v1.0.0/control/` (manifiesto, validador, workflow y CODEOWNERS). No se incrementó la versión de la plantilla. |

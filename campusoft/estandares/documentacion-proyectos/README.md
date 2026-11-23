@@ -19,6 +19,7 @@ La estructura se basa en patrones observados en proyectos Campusoft. Es un punto
 - [Estándar de estructura](ESTANDAR-ESTRUCTURA-DOCUMENTACION.md): alcance, definiciones, reglas y criterios de uso.
 - [Plantilla v1.0.0](plantillas/v1.0.0/README.md): paquete listo para copiar a un repositorio de proyecto.
 - [Plantillas documentales](plantillas/v1.0.0/documentos/README.md): formatos reutilizables mantenidos juntos en una sola carpeta.
+- [Control de estructura](plantillas/v1.0.0/control/README.md): manifiesto, validador, workflow y CODEOWNERS para detectar carpetas no declaradas en `doc/`.
 
 ## Historial
 
@@ -31,3 +32,4 @@ La estructura se basa en patrones observados en proyectos Campusoft. Es un punto
 | Fecha | Cambio |
 |---|---|
 | 2026-11-17 | Se agregó el área `calidad/` para organizar escenarios, datos y ejecuciones de pruebas funcionales manuales, automatizadas o realizadas por agentes IA. Se actualizaron los documentos de referencia existentes, sin publicar una nueva versión de la plantilla. |
+| 2026-11-23 | Se agregó el control de cumplimiento de la estructura: manifiesto `doc/.estructura.txt`, validador, workflow y CODEOWNERS en `plantillas/v1.0.0/control/`. Sin publicar una nueva versión de la plantilla. |
