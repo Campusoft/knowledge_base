@@ -33,16 +33,26 @@ Distinción clave en operación: infraestructura = dónde funciona; instalación
 ## Pasos: proyecto nuevo
 
 1. Pregunta qué áreas aplican. Las que no apliquen se omiten; no se crean carpetas vacías sin contenido.
-2. Copia desde `assets/doc/` solo las áreas elegidas, con sus `README.md` (índices), al `doc/` del proyecto.
+2. Copia desde `assets/doc/` solo las áreas elegidas, con sus `README.md` (índices), al `doc/` del proyecto. Copia también `assets/doc/.estructura.txt` (manifiesto, archivo oculto) y borra de él las áreas no elegidas.
 3. Completa `doc/README.md` como índice y enlaza los índices de las áreas usadas.
 4. Si se adoptan las plantillas de documentos, copiarlas a `doc/plantillas/` y registrar la versión (usar el skill `plantillas-documentacion`).
-5. Registra en el índice del proyecto cualquier adaptación a la estructura.
+5. Instala el control: copia el contenido de `assets/control/` a la raíz del repositorio (`scripts/`, `.github/`) y reemplaza el responsable en `.github/CODEOWNERS`. Ver `assets/control/README.md`.
+6. Ejecuta `./scripts/validar-estructura.ps1`; debe terminar sin errores.
+7. Registra en el índice del proyecto cualquier adaptación a la estructura.
 
 ## Pasos: proyecto existente
 
 1. Evalúa el beneficio en búsqueda, trazabilidad y mantenimiento. No muevas documentos solo para ajustarse a la plantilla.
 2. Si se mueve algo, propón el listado de cambios y actualiza los enlaces afectados. Pide confirmación antes de mover.
+3. Si el proyecto adopta el control, crea `doc/.estructura.txt` con las carpetas que ya existen, instala `assets/control/` y valida con `./scripts/validar-estructura.ps1` antes de subir los cambios.
 
+## Control de la estructura
+
+- No crees carpetas en `doc/` que no estén en `doc/.estructura.txt`. Ejecuta `./scripts/validar-estructura.ps1` antes y después de crear o mover documentos.
+- Si una carpeta nueva es necesaria: declárala en el manifiesto, regístrala como adaptación en `doc/README.md` y propón el cambio en un PR. No lo apliques sin confirmación del usuario.
+- El validador comprueba: `doc/README.md` y manifiesto presentes, carpetas declaradas, `README.md` en cada área y ausencia de archivos sueltos en `doc/`.
+- Con GitHub Free y repositorios privados el workflow **detecta, pero no bloquea**: marca el PR en rojo sin impedir la fusión. No presentes el control como bloqueante.
+- No modifiques el validador ni el workflow en un proyecto para hacer pasar una validación. Si falla, corrige la estructura o declara la adaptación.
 ## Reglas
 
 - Carpetas en minúsculas y con guiones; identificadores estables en nombres de documentos.
@@ -55,5 +65,5 @@ Distinción clave en operación: infraestructura = dónde funciona; instalación
 
 ## Referencias
 
-- `campusoft/estandares/documentacion-proyectos/ESTANDAR-ESTRUCTURA-DOCUMENTACION.md`
+- `campusoft/estandares/documentacion-proyectos/ESTANDAR-ESTRUCTURA-DOCUMENTACION.md` (sección 6, Control de cumplimiento)
 - `campusoft/estandares/documentacion-proyectos/plantillas/v1.0.0/README.md`

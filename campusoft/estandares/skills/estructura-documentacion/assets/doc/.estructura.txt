@@ -1,0 +1,59 @@
+# Manifiesto de estructura de doc/ (CAMP-DOC-STRUCT-001)
+# Una ruta por linea, relativa a doc/. Declarar una carpeta la permite; no la hace obligatoria.
+# Las areas que el proyecto no use pueden borrarse de este archivo.
+# Una carpeta nueva se declara aqui y se registra como adaptacion en doc/README.md.
+# Un * admite comodin; "ruta/*" admite tambien "ruta".
+
+producto
+
+requerimientos
+requerimientos/00-propuestas
+requerimientos/01-requisitos
+requerimientos/01-requisitos/producto
+requerimientos/01-requisitos/modulos/*
+requerimientos/01-requisitos/plataforma/*
+requerimientos/02-analisis
+requerimientos/02-analisis/modulos/*
+requerimientos/02-analisis/plataforma/*
+requerimientos/03-planes-implementacion
+requerimientos/03-planes-implementacion/modulos/*
+requerimientos/03-planes-implementacion/plataforma/*
+requerimientos/04-estado-sistema
+requerimientos/90-insumos
+
+arquitectura
+arquitectura/vistas
+arquitectura/decisiones
+
+desarrollo
+desarrollo/build
+desarrollo/convenciones
+
+plantillas
+plantillas/arquitectura
+plantillas/requerimientos
+
+seguridad
+seguridad/arquitectura
+seguridad/controles
+
+calidad
+calidad/escenarios
+calidad/datos
+calidad/ejecuciones
+
+operacion
+operacion/infraestructura
+operacion/instalacion
+operacion/instalacion/guias
+operacion/despliegue
+operacion/soporte
+operacion/observabilidad
+
+capacitacion
+
+guias
+
+# Historicos: solo dentro del area que los necesite
+*/historicos
+*/historicos/*
