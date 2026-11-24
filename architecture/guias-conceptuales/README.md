@@ -39,3 +39,4 @@ Cada guía nueva debe añadirse al índice de documentos de este README con una 
 
 - [Implementar un bus de eventos asíncrono](bus-de-eventos-asincrono.md): componentes, contratos, publicación, transporte, despacho, serialización, errores e implementación conceptual de un `IEventBus`.
 - [Implementar una Saga para coordinar transacciones distribuidas](saga.md): coreografía y orquestación, contratos, estados, compensaciones, confiabilidad y recuperación de procesos entre servicios.
+- [Implementar Transactional Outbox en una solución con varios módulos](outbox.md): un Outbox por módulo, Inbox, publicador, módulos que publican y consumen, ciclos, orden, fallos y verificación.
