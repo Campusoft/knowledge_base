@@ -12,6 +12,7 @@ Describe formas de organizar sistemas y patrones que resuelven problemas recurre
 - [Arquitectura orientada a eventos](Event-Driven.md)
 - [CQRS](cqrs.md): separación de modelos y operaciones de lectura y escritura.
 - [Vertical Slice](vertical-slice.md): organización por funcionalidad, características, casos de uso, limitaciones y guía de implementación.
+- [Arquitectura Hexagonal (Puertos y Adaptadores)](hexagonal-puertos-y-adaptadores.md): núcleo aislado, puertos de entrada y salida, regla de dependencia, pruebas y comparación con Clean Architecture.
 - [Principios y patrones de diseño](principios-y-patrones.md): SOLID, Mediator y Unit of Work.
 - [MVC](mvc.md): patrón de presentación Model-View-Controller, características, formas de implementar, comparación con MVVM y MVP, errores comunes y pruebas.
 - [MVVM](mvvm.md): patrón de presentación Model-View-ViewModel, características, formas de implementar, comparación con MVC y MVP, errores comunes y pruebas.

@@ -5,6 +5,7 @@ Estilos, patrones, sistemas distribuidos, multitenencia y referencias de arquite
 ## Documentos
 - [darp](darp.md)
 - [distributed applications](distributed_applications.md)
+- [Puertos y adaptadores en .NET](hexagonal-puertos-y-adaptadores-dotnet.md)
 - [Microservices with .net](microservice_net.md)
 - [Multitenencia en .NET](multitenencia.md)
 - [Pattern implement .net core](pattern.md)

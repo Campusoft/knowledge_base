@@ -213,6 +213,8 @@ https://github.com/evgenirusev/Distributed-eStore
 **Convey**
 Convey - a simple recipe for .NET Core microservices
 
+This repo was archived by the owner on Feb 6, 2025. It is now read-only.
+
 -    Authentication JWT with secret key & certificates extensions
 -    CQRS basic abstractions
 -    Consul service registry integration
