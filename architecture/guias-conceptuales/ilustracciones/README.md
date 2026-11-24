@@ -34,6 +34,7 @@ Reglas:
 |---|---|---|
 | [Algoritmos de balanceo de carga](algoritmos-balanceo-de-carga.md) | Ocho algoritmos para repartir solicitudes entre servidores, con comparación y guía de elección. | [Video](algoritmos-balanceo-de-carga/algoritmos-balanceo-de-carga.mp4) |
 | [Escalamiento de bases de datos](escalamiento-de-bases-de-datos.md) | Diez técnicas para escalar una base de datos, con comparación y orden sugerido de aplicación. | [Video](escalamiento-de-bases-de-datos/escalamiento-de-bases-de-datos.mp4) |
+| [SSO, OAuth, OIDC y SAML](sso-oauth-oidc-saml.md) | Diferencias entre SSO, OAuth, OIDC y SAML, con comparación y guía de elección. | [Video](sso-oauth-oidc-saml/sso-oauth-oidc-saml.mp4) |
 
 ## Fuentes de información
 
